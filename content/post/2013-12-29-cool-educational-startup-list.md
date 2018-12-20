@@ -12,7 +12,7 @@ tags:
 昨今スタートアップ界隈で EdTech が流行しています。そこで個人的に気になった海外の教育系スタートアップを選んでまとめてみました。
 
 ## ck-12
-{% img /images/2013/12/ck12logo.png %}
+<img src="/images/2013/12/ck12logo.png" class="image">
 
 Link: [ck12](http://www.ck12.org/student/)
 
@@ -20,7 +20,7 @@ k-12とは幼稚園から始まり高校を卒業するまでの13年間の教�
 全体を通してみた感じ、じっくり一人で勉強するのが好きな生徒が使いそうだなという印象です。テキストはボリュームもあって良好ですしビデオは視覚でみて分かりやすい解説をしているコンテンツがあるからです。学校の先生たちが生徒に予習をさせてくる教材として使わせるのもありだと思いました。
 
 ## KNEWTON
-{% img /images/2013/12/knewton.png %}
+<img src="/images/2013/12/knewton.png" class="image">
 
 Link: [KNEWTON](http://www.knewton.com/)
 
@@ -32,14 +32,14 @@ https://www.youtube.com/watch?v=LldxxVRj4FU
 個人にフォーカスした教育サービスは今後も増えるでしょうけど、システム側でどこまで出来るのか先生はどういった役割を果たすべきなのかなど大きな課題もありそうです。
 
 ## dreambox
-{% img /images/2013/12/dreambox_logo.jpg %}
+<img src="/images/2013/12/dreambox_logo.jpg" class="image">
 
 Link: [dreambox](http://www.dreambox.com/)
 
 これは先ほどのKNEWTONの数学版と言ったところです。iPadを使うこととアニメーションがふんだんに使われているという点が違いますね。アニメーションを取り入れることでやる気やモチベーション維持などにも期待できそうです。数学が苦手な人を対象にしているような感じがしました。
 
 ## duolingo
-{% img /images/2013/12/duolingo.png %}
+<img src="/images/2013/12/duolingo.png" class="image">
 
 Link: [duolingo](http://www.duolingo.com/)
 

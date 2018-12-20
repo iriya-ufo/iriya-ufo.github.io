@@ -11,7 +11,7 @@ tags:
   - unix
 ---
 
-{% img /images/2015/07/homepage-docker-logo.png %}
+<img src="/images/2015/07/homepage-docker-logo.png" class="image">
 
 とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では簡単には環境構築できなかったりするのもあるあるですよね。レガシーな環境っていやですね。そこでプログラムを動かす環境を仮想で作ってしまおうという考えに至るわけですが、一昔前と違って様々な手段が登場しました。
 
@@ -67,7 +67,7 @@ Docker の仮想イメージが `~/.boot2docker` にダウンロードされま�
 ## Docker の操作
 ここまでで Docker の環境は用意できました。実際の仮想環境は Docker ホスト上に**コンテナ**という形で作っていくことになります。動作イメージはこのような感じです。
 
-{% img /images/2015/07/docker-image-2.png %}
+<img src="/images/2015/07/docker-image-2.png" class="image">
 
 それでは練習として CentOS イメージのダウンロードと確認をしてみましょう。
 

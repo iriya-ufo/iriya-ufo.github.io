@@ -6,7 +6,7 @@ comments: true
 categories: review
 ---
 
-{% img /images/2015/07/lover.jpg %}
+<img src="/images/2015/07/lover.jpg" class="image">
 
 突然だが僕は今、彼女が欲しい。彼女が欲しいと思っている。好きな人となにげない会話をしたりどっか遊びにいったりしたい。でも僕はイケメンでもなければ社会的地位が高いわけでもない。そんな僕にどうやったら彼女ができるのだろう？
 

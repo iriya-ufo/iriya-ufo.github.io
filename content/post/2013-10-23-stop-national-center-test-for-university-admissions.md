@@ -6,7 +6,7 @@ comments: true
 categories: diary
 ---
 
-{% img /images/2013/10/exam.png %}
+<img src="/images/2013/10/exam.png" class="image">
 
 どうやら本当にセンター試験がなくなるようなので思うことをつらつらと書いてみます。
 

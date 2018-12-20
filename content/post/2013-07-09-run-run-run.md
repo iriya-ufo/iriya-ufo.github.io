@@ -7,7 +7,7 @@ categories: diary
 tags: startup
 ---
 
-{% img /images/2013/07/running.jpg %}
+<img src="/images/2013/07/running.jpg" class="image">
 
 26になるまで、東京に来た事なんて片手で数えるほどだった。
 

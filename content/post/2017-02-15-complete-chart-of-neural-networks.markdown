@@ -6,4 +6,4 @@ comments: true
 categories: machine_learning
 ---
 
-{% img /images/2017/02/complete_chart_of_neural_networks.jpg %}
+<img src="/images/2017/02/complete_chart_of_neural_networks.jpg" class="image">

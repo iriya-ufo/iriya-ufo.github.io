@@ -7,7 +7,7 @@ categories: anime
 tags: anime
 ---
 
-{% img /images/2013/11/nonnon.jpeg %}
+<img src="/images/2013/11/nonnon.jpeg" class="image">
 
 のんのんびより第4話後半パートの、れんげにフォーカスした話しが素晴らしかったので感想を書かざるを得ない。
 れんげはこのアニメの中で最も特徴的なキャラクターだ。語尾が"〜のん"で終わったり変な言葉を使ったりする。
@@ -17,54 +17,54 @@ tags: anime
 
 ## 橋の上での出会い
 
-{% img /images/2013/11/1.png %}
+<img src="/images/2013/11/1.png" class="image">
 
 れんげが一人で遊んでると橋の上である女の子と出会う。しばしお話の時間。
 
 「うち、いろんな場所知ってるのん！」とはりきって写真スポットを回ることに。
 
-{% img /images/2013/11/2.png %}
+<img src="/images/2013/11/2.png" class="image">
 
 初めてのカメラ撮影でレンズの向きを間違えて一枚ぱちり。
 
 ## 思い出
-{% img /images/2013/11/3.png %}
+<img src="/images/2013/11/3.png" class="image">
 
 素敵なBGMとともにひと夏の思い出を重ねていく・・・
 
-{% img /images/2013/11/4.png %}
+<img src="/images/2013/11/4.png" class="image">
 
 水筒かわいいね。
 
 ## 別れ
-{% img /images/2013/11/5.png %}
+<img src="/images/2013/11/5.png" class="image">
 
 「じゃあ、また明日ね」と。あっ、この台詞もしかしたら・・・
 
 やっぱり嫌な予感は的中。せっかく仲良くなったのに、親の仕事の都合で急に帰ってしまった。
 
-{% img /images/2013/11/6.png %}
+<img src="/images/2013/11/6.png" class="image">
 
 れんげの顔のアップが切ない。このシーンのタメが長いです。たっぷり30秒とってゆっくりれんげの顔にフォーカスしていく。急な出来事で混乱してる様から徐々に現状を理解して悲しみがこみ上げてくる。
 
-{% img /images/2013/11/7.png %}
+<img src="/images/2013/11/7.png" class="image">
 
 泣いた。
 ただ泣き叫ぶでもなく、声を殺しながら寂しさに泣いている。
 
-{% img /images/2013/11/8.png %}
+<img src="/images/2013/11/8.png" class="image">
 
 そして今まで一緒に遊んだ場所が映し出されていく。
 
-{% img /images/2013/11/9.png %}
+<img src="/images/2013/11/9.png" class="image">
 
 思い出の場所。
 
-{% img /images/2013/11/10.png %}
+<img src="/images/2013/11/10.png" class="image">
 
 時間を遡る。
 
-{% img /images/2013/11/11.png %}
+<img src="/images/2013/11/11.png" class="image">
 
 そして最初に出会った橋の上。れんげはここで一人家路に向かっている・・・
 
@@ -77,7 +77,7 @@ tags: anime
 
 そしてこのお話しの最後。
 
-{% img /images/2013/11/12.png %}
+<img src="/images/2013/11/12.png" class="image">
 
 悲しい別れではなく、また来年に希望を持たせられる終わり方でよかった。れんげは来年の夏休みにまたほのかちゃんと遊べるんだ。よかった。
 

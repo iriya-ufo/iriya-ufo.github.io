@@ -6,7 +6,7 @@ comments: true
 categories: review
 ---
 
-{% img /images/2016/01/logi.jpg %}
+<img src="/images/2016/01/logi.jpg" class="image">
 
 物流関連の仕事をしているならこの本は必読、と言われて渡してもらった本がこれです。
 

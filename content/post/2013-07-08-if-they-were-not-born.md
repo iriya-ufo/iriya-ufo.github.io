@@ -7,7 +7,7 @@ categories: anime
 tags: anime
 ---
 
-{% img /images/2013/07/tokikake.png %}
+<img src="/images/2013/07/tokikake.png" class="image">
 
 久しぶりにいいMADを観ました。
 進撃の巨人の登場人物が、もし巨人のいない世界にいたら、を描いたものです。

@@ -6,7 +6,7 @@ comments: true
 categories: diary
 ---
 
-[{% img /images/2016/06/perfume.png %}](http://www.perfume-web.jp/cam/cosmicexplorer/)
+[<img src="/images/2016/06/perfume.png" class="image">](http://www.perfume-web.jp/cam/cosmicexplorer/)
 
 『Perfume 6th Tour 2016「COSMIC EXPLORER」スタンディングエディション in 幕張メッセ』行ってきました。
 

@@ -6,7 +6,7 @@ comments: true
 categories: diary
 ---
 
-{% img center /images/2013/06/HN-Kansai-9th.jpg %}
+![/images/2013/06/HN-Kansai-9th.jpg](center)
 
 [HN Kansai](http://hnkansai.org/) に参加しました。
 

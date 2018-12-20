@@ -10,7 +10,7 @@ tags:
   - xcode
 ---
 
-{% img /images/2014/07/swift.png %}
+<img src="/images/2014/07/swift.png" class="image">
 
 WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。
 

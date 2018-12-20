@@ -7,7 +7,7 @@ categories: programming
 tags: docker
 ---
 
-{% img /images/2016/03/ddc.png %}
+<img src="/images/2016/03/ddc.png" class="image">
 
 以下の記事をみかけて、これはやらずにいられないと思っていじってみた感想。
 
@@ -20,24 +20,24 @@ AWS に small 環境でつくってみた。Amazon Linux だとうまくいか�
 ### ステップ 1
 Ubuntu なので DEB の内容をコピペ。
 
-{% img /images/2016/03/ddc1.png %}
+<img src="/images/2016/03/ddc1.png" class="image">
 
 ### ステップ 2
 UCP のインストールはすっ飛ばしでOK。ここまでで https://your-ip-address で接続できる。すごい！
 
-{% img /images/2016/03/ddc2.png %}
+<img src="/images/2016/03/ddc2.png" class="image">
 
 ### ステップ 3
 ライセンスファイルをダウンロードして先ほどの画面の Settings > Licenses でアップロードして完了。
 
-{% img /images/2016/03/ddc3.png %}
+<img src="/images/2016/03/ddc3.png" class="image">
 
 ### ステップ 4
 こっから先はドキュメントみてね的な何か。
 
-{% img /images/2016/03/ddc4.png %}
+<img src="/images/2016/03/ddc4.png" class="image">
 
 ## 管理画面
 こんな感じの管理画面ができる。たぶんここにレポジトリ作っていけるんだと思う。これすごい便利。今後も使ってみたいけど1ヶ月1ノードでUSD150と少しお高いです。
 
-{% img /images/2016/03/ddc-dashboard.png %}
+<img src="/images/2016/03/ddc-dashboard.png" class="image">

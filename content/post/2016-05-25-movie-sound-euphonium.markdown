@@ -6,7 +6,7 @@ comments: true
 categories: anime
 ---
 
-[{% img /images/2016/05/keyVisualPoster.jpg %}](http://anime-eupho.com/)
+[<img src="/images/2016/05/keyVisualPoster.jpg" class="image">](http://anime-eupho.com/)
 
 観てきました！[「劇場版 響け！ユーフォニアム」](http://anime-eupho.com/)
 いやぁよかったです。感想を一言でと問われれば・・・
@@ -35,7 +35,7 @@ TVアニメ版ではゆっくり丁寧に二人の距離が縮まっていって
 
 **それと、このシーンもしっかり入ってましたよ！！**
 
-{% img /images/2016/05/reina_kumiko.gif %}
+<img src="/images/2016/05/reina_kumiko.gif" class="image">
 
 それにしても最後の演奏シーンはやっぱり凄かったです。もともとTV版が劇場かと思うくらいの鬼クオリティーだったんですが、映画館で観ると倍増してましたね。
 そして多分ですけど、追加シーンもいくつか入ってたように思います。
