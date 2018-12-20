@@ -1,0 +1,19 @@
+---
+layout: post
+title: "UNIX 時刻の変換"
+date: 2017-05-28 23:53:36 +0900
+comments: true
+categories: programming
+---
+
+UNIX 時間はビルトインコマンドで変換できる
+
+## Linux の場合
+
+`date --date "@1495526373"`
+
+## Mac の場合
+
+`date -r 1495526373`
+
+- [UNIX 時間とは](https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93)
