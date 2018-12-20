@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ubuntu に Android Studio をインストール
+slug: android-studio-to-ubuntu
 date: 2013-06-01T03:41:13+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Octopress Deploy エラーなおした"
+slug: fix-octopress-deploy-error
 date: 2017-01-27 16:05:43 +0900
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MacOS のパッケージ管理で便利な Homebrew の使い方
+slug: how-to-use-homebrew
 date: 2013-10-30T03:24:39+00:00
 comments: true
 categories: programming

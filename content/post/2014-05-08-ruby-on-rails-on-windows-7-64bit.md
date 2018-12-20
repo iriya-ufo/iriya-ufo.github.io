@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Windows 7 64bit に Rails の環境を構築
+slug: ruby-on-rails-on-windows-7-64bit
 date: 2014-05-08T23:39:00+00:00
 comments: true
 categories: programming

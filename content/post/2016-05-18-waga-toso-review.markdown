@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「我が闘争」を読んだ"
+slug: waga-toso-review
 date: 2016-05-18 18:44:35 +0900
 comments: true
 categories: review

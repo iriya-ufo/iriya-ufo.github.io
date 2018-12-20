@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 海外の教育系スタートアップで気になるものまとめ
+slug: cool-educational-startup-list
 date: 2013-12-29T03:24:34+00:00
 comments: true
 categories: diary

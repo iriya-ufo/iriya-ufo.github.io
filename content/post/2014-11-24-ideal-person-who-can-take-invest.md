@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「私は、こんな人になら、金を出す！」読了
+slug: ideal-person-who-can-take-invest
 date: 2014-11-24T17:04:11+00:00
 comments: true
 categories: review

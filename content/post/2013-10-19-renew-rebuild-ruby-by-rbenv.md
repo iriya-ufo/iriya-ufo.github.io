@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Ubuntu の rbenv で管理している ruby を新しくする
+slug: renew-rebuild-ruby-by-rbenv
 date: 2013-10-19T02:00:50+00:00
 comments: true
 categories: programming

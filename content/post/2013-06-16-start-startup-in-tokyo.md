@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 東京でスタートアップを始めます
+slug: start-startup-in-tokyo
 date: 2013-06-16T02:17:06+00:00
 comments: true
 categories: diary

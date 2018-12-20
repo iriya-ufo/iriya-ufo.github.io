@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "TensorFlow を GPU で動かす"
+slug: tensorflow-running-by-gpu
 date: 2016-11-19 23:37:43 +0900
 comments: true
 categories: machine_learning

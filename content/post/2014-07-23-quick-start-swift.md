@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Swift をとりあえず実行するまでの手順
+slug: quick-start-swift
 date: 2014-07-23T03:06:46+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 乗馬を初体験した
+slug: first-horse-riding
 date: 2014-12-28T22:33:56+00:00
 comments: true
 categories: diary

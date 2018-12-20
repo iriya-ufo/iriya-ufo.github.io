@@ -1,6 +1,7 @@
 ---
 layout: post
 title: highlight-symbol が便利
+slug: useful-package-highlight-symbol-emacs
 date: 2014-09-08T16:01:00+00:00
 comments: true
 categories: programming

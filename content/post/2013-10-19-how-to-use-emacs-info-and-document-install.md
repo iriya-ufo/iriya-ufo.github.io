@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs の info の使い方と info ドキュメントインストールの仕方
+slug: how-to-use-emacs-info-and-document-install
 date: 2013-10-19T19:19:20+00:00
 comments: true
 categories: programming

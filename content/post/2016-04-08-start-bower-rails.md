@@ -1,6 +1,7 @@
 ---
 layout: post
 title: bower-rails 使ってみた
+slug: start-bower-rails
 date: 2016-04-08T00:52:01+00:00
 comments: true
 categories: programming

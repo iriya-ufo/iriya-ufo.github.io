@@ -1,6 +1,7 @@
 ---
 layout: post
 title: シェル周りまとめ
+slug: about-shell
 date: 2013-10-19T18:33:58+00:00
 comments: true
 categories: programming

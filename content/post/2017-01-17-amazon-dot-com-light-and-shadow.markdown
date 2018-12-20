@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「アマゾン・ドット・コムの光と影」を読んだ"
+slug: amazon-dot-com-light-and-shadow
 date: 2017-01-17 03:32:08 +0900
 comments: true
 categories: review

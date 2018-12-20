@@ -23,6 +23,9 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
 [author]                  # essential                     # 必需
   name = "Naoto Inoue"
 
+[permalinks]
+  post = "/blog/:year/:month/:day/:slug"
+
 [sitemap]                 # essential                     # 必需
   changefreq = "weekly"
   priority = 0.5

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: iPhone のカメラロールを MacBook Air で管理する方法
+slug: manage-iphone-camera-role-by-mac
 date: 2014-01-04T00:20:07+00:00
 comments: true
 categories: diary

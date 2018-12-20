@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mac の Emacs に cmigemo をインストール
+slug: install-cmigemo-on-emacs
 date: 2014-03-19T01:11:21+00:00
 comments: true
 categories: programming

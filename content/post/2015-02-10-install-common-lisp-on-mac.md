@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mac に Common Lisp 処理系をインストールする
+slug: install-common-lisp-on-mac
 date: 2015-02-10T03:42:46+00:00
 comments: true
 categories: programming

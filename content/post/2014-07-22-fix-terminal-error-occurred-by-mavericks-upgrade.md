@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mavericks にアップグレードしたらターミナルが落ちた
+slug: fix-terminal-error-occurred-by-mavericks-upgrade
 date: 2014-07-22T12:31:08+00:00
 comments: true
 categories: programming

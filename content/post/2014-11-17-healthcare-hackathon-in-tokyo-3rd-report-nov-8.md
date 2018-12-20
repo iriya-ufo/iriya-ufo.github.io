@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Healthcare Hackathon in Tokyo 3rd Report @ Nov. 8
+slug: healthcare-hackathon-in-tokyo-3rd-report-nov-8
 date: 2014-11-17T03:30:03+00:00
 comments: true
 categories: diary

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 【感想】言の葉の庭
+slug: kotonoha-no-niwa
 date: 2014-06-12T02:49:02+00:00
 comments: true
 categories: anime

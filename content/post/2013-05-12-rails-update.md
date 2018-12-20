@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rails のアップデート
+slug: rails-update
 date: 2013-05-12T04:22:10+00:00
 comments: true
 categories: programming

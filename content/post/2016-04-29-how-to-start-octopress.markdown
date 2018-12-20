@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "WordPress から GitHub Pages + Octopress に移行した"
+slug: how-to-start-octopress
 date: 2016-04-29 19:22:13 +0900
 comments: true
 categories: diary

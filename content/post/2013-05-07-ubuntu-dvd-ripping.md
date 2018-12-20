@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Ubuntu で DVD リッピング"
+slug: ubuntu-dvd-ripping
 date: 2013-05-07T17:29:47+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 標準のコマンドの関連付けを変更 update-alternatives
+slug: update-alternatives
 date: 2013-10-19T18:17:35+00:00
 comments: true
 categories: programming

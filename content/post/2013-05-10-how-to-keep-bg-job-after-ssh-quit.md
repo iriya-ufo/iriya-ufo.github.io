@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法
+slug: how-to-keep-bg-job-after-ssh-quit
 date: 2013-05-10T08:47:32+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: gem を管理しよう
+slug: lets-manage-gem
 date: 2014-03-14T02:23:08+00:00
 comments: true
 categories: programming

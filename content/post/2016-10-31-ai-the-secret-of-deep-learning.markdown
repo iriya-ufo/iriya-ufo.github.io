@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「よくわかる 人工知能」を読んだ"
+slug: ai-the-secret-of-deep-learning
 date: 2016-10-31 00:39:13 +0900
 comments: true
 categories:

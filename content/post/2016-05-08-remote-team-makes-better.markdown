@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「リモートチームでうまくいく」を読んだ"
+slug: remote-team-makes-better
 date: 2016-05-08 17:20:50 +0900
 comments: true
 categories: review

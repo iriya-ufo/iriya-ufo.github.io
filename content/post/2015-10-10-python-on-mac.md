@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mac に Python 環境構築
+slug: python-on-mac
 date: 2015-10-10T19:00:23+00:00
 comments: true
 categories: programming

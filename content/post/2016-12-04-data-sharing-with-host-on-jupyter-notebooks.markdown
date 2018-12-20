@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Docker 版 Jupyter Notebooks でホストとデータを共有する"
+slug: data-sharing-with-host-on-jupyter-notebooks
 date: 2016-12-04 14:17:17 +0900
 comments: true
 categories: machine_learning

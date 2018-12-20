@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SICP 読書会始めました
+slug: sicp-reading
 date: 2014-04-07T02:15:09+00:00
 comments: true
 categories: diary

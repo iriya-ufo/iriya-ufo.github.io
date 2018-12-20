@@ -1,6 +1,7 @@
 ---
 layout: post
 title: middleman-s3_sync で colorize のエラーがでた
+slug: middleman-s3_sync-colorize-error
 date: 2014-12-27T21:55:29+00:00
 comments: true
 categories: programming

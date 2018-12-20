@@ -1,6 +1,7 @@
 ---
 layout: post
 title: brew のアップグレードで rails プロジェクトなどが動かなくなったら
+slug: fix-rails-error-occurred-by-brew-update
 date: 2014-12-17T23:05:08+00:00
 comments: true
 categories: programming

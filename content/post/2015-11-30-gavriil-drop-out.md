@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ガヴちゃん堕天使でまじ可愛い
+slug: gavriil-drop-out
 date: 2015-11-30T00:28:51+00:00
 comments: true
 categories: review

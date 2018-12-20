@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mac に AUCTeX をインストールした
+slug: auctex-to-mac-emacs
 date: 2014-04-13T15:34:38+00:00
 comments: true
 categories: programming

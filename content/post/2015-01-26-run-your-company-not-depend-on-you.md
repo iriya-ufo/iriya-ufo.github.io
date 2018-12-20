@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「自分がいなくてもうまくいく仕組み」を読んだ
+slug: run-your-company-not-depend-on-you
 date: 2015-01-26T00:33:59+00:00
 comments: true
 categories: review

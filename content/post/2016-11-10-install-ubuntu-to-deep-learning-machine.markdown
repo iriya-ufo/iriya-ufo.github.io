@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Deep Learning Machine に Ubuntu のインストール"
+slug: install-ubuntu-to-deep-learning-machine
 date: 2016-11-10 01:38:43 +0900
 comments: true
 categories: machine_learning

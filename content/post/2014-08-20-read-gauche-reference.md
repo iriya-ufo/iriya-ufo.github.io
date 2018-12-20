@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gauche のユーザーリファレンスを読む
+slug: read-gauche-reference
 date: 2014-08-20T02:07:11+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Passenger をやめて Puma にした"
+slug: from-passenger-to-puma
 date: 2016-05-07 15:23:21 +0900
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "メタプログラミング Ruby"
+slug: metaprogramming-ruby
 date: 2016-05-22 23:15:38 +0900
 comments: true
 categories:

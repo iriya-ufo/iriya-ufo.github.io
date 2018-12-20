@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mac OS X にインラインパッチの当たった Emacs を Homebrew でインストール
+slug: install-emacs-by-homebrew
 date: 2013-05-18T08:30:49+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: tmux の sync pane 機能に感動した
+slug: great-function-of-tmux-sync-pane
 date: 2015-05-22T22:22:24+00:00
 comments: true
 categories: programming

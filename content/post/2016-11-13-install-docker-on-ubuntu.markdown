@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Ubuntu に Docker をインストール"
+slug: install-docker-on-ubuntu
 date: 2016-11-13 04:01:16 +0900
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "ネフローゼが治ったり治らなかったり"
+slug: nephrotic-syndrome
 date: 2016-05-11 23:29:09 +0900
 comments: true
 categories: diary

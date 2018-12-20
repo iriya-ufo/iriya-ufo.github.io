@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 人口知能と生命
+slug: ai-and-life
 date: 2015-07-11T13:52:57+00:00
 comments: true
 categories: diary

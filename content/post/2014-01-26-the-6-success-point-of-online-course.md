@@ -1,6 +1,7 @@
 ---
 layout: post
 title: オンラインコースを成功させる6つのポイント
+slug: the-6-success-point-of-online-course
 date: 2014-01-26T21:48:56+00:00
 comments: true
 categories: diary

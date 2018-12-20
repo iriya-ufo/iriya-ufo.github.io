@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs24 のテーマフレームワークを使おう
+slug: theme-framework-for-emacs24
 date: 2013-10-19T03:32:28+00:00
 comments: true
 categories: programming

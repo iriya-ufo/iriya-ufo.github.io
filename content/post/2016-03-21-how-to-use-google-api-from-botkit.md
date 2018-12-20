@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Botkit から Google API 叩いてみた
+slug: how-to-use-google-api-from-botkit
 date: 2016-03-21T01:34:27+00:00
 comments: true
 categories: programming

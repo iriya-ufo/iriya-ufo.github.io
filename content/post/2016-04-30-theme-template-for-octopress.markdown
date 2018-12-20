@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Octopress のテーマをカスタマイズする"
+slug: theme-template-for-octopress
 date: 2016-04-30 03:08:48 +0900
 comments: true
 categories: diary

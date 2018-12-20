@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Complete Chart of Neural Networks"
+slug: complete-chart-of-neural-networks
 date: 2017-02-15 15:03:24 +0900
 comments: true
 categories: machine_learning

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「グーグル ネット覇者の真実」読了
+slug: how-google-thinks-works-and-shapes-our-lives
 date: 2014-08-09T22:44:24+00:00
 comments: true
 categories: review

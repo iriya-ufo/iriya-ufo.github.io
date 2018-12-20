@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Swift をインタラクティブに実行しながら勉強しよう (関数編)
+slug: learn-swift
 date: 2014-07-26T15:55:36+00:00
 comments: true
 categories: programming

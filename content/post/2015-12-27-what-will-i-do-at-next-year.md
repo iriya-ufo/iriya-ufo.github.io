@@ -1,6 +1,7 @@
 ---
 layout: post
 title: さて、来年は何をやろうかな
+slug: what-will-i-do-at-next-year
 date: 2015-12-27T03:14:29+00:00
 comments: true
 categories: diary

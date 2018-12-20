@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 土日で出来る Node.js 入門
+slug: start-nodejs-at-weekend
 date: 2014-03-08T17:29:27+00:00
 comments: true
 categories: programming

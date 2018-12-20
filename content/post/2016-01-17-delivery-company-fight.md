@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 宅配業界の熾烈な戦い
+slug: delivery-company-fight
 date: 2016-01-17T02:15:17+00:00
 comments: true
 categories: review

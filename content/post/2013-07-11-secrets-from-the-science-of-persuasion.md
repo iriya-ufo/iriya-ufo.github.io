@@ -1,6 +1,7 @@
 ---
 layout: post
 title: YES! と言わせる科学的説得術
+slug: secrets-from-the-science-of-persuasion
 date: 2013-07-11T02:28:12+00:00
 comments: true
 categories: diary

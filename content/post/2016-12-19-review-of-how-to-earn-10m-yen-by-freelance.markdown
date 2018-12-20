@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「エンジニアがフリーランスで年収1000万円になるための稼ぎ方」を読んだ"
+slug: review-of-how-to-earn-10m-yen-by-freelance
 date: 2016-12-19 19:39:38 +0900
 comments: true
 categories: review

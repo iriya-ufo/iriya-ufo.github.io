@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Docker for Mac を使う
+slug: docker-for-mac
 date: 2016-07-31 14:11:03 +0900
 comments: true
 categories: programming

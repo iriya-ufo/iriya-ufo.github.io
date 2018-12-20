@@ -1,6 +1,7 @@
 ---
 layout: post
 title: SSH ログインが遅い問題を解決
+slug: why-so-slow-ssh-login
 date: 2013-05-10T08:28:07+00:00
 comments: true
 categories: programming

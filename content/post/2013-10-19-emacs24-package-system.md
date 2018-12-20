@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs24 のパッケージシステムを使おう
+slug: emacs24-package-system
 date: 2013-10-19T03:26:46+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Gauche で rlwrap を使う
+slug: gauche-rlwrap
 date: 2013-10-19T20:45:17+00:00
 comments: true
 categories: programming

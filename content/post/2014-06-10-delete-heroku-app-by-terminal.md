@@ -1,6 +1,7 @@
 ---
 layout: post
 title: コマンドから Heroku アプリを削除
+slug: delete-heroku-app-by-terminal
 date: 2014-06-10T01:35:28+00:00
 comments: true
 categories: programming

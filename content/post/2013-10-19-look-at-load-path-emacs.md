@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs の load-path の調べ方
+slug: look-at-load-path-emacs
 date: 2013-10-19T18:07:23+00:00
 comments: true
 categories: programming

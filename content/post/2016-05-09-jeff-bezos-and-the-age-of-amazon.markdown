@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「ジェフ・ベゾス 果てなき野望」を読んだ"
+slug: jeff-bezos-and-the-age-of-amazon
 date: 2016-05-09 00:45:28 +0900
 comments: true
 categories: review

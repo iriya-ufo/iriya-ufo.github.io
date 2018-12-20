@@ -1,6 +1,7 @@
 ---
 layout: post
 title: AV男優という仕事
+slug: shimiken-book-review
 date: 2015-10-11T02:09:29+00:00
 comments: true
 categories: review

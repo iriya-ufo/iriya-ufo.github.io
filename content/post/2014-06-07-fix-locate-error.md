@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Mac OS X で locate エラーの直し方
+slug: fix-locate-error
 date: 2014-06-07T22:35:26+00:00
 comments: true
 categories: programming

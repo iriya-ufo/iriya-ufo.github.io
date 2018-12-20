@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 目標設定にKPIを定める
+slug: set-kpi-of-your-personal-goal
 date: 2016-01-04T01:21:19+00:00
 comments: true
 categories: diary

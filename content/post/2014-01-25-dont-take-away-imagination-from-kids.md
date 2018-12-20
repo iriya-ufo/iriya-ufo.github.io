@@ -1,6 +1,7 @@
 ---
 layout: post
 title: あなたは子どもたちから創造性を奪っている
+slug: dont-take-away-imagination-from-kids
 date: 2014-01-25T01:14:31+00:00
 comments: true
 categories: diary

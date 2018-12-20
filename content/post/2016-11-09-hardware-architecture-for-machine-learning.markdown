@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "hardware architecture for machine learning"
+slug: hardware-architecture-for-machine-learning
 date: 2016-11-09 14:58:31 +0900
 comments: true
 categories: machine_learning

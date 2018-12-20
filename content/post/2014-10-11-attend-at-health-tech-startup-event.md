@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ヘルステックスタートアップイベントに参加しました
+slug: attend-at-health-tech-startup-event
 date: 2014-10-11T19:23:47+00:00
 comments: true
 categories: diary

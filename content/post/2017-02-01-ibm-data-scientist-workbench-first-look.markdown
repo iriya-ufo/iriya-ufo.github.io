@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "IBM の Data Scientist Workbench がすごい"
+slug: ibm-data-scientist-workbench-first-look
 date: 2017-02-01 01:31:59 +0900
 comments: true
 categories: machine_learning

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "UNIX 時刻の変換"
+slug: unix-time
 date: 2017-05-28 23:53:36 +0900
 comments: true
 categories: programming

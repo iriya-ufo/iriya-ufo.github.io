@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs に swift-mode をインストール
+slug: install-swift-mode-to-emacs
 date: 2014-07-21T14:51:49+00:00
 comments: true
 categories: programming

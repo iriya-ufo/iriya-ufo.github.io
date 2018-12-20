@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「ビジネス・クリエーション！」を読んだ"
+slug: review-of-business-creation-mit
 date: 2016-12-19 14:35:29 +0900
 comments: true
 categories: review

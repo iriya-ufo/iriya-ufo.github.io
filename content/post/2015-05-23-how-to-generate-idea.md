@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「アイデアのつくり方」を読んだ
+slug: how-to-generate-idea
 date: 2015-05-23T22:38:43+00:00
 comments: true
 categories: review

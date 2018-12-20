@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Perfume のライブに行ってきた"
+slug: perfume-live
 date: 2016-06-17 02:22:31 +0900
 comments: true
 categories: diary

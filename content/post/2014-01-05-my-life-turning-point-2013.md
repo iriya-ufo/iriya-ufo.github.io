@@ -1,6 +1,7 @@
 ---
 layout: post
 title: '2013年を振り返ってみた'
+slug: my-life-turning-point-2013
 date: 2014-01-05T04:16:06+00:00
 comments: true
 categories: diary

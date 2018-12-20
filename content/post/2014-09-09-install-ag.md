@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 高速検索の ag を入れてみた
+slug: install-ag
 date: 2014-09-09T23:43:08+00:00
 comments: true
 categories: programming

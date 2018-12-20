@@ -1,6 +1,7 @@
 ---
 layout: post
 title: '写真 + 音声アプリの Voicepic がサービス終了'
+slug: quit-voicepic-startup
 date: 2013-12-14T18:10:09+00:00
 comments: true
 categories: diary

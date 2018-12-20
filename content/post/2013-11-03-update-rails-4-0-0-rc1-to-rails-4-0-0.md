@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rails 4.0.0.rc1 から 4.0.0 にアップデートしたら嵌った
+slug: update-rails-4-0-0-rc1-to-rails-4-0-0
 date: 2013-11-03T04:24:00+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Deep Learning Nanodegree Foundation Program を受講します"
+slug: start-the-deep-learning-nanodegree-foundation-program
 date: 2017-02-03 12:52:03 +0900
 comments: true
 categories: machine_learning

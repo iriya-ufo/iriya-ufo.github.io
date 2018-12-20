@@ -1,6 +1,7 @@
 ---
 layout: post
 title: アニメへの愛が詰まったMAD
+slug: great-mad-anime
 date: 2013-12-09T05:24:03+00:00
 comments: true
 categories: anime

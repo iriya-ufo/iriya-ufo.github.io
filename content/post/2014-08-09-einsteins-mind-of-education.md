@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「アインシュタインの教育観」読了
+slug: einsteins-mind-of-education
 date: 2014-08-09T22:07:51+00:00
 comments: true
 categories: review

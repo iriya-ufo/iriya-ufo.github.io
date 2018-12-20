@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 仕事とプライベートの境界
+slug: no-border-with-job-and-private
 date: 2013-09-18T22:24:54+00:00
 comments: true
 categories: diary

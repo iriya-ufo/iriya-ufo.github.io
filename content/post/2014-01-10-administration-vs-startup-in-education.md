@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 教育にイノベーションを起こすのは、行政かスタートアップか？
+slug: administration-vs-startup-in-education
 date: 2014-01-10T19:39:37+00:00
 comments: true
 categories: diary

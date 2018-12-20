@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「コンピューターで脳がつくれるか」を読んだ"
+slug: can-computer-make-the-brain
 date: 2016-11-10 02:39:37 +0900
 comments: true
 categories: review

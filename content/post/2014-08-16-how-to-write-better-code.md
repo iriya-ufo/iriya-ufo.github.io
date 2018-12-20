@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「良いコードを書く技術」読了
+slug: how-to-write-better-code
 date: 2014-08-16T17:32:43+00:00
 comments: true
 categories: review

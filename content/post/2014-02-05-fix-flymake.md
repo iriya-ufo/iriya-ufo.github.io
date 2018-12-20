@@ -1,6 +1,7 @@
 ---
 layout: post
 title: rbenv で入れた ruby で flymake がちゃんと動作しなかったので直した
+slug: fix-flymake
 date: 2014-02-05T00:28:18+00:00
 comments: true
 categories: programming

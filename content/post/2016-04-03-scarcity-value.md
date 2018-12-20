@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 希少価値
+slug: scarcity-value
 date: 2016-04-03T23:14:56+00:00
 comments: true
 categories: diary

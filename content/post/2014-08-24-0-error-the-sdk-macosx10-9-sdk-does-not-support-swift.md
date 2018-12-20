@@ -1,6 +1,7 @@
 ---
 layout: post
 title: '&lt;unknown&gt;:0: error: the SDK &#8216;MacOSX10.9.sdk&#8217; does not support Swift'
+slug: 0-error-the-sdk-macosx10-9-sdk-does-not-support-swift
 date: 2014-08-24T18:13:51+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Octopress 記事削除"
+slug: delete-post
 date: 2017-10-18 01:02:03 +0900
 comments: true
 categories: diary

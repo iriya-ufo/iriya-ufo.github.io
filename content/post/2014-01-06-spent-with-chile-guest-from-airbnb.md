@@ -1,6 +1,7 @@
 ---
 layout: post
 title: チリ人と過ごした2013年の年末
+slug: spent-with-chile-guest-from-airbnb
 date: 2014-01-06T03:42:07+00:00
 comments: true
 categories: diary

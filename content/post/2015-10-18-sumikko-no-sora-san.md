@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'すみっこの空さん &#8212; 出会いと別れ &#8212;'
+slug: sumikko-no-sora-san
 date: 2015-10-18T11:38:54+00:00
 comments: true
 categories: review

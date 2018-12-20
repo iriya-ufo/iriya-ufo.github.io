@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 最高にクールで便利なメモ帳
+slug: useful-notepad
 date: 2013-10-13T04:13:15+00:00
 comments: true
 categories: diary

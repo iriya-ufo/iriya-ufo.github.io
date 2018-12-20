@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "機械学習と数学"
+slug: ml-and-math
 date: 2016-11-19 00:12:13 +0900
 comments: true
 categories: machine_learning

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ネフローゼ再発したからなんか書く
+slug: nephrotic-syndrome
 date: 2016-02-09T00:51:28+00:00
 comments: true
 categories: diary

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「すごい会議」を読んだ"
+slug: sugoi-kaigi
 date: 2016-12-03 22:37:12 +0900
 comments: true
 categories: review

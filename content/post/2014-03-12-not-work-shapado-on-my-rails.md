@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった
+slug: not-work-shapado-on-my-rails
 date: 2014-03-12T02:12:34+00:00
 comments: true
 categories: programming

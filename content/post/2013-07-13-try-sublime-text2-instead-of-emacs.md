@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Emacs 使いが Sublime Text 2 を練習してみた
+slug: try-sublime-text2-instead-of-emacs
 date: 2013-07-13T15:43:18+00:00
 comments: true
 categories: programming

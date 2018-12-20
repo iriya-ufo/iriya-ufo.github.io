@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「小さなチーム、大きな仕事」を読んだ
+slug: small-team-big-job
 date: 2015-06-07T17:26:54+00:00
 comments: true
 categories: review

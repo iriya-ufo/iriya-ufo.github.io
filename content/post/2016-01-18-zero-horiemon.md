@@ -1,6 +1,7 @@
 ---
 layout: post
 title: '「ゼロ &#8212; なにもない自分に小さなイチを足していく」を読んだ'
+slug: zero-horiemon
 date: 2016-01-18T03:10:44+00:00
 comments: true
 categories: review

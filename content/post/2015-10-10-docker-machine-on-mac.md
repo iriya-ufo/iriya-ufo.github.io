@@ -1,6 +1,7 @@
 ---
 layout: post
 title: docker-machine で Mac に Docker 環境を構築する
+slug: docker-machine-on-mac
 date: 2015-10-10T21:33:25+00:00
 comments: true
 categories: programming

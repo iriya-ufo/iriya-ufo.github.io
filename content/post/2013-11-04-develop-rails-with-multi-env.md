@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 複数の環境で Rails を開発する
+slug: develop-rails-with-multi-env
 date: 2013-11-04T00:15:10+00:00
 comments: true
 categories: programming

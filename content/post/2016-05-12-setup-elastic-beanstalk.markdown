@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Elastic BeansTalk で遊んでみた"
+slug: setup-elastic-beanstalk
 date: 2016-05-12 18:46:38 +0900
 comments: true
 categories: programming

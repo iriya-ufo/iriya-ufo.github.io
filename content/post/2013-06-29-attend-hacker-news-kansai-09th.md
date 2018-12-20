@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Hacker News Kansai #9 に参加しました'
+slug: attend-hacker-news-kansai-09th
 date: 2013-06-29T01:36:03+00:00
 comments: true
 categories: diary

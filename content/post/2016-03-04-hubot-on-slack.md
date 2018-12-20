@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Slack に Hubot をいれてみた
+slug: hubot-on-slack
 date: 2016-03-04T18:10:03+00:00
 comments: true
 categories: programming

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 自分の性格に適した解を見つけ出す
+slug: find-your-personal-good-point
 date: 2014-07-13T22:12:31+00:00
 comments: true
 categories: diary

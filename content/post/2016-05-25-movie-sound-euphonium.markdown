@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「劇場版 響け！ユーフォニアム」感想"
+slug: movie-sound-euphonium
 date: 2016-05-25 00:13:25 +0900
 comments: true
 categories: anime

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「お釈迦さまの脳科学」を読んでみた
+slug: brain-science-of-buddha
 date: 2015-07-26T09:04:13+00:00
 comments: true
 categories: review

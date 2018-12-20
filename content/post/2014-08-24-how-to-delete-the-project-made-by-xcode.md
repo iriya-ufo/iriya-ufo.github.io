@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Xcode で作ったプロジェクトを削除する方法
+slug: how-to-delete-the-project-made-by-xcode
 date: 2014-08-24T16:41:24+00:00
 comments: true
 categories: programming

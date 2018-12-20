@@ -1,6 +1,7 @@
 ---
 layout: post
 title: スタートアップで大事なこと
+slug: important-point-about-startup
 date: 2015-07-03T00:38:07+00:00
 comments: true
 categories: diary

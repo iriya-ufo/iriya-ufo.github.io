@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「金持ち父さんのキャッシュフロー・クワドラント」を読んだ
+slug: rich-dad-cash-flow
 date: 2015-04-15T22:02:51+00:00
 comments: true
 categories: review

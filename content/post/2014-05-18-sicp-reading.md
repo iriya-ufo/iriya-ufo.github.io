@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 続・SICP読書会
+slug: sicp-reading
 date: 2014-05-18T03:41:22+00:00
 comments: true
 categories: diary

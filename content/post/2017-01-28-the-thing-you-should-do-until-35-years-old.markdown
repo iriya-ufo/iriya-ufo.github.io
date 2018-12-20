@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "「35歳までに必ずやるべきこと」を読んだ"
+slug: the-thing-you-should-do-until-35-years-old
 date: 2017-01-28 17:42:31 +0900
 comments: true
 categories: review

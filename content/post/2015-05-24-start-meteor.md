@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Meteor が想像以上にすごかった
+slug: start-meteor
 date: 2015-05-24T05:17:20+00:00
 comments: true
 categories: programming

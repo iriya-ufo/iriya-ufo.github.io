@@ -1,6 +1,7 @@
 ---
 layout: post
 title: ポスト・ヒューマン時代
+slug: post-human-era
 date: 2015-02-22T21:39:23+00:00
 comments: true
 categories: diary

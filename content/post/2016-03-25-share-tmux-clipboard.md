@@ -1,6 +1,7 @@
 ---
 layout: post
 title: tmux でクリップボードを使う
+slug: share-tmux-clipboard
 date: 2016-03-25T15:26:45+00:00
 comments: true
 categories: programming

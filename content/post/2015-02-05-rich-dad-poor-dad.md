@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 「金持ち父さん 貧乏父さん」を読んだ
+slug: rich-dad-poor-dad
 date: 2015-02-05T10:35:40+00:00
 comments: true
 categories: review

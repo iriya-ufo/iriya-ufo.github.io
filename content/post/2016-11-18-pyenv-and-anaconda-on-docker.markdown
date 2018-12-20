@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Docker コンテナに anaconda 環境を構築"
+slug: pyenv-and-anaconda-on-docker
 date: 2016-11-18 12:17:31 +0900
 comments: true
 categories: machine_learning
