@@ -1,6 +1,11 @@
 ---
-title: "{{ replace .Name "-" " " | title }}"
+layout: post
+title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+lastmod: {{ .Date }}
+comments: true
+categories:
+  - ""
+tags:
+  - ""
 ---
-
