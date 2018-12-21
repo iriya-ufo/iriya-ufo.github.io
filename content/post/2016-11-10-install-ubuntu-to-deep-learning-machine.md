@@ -10,7 +10,7 @@ tags:
   - "machine learning"
 ---
 
-[『Hardware Architecture for Machine Learning』]({% post_url 2016-11-09-hardware-architecture-for-machine-learning %})で作ったマシンに Ubuntu 16.04 LTS をインストールしました。
+[『Hardware Architecture for Machine Learning』]({{< relref "2016-11-09-hardware-architecture-for-machine-learning" >}})で作ったマシンに Ubuntu 16.04 LTS をインストールしました。
 
 Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓いたのでその解決法を記載します。
 
@@ -34,6 +34,6 @@ Nvidia GTX-1080 を使っていたせいで、インストーラーが表示さ�
 
 これで、グラフィックボードをつけて再起動すれば Ubuntu が起動します。
 
-次回は[『GPU 経由で TensorFlow を実行』]({% post_url 2016-11-19-tensorflow-running-by-gpu %})できるようにします。
+次回は[『GPU 経由で TensorFlow を実行』]({{< relref "2016-11-19-tensorflow-running-by-gpu" >}})できるようにします。
 
 [『Deep Learning from scratch』]({{ root_url }}/products)

@@ -8,7 +8,7 @@ categories:
   - "diary"
 ---
 
-![/images/2013/06/HN-Kansai-9th.jpg](center)
+<img src="/images/2013/06/HN-Kansai-9th.jpg" class="image">
 
 [HN Kansai](http://hnkansai.org/) に参加しました。
 
@@ -30,5 +30,5 @@ LeapMotion は指先の動きをかなり正確に感知できるデバイスで
 
 bitcoin についてはこの場で初めて聞いた言葉だったのでほとんど説明の意味が分かりませんでしたが家に帰ってググってみてビックリ！仮想通貨のことだったのですね。
 
-{% youtube Um63OQz3bjo %}
-{% youtube GmOzih6I1zs %}
+<iframe width="560" height="315" src="//www.youtube.com/embed/Um63OQz3bjo" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="//www.youtube.com/embed/GmOzih6I1zs" frameborder="0" allowfullscreen></iframe>

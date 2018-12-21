@@ -10,7 +10,7 @@ tags:
   - "docker"
 ---
 
-[『Mac に Docker 環境を構築する』]({% post_url 2015-07-20-docker-on-mac %})を書いてしばらくしたら `boot2docker` が非推奨となって[『Docker-machine で Mac に Docker 環境を構築する』]({% post_url 2015-10-10-docker-machine-on-mac %})を書いたら今度は [Docker for Mac](https://docs.docker.com/docker-for-mac/) がナウいとかなって今回の記事に至ります。仮想環境は変化が速くていろいろ大変です。
+[『Mac に Docker 環境を構築する』]({{< relref "2015-07-20-docker-on-mac" >}})を書いてしばらくしたら `boot2docker` が非推奨となって[『Docker-machine で Mac に Docker 環境を構築する』]({{< relref "2015-10-10-docker-machine-on-mac" >}})を書いたら今度は [Docker for Mac](https://docs.docker.com/docker-for-mac/) がナウいとかなって今回の記事に至ります。仮想環境は変化が速くていろいろ大変です。
 
 Docker for Mac はネイティブに動作する Docker 環境らしく先日β版から正式公開となったようです。Docker が Linux カーネル上で動作するのにネイティブってどういう意味や？と思ってましたが、どうやら VirtualBox のようなホスト型仮想環境ではなく Mac OS X 組み込みのハイパーバイザー型の HyperKit を使って仮想環境を作るから速いらしいとのことでした。ネットワーク周りに面倒ごともなさそうなので今から環境作るなら Docker for Mac 一択かなという感じがします。
 

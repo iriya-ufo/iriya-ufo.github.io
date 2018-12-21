@@ -11,7 +11,7 @@ tags:
   - "jupyter"
 ---
 
-[前回 Anaconda 環境の Docker イメージ]({% post_url 2016-11-18-pyenv-and-anaconda-on-docker %})を作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うことにします。
+[前回 Anaconda 環境の Docker イメージ]({{< relref "2016-11-18-pyenv-and-anaconda-on-docker" >}})を作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うことにします。
 
 Jupyter ってなんぞっていう説明はググレばいっぱい出てきますので、そちらを参照ください。下記記事はよくまとまっていてよかったです。
 

@@ -11,7 +11,7 @@ tags:
   - "tensorflow"
 ---
 
-[前回]({% post_url 2016-11-10-install-ubuntu-to-deep-learning-machine %})は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。
+[前回]({{< relref "2016-11-10-install-ubuntu-to-deep-learning-machine" >}})は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。
 移植性の高い方法で構築したいので Docker を使います。
 
 ## 前提
@@ -86,6 +86,6 @@ MNIST サンプルコードを動かして計算させてみる。コードは�
 Docker 再起動で keras とか書いたコードとか消えちゃうので、イメージ作成とボリュームセットの構築が必要かな。
 今回は提供されている Docker を利用しただけなので、次回は自前で Dockerfile 作成とイメージ作成をやっていきたいと思います。
 
-次回は[『Docker コンテナに Anaconda 環境を構築』]({% post_url 2016-11-18-pyenv-and-anaconda-on-docker %})します。
+次回は[『Docker コンテナに Anaconda 環境を構築』]({{< relref "2016-11-18-pyenv-and-anaconda-on-docker" >}})します。
 
 [『Deep Learning from scratch』]({{ root_url }}/products)

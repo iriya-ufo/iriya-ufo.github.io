@@ -15,7 +15,7 @@ Rails 開発で js とか css とかマジだるい。管理とかだるい。�
 ## 事前準備
 bower は node package なので最初に Node.js とかインストールしておく。
 
-[Mac に Node.js インストールした]({% post_url 2016-04-07-nodejs-on-mac %})
+[Mac に Node.js インストールした]({{< relref "2016-04-07-nodejs-on-mac" >}})
 
 ## Rails で使う
 Gemfile を書いて `$ bundle install` する。

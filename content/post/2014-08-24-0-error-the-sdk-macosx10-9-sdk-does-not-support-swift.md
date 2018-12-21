@@ -19,4 +19,4 @@ MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode �
 
     $ /Applications/Xcode6-Beta6.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift -target x86_64-apple-macosx10.9 -sdk /Applications/Xcode6-Beta6.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.10.sdk
 
-また Xcode のバージョンアップをした人は[「Swift をとりあえず実行するまでの手順」]({% post_url 2014-07-23-quick-start-swift %})の「コマンドラインから実行する」で雑多な設定をやってあげるといいでしょう。
+また Xcode のバージョンアップをした人は[「Swift をとりあえず実行するまでの手順」]({{< relref "2014-07-23-quick-start-swift" >}})の「コマンドラインから実行する」で雑多な設定をやってあげるといいでしょう。

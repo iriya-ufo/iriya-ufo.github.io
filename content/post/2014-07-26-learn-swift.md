@@ -19,7 +19,7 @@ tags:
 ## 環境構築
 まず以下を参考にしてコマンドラインから実行できる環境を整えましょう。
 
-[Swift をとりあえず実行するまでの手順]({% post_url 2014-07-23-quick-start-swift %})
+[Swift をとりあえず実行するまでの手順]({{< relref "2014-07-23-quick-start-swift.md" >}})
 
 ## Hellow, World
 それではさっそく Hellow, World しましょう。適当な場所に拡張子 `.swift` でファイルを作り以下の一行を書きます。
