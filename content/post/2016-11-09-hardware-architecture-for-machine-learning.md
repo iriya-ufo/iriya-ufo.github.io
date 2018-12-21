@@ -37,5 +37,3 @@ tags:
 ちなみに、自作とかめんどくさい、お金払ってなんとかならんの？っていう方は**[ここから](https://deepstation.jp/index.html#)**買ってください。
 
 次回はこのマシンに[『Ubuntu のインストール』]({{< relref "2016-11-10-install-ubuntu-to-deep-learning-machine" >}})を行います。
-
-[『Deep Learning from scratch』]({{ root_url }}/products)

@@ -35,5 +35,3 @@ Nvidia GTX-1080 を使っていたせいで、インストーラーが表示さ�
 これで、グラフィックボードをつけて再起動すれば Ubuntu が起動します。
 
 次回は[『GPU 経由で TensorFlow を実行』]({{< relref "2016-11-19-tensorflow-running-by-gpu" >}})できるようにします。
-
-[『Deep Learning from scratch』]({{ root_url }}/products)

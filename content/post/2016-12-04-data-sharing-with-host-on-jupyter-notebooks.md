@@ -24,5 +24,3 @@ Jupyter Notebooks は公式の Docker イメージが配布されているので
     # -v オプションでデータ共有を指定
     # -v ホスト側ディレクトリ:コンテナ側ディレクトリ
     # Jupyter Notebooks ではコンテナ側ディレクトリは /home/jovyan/work となる
-
-[『Deep Learning from scratch』]({{ root_url }}/products)

@@ -33,5 +33,3 @@ tags:
 - [機械学習の初心者が数式に困惑したら。解決への指針](http://s0sem0y.hatenablog.com/entry/2016/10/02/035044)
 
 計算方法と理論の理解ができればよく、定理の証明などはこだわらない方が早く進むでしょう。
-
-[『Deep Learning from scratch』]({{ root_url }}/products)

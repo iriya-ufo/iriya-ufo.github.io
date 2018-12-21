@@ -28,5 +28,3 @@ Anaconda にする理由と各OS実機にインストールする方法が下記
 Docker を使う方法は下記の README を参照してください。Pyenv と Anaconda3 の環境を一つにした Docker イメージになります。
 
 - https://github.com/iriya-ufo/ml-anaconda
-
-[『Deep Learning from scratch』]({{ root_url }}/products)
