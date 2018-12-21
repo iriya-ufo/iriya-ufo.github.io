@@ -4,7 +4,8 @@ title: 「小さなチーム、大きな仕事」を読んだ
 slug: small-team-big-job
 date: 2015-06-07T17:26:54+00:00
 comments: true
-categories: review
+categories:
+  - "review"
 ---
 
 37signals の創業者が書いた本。だいぶ前にIT界隈で賑わった本を今更ながら読んだ。タイトルにある通り、少ない人数のチームでも大きな成果を得る仕事をするにはどうすればいいのか、を主軸にエッセイ風にまとまっている本だ。

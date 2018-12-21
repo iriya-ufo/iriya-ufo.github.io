@@ -4,10 +4,11 @@ title: Xcode で作ったプロジェクトを削除する方法
 slug: how-to-delete-the-project-made-by-xcode
 date: 2014-08-24T16:41:24+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - swift
-  - xcode
+  - "swift"
+  - "xcode"
 ---
 
 練習がてら適当にプロジェクトを作成するといっぱい溜まってくるのでいらないものは消してすっきりしたくなる時があるかと思います。Xcode で作ったプロジェクトを完全削除するには以下のようにすればよいです。

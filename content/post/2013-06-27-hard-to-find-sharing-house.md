@@ -4,7 +4,8 @@ title: ルームシェアできる物件は本当に少ない
 slug: hard-to-find-sharing-house
 date: 2013-06-27T23:43:51+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 東京と京都の往復でお金が無くなっていく毎日です。:(

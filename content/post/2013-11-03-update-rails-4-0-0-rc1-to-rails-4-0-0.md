@@ -4,13 +4,10 @@ title: Rails 4.0.0.rc1 から 4.0.0 にアップデートしたら嵌った
 slug: update-rails-4-0-0-rc1-to-rails-4-0-0
 date: 2013-11-03T04:24:00+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gem
-  - mac
-  - rbenv
-  - ruby
-  - rails
+  - "ruby on rails"
 ---
 
 3系から4系のアップデートを参考にしたのだけれど、変にエラーが出て嵌ったので解決方法を書く。

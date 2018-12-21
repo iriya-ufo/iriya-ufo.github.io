@@ -4,8 +4,10 @@ title: Docker DataCenter さわってみた
 slug: start-docker-datacenter
 date: 2016-03-08T04:38:29+00:00
 comments: true
-categories: programming
-tags: docker
+categories:
+  - "programming"
+tags:
+  - "docker"
 ---
 
 <img src="/images/2016/03/ddc.png" class="image">

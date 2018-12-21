@@ -4,10 +4,10 @@ title: 標準のコマンドの関連付けを変更 update-alternatives
 slug: update-alternatives
 date: 2013-10-19T18:17:35+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - emacs
-  - ubuntu
+  - "emacs"
 ---
 
 Ubuntu にて `update-alternatives` コマンドを使用すると標準コマンドの関連付けを変更できます。
@@ -25,7 +25,7 @@ Emacs がどこから実行されるか調べてみます。
 シンボリックリンクになっており実態は `/etc/alternatives/emacs` であることが分かります。
 
 次に alternatives の正体を突き止めます。
-    
+
     $ ll /etc/alternatives/emacs
     lrwxrwxrwx 1 root root 16 2008-03-25 18:47 /etc/alternatives/emacs -> /usr/bin/emacs22
 

@@ -4,11 +4,10 @@ title: Ubuntu の rbenv で管理している ruby を新しくする
 slug: renew-rebuild-ruby-by-rbenv
 date: 2013-10-19T02:00:50+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - rbenv
-  - ruby
-  - ubuntu
+  - "ruby"
 ---
 
 Ubuntu の rbenv で管理している ruby を新しくする方法です。
@@ -35,11 +34,11 @@ ruby-build で利用可能な ruby のバージョンを確認します。
 ## rbenv で ruby の最新バージョンをインストール
 ruby-build を更新したので rbenv で最新の ruby をインストールします。
 
-    $ rbenv install 2.0.0-p247 
+    $ rbenv install 2.0.0-p247
 
 ## デフォルトで使用する ruby のバージョン変更
 先程インストールした最新の ruby をデフォルトとして使うには以下を行います。
-    
+
     $ rbenv global 2.0.0-p247
     $ rbenv rehash
 

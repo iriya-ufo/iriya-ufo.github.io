@@ -4,11 +4,10 @@ title: Mac の Gauche で SLIB を使う
 slug: slib-with-gauche
 date: 2014-04-12T17:17:10+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gauche
-  - mac
-  - scheme
+  - "gauche"
 ---
 
 Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。

@@ -4,7 +4,10 @@ title: ネフローゼ再発したからなんか書く
 slug: nephrotic-syndrome
 date: 2016-02-09T00:51:28+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
+tags:
+  - "medical"
 ---
 
 今回も原因はよく分かりませんが、再発してしまいました。

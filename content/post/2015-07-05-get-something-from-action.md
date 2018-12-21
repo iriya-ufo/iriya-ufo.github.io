@@ -4,7 +4,8 @@ title: 行動しなければ何も手にはいらない
 slug: get-something-from-action
 date: 2015-07-05T18:46:42+00:00
 comments: true
-categories: review
+categories:
+  - "diary"
 ---
 
 <img src="/images/2015/07/lover.jpg" class="image">

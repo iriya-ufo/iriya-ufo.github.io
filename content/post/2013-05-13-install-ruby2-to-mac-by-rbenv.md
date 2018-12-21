@@ -4,11 +4,11 @@ title: rbenv で Mac OS X に Ruby 2.0.0 をインストールする
 slug: install-ruby2-to-mac-by-rbenv
 date: 2013-05-13T18:08:14+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - mac
-  - rbenv
-  - ruby
+  - "mac"
+  - "ruby"
 ---
 
 rvm はクールじゃないので rbenv を使って Ruby をインストールします。

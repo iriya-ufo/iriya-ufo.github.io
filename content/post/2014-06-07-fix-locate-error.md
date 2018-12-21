@@ -4,10 +4,10 @@ title: Mac OS X で locate エラーの直し方
 slug: fix-locate-error
 date: 2014-06-07T22:35:26+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - mac
-  - shell
+  - "unix"
 ---
 
 Linux でお世話になってるファイルを探すコマンドの `locate` ですが、当然 Mac にもあります。

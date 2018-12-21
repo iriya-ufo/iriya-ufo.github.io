@@ -4,8 +4,10 @@ title: Rails のアップデート
 slug: rails-update
 date: 2013-05-12T04:22:10+00:00
 comments: true
-categories: programming
-tags: rails
+categories:
+  - "programming"
+tags:
+  - "ruby on rails"
 ---
 
 Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。

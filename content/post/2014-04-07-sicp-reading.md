@@ -4,8 +4,10 @@ title: SICP 読書会始めました
 slug: sicp-reading
 date: 2014-04-07T02:15:09+00:00
 comments: true
-categories: diary
-tags: sicp
+categories:
+  - "programming"
+tags:
+  - "sicp"
 ---
 
 もうすでに2回ほど挫折してるけど今回こそは読破する勢いで読んでいきます。そのための心強い仲間もできました。興味のある方は歓迎しておりますのでご参加ください。

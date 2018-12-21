@@ -4,11 +4,11 @@ title: 土日で出来る Node.js 入門
 slug: start-nodejs-at-weekend
 date: 2014-03-08T17:29:27+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - heroku
-  - nodejs
-  - ubuntu
+  - "heroku"
+  - "nodejs"
 ---
 
 そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。

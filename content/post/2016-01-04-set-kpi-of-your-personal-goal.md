@@ -4,7 +4,8 @@ title: 目標設定にKPIを定める
 slug: set-kpi-of-your-personal-goal
 date: 2016-01-04T01:21:19+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 前回記事にて2015年の振り返りっぽいことをやったのですが、2016年に何を目標とするかまだ決めてませんでした。仕事初めの前にきちっと目標を立てておこうと思います。

@@ -4,10 +4,10 @@ title: Meteor が想像以上にすごかった
 slug: start-meteor
 date: 2015-05-24T05:17:20+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - javascript
-  - meteor
+  - "meteor"
 ---
 
 友人に勧められて、ウェブアプリケーションフレームワークの [Meteor](https://www.meteor.com/) で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどんなの？って人のためにざっくり言うとこんな感じ。

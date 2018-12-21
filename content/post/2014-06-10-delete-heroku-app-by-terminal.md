@@ -4,8 +4,10 @@ title: コマンドから Heroku アプリを削除
 slug: delete-heroku-app-by-terminal
 date: 2014-06-10T01:35:28+00:00
 comments: true
-categories: programming
-tags: heroku
+categories:
+  - "programming"
+tags:
+  - "heroku"
 ---
 
 Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削除するのがオススメです。

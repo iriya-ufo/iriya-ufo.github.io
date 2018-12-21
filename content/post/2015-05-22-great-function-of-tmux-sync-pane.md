@@ -4,9 +4,10 @@ title: tmux の sync pane 機能に感動した
 slug: great-function-of-tmux-sync-pane
 date: 2015-05-22T22:22:24+00:00
 comments: true
-categories: programming
-tags: tmux
-format: video
+categories:
+  - "programming"
+tags:
+  - "tmux"
 ---
 
 「ターミナルの仮想端末といえば screen」ってな感じで使ってたんですが、とあるレンタルサーバーで tmux 設定がデフォになってたんで重い腰をあげて tmux に移行してみました。そしたら思いのほか感動したという話しです。

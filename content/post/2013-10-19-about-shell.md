@@ -4,11 +4,10 @@ title: シェル周りまとめ
 slug: about-shell
 date: 2013-10-19T18:33:58+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - bash
-  - shell
-  - unix
+  - "shell"
 ---
 
 ## csh tcsh まとめ
@@ -46,4 +45,4 @@ login shellを bash にした場合、端末から logout する際に実行さ�
 
 ### .bashrc (bash)
 bash を起動した際に読み込まれる設定ファイル。
-login 後にシェルを起動した際にも毎回読み込まれる。 
+login 後にシェルを起動した際にも毎回読み込まれる。

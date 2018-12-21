@@ -4,7 +4,8 @@ title: ネットワークビジネスを好きになれない理由
 slug: the-reason-that-i-dont-like-network-business
 date: 2015-02-20T13:13:08+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 「我思う、ゆえに我あり」という有名な言葉を残したのはフランスの哲学者デカルトだ。批判することなく受け入れてきた先入観を排除し全てのものを疑うことから始まった。

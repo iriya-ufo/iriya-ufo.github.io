@@ -4,7 +4,8 @@ title: 「金持ち父さんのキャッシュフロー・クワドラント」�
 slug: rich-dad-cash-flow
 date: 2015-04-15T22:02:51+00:00
 comments: true
-categories: review
+categories:
+  - "review"
 ---
 
 知り合いに勧められたので読んでみました。前作となる「金持ち父さん、貧乏父さん」も読んでいます。本書は前作に比べてより<strong>右側</strong>にいくための方法について具体的に述べられています。

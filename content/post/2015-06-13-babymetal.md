@@ -4,7 +4,8 @@ title: BABYMETAL
 slug: babymetal
 date: 2015-06-13T20:09:43+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 ## メタル可愛いベイビー、あびゃーーー

@@ -4,11 +4,10 @@ title: gem を管理しよう
 slug: lets-manage-gem
 date: 2014-03-14T02:23:08+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gem
-  - ruby
-  - rails
+  - "ruby"
 ---
 
 Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは `$ gem install hoge` とかやってるかと思います。そんなこんなでいろいろインストールするとぐちゃぐちゃになってきて Rails を動かし始めたらもう訳が分からなくなるでしょう。一つの環境でしか使わないならいいでしょうが、複数で同じ環境を構築したいなどとなると少し大変です。

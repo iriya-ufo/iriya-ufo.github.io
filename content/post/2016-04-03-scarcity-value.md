@@ -4,7 +4,8 @@ title: 希少価値
 slug: scarcity-value
 date: 2016-04-03T23:14:56+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 国税庁の民間給与実態統計調査結果によると、年収900万円台の男性の割合は2.7%だそうです。1000万〜1500万台だと幅が広いためか少し増えて、4.9%となります。

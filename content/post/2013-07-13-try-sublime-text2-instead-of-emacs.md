@@ -4,10 +4,11 @@ title: Emacs 使いが Sublime Text 2 を練習してみた
 slug: try-sublime-text2-instead-of-emacs
 date: 2013-07-13T15:43:18+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - emacs
-  - sublime text
+  - "emacs"
+  - "sublime text"
 ---
 
 知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。
@@ -31,7 +32,7 @@ tags:
 
 一応、備忘録としてインストール方法を書き残しておきます。
 ソースからインストールする方法もありますが、Ubuntu だと以下のようにしてPPAでインストールするのが楽ですね。
-    
+
     $ sudo add-apt-repository ppa:webupd8team/sublime-text-2
     $ sudo apt-get update
     $ sudo apt-get install sublime-text

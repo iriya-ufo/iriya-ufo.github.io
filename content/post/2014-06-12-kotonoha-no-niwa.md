@@ -4,8 +4,10 @@ title: 【感想】言の葉の庭
 slug: kotonoha-no-niwa
 date: 2014-06-12T02:49:02+00:00
 comments: true
-categories: anime
-tags: anime
+categories:
+  - "anime"
+tags:
+  - "anime"
 ---
 
 TSUTAYAで借りてきてみました。一言で感想を言うと良くも悪くも新海作品だなという感じです。

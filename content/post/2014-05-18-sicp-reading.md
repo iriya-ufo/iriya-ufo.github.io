@@ -4,8 +4,10 @@ title: 続・SICP読書会
 slug: sicp-reading
 date: 2014-05-18T03:41:22+00:00
 comments: true
-categories: diary
-tags: sicp
+categories:
+  - "programming"
+tags:
+  - "sicp"
 ---
 
 最近タスクがこなせていない SICP 読書会になっていましたが、この度新しくメンバーが2人入ってきてテンション上がりました。

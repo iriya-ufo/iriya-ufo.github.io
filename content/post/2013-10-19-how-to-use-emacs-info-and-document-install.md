@@ -4,12 +4,12 @@ title: Emacs の info の使い方と info ドキュメントインストール�
 slug: how-to-use-emacs-info-and-document-install
 date: 2013-10-19T19:19:20+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - emacs
-  - gauche
-  - sicp
-  - ubuntu
+  - "emacs"
+  - "gauche"
+  - "sicp"
 ---
 
 ## info の使い方
@@ -42,7 +42,7 @@ info は Emacs の中で説明を読むしくみ。
 
 ### Gauche info
 Gauche の info をインストールする。
- 
+
     $ sudo apt-get install texinfo
     $ cd Gauche-0.8.11/doc
     $ make -f Makefile.in texi

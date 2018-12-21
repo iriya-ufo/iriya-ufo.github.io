@@ -4,7 +4,8 @@ title: Yahoo！知恵袋でみた鮮やかな解答
 slug: yahoo-chiebukuro
 date: 2014-07-16T23:00:27+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 **弱者を抹殺する。 不謹慎な質問ですが、疑問に思ったのでお答え頂ければと思い...**

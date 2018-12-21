@@ -4,12 +4,10 @@ title: Mac の Emacs に cmigemo をインストール
 slug: install-cmigemo-on-emacs
 date: 2014-03-19T01:11:21+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - emacs
-  - homebrew
-  - mac
-  - shell
+  - "emacs"
 ---
 
 cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。

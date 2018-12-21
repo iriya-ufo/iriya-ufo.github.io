@@ -4,7 +4,8 @@ title: '2013年を振り返ってみた'
 slug: my-life-turning-point-2013
 date: 2014-01-05T04:16:06+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 2013年は僕にとって大きな変化があった年でした。何があったのか振り返ってみて2014年の糧にしたいと思います。(ブログ書いてる間に2013年終わっちゃったけど・・・)

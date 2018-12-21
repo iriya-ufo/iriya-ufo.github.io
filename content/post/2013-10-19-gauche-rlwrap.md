@@ -4,10 +4,10 @@ title: Gauche で rlwrap を使う
 slug: gauche-rlwrap
 date: 2013-10-19T20:45:17+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gauche
-  - rlwrap
+  - "gauche"
 ---
 
 Gauche で開発をするなら rlwrap は外せませんね。
@@ -18,7 +18,7 @@ Gauche で開発をするなら rlwrap は外せませんね。
     $ sudo apt-get install rlwrap
 
 Gauche の補完ファイルを準備します。
-    
+
     $ mkdir ~/.rlwrap
     $ touch ~/.rlwrap/gosh_completions
 

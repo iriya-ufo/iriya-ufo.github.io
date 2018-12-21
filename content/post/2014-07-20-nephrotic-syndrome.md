@@ -4,7 +4,10 @@ title: 入院せずにネフローゼと向き合う
 slug: nephrotic-syndrome
 date: 2014-07-20T11:54:57+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
+tags:
+  - "medical"
 ---
 
 ## 何度目の再発だろう？

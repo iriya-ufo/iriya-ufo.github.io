@@ -4,10 +4,10 @@ title: Mac に Common Lisp 処理系をインストールする
 slug: install-common-lisp-on-mac
 date: 2015-02-10T03:42:46+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - common lisp
-  - emacs
+  - "common lisp"
 ---
 
 Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは <strong>SBCL</strong> と <strong>Clozure CL</strong> です。違いは <a href="http://ja.wikipedia.org/wiki/Common_Lisp" title="Common_Lisp" target="_blank">Wikipedia</a> あたりを参考にしてもらうといいかと。

@@ -4,8 +4,10 @@ title: お金の常識を変える通貨「Bitcoin」
 slug: bitcoin-impact
 date: 2013-10-07T02:12:24+00:00
 comments: true
-categories: diary
-tags: bitcoin
+categories:
+  - "diary"
+tags:
+  - "bitcoin"
 ---
 
 皆さん Bitcoin って何かご存知でしょうか？

@@ -4,16 +4,14 @@ title: Ruby on Rails 4 のアプリを Heroku で公開する
 slug: ruby-on-rails-4-to-heroku
 date: 2013-05-28T18:00:47+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gem
-  - git
-  - heroku
-  - homebrew
-  - mac
-  - rbenv
-  - ruby
-  - rails
+  - "git"
+  - "heroku"
+  - "mac"
+  - "ruby"
+  - "ruby on rails"
 ---
 
 Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。

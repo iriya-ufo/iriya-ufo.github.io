@@ -4,11 +4,11 @@ title: '&lt;unknown&gt;:0: error: the SDK &#8216;MacOSX10.9.sdk&#8217; does not 
 slug: 0-error-the-sdk-macosx10-9-sdk-does-not-support-swift
 date: 2014-08-24T18:13:51+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - mac
-  - swift
-  - xcode
+  - "swift"
+  - "xcode"
 ---
 
 Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。

@@ -4,8 +4,10 @@ title: Slack に Hubot をいれてみた
 slug: hubot-on-slack
 date: 2016-03-04T18:10:03+00:00
 comments: true
-categories: programming
-tags: hubot
+categories:
+  - "programming"
+tags:
+  - "hubot"
 ---
 
 Hubot は GitHub が開発した bot のフレームワークです。Node.js の上で走って CoffeeScript で動きます。実装環境は AWS にしました。常時稼働させとかなきゃいけないからね。

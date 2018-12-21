@@ -4,10 +4,11 @@ title: 海外の教育系スタートアップで気になるものまとめ
 slug: cool-educational-startup-list
 date: 2013-12-29T03:24:34+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 tags:
-  - edtech
-  - startup
+  - "edtech"
+  - "startup"
 ---
 
 昨今スタートアップ界隈で EdTech が流行しています。そこで個人的に気になった海外の教育系スタートアップを選んでまとめてみました。

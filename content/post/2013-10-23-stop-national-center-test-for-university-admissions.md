@@ -4,7 +4,8 @@ title: センター試験廃止について意見申す
 slug: stop-national-center-test-for-university-admissions
 date: 2013-10-23T06:23:09+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 <img src="/images/2013/10/exam.png" class="image">

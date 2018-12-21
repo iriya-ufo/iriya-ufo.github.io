@@ -4,8 +4,10 @@ title: Mac に Python 環境構築
 slug: python-on-mac
 date: 2015-10-10T19:00:23+00:00
 comments: true
-categories: programming
-tags: python
+categories:
+  - "programming"
+tags:
+  - "python"
 ---
 
 普段は Ruby 使いの自分です。ちょっと Python のライブラリを使いたい状況に出くわしたので、環境構築を含めまじめにやってみました。昔と違い随分と便利になってますね。

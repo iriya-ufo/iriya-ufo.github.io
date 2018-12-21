@@ -4,8 +4,10 @@ title: もし今この世界に生まれていなかったら
 slug: if-they-were-not-born
 date: 2013-07-08T02:04:39+00:00
 comments: true
-categories: anime
-tags: anime
+categories:
+  - "anime"
+tags:
+  - "mad"
 ---
 
 <img src="/images/2013/07/tokikake.png" class="image">

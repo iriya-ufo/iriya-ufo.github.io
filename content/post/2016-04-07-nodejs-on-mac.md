@@ -4,10 +4,10 @@ title: Mac に Node.js インストールした
 slug: nodejs-on-mac
 date: 2016-04-07T22:54:11+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - mac
-  - nodejs
+  - "nodejs"
 ---
 
 今更すぎるけどいれた。

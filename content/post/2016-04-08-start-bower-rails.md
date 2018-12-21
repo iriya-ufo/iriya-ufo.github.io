@@ -4,10 +4,10 @@ title: bower-rails 使ってみた
 slug: start-bower-rails
 date: 2016-04-08T00:52:01+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - mac
-  - rails
+  - "ruby on rails"
 ---
 
 Rails 開発で js とか css とかマジだるい。管理とかだるい。なので bower-rails 使ってみた。

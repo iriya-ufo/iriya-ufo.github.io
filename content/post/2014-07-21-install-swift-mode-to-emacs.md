@@ -4,10 +4,10 @@ title: Emacs に swift-mode をインストール
 slug: install-swift-mode-to-emacs
 date: 2014-07-21T14:51:49+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - emacs
-  - swift
+  - "emacs"
 ---
 
 Apple が発表した新言語 Swift が話題になってますね。

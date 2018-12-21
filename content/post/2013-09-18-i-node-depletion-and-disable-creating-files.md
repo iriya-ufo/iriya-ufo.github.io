@@ -4,8 +4,10 @@ title: i-node が枯渇してファイルの作成ができなくなった件
 slug: i-node-depletion-and-disable-creating-files
 date: 2013-09-18T21:35:15+00:00
 comments: true
-categories: programming
-tags: ubuntu
+categories:
+  - "programming"
+tags:
+  - "ubuntu"
 ---
 
 久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。

@@ -4,8 +4,10 @@ title: スタートアップで大事なこと
 slug: important-point-about-startup
 date: 2015-07-03T00:38:07+00:00
 comments: true
-categories: diary
-tags: startup
+categories:
+  - "diary"
+tags:
+  - "startup"
 ---
 
 <img src="/images/2015/07/startup.jpg" class="image">

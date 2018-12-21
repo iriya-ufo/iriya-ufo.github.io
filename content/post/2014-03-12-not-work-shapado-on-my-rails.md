@@ -4,14 +4,10 @@ title: Rails 製アプリの Shapado をインストールしようとしたら�
 slug: not-work-shapado-on-my-rails
 date: 2014-03-12T02:12:34+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gem
-  - homebrew
-  - mongodb
-  - newrelic
-  - ruby
-  - rails
+  - "ruby on rails"
 ---
 
 プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみようと思いました。Shapado というQ&amp;Aアプリが面白そうだったので Mac にインストールして動かしてみました。これが時間を食いつぶすきっかけになるとは思ってもいなかった・・・

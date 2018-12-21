@@ -4,8 +4,10 @@ title: Swift をインタラクティブに実行しながら勉強しよう (�
 slug: learn-swift
 date: 2014-07-26T15:55:36+00:00
 comments: true
-categories: programming
-tags: swift
+categories:
+  - "programming"
+tags:
+  - "swift"
 ---
 
 > Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Swift と同時に発表された Xcode バージョン 6 では、コードの実行結果をグラフィカルに確認しながら開発できる Playgrounds が実装された。

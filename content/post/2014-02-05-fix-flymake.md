@@ -4,14 +4,11 @@ title: rbenv で入れた ruby で flymake がちゃんと動作しなかった�
 slug: fix-flymake
 date: 2014-02-05T00:28:18+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - emacs
-  - flymake
-  - mac
-  - rbenv
-  - ruby
-  - ubuntu
+  - "emacs"
+  - "ruby"
 ---
 
 Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？
@@ -31,7 +28,7 @@ rbenv でインストールした ruby を読ませるため `.emacs` に以下�
 ```
 
 Emacs を再起動して `M-x run-ruby` で確認してみましょう。
-    
+
 ## PATH 設定前
 
     irb(main):001:0> RUBY_VERSION

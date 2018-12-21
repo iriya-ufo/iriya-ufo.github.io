@@ -4,10 +4,10 @@ title: middleman-s3_sync で colorize のエラーがでた
 slug: middleman-s3_sync-colorize-error
 date: 2014-12-27T21:55:29+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gem
-  - middleman
+  - "middleman"
 ---
 
 静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました。

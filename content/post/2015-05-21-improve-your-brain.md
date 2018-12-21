@@ -4,7 +4,8 @@ title: 「地頭力を鍛える」を読んだ
 slug: improve-your-brain
 date: 2015-05-21T03:53:24+00:00
 comments: true
-categories: review
+categories:
+  - "review"
 ---
 
 タイトルに惹かれて読んでみた。これで少しは地頭がよくなるかと思ったけど期待はずれ。

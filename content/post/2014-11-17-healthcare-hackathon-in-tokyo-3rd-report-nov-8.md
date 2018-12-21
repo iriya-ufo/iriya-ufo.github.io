@@ -4,8 +4,10 @@ title: Healthcare Hackathon in Tokyo 3rd Report @ Nov. 8
 slug: healthcare-hackathon-in-tokyo-3rd-report-nov-8
 date: 2014-11-17T03:30:03+00:00
 comments: true
-categories: diary
-tags: startup
+categories:
+  - "diary"
+tags:
+  - "startup"
 ---
 
 ちょっと遅くなりましたが Healthcare Hackathon に参加したのでレポートを書きます。医療健康分野というテーマに絞った珍しいハッカソンでした。第3回は 2014/11/08 HUB TOKYO (目黒) での開催です。今回は"糖尿病"をテーマに約40名ほどの人たちが参加してました。若干ですがエンジニアの方が多かったです。

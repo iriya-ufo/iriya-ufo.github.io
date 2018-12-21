@@ -4,11 +4,11 @@ title: Mac に AUCTeX をインストールした
 slug: auctex-to-mac-emacs
 date: 2014-04-13T15:34:38+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - auctex
-  - emacs
-  - mac
+  - "emacs"
+  - "latex"
 ---
 
 昔書いてた TeX を Mac 環境で快適に使う設定を始めたのが運のつき・・・めちゃ時間かかりました。

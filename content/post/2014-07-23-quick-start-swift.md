@@ -4,11 +4,11 @@ title: Swift をとりあえず実行するまでの手順
 slug: quick-start-swift
 date: 2014-07-23T03:06:46+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - mac
-  - swift
-  - xcode
+  - "swift"
+  - "xcode"
 ---
 
 <img src="/images/2014/07/swift.png" class="image">

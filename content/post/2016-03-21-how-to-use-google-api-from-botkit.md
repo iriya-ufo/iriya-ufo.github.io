@@ -4,11 +4,12 @@ title: Botkit から Google API 叩いてみた
 slug: how-to-use-google-api-from-botkit
 date: 2016-03-21T01:34:27+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - botkit
-  - google api
-  - nodejs
+  - "botkit"
+  - "google api"
+  - "nodejs"
 ---
 
 前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。

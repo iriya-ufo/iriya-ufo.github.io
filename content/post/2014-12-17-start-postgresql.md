@@ -4,8 +4,10 @@ title: PostgreSQL の基本
 slug: start-postgresql
 date: 2014-12-17T21:43:32+00:00
 comments: true
-categories: programming
-tags: postgresql
+categories:
+  - "programming"
+tags:
+  - "postgresql"
 ---
 
 環境は Mac でやってますが Linux でもほぼ同じです。

@@ -4,11 +4,12 @@ title: zsh で git のコマンド補完及びブランチ名の表示
 slug: git-completion-by-zsh
 date: 2013-05-18T07:58:33+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - git
-  - homebrew
-  - zsh
+  - "git"
+  - "homebrew"
+  - "zsh"
 ---
 
 ## git のコマンド補完

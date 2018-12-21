@@ -4,8 +4,10 @@ title: 走れ！走れ！走れ！
 slug: run-run-run
 date: 2013-07-09T22:50:08+00:00
 comments: true
-categories: diary
-tags: startup
+categories:
+  - "diary"
+tags:
+  - "startup"
 ---
 
 <img src="/images/2013/07/running.jpg" class="image">

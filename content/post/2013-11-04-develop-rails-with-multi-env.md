@@ -4,15 +4,11 @@ title: 複数の環境で Rails を開発する
 slug: develop-rails-with-multi-env
 date: 2013-11-04T00:15:10+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gem
-  - git
-  - heroku
-  - mac
-  - postgresql
-  - rails
-  - ubuntu
+  - "heroku"
+  - "ruby on rails"
 ---
 
 普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。

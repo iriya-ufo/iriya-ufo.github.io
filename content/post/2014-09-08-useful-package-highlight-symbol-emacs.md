@@ -4,8 +4,10 @@ title: highlight-symbol が便利
 slug: useful-package-highlight-symbol-emacs
 date: 2014-09-08T16:01:00+00:00
 comments: true
-categories: programming
-tags: emacs
+categories:
+  - "programming"
+tags:
+  - "emacs"
 ---
 
 ちょっとした事なんですが、プログラムを書いてると、「このシンボルを目立つようにマーク付けしておきたいなぁ」なんて思うことがあります。関数とか変数とか関係なくちょこっとマークしてそれを常にハイライトしておくんですね。`highlight-symbol` を使うとこれが実現できそうです。

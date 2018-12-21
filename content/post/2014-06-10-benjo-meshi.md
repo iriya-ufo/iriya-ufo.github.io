@@ -4,7 +4,8 @@ title: 便所飯に至る理由
 slug: benjo-meshi
 date: 2014-06-10T02:10:58+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 私は高校生の時に一度だけ便所飯をしたことがあります。べつにいじめられていたとか友だちがいなかったとかいうわけではありません。

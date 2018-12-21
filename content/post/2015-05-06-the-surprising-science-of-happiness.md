@@ -4,7 +4,8 @@ title: 思い込みの幸せは偽物じゃない
 slug: the-surprising-science-of-happiness
 date: 2015-05-06T03:46:58+00:00
 comments: true
-categories: diary
+categories:
+  - "diary"
 ---
 
 人生における本当の幸せとはなにか、誰しも一度は考えて悩んだことのある問いだろう。

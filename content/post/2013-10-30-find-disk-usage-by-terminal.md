@@ -4,8 +4,10 @@ title: 各ディレクトリの使用量をターミナルで確認する方法
 slug: find-disk-usage-by-terminal
 date: 2013-10-30T02:03:20+00:00
 comments: true
-categories: programming
-tags: unix
+categories:
+  - "programming"
+tags:
+  - "unix"
 ---
 
 ターミナルを使って HDD 容量を確認するのに使うコマンドは `df` です。

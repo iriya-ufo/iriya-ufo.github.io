@@ -4,10 +4,10 @@ title: Mac に Clojure 環境いれてみた
 slug: clojure-on-mac
 date: 2015-04-23T23:10:30+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - clojure
-  - emacs
+  - "clojure"
 ---
 
 Closure ではなくて Clozure でもなくて Clojure の環境構築です。

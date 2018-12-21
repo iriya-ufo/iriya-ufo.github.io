@@ -4,8 +4,10 @@ title: 法人口座開設の条件が厳しい
 slug: hard-to-open-corporate-bank-account
 date: 2013-08-05T01:07:38+00:00
 comments: true
-categories: diary
-tags: startup
+categories:
+  - "diary"
+tags:
+  - "startup"
 ---
 
 会社を設立してまずすることは口座を開設することではないでしょうか？

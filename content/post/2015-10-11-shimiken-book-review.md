@@ -1,10 +1,11 @@
 ---
 layout: post
-title: AV男優という仕事
+title: 「AV男優しみけん 光り輝くクズでありたい」を読んだ
 slug: shimiken-book-review
 date: 2015-10-11T02:09:29+00:00
 comments: true
-categories: review
+categories:
+  - "review"
 ---
 
 みなさんは「しみけん」という男性をご存知だろうか。言わずと知れた人気AV男優である。最近しみけんが出した本「光り輝くクズでありたい」を読んだ。

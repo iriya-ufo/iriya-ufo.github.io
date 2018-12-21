@@ -4,8 +4,10 @@ title: 自分の性格に適した解を見つけ出す
 slug: find-your-personal-good-point
 date: 2014-07-13T22:12:31+00:00
 comments: true
-categories: diary
-tags: anime
+categories:
+  - "anime"
+tags:
+  - "anime"
 ---
 
 > 「なあ白。人は変われるっていうけど、本当にそうかな。飛びたいって願えば、翼が生えるのかな？違うと思うんだ。変えるべきは自分じゃなくて、手段じゃないのか？」

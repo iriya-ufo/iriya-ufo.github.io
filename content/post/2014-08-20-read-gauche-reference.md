@@ -4,8 +4,10 @@ title: Gauche のユーザーリファレンスを読む
 slug: read-gauche-reference
 date: 2014-08-20T02:07:11+00:00
 comments: true
-categories: programming
-tags: gauche
+categories:
+  - "programming"
+tags:
+  - "gauche"
 ---
 
 Gauche のリファレンス読むのにはいくつか方法があって、Emacs で el いれて読みだすとか info 入れるとかありますけど、一番簡単な方法はこれでしょう。

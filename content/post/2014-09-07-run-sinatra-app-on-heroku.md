@@ -4,12 +4,11 @@ title: Sinatra アプリを Heroku で動かすまで
 slug: run-sinatra-app-on-heroku
 date: 2014-09-07T17:32:36+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - heroku
-  - postgresql
-  - sinatra
-  - unicorn
+  - "heroku"
+  - "sinatra"
 ---
 
 ## 環境

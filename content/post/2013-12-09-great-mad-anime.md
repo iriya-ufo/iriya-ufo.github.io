@@ -4,8 +4,10 @@ title: アニメへの愛が詰まったMAD
 slug: great-mad-anime
 date: 2013-12-09T05:24:03+00:00
 comments: true
-categories: anime
-tags: anime
+categories:
+  - "anime"
+tags:
+  - "mad"
 ---
 
 ニコニコ動画をみていたら久しぶりにいいものに出会えたので紹介しておきたい。

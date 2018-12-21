@@ -4,7 +4,8 @@ title: 「自分がいなくてもうまくいく仕組み」を読んだ
 slug: run-your-company-not-depend-on-you
 date: 2015-01-26T00:33:59+00:00
 comments: true
-categories: review
+categories:
+  - "review"
 ---
 
 最初この本を買ったときは、「自分が会社との関わりを断っても会社がうまくまわるための離れ方のノウハウ」みたいなのを想像してました。

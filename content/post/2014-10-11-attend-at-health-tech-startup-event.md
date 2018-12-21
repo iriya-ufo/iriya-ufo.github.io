@@ -4,8 +4,10 @@ title: ヘルステックスタートアップイベントに参加しました
 slug: attend-at-health-tech-startup-event
 date: 2014-10-11T19:23:47+00:00
 comments: true
-categories: diary
-tags: startup
+categories:
+  - "diary"
+tags:
+  - "startup"
 ---
 
 <img src="/images/2014/10/IMG_1399.jpg" class="image">

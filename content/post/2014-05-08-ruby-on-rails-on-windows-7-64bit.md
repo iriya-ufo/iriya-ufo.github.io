@@ -4,12 +4,11 @@ title: Windows 7 64bit に Rails の環境を構築
 slug: ruby-on-rails-on-windows-7-64bit
 date: 2014-05-08T23:39:00+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - git
-  - ruby
-  - rails
-  - windows
+  - "ruby on rails"
+  - "windows"
 ---
 
 最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずここを参考にしてもらえればと思います。

@@ -4,7 +4,8 @@ title: プログラミング技術は必要不可欠なものになってゆく
 slug: the-reason-that-every-person-should-learn-programming
 date: 2013-12-12T06:24:33+00:00
 comments: true
-categories: diary
+categories:
+  - "programming"
 ---
 
 世界の最先端を突っ走るアメリカの一番偉い人がプログラミングを学べと言っております。

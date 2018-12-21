@@ -4,8 +4,10 @@ title: のんのんびより第4話〜出会いと別れ〜
 slug: non-non-biyori-part4
 date: 2013-11-15T06:16:12+00:00
 comments: true
-categories: anime
-tags: anime
+categories:
+  - "anime"
+tags:
+  - "anime"
 ---
 
 <img src="/images/2013/11/nonnon.jpeg" class="image">

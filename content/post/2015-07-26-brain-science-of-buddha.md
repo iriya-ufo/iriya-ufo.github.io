@@ -4,7 +4,8 @@ title: 「お釈迦さまの脳科学」を読んでみた
 slug: brain-science-of-buddha
 date: 2015-07-26T09:04:13+00:00
 comments: true
-categories: review
+categories:
+  - "review"
 ---
 
 人間はよく考える生き物です。なぜ生きているのか、幸せとはなにか、そういった普遍的な問いに対して様々な解答がなされてきました。とりわけ仏教の説く思想は他の宗教と大きく違うと言われます。

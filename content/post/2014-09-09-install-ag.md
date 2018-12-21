@@ -4,11 +4,10 @@ title: 高速検索の ag を入れてみた
 slug: install-ag
 date: 2014-09-09T23:43:08+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - ag
-  - emacs
-  - zsh
+  - "emacs"
 ---
 
 プログラムを書いてると<strong>検索</strong>という行為一つで大きく生産性が変わることをプログラマーは知っています。僕は今まで grep を使ってた、というか grep しか知らなかったのですが同僚から ag について教えてもらったのでいれてみました。とにかく検索が爆速でびっくりです。

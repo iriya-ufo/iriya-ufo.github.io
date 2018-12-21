@@ -4,13 +4,10 @@ title: brew のアップグレードで rails プロジェクトなどが動か�
 slug: fix-rails-error-occurred-by-brew-update
 date: 2014-12-17T23:05:08+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - gem
-  - homebrew
-  - openssl
-  - rbenv
-  - ruby
+  - "homebrew"
 ---
 
 brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっています。よくあるのは keg-only なパッケージによる影響です。

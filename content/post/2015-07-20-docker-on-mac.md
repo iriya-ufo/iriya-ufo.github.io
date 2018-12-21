@@ -4,12 +4,10 @@ title: Mac に Docker 環境を構築する
 slug: docker-on-mac
 date: 2015-07-20T14:28:57+00:00
 comments: true
-categories: programming
+categories:
+  - "programming"
 tags:
-  - docker
-  - mac
-  - ubuntu
-  - unix
+  - "docker"
 ---
 
 <img src="/images/2015/07/homepage-docker-logo.png" class="image">

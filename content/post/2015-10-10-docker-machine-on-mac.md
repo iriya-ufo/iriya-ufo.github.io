@@ -4,8 +4,10 @@ title: docker-machine で Mac に Docker 環境を構築する
 slug: docker-machine-on-mac
 date: 2015-10-10T21:33:25+00:00
 comments: true
-categories: programming
-tags: docker
+categories:
+  - "programming"
+tags:
+  - "docker"
 ---
 
 boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。

@@ -4,7 +4,8 @@ title: 「人工知能は人間を超えるか」を読んだ
 slug: does-ai-beat-human
 date: 2016-01-26T02:11:39+00:00
 comments: true
-categories: review
+categories:
+  - "review"
 ---
 
 表紙に惹かれてつい買ってしまった本だったが買ってよかった。タイトルからシンギュラリティの話かなぁと思ってたけどそうではなかった。
