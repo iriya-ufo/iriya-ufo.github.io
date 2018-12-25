@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>docker on iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/tags/docker/</link>
+    <description>Recent content in docker on iriya-ufo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 13 Nov 2016 04:01:16 +0900</lastBuildDate>
+    
+	<atom:link href="https://iriya-ufo.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ubuntu に Docker をインストール</title>
+      <link>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</link>
+      <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</guid>
+      <description>公式サイトを参考にする。 Install Docker on Ubuntu メモリーとスワップ設定、UFW、DNSの設定はおこなっていない。</description>
+    </item>
+    
+    <item>
+      <title>Docker for Mac を使う</title>
+      <link>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</link>
+      <pubDate>Sun, 31 Jul 2016 14:11:03 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</guid>
+      <description>『Mac に Docker 環境を構築する』を書いてしばらくしたら boot2docker が非推奨となって『Docker-machine で Mac に Docker 環境を構築する』を書いたら今度は Docker</description>
+    </item>
+    
+    <item>
+      <title>Docker DataCenter さわってみた</title>
+      <link>https://iriya-ufo.net/blog/2016/03/08/start-docker-datacenter/</link>
+      <pubDate>Tue, 08 Mar 2016 04:38:29 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/03/08/start-docker-datacenter/</guid>
+      <description>以下の記事をみかけて、これはやらずにいられないと思っていじってみた感想。 コンテナ化したアプリケーションの総合的一元的管理コンソールDocke</description>
+    </item>
+    
+    <item>
+      <title>docker-machine で Mac に Docker 環境を構築する</title>
+      <link>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</link>
+      <pubDate>Sat, 10 Oct 2015 21:33:25 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</guid>
+      <description>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 1 2 3 4 WARNING: The &amp;#39;boot2docker&amp;#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine</description>
+    </item>
+    
+    <item>
+      <title>Mac に Docker 環境を構築する</title>
+      <link>https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/</link>
+      <pubDate>Mon, 20 Jul 2015 14:28:57 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/</guid>
+      <description>とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では</description>
+    </item>
+    
+  </channel>
+</rss>
