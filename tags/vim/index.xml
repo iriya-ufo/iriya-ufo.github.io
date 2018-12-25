@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>vim on iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/tags/vim/</link>
+    <description>Recent content in vim on iriya-ufo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 04 Dec 2014 18:58:13 +0000</lastBuildDate>
+    
+	<atom:link href="https://iriya-ufo.net/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Vim 小技集</title>
+      <link>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</link>
+      <pubDate>Thu, 04 Dec 2014 18:58:13 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</guid>
+      <description>自分のための覚書 編集 1 2 3 4 5 6 7 8 9 10 11 :%s/:\(\w\+\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl+v jjjj I # 4行コメントアウト(,#) Ctrl+v jjjj d # 4行コメントイン(,#)</description>
+    </item>
+    
+  </channel>
+</rss>

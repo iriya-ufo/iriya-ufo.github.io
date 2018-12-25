@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Meteor が想像以上にすごかった - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="友人に勧められて、ウェブアプリケーションフレームワークの Meteor で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどん" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.52 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2015/05/24/start-meteor/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.de1088c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Meteor が想像以上にすごかった" />
+<meta property="og:description" content="友人に勧められて、ウェブアプリケーションフレームワークの Meteor で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどん" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2015/05/24/start-meteor/" /><meta property="article:published_time" content="2015-05-24T05:17:20&#43;00:00"/>
+<meta property="article:modified_time" content="2015-05-24T05:17:20&#43;00:00"/>
+
+<meta itemprop="name" content="Meteor が想像以上にすごかった">
+<meta itemprop="description" content="友人に勧められて、ウェブアプリケーションフレームワークの Meteor で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどん">
+
+
+<meta itemprop="datePublished" content="2015-05-24T05:17:20&#43;00:00" />
+<meta itemprop="dateModified" content="2015-05-24T05:17:20&#43;00:00" />
+<meta itemprop="wordCount" content="1401">
+
+
+
+<meta itemprop="keywords" content="meteor," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Meteor が想像以上にすごかった"/>
+<meta name="twitter:description" content="友人に勧められて、ウェブアプリケーションフレームワークの Meteor で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどん"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Meteor が想像以上にすごかった</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-05-24 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#メリット">メリット</a></li>
+<li><a href="#デメリット">デメリット</a></li>
+<li><a href="#所感">所感</a></li>
+<li><a href="#meteor-アプリを動かすまで">Meteor アプリを動かすまで</a></li>
+<li><a href="#インストール">インストール</a></li>
+<li><a href="#アプリの作成と起動">アプリの作成と起動</a></li>
+<li><a href="#パッケージの追加">パッケージの追加</a></li>
+<li><a href="#ディレクトリとファイル構成">ディレクトリとファイル構成</a></li>
+<li><a href="#デプロイ">デプロイ</a>
+<ul>
+<li><a href="#1-meteor-com-にデプロイ">1. Meteor.com にデプロイ</a></li>
+<li><a href="#2-paas-でデプロイ">2. PaaS でデプロイ</a></li>
+<li><a href="#3-meteor-up-コマンドでデプロイ">3. Meteor Up コマンドでデプロイ</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>友人に勧められて、ウェブアプリケーションフレームワークの <a href="https://www.meteor.com/">Meteor</a> で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどんなの？って人のためにざっくり言うとこんな感じ。</p>
+
+<h2 id="メリット">メリット</h2>
+
+<ul>
+<li>環境構築が圧倒的に楽。むしろ構築なにそれおいしいの？という感じ。</li>
+<li>一行のコマンドで環境が用意でき、デプロイ機構まで内包してる。</li>
+<li>明瞭なディレクトリ構成。それに沿うと JS や CSS ファイルのディレクトリ指定が必要ない。</li>
+<li>DB へのアクセスが容易。サーバーサイドの Collection は Mongo DB への API として振る舞う。</li>
+<li>クライアントサイドの DB 同期が秀逸。普段はブラウザのメモリーに展開されたデータへアクセスするので超高速。</li>
+<li>ログイン処理が1行で済んだ。</li>
+<li>パッケージ追加が簡単。</li>
+<li>Meteor だけで全て事足りる。しかしこれは Meteor 依存になるためデメリットでもある。</li>
+<li>プロダクトサーバーへのデプロイも Meteor のコマンドでパッケージ化してあげればいいだけ、かついい感じに minimize してくれる。</li>
+</ul>
+
+<h2 id="デメリット">デメリット</h2>
+
+<ul>
+<li>Meteor 全てに依存する。ただしこれは Meteor だけ考えておけばよいというメリットでもある。</li>
+<li>Meteor が全て内包してるのでフロントエンド、バックエンドを切り離したサーバー構成とかが難しい。</li>
+<li>データベースは基本的に Mongo だけ。</li>
+<li>日本語の情報がすくない。</li>
+</ul>
+
+<h2 id="所感">所感</h2>
+
+<ul>
+<li>きっちりリリースするプロダクトでは使わないほうがいい。使い捨てか超光速プロトタイプ向け。</li>
+<li>DB が Mongo な点でお察し。(※ 別に Mongo が悪いわけじゃないです。向き不向きをきちんと理解しておくということです)</li>
+<li><a href="https://github.com/meteor/meteor/blob/devel/packages/spacebars/README.md">Spacebars</a> が気持ち悪い。</li>
+</ul>
+
+<p><strong>ここまで読んだうえでちょっと触ってみたい、という人は以下に進みましょう。</strong></p>
+
+<h2 id="meteor-アプリを動かすまで">Meteor アプリを動かすまで</h2>
+
+<p>こちらの<a href="https://book.discovermeteor.com/chapter/getting-started">チュートリアル</a>が素晴らしいです。英語ダメとか言わずに読みましょう。</p>
+
+<h2 id="インストール">インストール</h2>
+
+<p>一行瞬殺です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ curl https://install.meteor.com | sh</pre></td></tr></table>
+</div>
+</div>
+<h2 id="アプリの作成と起動">アプリの作成と起動</h2>
+
+<p>任意のディレクトリにて</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ meteor create microscope
+$ cd microscope
+$ meteor</pre></td></tr></table>
+</div>
+</div>
+<p><a href="http://localhost:3000">http://localhost:3000</a> にアクセスすると起動確認できます。</p>
+
+<h2 id="パッケージの追加">パッケージの追加</h2>
+
+<p><strong>bootstrap</strong> と <strong>underscore</strong> をいれてみます。Meteor は公式にあるものはそのまま追加でき、無いものは Github のグループ名またはユーザー名を : (コロン) の前につけて指定するようです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ meteor add twbs:bootstrap
+$ meteor add underscore</pre></td></tr></table>
+</div>
+</div>
+<h2 id="ディレクトリとファイル構成">ディレクトリとファイル構成</h2>
+
+<p><a href="http://docs.meteor.com/#structuringyourapp">こちら</a>の通りにしてください。とりあえず <code>/client</code>, <code>/lib</code>, <code>/public</code>, <code>/server</code> があればいいです。</p>
+
+<h2 id="デプロイ">デプロイ</h2>
+
+<p>主な方法は3つです。所感に書いた通りプロダクトリリースは今のところ想定してないので 1. を採用しています。</p>
+
+<h3 id="1-meteor-com-にデプロイ">1. Meteor.com にデプロイ</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ meteor deploy app-name.meteor.com</pre></td></tr></table>
+</div>
+</div>
+<p>これだけで自分の好きな名前でデプロイできます。当然一意の URL である必要があります。パスワードも何も聞かれないので設定しておくとよいでしょう。
+また独自ドメインで運用したい場合は適用したいドメインの CNAME を origin.meteor.com に向けます。dig コマンドなどで CNAME が有効になっていることが確認できたら以下コマンドでデプロイします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ meteor deploy your-domain-name.com</pre></td></tr></table>
+</div>
+</div>
+<p>【補足】
+デプロイに meteor.com を使用した場合はこんな感じでサーバーの様子が見れます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ meteor mongo myApp
+$ meteor logs myApp</pre></td></tr></table>
+</div>
+</div>
+<h3 id="2-paas-でデプロイ">2. PaaS でデプロイ</h3>
+
+<p>Meteor をサポートしてる PaaS は知ってる限りだと <a href="http://help.modulus.io/customer/portal/articles/1647770-using-meteor-with-modulus">Modulus</a> くらいです。独自ドメインはもちろん、SSL なんかもサポートしていますが、金額が高いです。</p>
+
+<h3 id="3-meteor-up-コマンドでデプロイ">3. Meteor Up コマンドでデプロイ</h3>
+
+<p><strong>mup</strong> というデプロイのコマンドユーティリティがあります。<strong>npm</strong> でインストールして任意のサーバーに push する感じです。デプロイ先サーバーは <a href="https://www.digitalocean.com/">DigitalOcean</a> か <a href="http://aws.amazon.com/jp/">AWS</a> がオススメです。</p>
+
+<p>メリット・デメリットに書いた通りリリース前提の本番環境で使うには難しいと思いますが、ガチでやるなら AWS と Elastic BeansTalk なんかを使うのがいいかも。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2015-05-24</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/meteor/">meteor</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2015/06/07/small-team-big-job/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">「小さなチーム、大きな仕事」を読んだ</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2015/05/23/how-to-generate-idea/">
+            <span class="next-text nav-default">「アイデアのつくり方」を読んだ</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>

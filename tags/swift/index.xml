@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swift on iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/tags/swift/</link>
+    <description>Recent content in swift on iriya-ufo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 24 Aug 2014 18:13:51 +0000</lastBuildDate>
+    
+	<atom:link href="https://iriya-ufo.net/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>&amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#8216;MacOSX10.9.sdk&amp;#8217; does not support Swift</title>
+      <link>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</link>
+      <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
+      <description>Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 1 &amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#39;MacOSX10.9.sdk&amp;#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk は</description>
+    </item>
+    
+    <item>
+      <title>Xcode で作ったプロジェクトを削除する方法</title>
+      <link>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</link>
+      <pubDate>Sun, 24 Aug 2014 16:41:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</guid>
+      <description>練習がてら適当にプロジェクトを作成するといっぱい溜まってくるのでいらないものは消してすっきりしたくなる時があるかと思います。Xcode で作っ</description>
+    </item>
+    
+    <item>
+      <title>Swift をインタラクティブに実行しながら勉強しよう (関数編)</title>
+      <link>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</link>
+      <pubDate>Sat, 26 Jul 2014 15:55:36 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</guid>
+      <description>Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Sw</description>
+    </item>
+    
+    <item>
+      <title>Swift をとりあえず実行するまでの手順</title>
+      <link>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</link>
+      <pubDate>Wed, 23 Jul 2014 03:06:46 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</guid>
+      <description>WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に</description>
+    </item>
+    
+  </channel>
+</rss>

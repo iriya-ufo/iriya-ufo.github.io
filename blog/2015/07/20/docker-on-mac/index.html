@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mac に Docker 環境を構築する - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.52 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.de1088c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mac に Docker 環境を構築する" />
+<meta property="og:description" content="とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/" /><meta property="article:published_time" content="2015-07-20T14:28:57&#43;00:00"/>
+<meta property="article:modified_time" content="2015-07-20T14:28:57&#43;00:00"/>
+
+<meta itemprop="name" content="Mac に Docker 環境を構築する">
+<meta itemprop="description" content="とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では">
+
+
+<meta itemprop="datePublished" content="2015-07-20T14:28:57&#43;00:00" />
+<meta itemprop="dateModified" content="2015-07-20T14:28:57&#43;00:00" />
+<meta itemprop="wordCount" content="2193">
+
+
+
+<meta itemprop="keywords" content="docker," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mac に Docker 環境を構築する"/>
+<meta name="twitter:description" content="とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Mac に Docker 環境を構築する</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-07-20 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#事前準備">事前準備</a></li>
+<li><a href="#docker-パッケージのインストール">docker パッケージのインストール</a></li>
+<li><a href="#docker-イメージのダウンロード">docker イメージのダウンロード</a></li>
+<li><a href="#docker-イメージの起動-停止-確認">docker イメージの起動・停止・確認</a></li>
+<li><a href="#docker-の操作">Docker の操作</a></li>
+<li><a href="#dockerfile-の作成">Dockerfile の作成</a></li>
+<li><a href="#docker-hub">Docker Hub</a></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p><img src="/images/2015/07/homepage-docker-logo.png" class="image"></p>
+
+<p>とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では簡単には環境構築できなかったりするのもあるあるですよね。レガシーな環境っていやですね。そこでプログラムを動かす環境を仮想で作ってしまおうという考えに至るわけですが、一昔前と違って様々な手段が登場しました。</p>
+
+<p>今回はコンテナ型の仮想環境を構築できる <a href="https://www.docker.com/">Docker</a> を使ってみます。なお Docker にはセキュリティ上の根本的欠陥があるとして、Docker と決別した Linxu ディストリビューションもあったりします。</p>
+
+<p><a href="http://japan.zdnet.com/article/35057363/">CoreOSが「Docker」と決別&ndash;独自のコンテナ実装「Rocket」を公開</a></p>
+
+<p>Rocket の方がナウイ感じがしますが、いかんせん情報が少ないので今回は Docker でいきます。</p>
+
+<h2 id="事前準備">事前準備</h2>
+
+<p><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> と <a href="http://brew.sh/index_ja.html">homebrew</a> をインストールしておいてください。
+VirtualBox は Linux カーネルでしか動作しない Docker を Mac で動かすために必要です。homebrew は boot2docker と呼ばれる Docker 用の Linux イメージのパッケージ管理と docker コマンド郡の管理のために必要です。</p>
+
+<h2 id="docker-パッケージのインストール">docker パッケージのインストール</h2>
+
+<p>docker ツール群をインストールしましょう。Mac だと簡単です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ brew install docker boot2docker
+$ docker -v</pre></td></tr></table>
+</div>
+</div>
+<p>バージョンが表示されたらインストールできています。</p>
+
+<h2 id="docker-イメージのダウンロード">docker イメージのダウンロード</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ boot2docker init</pre></td></tr></table>
+</div>
+</div>
+<p>Docker の仮想イメージが <code>~/.boot2docker</code> にダウンロードされます。</p>
+
+<h2 id="docker-イメージの起動-停止-確認">docker イメージの起動・停止・確認</h2>
+
+<p>次のコマンドで docker イメージが起動されます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ boot2docker up</pre></td></tr></table>
+</div>
+</div>
+<p>初回は環境変数などが表示されるので、<code>zshrc</code> とか <code>.bashrc</code> に追記しておきましょう。また VirtualBox を起動すると boot2docker が動作しているのがわかると思います。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Waiting for VM and Docker daemon to start...
+........................oooooooooooooooooo
+Started.
+Writing /Users/iriya/.boot2docker/certs/boot2docker-vm/ca.pem
+Writing /Users/iriya/.boot2docker/certs/boot2docker-vm/cert.pem
+Writing /Users/iriya/.boot2docker/certs/boot2docker-vm/key.pem
+
+To connect the Docker client to the Docker daemon, please set:
+# 以下に環境変数が表示されるのでそれぞれシェルに設定
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/iriya/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1</pre></td></tr></table>
+</div>
+</div>
+<p>停止と状態確認は以下の通りです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ boot2docker stop
+$ boot2docker status</pre></td></tr></table>
+</div>
+</div>
+<h2 id="docker-の操作">Docker の操作</h2>
+
+<p>ここまでで Docker の環境は用意できました。実際の仮想環境は Docker ホスト上に<strong>コンテナ</strong>という形で作っていくことになります。動作イメージはこのような感じです。</p>
+
+<p><img src="/images/2015/07/docker-image-2.png" class="image"></p>
+
+<p>それでは練習として CentOS イメージのダウンロードと確認をしてみましょう。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker pull centos:centos6
+$ docker images</pre></td></tr></table>
+</div>
+</div>
+<p>オプションの確認は下記コマンドでできます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker —help
+$ docker COMMAND —help</pre></td></tr></table>
+</div>
+</div>
+<p>では次にコンテナの起動をしてみましょう。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker run -t -i -d --name centos6 centos:centos6 /bin/bash
+
+-d はバックグラウンド
+-i は Keep STDIN open even if not attached
+-t は Allocate a pseudo-TTY</pre></td></tr></table>
+</div>
+</div>
+<p>プロセスの確認をしてみます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker ps</pre></td></tr></table>
+</div>
+</div>
+<p>コンテナにアタッチしたりデタッチするには以下のようにします。アタッチする際はプロセスで確認したID番号を指定します。なおアタッチしている状態で exit するとデタッチではなくプロセスの終了になるので注意しましょう。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker attach a732c1346103 # アタッチ
+C-p C-q                      # デタッチ</pre></td></tr></table>
+</div>
+</div>
+<p>いろいろいじってるとゴミができます。ゴミは整理したほうがいいですね。レポジトリ名が<code>&lt;none&gt;</code>のイメージを全て削除する方法です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker rmi -f `docker images | grep &#34;&lt;none&gt;&#34; | awk &#39;{ print $3 }&#39;`</pre></td></tr></table>
+</div>
+</div>
+<p>イメージIDを指定して削除する方法です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker rmi a005304e4e74</pre></td></tr></table>
+</div>
+</div>
+<h2 id="dockerfile-の作成">Dockerfile の作成</h2>
+
+<p>先ほどは centos のミニマムバージョンを起動していろいろ試してみました。ここでは実際に Ruby と MySQL が入った環境を作ってみましょう。構築は Dockerfile というものを作ってそこに書いていく感じになります。用途ごとにディレクトリを作成するとよいでしょう。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ mkdir ~/docker/rbenv-mysql
+$ vim ~/docker/rbenv-mysql/Dockerfile</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh ~/docker/rbenv-mysql/Dockerfile" data-lang="sh ~/docker/rbenv-mysql/Dockerfile"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-sh ~/docker/rbenv-mysql/Dockerfile" data-lang="sh ~/docker/rbenv-mysql/Dockerfile"><span class="k">FROM</span><span class="s"> ubuntu:14.04</span><span class="err">
+</span><span class="err"></span><span class="k">MAINTAINER</span><span class="s"> Naoto Inoue</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># パッケージのインストールとアップデート</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get -y upgrade<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get -y install build-essential<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get -y install git vim curl<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get install -y zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># rbenv のインストール</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> git clone https://github.com/sstephenson/rbenv.git /root/.rbenv<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> ./root/.rbenv/plugins/ruby-build/install.sh<span class="err">
+</span><span class="err"></span><span class="k">ENV</span><span class="s"> PATH /root/.rbenv/bin:$PATH</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; /etc/profile.d/rbenv.sh<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; .bashrc<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># ruby のインストール</span><span class="err">
+</span><span class="err"></span><span class="k">ENV</span><span class="s"> CONFIGURE_OPTS --disable-install-doc</span><span class="err">
+</span><span class="err"></span><span class="k">ADD</span><span class="s"> ./versions.txt /root/versions.txt</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> xargs -L <span class="m">1</span> rbenv install &lt; /root/versions.txt<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s1">&#39;gem: --no-rdoc --no-ri&#39;</span> &gt;&gt; /.gemrc<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> bash -l -c <span class="s1">&#39;for v in $(cat /root/versions.txt); do rbenv global $v; gem install bundler; done&#39;</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> rbenv global <span class="m">1</span>.9.2-p320<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># mysql のインストール</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
+</span><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password_again password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
+</span><span class="se"></span>    apt-get -y install mysql-server<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get clean<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># mysql の設定ファイル</span><span class="err">
+</span><span class="err"></span><span class="k">ADD</span><span class="s"> ./mysql-listen.cnf /etc/mysql/conf.d/mysql-listen.cnf</span><span class="err">
+</span><span class="err"></span><span class="k">ADD</span><span class="s"> ./my.cnf /etc/mysql/my.cnf</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># password なしでリモートから root でログインできるようにする</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="o">(</span>/usr/bin/mysqld_safe <span class="p">&amp;</span><span class="o">)</span><span class="p">;</span> sleep <span class="m">3</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">&#34;grant all privileges on *.* to root@&#39;%&#39;;&#34;</span> <span class="p">|</span> mysql -u root -proot<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># ポート開放</span><span class="err">
+</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3306</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># 起動オプション</span><span class="err">
+</span><span class="err"></span><span class="k">CMD</span><span class="s"> [&#34;/usr/bin/mysqld_safe&#34;]</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>Linux 触ったことある人なら何をやっているかはだいたい分かると思います。上記の <strong>ADD</strong> コマンドはファイルを Docker 側に渡す書き方です。同じディレクトリに <code>my.cnf</code>、<code>mysql-listen.cnf</code>、<code>versions.txt</code> のファイルを作っておきましょう。versions.txt にはインストールしたい Ruby のバージョンを書いておきます。</p>
+
+<p>Dockerfile ができたらビルドします。ビルドする際に <code>-t</code> オプションでイメージ名を決められるのですが、<code>&lt;アカウント名&gt;/&lt;パッケージ名&gt;</code> という形式が推奨されているようです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker build -t iriya/rbenv-mysql .
+$ docker images # 作成されたイメージの確認</pre></td></tr></table>
+</div>
+</div>
+<p>作成したイメージからの起動はこのようにします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker run -i -t iriya/rbenv-mysql /bin/bash</pre></td></tr></table>
+</div>
+</div>
+<h2 id="docker-hub">Docker Hub</h2>
+
+<p>Docker には <a href="https://hub.docker.com/account/signup/">Docker Hub</a> という GitHub のようなコミュニティがあります。ここに作成したイメージをアップしておくと誰かの役にたつかもしれません。アップの仕方は非常に簡単です。アカウントを作った後に以下のコマンドを打つだけで終わります。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker login
+$ docker push iriya/rbenv-mysql</pre></td></tr></table>
+</div>
+</div>
+<p><a href="https://registry.hub.docker.com/u/iriya/rbenv-mysql/" target="_blank">こちら</a>がイメージになります。<strong>pull</strong> コマンドでダウンロードできます。よかったら使ってみてください。</p>
+
+<h2 id="参考">参考</h2>
+
+<p><a href="http://deeeet.com/writing/2013/12/08/docker-cheat/">すぐにDockerを試したい人のための基礎コマンド</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2015-07-20</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/docker/">docker</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2015/07/26/brain-science-of-buddha/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">「お釈迦さまの脳科学」を読んでみた</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2015/07/11/ai-and-life/">
+            <span class="next-text nav-default">人口知能と生命</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
