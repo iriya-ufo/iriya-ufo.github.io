@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Botkit から Google API 叩いてみた - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。 Hubot" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.52 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.de1088c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Botkit から Google API 叩いてみた" />
+<meta property="og:description" content="前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。 Hubot" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/" /><meta property="article:published_time" content="2016-03-21T01:34:27&#43;00:00"/>
+<meta property="article:modified_time" content="2016-03-21T01:34:27&#43;00:00"/>
+
+<meta itemprop="name" content="Botkit から Google API 叩いてみた">
+<meta itemprop="description" content="前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。 Hubot">
+
+
+<meta itemprop="datePublished" content="2016-03-21T01:34:27&#43;00:00" />
+<meta itemprop="dateModified" content="2016-03-21T01:34:27&#43;00:00" />
+<meta itemprop="wordCount" content="1399">
+
+
+
+<meta itemprop="keywords" content="botkit,google api,nodejs," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Botkit から Google API 叩いてみた"/>
+<meta name="twitter:description" content="前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。 Hubot"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Botkit から Google API 叩いてみた</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2016-03-21 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#hubot">Hubot</a></li>
+<li><a href="#botkit">Botkit</a></li>
+</ul></li>
+<li><a href="#node-js-インストール">Node.js インストール</a></li>
+<li><a href="#botkit-インストール">Botkit インストール</a></li>
+<li><a href="#google-calendar-api-を叩いてみる">Google Calendar API を叩いてみる</a></li>
+</ul></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<p>前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。</p>
+
+<h3 id="hubot">Hubot</h3>
+
+<p>GitHub が開発した Bot 開発用のフレームワーク
+Node.js で動き、プラグインなどは CoffeeScript で書く</p>
+
+<h3 id="botkit">Botkit</h3>
+
+<p>howdyai が開発した Slack 特化の Bot 開発用フレームワーク
+Node.js で動き、プラグインなどは JavaScript で書く</p>
+
+<p>Hubot の方がフォルダ構成などはシンプルな感じです。Botkit は Slack がサポートしているということもあってか Slack との連携が非常にやりやすいです。Slack の公式 Bot アプリを作りたい場合などは Botkit 一択ですね。</p>
+
+<h2 id="node-js-インストール">Node.js インストール</h2>
+
+<p>Botkit は Node.js で動作するのでまず Node.js の環境構築が必要です。AWS に構築します。ローカルでやりたい人はローカル上で Node.js が動く環境まで構築しておきましょう。</p>
+
+<p>ではまず AWS にインスタンスを作って SSH できるようにしておきます。</p>
+
+<p>Node.js をインストールします。パッケージもありますがバージョン管理したいので nvm でインストールします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ git clone https://github.com/creationix/nvm.git ~/.nvm
+$ source ~/.nvm/nvm.sh</pre></td></tr></table>
+</div>
+</div>
+<p>これで nvm が使えます。続けて Node.js をインストールします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ nvm ls-remote # バージョン確認
+$ nvm install 5.9.0
+$ node -v # 確認</pre></td></tr></table>
+</div>
+</div>
+<p>nvm でバージョンリストを出した時に v0.12.x 系 と v4.x.x や v5.x.x などの大きく乖離したバージョンが表示されたかと思います。これは Node.js から派生したプロジェクトの io.js が混ざっているためです。元々は Node.js からフォークして開発が進んだ io.js ですが、今は Node.js との互換性を持ちながら開発が進んでいるとのことなのでこちらを使うことにしました。不安な人は 0.12.x 系を使っておくといいと思います。</p>
+
+<p>次にバージョンのデフォルト設定などをします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ nvm alias default v5.9.0</pre></td></tr></table>
+</div>
+</div>
+<p>次回ログイン時も node コマンドが使用できるようにするため <code>.bashrc</code> に以下を追記します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">if [[ -s ~/.nvm/nvm.sh ]];
+  then source ~/.nvm/nvm.sh
+fi</pre></td></tr></table>
+</div>
+</div>
+<p>ここまでで Node.js の環境構築が終わりました。</p>
+
+<h2 id="botkit-インストール">Botkit インストール</h2>
+
+<p>こちらの記事に丁寧に書かれています。ローカルユーザーで動かしたかったので sudo はつけませんでした。</p>
+
+<ul>
+<li><a href="http://toach.click/2016/01/10/slack-botkit/">BotkitでSlackのBotをサクッと作る方法</a></li>
+</ul>
+
+<p>使い方などは公式を参照しましょう。</p>
+
+<ul>
+<li><a href="https://github.com/howdyai/botkit">Botkit 公式</a></li>
+</ul>
+
+<h2 id="google-calendar-api-を叩いてみる">Google Calendar API を叩いてみる</h2>
+
+<p>では、Google API を叩いてみます。Google Developers サイトに Node.js からカレンダー API を叩くサンプルがあるのでその通りすれば動きます。</p>
+
+<ul>
+<li><a href="https://developers.google.com/google-apps/calendar/quickstart/nodejs#prerequisites">Node.js Quickstart</a></li>
+</ul>
+
+<p>大まかな流れはだいたいこんな感じです。</p>
+
+<ul>
+<li>Google Developers Console でプロジェクトを作成</li>
+<li>ダッシュボードから「APIを利用する」をクリック</li>
+<li>CalendarAPI を探して「有効にする」をクリック</li>
+<li>認証情報をクリック ※「認証情報に進む」だとうまくいかないので左側のペインから選択する</li>
+<li>認証情報を作成 =&gt; OAuth Client ID をクリック</li>
+<li>同意画面に進み、メアド、サービス名を入力して保存</li>
+<li>クライアント ID の作成で「その他」を選び名前は&rdquo;Google Calendar API Quickstart&rdquo;とする</li>
+<li>json ファイルができるのでダウンロードする</li>
+<li><code>client_secret.json</code> という名前で botkit の直下に置く</li>
+<li>google パッケージをインストールする</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ npm install google-auth-library --save
+$ npm install googleapis --save</pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>サンプルプログラムを置いて下記コマンドを打つ</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ node quickstart.js</pre></td></tr></table>
+</div>
+</div>
+<ul>
+<li>初回起動時はターミナルに URL が貼ってあるのでそこにアクセスし、アクセプトする</li>
+<li>認証に必要なコードが帰ってくるので、それをターミナルに貼って Enter</li>
+<li>カレンダーに予定があれば API 経由でデータが取れる</li>
+<li>認証情報は <code>~/.credentials/</code> の <code>calendar-nodejs-quickstart.json</code></li>
+</ul>
+
+<p>以上です。とても簡単でした。Node.js は初めて触ってみましたけど Rails に比べてシンプルですね。まぁ View とかやってないし API しか叩いてないので比べるのもおかしな話しですが。今後は本番構成はどうするべきか調べてやってみたいと思います。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2016-03-21</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/botkit/">botkit</a>
+          <a href="/tags/google-api/">google api</a>
+          <a href="/tags/nodejs/">nodejs</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2016/03/25/share-tmux-clipboard/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">tmux でクリップボードを使う</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2016/03/08/start-docker-datacenter/">
+            <span class="next-text nav-default">Docker DataCenter さわってみた</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2018
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
