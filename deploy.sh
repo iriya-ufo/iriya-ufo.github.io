@@ -12,6 +12,9 @@ rm -rf public
 echo "Generating site..."
 hugo
 
+echo "Adding CNAME..."
+echo iriya-ufo.net >> public/CNAME
+
 echo "git add && git commit..."
 git add public/
 git commit -m "release `date '+%Y-%m-%d %H:%M'`"
