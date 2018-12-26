@@ -17,6 +17,12 @@ How to write a post.
 $ hugo new post/2018-12-21-your-post-title.md
 ```
 
+Pull the master branch when you use other laptop.
+
+``` shell
+$ git subtree pull --prefix=public/ origin master
+```
+
 ## Deploy
 
 Check your branch, and then commit.
