@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://iriya-ufo.net/blog/2018/12/26/hatena-diary-to-hatena-blog/</loc>
+    <lastmod>2018-12-26T14:10:51+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://iriya-ufo.net/ml/</loc>
     <lastmod>2018-12-20T12:41:52+08:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1095,7 +1102,7 @@
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2017-10-18T01:02:03+09:00</lastmod>
+    <lastmod>2018-12-26T14:10:51+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1171,7 +1178,7 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/diary/</loc>
-    <lastmod>2016-06-17T02:22:31+09:00</lastmod>
+    <lastmod>2018-12-26T14:10:51+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
