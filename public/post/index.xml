@@ -6,10 +6,19 @@
     <description>Recent content in Posts on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 18 Oct 2017 01:02:03 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 26 Dec 2018 14:10:51 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>はてなダイアリー終了</title>
+      <link>https://iriya-ufo.net/blog/2018/12/26/hatena-diary-to-hatena-blog/</link>
+      <pubDate>Wed, 26 Dec 2018 14:10:51 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2018/12/26/hatena-diary-to-hatena-blog/</guid>
+      <description>久しぶりにブログでも書くかと思ったら Octopress が不調。アップデートも煩わしく思ってこの機会にブログを移転しようか考えた。 紆余曲折を経て Hugo を使うことに</description>
+    </item>
     
     <item>
       <title>Octopress 記事削除</title>
