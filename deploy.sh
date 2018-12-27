@@ -6,18 +6,23 @@ then
     exit 1;
 fi
 
-echo "Deleting old publication..."
+echo "\U2705 Deleting old publication...\n"
 rm -rf public
 
-echo "Generating site..."
+echo "\U2705 Generating site...\n"
 hugo
 
-echo "Adding CNAME..."
+echo "\U2705 Adding CNAME...\n"
 echo iriya-ufo.net >> public/CNAME
 
-echo "git add && git commit..."
+echo "\U2705 git add && git commit...\n"
 git add public/
 git commit -m "release `date '+%Y-%m-%d %H:%M'`"
 
-echo "Updating master branch..."
+echo "\U2705 Updating master branch...\n"
 git subtree push --prefix public/ origin master
+
+echo "\U2705 Updating source branch...\n"
+git push origin source
+
+echo "\U2705 Success Deploy !!!\n"
