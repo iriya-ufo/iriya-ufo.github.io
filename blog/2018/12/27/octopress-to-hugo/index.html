@@ -50,7 +50,7 @@
 
 <meta itemprop="datePublished" content="2018-12-27T10:17:23&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-27T10:17:23&#43;09:00" />
-<meta itemprop="wordCount" content="2081">
+<meta itemprop="wordCount" content="2087">
 
 
 
@@ -526,26 +526,26 @@ $ git subtree push --prefix public/ origin master</code></pre></td></tr></table>
     <span class="nb">exit</span> <span class="m">1</span><span class="p">;</span>
 <span class="k">fi</span>
 
-<span class="nb">echo</span> <span class="s2">&#34;\U2705 Deleting old publication...\n&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;*** Deleting old publication...\n&#34;</span>
 rm -rf public
 
-<span class="nb">echo</span> <span class="s2">&#34;\U2705 Generating site...\n&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;*** Generating site...\n&#34;</span>
 hugo
 
-<span class="nb">echo</span> <span class="s2">&#34;\U2705 Adding CNAME...\n&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;*** Adding CNAME...\n&#34;</span>
 <span class="nb">echo</span> iriya-ufo.net &gt;&gt; public/CNAME
 
-<span class="nb">echo</span> <span class="s2">&#34;\U2705 git add &amp;&amp; git commit...\n&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;*** git add &amp;&amp; git commit...\n&#34;</span>
 git add public/
 git commit -m <span class="s2">&#34;release `date &#39;+%Y-%m-%d %H:%M&#39;`&#34;</span>
 
-<span class="nb">echo</span> <span class="s2">&#34;\U2705 Updating master branch...\n&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;*** Updating master branch...\n&#34;</span>
 git subtree push --prefix public/ origin master
 
-<span class="nb">echo</span> <span class="s2">&#34;\U2705 Updating source branch...\n&#34;</span>
+<span class="nb">echo</span> -e <span class="s2">&#34;*** Updating source branch...\n&#34;</span>
 git push origin <span class="nb">source</span>
 
-<span class="nb">echo</span> <span class="s2">&#34;\U2705 Success Deploy !!!\n&#34;</span></code></pre></td></tr></table>
+<span class="nb">echo</span> <span class="s2">&#34;*** Success Deploy !!!&#34;</span></code></pre></td></tr></table>
 </div>
 </div>
 <h2 id="別pcなどで取り込む場合">別PCなどで取り込む場合</h2>
