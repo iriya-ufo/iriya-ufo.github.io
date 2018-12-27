@@ -240,26 +240,26 @@ then
     exit 1;
 fi
 
-echo -e "*** Deleting old publication...\n"
+echo "************ Deleting old publication ************"
 rm -rf public
 
-echo -e "*** Generating site...\n"
+echo "************ Generating site ************"
 hugo
 
-echo -e "*** Adding CNAME...\n"
+echo "************ Adding CNAME ************"
 echo iriya-ufo.net >> public/CNAME
 
-echo -e "*** git add && git commit...\n"
+echo "************ git add && git commit ************"
 git add public/
 git commit -m "release `date '+%Y-%m-%d %H:%M'`"
 
-echo -e "*** Updating master branch...\n"
+echo "************ Updating master branch ************"
 git subtree push --prefix public/ origin master
 
-echo -e "*** Updating source branch...\n"
+echo "************ Updating source branch ************"
 git push origin source
 
-echo "*** Success Deploy !!!"
+echo "************ Success Deploy ************"
 ```
 
 ## 別PCなどで取り込む場合
