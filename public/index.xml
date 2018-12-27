@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Octopress から Hugo へ移行した</title>
+      <link>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</link>
+      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</guid>
+      <description>以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は</description>
+    </item>
+    
+    <item>
       <title>どこで Blog を書くか問題</title>
       <link>https://iriya-ufo.net/blog/2018/12/26/blog-services/</link>
       <pubDate>Wed, 26 Dec 2018 16:42:16 +0900</pubDate>
