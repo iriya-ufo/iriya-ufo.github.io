@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>docker-compose up で db が立ち上がらない時は volume を削除してみる - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.53 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.de1088c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="docker-compose up で db が立ち上がらない時は volume を削除してみる" />
+<meta property="og:description" content="とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/" /><meta property="article:published_time" content="2019-01-09T11:27:47&#43;09:00"/>
+<meta property="article:modified_time" content="2019-01-09T11:27:47&#43;09:00"/>
+
+<meta itemprop="name" content="docker-compose up で db が立ち上がらない時は volume を削除してみる">
+<meta itemprop="description" content="とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14">
+
+
+<meta itemprop="datePublished" content="2019-01-09T11:27:47&#43;09:00" />
+<meta itemprop="dateModified" content="2019-01-09T11:27:47&#43;09:00" />
+<meta itemprop="wordCount" content="727">
+
+
+
+<meta itemprop="keywords" content="docker," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="docker-compose up で db が立ち上がらない時は volume を削除してみる"/>
+<meta name="twitter:description" content="とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">docker-compose up で db が立ち上がらない時は volume を削除してみる</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-01-09 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    
+  </div>
+</div>
+    <div class="post-content">
+      <p>とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。</p>
+
+<p><code>docker-compose up</code> するとこんな感じのエラーがでる。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash">Starting app_db_1 ... <span class="k">done</span>
+Creating app_web_1 ... <span class="k">done</span>
+Attaching to app_db_1, app_web_1
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.523451Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option <span class="o">(</span>see documentation <span class="k">for</span> more details<span class="o">)</span>.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.524650Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld <span class="o">(</span>mysqld <span class="m">5</span>.7.24<span class="o">)</span> starting as process <span class="m">1</span> ...
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528223Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: PUNCH HOLE support available
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528319Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Mutexes and rw_locks use GCC atomic builtins
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528348Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Uses event mutexes
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">()</span> is used <span class="k">for</span> memory barrier
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528394Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Compressed tables use zlib <span class="m">1</span>.2.11
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528543Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using Linux native AIO
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528969Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Number of pools: <span class="m">1</span>
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.529276Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using CPU crc32 instructions
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.530867Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Initializing buffer pool, total <span class="nv">size</span> <span class="o">=</span> 128M, <span class="nv">instances</span> <span class="o">=</span> <span class="m">1</span>, chunk <span class="nv">size</span> <span class="o">=</span> 128M
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.540619Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Completed initialization of buffer pool
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">()</span>.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.554602Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Highest supported file format is Barracuda.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.554769Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Unsupported redo log format. The redo log was created with MariaDB <span class="m">10</span>.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.554873Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Plugin initialization aborted with error Generic error
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160053Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> init <span class="k">function</span> returned error.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160184Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> registration as a STORAGE ENGINE failed.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160209Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Failed to initialize <span class="nb">builtin</span> plugins.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160224Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Aborting
+db_1   <span class="p">|</span>
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160239Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Binlog end
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160356Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Shutting down plugin <span class="s1">&#39;CSV&#39;</span>
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.163497Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld: Shutdown <span class="nb">complete</span>
+db_1   <span class="p">|</span>
+app_db_1 exited with code <span class="m">1</span></code></pre></td></tr></table>
+</div>
+</div>
+<p>db のコンテナが起動に失敗しているようだが、エラー内容でググってもあまり有効な解決策に繋がらない。
+最終的に volume を削除して立ち上げて治すことで解決できた。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Volume の一覧</span>
+$ docker volume ls
+
+<span class="c1"># Volume の削除</span>
+$ docker volume rm VOLUME_NAME</code></pre></td></tr></table>
+</div>
+</div>
+<p>なぜ volume 削除で治ったのかという原因なんだけども、おそらく <code>docker-compose.yml</code> を色々いじっていく過程で MySQL のバージョンを変更したためだと思われる。
+ここが解決の糸口になった。</p>
+
+<ul>
+<li><a href="https://qiita.com/yamazaki/items/5d7f7ee4daa2c1db5aae">Laradock v5.5.2 で一度docker-compose upしちゃった後に、v5.5.1に戻しても、MySQLが起動しない問題</a></li>
+</ul>
+
+<p>ちなみに <code>docker-compose.yml</code> の中身は以下のようにしている。
+他の Rails プロジェクトで同様の書き方で動作していたので、今回のエラーの原因になかなかたどり着けなかった。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml">version<span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span>services<span class="p">:</span><span class="w">
+</span><span class="w">  </span>db<span class="p">:</span><span class="w">
+</span><span class="w">    </span>image<span class="p">:</span><span class="w"> </span>mysql<span class="p">:</span><span class="m">5.7</span><span class="w">
+</span><span class="w">    </span>environment<span class="p">:</span><span class="w">
+</span><span class="w">      </span>MYSQL_ROOT_PASSWORD<span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
+</span><span class="w">    </span>ports<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;3306:3306&#34;</span><span class="w">
+</span><span class="w">    </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;dbdata:/var/lib/mysql&#34;</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;./resources/containers/mariadb:/etc/mysql/conf.d&#34;</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span>web<span class="p">:</span><span class="w">
+</span><span class="w">    </span>build<span class="p">:</span><span class="w"> </span>.<span class="w">
+</span><span class="w">    </span>command<span class="p">:</span><span class="w"> </span>bundle<span class="w"> </span>exec<span class="w"> </span>rails<span class="w"> </span>s<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span><span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;0.0.0.0&#39;</span><span class="w">
+</span><span class="w">    </span>tty<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span>stdin_open<span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span>ports<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span><span class="s2">&#34;3000:3000&#34;</span><span class="w">
+</span><span class="w">    </span>env_file<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>.env<span class="w">
+</span><span class="w">    </span>environment<span class="p">:</span><span class="w">
+</span><span class="w">      </span>RAILS_ENV<span class="p">:</span><span class="w"> </span>development<span class="w">
+</span><span class="w">      </span>DATABASE_URL<span class="p">:</span><span class="w"> </span><span class="s2">&#34;mysql2://root:password@db:3306&#34;</span><span class="w">
+</span><span class="w">    </span>depends_on<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>db<span class="w">
+</span><span class="w">    </span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">      </span>-<span class="w"> </span>.<span class="p">:</span>/usr/src/app<span class="w">
+</span><span class="w">
+</span><span class="w"></span>volumes<span class="p">:</span><span class="w">
+</span><span class="w">  </span>dbdata<span class="p">:</span></code></pre></td></tr></table>
+</div>
+</div>
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2019-01-09</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/docker/">docker</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/2018/12/27/octopress-to-hugo/">
+            <span class="next-text nav-default">Octopress から Hugo へ移行した</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+
+
+
+
+
+
+</body>
+</html>
