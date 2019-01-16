@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>percol から fzf に移行した</title>
+      <link>https://iriya-ufo.net/blog/2019/01/16/percol-to-fzf/</link>
+      <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/01/16/percol-to-fzf/</guid>
+      <description>新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。 直そうと思って調べてみるとどうやら</description>
+    </item>
+    
+    <item>
       <title>docker-compose up で db が立ち上がらない時は volume を削除してみる</title>
       <link>https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/</link>
       <pubDate>Wed, 09 Jan 2019 11:27:47 +0900</pubDate>
