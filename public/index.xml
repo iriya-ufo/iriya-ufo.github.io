@@ -21,6 +21,15 @@
     </item>
     
     <item>
+      <title>Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</link>
+      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</guid>
+      <description>Mac で Go をサクッとはじめるための手引書 Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go Go Package のインストール 1 2 3 4 5 $ go get github.com/rogpeppe/godef</description>
+    </item>
+    
+    <item>
       <title>「バカでも稼げる 米国株 高配当投資」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2019/01/23/high-dividend-usa-stock/</link>
       <pubDate>Wed, 23 Jan 2019 01:21:00 +0900</pubDate>
