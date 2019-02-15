@@ -10,6 +10,13 @@
   </url>
   
   <url>
+    <loc>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</loc>
+    <lastmod>2019-02-15T11:35:19+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://iriya-ufo.net/blog/2019/01/23/high-dividend-usa-stock/</loc>
     <lastmod>2019-01-23T01:21:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -1144,7 +1151,7 @@
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2019-01-23T01:21:00+09:00</lastmod>
+    <lastmod>2019-02-15T11:35:19+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1263,6 +1270,13 @@
   <url>
     <loc>https://iriya-ufo.net/tags/git/</loc>
     <lastmod>2014-03-08T15:16:11+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/go/</loc>
+    <lastmod>2019-02-15T11:35:19+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
@@ -1409,7 +1423,7 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2019-01-16T13:51:53+09:00</lastmod>
+    <lastmod>2019-02-15T11:35:19+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0</priority>
   </url>
