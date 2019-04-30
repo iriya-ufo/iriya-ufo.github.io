@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 20 Dec 2018 12:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 30 Apr 2019 02:19:52 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>一言紹介 主にサーバーサイドが好きなエンジニア 略歴 2008&amp;frasl;04 〜 数学 / 英語 / 物理の予備校講師、エンジニアとは無縁 2013&amp;frasl;07 〜 4人で起業して Web サービスを立ち上げた</description>
+    </item>
+    
+    <item>
+      <title>「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/</link>
+      <pubDate>Tue, 30 Apr 2019 02:19:52 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/</guid>
+      <description>体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践 posted with amazlet at 19.04.29 徳丸 浩 SBクリエイティブ 売り上げランキング:</description>
     </item>
     
     <item>

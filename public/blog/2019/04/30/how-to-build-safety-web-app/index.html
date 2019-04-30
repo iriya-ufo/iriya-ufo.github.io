@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践 posted with amazlet at 19.04.29 徳丸 浩 SBクリエイティブ 売り上げランキング:" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.55.4 with even 4.0.0" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.de1088c7.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ" />
+<meta property="og:description" content="体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践 posted with amazlet at 19.04.29 徳丸 浩 SBクリエイティブ 売り上げランキング:" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/" />
+<meta property="article:published_time" content="2019-04-30T02:19:52&#43;09:00"/>
+<meta property="article:modified_time" content="2019-04-30T02:19:52&#43;09:00"/>
+
+<meta itemprop="name" content="「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ">
+<meta itemprop="description" content="体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践 posted with amazlet at 19.04.29 徳丸 浩 SBクリエイティブ 売り上げランキング:">
+
+
+<meta itemprop="datePublished" content="2019-04-30T02:19:52&#43;09:00" />
+<meta itemprop="dateModified" content="2019-04-30T02:19:52&#43;09:00" />
+<meta itemprop="wordCount" content="3977">
+
+
+
+<meta itemprop="keywords" content="security," />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ"/>
+<meta name="twitter:description" content="体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践 posted with amazlet at 19.04.29 徳丸 浩 SBクリエイティブ 売り上げランキング:"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-04-30 </span>
+        <div class="post-category">
+            <a href="/categories/review/"> review </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">Contents</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#同一オリジンポリシー">同一オリジンポリシー</a></li>
+<li><a href="#cors-cross-origin-resource-sharing">CORS (Cross Origin Resource Sharing)</a></li>
+<li><a href="#xss-クロスサイトスクリプティング">XSS (クロスサイトスクリプティング)</a></li>
+<li><a href="#sql-インジェクション">SQL インジェクション</a></li>
+<li><a href="#重要な処理と-csrf">重要な処理と CSRF</a></li>
+<li><a href="#クリックジャッキング">クリックジャッキング</a></li>
+<li><a href="#セッション管理の不備">セッション管理の不備</a>
+<ul>
+<li><a href="#クッキーの属性について">クッキーの属性について</a></li>
+</ul></li>
+<li><a href="#リダイレクト処理にまつわる脆弱性">リダイレクト処理にまつわる脆弱性</a></li>
+<li><a href="#http-ヘッダインジェクション">HTTP ヘッダインジェクション</a></li>
+<li><a href="#脆弱性診断入門">脆弱性診断入門</a></li>
+<li><a href="#全体を通しての書評">全体を通しての書評</a></li>
+</ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      
+
+<div class="amazlet-box" style="margin-bottom:0px;">
+  <div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;">
+    <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">
+      <img src="https://images-fe.ssl-images-amazon.com/images/I/513hw-04L8L._SL160_.jpg" alt="体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践" style="border: none;" />
+    </a>
+  </div>
+  <div class="amazlet-info" style="line-height:120%; margin-bottom: 10px">
+    <div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
+      <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践</a>
+      <div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.04.29</div>
+    </div>
+    <div class="amazlet-detail">徳丸 浩 <br />SBクリエイティブ <br />売り上げランキング: 3,131<br />
+    </div>
+    <div class="amazlet-sub-info" style="float: left;">
+      <div class="amazlet-link" style="margin-top: 5px">
+        <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a>
+      </div>
+    </div>
+  </div>
+  <div class="amazlet-footer" style="clear: left"></div>
+</div>
+
+<p>Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい。</p>
+
+<p>セキュリティと聞くと『バッファ・オーバーフローを起こさせてそこから任意のコードを実行し&hellip;』みたいな妄想が捗るが本書はそういった類のものではない。
+この本を読むと、脆弱性を突いた攻撃がいかに簡単にできるか、あるいは少しの油断でいとも簡単に脆弱性のコードを書いてしまうのか、がよく理解できるだろう。</p>
+
+<p>自分の覚書ではあるが、以下箇条書きで重要な用語とその説明をピックアップしておく。コード例や詳しい説明は本書を読んで欲しい。</p>
+
+<h1 id="同一オリジンポリシー">同一オリジンポリシー</h1>
+
+<p>ブラウザのセキュリティ機能として、プログラムの利用が制限される sandbox という環境がある。JavaScript はその sandbox 環境化で動作するようになっている。
+sandbox には以下の制限がある。</p>
+
+<ul>
+<li>ローカルファイルへのアクセス禁止</li>
+<li>プリンタなどの資源の利用禁止</li>
+<li>ネットワークアクセスの制限(同一オリジンポリシー)</li>
+</ul>
+
+<p>XSS(クロスサイトスクリプティング) は 攻撃的な js を送り込んで同一オリジンポリシー下のもとで js を実行し、攻撃する手法である。</p>
+
+<h1 id="cors-cross-origin-resource-sharing">CORS (Cross Origin Resource Sharing)</h1>
+
+<p>先の同一オリジンポリシーにより別ドメインへのリクエストは厳しく制限されるが、一方で不便な場面に出くわすことも多い。そこで CORS という仕様が策定された。
+これは header に <code>Access-Control-Allow-Origin</code> などを付与することによって Origin を超えたアクセスを許可できるようになる。</p>
+
+<p>いくつか種類があるので以下を参照されたい。(外部リンク、本書に記載無し)</p>
+
+<ul>
+<li><a href="https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34">Qiita:CORSまとめ</a></li>
+</ul>
+
+<h1 id="xss-クロスサイトスクリプティング">XSS (クロスサイトスクリプティング)</h1>
+
+<p>XSS とは外部からの入力などに応じて表示が変化する部分に関して攻撃をしかけること。</p>
+
+<p>XSS の対策は属性値を <code>&quot;</code> で囲んだり、特殊記号をエスケープすることで対策できる。しかしパターンが多数あり完全な対策は困難。</p>
+
+<p>保険的対策として <code>X-XSS-Protection</code> ヘッダーを入れることで危険を軽減できる。これはブラウザがXSSを検知し無害な出力にエスケープしてくれる機能である。
+Apache や Nginx の設定で付与しておくとよい。</p>
+
+<p>クッキーに <code>HttpOnly</code> 属性を付与することによって、XSS 攻撃の典型的な手法であるセッションIDの盗み出しを防止することができる。(限定的対応)</p>
+
+<p>JavaScript を動的生成している場合はこちらも同様にエスケープ処理をしなければいけないがルールが複雑。
+できれば js の動的生成はしないようにする、がどうしてもしたい場合はカスタムデータ属性を利用するとよい。</p>
+
+<h1 id="sql-インジェクション">SQL インジェクション</h1>
+
+<p>SQL インジェクションを阻止するにはプレースホルダーを使うようにするのが原則。</p>
+
+<p>プレースホルダーには静的なものと動的なものがある。</p>
+
+<p>静的プレースホルダーとは値のバインドをデータベースエンジン側で行うことを言う。
+データベースエンジンによってSQL文がコンパイルされてから実行される。</p>
+
+<p>動的プレースホルダーとはアプリケーションのライブラリなどでパラメータをバインドしてからデータベースに送ることを言う。</p>
+
+<p>原理的に静的プレースホルダーであればSQLインジェクションの可能性がない。よって静的プレースホルダーを採用したほうがよい。</p>
+
+<p>SQLインジェクションの保険的対策としては以下を実施する。</p>
+
+<ul>
+<li>詳細なエラーメッセージの抑止</li>
+<li>入力値の妥当性検証</li>
+<li>データベースの権限設定</li>
+</ul>
+
+<h1 id="重要な処理と-csrf">重要な処理と CSRF</h1>
+
+<p>Web アプリケーションには様々な機能があるが、その中でもクレジットの決済やパスワードの変更などの処理は特にセキュリティを意識すべき機能である。そのような処理を「重要な処理」と呼ぶことにする。
+重要な処理を悪用したものとしてCSRF(クロスサイトリクエストフォージェリ)が挙げられる。</p>
+
+<p>CSRF の攻撃例は以下のようなものがある。</p>
+
+<ul>
+<li>利用者のアカウントによる物品の購入</li>
+<li>意図しない退会処理</li>
+<li>利用者のメールアドレスやパスワードの変更</li>
+</ul>
+
+<p>CSRF 脆弱性の対策は、こうした重要な処理の前には利用者の意図したリクエストであることを確認することである。</p>
+
+<p>CSRF の攻撃方法のシナリオ例を示す。</p>
+
+<ul>
+<li>利用者がサービスのログインしている</li>
+<li>攻撃者が罠サイトを設置する</li>
+<li>利用者が罠サイトを閲覧する</li>
+<li>罠の JavaScript により、被害者のブラウザ上で攻撃対象サイトに対し、パスワード変更のPOSTメソッドを送信する(重要な処理)</li>
+<li>パスワードが変更される</li>
+</ul>
+
+<p>hidden パラメータなどで確認画面を挟んでいても先程の例のような攻撃は可能である。</p>
+
+<p>セッション変数でパラメータを受け渡している場合においても、以下のような方法で攻撃が可能である。</p>
+
+<ul>
+<li>確認画面に対してメールアドレスをPOSTしてセッション変数にメールアドレスをセット</li>
+<li>タイミングを見計らって実行画面を呼び出す</li>
+</ul>
+
+<p>実装は iframe を2段にすることで可能になる。</p>
+
+<p>CSRF 脆弱性が生まれる背景には Web の性質が関係している。</p>
+
+<p>それは</p>
+
+<ol>
+<li>form要素のaction属性にはどのドメインのURLでも指定できる</li>
+<li>クッキーに保管されたセッションIDは、対象サイトに自動的に送信される</li>
+</ol>
+
+<p>というものである。</p>
+
+<p>1 は罠サイトからでも攻撃対象サイトにリクエストが送信できることを意味し、 2 は罠経由のリクエストでもセッションIDのクッキー値が送信されるので認証された状態で攻撃リクエストが送信されるということを意味する。</p>
+
+<p>CSRF の対策は、対策の必要なページを区別し、正規利用者の意図したリクエストを確認できるようにすることである。
+対策の必要なページというのは、ECサイトを例にするとカート商品の購入処理であったり、会員情報のパスワード変更やクレジットカード登録などである。</p>
+
+<p>正規利用者の意図したリクエストの確認方法は、秘密情報(トークン)の埋め込み、パスワード再入力、リファラのチェックがある。なおトークンは第三者に推測されにくい乱数を用いて生成する。</p>
+
+<p>CSRF を防ぐ対策ではないが、重要な処理の実行後にメールアドレスに処理内容を通知することで、CSRF 攻撃が起きたときの被害を縮小できる。
+ただしメールは平文なので重要な情報は含めずに、重要な処理が実行されたことだけをメール送信する。
+詳細内容はサイトにログインして購入履歴や送信履歴をみるようにしてもらう。</p>
+
+<h1 id="クリックジャッキング">クリックジャッキング</h1>
+
+<p>特定のボタンなどを利用者の気づかない方法でクリックさせることができれば、重要な処理を実行させることができる。
+クリックジャッキングは iframe と CSS を巧妙に利用したものである。</p>
+
+<p>例としては、掲示板のような投稿サイトで、投稿フォームに攻撃用の文言を iframe で設置し不透明度0%にして見えないようにする方法などがある。</p>
+
+<p>クリックジャッキングはアプリケーション単体では対策が困難なためブラウザ側の支援が必要となる。
+このため frame および iframe での参照を制限する <code>X-Frame-Options</code> という仕様がある。</p>
+
+<p><code>X-Frame-Options</code> はレスポンスヘッダとして定義されており、<code>DENY</code> か <code>SAMEORIGIN</code> のいずれかの値を取る。
+frame や iframe を使わないサイトでは <code>DENY</code> を指定、frame などを使っているホストが単一の場合は <code>SAMEORIGIN</code> を指定する。</p>
+
+<p>手軽な実装としては、Apache や Nginx の設定で <code>X-Frame-Options</code> ヘッダを出力する方法がある。</p>
+
+<h1 id="セッション管理の不備">セッション管理の不備</h1>
+
+<p>Web アプリケーションでは認証結果などの状態を記憶する手段として、セッション管理機構が用いられている。
+現在主流のセッション管理機構はクッキーなどにセッションIDという識別子を記憶させ、このセッションIDをキーとしてサーバー側で情報を記憶する方法が取られている。</p>
+
+<p>セッションハイジャックの手法は多岐に渡る。</p>
+
+<p>対策としては下記の通り。</p>
+
+<ul>
+<li>セッション管理機構は自作せずにライブラリなどを使う</li>
+<li>クッキーにセッションIDを保存する</li>
+<li>認証成功時にセッションIDを変更する</li>
+<li>認証前にはセッション変数に秘密情報を保存しない</li>
+</ul>
+
+<h2 id="クッキーの属性について">クッキーの属性について</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Domain: 指定しないのがデフォルトかつ最も安全
+Path
+Expires
+Secure: この属性をつけると https のみサーバーに送信される、できればつける
+HttpOnly: これをつけると js からアクセスできないようにできる、つけた方がよい</pre></td></tr></table>
+</div>
+</div>
+<h1 id="リダイレクト処理にまつわる脆弱性">リダイレクト処理にまつわる脆弱性</h1>
+
+<p>Web アプリケーションの中にはパラメータに指定したURLにリダイレクトできる機能を備えているものがある。
+その中で任意のドメインにリダイレクトできる脆弱性をオープンリダイレクト脆弱性と呼ぶ。フィッシング詐欺などに利用される。</p>
+
+<p>脆弱性が生まれる原因</p>
+
+<p>リダイレクト先のURLが外部から指定でき、かつリダイレクト先のドメインチェックがない場合に起こる。
+対策としてはリダイレクト先のURLを固定化する、リダイレクト先のURLを直接指定せず番号指定にする、リダイレクト先のドメイン名をチェックするといった方法がある。</p>
+
+<h1 id="http-ヘッダインジェクション">HTTP ヘッダインジェクション</h1>
+
+<p>リダイレクトやクッキー生成など、外部から指定したパラメータに基づいて HTTP レスポンスヘッダを出力している箇所で発生する。</p>
+
+<p>レスポンスヘッダが偽装されることで任意のクッキーの生成、任意のURLへのリダイレクト、表示内容の改変、JavaScript 実行による XSS と同等の被害が起こる可能性がある。
+対策として、外部からのパラメータを HTTP レスポンスヘッダとして出力しないようにする。</p>
+
+<h1 id="脆弱性診断入門">脆弱性診断入門</h1>
+
+<p>本書後半の7章では以下のツールを用いて脆弱性のあるサンプルアプリに対して診断を行う方法が記されている。</p>
+
+<ul>
+<li>OWASP ZAP</li>
+<li>Nmap</li>
+<li>OpenVAS</li>
+<li>RIPS</li>
+</ul>
+
+<h1 id="全体を通しての書評">全体を通しての書評</h1>
+
+<p>ここまで書いたことはまだ一部であってその他にも様々な脆弱性とその対策について記載されている。
+例えば Web API や DOM Based XSS といった JavaScript のセキュリティについても紹介されている。</p>
+
+<p>Web セキュリティに関してはこの本は必読だと思うので読んでおくべし。</p>
+
+<p><strong>P.S.</strong></p>
+
+<p>本の著者である徳丸さんの書かれたスライド。
+こちらは Rails を題材にして種々の脆弱性を紹介している。</p>
+
+<ul>
+<li><a href="https://www.slideshare.net/ockeghem/ruby-on-rails-security-142250872">Railsエンジニアのためのウェブセキュリティ入門</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">2019-04-30</span>
+  </p>
+  
+  
+</div><footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/security/">security</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/2019/02/15/go-setup-on-emacs/">
+            <span class="next-text nav-default">Emacs に Go の開発環境を整える</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2019
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.ece58db6.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
