@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" />
@@ -239,8 +239,7 @@ $ nvidia-docker run --rm nvidia/cuda nvidia-smi</pre></td></tr></table>
 <p>Google 公式の Tensorflow に Docker イメージと実行方法が書いてある。イメージはもちろん GPU バージョンのものを使う。</p>
 
 <ul>
-<li><a href="https://www.tensorflow.org/versions/master/get_started/os_setup.html#docker-installation">Download and Setup</a></li>
-</ul>
+<li><p><a href="https://www.tensorflow.org/versions/master/get_started/os_setup.html#docker-installation">Download and Setup</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -248,7 +247,9 @@ $ nvidia-docker run --rm nvidia/cuda nvidia-smi</pre></td></tr></table>
 <td class="lntd">
 <pre class="chroma">$ nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu</pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ul>
+
 <p>Jupyter Notebook が起動するので <code>http://ホストIPアドレス:8888/</code> にアクセスしてみる。</p>
 
 <p><img src="https://i.gyazo.com/dd4f9bcc4d7af38aba37d45439ea30b5.png" alt="jupyter_tensorflow" /></p>

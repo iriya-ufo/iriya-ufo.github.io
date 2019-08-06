@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.54.0 with even 4.0.0" />
+<meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/" />
@@ -263,8 +263,8 @@ fi</pre></td></tr></table>
 <li>クライアント ID の作成で「その他」を選び名前は&rdquo;Google Calendar API Quickstart&rdquo;とする</li>
 <li>json ファイルができるのでダウンロードする</li>
 <li><code>client_secret.json</code> という名前で botkit の直下に置く</li>
-<li>google パッケージをインストールする</li>
-</ul>
+
+<li><p>google パッケージをインストールする</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -274,10 +274,9 @@ fi</pre></td></tr></table>
 <pre class="chroma">$ npm install google-auth-library --save
 $ npm install googleapis --save</pre></td></tr></table>
 </div>
-</div>
-<ul>
-<li>サンプルプログラムを置いて下記コマンドを打つ</li>
-</ul>
+</div></li>
+
+<li><p>サンプルプログラムを置いて下記コマンドを打つ</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><span class="lnt">1
@@ -285,12 +284,15 @@ $ npm install googleapis --save</pre></td></tr></table>
 <td class="lntd">
 <pre class="chroma">$ node quickstart.js</pre></td></tr></table>
 </div>
-</div>
-<ul>
-<li>初回起動時はターミナルに URL が貼ってあるのでそこにアクセスし、アクセプトする</li>
-<li>認証に必要なコードが帰ってくるので、それをターミナルに貼って Enter</li>
-<li>カレンダーに予定があれば API 経由でデータが取れる</li>
-<li>認証情報は <code>~/.credentials/</code> の <code>calendar-nodejs-quickstart.json</code></li>
+</div></li>
+
+<li><p>初回起動時はターミナルに URL が貼ってあるのでそこにアクセスし、アクセプトする</p></li>
+
+<li><p>認証に必要なコードが帰ってくるので、それをターミナルに貼って Enter</p></li>
+
+<li><p>カレンダーに予定があれば API 経由でデータが取れる</p></li>
+
+<li><p>認証情報は <code>~/.credentials/</code> の <code>calendar-nodejs-quickstart.json</code></p></li>
 </ul>
 
 <p>以上です。とても簡単でした。Node.js は初めて触ってみましたけど Rails に比べてシンプルですね。まぁ View とかやってないし API しか叩いてないので比べるのもおかしな話しですが。今後は本番構成はどうするべきか調べてやってみたいと思います。</p>

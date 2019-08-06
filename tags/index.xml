@@ -6,9 +6,163 @@
     <description>Recent content in Tags on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <lastBuildDate>Tue, 06 Aug 2019 17:31:53 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>emacs</title>
+      <link>https://iriya-ufo.net/tags/emacs/</link>
+      <pubDate>Tue, 06 Aug 2019 17:31:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/emacs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vscode</title>
+      <link>https://iriya-ufo.net/tags/vscode/</link>
+      <pubDate>Tue, 06 Aug 2019 17:31:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>database</title>
+      <link>https://iriya-ufo.net/tags/database/</link>
+      <pubDate>Mon, 06 May 2019 19:31:59 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/database/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>security</title>
+      <link>https://iriya-ufo.net/tags/security/</link>
+      <pubDate>Tue, 30 Apr 2019 02:19:52 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/security/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://iriya-ufo.net/tags/go/</link>
+      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>stock</title>
+      <link>https://iriya-ufo.net/tags/stock/</link>
+      <pubDate>Wed, 23 Jan 2019 01:21:00 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/stock/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>fzf</title>
+      <link>https://iriya-ufo.net/tags/fzf/</link>
+      <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/fzf/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>percol</title>
+      <link>https://iriya-ufo.net/tags/percol/</link>
+      <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/percol/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://iriya-ufo.net/tags/docker/</link>
+      <pubDate>Wed, 09 Jan 2019 11:27:47 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://iriya-ufo.net/tags/hugo/</link>
+      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>octopress</title>
+      <link>https://iriya-ufo.net/tags/octopress/</link>
+      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/octopress/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>unix</title>
+      <link>https://iriya-ufo.net/tags/unix/</link>
+      <pubDate>Sun, 28 May 2017 23:53:36 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/unix/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>machine learning</title>
+      <link>https://iriya-ufo.net/tags/machine-learning/</link>
+      <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>jupyter</title>
+      <link>https://iriya-ufo.net/tags/jupyter/</link>
+      <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/jupyter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tensorflow</title>
+      <link>https://iriya-ufo.net/tags/tensorflow/</link>
+      <pubDate>Sat, 19 Nov 2016 23:37:43 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/tensorflow/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>math</title>
+      <link>https://iriya-ufo.net/tags/math/</link>
+      <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/math/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ubuntu</title>
+      <link>https://iriya-ufo.net/tags/ubuntu/</link>
+      <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/ubuntu/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>ai</title>
@@ -16,15 +170,6 @@
       <pubDate>Thu, 10 Nov 2016 02:39:37 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/tags/ai/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>android</title>
-      <link>https://iriya-ufo.net/tags/android/</link>
-      <pubDate>Sat, 01 Jun 2013 03:41:13 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/android/</guid>
       <description></description>
     </item>
     
@@ -38,6 +183,15 @@
     </item>
     
     <item>
+      <title>ruby</title>
+      <link>https://iriya-ufo.net/tags/ruby/</link>
+      <pubDate>Sun, 22 May 2016 23:15:38 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/ruby/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>aws</title>
       <link>https://iriya-ufo.net/tags/aws/</link>
       <pubDate>Thu, 12 May 2016 18:46:38 +0900</pubDate>
@@ -47,11 +201,56 @@
     </item>
     
     <item>
-      <title>bitcoin</title>
-      <link>https://iriya-ufo.net/tags/bitcoin/</link>
-      <pubDate>Mon, 07 Oct 2013 02:12:24 +0000</pubDate>
+      <title>medical</title>
+      <link>https://iriya-ufo.net/tags/medical/</link>
+      <pubDate>Wed, 11 May 2016 23:29:09 +0900</pubDate>
       
-      <guid>https://iriya-ufo.net/tags/bitcoin/</guid>
+      <guid>https://iriya-ufo.net/tags/medical/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>passenger</title>
+      <link>https://iriya-ufo.net/tags/passenger/</link>
+      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/passenger/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>puma</title>
+      <link>https://iriya-ufo.net/tags/puma/</link>
+      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/puma/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ruby on rails</title>
+      <link>https://iriya-ufo.net/tags/ruby-on-rails/</link>
+      <pubDate>Fri, 08 Apr 2016 00:52:01 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/ruby-on-rails/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nodejs</title>
+      <link>https://iriya-ufo.net/tags/nodejs/</link>
+      <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tmux</title>
+      <link>https://iriya-ufo.net/tags/tmux/</link>
+      <pubDate>Fri, 25 Mar 2016 15:26:45 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/tmux/</guid>
       <description></description>
     </item>
     
@@ -61,6 +260,51 @@
       <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/tags/botkit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>google api</title>
+      <link>https://iriya-ufo.net/tags/google-api/</link>
+      <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/google-api/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hubot</title>
+      <link>https://iriya-ufo.net/tags/hubot/</link>
+      <pubDate>Fri, 04 Mar 2016 18:10:03 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/hubot/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://iriya-ufo.net/tags/python/</link>
+      <pubDate>Sat, 10 Oct 2015 19:00:23 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>startup</title>
+      <link>https://iriya-ufo.net/tags/startup/</link>
+      <pubDate>Fri, 03 Jul 2015 00:38:07 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/startup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>meteor</title>
+      <link>https://iriya-ufo.net/tags/meteor/</link>
+      <pubDate>Sun, 24 May 2015 05:17:20 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/meteor/</guid>
       <description></description>
     </item>
     
@@ -83,92 +327,11 @@
     </item>
     
     <item>
-      <title>database</title>
-      <link>https://iriya-ufo.net/tags/database/</link>
-      <pubDate>Mon, 06 May 2019 19:31:59 +0900</pubDate>
+      <title>middleman</title>
+      <link>https://iriya-ufo.net/tags/middleman/</link>
+      <pubDate>Sat, 27 Dec 2014 21:55:29 +0000</pubDate>
       
-      <guid>https://iriya-ufo.net/tags/database/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://iriya-ufo.net/tags/docker/</link>
-      <pubDate>Wed, 09 Jan 2019 11:27:47 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/docker/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>edtech</title>
-      <link>https://iriya-ufo.net/tags/edtech/</link>
-      <pubDate>Sun, 26 Jan 2014 21:48:56 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/edtech/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>emacs</title>
-      <link>https://iriya-ufo.net/tags/emacs/</link>
-      <pubDate>Tue, 09 Sep 2014 23:43:08 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/emacs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>fzf</title>
-      <link>https://iriya-ufo.net/tags/fzf/</link>
-      <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/fzf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>gauche</title>
-      <link>https://iriya-ufo.net/tags/gauche/</link>
-      <pubDate>Wed, 20 Aug 2014 02:07:11 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/gauche/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>git</title>
-      <link>https://iriya-ufo.net/tags/git/</link>
-      <pubDate>Sat, 08 Mar 2014 15:16:11 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/git/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://iriya-ufo.net/tags/go/</link>
-      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/go/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>google api</title>
-      <link>https://iriya-ufo.net/tags/google-api/</link>
-      <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/google-api/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>heroku</title>
-      <link>https://iriya-ufo.net/tags/heroku/</link>
-      <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/heroku/</guid>
+      <guid>https://iriya-ufo.net/tags/middleman/</guid>
       <description></description>
     </item>
     
@@ -182,299 +345,11 @@
     </item>
     
     <item>
-      <title>hubot</title>
-      <link>https://iriya-ufo.net/tags/hubot/</link>
-      <pubDate>Fri, 04 Mar 2016 18:10:03 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/hubot/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://iriya-ufo.net/tags/hugo/</link>
-      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/hugo/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>jupyter</title>
-      <link>https://iriya-ufo.net/tags/jupyter/</link>
-      <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/jupyter/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>latex</title>
-      <link>https://iriya-ufo.net/tags/latex/</link>
-      <pubDate>Sun, 13 Apr 2014 15:34:38 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/latex/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mac</title>
-      <link>https://iriya-ufo.net/tags/mac/</link>
-      <pubDate>Tue, 22 Jul 2014 12:31:08 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/mac/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>machine learning</title>
-      <link>https://iriya-ufo.net/tags/machine-learning/</link>
-      <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/machine-learning/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>mad</title>
-      <link>https://iriya-ufo.net/tags/mad/</link>
-      <pubDate>Mon, 09 Dec 2013 05:24:03 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/mad/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>math</title>
-      <link>https://iriya-ufo.net/tags/math/</link>
-      <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/math/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>medical</title>
-      <link>https://iriya-ufo.net/tags/medical/</link>
-      <pubDate>Wed, 11 May 2016 23:29:09 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/medical/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>meteor</title>
-      <link>https://iriya-ufo.net/tags/meteor/</link>
-      <pubDate>Sun, 24 May 2015 05:17:20 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/meteor/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>middleman</title>
-      <link>https://iriya-ufo.net/tags/middleman/</link>
-      <pubDate>Sat, 27 Dec 2014 21:55:29 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/middleman/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>nodejs</title>
-      <link>https://iriya-ufo.net/tags/nodejs/</link>
-      <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/nodejs/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>octopress</title>
-      <link>https://iriya-ufo.net/tags/octopress/</link>
-      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/octopress/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>passenger</title>
-      <link>https://iriya-ufo.net/tags/passenger/</link>
-      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/passenger/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>percol</title>
-      <link>https://iriya-ufo.net/tags/percol/</link>
-      <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/percol/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>postgresql</title>
       <link>https://iriya-ufo.net/tags/postgresql/</link>
       <pubDate>Wed, 17 Dec 2014 21:43:32 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/tags/postgresql/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>puma</title>
-      <link>https://iriya-ufo.net/tags/puma/</link>
-      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/puma/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>python</title>
-      <link>https://iriya-ufo.net/tags/python/</link>
-      <pubDate>Sat, 10 Oct 2015 19:00:23 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ruby</title>
-      <link>https://iriya-ufo.net/tags/ruby/</link>
-      <pubDate>Sun, 22 May 2016 23:15:38 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/ruby/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ruby on rails</title>
-      <link>https://iriya-ufo.net/tags/ruby-on-rails/</link>
-      <pubDate>Fri, 08 Apr 2016 00:52:01 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/ruby-on-rails/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>security</title>
-      <link>https://iriya-ufo.net/tags/security/</link>
-      <pubDate>Tue, 30 Apr 2019 02:19:52 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>shell</title>
-      <link>https://iriya-ufo.net/tags/shell/</link>
-      <pubDate>Sat, 19 Oct 2013 18:33:58 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/shell/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sicp</title>
-      <link>https://iriya-ufo.net/tags/sicp/</link>
-      <pubDate>Sun, 18 May 2014 03:41:22 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/sicp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sinatra</title>
-      <link>https://iriya-ufo.net/tags/sinatra/</link>
-      <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/sinatra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ssh</title>
-      <link>https://iriya-ufo.net/tags/ssh/</link>
-      <pubDate>Fri, 10 May 2013 08:47:32 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>startup</title>
-      <link>https://iriya-ufo.net/tags/startup/</link>
-      <pubDate>Fri, 03 Jul 2015 00:38:07 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/startup/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>stock</title>
-      <link>https://iriya-ufo.net/tags/stock/</link>
-      <pubDate>Wed, 23 Jan 2019 01:21:00 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/stock/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>sublime text</title>
-      <link>https://iriya-ufo.net/tags/sublime-text/</link>
-      <pubDate>Sat, 13 Jul 2013 15:43:18 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/sublime-text/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>swift</title>
-      <link>https://iriya-ufo.net/tags/swift/</link>
-      <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/swift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tensorflow</title>
-      <link>https://iriya-ufo.net/tags/tensorflow/</link>
-      <pubDate>Sat, 19 Nov 2016 23:37:43 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/tensorflow/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>tmux</title>
-      <link>https://iriya-ufo.net/tags/tmux/</link>
-      <pubDate>Fri, 25 Mar 2016 15:26:45 +0000</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/tmux/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>ubuntu</title>
-      <link>https://iriya-ufo.net/tags/ubuntu/</link>
-      <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/ubuntu/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>unix</title>
-      <link>https://iriya-ufo.net/tags/unix/</link>
-      <pubDate>Sun, 28 May 2017 23:53:36 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/unix/</guid>
       <description></description>
     </item>
     
@@ -488,11 +363,29 @@
     </item>
     
     <item>
-      <title>windows</title>
-      <link>https://iriya-ufo.net/tags/windows/</link>
-      <pubDate>Thu, 08 May 2014 23:39:00 +0000</pubDate>
+      <title>heroku</title>
+      <link>https://iriya-ufo.net/tags/heroku/</link>
+      <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
       
-      <guid>https://iriya-ufo.net/tags/windows/</guid>
+      <guid>https://iriya-ufo.net/tags/heroku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sinatra</title>
+      <link>https://iriya-ufo.net/tags/sinatra/</link>
+      <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/sinatra/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>swift</title>
+      <link>https://iriya-ufo.net/tags/swift/</link>
+      <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/swift/</guid>
       <description></description>
     </item>
     
@@ -506,11 +399,128 @@
     </item>
     
     <item>
+      <title>gauche</title>
+      <link>https://iriya-ufo.net/tags/gauche/</link>
+      <pubDate>Wed, 20 Aug 2014 02:07:11 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/gauche/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mac</title>
+      <link>https://iriya-ufo.net/tags/mac/</link>
+      <pubDate>Tue, 22 Jul 2014 12:31:08 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/mac/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sicp</title>
+      <link>https://iriya-ufo.net/tags/sicp/</link>
+      <pubDate>Sun, 18 May 2014 03:41:22 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/sicp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>windows</title>
+      <link>https://iriya-ufo.net/tags/windows/</link>
+      <pubDate>Thu, 08 May 2014 23:39:00 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>latex</title>
+      <link>https://iriya-ufo.net/tags/latex/</link>
+      <pubDate>Sun, 13 Apr 2014 15:34:38 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/latex/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>git</title>
+      <link>https://iriya-ufo.net/tags/git/</link>
+      <pubDate>Sat, 08 Mar 2014 15:16:11 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/git/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>edtech</title>
+      <link>https://iriya-ufo.net/tags/edtech/</link>
+      <pubDate>Sun, 26 Jan 2014 21:48:56 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/edtech/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>mad</title>
+      <link>https://iriya-ufo.net/tags/mad/</link>
+      <pubDate>Mon, 09 Dec 2013 05:24:03 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/mad/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>shell</title>
+      <link>https://iriya-ufo.net/tags/shell/</link>
+      <pubDate>Sat, 19 Oct 2013 18:33:58 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/shell/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>bitcoin</title>
+      <link>https://iriya-ufo.net/tags/bitcoin/</link>
+      <pubDate>Mon, 07 Oct 2013 02:12:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/bitcoin/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sublime text</title>
+      <link>https://iriya-ufo.net/tags/sublime-text/</link>
+      <pubDate>Sat, 13 Jul 2013 15:43:18 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/sublime-text/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>android</title>
+      <link>https://iriya-ufo.net/tags/android/</link>
+      <pubDate>Sat, 01 Jun 2013 03:41:13 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>zsh</title>
       <link>https://iriya-ufo.net/tags/zsh/</link>
       <pubDate>Sat, 18 May 2013 07:58:33 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/tags/zsh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://iriya-ufo.net/tags/ssh/</link>
+      <pubDate>Fri, 10 May 2013 08:47:32 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/ssh/</guid>
       <description></description>
     </item>
     

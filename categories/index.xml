@@ -6,16 +6,26 @@
     <description>Recent content in Categories on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
+    <lastBuildDate>Tue, 06 Aug 2019 17:31:53 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>anime</title>
-      <link>https://iriya-ufo.net/categories/anime/</link>
-      <pubDate>Wed, 25 May 2016 00:13:25 +0900</pubDate>
+      <title>programming</title>
+      <link>https://iriya-ufo.net/categories/programming/</link>
+      <pubDate>Tue, 06 Aug 2019 17:31:53 +0900</pubDate>
       
-      <guid>https://iriya-ufo.net/categories/anime/</guid>
+      <guid>https://iriya-ufo.net/categories/programming/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>review</title>
+      <link>https://iriya-ufo.net/categories/review/</link>
+      <pubDate>Thu, 09 May 2019 15:20:48 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/categories/review/</guid>
       <description></description>
     </item>
     
@@ -29,20 +39,11 @@
     </item>
     
     <item>
-      <title>programming</title>
-      <link>https://iriya-ufo.net/categories/programming/</link>
-      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
+      <title>anime</title>
+      <link>https://iriya-ufo.net/categories/anime/</link>
+      <pubDate>Wed, 25 May 2016 00:13:25 +0900</pubDate>
       
-      <guid>https://iriya-ufo.net/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>review</title>
-      <link>https://iriya-ufo.net/categories/review/</link>
-      <pubDate>Thu, 09 May 2019 15:20:48 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/categories/review/</guid>
+      <guid>https://iriya-ufo.net/categories/anime/</guid>
       <description></description>
     </item>
     
