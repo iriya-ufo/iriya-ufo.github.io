@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 20 Dec 2018 12:38:52 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 06 Aug 2019 17:31:53 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>一言紹介 主にサーバーサイドが好きなエンジニア 略歴 2008&amp;frasl;04 〜 数学 / 英語 / 物理の予備校講師、エンジニアとは無縁 2013&amp;frasl;07 〜 4人で起業して Web サービスを立ち上げた</description>
+    </item>
+    
+    <item>
+      <title>VSCode で Emacs キーバインドを使う</title>
+      <link>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</link>
+      <pubDate>Tue, 06 Aug 2019 17:31:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</guid>
+      <description>長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン</description>
     </item>
     
     <item>
