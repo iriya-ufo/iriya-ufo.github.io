@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>VSCode で Emacs キーバインドを使う - iriya-ufo&#39;s blog</title>
+  <title>Rails の開発環境を Docker で構築する - iriya-ufo&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,7 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -26,7 +26,7 @@
 <meta name="generator" content="Hugo 0.55.6 with even 4.0.0" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/" />
+<link rel="canonical" href="https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,27 +38,27 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:title" content="VSCode で Emacs キーバインドを使う" />
-<meta property="og:description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン" />
+<meta property="og:title" content="Rails の開発環境を Docker で構築する" />
+<meta property="og:description" content="開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/" />
-<meta property="article:published_time" content="2019-08-06T17:31:53&#43;09:00"/>
-<meta property="article:modified_time" content="2019-08-06T17:31:53&#43;09:00"/>
+<meta property="og:url" content="https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/" />
+<meta property="article:published_time" content="2019-08-14T10:10:30&#43;09:00"/>
+<meta property="article:modified_time" content="2019-08-14T10:10:30&#43;09:00"/>
 
-<meta itemprop="name" content="VSCode で Emacs キーバインドを使う">
-<meta itemprop="description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン">
-
-
-<meta itemprop="datePublished" content="2019-08-06T17:31:53&#43;09:00" />
-<meta itemprop="dateModified" content="2019-08-06T17:31:53&#43;09:00" />
-<meta itemprop="wordCount" content="549">
+<meta itemprop="name" content="Rails の開発環境を Docker で構築する">
+<meta itemprop="description" content="開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま">
 
 
+<meta itemprop="datePublished" content="2019-08-14T10:10:30&#43;09:00" />
+<meta itemprop="dateModified" content="2019-08-14T10:10:30&#43;09:00" />
+<meta itemprop="wordCount" content="181">
 
-<meta itemprop="keywords" content="emacs,vscode," />
+
+
+<meta itemprop="keywords" content="rails,docker," />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="VSCode で Emacs キーバインドを使う"/>
-<meta name="twitter:description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン"/>
+<meta name="twitter:title" content="Rails の開発環境を Docker で構築する"/>
+<meta name="twitter:description" content="開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -125,10 +125,10 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">VSCode で Emacs キーバインドを使う</h1>
+      <h1 class="post-title">Rails の開発環境を Docker で構築する</h1>
 
       <div class="post-meta">
-        <span class="post-time"> 2019-08-06 </span>
+        <span class="post-time"> 2019-08-14 </span>
         <div class="post-category">
             <a href="/categories/programming/"> programming </a>
             </div>
@@ -139,60 +139,80 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#コンテナ構成">コンテナ構成</a></li>
+<li><a href="#ディレクトリ構成">ディレクトリ構成</a></li>
+<li><a href="#ファイルの中身">ファイルの中身</a></li>
+</ul></li>
+</ul>
+</nav>
   </div>
 </div>
     <div class="post-content">
-      <p>長年使ってきた Emacs から徐々に VSCode に乗り換えています。
-できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバインドを覚え直すのは骨が折れるので拡張機能でいい感じのものを探しました。</p>
+      
 
-<p>使い始めて最初のうちは <a href="https://marketplace.visualstudio.com/items?itemName=lfs.vscode-emacs-friendly">Emacs Friendly Keymap</a> を使用していたのですが、なかなか使いづらい感じの拡張でどうにかならんかなと思いつつ我慢して使っていました。</p>
+<p>開発環境で使える Rails の Docker 環境構築です。
+Docker とは関係ない話しも混じってます。</p>
 
-<p>色々調べ直して <a href="https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx">Awesome Emacs Keymap</a> というのがいい感じに使えるという発見がありました。</p>
+<h2 id="コンテナ構成">コンテナ構成</h2>
 
-<p>Emacs Friendly Keymap では <code>Ctrl + k</code> で一行削除しますが、これ末尾の RET も削除してしまっていました。この動作がどうしても慣れなくて困っていたのですが Awesome Emacs Keymap はちゃんと末尾の RET は残してくれています。</p>
+<p>シンプルに Ruby をベースに Rails 環境をビルドします。
+DB は PostgreSQL を使います。永続化に Volume を利用します。</p>
 
-<p>またこの拡張機能のよいところはマルチカーソル機能を損なわずに使えることです。もともと Emacs でもオレオレ Elisp でマルチカーソルを使っていたのですが、キーバインドが特殊なため、これを移植するのは面倒でした。Awesome Emacs Keymap は VSCode のデフォルトマルチカーソル機能をそのまま使えるのがよいです。</p>
+<ul>
+<li>Ruby</li>
+<li>Rails</li>
+<li>PostgreSQL</li>
+</ul>
 
-<p>これでしばらく戦えそうです。</p>
+<h2 id="ディレクトリ構成">ディレクトリ構成</h2>
 
-<p>参考までによく使う便利なコマンドはこちら。</p>
+<p><code>RAILS_ROOT</code> 配下の構成です。(一部抜粋)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">RAILS_ROOT
+├── .dockerignore
+├── .env
+├── .gitignore
+├── Dockerfile
+├── Gemfile
+...
+├── Makefile
+├── README.md
+...
+├── config/
+│   ...
+│   ├── database.yml
+...
+├── docker-compose.yml
+...</pre></td></tr></table>
+</div>
+</div>
+<h2 id="ファイルの中身">ファイルの中身</h2>
 
-<table>
-<thead>
-<tr>
-<th>コマンド</th>
-<th>動作</th>
-</tr>
-</thead>
+<script type="text/javascript" src="https://gist.github.com/963f30e7ecd4704ad16358e68d34e394.js"></script>
 
-<tbody>
-<tr>
-<td>⌘+d</td>
-<td>一個ずつ選択を増やしながらマルチカーソル</td>
-</tr>
-
-<tr>
-<td>⌘+Shift+L</td>
-<td>該当単語を一斉に選択</td>
-</tr>
-
-<tr>
-<td>Option + Shift + I</td>
-<td>選択範囲の末尾にマルチカーソル</td>
-</tr>
-
-<tr>
-<td>M-g g (M-g M-g)</td>
-<td>該当行にジャンンプ</td>
-</tr>
-
-<tr>
-<td>Ctrl-x z</td>
-<td>Zen Mode</td>
-</tr>
-</tbody>
-</table>
 
     </div>
 
@@ -203,23 +223,19 @@
   </p>
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
-    <span class="item-content">2019-08-06</span>
+    <span class="item-content">2019-08-14</span>
   </p>
   
   
 </div><footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags/emacs/">emacs</a>
-          <a href="/tags/vscode/">vscode</a>
+          <a href="/tags/rails/">rails</a>
+          <a href="/tags/docker/">docker</a>
           </div>
       <nav class="post-nav">
-        <a class="prev" href="/blog/2019/08/14/rails-dev-env-on-docker/">
-            <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">Rails の開発環境を Docker で構築する</span>
-            <span class="prev-text nav-mobile">Prev</span>
-          </a>
-        <a class="next" href="/blog/2019/05/09/no-hard-work/">
-            <span class="next-text nav-default">「NO HARD WORK!: 無駄ゼロで結果を出すぼくらの働き方」を読んだ</span>
+        
+        <a class="next" href="/blog/2019/08/06/emacs-keybind-with-vscode/">
+            <span class="next-text nav-default">VSCode で Emacs キーバインドを使う</span>
             <span class="next-text nav-mobile">Next</span>
             <i class="iconfont icon-right"></i>
           </a>
