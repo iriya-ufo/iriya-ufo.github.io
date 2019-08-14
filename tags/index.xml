@@ -6,10 +6,28 @@
     <description>Recent content in Tags on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 06 Aug 2019 17:31:53 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 14 Aug 2019 10:10:30 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>docker</title>
+      <link>https://iriya-ufo.net/tags/docker/</link>
+      <pubDate>Wed, 14 Aug 2019 10:10:30 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>rails</title>
+      <link>https://iriya-ufo.net/tags/rails/</link>
+      <pubDate>Wed, 14 Aug 2019 10:10:30 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/rails/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>emacs</title>
@@ -80,15 +98,6 @@
       <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/tags/percol/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>docker</title>
-      <link>https://iriya-ufo.net/tags/docker/</link>
-      <pubDate>Wed, 09 Jan 2019 11:27:47 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/docker/</guid>
       <description></description>
     </item>
     
