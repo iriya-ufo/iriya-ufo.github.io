@@ -9,13 +9,13 @@
   <!-- pagination -->
   <nav class="pagination">
     {{ with $paginator.Prev -}}
-      <a class="prev" href="{{ .URL }}">
+      <a class="prev" href="{{ .RelPermalink }}">
         <i class="iconfont icon-left"></i>
         <span class="prev-text">{{ T "prevPage" }}</span>
       </a>
     {{- end }}
     {{ with $paginator.Next -}}
-      <a class="next" href="{{ .URL }}">
+      <a class="next" href="{{ .RelPermalink }}">
         <span class="next-text">{{ T "nextPage" }}</span>
         <i class="iconfont icon-right"></i>
       </a>
