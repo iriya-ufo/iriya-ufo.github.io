@@ -1,2 +1,5 @@
 themes/even/node_modules/
 themes/even/.idea/
+themes/even/static/dist/*.min.js.map
+themes/even/static/dist/*.min.css.map
+themes/even/*.iml
