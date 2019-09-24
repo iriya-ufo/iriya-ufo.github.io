@@ -79,4 +79,6 @@ psql で使う基本的なコマンドです。"バックスラッシュ + 1文�
 
 ## 素晴らしいサイト
 PostgreSQL を練習するのにすばらしいサイトがありますので紹介します。こちらです。
-<a href="http://pgexercises.com/" title="PostgreSQL Exercises" target="_blank">PostgreSQL Exercises</a>
+
+- <a href="http://pgexercises.com/" title="PostgreSQL Exercises" target="_blank">PostgreSQL Exercises</a>
+- <a href="https://www.guru99.com/postgresql-tutorial.html" title="PostgreSQL Tutorial: Learn in 3 Days" target="_blank">PostgreSQL Tutorial: Learn in 3 Days</a>
