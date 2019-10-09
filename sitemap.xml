@@ -10,42 +10,55 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/</loc>
-    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/copywriter/</loc>
-    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/kindle-unlimited/</loc>
-    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/media/</loc>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/categories/review/</loc>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2019/10/09/media-makers/</loc>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/copywriter/</loc>
     <lastmod>2019-10-08T17:02:10+09:00</lastmod>
     <priority>0</priority>
   </url>
