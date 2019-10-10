@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.55.6 with theme even" />
+<meta name="generator" content="Hugo 0.57.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/" />
@@ -42,9 +42,8 @@
 <meta property="og:description" content="以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/" />
-<meta property="article:published_time" content="2018-12-27T10:17:23&#43;09:00"/>
-<meta property="article:modified_time" content="2018-12-27T10:17:23&#43;09:00"/>
-
+<meta property="article:published_time" content="2018-12-27T10:17:23+09:00" />
+<meta property="article:modified_time" content="2018-12-27T10:17:23+09:00" />
 <meta itemprop="name" content="Octopress から Hugo へ移行した">
 <meta itemprop="description" content="以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は">
 
@@ -485,8 +484,8 @@ $ git subtree push --prefix public/ origin master</code></pre></td></tr></table>
 <ul>
 <li>通常の作業は <code>source</code> ブランチで行う</li>
 <li>記事を書き終えたら <code>git add --all &amp;&amp; git commit</code> を行う</li>
-<li>デプロイするときは <code>./deploy.sh</code> を走らせる</li>
-</ul>
+
+<li><p>デプロイするときは <code>./deploy.sh</code> を走らせる</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
@@ -523,8 +522,8 @@ $ git subtree push --prefix public/ origin master</code></pre></td></tr></table>
 </span><span class="cp"></span>
 <span class="k">if</span> <span class="o">[[</span> <span class="k">$(</span>git status -s<span class="k">)</span> <span class="o">]]</span>
 <span class="k">then</span>
-    <span class="nb">echo</span> <span class="s2">&#34;The working directory is dirty. Please commit any pending changes.&#34;</span>
-    <span class="nb">exit</span> <span class="m">1</span><span class="p">;</span>
+<span class="nb">echo</span> <span class="s2">&#34;The working directory is dirty. Please commit any pending changes.&#34;</span>
+<span class="nb">exit</span> <span class="m">1</span><span class="p">;</span>
 <span class="k">fi</span>
 
 <span class="nb">echo</span> <span class="s2">&#34;************ Deleting old publication ************&#34;</span>
@@ -548,7 +547,9 @@ git push origin <span class="nb">source</span>
 
 <span class="nb">echo</span> <span class="s2">&#34;************ Success Deploy ************&#34;</span></code></pre></td></tr></table>
 </div>
-</div>
+</div></li>
+</ul>
+
 <h2 id="別pcなどで取り込む場合">別PCなどで取り込む場合</h2>
 
 <p>通常の <code>git clone</code> をした後 <code>git subtree add --prefix=public/ origin master</code> で subtree を登録後 <code>master</code> の内容を <code>git subtree pull --prefix=public/ origin master</code> で取り込む。</p>
