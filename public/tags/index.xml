@@ -6,10 +6,19 @@
     <description>Recent content in Tags on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 10 Oct 2019 21:51:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 18 Nov 2019 15:07:17 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>clean architecture</title>
+      <link>https://iriya-ufo.net/tags/clean-architecture/</link>
+      <pubDate>Mon, 18 Nov 2019 15:07:17 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/clean-architecture/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>vue.js</title>
