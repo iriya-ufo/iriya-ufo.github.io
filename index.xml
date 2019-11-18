@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 10 Oct 2019 21:51:46 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 18 Nov 2019 15:07:17 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -21,7 +21,16 @@
     </item>
     
     <item>
-      <title>Vue Essentials Cheat Sheet</title>
+      <title>「Clean Architecture 達人に学ぶソフトウェアの構造と設計」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</link>
+      <pubDate>Mon, 18 Nov 2019 15:07:17 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</guid>
+      <description>Clean Architecture 達人に学ぶソフトウェアの構造と設計posted with amazlet at 19.11.18Robert C.Martin KADOKAWA (2018-07-27) 売り上げランキング: 8,168 Amazon.co.jpで詳細を見る これを読む人は、あ</description>
+    </item>
+    
+    <item>
+      <title>Vue.js チートシート</title>
       <link>https://iriya-ufo.net/blog/2019/10/10/vue-essentials-cheat-sheet/</link>
       <pubDate>Thu, 10 Oct 2019 21:51:46 +0900</pubDate>
       
