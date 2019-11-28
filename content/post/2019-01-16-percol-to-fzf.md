@@ -59,10 +59,11 @@ $ tree ~/.zsh/functions
 ├── fd
 ├── fh
 ├── fkill
+├── frepo
 ├── fshow
 └── fssh
 
-0 directories, 6 files
+0 directories, 7 files
 ```
 
 各ファイルの中身
@@ -86,6 +87,7 @@ bindkey '^r'   fh
 bindkey '^xf'  cdf
 bindkey '^xd'  fd
 bindkey '^xk'  fkill
+bindkey '^xp'  frepo
 bindkey '^xgs' fshow
 bindkey '^xs'  fssh
 ```
