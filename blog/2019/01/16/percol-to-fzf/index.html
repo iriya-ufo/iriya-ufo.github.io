@@ -48,7 +48,7 @@
 <meta itemprop="description" content="新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。 直そうと思って調べてみるとどうやら">
 <meta itemprop="datePublished" content="2019-01-16T13:51:53&#43;09:00" />
 <meta itemprop="dateModified" content="2019-01-16T13:51:53&#43;09:00" />
-<meta itemprop="wordCount" content="465">
+<meta itemprop="wordCount" content="474">
 
 
 
@@ -204,6 +204,7 @@ $ pip freeze <span class="p">|</span> xargs pip uninstall -y
 </span><span class="lnt"> 8
 </span><span class="lnt"> 9
 </span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">$ tree ~/.zsh/functions
@@ -212,10 +213,11 @@ $ pip freeze <span class="p">|</span> xargs pip uninstall -y
 ├── fd
 ├── fh
 ├── fkill
+├── frepo
 ├── fshow
 └── fssh
 
-<span class="m">0</span> directories, <span class="m">6</span> files
+<span class="m">0</span> directories, <span class="m">7</span> files
 </code></pre></td></tr></table>
 </div>
 </div><p>各ファイルの中身</p>
@@ -240,6 +242,7 @@ $ pip freeze <span class="p">|</span> xargs pip uninstall -y
 </span><span class="lnt">14
 </span><span class="lnt">15
 </span><span class="lnt">16
+</span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">fpath</span><span class="o">=</span><span class="o">(</span>~/.zsh/functions <span class="si">${</span><span class="nv">fpath</span><span class="si">}</span><span class="o">)</span>
@@ -256,6 +259,7 @@ bindkey <span class="s1">&#39;^r&#39;</span>   fh
 bindkey <span class="s1">&#39;^xf&#39;</span>  cdf
 bindkey <span class="s1">&#39;^xd&#39;</span>  fd
 bindkey <span class="s1">&#39;^xk&#39;</span>  fkill
+bindkey <span class="s1">&#39;^xp&#39;</span>  frepo
 bindkey <span class="s1">&#39;^xgs&#39;</span> fshow
 bindkey <span class="s1">&#39;^xs&#39;</span>  fssh
 </code></pre></td></tr></table>
