@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on iriya-ufo&#39;s blog</title>
@@ -6,10 +6,28 @@
     <description>Recent content in Tags on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Nov 2019 15:07:17 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 28 Nov 2019 21:37:07 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>ghq</title>
+      <link>https://iriya-ufo.net/tags/ghq/</link>
+      <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/ghq/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://iriya-ufo.net/tags/go/</link>
+      <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/go/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>clean architecture</title>
@@ -134,15 +152,6 @@
       <pubDate>Tue, 30 Apr 2019 02:19:52 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/tags/security/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>go</title>
-      <link>https://iriya-ufo.net/tags/go/</link>
-      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/go/</guid>
       <description></description>
     </item>
     

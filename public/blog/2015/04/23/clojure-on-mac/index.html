@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2015-04-23T23:10:30+00:00" />
 <meta itemprop="name" content="Mac に Clojure 環境いれてみた">
 <meta itemprop="description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな">
-
-
 <meta itemprop="datePublished" content="2015-04-23T23:10:30&#43;00:00" />
 <meta itemprop="dateModified" content="2015-04-23T23:10:30&#43;00:00" />
-<meta itemprop="wordCount" content="645">
+<meta itemprop="wordCount" content="648">
 
 
 
-<meta itemprop="keywords" content="clojure," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="clojure," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac に Clojure 環境いれてみた"/>
 <meta name="twitter:description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな"/>
 
@@ -139,38 +136,28 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#jdkのインストール">JDKのインストール</a></li>
-<li><a href="#emacs-の設定">Emacs の設定</a></li>
-<li><a href="#emacs-設定ファイル">Emacs 設定ファイル</a></li>
-<li><a href="#leiningen-のインストール">Leiningen のインストール</a></li>
-<li><a href="#leiningen-と-cider">Leiningen と CIDER</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#jdk">JDKのインストール</a></li>
+    <li><a href="#emacs-">Emacs の設定</a></li>
+    <li><a href="#emacs-1">Emacs 設定ファイル</a></li>
+    <li><a href="#leiningen-">Leiningen のインストール</a></li>
+    <li><a href="#leiningen--cider">Leiningen と CIDER</a></li>
+    <li><a href="#heading">参考</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Closure ではなくて Clozure でもなくて Clojure の環境構築です。
+      <p>Closure ではなくて Clozure でもなくて Clojure の環境構築です。
 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。</p>
-
-<h2 id="jdkのインストール">JDKのインストール</h2>
-
+<h2 id="jdk">JDKのインストール</h2>
 <p>これがないと始まらないですね。JDK とか OpenJDK とか細かいことは気にしないでおきましょう。端末で java とか打ってみて入っていないようでしたら Oracle のサイトからダウンロードしてインストールで一発です。</p>
-
-<h2 id="emacs-の設定">Emacs の設定</h2>
-
+<h2 id="emacs-">Emacs の設定</h2>
 <p>非 Emacs ユーザーは「Leiningen のインストール」まで読み飛ばしてください。</p>
-
 <p>以下を Cask に追加して <code>$ cask install</code> してください。Cask を使ってない場合は <code>M-x package-install</code> とかで大丈夫です。環境構築が楽になるので Cask おすすめです。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -181,17 +168,15 @@ Mac でのやり方と、ついでに Emacs でいい感じにする設定を書
 <span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;rainbow-delimiters&#34;</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;clojure-mode&#34;</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;clojurescript-mode&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;cider&#34;</span><span class="p">)</span></code></pre></td></tr></table>
+<span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;cider&#34;</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p><a href="http://www.daregada.sakuraweb.com/paredit_tutorial_ja.html" target="_blank">ParEdit</a> はなくても大丈夫です。Lisp 系言語を書くときの便利なプラグインみたいなものです。rainbow-delimiters は対応する括弧をいい感じに色付けしてくれるものです。cider はネットワーク経由の REPL を使うようにするためのものです。</p>
-
-<h2 id="emacs-設定ファイル">Emacs 設定ファイル</h2>
-
+</div><p><!-- raw HTML omitted -->ParEdit<!-- raw HTML omitted --> はなくても大丈夫です。Lisp 系言語を書くときの便利なプラグインみたいなものです。rainbow-delimiters は対応する括弧をいい感じに色付けしてくれるものです。cider はネットワーク経由の REPL を使うようにするためのものです。</p>
+<h2 id="emacs-1">Emacs 設定ファイル</h2>
 <p><code>.emacs</code> とか <code>init.el</code> に以下を追記します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -212,50 +197,33 @@ Mac でのやり方と、ついでに Emacs でいい感じにする設定を書
 <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;paredit</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;clojure-mode-hook</span> <span class="ss">&#39;paredit-mode</span><span class="p">)</span>
 <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;rainbow-delimiters</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;prog-mode-hook</span> <span class="ss">&#39;rainbow-delimiters-mode</span><span class="p">)</span></code></pre></td></tr></table>
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;prog-mode-hook</span> <span class="ss">&#39;rainbow-delimiters-mode</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="leiningen-のインストール">Leiningen のインストール</h2>
-
+</div><h2 id="leiningen-">Leiningen のインストール</h2>
 <p>Leiningen は Clojure のビルドツール兼パッケージ管理をするものです。インストールは簡単です。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ brew install leiningen
-$ lein --version</pre></td></tr></table>
-</div>
-</div>
-<p>あと具体的な使い方は<a href="http://clojournal.com/entry/54e42e79e4b07686596991c1" target="_blank">ここ</a>とかみるといいと思います。便利なプラグイン一覧とかは<a href="https://github.com/technomancy/leiningen/wiki/Plugins" target="_blank">ここ</a>からどうぞ。</p>
-
-<h2 id="leiningen-と-cider">Leiningen と CIDER</h2>
-
+<pre><code>$ brew install leiningen
+$ lein --version
+</code></pre>
+<p>あと具体的な使い方は<!-- raw HTML omitted -->ここ<!-- raw HTML omitted -->とかみるといいと思います。便利なプラグイン一覧とかは<!-- raw HTML omitted -->ここ<!-- raw HTML omitted -->からどうぞ。</p>
+<h2 id="leiningen--cider">Leiningen と CIDER</h2>
 <p>おまけです。Leiningen と CIDER の連携の仕方です。
 <code>~/.lein/profiles.clj</code> に以下を書きます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">{:user</span> <span class="nv">{:plugins</span> <span class="nv">[[cider/cider-nrepl</span> <span class="s">&#34;0.8.2&#34;</span><span class="nv">]]}}</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">{:user</span> <span class="nv">{:plugins</span> <span class="nv">[[cider/cider-nrepl</span> <span class="s">&#34;0.8.2&#34;</span><span class="nv">]]}}</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>あとは lein プロジェクトで Emacs から呼び出してやればOKです。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">M-x cider-jack-in</pre></td></tr></table>
-</div>
-</div>
-<h2 id="参考">参考</h2>
-
+</div><p>あとは lein プロジェクトで Emacs から呼び出してやればOKです。</p>
+<pre><code>M-x cider-jack-in
+</code></pre>
+<h2 id="heading">参考</h2>
 <ul>
-<li><a href="http://matstani.github.io/blog/2013/04/19/clojure-dev-env-emacs/" target="_blank">Clojure開発環境インストール手順(Emacs)</a></li>
-<li><a href="https://github.com/clojure-emacs/cider" target="_blank">cider | github</a></li>
+<li><!-- raw HTML omitted -->Clojure開発環境インストール手順(Emacs)<!-- raw HTML omitted --></li>
+<li><!-- raw HTML omitted -->cider | github<!-- raw HTML omitted --></li>
 </ul>
 
     </div>

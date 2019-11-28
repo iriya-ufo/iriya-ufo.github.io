@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2013-05-28T18:00:47+00:00" />
 <meta itemprop="name" content="Ruby on Rails 4 のアプリを Heroku で公開する">
 <meta itemprop="description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち">
-
-
 <meta itemprop="datePublished" content="2013-05-28T18:00:47&#43;00:00" />
 <meta itemprop="dateModified" content="2013-05-28T18:00:47&#43;00:00" />
-<meta itemprop="wordCount" content="1851">
+<meta itemprop="wordCount" content="1787">
 
 
 
-<meta itemprop="keywords" content="git,heroku,mac,ruby,ruby on rails," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git,heroku,mac,ruby,ruby on rails," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ruby on Rails 4 のアプリを Heroku で公開する"/>
 <meta name="twitter:description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち"/>
 
@@ -139,96 +136,55 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#事前準備">事前準備</a></li>
-<li><a href="#rails-アプリ作成">Rails アプリ作成</a></li>
-<li><a href="#gemfile-編集">Gemfile 編集</a></li>
-<li><a href="#起動確認">起動確認</a></li>
-<li><a href="#github-に公開">GitHub に公開</a></li>
-<li><a href="#heroku-を使う準備">Heroku を使う準備</a></li>
-<li><a href="#heroku-にアプリを登録">Heroku にアプリを登録</a></li>
-<li><a href="#独自ドメインで公開">独自ドメインで公開</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">事前準備</a></li>
+    <li><a href="#rails-">Rails アプリ作成</a></li>
+    <li><a href="#gemfile-">Gemfile 編集</a></li>
+    <li><a href="#heading1">起動確認</a></li>
+    <li><a href="#github-">GitHub に公開</a></li>
+    <li><a href="#heroku-">Heroku を使う準備</a></li>
+    <li><a href="#heroku-1">Heroku にアプリを登録</a></li>
+    <li><a href="#heading2">独自ドメインで公開</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。
+      <p>Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。
 環境構築は Mac OS X で行っています。</p>
-
-<h2 id="事前準備">事前準備</h2>
-
+<h2 id="heading">事前準備</h2>
 <p>パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。
 brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ brew update  # brew を最新にする
+<pre><code>$ brew update  # brew を最新にする
 $ brew upgrade # インストールしている Formula をアップデート
-$ brew doctor  # エラーなどのチェック</pre></td></tr></table>
-</div>
-</div>
+$ brew doctor  # エラーなどのチェック
+</code></pre>
 <p>rbenv で Ruby 2.0.0 をインストールします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ rbenv install 2.0.0-p195
-$ rbenv global 2.0.0-p195 # 2.0.0 をデフォルトにする</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ rbenv install 2.0.0-p195
+$ rbenv global 2.0.0-p195 # 2.0.0 をデフォルトにする
+</code></pre>
 <p>gem をアップデートして Rails 4 をインストールします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ gem update --system
+<pre><code>$ gem update --system
 $ gem update bundler
 $ gem i bundler
 $ gem search -r rails             # Rails のバージョンが検索できる
-$ gem i rails --version 4.0.0.rc1 # 検索コマンドで3系が表示された場合、4系のバージョン指定してインストール</pre></td></tr></table>
-</div>
-</div>
-<h2 id="rails-アプリ作成">Rails アプリ作成</h2>
-
+$ gem i rails --version 4.0.0.rc1 # 検索コマンドで3系が表示された場合、4系のバージョン指定してインストール
+</code></pre>
+<h2 id="rails-">Rails アプリ作成</h2>
 <p>準備は整ったのでアプリを作ります。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ rails new rails_app</pre></td></tr></table>
-</div>
-</div>
-<h2 id="gemfile-編集">Gemfile 編集</h2>
-
+<pre><code>$ rails new rails_app
+</code></pre>
+<h2 id="gemfile-">Gemfile 編集</h2>
 <p>いくつかポイントを記しておきます。</p>
-
 <ul>
 <li>Heroku で Rails 4 を使うには <code>ruby &quot;2.0.0&quot;</code> の一行が必須です。</li>
 <li>開発環境、テスト環境、プロダクション環境でそれぞれデータベースを分けています。</li>
 <li>ブラウザをリロードする手間を省くため <a href="http://naoty.hatenablog.com/entry/2012/05/20/032251">LiveReload</a> を使っています。アドオンをインストールしておきましょう。</li>
-
-<li><p>foreman を使って環境変数をロードしています。</p>
+<li>foreman を使って環境変数をロードしています。</li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -308,7 +264,7 @@ $ gem i rails --version 4.0.0.rc1 # 検索コマンドで3系が表示された�
 
 <span class="c1"># Ruby 2.0.0 on Heroku</span>
 <span class="c1"># Heroku で Rails 4 を使うために下の一行が必須です</span>
-<span class="n">ruby</span> <span class="s2">&#34;2.0.0&#34;</span>
+<span class="n">ruby</span> <span class="s2">&#34;</span><span class="s2">2.0.0</span><span class="s2">&#34;</span>
 
 <span class="c1"># Bundle edge Rails instead: gem &#39;rails&#39;, github: &#39;rails/rails&#39;</span>
 <span class="n">gem</span> <span class="s1">&#39;rails&#39;</span><span class="p">,</span> <span class="s1">&#39;4.0.0.rc1&#39;</span>
@@ -316,38 +272,38 @@ $ gem i rails --version 4.0.0.rc1 # 検索コマンドで3系が表示された�
 <span class="c1">### Development and Test Setting</span>
 <span class="c1"># 開発環境とテスト環境では sqlite3 を使うようにします</span>
 <span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
-<span class="c1"># Use sqlite3</span>
-<span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+  <span class="c1"># Use sqlite3</span>
+  <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
 
-<span class="c1"># Testing framework</span>
-<span class="n">gem</span> <span class="s1">&#39;rspec-rails&#39;</span>
+  <span class="c1"># Testing framework</span>
+  <span class="n">gem</span> <span class="s1">&#39;rspec-rails&#39;</span>
 
-<span class="c1"># Speeding up Testing</span>
-<span class="n">gem</span> <span class="s1">&#39;spork&#39;</span>
+  <span class="c1"># Speeding up Testing</span>
+  <span class="n">gem</span> <span class="s1">&#39;spork&#39;</span>
 
-<span class="c1"># Detect the change of file for OSX</span>
-<span class="n">gem</span> <span class="s1">&#39;rb-fsevent&#39;</span>
+  <span class="c1"># Detect the change of file for OSX</span>
+  <span class="n">gem</span> <span class="s1">&#39;rb-fsevent&#39;</span>
 <span class="k">end</span>
 
 <span class="c1">### Development Setting</span>
 <span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
-<span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
  
-<span class="c1"># Manage Procfile-based applications</span>
-<span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
+  <span class="c1"># Manage Procfile-based applications</span>
+  <span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
 
-<span class="c1"># Auto reload the browser when files are changed</span>
-<span class="c1"># ブラウザのオートロード</span>
-<span class="n">gem</span> <span class="s1">&#39;guard-livereload&#39;</span>
+  <span class="c1"># Auto reload the browser when files are changed</span>
+  <span class="c1"># ブラウザのオートロード</span>
+  <span class="n">gem</span> <span class="s1">&#39;guard-livereload&#39;</span>
 
-<span class="c1"># Use debugger</span>
-<span class="n">gem</span> <span class="s1">&#39;pry-rails&#39;</span>
+  <span class="c1"># Use debugger</span>
+  <span class="n">gem</span> <span class="s1">&#39;pry-rails&#39;</span>
 <span class="k">end</span>
 
 <span class="c1">### Production Setting</span>
 <span class="c1"># Heroku は PostgreSQL が必須です</span>
 <span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
-<span class="n">gem</span> <span class="s1">&#39;pg&#39;</span> <span class="c1"># Heroku use PostgreSQL</span>
+  <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span> <span class="c1"># Heroku use PostgreSQL</span>
 <span class="k">end</span>
 
 <span class="c1"># Use SCSS for stylesheets</span>
@@ -375,69 +331,25 @@ $ gem i rails --version 4.0.0.rc1 # 検索コマンドで3系が表示された�
 <span class="n">gem</span> <span class="s1">&#39;jbuilder&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0.1&#39;</span>
 
 <span class="n">group</span> <span class="ss">:doc</span> <span class="k">do</span>
-<span class="c1"># bundle exec rake doc:rails generates the API under doc/api.</span>
-<span class="n">gem</span> <span class="s1">&#39;sdoc&#39;</span><span class="p">,</span> <span class="nb">require</span><span class="p">:</span> <span class="kp">false</span>
-<span class="k">end</span></code></pre></td></tr></table>
+  <span class="c1"># bundle exec rake doc:rails generates the API under doc/api.</span>
+  <span class="n">gem</span> <span class="s1">&#39;sdoc&#39;</span><span class="p">,</span> <span class="nb">require</span><span class="p">:</span> <span class="kp">false</span>
+<span class="k">end</span>
+</code></pre></td></tr></table>
 </div>
-</div></li>
-</ul>
-
-<h2 id="起動確認">起動確認</h2>
-
+</div><h2 id="heading1">起動確認</h2>
 <p>Rails を立ち上げてブラウザから確認します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ bundle update
+<pre><code>$ bundle update
 $ bundle install
 $ guard init livereload
-$ rails s # CTRL+C で終了</pre></td></tr></table>
-</div>
-</div>
-<h2 id="github-に公開">GitHub に公開</h2>
-
+$ rails s # CTRL+C で終了
+</code></pre>
+<h2 id="github-">GitHub に公開</h2>
 <p>ここからバージョン管理システムである Git を使って開発していきます。
 ついでに GitHub にアップできるようにします。
 準備として GitHub サイトで新規レポジトリを作成しておきます。その際 README ファイルは作らなくていいです。
 また SSH Key などの登録をし、GitHub にアクセスできるようにしておきます。
 そして Git で管理したくない余計なファイルを除くため <code>.gitignore</code> ファイルを編集します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"># Ignore un-needed files.
+<pre><code># Ignore un-needed files.
 doc/
 *.swp
 *~
@@ -463,115 +375,58 @@ capybara-*.html
 **.orig
 rerun.txt
 pickle-email-*.html
-.project</pre></td></tr></table>
-</div>
-</div>
-<p>レポジトリを作って GitHub にアップします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ git init
+.project
+</code></pre><p>レポジトリを作って GitHub にアップします。</p>
+<pre><code>$ git init
 $ git add .
-$ git commit -m &#34;Initial commit&#34;
+$ git commit -m &quot;Initial commit&quot;
 $ git remote add origin git@github.com:user-name/rails_app.git
-$ git push -u origin master</pre></td></tr></table>
-</div>
-</div>
-<h2 id="heroku-を使う準備">Heroku を使う準備</h2>
-
+$ git push -u origin master
+</code></pre>
+<h2 id="heroku-">Heroku を使う準備</h2>
 <p>まず Heroku のサイトへいって Sign Up します。
 Mac OS X 用のツール(Toolbelt)をダウンロード、インストールします。
 Heroku 用の SSH key を作成します。GitHub で作った鍵があればそれを使えばいいと思います。
 私は別々に分けて作ったのでちょっとトラブルがありました。
 デフォルトでは秘密鍵は <code>id_rsa</code> が読み込まれるようですが、Heroku 用に名前を変えて作ったためオートロードできなかったっぽいです。
 よって <code>.ssh/config</code> を作ることで解決しました。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">Host heroku.com
+<pre><code>Host heroku.com
  User git
  port 22
  Hostname heroku.com
  IdentityFile ~/.ssh/heroku_rsa
  TCPKeepAlive yes
- IdentitiesOnly yes</pre></td></tr></table>
-</div>
-</div>
-<p>Heroku にログインします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ heroku login
+ IdentitiesOnly yes
+</code></pre><p>Heroku にログインします。</p>
+<pre><code>$ heroku login
 Email: # メールアドレスを入力します
 Password: # パスワードを入力します
-ssh-key: # 秘密鍵の場所を指定します</pre></td></tr></table>
-</div>
-</div>
-<h2 id="heroku-にアプリを登録">Heroku にアプリを登録</h2>
-
+ssh-key: # 秘密鍵の場所を指定します
+</code></pre>
+<h2 id="heroku-1">Heroku にアプリを登録</h2>
 <p>Heroku には本番環境と開発環境を分ける方法があります。
 Production 環境には Cedar Stack が使われます。
 詳しくは『<a href="https://devcenter.heroku.com/articles/cedar">Heroku Dev Center</a>』を参照してください。</p>
-
 <p>まず heroku のバージョン確認しておきましょう。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ heroku --version # 2.1.0 以上であればデフォルトで Cedar スタックが使われます</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ heroku --version # 2.1.0 以上であればデフォルトで Cedar スタックが使われます
+</code></pre>
 <p>Heroku にアプリを登録します。
 app_name を指定すれば <a href="http://app_name.herokuapp.com">http://app_name.herokuapp.com</a> のURLでアクセスできます。
 指定しなければ適当な名前で作られますが、独自ドメインで運用するなら気にしなくてもいいでしょう。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ heroku create app_name
+<pre><code>$ heroku create app_name
 $ bundle install --without production
-$ git push heroku master # ここで Gemfile に ruby &#34;2.0.0&#34; の追記がないとエラーで失敗します
+$ git push heroku master # ここで Gemfile に ruby &quot;2.0.0&quot; の追記がないとエラーで失敗します
 $ heroku run rake db:migrate
-$ heroku open # ブラウザーが起動し、作成した Rails アプリが開かれます</pre></td></tr></table>
-</div>
-</div>
-<p><strong>The page you were looking for doesn&rsquo;t exist.</strong> というメッセージがでますがこれでOKです。</p>
-
-<h2 id="独自ドメインで公開">独自ドメインで公開</h2>
-
+$ heroku open # ブラウザーが起動し、作成した Rails アプリが開かれます
+</code></pre>
+<p><strong>The page you were looking for doesn't exist.</strong> というメッセージがでますがこれでOKです。</p>
+<h2 id="heading2">独自ドメインで公開</h2>
 <p>このままだとアクセスする時の URL が覚えづらいので独自ドメインで運用します。
 下記参照ください。</p>
-
 <ul>
 <li><a href="http://qiita.com/icb54615/items/76acf2a1ea151535c5dc">Qiita の投稿</a></li>
 <li><a href="https://devcenter.heroku.com/articles/custom-domains">Heroku dev center Custom Domains</a></li>
 </ul>
-
 <p>ざっくりですが以上で Heroku に Rails 4 のアプリを公開できると思います。</p>
 
     </div>

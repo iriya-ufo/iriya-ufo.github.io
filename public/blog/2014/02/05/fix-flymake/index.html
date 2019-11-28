@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/02/05/fix-flymake/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-02-05T00:28:18+00:00" />
 <meta itemprop="name" content="rbenv で入れた ruby で flymake がちゃんと動作しなかったので直した">
 <meta itemprop="description" content="Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？ flymake はデフォルトだとシステムの ruby を読み">
-
-
 <meta itemprop="datePublished" content="2014-02-05T00:28:18&#43;00:00" />
 <meta itemprop="dateModified" content="2014-02-05T00:28:18&#43;00:00" />
-<meta itemprop="wordCount" content="330">
+<meta itemprop="wordCount" content="326">
 
 
 
-<meta itemprop="keywords" content="emacs,ruby," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="emacs,ruby," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="rbenv で入れた ruby で flymake がちゃんと動作しなかったので直した"/>
 <meta name="twitter:description" content="Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？ flymake はデフォルトだとシステムの ruby を読み"/>
 
@@ -139,68 +136,48 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#path-設定前">PATH 設定前</a></li>
-<li><a href="#path-設定後">PATH 設定後</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#path-">PATH 設定前</a></li>
+    <li><a href="#path-1">PATH 設定後</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？
+      <p>Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？
 flymake はデフォルトだとシステムの ruby を読みにいきます。rbenv で ruby をインストールしていた場合、パスを設定してやらないとシステムの ruby1.8 を使います。なので 1.9以降の文法を書くとエラーになります。具体的には以下のハッシュ記法などで Syntax Error がでます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:h</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">}</span> <span class="c1"># ruby1.8 or ruby1.9 以降で動作</span>
-<span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">h</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span> <span class="c1"># ruby1.8 だとエラーになる</span></code></pre></td></tr></table>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:h</span> <span class="o">=</span><span class="o">&gt;</span> <span class="mi">1</span> <span class="o"></span><span class="p">}</span> <span class="c1"># ruby1.8 or ruby1.9 以降で動作</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">h</span><span class="p">:</span> <span class="mi">1</span> <span class="o"></span><span class="p">}</span> <span class="c1"># ruby1.8 だとエラーになる</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>rbenv でインストールした ruby を読ませるため <code>.emacs</code> に以下を追記します。</p>
+</div><p>rbenv でインストールした ruby を読ませるため <code>.emacs</code> に以下を追記します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; Setting rbenv path</span>
-<span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;PATH&#34;</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;PATH&#34;</span><span class="p">)))</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)))</span></code></pre></td></tr></table>
+<span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;PATH&#34;</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;PATH&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Emacs を再起動して <code>M-x run-ruby</code> で確認してみましょう。</p>
-
-<h2 id="path-設定前">PATH 設定前</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">irb(main):001:0&gt; RUBY_VERSION
-=&gt; &#34;1.8.7&#34;</pre></td></tr></table>
-</div>
-</div>
-<h2 id="path-設定後">PATH 設定後</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">irb(main):001:0&gt; RUBY_VERSION
-=&gt; &#34;2.0.0&#34;</pre></td></tr></table>
-</div>
-</div>
+</div><p>Emacs を再起動して <code>M-x run-ruby</code> で確認してみましょう。</p>
+<h2 id="path-">PATH 設定前</h2>
+<pre><code>irb(main):001:0&gt; RUBY_VERSION
+=&gt; &quot;1.8.7&quot;
+</code></pre>
+<h2 id="path-1">PATH 設定後</h2>
+<pre><code>irb(main):001:0&gt; RUBY_VERSION
+=&gt; &quot;2.0.0&quot;
+</code></pre>
 <p>これで flymake でも新しい文法でチェックできるようになります。</p>
 
     </div>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/07/ubuntu-dvd-ripping/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2013-05-07T17:29:47+00:00" />
 <meta itemprop="name" content="Ubuntu で DVD リッピング">
 <meta itemprop="description" content="Ubuntu で DVD をリッピングする方法はいくつかあります。 k9copy dvd::rip wine で DVD Decrypter 私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメ">
-
-
 <meta itemprop="datePublished" content="2013-05-07T17:29:47&#43;00:00" />
 <meta itemprop="dateModified" content="2013-05-07T17:29:47&#43;00:00" />
-<meta itemprop="wordCount" content="227">
+<meta itemprop="wordCount" content="220">
 
 
 
-<meta itemprop="keywords" content="ubuntu," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ubuntu," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ubuntu で DVD リッピング"/>
 <meta name="twitter:description" content="Ubuntu で DVD をリッピングする方法はいくつかあります。 k9copy dvd::rip wine で DVD Decrypter 私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメ"/>
 
@@ -138,55 +135,30 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>Ubuntu で DVD をリッピングする方法はいくつかあります。</p>
-
 <ul>
 <li>k9copy</li>
 <li>dvd::rip</li>
 <li>wine で DVD Decrypter</li>
 </ul>
-
 <p>私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメージとして取り出す方法がうまくいったので書いておきます。環境は Ubuntu 12.04 LTS です。</p>
-
 <p>まずデバイスファイルを調べます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ wodim --devices
+<pre><code>$ wodim --devices
 wodim: Overview of accessible drives (1 found) :
 -------------------------------------------------------------------------
- 0  dev=&#39;/dev/sg1&#39;  rwrw-- : &#39;Optiarc&#39; &#39;DVD RW AD-7710H&#39;
--------------------------------------------------------------------------</pre></td></tr></table>
-</div>
-</div>
+ 0  dev='/dev/sg1'	rwrw-- : 'Optiarc' 'DVD RW AD-7710H'
+-------------------------------------------------------------------------
+</code></pre>
 <p>マウントされていれば外しておきます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"> $ sudo umount /dev/sg1</pre></td></tr></table>
-</div>
-</div>
+<pre><code> $ sudo umount /dev/sg1
+</code></pre>
 <p>iso ファイルを作成します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ readom dev=/dev/sg1 f=filename.iso</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ readom dev=/dev/sg1 f=filename.iso
+</code></pre>
 <p>iso ファイルが作成されているので後はそれを VLC などを使って再生すると観られます。</p>
 
     </div>

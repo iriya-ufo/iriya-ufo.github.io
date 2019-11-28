@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 1 2 3 4 WARNING: The &amp;#39;boot2docker&amp;#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &amp;quot;boot2docker-vm&amp;quot;: machine does not" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/" />
@@ -39,25 +39,22 @@
 
 
 <meta property="og:title" content="docker-machine で Mac に Docker 環境を構築する" />
-<meta property="og:description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 1 2 3 4 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine" />
+<meta property="og:description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &quot;boot2docker-vm&quot;: machine does not" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/" />
 <meta property="article:published_time" content="2015-10-10T21:33:25+00:00" />
 <meta property="article:modified_time" content="2015-10-10T21:33:25+00:00" />
 <meta itemprop="name" content="docker-machine で Mac に Docker 環境を構築する">
-<meta itemprop="description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 1 2 3 4 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine">
-
-
+<meta itemprop="description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &quot;boot2docker-vm&quot;: machine does not">
 <meta itemprop="datePublished" content="2015-10-10T21:33:25&#43;00:00" />
 <meta itemprop="dateModified" content="2015-10-10T21:33:25&#43;00:00" />
-<meta itemprop="wordCount" content="273">
+<meta itemprop="wordCount" content="260">
 
 
 
-<meta itemprop="keywords" content="docker," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="docker," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker-machine で Mac に Docker 環境を構築する"/>
-<meta name="twitter:description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 1 2 3 4 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine"/>
+<meta name="twitter:description" content="boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &quot;boot2docker-vm&quot;: machine does not"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -139,87 +136,43 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#インストール">インストール</a></li>
-<li><a href="#boot2docker-で作った-vm-の移行">boot2docker で作った VM の移行</a></li>
-<li><a href="#環境変数の設定を書き換える">環境変数の設定を書き換える</a></li>
-<li><a href="#コマンドの差分">コマンドの差分</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">インストール</a></li>
+    <li><a href="#boot2docker--vm-">boot2docker で作った VM の移行</a></li>
+    <li><a href="#heading1">環境変数の設定を書き換える</a></li>
+    <li><a href="#heading2">コマンドの差分</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated.
+      <p>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。</p>
+<pre><code>WARNING: The 'boot2docker' command line interface is officially deprecated.
 Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP.
 Docker Toolbox (https://docker.com/toolbox) is the recommended install method.
-error in run: Failed to get machine &#34;boot2docker-vm&#34;: machine does not exist (Did you run `boot2docker init`?)</pre></td></tr></table>
-</div>
-</div>
+error in run: Failed to get machine &quot;boot2docker-vm&quot;: machine does not exist (Did you run `boot2docker init`?)
+</code></pre>
 <p>boot2docker が非推奨になって docker-machine を使えとあるので移行作業をした。β版なので production では使わないでと書いてある。</p>
-
 <p>docker-machine はこんなやつ</p>
-
 <p><a href="https://docs.docker.com/machine/">https://docs.docker.com/machine/</a></p>
-
-<h2 id="インストール">インストール</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ brew install docker-machine</pre></td></tr></table>
-</div>
-</div>
-<h2 id="boot2docker-で作った-vm-の移行">boot2docker で作った VM の移行</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ docker-machine create -d virtualbox --virtualbox-import-boot2docker-vm boot2docker-vm docker-vm</pre></td></tr></table>
-</div>
-</div>
-<h2 id="環境変数の設定を書き換える">環境変数の設定を書き換える</h2>
-
+<h2 id="heading">インストール</h2>
+<pre><code>$ brew install docker-machine
+</code></pre>
+<h2 id="boot2docker--vm-">boot2docker で作った VM の移行</h2>
+<pre><code>$ docker-machine create -d virtualbox --virtualbox-import-boot2docker-vm boot2docker-vm docker-vm
+</code></pre>
+<h2 id="heading1">環境変数の設定を書き換える</h2>
 <p><code>.zshrc</code> などに書いていた環境変数を新しい書き方に変える</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">今まで
+<pre><code>今まで
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/iriya/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 これから
-eval &#34;$(docker-machine env docker-vm)&#34;</pre></td></tr></table>
-</div>
-</div>
-<h2 id="コマンドの差分">コマンドの差分</h2>
-
+eval &quot;$(docker-machine env docker-vm)&quot;
+</code></pre>
+<h2 id="heading2">コマンドの差分</h2>
 <p>今まで docker でやってたコマンドは代わりに docker-machine コマンドを使うようにする。差分は以下を参考。</p>
-
 <p><a href="http://docs.docker.com/installation/mac/#migrate-from-boot2docker">http://docs.docker.com/installation/mac/#migrate-from-boot2docker</a></p>
 
     </div>

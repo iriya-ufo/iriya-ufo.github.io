@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2013-05-10T08:47:32+00:00" />
 <meta itemprop="name" content="SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法">
 <meta itemprop="description" content="サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります">
-
-
 <meta itemprop="datePublished" content="2013-05-10T08:47:32&#43;00:00" />
 <meta itemprop="dateModified" content="2013-05-10T08:47:32&#43;00:00" />
-<meta itemprop="wordCount" content="244">
+<meta itemprop="wordCount" content="243">
 
 
 
-<meta itemprop="keywords" content="ssh," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ssh," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法"/>
 <meta name="twitter:description" content="サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります"/>
 
@@ -138,21 +135,15 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります。
 また普通にバックグラウンドジョブとして動かしてもだめです。
 以下のように <code>nohup</code> シグナル送ってプロセスとして動かし続けてあげたら大丈夫です。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ nohup command [arg...] &amp;</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ nohup command [arg...] &amp;
+</code></pre>
 <p>詳しくは『<a href="http://www.codereading.com/notebook/moin.cgi/IgnoreTheHangupSignal">ログアウトしてもバックグラウンド ジョブを継続する方法</a>』を参照してください。
 さらに詳しく知りたい場合は『<a href="http://www.glamenv-septzen.net/view/854">なぜnohupをバックグランドジョブとして起動するのが定番なのか？</a>』を参照するとよいです。</p>
 
