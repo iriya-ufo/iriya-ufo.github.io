@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2018/12/26/blog-services/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2018-12-26T16:42:16+09:00" />
 <meta itemprop="name" content="どこで Blog を書くか問題">
 <meta itemprop="description" content="ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。 仕方なしにアップデートする">
-
-
 <meta itemprop="datePublished" content="2018-12-26T16:42:16&#43;09:00" />
 <meta itemprop="dateModified" content="2018-12-26T16:42:16&#43;09:00" />
 <meta itemprop="wordCount" content="1516">
 
 
 
-<meta itemprop="keywords" content="hugo," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="hugo," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="どこで Blog を書くか問題"/>
 <meta name="twitter:description" content="ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。 仕方なしにアップデートする"/>
 
@@ -139,144 +136,118 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li><a href="#そもそもなぜブログを書くのか">そもそもなぜブログを書くのか</a></li>
-<li><a href="#数多のブログサービスについて">数多のブログサービスについて</a>
-<ul>
-<li><a href="#はてなブログ-https-hatenablog-com"><a href="https://hatenablog.com/">はてなブログ</a></a></li>
-<li><a href="#medium-https-medium-com"><a href="https://medium.com/">Medium</a></a></li>
-<li><a href="#hugo-https-gohugo-io-github-pages-https-pages-github-com"><a href="https://gohugo.io/">Hugo</a> + <a href="https://pages.github.com/">Github Pages</a></a></li>
-<li><a href="#scrapbox-https-scrapbox-io"><a href="https://scrapbox.io/">Scrapbox</a></a></li>
-</ul></li>
-<li><a href="#なぜ-hugo-にしたのか">なぜ Hugo にしたのか</a></li>
-</ul>
+  <ul>
+    <li><a href="#httpshatenablogcom">はてなブログ</a></li>
+    <li><a href="#mediumhttpsmediumcom">Medium</a></li>
+    <li><a href="#hugohttpsgohugoio--github-pageshttpspagesgithubcom">Hugo + Github Pages</a></li>
+    <li><a href="#scrapboxhttpsscrapboxio">Scrapbox</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。
+      <p>ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。
 仕方なしにアップデートするもうまく行かずに、結局書いた記事を <code>rm</code> した。
 そんなことがあって、また生産性ゼロの、ブログどこに書いたらいいか問題が勃発してしまったのだった。</p>
-
-<h1 id="そもそもなぜブログを書くのか">そもそもなぜブログを書くのか</h1>
-
+<h1 id="heading">そもそもなぜブログを書くのか</h1>
 <p>大して有用な記事もなく、琴線に触れる文章を書ける訳でもないのになんでブログを書いているのだろう。</p>
-
 <ol>
 <li>学習したことの成果を書く場所が欲しかった</li>
 <li>書くことで思考を整理し記憶に定着させるため</li>
 <li>自分史を残したいという欲求</li>
 <li>etc&hellip;</li>
 </ol>
-
 <p>と理由を考えてみたものの最終的にはただの自己満だと気づいた。
 自己満であるのならば自分自身が納得のいく答えを無駄に試行錯誤してもいいんだろう。
 以下、その爪痕である。</p>
-
-<h1 id="数多のブログサービスについて">数多のブログサービスについて</h1>
-
+<h1 id="heading1">数多のブログサービスについて</h1>
 <p>結論から言うと Hugo + Github Pages という組み合わせに落ち着いた。
 今までが <a href="https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/">Octopress + Github Pages</a> だったのでジェネレータを使うという点で言えば結局ほとんど変わってない。
 もし<a href="https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/">2016年04月29日</a>に Hugo を触っていたら、そのまま使っていたのだろうと思う。</p>
-
 <p>それでも他の魅力的なサービスもたくさんあったので、一応その特徴を書いておきたい。</p>
-
-<h2 id="はてなブログ-https-hatenablog-com"><a href="https://hatenablog.com/">はてなブログ</a></h2>
-
+<h2 id="httpshatenablogcom"><a href="https://hatenablog.com/">はてなブログ</a></h2>
 <ul>
-<li><p>Good</p>
-
+<li>
+<p>Good</p>
 <ul>
 <li>ジェネレーターと違って書き始めるの楽</li>
 <li>PC移行での環境構築とかがいらない</li>
 <li>デザインテンプレートが豊富</li>
-</ul></li>
-
-<li><p>Bad</p>
-
+</ul>
+</li>
+<li>
+<p>Bad</p>
 <ul>
 <li>広告が嫌</li>
 <li>ポートフォリオには向いていない</li>
 <li>はてなダイアリーからインポートした記事は「はてな記法」モードになる</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>Tech系ならとりあえずココ使ってるイメージ。</p>
-
 <p><a href="http://localhost:1313/blog/2018/12/26/hatena-diary-to-hatena-blog/">僕も以前お世話になっていた</a></p>
-
 <p>はてなブログになってからデザインが今風になっててかっこいい。
 しかし、ブログサービスなので独立したページやポートフォリオ作成などには向いていない。</p>
-
-<h2 id="medium-https-medium-com"><a href="https://medium.com/">Medium</a></h2>
-
+<h2 id="mediumhttpsmediumcom"><a href="https://medium.com/">Medium</a></h2>
 <ul>
-<li><p>Good</p>
-
+<li>
+<p>Good</p>
 <ul>
 <li>見た目が綺麗</li>
-</ul></li>
-
-<li><p>Bad</p>
-
+</ul>
+</li>
+<li>
+<p>Bad</p>
 <ul>
 <li>ブログというよりメディアに近い</li>
 <li>ポートフォリオには向いていない</li>
 <li>日本語で書いた時のデザインに違和感</li>
 <li>記事の月間アーカイブやカテゴリーやタグなどの普通サイドバーに載せるような内容がない</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>最近Tech系の記事もちらほら見るようになったサービス。シンプルなデザイン画面がいい。
 美しさが売りのサービスらしいが、日本語で見るとフォントの大きさや字間などがいまいちである。海外のサービスなのでローカライズしていないのは仕方ない。
 カスタマイズはほとんどできない様子だった。</p>
-
-<h2 id="hugo-https-gohugo-io-github-pages-https-pages-github-com"><a href="https://gohugo.io/">Hugo</a> + <a href="https://pages.github.com/">Github Pages</a></h2>
-
+<h2 id="hugohttpsgohugoio--github-pageshttpspagesgithubcom"><a href="https://gohugo.io/">Hugo</a> + <a href="https://pages.github.com/">Github Pages</a></h2>
 <ul>
-<li><p>Good</p>
-
+<li>
+<p>Good</p>
 <ul>
 <li>好きなだけ自由に編集できる</li>
 <li>必要なすべてが Git リポジトリという単位に集約できる</li>
-</ul></li>
-
-<li><p>Bad</p>
-
+</ul>
+</li>
+<li>
+<p>Bad</p>
 <ul>
 <li>他PCでの構築が面倒</li>
 <li>画像とかめんどい</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>このサイトを読んでいる人には不要な説明かもしれないが Hugo は静的サイトジェネレータで Github Pages はホスティングサービスだ。
 もともと Octopress 使ってたので使うのにそれほど抵抗感はなかった。ジェネレータの最大の欠点は画像に凝りだすとすごくめんどくさくなるという点だ。
 Gyazo などを使って外部リンクのインラインで表示させるようにすると多少なりとも楽だと思う。</p>
-
-<h2 id="scrapbox-https-scrapbox-io"><a href="https://scrapbox.io/">Scrapbox</a></h2>
-
+<h2 id="scrapboxhttpsscrapboxio"><a href="https://scrapbox.io/">Scrapbox</a></h2>
 <ul>
-<li><p>Good</p>
-
+<li>
+<p>Good</p>
 <ul>
 <li>めちゃくちゃ楽に書き始められる</li>
 <li>ストレスフリーな編集</li>
-</ul></li>
-
-<li><p>Bad</p>
-
+</ul>
+</li>
+<li>
+<p>Bad</p>
 <ul>
 <li>一覧視認性がない</li>
 <li>ゆえに後から見返すことが困難</li>
-</ul></li>
 </ul>
-
+</li>
+</ul>
 <p>最後まで使うかどうかすごく迷ったサービス。書き始めはめっちゃ楽でいいんだけど、文章として読むには辛いサービス。自分史ログとして使うならいい。</p>
-
-<h1 id="なぜ-hugo-にしたのか">なぜ Hugo にしたのか</h1>
-
+<h1 id="-hugo-">なぜ Hugo にしたのか</h1>
 <p>はてなブログか Hugo でかなり迷った。はてなは広告がやっぱり嫌なのとポートフォリオ的な見せ方が難しいという点がマイナスであり、逆に Hugo は環境構築や画像の投稿などの面倒さがマイナス点だ。
 また、はてなのような外部サービスはいつ終わってしまうか分からないという懸念もある。Hugo なら markdown で書かれた記事が Git 管理されているので、どこにだってホスティングできる。
 多少使うのに面倒さはあるだろうが、最終的に自由度の高さを優先して Hugo を使うことになった。</p>

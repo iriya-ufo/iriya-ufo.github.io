@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2016-11-09T14:58:31+09:00" />
 <meta itemprop="name" content="hardware architecture for machine learning">
 <meta itemprop="description" content="機械学習をさせるための専用演算マシンを構築しました。 クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれは">
-
-
 <meta itemprop="datePublished" content="2016-11-09T14:58:31&#43;09:00" />
 <meta itemprop="dateModified" content="2016-11-09T14:58:31&#43;09:00" />
-<meta itemprop="wordCount" content="490">
+<meta itemprop="wordCount" content="494">
 
 
 
-<meta itemprop="keywords" content="machine learning," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="machine learning," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="hardware architecture for machine learning"/>
 <meta name="twitter:description" content="機械学習をさせるための専用演算マシンを構築しました。 クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれは"/>
 
@@ -138,22 +135,18 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>機械学習をさせるための専用演算マシンを構築しました。
 クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれはそれで便利だと思います。
 テンションあがりますしね。</p>
-
 <p>ということでハードウェアのスペック選定をしなければいけません。
 これに関しては、下記ブログが大変参考になります。</p>
-
 <p><a href="http://studylog.hateblo.jp/entry/2016/01/28/011100">『低火力ディープラーニングのための環境(自作ハード編)』</a></p>
-
 <p>重要ポイントは、メモリーは詰めるだけ詰んだ方がいい、グラフィックボードに金を突っ込む、電源は壊れにくいものを、といった感じです。
 それを踏まえて、さくっと作ったマシン構成が以下になります。(マシンを組んでくれた友人よ、ありがとう)</p>
-
 <table>
 <thead>
 <tr>
@@ -162,56 +155,47 @@
 <th align="right">価格</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td align="center">CPU</td>
 <td align="left"><a href="http://ark.intel.com/ja/products/88184/Intel-Core-i5-6500-Processor-6M-Cache-up-to-3_60-GHz">i5-6500 LGA1151</a></td>
 <td align="right">¥20,480</td>
 </tr>
-
 <tr>
 <td align="center">マザーボード</td>
 <td align="left"><a href="http://www.asrock.com/mb/intel/z170%20extreme4/">ASRock Z170 Extreme4</a></td>
 <td align="right">¥11,800</td>
 </tr>
-
 <tr>
 <td align="center">MEM</td>
 <td align="left"><a href="http://www.crucial.com/usa/en/ct2k16g4dfd8213">DDR4 PC4-17000 16GB 2枚組 CT2K16G4DFD8213</a></td>
 <td align="right">¥17,980</td>
 </tr>
-
 <tr>
 <td align="center">SSD</td>
 <td align="left"><a href="http://www.adata.com/jp/ssd/feature/171">ADATA SP900 256GB</a></td>
 <td align="right">¥8,480</td>
 </tr>
-
 <tr>
 <td align="center">HDD</td>
 <td align="left"><a href="http://toshiba.semicon-storage.com/jp/product/storage-products/client-hdd/dt01acaxxx.html">東芝 DT01ACA300 3TB SATA600 7200</a></td>
 <td align="right">¥6,780</td>
 </tr>
-
 <tr>
 <td align="center">GPU</td>
 <td align="left"><a href="http://www.kuroutoshikou.com/product/graphics_bord/nvidia/gf-gtx1080-e8gb_blf/release/">玄人志向 GF-GTX1080-E8GB/BLF</a></td>
 <td align="right">¥64,800</td>
 </tr>
-
 <tr>
 <td align="center">電源</td>
 <td align="left"><a href="http://www.enermaxjapan.com/Platimax-850W_top/EPM850EWT_top.html">ENERMAX PLATIMAX 850W</a></td>
 <td align="right">¥21,980</td>
 </tr>
-
 <tr>
 <td align="center">ケース</td>
 <td align="left"><a href="http://apac.coolermaster.com/jp/case/mid-tower-cm690-series/cm693/">CMS-693-KKN1-JP</a></td>
 <td align="right">¥8,980</td>
 </tr>
-
 <tr>
 <td align="center">合計</td>
 <td align="left"></td>
@@ -219,9 +203,7 @@
 </tr>
 </tbody>
 </table>
-
-<p>ちなみに、自作とかめんどくさい、お金払ってなんとかならんの？っていう方は<strong><a href="https://deepstation.jp/index.html#">ここから</a></strong>買ってください。</p>
-
+<p>ちなみに、自作とかめんどくさい、お金払ってなんとかならんの？っていう方は**<a href="https://deepstation.jp/index.html#">ここから</a>**買ってください。</p>
 <p>次回はこのマシンに<a href="/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/">『Ubuntu のインストール』</a>を行います。</p>
 
     </div>

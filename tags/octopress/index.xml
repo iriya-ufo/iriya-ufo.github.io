@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>octopress on iriya-ufo&#39;s blog</title>
@@ -35,7 +35,7 @@
       <pubDate>Fri, 27 Jan 2017 16:05:43 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</guid>
-      <description>当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。 エラー内容はこんな感じ。 1 2 3 4 5</description>
+      <description>当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。 エラー内容はこんな感じ。 ## Pushing generated _deploy website</description>
     </item>
     
     <item>

@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 1 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 1 2 3 4 M-x query-replace-regexp" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/" />
@@ -39,25 +39,22 @@
 
 
 <meta property="og:title" content="Emacs の load-path の調べ方" />
-<meta property="og:description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 1 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 1 2 3 4 M-x query-replace-regexp" />
+<meta property="og:description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/" />
 <meta property="article:published_time" content="2013-10-19T18:07:23+00:00" />
 <meta property="article:modified_time" content="2013-10-19T18:07:23+00:00" />
 <meta itemprop="name" content="Emacs の load-path の調べ方">
-<meta itemprop="description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 1 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 1 2 3 4 M-x query-replace-regexp">
-
-
+<meta itemprop="description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (">
 <meta itemprop="datePublished" content="2013-10-19T18:07:23&#43;00:00" />
 <meta itemprop="dateModified" content="2013-10-19T18:07:23&#43;00:00" />
-<meta itemprop="wordCount" content="117">
+<meta itemprop="wordCount" content="112">
 
 
 
-<meta itemprop="keywords" content="emacs," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="emacs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs の load-path の調べ方"/>
-<meta name="twitter:description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 1 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 1 2 3 4 M-x query-replace-regexp"/>
+<meta name="twitter:description" content="Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl&#43;j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: ("/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -138,38 +135,21 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>Emacs で load-path を調べてそれを見やすく表示させる方法です。</p>
-
 <p><code>*scratch*</code> バッファで以下を評価します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">load-path [Ctrl+j]</pre></td></tr></table>
-</div>
-</div>
+<pre><code>load-path [Ctrl+j]
+</code></pre>
 <p>次に <code>(</code> にカーソルを移動して以下を実行します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">M-x query-replace-regexp RET
+<pre><code>M-x query-replace-regexp RET
 Query replace regexp: (半角空白) RET
 Query replace regexp   with: C-q C-j
-RET</pre></td></tr></table>
-</div>
-</div>
+RET
+</code></pre>
 <p>そして <code>!</code> で全て置換します。</p>
-
 <p>これで load-path が見やすく表示されます。</p>
 
     </div>

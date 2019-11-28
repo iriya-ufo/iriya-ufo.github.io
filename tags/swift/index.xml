@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>swift on iriya-ufo&#39;s blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
-      <description>Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 1 &amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#39;MacOSX10.9.sdk&amp;#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk は</description>
+      <description>Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &amp;lt;unknown&amp;gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ</description>
     </item>
     
     <item>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2016-11-19T23:37:43+09:00" />
 <meta itemprop="name" content="TensorFlow を GPU で動かす">
 <meta itemprop="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま">
-
-
 <meta itemprop="datePublished" content="2016-11-19T23:37:43&#43;09:00" />
 <meta itemprop="dateModified" content="2016-11-19T23:37:43&#43;09:00" />
-<meta itemprop="wordCount" content="708">
+<meta itemprop="wordCount" content="695">
 
 
 
-<meta itemprop="keywords" content="machine learning,tensorflow," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="machine learning,tensorflow," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TensorFlow を GPU で動かす"/>
 <meta name="twitter:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま"/>
 
@@ -139,139 +136,76 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#前提">前提</a></li>
-<li><a href="#構築環境">構築環境</a></li>
-<li><a href="#構築手順">構築手順</a>
-<ul>
-<li><a href="#cuda-インストール">CUDA インストール</a></li>
-<li><a href="#cudnn-インストール">cuDNN インストール</a></li>
-<li><a href="#nvidia-docker-インストール">NVIDIA Docker インストール</a></li>
-<li><a href="#tensorflow-インストール">Tensorflow インストール</a></li>
-<li><a href="#mnist-サンプルコードを動かしてみる">MNIST サンプルコードを動かしてみる</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">前提</a></li>
+    <li><a href="#heading1">構築環境</a></li>
+    <li><a href="#heading2">構築手順</a>
+      <ul>
+        <li><a href="#cuda-">CUDA インストール</a></li>
+        <li><a href="#cudnn-">cuDNN インストール</a></li>
+        <li><a href="#nvidia-docker-">NVIDIA Docker インストール</a></li>
+        <li><a href="#tensorflow-">Tensorflow インストール</a></li>
+        <li><a href="#mnist-">MNIST サンプルコードを動かしてみる</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p><a href="/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/">前回</a>は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。
+      <p><a href="/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/">前回</a>は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。
 移植性の高い方法で構築したいので Docker を使います。</p>
-
-<h2 id="前提">前提</h2>
-
+<h2 id="heading">前提</h2>
 <ul>
 <li>GPU (今回は GEFORCE GTX 1080) を積んだマシンがある</li>
 <li>Ubuntu 16.04 LTS がインストールされている</li>
 <li>Docker がインストールされている</li>
 </ul>
-
-<h2 id="構築環境">構築環境</h2>
-
+<h2 id="heading1">構築環境</h2>
 <ul>
 <li><a href="https://ja.wikipedia.org/wiki/CUDA">CUDA</a> &mdash; Nvidia が提供する GPU 向けの統合開発環境</li>
 <li><a href="https://developer.nvidia.com/cudnn">cuDNN</a> &mdash; Nvidia が作ったディープラーニング用のライブラリ(SDK)で GPU をフル活用できるようになっている</li>
 <li><a href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Docker</a> &mdash; Nvidia が提供している、コンテナから GPU を操作できるようにするもの</li>
 <li><a href="https://www.tensorflow.org/">TensorFlow</a> &mdash; Google が開発したオープンソースの機械学習ライブラリ</li>
 </ul>
-
-<h2 id="構築手順">構築手順</h2>
-
-<h3 id="cuda-インストール">CUDA インストール</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo apt-get install nvidia-cuda-toolkit</pre></td></tr></table>
-</div>
-</div>
-<h3 id="cudnn-インストール">cuDNN インストール</h3>
-
+<h2 id="heading2">構築手順</h2>
+<h3 id="cuda-">CUDA インストール</h3>
+<pre><code>$ sudo apt-get install nvidia-cuda-toolkit
+</code></pre><h3 id="cudnn-">cuDNN インストール</h3>
 <p><a href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a> からユーザー登録をしてライブラリをダウンロードする。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ tar xfzv cudnn-8.0-linux-x64-v5.1.tgz
+<pre><code>$ tar xfzv cudnn-8.0-linux-x64-v5.1.tgz
 $ cd cuda
 $ sudo cp lib64/* /usr/lib/x86_64-linux-gnu
 $ sudo cp include/cudnn.h /usr/include
-$ sudo chmod a+r /usr/lib/x86_64-linux-gnu/libcudnn*</pre></td></tr></table>
-</div>
-</div>
-<h3 id="nvidia-docker-インストール">NVIDIA Docker インストール</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma"># Install nvidia-docker and nvidia-docker-plugin
+$ sudo chmod a+r /usr/lib/x86_64-linux-gnu/libcudnn*
+</code></pre><h3 id="nvidia-docker-">NVIDIA Docker インストール</h3>
+<pre><code># Install nvidia-docker and nvidia-docker-plugin
 $ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
 $ sudo dpkg -i /tmp/nvidia-docker*.deb &amp;&amp; rm /tmp/nvidia-docker*.deb
 
 # Test nvidia-smi
-$ nvidia-docker run --rm nvidia/cuda nvidia-smi</pre></td></tr></table>
-</div>
-</div>
-<p>認識できているようだ。</p>
-
-<p><img src="https://i.gyazo.com/91166d8447efd8d74b646c7fd33d3844.png" alt="nvidia-docker" /></p>
-
-<h3 id="tensorflow-インストール">Tensorflow インストール</h3>
-
+$ nvidia-docker run --rm nvidia/cuda nvidia-smi
+</code></pre><p>認識できているようだ。</p>
+<p><img src="https://i.gyazo.com/91166d8447efd8d74b646c7fd33d3844.png" alt="nvidia-docker"></p>
+<h3 id="tensorflow-">Tensorflow インストール</h3>
 <p>Google 公式の Tensorflow に Docker イメージと実行方法が書いてある。イメージはもちろん GPU バージョンのものを使う。</p>
-
 <ul>
-<li><p><a href="https://www.tensorflow.org/versions/master/get_started/os_setup.html#docker-installation">Download and Setup</a></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu</pre></td></tr></table>
-</div>
-</div></li>
+<li><a href="https://www.tensorflow.org/versions/master/get_started/os_setup.html#docker-installation">Download and Setup</a></li>
 </ul>
-
-<p>Jupyter Notebook が起動するので <code>http://ホストIPアドレス:8888/</code> にアクセスしてみる。</p>
-
-<p><img src="https://i.gyazo.com/dd4f9bcc4d7af38aba37d45439ea30b5.png" alt="jupyter_tensorflow" /></p>
-
-<h3 id="mnist-サンプルコードを動かしてみる">MNIST サンプルコードを動かしてみる</h3>
-
+<pre><code>$ nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu
+</code></pre><p>Jupyter Notebook が起動するので <code>http://ホストIPアドレス:8888/</code> にアクセスしてみる。</p>
+<p><img src="https://i.gyazo.com/dd4f9bcc4d7af38aba37d45439ea30b5.png" alt="jupyter_tensorflow"></p>
+<h3 id="mnist-">MNIST サンプルコードを動かしてみる</h3>
 <p>MNIST サンプルコードを動かして計算させてみる。コードはこちらを利用させてもらった。</p>
-
 <ul>
 <li><a href="https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py">https://github.com/fchollet/keras/blob/master/examples/mnist_cnn.py</a></li>
 </ul>
-
 <p>まず Jupyter Notebook を起動後、ターミナルを開いて <code>$ pip install keras</code> と打つ。</p>
-
 <p>上記サンプルコードを Notebook で実行。</p>
-
-<p><img src="https://i.gyazo.com/36869691dcff0e0264b34b51cdb8a1e2.png" alt="mnist_cnn" /></p>
-
+<p><img src="https://i.gyazo.com/36869691dcff0e0264b34b51cdb8a1e2.png" alt="mnist_cnn"></p>
 <p>めっちゃ速い。</p>
-
 <p>Docker 再起動で keras とか書いたコードとか消えちゃうので、イメージ作成とボリュームセットの構築が必要かな。
 今回は提供されている Docker を利用しただけなので、次回は自前で Dockerfile 作成とイメージ作成をやっていきたいと思います。</p>
-
 <p>次回は<a href="/blog/2016/11/18/pyenv-and-anaconda-on-docker/">『Docker コンテナに Anaconda 環境を構築』</a>します。</p>
 
     </div>

@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="自分のための覚書 編集 1 2 3 4 5 6 7 8 9 10 11 :%s/:\(\w\&#43;\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#)" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/12/04/vim-tips/" />
@@ -39,25 +39,22 @@
 
 
 <meta property="og:title" content="Vim 小技集" />
-<meta property="og:description" content="自分のための覚書 編集 1 2 3 4 5 6 7 8 9 10 11 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#)" />
+<meta property="og:description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2014/12/04/vim-tips/" />
 <meta property="article:published_time" content="2014-12-04T18:58:13+00:00" />
 <meta property="article:modified_time" content="2014-12-04T18:58:13+00:00" />
 <meta itemprop="name" content="Vim 小技集">
-<meta itemprop="description" content="自分のための覚書 編集 1 2 3 4 5 6 7 8 9 10 11 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#)">
-
-
+<meta itemprop="description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #">
 <meta itemprop="datePublished" content="2014-12-04T18:58:13&#43;00:00" />
 <meta itemprop="dateModified" content="2014-12-04T18:58:13&#43;00:00" />
-<meta itemprop="wordCount" content="761">
+<meta itemprop="wordCount" content="722">
 
 
 
-<meta itemprop="keywords" content="vim," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="vim," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Vim 小技集"/>
-<meta name="twitter:description" content="自分のための覚書 編集 1 2 3 4 5 6 7 8 9 10 11 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#)"/>
+<meta name="twitter:description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -139,44 +136,23 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#編集">編集</a></li>
-<li><a href="#カーソル移動">カーソル移動</a></li>
-<li><a href="#モード">モード</a></li>
-<li><a href="#ウィンドウ">ウィンドウ</a></li>
-<li><a href="#特殊処理">特殊処理</a></li>
-<li><a href="#コマンドラインの履歴">コマンドラインの履歴</a></li>
-<li><a href="#改行文字の変更">改行文字の変更</a></li>
-<li><a href="#ファイル比較">ファイル比較</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">編集</a></li>
+    <li><a href="#heading1">カーソル移動</a></li>
+    <li><a href="#heading2">モード</a></li>
+    <li><a href="#heading3">ウィンドウ</a></li>
+    <li><a href="#heading4">特殊処理</a></li>
+    <li><a href="#heading5">コマンドラインの履歴</a></li>
+    <li><a href="#heading6">改行文字の変更</a></li>
+    <li><a href="#heading7">ファイル比較</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>自分のための覚書</p>
-
-<h2 id="編集">編集</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">:%s/:\(\w\+\) =&gt;/\1:/g  # hash の書き方を置換 #正規表現
+      <p>自分のための覚書</p>
+<h2 id="heading">編集</h2>
+<pre><code>:%s/:\(\w\+\) =&gt;/\1:/g  # hash の書き方を置換 #正規表現
 Ctrl+v jjjj I           # 4行コメントアウト(,#)
 Ctrl+v jjjj d           # 4行コメントイン(,#)
 Ctrl+v jjjj c aaaa      # 4行置換
@@ -186,63 +162,25 @@ cw                      # カーソル位置から単語の最後までを書き
 viwu                    # カーソル位置の単語を undercase
 viwU                    # カーソル位置の単語を UPPERCASE
 viw~                    # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え
-viw!nkf -Z4             # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ</pre></td></tr></table>
-</div>
-</div>
-<h2 id="カーソル移動">カーソル移動</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">0                       # 行の先頭へ
+viw!nkf -Z4             # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ
+</code></pre>
+<h2 id="heading1">カーソル移動</h2>
+<pre><code>0                       # 行の先頭へ
 ^                       # 行の空白以外の先頭へ
 $                       # 行の末尾へ
 w                       # 次の単語の先頭へ
-f*                      # 次の*へ           (例 df&#34;-&gt;&#34;まで削除)
-t*                      # 次の*の前へ       (例 dt&#34;-&gt;&#34;の前まで削除)
+f*                      # 次の*へ           (例 df&quot;-&gt;&quot;まで削除)
+t*                      # 次の*の前へ       (例 dt&quot;-&gt;&quot;の前まで削除)
 viw                     # 現在のカーソル位置の単語を選択
-vi&#34;                     # 現在のカーソル位置の&#34;の中を選択
-va&#34;                     # 現在のカーソル位置の&#34;の外を選択</pre></td></tr></table>
-</div>
-</div>
-<h2 id="モード">モード</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">C-[                     # 挿入モードを抜ける
-ESC                     # 挿入モードを抜ける</pre></td></tr></table>
-</div>
-</div>
-<h2 id="ウィンドウ">ウィンドウ</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">:vs                     # 垂直分割
+vi&quot;                     # 現在のカーソル位置の&quot;の中を選択
+va&quot;                     # 現在のカーソル位置の&quot;の外を選択
+</code></pre>
+<h2 id="heading2">モード</h2>
+<pre><code>C-[                     # 挿入モードを抜ける
+ESC                     # 挿入モードを抜ける
+</code></pre>
+<h2 id="heading3">ウィンドウ</h2>
+<pre><code>:vs                     # 垂直分割
 :sp                     # 水平分割
 Ctrl+w w                # 次のウィンドウへ
 Ctrl+w [hjkl左下上右]    # ウィンドウの移動
@@ -253,59 +191,28 @@ Ctrl+w &gt;                # 幅を大きく
 Ctrl+w =                # 自動調整
 Ctrl+w r                # 左右・上下のウィンドウを入れ替え
 :res 100                # 現在のウィンドウの高さを 100 にする
-:vertical res 30        # 現在のウィンドウの横幅を 30 にする</pre></td></tr></table>
-</div>
-</div>
-<h2 id="特殊処理">特殊処理</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">qa                      # マクロ記録開始
-q                       # マクロ記録終了 (@a で使用可能)</pre></td></tr></table>
-</div>
-</div>
-<h2 id="コマンドラインの履歴">コマンドラインの履歴</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">q: または : Ctrl+f       # コマンドラインの履歴
+:vertical res 30        # 現在のウィンドウの横幅を 30 にする
+</code></pre>
+<h2 id="heading4">特殊処理</h2>
+<pre><code>qa                      # マクロ記録開始
+q                       # マクロ記録終了 (@a で使用可能)
+</code></pre>
+<h2 id="heading5">コマンドラインの履歴</h2>
+<pre><code>q: または : Ctrl+f       # コマンドラインの履歴
 q/                      # 検索
-Ctrl+c                  # 履歴をコマンドラインに送る(編集して使えるようになる)</pre></td></tr></table>
-</div>
-</div>
-<h2 id="改行文字の変更">改行文字の変更</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">:%s/
+Ctrl+c                  # 履歴をコマンドラインに送る(編集して使えるようになる)
+</code></pre>
+<h2 id="heading6">改行文字の変更</h2>
+<pre><code>:%s/
 /
-/g                      # /Ctrl+v Ctrl+m/Ctrl+v Enter/</pre></td></tr></table>
-</div>
-</div>
-<h2 id="ファイル比較">ファイル比較</h2>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">:vertical diffsplit     # 差分を取りたいファイル
+/g                      # /Ctrl+v Ctrl+m/Ctrl+v Enter/
+</code></pre>
+<h2 id="heading7">ファイル比較</h2>
+<pre><code>:vertical diffsplit     # 差分を取りたいファイル
 :do (diff obtain)       # もう一方のファイルから差分を取り込む
-:dp (diff put)          # もう一方のファイルに差分を取り込ませる</pre></td></tr></table>
-</div>
-</div>
+:dp (diff put)          # もう一方のファイルに差分を取り込ませる
+</code></pre>
+
     </div>
 
     <div class="post-copyright">

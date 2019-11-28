@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.60.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/10/19/update-alternatives/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2013-10-19T18:17:35+00:00" />
 <meta itemprop="name" content="標準のコマンドの関連付けを変更 update-alternatives">
 <meta itemprop="description" content="Ubuntu にて update-alternatives コマンドを使用すると標準コマンドの関連付けを変更できます。 例として Emacs の関連付けを変更する方法をみてみましょう。 Emacs がどこから実行される">
-
-
 <meta itemprop="datePublished" content="2013-10-19T18:17:35&#43;00:00" />
 <meta itemprop="dateModified" content="2013-10-19T18:17:35&#43;00:00" />
-<meta itemprop="wordCount" content="288">
+<meta itemprop="wordCount" content="281">
 
 
 
-<meta itemprop="keywords" content="emacs," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="emacs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="標準のコマンドの関連付けを変更 update-alternatives"/>
 <meta name="twitter:description" content="Ubuntu にて update-alternatives コマンドを使用すると標準コマンドの関連付けを変更できます。 例として Emacs の関連付けを変更する方法をみてみましょう。 Emacs がどこから実行される"/>
 
@@ -139,73 +136,38 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading">参考</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Ubuntu にて <code>update-alternatives</code> コマンドを使用すると標準コマンドの関連付けを変更できます。
+      <p>Ubuntu にて <code>update-alternatives</code> コマンドを使用すると標準コマンドの関連付けを変更できます。
 例として Emacs の関連付けを変更する方法をみてみましょう。
 Emacs がどこから実行されるか調べてみます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ which emacs
-/usr/bin/emacs</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ which emacs
+/usr/bin/emacs
+</code></pre>
 <p>次に実態を調べます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ ll /usr/bin/emacs
-lrwxrwxrwx 1 root root 23 2008-01-06 23:03 /usr/bin/emacs -&gt; /etc/alternatives/emacs</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ ll /usr/bin/emacs
+lrwxrwxrwx 1 root root 23 2008-01-06 23:03 /usr/bin/emacs -&gt; /etc/alternatives/emacs
+</code></pre>
 <p>シンボリックリンクになっており実態は <code>/etc/alternatives/emacs</code> であることが分かります。</p>
-
 <p>次に alternatives の正体を突き止めます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ ll /etc/alternatives/emacs
-lrwxrwxrwx 1 root root 16 2008-03-25 18:47 /etc/alternatives/emacs -&gt; /usr/bin/emacs22</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ ll /etc/alternatives/emacs
+lrwxrwxrwx 1 root root 16 2008-03-25 18:47 /etc/alternatives/emacs -&gt; /usr/bin/emacs22
+</code></pre>
 <p>となり結局のところの正体は <code>/usr/bin/emacs22</code> だと分かりました。</p>
-
 <p><code>ln -s</code> でシンボリックリンク先を変更してもいいのですが、こんなとき Ubuntu では以下のようにします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo update-alternatives --config emacs</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ sudo update-alternatives --config emacs
+</code></pre>
 <p>そうすると対話形式でどれを標準にするか聞いてきますので簡単に関連付けの変更ができます。</p>
-
-<h3 id="参考">参考</h3>
-
+<h3 id="heading">参考</h3>
 <ul>
 <li><a href="http://ubulog.blogspot.com/2007/07/blog-post_09.html">http://ubulog.blogspot.com/2007/07/blog-post_09.html</a></li>
 </ul>
