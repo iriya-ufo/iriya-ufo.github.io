@@ -6,10 +6,19 @@
     <description>Recent content in vscode on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 06 Aug 2019 17:31:53 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 08 Dec 2019 01:36:06 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>VSCode に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</link>
+      <pubDate>Sun, 08 Dec 2019 01:36:06 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</guid>
+      <description>Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $</description>
+    </item>
     
     <item>
       <title>VSCode で Emacs キーバインドを使う</title>
