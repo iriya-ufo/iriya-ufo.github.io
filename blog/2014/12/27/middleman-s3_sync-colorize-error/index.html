@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2014-12-27T21:55:29+00:00" />
 <meta itemprop="name" content="middleman-s3_sync で colorize のエラーがでた">
 <meta itemprop="description" content="静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました">
+
+
 <meta itemprop="datePublished" content="2014-12-27T21:55:29&#43;00:00" />
 <meta itemprop="dateModified" content="2014-12-27T21:55:29&#43;00:00" />
-<meta itemprop="wordCount" content="187">
+<meta itemprop="wordCount" content="182">
 
 
 
-<meta itemprop="keywords" content="middleman," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="middleman," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="middleman-s3_sync で colorize のエラーがでた"/>
 <meta name="twitter:description" content="静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました"/>
 
@@ -135,28 +138,39 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    
   </div>
 </div>
     <div class="post-content">
       <p>静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました。</p>
-<pre><code>/Users/iriya/project/rabbitcare/rabbitcare-site/vendor/bundle/ruby/2.1.0/gems/padrino-support-0.12.4/lib/padrino-support/core_ext/string/colorize.rb:22:in `colorize': undefined method `light_green' for String::Colorizer:Class (NoMethodError)
-</code></pre>
-<p><!-- raw HTML omitted -->ここ<!-- raw HTML omitted -->を見るとどうやら <!-- raw HTML omitted -->colorize<!-- raw HTML omitted --> という gem でもう使われていないメソッドを呼び出しているようでした。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/Users/iriya/project/rabbitcare/rabbitcare-site/vendor/bundle/ruby/2.1.0/gems/padrino-support-0.12.4/lib/padrino-support/core_ext/string/colorize.rb:22:in `colorize&#39;: undefined method `light_green&#39; for String::Colorizer:Class (NoMethodError)</pre></td></tr></table>
+</div>
+</div>
+<p><a href="https://github.com/capistrano/sshkit/issues/151" title="issues" target="_blank">ここ</a>を見るとどうやら <strong>colorize</strong> という gem でもう使われていないメソッドを呼び出しているようでした。</p>
+
 <p>0.7.4 のバージョンならOKということなので、Gemfile に以下を追記して <code>$ bundle update</code> で直りました。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Avoid deployment error</span>
-gem <span class="s2">&#34;colorize&#34;</span>, <span class="s2">&#34;0.7.4&#34;</span>
-</code></pre></td></tr></table>
+gem <span class="s2">&#34;colorize&#34;</span>, <span class="s2">&#34;0.7.4&#34;</span></code></pre></td></tr></table>
 </div>
-</div><pre><code>$ bundle update colorize
-</code></pre>
-
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ bundle update colorize</pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">

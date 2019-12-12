@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 ローカ" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/" />
@@ -39,22 +39,25 @@
 
 
 <meta property="og:title" content="複数の環境で Rails を開発する" />
-<meta property="og:description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 ローカ" />
+<meta property="og:description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/" />
 <meta property="article:published_time" content="2013-11-04T00:15:10+00:00" />
 <meta property="article:modified_time" content="2013-11-04T00:15:10+00:00" />
 <meta itemprop="name" content="複数の環境で Rails を開発する">
-<meta itemprop="description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 ローカ">
+<meta itemprop="description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の">
+
+
 <meta itemprop="datePublished" content="2013-11-04T00:15:10&#43;00:00" />
 <meta itemprop="dateModified" content="2013-11-04T00:15:10&#43;00:00" />
-<meta itemprop="wordCount" content="566">
+<meta itemprop="wordCount" content="711">
 
 
 
-<meta itemprop="keywords" content="heroku,ruby on rails," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="heroku,ruby on rails," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="複数の環境で Rails を開発する"/>
-<meta name="twitter:description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 ローカ"/>
+<meta name="twitter:description" content="普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,56 +139,118 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">ローカル開発環境を整える</a></li>
-    <li><a href="#heroku-">Heroku で動かす</a>
-      <ul>
-        <li><a href="#heading1">参照</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#ローカル開発環境を整える">ローカル開発環境を整える</a></li>
+<li><a href="#heroku-で動かす">Heroku で動かす</a>
+<ul>
+<li><a href="#参照">参照</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。</p>
-<!-- raw HTML omitted -->
-<h2 id="heading">ローカル開発環境を整える</h2>
+      
+
+<p>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。
+<ul>
+  <li>既存の Rails プロジェクトのコードは github で管理</li>
+  <li>Rails アプリは heroku で公開</li>
+  <li>これから述べる環境構築は Ubuntu プラットフォームの話</li>
+</ul>
+また Ubuntu に開発環境が一切入ってない状態の場合、たくさんインストールすべきものがあるのでここでは割愛します。あくまで私の環境だとこうやれば動いたということです。</p>
+
+<h2 id="ローカル開発環境を整える">ローカル開発環境を整える</h2>
+
 <p>まず既存のアプリを github からクローンします。</p>
-<pre><code>$ git clone &quot;https://github.com/yourname/app.git&quot;
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ git clone &#34;https://github.com/yourname/app.git&#34;</pre></td></tr></table>
+</div>
+</div>
 <p>gem を揃えるため <code>$ bundle update</code> します。私の環境では Ubuntu に PostgreSQL Server がないよとエラーが出たので psql をインストール後 <code>$ bundle update</code> しました。</p>
-<pre><code>$ sudo apt-get install postgresql postgresql-server-dev-9.1
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo apt-get install postgresql postgresql-server-dev-9.1
 $ rehash
-$ bundle update
-</code></pre>
+$ bundle update</pre></td></tr></table>
+</div>
+</div>
 <p>ここで Rails サーバーを起動してみると JavaScript runtime error が出ました。私は以下をインストールしましたが nodejs があるので therubyracer は必要ないかもしれません。</p>
-<pre><code>$ gem install therubyracer # nodejs があるので必要ないかも
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ gem install therubyracer # nodejs があるので必要ないかも
 $ gem install execjs
-$ sudo apt-get install nodejs
-</code></pre>
+$ sudo apt-get install nodejs</pre></td></tr></table>
+</div>
+</div>
 <p>マイグレーションの実行をします。</p>
-<pre><code>$ bundle exec rake db:migrate RAILS_ENV=development
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ bundle exec rake db:migrate RAILS_ENV=development</pre></td></tr></table>
+</div>
+</div>
 <p>ここまで出来ればローカルアクセスで Rails アプリが動作すると思います。</p>
-<h2 id="heroku-">Heroku で動かす</h2>
+
+<h2 id="heroku-で動かす">Heroku で動かす</h2>
+
 <p>アプリは heroku という PaaS で公開します。普段は MacOS の開発環境から heroku にアクセスしていますが、Ubuntu でも同様に heroku に push できるようにしたいと思います。</p>
+
 <p>まず <code>~/.ssh</code> に USB などで rsa キーをコピーしてきます。なお heroku 用にデフォルトとは別の名前でキーを保存した場合、config ファイルも必要となります。
 config ファイルはこんな感じ。</p>
-<pre><code>Host heroku.com
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Host heroku.com
  User git
  port 22
  Hostname heroku.com
  IdentityFile ~/.ssh/heroku_rsa
  TCPKeepAlive yes
- IdentitiesOnly yes
-</code></pre>
+ IdentitiesOnly yes</pre></td></tr></table>
+</div>
+</div>
 <p>このまま <code>$ heroku open</code> しても No app specified. と言われます。
 解決方法は簡単で git remote でリポジトリを追加すればOKです。</p>
-<pre><code>$ git remote add heroku git@heroku.com:blooming-wildwood-xxxx.git
-</code></pre>
-<h3 id="heading1">参照</h3>
-<p><!-- raw HTML omitted -->複数パソコンからherokuの同一サービスにデプロイする方法<!-- raw HTML omitted --></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ git remote add heroku git@heroku.com:blooming-wildwood-xxxx.git</pre></td></tr></table>
+</div>
+</div>
+<h3 id="参照">参照</h3>
+
+<p><a href="http://d.hatena.ne.jp/cybaron/20111002/p1" title="複数パソコンからherokuの同一サービスにデプロイする方法" target="_blank">複数パソコンからherokuの同一サービスにデプロイする方法</a></p>
+
 <p>以上です。</p>
 
     </div>

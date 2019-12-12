@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2014-05-08T23:39:00+00:00" />
 <meta itemprop="name" content="Windows 7 64bit に Rails の環境を構築">
 <meta itemprop="description" content="最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずこ">
+
+
 <meta itemprop="datePublished" content="2014-05-08T23:39:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-05-08T23:39:00&#43;00:00" />
-<meta itemprop="wordCount" content="369">
+<meta itemprop="wordCount" content="404">
 
 
 
-<meta itemprop="keywords" content="ruby on rails,windows," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ruby on rails,windows," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Windows 7 64bit に Rails の環境を構築"/>
 <meta name="twitter:description" content="最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずこ"/>
 
@@ -135,57 +138,98 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    
   </div>
 </div>
     <div class="post-content">
       <p>最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずここを参考にしてもらえればと思います。</p>
-<p><!-- raw HTML omitted -->『Ruby 2.0.0-p451 (x64)』<!-- raw HTML omitted -->をダウンロードします。</p>
-<p>以下インストールを行う際のポイント</p>
-<!-- raw HTML omitted -->
+
+<p><a href="http://rubyinstaller.org/downloads/" target="_blank">『Ruby 2.0.0-p451 (x64)』</a>をダウンロードします。</p>
+
+<p>以下インストールを行う際のポイント
+<ul>
+<li>PATH を追加するにチェックをいれる</li>
+<li>C:\Ruby200-x64 にインストール</li>
+</ul></p>
+
 <p>コマンドプロンプトで以下を行います。</p>
-<pre><code>gem update --system
-gem update rake
-</code></pre>
-<p>先ほどの<!-- raw HTML omitted -->リンク<!-- raw HTML omitted -->から <code>DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe</code> をダウンロードします。
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">gem update --system
+gem update rake</pre></td></tr></table>
+</div>
+</div>
+<p>先ほどの<a href="http://rubyinstaller.org/downloads/" target="_blank">リンク</a>から <code>DevKit-mingw64-64-4.7.2-20130224-1432-sfx.exe</code> をダウンロードします。
 自己解凍形式のファイルなので <code>C:\DevKit</code> に解凍します。</p>
+
 <p>コマンドプロンプトで以下を実行します。</p>
-<pre><code>C:\DevKit\devkitvars.bat 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">C:\DevKit\devkitvars.bat 
 gem install json --no-ri --no-rdoc
 gem install bundler
 &gt; cd C:\DevKit
 &gt; ruby dk.rb init # 生成された config.yml に Ruby のルートを指定
-&gt; ruby dk.rb install
-</code></pre>
+&gt; ruby dk.rb install</pre></td></tr></table>
+</div>
+</div>
 <p>次は Git の環境を構築します。</p>
+
 <p><a href="http://msysgit.github.io/">http://msysgit.github.io/</a> から git をダウンロードします。</p>
+
 <p><code>C:\project</code> 配下に rails プロジェクトを作成します。</p>
+
 <p>まず <code>$ bundle init</code> で Gemfile を作り編集します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s2">&#34;</span><span class="s2">https://rubygems.org</span><span class="s2">&#34;</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s2">&#34;https://rubygems.org&#34;</span>
 
-<span class="n">gem</span> <span class="s2">&#34;</span><span class="s2">rails</span><span class="s2">&#34;</span>
-<span class="n">gem</span> <span class="s2">&#34;</span><span class="s2">tzinfo-data</span><span class="s2">&#34;</span>
-<span class="n">gem</span> <span class="s2">&#34;</span><span class="s2">sqlite3</span><span class="s2">&#34;</span>
-</code></pre></td></tr></table>
+<span class="n">gem</span> <span class="s2">&#34;rails&#34;</span>
+<span class="n">gem</span> <span class="s2">&#34;tzinfo-data&#34;</span>
+<span class="n">gem</span> <span class="s2">&#34;sqlite3&#34;</span></code></pre></td></tr></table>
 </div>
-</div><p>必要な gem をインストールします。</p>
-<pre><code>$ bundle install --path vendor/bundle
-</code></pre>
+</div>
+<p>必要な gem をインストールします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ bundle install --path vendor/bundle</pre></td></tr></table>
+</div>
+</div>
 <p>起動確認します。</p>
-<pre><code>$ bundle exec rails -v
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ bundle exec rails -v
 $ bundle exec rails new sample
-$ bundle exec rails s
-</code></pre>
-
+$ bundle exec rails s</pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">

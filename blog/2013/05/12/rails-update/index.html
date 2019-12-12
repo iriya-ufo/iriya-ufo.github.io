@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート 1 2 3 $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート 1 2 3 $ sudo gem update" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/12/rails-update/" />
@@ -39,22 +39,25 @@
 
 
 <meta property="og:title" content="Rails のアップデート" />
-<meta property="og:description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11" />
+<meta property="og:description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート 1 2 3 $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート 1 2 3 $ sudo gem update" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2013/05/12/rails-update/" />
 <meta property="article:published_time" content="2013-05-12T04:22:10+00:00" />
 <meta property="article:modified_time" content="2013-05-12T04:22:10+00:00" />
 <meta itemprop="name" content="Rails のアップデート">
-<meta itemprop="description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11">
+<meta itemprop="description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート 1 2 3 $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート 1 2 3 $ sudo gem update">
+
+
 <meta itemprop="datePublished" content="2013-05-12T04:22:10&#43;00:00" />
 <meta itemprop="dateModified" content="2013-05-12T04:22:10&#43;00:00" />
-<meta itemprop="wordCount" content="437">
+<meta itemprop="wordCount" content="454">
 
 
 
-<meta itemprop="keywords" content="ruby on rails," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ruby on rails," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rails のアップデート"/>
-<meta name="twitter:description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11"/>
+<meta name="twitter:description" content="Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート 1 2 3 $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート 1 2 3 $ sudo gem update"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,53 +139,101 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#gem-">Gem のアップデート</a></li>
-    <li><a href="#rails-">Rails のアップデート</a></li>
-    <li><a href="#-rails-">古い Rails をアンインストール</a></li>
-    <li><a href="#bundler-">bundler のアップデート</a></li>
-    <li><a href="#heading">既存のプロジェクトのアップデート</a></li>
-    <li><a href="#heading1">差分確認</a></li>
-    <li><a href="#bundle-">bundle のアップデート</a></li>
-    <li><a href="#-rake-">ビルドツール rake でアップデート</a></li>
-    <li><a href="#heading2">設定ファイルのマージ</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#gem-のアップデート">Gem のアップデート</a></li>
+<li><a href="#rails-のアップデート">Rails のアップデート</a></li>
+<li><a href="#古い-rails-をアンインストール">古い Rails をアンインストール</a></li>
+<li><a href="#bundler-のアップデート">bundler のアップデート</a></li>
+<li><a href="#既存のプロジェクトのアップデート">既存のプロジェクトのアップデート</a></li>
+<li><a href="#差分確認">差分確認</a></li>
+<li><a href="#bundle-のアップデート">bundle のアップデート</a></li>
+<li><a href="#ビルドツール-rake-でアップデート">ビルドツール rake でアップデート</a></li>
+<li><a href="#設定ファイルのマージ">設定ファイルのマージ</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。</p>
-<h2 id="gem-">Gem のアップデート</h2>
-<pre><code>$ sudo gem update --system
+      
+
+<p>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。</p>
+
+<h2 id="gem-のアップデート">Gem のアップデート</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo gem update --system
 $ gem -v
-1.8.24
-</code></pre>
-<h2 id="rails-">Rails のアップデート</h2>
-<pre><code>$ sudo gem update rails
+1.8.24</pre></td></tr></table>
+</div>
+</div>
+<h2 id="rails-のアップデート">Rails のアップデート</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo gem update rails
 $ rails -v
-Rails 3.2.11
-</code></pre>
-<h2 id="-rails-">古い Rails をアンインストール</h2>
+Rails 3.2.11</pre></td></tr></table>
+</div>
+</div>
+<h2 id="古い-rails-をアンインストール">古い Rails をアンインストール</h2>
+
 <p>古いバージョンの Rails を削除します。新しいバージョンの Rails で動作確認していないなら、念の為に残しておいたほうがよいでしょう。</p>
-<pre><code>$ sudo gem uninstall rails
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo gem uninstall rails
 Select gem to uninstall:
 1. rails-3.2.9
 2. rails-3.2.11
 3. All versions
-&gt; 1
-</code></pre>
-<h2 id="bundler-">bundler のアップデート</h2>
-<pre><code>$ sudo gem update bundler
-</code></pre>
-<h2 id="heading">既存のプロジェクトのアップデート</h2>
+&gt; 1</pre></td></tr></table>
+</div>
+</div>
+<h2 id="bundler-のアップデート">bundler のアップデート</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo gem update bundler</pre></td></tr></table>
+</div>
+</div>
+<h2 id="既存のプロジェクトのアップデート">既存のプロジェクトのアップデート</h2>
+
 <p>既存のプロジェクトとの差分を確認するため、テストプロジェクトを作成します。</p>
-<pre><code>$ rails new app_test
-</code></pre>
-<h2 id="heading1">差分確認</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ rails new app_test</pre></td></tr></table>
+</div>
+</div>
+<h2 id="差分確認">差分確認</h2>
+
 <p>既存アプリと新しく作ったアプリの Gemfile の diff を取って正しく編集する。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-diff" data-lang="diff"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -204,22 +255,40 @@ Select gem to uninstall:
 </span><span class="gd"></span>&gt;   gem &#39;therubyracer&#39;, &#39;0.10.2&#39;
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="bundle-">bundle のアップデート</h2>
-<pre><code>$ bundle update
-</code></pre>
-<h2 id="-rake-">ビルドツール rake でアップデート</h2>
+</div>
+<h2 id="bundle-のアップデート">bundle のアップデート</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ bundle update</pre></td></tr></table>
+</div>
+</div>
+<h2 id="ビルドツール-rake-でアップデート">ビルドツール rake でアップデート</h2>
+
 <p>念の為、 config のバックアップを取ってから実行します。</p>
-<pre><code>$ cp -r config config_old
-$ rake rails:update
-</code></pre>
-<h2 id="heading2">設定ファイルのマージ</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cp -r config config_old
+$ rake rails:update</pre></td></tr></table>
+</div>
+</div>
+<h2 id="設定ファイルのマージ">設定ファイルのマージ</h2>
+
 <p>以下の設定ファイルを比較して編集する。</p>
+
 <ul>
 <li><code>config/routes.rb</code></li>
 <li><code>config/application.rb</code></li>
 <li><code>config/environment.rb</code></li>
 <li><code>config/initializers/serect_token.rb</code></li>
 </ul>
+
 <p>環境によっては他にも編集すべきファイルがあるかと思います。以上で Rails のアップデートが終了します。</p>
 
     </div>

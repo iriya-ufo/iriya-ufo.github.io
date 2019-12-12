@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programming on iriya-ufo&#39;s blog</title>
@@ -143,7 +143,7 @@
       <pubDate>Fri, 27 Jan 2017 16:05:43 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</guid>
-      <description>当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。 エラー内容はこんな感じ。 ## Pushing generated _deploy website</description>
+      <description>当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。 エラー内容はこんな感じ。 1 2 3 4 5</description>
     </item>
     
     <item>
@@ -269,7 +269,7 @@
       <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</guid>
-      <description>今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を</description>
+      <description>今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 1 $ brew install nodebrew PATH</description>
     </item>
     
     <item>
@@ -278,7 +278,7 @@
       <pubDate>Fri, 25 Mar 2016 15:26:45 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/</guid>
-      <description>いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。</description>
+      <description>いい加減不便になってきたので設定した。 1 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。</description>
     </item>
     
     <item>
@@ -314,7 +314,7 @@
       <pubDate>Sat, 10 Oct 2015 21:33:25 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</guid>
-      <description>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &amp;quot;boot2docker-vm&amp;quot;: machine does not</description>
+      <description>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 1 2 3 4 WARNING: The &amp;#39;boot2docker&amp;#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine</description>
     </item>
     
     <item>
@@ -368,7 +368,7 @@
       <pubDate>Tue, 10 Feb 2015 03:42:46 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/</guid>
-      <description>Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCLと Clozure CLです。違いは Wikipediaあたりを参</description>
+      <description>Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと</description>
     </item>
     
     <item>
@@ -395,7 +395,7 @@
       <pubDate>Wed, 17 Dec 2014 21:43:32 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</guid>
-      <description>環境は Mac でやってますが Linux でもほぼ同じです。 インストールから初期設定まで Mac なので brew でインストールします。 $ brew install postgresql 最初にデータベースの初期化をし</description>
+      <description>環境は Mac でやってますが Linux でもほぼ同じです。 インストールから初期設定まで Mac なので brew でインストールします。 1 $ brew install postgresql 最初にデータベースの初期化を</description>
     </item>
     
     <item>
@@ -404,7 +404,7 @@
       <pubDate>Thu, 04 Dec 2014 18:58:13 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</guid>
-      <description>自分のための覚書 編集 :%s/:\(\w\+\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl+v jjjj I # 4行コメントアウト(,#) Ctrl+v jjjj d # 4行コメントイン(,#) Ctrl+v jjjj c aaaa # 4行置換 viwy #</description>
+      <description>自分のための覚書 編集 1 2 3 4 5 6 7 8 9 10 11 :%s/:\(\w\+\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl+v jjjj I # 4行コメントアウト(,#) Ctrl+v jjjj d # 4行コメントイン(,#)</description>
     </item>
     
     <item>
@@ -431,7 +431,7 @@
       <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
-      <description>環境 以下のような環境で動かします。 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作ります。そこで</description>
+      <description>環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま</description>
     </item>
     
     <item>
@@ -440,7 +440,7 @@
       <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
-      <description>Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &amp;lt;unknown&amp;gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ</description>
+      <description>Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 1 &amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#39;MacOSX10.9.sdk&amp;#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk は</description>
     </item>
     
     <item>
@@ -566,7 +566,7 @@
       <pubDate>Wed, 19 Mar 2014 01:11:21 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/</guid>
-      <description>cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。 まずはインストールから $ brew install cmigemo ここから migemo.el をとって</description>
+      <description>cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。 まずはインストールから 1 $ brew install cmigemo ここから migemo.el をとっ</description>
     </item>
     
     <item>
@@ -629,7 +629,7 @@
       <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</guid>
-      <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 ローカ</description>
+      <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の</description>
     </item>
     
     <item>
@@ -647,7 +647,7 @@
       <pubDate>Wed, 30 Oct 2013 03:24:39 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</guid>
-      <description>備忘録のため使い方をまとめます。インストールの仕方は割愛します。 $ brew update # brew を最新にする $ brew outdated # インストール済のパッケージのうち最新のバージョ</description>
+      <description>備忘録のため使い方をまとめます。インストールの仕方は割愛します。 1 2 3 4 5 $ brew update # brew を最新にする $ brew outdated # インストール済のパッケージのうち最新</description>
     </item>
     
     <item>
@@ -665,7 +665,7 @@
       <pubDate>Sat, 19 Oct 2013 20:45:17 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/</guid>
-      <description>Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し</description>
+      <description>Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 1 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備</description>
     </item>
     
     <item>
@@ -674,7 +674,7 @@
       <pubDate>Sat, 19 Oct 2013 19:19:20 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</guid>
-      <description>info の使い方 info は Emacs の中で説明を読むしくみ。 M-x info または C-h i で開始する。 u up 一つ上に戻る d dir 入口に戻る M-x info info を開始する q quit 終了 space とにかく読み進む p</description>
+      <description>info の使い方 info は Emacs の中で説明を読むしくみ。 M-x info または C-h i で開始する。 1 2 3 4 5 6 7 8 9 u up 一つ上に戻る d dir 入口に戻る M-x info info を開始する q quit 終了 space</description>
     </item>
     
     <item>
@@ -701,7 +701,7 @@
       <pubDate>Sat, 19 Oct 2013 18:07:23 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/</guid>
-      <description>Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl+j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (</description>
+      <description>Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 1 load-path [Ctrl+j] 次に ( にカーソルを移動して以下を実行します。 1 2 3 4 M-x query-replace-regexp</description>
     </item>
     
     <item>
@@ -737,7 +737,7 @@
       <pubDate>Sat, 19 Oct 2013 01:06:24 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</guid>
-      <description>下記一行を端末から実行でOK $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh</description>
+      <description>下記一行を端末から実行でOK 1 $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh</description>
     </item>
     
     <item>
@@ -809,7 +809,7 @@
       <pubDate>Sun, 12 May 2013 04:22:10 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/05/12/rails-update/</guid>
-      <description>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11</description>
+      <description>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート 1 2 3 $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート 1 2 3 $ sudo gem update</description>
     </item>
     
     <item>

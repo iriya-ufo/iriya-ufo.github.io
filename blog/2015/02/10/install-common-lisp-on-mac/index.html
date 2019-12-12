@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCLと Clozure CLです。違いは Wikipediaあたりを参" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/" />
@@ -39,22 +39,25 @@
 
 
 <meta property="og:title" content="Mac に Common Lisp 処理系をインストールする" />
-<meta property="og:description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCLと Clozure CLです。違いは Wikipediaあたりを参" />
+<meta property="og:description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/" />
 <meta property="article:published_time" content="2015-02-10T03:42:46+00:00" />
 <meta property="article:modified_time" content="2015-02-10T03:42:46+00:00" />
 <meta itemprop="name" content="Mac に Common Lisp 処理系をインストールする">
-<meta itemprop="description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCLと Clozure CLです。違いは Wikipediaあたりを参">
+<meta itemprop="description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと">
+
+
 <meta itemprop="datePublished" content="2015-02-10T03:42:46&#43;00:00" />
 <meta itemprop="dateModified" content="2015-02-10T03:42:46&#43;00:00" />
-<meta itemprop="wordCount" content="734">
+<meta itemprop="wordCount" content="723">
 
 
 
-<meta itemprop="keywords" content="common lisp," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="common lisp," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac に Common Lisp 処理系をインストールする"/>
-<meta name="twitter:description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCLと Clozure CLです。違いは Wikipediaあたりを参"/>
+<meta name="twitter:description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,42 +139,80 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#sbcl-">SBCL のインストール</a></li>
-    <li><a href="#clozure-cl-">Clozure CL のインストール</a></li>
-    <li><a href="#slime-">SLIME の設定</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#sbcl-のインストール">SBCL のインストール</a></li>
+<li><a href="#clozure-cl-のインストール">Clozure CL のインストール</a></li>
+<li><a href="#slime-の設定">SLIME の設定</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは <!-- raw HTML omitted -->SBCL<!-- raw HTML omitted --> と <!-- raw HTML omitted -->Clozure CL<!-- raw HTML omitted --> です。違いは <!-- raw HTML omitted -->Wikipedia<!-- raw HTML omitted --> あたりを参考にしてもらうといいかと。
+      
+
+<p>Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは <strong>SBCL</strong> と <strong>Clozure CL</strong> です。違いは <a href="http://ja.wikipedia.org/wiki/Common_Lisp" title="Common_Lisp" target="_blank">Wikipedia</a> あたりを参考にしてもらうといいかと。
 簡単に特徴を上げるとすると SBCL はバイトコードへのコンパイルがかなり優秀だがコンパイル速度が遅い、Clozure CL はコンパイルが速くデバッグメッセージなどが分かりやすいけど、バイトコードの速度は SBCL に劣る。といったところでしょうか。
 開発は Clozure CL で本番は SBCL みたいに使い分けるといいかもしれないです。</p>
+
 <p>今回は両方インストールしてみることにします。</p>
-<h2 id="sbcl-">SBCL のインストール</h2>
-<pre><code>$ brew install sbcl
-</code></pre>
+
+<h2 id="sbcl-のインストール">SBCL のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ brew install sbcl</pre></td></tr></table>
+</div>
+</div>
 <p>REPL するときに、ヒストリーの行き来ができないので rlwrap でラップしてあげます。以下を <code>~/.zshrc</code> などに追加します。</p>
-<pre><code>alias sbcl='rlwrap sbcl'
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">alias sbcl=&#39;rlwrap sbcl&#39;</pre></td></tr></table>
+</div>
+</div>
 <p>これで終わりです。後は SLIME などの便利な環境を入れますが、これは Clozure CL でも共通ですので後で書きます。</p>
-<h2 id="clozure-cl-">Clozure CL のインストール</h2>
-<p><!-- raw HTML omitted -->Mac App Store<!-- raw HTML omitted --> から GUI 処理系がダウンロードできるようですが、別に統合開発環境は必要ないので SVN で実行バイナリをダウンロードする形でインストールします。</p>
+
+<h2 id="clozure-cl-のインストール">Clozure CL のインストール</h2>
+
+<p><a href="https://itunes.apple.com/us/app/clozure-cl/id489900618?mt=12" title="MacAppStore" target="_blank">Mac App Store</a> から GUI 処理系がダウンロードできるようですが、別に統合開発環境は必要ないので SVN で実行バイナリをダウンロードする形でインストールします。</p>
+
 <p>インストール方法は公式サイトに準拠します。</p>
+
 <p><a href="http://ccl.clozure.com/download.html">http://ccl.clozure.com/download.html</a></p>
-<pre><code>$ cd /usr/local/
-$ svn co http://svn.clozure.com/publicsvn/openmcl/release/1.10/darwinx86/ccl
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ cd /usr/local/
+$ svn co http://svn.clozure.com/publicsvn/openmcl/release/1.10/darwinx86/ccl</pre></td></tr></table>
+</div>
+</div>
 <p>これで <code>/usr/local/ccl</code> 配下に実行バイナリがダウンロードできました。ccl の中にある dx86cl64 というのが 64 bit 版の処理系です。</p>
+
 <p>SBCL 同様 rlwrap でラップします。以下を <code>~/.zshrc</code> などに追加します。</p>
-<pre><code>alias ccl='rlwrap /usr/local/ccl/dx86cl64'
-</code></pre>
-<h2 id="slime-">SLIME の設定</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">alias ccl=&#39;rlwrap /usr/local/ccl/dx86cl64&#39;</pre></td></tr></table>
+</div>
+</div>
+<h2 id="slime-の設定">SLIME の設定</h2>
+
 <p>Common Lisp を使う人はみなさん Emacs 使ってると思うので、SLIME いれましょう。24 以降の Emacs だとパッケージからインストールできます。補完を便利にするため ac-slime もいれます。後は <code>.emacs</code> に以下を追記します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -193,15 +234,15 @@ $ svn co http://svn.clozure.com/publicsvn/openmcl/release/1.10/darwinx86/ccl
 <span class="p">(</span><span class="k">setq</span> <span class="nv">inferior-lisp-program</span> <span class="s">&#34;/usr/local/ccl/dx86cl64&#34;</span><span class="p">)</span>
 <span class="c1">;; slime の設定</span>
 <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;slime</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">slime-setup</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">slime-repl</span> <span class="nv">slime-fancy</span> <span class="nv">slime-banner</span> <span class="nv">slime-indentation</span><span class="p">)</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">slime-setup</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">slime-repl</span> <span class="nv">slime-fancy</span> <span class="nv">slime-banner</span> <span class="nv">slime-indentation</span><span class="p">))</span>
 <span class="p">(</span><span class="k">setq</span> <span class="nv">slime-net-coding-system</span> <span class="ss">&#39;utf-8-unix</span><span class="p">)</span>
 <span class="c1">;; slime の補完</span>
 <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;ac-slime</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-repl-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-repl-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span></code></pre></td></tr></table>
 </div>
-</div><p>Emacs で開発するときは <code>M-x slime</code> として REPL を立ち上げて開発をしていきます。</p>
+</div>
+<p>Emacs で開発するときは <code>M-x slime</code> として REPL を立ち上げて開発をしていきます。</p>
 
     </div>
 

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2016-07-31T14:11:03+09:00" />
 <meta itemprop="name" content="Docker for Mac を使う">
 <meta itemprop="description" content="『Mac に Docker 環境を構築する』を書いてしばらくしたら boot2docker が非推奨となって『Docker-machine で Mac に Docker 環境を構築する』を書いたら今度は Docker">
+
+
 <meta itemprop="datePublished" content="2016-07-31T14:11:03&#43;09:00" />
 <meta itemprop="dateModified" content="2016-07-31T14:11:03&#43;09:00" />
 <meta itemprop="wordCount" content="771">
 
 
 
-<meta itemprop="keywords" content="docker," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="docker," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Docker for Mac を使う"/>
 <meta name="twitter:description" content="『Mac に Docker 環境を構築する』を書いてしばらくしたら boot2docker が非推奨となって『Docker-machine で Mac に Docker 環境を構築する』を書いたら今度は Docker"/>
 
@@ -136,56 +139,76 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">概要</a>
-      <ul>
-        <li><a href="#docker-toolbox">Docker Toolbox</a></li>
-        <li><a href="#docker-for-mac">Docker for Mac</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading1">設定</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#概要">概要</a>
+<ul>
+<li><a href="#docker-toolbox">Docker Toolbox</a></li>
+<li><a href="#docker-for-mac">Docker for Mac</a></li>
+</ul></li>
+<li><a href="#設定">設定</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p><a href="/blog/2015/07/20/docker-on-mac/">『Mac に Docker 環境を構築する』</a>を書いてしばらくしたら <code>boot2docker</code> が非推奨となって<a href="/blog/2015/10/10/docker-machine-on-mac/">『Docker-machine で Mac に Docker 環境を構築する』</a>を書いたら今度は <a href="https://docs.docker.com/docker-for-mac/">Docker for Mac</a> がナウいとかなって今回の記事に至ります。仮想環境は変化が速くていろいろ大変です。</p>
+      
+
+<p><a href="/blog/2015/07/20/docker-on-mac/">『Mac に Docker 環境を構築する』</a>を書いてしばらくしたら <code>boot2docker</code> が非推奨となって<a href="/blog/2015/10/10/docker-machine-on-mac/">『Docker-machine で Mac に Docker 環境を構築する』</a>を書いたら今度は <a href="https://docs.docker.com/docker-for-mac/">Docker for Mac</a> がナウいとかなって今回の記事に至ります。仮想環境は変化が速くていろいろ大変です。</p>
+
 <p>Docker for Mac はネイティブに動作する Docker 環境らしく先日β版から正式公開となったようです。Docker が Linux カーネル上で動作するのにネイティブってどういう意味や？と思ってましたが、どうやら VirtualBox のようなホスト型仮想環境ではなく Mac OS X 組み込みのハイパーバイザー型の HyperKit を使って仮想環境を作るから速いらしいとのことでした。ネットワーク周りに面倒ごともなさそうなので今から環境作るなら Docker for Mac 一択かなという感じがします。</p>
-<h2 id="heading">概要</h2>
+
+<h2 id="概要">概要</h2>
+
 <p>初めてインストールする場合は <a href="https://docs.docker.com/docker-for-mac/">Docker for Mac</a> にしたがっていけばすぐに終わります。
 Docker Toolbox などを使っていた場合は移行が必要です。僕は brew で各種コマンドをインストールして使っていました。</p>
+
 <p>基本的な差異はここに丁寧にまとめられています。</p>
+
 <ul>
 <li><a href="https://docs.docker.com/docker-for-mac/docker-toolbox/">https://docs.docker.com/docker-for-mac/docker-toolbox/</a></li>
 </ul>
+
 <p>簡単にポイントだけ抜き出して書くと</p>
+
 <h3 id="docker-toolbox">Docker Toolbox</h3>
+
 <ul>
 <li>Docker Toolbox は各種 docker コマンドが <code>/usr/local/bin</code> に入る</li>
 <li>証明書とかの情報は <code>$HOME/.docker/machine/machines/default</code> に入る</li>
 <li><code>eval $(docker-machine env default)</code> で環境変数をロードする</li>
 </ul>
+
 <h3 id="docker-for-mac">Docker for Mac</h3>
+
 <ul>
 <li><code>/Applications</code> にアプリがインストールされる</li>
 <li>各種コマンドは <code>/usr/local/bin</code> に symlink が貼られる</li>
 <li>実体は <code>/Applications/Docker.app/Contents/Resources/bin</code></li>
 </ul>
+
 <p>さらに Docker for Mac の特徴として以下があります。</p>
+
 <ul>
 <li>VirtualBox ではなく HyperKit を使う</li>
 <li>docker-machine で作成したものには影響を与えない</li>
 <li>Docker for Mac のインストール時に <code>default</code> イメージやコンテナに関してはローカルにあるものからコピーされオリジナルは維持する</li>
 <li><code>/var/tmp/docker.sock</code> ソケットを使ってやり取りするから環境変数とかいらない</li>
 </ul>
-<h2 id="heading1">設定</h2>
+
+<h2 id="設定">設定</h2>
+
 <p>以上を踏まえると以下の手順でよさそうです。</p>
+
 <ul>
 <li>VirtualBox はそのままでもアンインストールしてもいい</li>
 <li><code>.zsh</code> などに書いた環境変数設定は <code>unset</code> する</li>
 <li>brew でいれた docker ツール群はアンインストールする</li>
 <li>Docker for Mac をインストールする</li>
 </ul>
+
 <p>また Docker Toolbox が使いたくなったときは環境変数をセットするだけで良さそうです。</p>
 
     </div>

@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 1 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/" />
@@ -39,22 +39,25 @@
 
 
 <meta property="og:title" content="Gauche で rlwrap を使う" />
-<meta property="og:description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し" />
+<meta property="og:description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 1 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/" />
 <meta property="article:published_time" content="2013-10-19T20:45:17+00:00" />
 <meta property="article:modified_time" content="2013-10-19T20:45:17+00:00" />
 <meta itemprop="name" content="Gauche で rlwrap を使う">
-<meta itemprop="description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し">
+<meta itemprop="description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 1 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備">
+
+
 <meta itemprop="datePublished" content="2013-10-19T20:45:17&#43;00:00" />
 <meta itemprop="dateModified" content="2013-10-19T20:45:17&#43;00:00" />
-<meta itemprop="wordCount" content="469">
+<meta itemprop="wordCount" content="473">
 
 
 
-<meta itemprop="keywords" content="gauche," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="gauche," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Gauche で rlwrap を使う"/>
-<meta name="twitter:description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し"/>
+<meta name="twitter:description" content="Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 1 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -136,30 +139,48 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#heading">参照</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#参照">参照</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>Gauche で開発をするなら rlwrap は外せませんね。
+      
+
+<p>Gauche で開発をするなら rlwrap は外せませんね。
 ということで早速インストールしてみましょう。</p>
+
 <p>端末から以下を実行します。</p>
-<pre><code>$ sudo apt-get install rlwrap
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo apt-get install rlwrap</pre></td></tr></table>
+</div>
+</div>
 <p>Gauche の補完ファイルを準備します。</p>
-<pre><code>$ mkdir ~/.rlwrap
-$ touch ~/.rlwrap/gosh_completions
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ mkdir ~/.rlwrap
+$ touch ~/.rlwrap/gosh_completions</pre></td></tr></table>
+</div>
+</div>
 <p>以下の内容を先程の <code>gosh_completions</code> に保存します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -256,23 +277,30 @@ $ touch ~/.rlwrap/gosh_completions
   <span class="p">(</span><span class="nv">define</span> <span class="p">(</span><span class="nv">register</span> <span class="nv">lister</span> <span class="nv">modules</span><span class="p">)</span>
     <span class="p">(</span><span class="nv">for-each</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nf">mod</span><span class="p">)</span>
                 <span class="p">(</span><span class="nv">for-each</span> <span class="p">(</span><span class="nv">cut</span> <span class="nv">hash-table-put!</span> <span class="nv">ht</span> <span class="nv">&lt;&gt;</span> <span class="err">#</span><span class="no">t</span><span class="p">)</span>
-                          <span class="p">(</span><span class="nv">lister</span> <span class="nf">mod</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
-              <span class="nv">modules</span><span class="p">)</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">define</span> <span class="nv">ht</span> <span class="p">(</span><span class="nf">make-hash-table</span><span class="p">)</span><span class="p">)</span>
+                          <span class="p">(</span><span class="nv">lister</span> <span class="nf">mod</span><span class="p">)))</span>
+              <span class="nv">modules</span><span class="p">))</span>
+  <span class="p">(</span><span class="nv">define</span> <span class="nv">ht</span> <span class="p">(</span><span class="nf">make-hash-table</span><span class="p">))</span>
   <span class="p">(</span><span class="nv">register</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nf">mod</span><span class="p">)</span>
-              <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="p">(</span><span class="nv">module-table</span> <span class="nf">mod</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
-            <span class="p">(</span><span class="nv">module-precedence-list</span> <span class="p">(</span><span class="nv">current-module</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+              <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="p">(</span><span class="nv">module-table</span> <span class="nf">mod</span><span class="p">)))</span>
+            <span class="p">(</span><span class="nv">module-precedence-list</span> <span class="p">(</span><span class="nv">current-module</span><span class="p">)))</span>
   <span class="p">(</span><span class="nv">register</span> <span class="nv">module-exports</span>
-            <span class="p">(</span><span class="nv">all-modules</span><span class="p">)</span><span class="p">)</span>
+            <span class="p">(</span><span class="nv">all-modules</span><span class="p">))</span>
   <span class="p">(</span><span class="nv">for-each</span> <span class="nf">print</span>
-            <span class="p">(</span><span class="nf">sort</span> <span class="p">(</span><span class="nf">map</span> <span class="nv">symbol-&gt;string</span> <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="nv">ht</span><span class="p">)</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
-  <span class="mi">0</span><span class="p">)</span>
-</code></pre></td></tr></table>
+            <span class="p">(</span><span class="nf">sort</span> <span class="p">(</span><span class="nf">map</span> <span class="nv">symbol-&gt;string</span> <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="nv">ht</span><span class="p">))))</span>
+  <span class="mi">0</span><span class="p">)</span></code></pre></td></tr></table>
 </div>
-</div><p><code>.zshrc</code> に以下を追加します。</p>
-<pre><code>alias gosh=&quot;rlwrap -b '(){}[],#;| ' gosh&quot;
-</code></pre>
-<h3 id="heading">参照</h3>
+</div>
+<p><code>.zshrc</code> に以下を追加します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">alias gosh=&#34;rlwrap -b &#39;(){}[],#;| &#39; gosh&#34;</pre></td></tr></table>
+</div>
+</div>
+<h3 id="参照">参照</h3>
+
 <ul>
 <li><a href="http://d.hatena.ne.jp/rui314/20070604/p1">http://d.hatena.ne.jp/rui314/20070604/p1</a></li>
 </ul>

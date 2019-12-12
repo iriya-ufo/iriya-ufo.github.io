@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2019-12-08T01:36:06+09:00" />
 <meta itemprop="name" content="VSCode に Go の開発環境を整える">
 <meta itemprop="description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $">
+
+
 <meta itemprop="datePublished" content="2019-12-08T01:36:06&#43;09:00" />
 <meta itemprop="dateModified" content="2019-12-08T01:36:06&#43;09:00" />
 <meta itemprop="wordCount" content="559">
 
 
 
-<meta itemprop="keywords" content="go,vscode," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="go,vscode," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VSCode に Go の開発環境を整える"/>
 <meta name="twitter:description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $"/>
 
@@ -136,30 +139,36 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#go-">Go のインストール</a></li>
-    <li><a href="#repl-">REPL のインストール</a></li>
-    <li><a href="#go-package-">Go Package のインストール</a></li>
-    <li><a href="#heading">補完ツールのインストール</a>
-      <ul>
-        <li><a href="#gopls-">gopls をインストール</a></li>
-        <li><a href="#vscode--go-">VSCode に Go のプラグインをインストール</a></li>
-        <li><a href="#settingsjson-">settings.json の設定</a></li>
-      </ul>
-    </li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#go-のインストール">Go のインストール</a></li>
+<li><a href="#repl-のインストール">REPL のインストール</a></li>
+<li><a href="#go-package-のインストール">Go Package のインストール</a></li>
+<li><a href="#補完ツールのインストール">補完ツールのインストール</a>
+<ul>
+<li><a href="#gopls-をインストール">gopls をインストール</a></li>
+<li><a href="#vscode-に-go-のプラグインをインストール">VSCode に Go のプラグインをインストール</a></li>
+<li><a href="#settings-json-の設定">settings.json の設定</a></li>
+</ul></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>Mac で Go をサクッとはじめるための手引書</p>
+      
+
+<p>Mac で Go をサクッとはじめるための手引書</p>
+
 <ul>
 <li><a href="/blog/2019/02/15/go-setup-on-emacs/">Emacs の場合はこちら</a></li>
 </ul>
-<h2 id="go-">Go のインストール</h2>
+
+<h2 id="go-のインストール">Go のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -176,24 +185,24 @@
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
 
 <span class="c1"># Install</span>
-brew install go
-</code></pre></td></tr></table>
+brew install go</code></pre></td></tr></table>
 </div>
-</div><p>バージョン確認</p>
+</div>
+<p>バージョン確認</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ go version
-go version go1.13.4 darwin/amd64
-</code></pre></td></tr></table>
+go version go1.13.4 darwin/amd64</code></pre></td></tr></table>
 </div>
-</div><h2 id="repl-">REPL のインストール</h2>
+</div>
+<h2 id="repl-のインストール">REPL のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -206,17 +215,17 @@ go version go1.13.4 darwin/amd64
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>off go get -u github.com/motemen/gore/cmd/gore
 
 $ gore <span class="c1"># 確認</span>
-gore version 0.4.1  :help <span class="k">for</span> <span class="nb">help</span>
+gore version <span class="m">0</span>.4.1  :help <span class="k">for</span> <span class="nb">help</span>
 gore&gt; fmt.Println<span class="o">(</span><span class="s2">&#34;hello&#34;</span><span class="o">)</span>
 hello
 <span class="m">6</span>
-&lt;nil&gt;
-</code></pre></td></tr></table>
+&lt;nil&gt;</code></pre></td></tr></table>
 </div>
-</div><h2 id="go-package-">Go Package のインストール</h2>
+</div>
+<h2 id="go-package-のインストール">Go Package のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -233,38 +242,49 @@ $ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get github.co
 $ go get -u golang.org/x/lint/golint
 
 <span class="c1"># errcheck is a program for checking for unchecked errors in go programs.</span>
-$ go get -u github.com/kisielk/errcheck
-</code></pre></td></tr></table>
+$ go get -u github.com/kisielk/errcheck</code></pre></td></tr></table>
 </div>
-</div><h2 id="heading">補完ツールのインストール</h2>
+</div>
+<h2 id="補完ツールのインストール">補完ツールのインストール</h2>
+
 <p>補完については <code>gocode</code> を <code>go get</code> してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。</p>
+
 <ul>
 <li><a href="https://mattn.kaoriya.net/software/lang/go/20181217000056.htm">gocode やめます(そして Language Server へ)</a></li>
 </ul>
+
 <p>またこの記事では bingo と golsp について言及しているが、これもまた事情が変わって今は gopls に一本化する方向に向かっている。
 こちらの記事が詳しい。</p>
+
 <ul>
 <li><a href="https://qiita.com/ochipin/items/cae787d75ae91247c722">Golang開発環境を作成する(module対応) - Ubuntu16.04/VSCode</a></li>
 </ul>
+
 <p>それらを踏まえて設定していく。</p>
-<h3 id="gopls-">gopls をインストール</h3>
+
+<h3 id="gopls-をインストール">gopls をインストール</h3>
+
 <p>Language Server の <code>gopls</code> をインストールする。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get golang.org/x/tools/gopls@latest
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get golang.org/x/tools/gopls@latest</code></pre></td></tr></table>
 </div>
-</div><p>(cf. <a href="https://github.com/golang/tools/blob/master/gopls/doc/user.md">https://github.com/golang/tools/blob/master/gopls/doc/user.md</a>)</p>
-<h3 id="vscode--go-">VSCode に Go のプラグインをインストール</h3>
+</div>
+<p>(cf. <a href="https://github.com/golang/tools/blob/master/gopls/doc/user.md">https://github.com/golang/tools/blob/master/gopls/doc/user.md</a>)</p>
+
+<h3 id="vscode-に-go-のプラグインをインストール">VSCode に Go のプラグインをインストール</h3>
+
 <p><a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode.Go">こちら</a>の Go のプラグインをインストールする。</p>
-<h3 id="settingsjson-">settings.json の設定</h3>
+
+<h3 id="settings-json-の設定">settings.json の設定</h3>
+
 <p>こんな感じで <code>settings.json</code> に追記して VSCode を再起動する。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code class="language-json" data-lang="json"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -300,7 +320,7 @@ $ go get -u github.com/kisielk/errcheck
     <span class="nt">&#34;go.useLanguageServer&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&#34;go.alternateTools&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;go-langserver&#34;</span><span class="p">:</span> <span class="s2">&#34;gopls&#34;</span>
-    <span class="p">}</span><span class="p">,</span>
+    <span class="p">},</span>
     <span class="nt">&#34;go.languageServerExperimentalFeatures&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;format&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&#34;autoComplete&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -314,21 +334,21 @@ $ go get -u github.com/kisielk/errcheck
         <span class="nt">&#34;workspaceSymbols&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&#34;findReferences&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&#34;diagnostics&#34;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">}</span><span class="p">,</span>
+    <span class="p">},</span>
     <span class="nt">&#34;[go]&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;editor.snippetSuggestions&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
         <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
             <span class="nt">&#34;source.organizeImports&#34;</span><span class="p">:</span> <span class="kc">true</span>
-        <span class="p">}</span><span class="p">,</span>
-    <span class="p">}</span><span class="p">,</span>
+        <span class="p">},</span>
+    <span class="p">},</span>
     <span class="nt">&#34;gopls&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;usePlaceholders&#34;</span><span class="p">:</span> <span class="kc">false</span>
     <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<span class="p">}</span></code></pre></td></tr></table>
 </div>
-</div><p>以上で補完が効くようになった。</p>
+</div>
+<p>以上で補完が効くようになった。</p>
 
     </div>
 

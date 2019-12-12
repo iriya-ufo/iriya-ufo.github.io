@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>emacs on iriya-ufo&#39;s blog</title>
@@ -62,7 +62,7 @@
       <pubDate>Wed, 19 Mar 2014 01:11:21 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/</guid>
-      <description>cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。 まずはインストールから $ brew install cmigemo ここから migemo.el をとって</description>
+      <description>cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。 まずはインストールから 1 $ brew install cmigemo ここから migemo.el をとっ</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Sat, 19 Oct 2013 19:19:20 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</guid>
-      <description>info の使い方 info は Emacs の中で説明を読むしくみ。 M-x info または C-h i で開始する。 u up 一つ上に戻る d dir 入口に戻る M-x info info を開始する q quit 終了 space とにかく読み進む p</description>
+      <description>info の使い方 info は Emacs の中で説明を読むしくみ。 M-x info または C-h i で開始する。 1 2 3 4 5 6 7 8 9 u up 一つ上に戻る d dir 入口に戻る M-x info info を開始する q quit 終了 space</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Sat, 19 Oct 2013 18:07:23 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/</guid>
-      <description>Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl+j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (</description>
+      <description>Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 1 load-path [Ctrl+j] 次に ( にカーソルを移動して以下を実行します。 1 2 3 4 M-x query-replace-regexp</description>
     </item>
     
     <item>

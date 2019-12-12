@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/03/08/start-nodejs-at-weekend/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2014-03-08T17:29:27+00:00" />
 <meta itemprop="name" content="土日で出来る Node.js 入門">
 <meta itemprop="description" content="そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。 インストール方法 Node.js はまだまだ開発まっし">
+
+
 <meta itemprop="datePublished" content="2014-03-08T17:29:27&#43;00:00" />
 <meta itemprop="dateModified" content="2014-03-08T17:29:27&#43;00:00" />
-<meta itemprop="wordCount" content="415">
+<meta itemprop="wordCount" content="510">
 
 
 
-<meta itemprop="keywords" content="heroku,nodejs," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="heroku,nodejs," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="土日で出来る Node.js 入門"/>
 <meta name="twitter:description" content="そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。 インストール方法 Node.js はまだまだ開発まっし"/>
 
@@ -136,53 +139,115 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">インストール方法</a>
-      <ul>
-        <li><a href="#heading1">準備</a></li>
-        <li><a href="#nvm-">nvm のインストール</a></li>
-        <li><a href="#node-">node のインストール</a></li>
-        <li><a href="#heading2">シェルの設定</a></li>
-      </ul>
-    </li>
-    <li><a href="#heading3">インストールが終わったら</a></li>
-    <li><a href="#heading4">参考サイト</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#インストール方法">インストール方法</a>
+<ul>
+<li><a href="#準備">準備</a></li>
+<li><a href="#nvm-のインストール">nvm のインストール</a></li>
+<li><a href="#node-のインストール">node のインストール</a></li>
+<li><a href="#シェルの設定">シェルの設定</a></li>
+</ul></li>
+<li><a href="#インストールが終わったら">インストールが終わったら</a></li>
+<li><a href="#参考サイト">参考サイト</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。</p>
-<h2 id="heading">インストール方法</h2>
+      
+
+<p>そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。</p>
+
+<h2 id="インストール方法">インストール方法</h2>
+
 <p>Node.js はまだまだ開発まっしぐらなのですぐにバージョンが古くなります。調べたところバージョン管理してくれる nvm (Node Version Manager) というのがあるらしいのでそれを使いましょう。</p>
-<h3 id="heading1">準備</h3>
+
+<h3 id="準備">準備</h3>
+
 <p>もう入ってるなら必要ないです。</p>
-<pre><code>$ sudo apt-get install build-essential libssl-dev curl
-</code></pre>
-<h3 id="nvm-">nvm のインストール</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo apt-get install build-essential libssl-dev curl</pre></td></tr></table>
+</div>
+</div>
+<h3 id="nvm-のインストール">nvm のインストール</h3>
+
 <p>nvm をインストールします。</p>
-<pre><code>$ git clone git://github.com/creationix/nvm.git ~/.nvm
-$ source ~/.nvm/nvm.sh
-</code></pre>
-<h3 id="node-">node のインストール</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ git clone git://github.com/creationix/nvm.git ~/.nvm
+$ source ~/.nvm/nvm.sh</pre></td></tr></table>
+</div>
+</div>
+<h3 id="node-のインストール">node のインストール</h3>
+
 <p>node.js をインストールします。</p>
-<pre><code>$ nvm ls-remote # インストールできるバージョンを確認  
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ nvm ls-remote # インストールできるバージョンを確認  
 $ nvm install 0.11 # 好きなものをインストール(最新がいい)
 $ nvm use 0.11
 $ nvm ls # 使っているバージョンの確認
 $ node -v # 確認
-$ npm -v # npm も確認
-</code></pre>
-<h3 id="heading2">シェルの設定</h3>
+$ npm -v # npm も確認</pre></td></tr></table>
+</div>
+</div>
+<h3 id="シェルの設定">シェルの設定</h3>
+
 <p>ログアウトなどすると nvm が使えないのでシェルの設定ファイルに以下を追記します。</p>
-<pre><code>source ~/.nvm/nvm.sh
-nvm use 0.11 &gt;/dev/null
-</code></pre>
-<h2 id="heading3">インストールが終わったら</h2>
-<p>以下のリンク先を参考に遊んでみましょう。Heroku のデプロイまですごく簡単に行えました。Ruby on Rails より簡単だったなぁ。</p>
-<!-- raw HTML omitted -->
-<h2 id="heading4">参考サイト</h2>
-<!-- raw HTML omitted -->
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">source ~/.nvm/nvm.sh
+nvm use 0.11 &gt;/dev/null</pre></td></tr></table>
+</div>
+</div>
+<h2 id="インストールが終わったら">インストールが終わったら</h2>
+
+<p>以下のリンク先を参考に遊んでみましょう。Heroku のデプロイまですごく簡単に行えました。Ruby on Rails より簡単だったなぁ。
+<ul>
+  <li>
+    <a href="http://libro.tuyano.com/index2?id=1115003" title="ビギナーのための Node.jsプログラミング入門" target="_blank">ビギナーのための Node.jsプログラミング入門</a>
+  </li>
+  <li>
+    <a href="http://dotinstall.com/lessons/basic_nodejs" title="Node.js入門 @ ドットインストール" target="_blank">Node.js入門 @ ドットインストール</a>
+  </li>
+</ul></p>
+
+<h2 id="参考サイト">参考サイト</h2>
+
+<ul>
+  <li>
+    <a href="http://mollifier.hatenablog.com/entry/20110221/p1" title="Node.jsとnvmを初めてインストールするときのハマりポイントと対策" target="_blank">Node.jsとnvmを初めてインストールするときのハマりポイントと対策</a>
+  </li>
+  <li>
+    <a href="https://github.com/creationix/nvm" title="Github nvm" target="_blank">Github NVM</a>
+  </li>
+  <li>
+    <a href="https://devcenter.heroku.com/articles/nodejs-support" title="Heroku Node.js Support" target="_blank">Heroku Node.js Support</a>
+  </li>
+</ul>
 
     </div>
 

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>heroku on iriya-ufo&#39;s blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
-      <description>環境 以下のような環境で動かします。 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作ります。そこで</description>
+      <description>環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</guid>
-      <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 ローカ</description>
+      <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Sat, 19 Oct 2013 01:06:24 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</guid>
-      <description>下記一行を端末から実行でOK $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh</description>
+      <description>下記一行を端末から実行でOK 1 $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh</description>
     </item>
     
     <item>

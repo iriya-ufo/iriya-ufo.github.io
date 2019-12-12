@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>homebrew on iriya-ufo&#39;s blog</title>
@@ -35,7 +35,7 @@
       <pubDate>Wed, 30 Oct 2013 03:24:39 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</guid>
-      <description>備忘録のため使い方をまとめます。インストールの仕方は割愛します。 $ brew update # brew を最新にする $ brew outdated # インストール済のパッケージのうち最新のバージョ</description>
+      <description>備忘録のため使い方をまとめます。インストールの仕方は割愛します。 1 2 3 4 5 $ brew update # brew を最新にする $ brew outdated # インストール済のパッケージのうち最新</description>
     </item>
     
     <item>

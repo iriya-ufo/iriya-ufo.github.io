@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>nodejs on iriya-ufo&#39;s blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</guid>
-      <description>今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を</description>
+      <description>今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 1 $ brew install nodebrew PATH</description>
     </item>
     
     <item>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2013-07-13T15:43:18+00:00" />
 <meta itemprop="name" content="Emacs 使いが Sublime Text 2 を練習してみた">
 <meta itemprop="description" content="知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema">
+
+
 <meta itemprop="datePublished" content="2013-07-13T15:43:18&#43;00:00" />
 <meta itemprop="dateModified" content="2013-07-13T15:43:18&#43;00:00" />
-<meta itemprop="wordCount" content="877">
+<meta itemprop="wordCount" content="881">
 
 
 
-<meta itemprop="keywords" content="emacs,sublime text," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="emacs,sublime text," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs 使いが Sublime Text 2 を練習してみた"/>
 <meta name="twitter:description" content="知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema"/>
 
@@ -136,47 +139,73 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#ubuntu--sublime-text-">Ubuntu に Sublime Text をインストール</a></li>
-    <li><a href="#emacs">Emacsキーバインドに変更</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#ubuntu-に-sublime-text-をインストール">Ubuntu に Sublime Text をインストール</a></li>
+<li><a href="#emacsキーバインドに変更">Emacsキーバインドに変更</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。
+      
+
+<p>知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。
 普段は Emacs 使ってる私ですが、結論から言いますと、Emacs から Sublime Text への移行は無理です！</p>
+
 <p>理由は単純明快です。今までずっと使ってきた Emacs の資産を捨てられなかったからです。
 まず手に馴染んでいないキーバインドは作業効率を著しくさげてしまいます。幸い Sublemacspro というパッケージを導入することで Emacs のキーバインドに変更することができました。
 しかし ESC や Meta に相当するものがないので困りました。</p>
+
 <p>まぁキーバインドはいいとして、問題は今まで使ってきた <code>.elisp</code> の資産を引き継げないということでした。
 そもそも Sublime Text 使うんだから今までの Emacs は捨てるべきなんですよね。移行とかいう考えがおかしい。でもそれが私にはできなかった。</p>
+
 <p>確かに Sublime Text はすばらしいエディターです。カスタマイズは柔軟にできるし、デフォルトの機能だけでもすごく充実してるものがたくさんあります。
 マルチカーソルとかいう変態機能、なんですか、あれ。びっくりです。</p>
+
 <p>もし、これからプログラムを始めるという人でエディターで迷ってるなら、Sublime Text はあなたの能力を引き上げる強力な味方になるでしょう。</p>
+
 <p>老害の私は Emacs と共にしんでいきます。</p>
-<h2 id="ubuntu--sublime-text-">Ubuntu に Sublime Text をインストール</h2>
+
+<h2 id="ubuntu-に-sublime-text-をインストール">Ubuntu に Sublime Text をインストール</h2>
+
 <p>一応、備忘録としてインストール方法を書き残しておきます。
 ソースからインストールする方法もありますが、Ubuntu だと以下のようにしてPPAでインストールするのが楽ですね。</p>
-<pre><code>$ sudo add-apt-repository ppa:webupd8team/sublime-text-2
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo add-apt-repository ppa:webupd8team/sublime-text-2
 $ sudo apt-get update
-$ sudo apt-get install sublime-text
-</code></pre>
+$ sudo apt-get install sublime-text</pre></td></tr></table>
+</div>
+</div>
 <p>後はドットインストールの動画とか見ながら練習するといいですね。</p>
-<h2 id="emacs">Emacsキーバインドに変更</h2>
+
+<h2 id="emacsキーバインドに変更">Emacsキーバインドに変更</h2>
+
 <p>Sublime Text のキーバインドを Emacs 風に変更します。</p>
+
 <p>メニューバー View → Show Console でコンソールを表示します。</p>
+
 <p>以下のコードをコンソールに入力して Enter キー押下します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib2</span><span class="o">,</span><span class="nn">os</span><span class="p">;</span> <span class="n">pf</span><span class="o">=</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">Package Control.sublime-package</span><span class="s1">&#39;</span><span class="p">;</span> <span class="n">ipp</span><span class="o">=</span><span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">(</span><span class="p">)</span><span class="p">;</span> <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">else</span> <span class="bp">None</span><span class="p">;</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">)</span><span class="p">;</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ipp</span><span class="p">,</span><span class="n">pf</span><span class="p">)</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">wb</span><span class="s1">&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">http://sublime.wbond.net/</span><span class="s1">&#39;</span><span class="o">+</span><span class="n">pf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1"> </span><span class="s1">&#39;</span><span class="p">,</span><span class="sa"></span><span class="s1">&#39;</span><span class="s1">%</span><span class="s1">20</span><span class="s1">&#39;</span><span class="p">)</span><span class="p">)</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="p">)</span><span class="p">)</span><span class="p">;</span> <span class="k">print</span> <span class="sa"></span><span class="s1">&#39;</span><span class="s1">Please restart Sublime Text to finish installation</span><span class="s1">&#39;</span>
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib2</span><span class="o">,</span><span class="nn">os</span><span class="p">;</span> <span class="n">pf</span><span class="o">=</span><span class="s1">&#39;Package Control.sublime-package&#39;</span><span class="p">;</span> <span class="n">ipp</span><span class="o">=</span><span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">();</span> <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">else</span> <span class="bp">None</span><span class="p">;</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">()));</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ipp</span><span class="p">,</span><span class="n">pf</span><span class="p">),</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://sublime.wbond.net/&#39;</span><span class="o">+</span><span class="n">pf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;%20&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">());</span> <span class="k">print</span> <span class="s1">&#39;Please restart Sublime Text to finish installation&#39;</span></code></pre></td></tr></table>
 </div>
-</div><p>再起動を促すメッセージが表示されるので Sublime Text を再起動します。これで Package Control が有効になります。</p>
+</div>
+<p>再起動を促すメッセージが表示されるので Sublime Text を再起動します。これで Package Control が有効になります。</p>
+
 <p>そして以下の手順を踏めば Emacs キーバインドが有効になるかと思います。</p>
+
 <ul>
 <li>ctrl+shift+p でコマンドパレットを表示</li>
 <li>Package Control: Install Package を選択</li>

@@ -16,14 +16,14 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="Naoto Inoue" /><meta name="description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 1 $ brew install nodebrew PATH" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/" />
@@ -39,22 +39,25 @@
 
 
 <meta property="og:title" content="Mac に Node.js インストールした" />
-<meta property="og:description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を" />
+<meta property="og:description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 1 $ brew install nodebrew PATH" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/" />
 <meta property="article:published_time" content="2016-04-07T22:54:11+00:00" />
 <meta property="article:modified_time" content="2016-04-07T22:54:11+00:00" />
 <meta itemprop="name" content="Mac に Node.js インストールした">
-<meta itemprop="description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を">
+<meta itemprop="description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 1 $ brew install nodebrew PATH">
+
+
 <meta itemprop="datePublished" content="2016-04-07T22:54:11&#43;00:00" />
 <meta itemprop="dateModified" content="2016-04-07T22:54:11&#43;00:00" />
-<meta itemprop="wordCount" content="160">
+<meta itemprop="wordCount" content="166">
 
 
 
-<meta itemprop="keywords" content="nodejs," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="nodejs," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac に Node.js インストールした"/>
-<meta name="twitter:description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を"/>
+<meta name="twitter:description" content="今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 1 $ brew install nodebrew PATH"/>
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -135,29 +138,61 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    
   </div>
 </div>
     <div class="post-content">
       <p>今更すぎるけどいれた。</p>
-<p>まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。</p>
-<pre><code>$ brew install nodebrew
-</code></pre>
-<p>PATH を <code>.zshrc</code> に追加</p>
-<pre><code>export PATH=$HOME/.nodebrew/current/bin:$PATH
-</code></pre>
-<p>ディレクトリを作成</p>
-<pre><code>$ mkdir -p ~/.nodebrew/src
-</code></pre>
-<p>Node.js のインストール(安定版)</p>
-<pre><code>$ nodebrew install-binary stable
-$ nodebrew use stable
-</code></pre>
-<p>以上です。</p>
-<p>ちなみにパッケージのインストールは以下のようにします。</p>
-<pre><code>$ npm install bower -g # -g はグローバルオプション
-</code></pre>
 
+<p>まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ brew install nodebrew</pre></td></tr></table>
+</div>
+</div>
+<p>PATH を <code>.zshrc</code> に追加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">export PATH=$HOME/.nodebrew/current/bin:$PATH</pre></td></tr></table>
+</div>
+</div>
+<p>ディレクトリを作成</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ mkdir -p ~/.nodebrew/src</pre></td></tr></table>
+</div>
+</div>
+<p>Node.js のインストール(安定版)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ nodebrew install-binary stable
+$ nodebrew use stable</pre></td></tr></table>
+</div>
+</div>
+<p>以上です。</p>
+
+<p>ちなみにパッケージのインストールは以下のようにします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ npm install bower -g # -g はグローバルオプション</pre></td></tr></table>
+</div>
+</div>
     </div>
 
     <div class="post-copyright">

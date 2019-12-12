@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/01/16/percol-to-fzf/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2019-01-16T13:51:53+09:00" />
 <meta itemprop="name" content="percol から fzf に移行した">
 <meta itemprop="description" content="新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。 直そうと思って調べてみるとどうやら">
+
+
 <meta itemprop="datePublished" content="2019-01-16T13:51:53&#43;09:00" />
 <meta itemprop="dateModified" content="2019-01-16T13:51:53&#43;09:00" />
 <meta itemprop="wordCount" content="474">
 
 
 
-<meta itemprop="keywords" content="percol,fzf," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="percol,fzf," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="percol から fzf に移行した"/>
 <meta name="twitter:description" content="新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。 直そうと思って調べてみるとどうやら"/>
 
@@ -136,21 +139,30 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">設定ファイル</a></li>
-  </ul>
+<ul>
+<li><a href="#percol-のアンインストール">percol のアンインストール</a></li>
+<li><a href="#fzf-のインストール">fzf のインストール</a>
+<ul>
+<li><a href="#設定ファイル">設定ファイル</a></li>
+</ul></li>
+<li><a href="#参考">参考</a></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。
+      
+
+<p>新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。
 直そうと思って調べてみるとどうやら peco や fzf の方がナウいらしいので移行することにした。
 tmux の相性がいいとのことなので fzf を入れることにする。</p>
-<h1 id="percol-">percol のアンインストール</h1>
+
+<h1 id="percol-のアンインストール">percol のアンインストール</h1>
+
 <p>大抵の人は pip でインストールしているはず。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -159,42 +171,44 @@ tmux の相性がいいとのことなので fzf を入れることにする。<
 <pre class="chroma"><code class="language-bash" data-lang="bash">$ pip uninstall -y <span class="s2">&#34;percol==0.2.1&#34;</span>
 
 <span class="c1"># percol 以外のパッケージも全部消していい場合</span>
-$ pip freeze <span class="p">|</span> xargs pip uninstall -y
-</code></pre></td></tr></table>
+$ pip freeze <span class="p">|</span> xargs pip uninstall -y</code></pre></td></tr></table>
 </div>
-</div><p>設定ファイルを削除する。</p>
+</div>
+<p>設定ファイルを削除する。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ rm -rf ~/.percol.d
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ rm -rf ~/.percol.d</code></pre></td></tr></table>
 </div>
-</div><p><code>.zshrc</code> などに設定があれば削除する。</p>
+</div>
+<p><code>.zshrc</code> などに設定があれば削除する。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ vim ~/.zshrc
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ vim ~/.zshrc</code></pre></td></tr></table>
 </div>
-</div><h1 id="fzf-">fzf のインストール</h1>
+</div>
+<h1 id="fzf-のインストール">fzf のインストール</h1>
+
 <p>brew で入れるだけ。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install fzf
-</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-bash" data-lang="bash">$ brew install fzf</code></pre></td></tr></table>
 </div>
-</div><h2 id="heading">設定ファイル</h2>
+</div>
+<h2 id="設定ファイル">設定ファイル</h2>
+
 <p>素直に <code>~/.zshrc</code> に関数を追加していくと肥大化するので <code>~/.zsh/functions/</code> 配下に関数毎にファイルを作って、それらを読み込むようにした。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -217,16 +231,18 @@ $ pip freeze <span class="p">|</span> xargs pip uninstall -y
 ├── fshow
 └── fssh
 
-<span class="m">0</span> directories, <span class="m">7</span> files
-</code></pre></td></tr></table>
+<span class="m">0</span> directories, <span class="m">7</span> files</code></pre></td></tr></table>
 </div>
-</div><p>各ファイルの中身</p>
+</div>
+<p>各ファイルの中身</p>
+
 <script type="text/javascript" src="https://gist.github.com/7a46a337562ecb23f3116808aa1d8c54.js"></script>
+
 
 <p><code>~/.zshrc</code> で autoload と bindkey の設定をする。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -245,7 +261,7 @@ $ pip freeze <span class="p">|</span> xargs pip uninstall -y
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">fpath</span><span class="o">=</span><span class="o">(</span>~/.zsh/functions <span class="si">${</span><span class="nv">fpath</span><span class="si">}</span><span class="o">)</span>
+<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nv">fpath</span><span class="o">=(</span>~/.zsh/functions <span class="si">${</span><span class="nv">fpath</span><span class="si">}</span><span class="o">)</span>
 
 <span class="c1"># autoload fzf functions</span>
 <span class="k">for</span> widget_name in ~/.zsh/functions/*<span class="p">;</span> <span class="k">do</span>
@@ -261,11 +277,13 @@ bindkey <span class="s1">&#39;^xd&#39;</span>  fd
 bindkey <span class="s1">&#39;^xk&#39;</span>  fkill
 bindkey <span class="s1">&#39;^xp&#39;</span>  frepo
 bindkey <span class="s1">&#39;^xgs&#39;</span> fshow
-bindkey <span class="s1">&#39;^xs&#39;</span>  fssh
-</code></pre></td></tr></table>
+bindkey <span class="s1">&#39;^xs&#39;</span>  fssh</code></pre></td></tr></table>
 </div>
-</div><p>これで快適な CLI ライフが送れるようになった。</p>
-<h1 id="heading1">参考</h1>
+</div>
+<p>これで快適な CLI ライフが送れるようになった。</p>
+
+<h1 id="参考">参考</h1>
+
 <ul>
 <li><a href="https://github.com/junegunn/fzf/wiki/examples">公式 Wiki Examples</a></li>
 <li><a href="https://qiita.com/b4b4r07/items/9e1bbffb1be70b6ce033">おい、peco もいいけど fzf 使えよ</a></li>

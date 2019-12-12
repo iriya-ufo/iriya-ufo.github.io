@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>postgresql on iriya-ufo&#39;s blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Wed, 17 Dec 2014 21:43:32 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</guid>
-      <description>環境は Mac でやってますが Linux でもほぼ同じです。 インストールから初期設定まで Mac なので brew でインストールします。 $ brew install postgresql 最初にデータベースの初期化をし</description>
+      <description>環境は Mac でやってますが Linux でもほぼ同じです。 インストールから初期設定まで Mac なので brew でインストールします。 1 $ brew install postgresql 最初にデータベースの初期化を</description>
     </item>
     
   </channel>
