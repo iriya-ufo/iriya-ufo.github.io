@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>clean architecture on iriya-ufo&#39;s blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Mon, 18 Nov 2019 15:07:17 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</guid>
-      <description>これを読む人は、あの同心円状の The Clean Architecture の図を見たことがあるだろう。 もしかしたら The Clean Architecture についてのより詳しい説明を求めていたかもしれない。 だが本書</description>
+      <description>Clean Architecture 達人に学ぶソフトウェアの構造と設計posted with amazlet at 19.11.18Robert C.Martin KADOKAWA (2018-07-27) 売り上げランキング: 8,168 Amazon.co.jpで詳細を見る これを読む人は、あ</description>
     </item>
     
   </channel>

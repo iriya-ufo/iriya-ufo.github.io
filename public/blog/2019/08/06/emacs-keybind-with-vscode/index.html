@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2019-08-06T17:31:53+09:00" />
 <meta itemprop="name" content="VSCode で Emacs キーバインドを使う">
 <meta itemprop="description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン">
+
+
 <meta itemprop="datePublished" content="2019-08-06T17:31:53&#43;09:00" />
 <meta itemprop="dateModified" content="2019-08-06T17:31:53&#43;09:00" />
 <meta itemprop="wordCount" content="549">
 
 
 
-<meta itemprop="keywords" content="emacs,vscode," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="emacs,vscode," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VSCode で Emacs キーバインドを使う"/>
 <meta name="twitter:description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン"/>
 
@@ -135,18 +138,25 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    
   </div>
 </div>
     <div class="post-content">
       <p>長年使ってきた Emacs から徐々に VSCode に乗り換えています。
 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバインドを覚え直すのは骨が折れるので拡張機能でいい感じのものを探しました。</p>
+
 <p>使い始めて最初のうちは <a href="https://marketplace.visualstudio.com/items?itemName=lfs.vscode-emacs-friendly">Emacs Friendly Keymap</a> を使用していたのですが、なかなか使いづらい感じの拡張でどうにかならんかなと思いつつ我慢して使っていました。</p>
+
 <p>色々調べ直して <a href="https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx">Awesome Emacs Keymap</a> というのがいい感じに使えるという発見がありました。</p>
+
 <p>Emacs Friendly Keymap では <code>Ctrl + k</code> で一行削除しますが、これ末尾の RET も削除してしまっていました。この動作がどうしても慣れなくて困っていたのですが Awesome Emacs Keymap はちゃんと末尾の RET は残してくれています。</p>
+
 <p>またこの拡張機能のよいところはマルチカーソル機能を損なわずに使えることです。もともと Emacs でもオレオレ Elisp でマルチカーソルを使っていたのですが、キーバインドが特殊なため、これを移植するのは面倒でした。Awesome Emacs Keymap は VSCode のデフォルトマルチカーソル機能をそのまま使えるのがよいです。</p>
+
 <p>これでしばらく戦えそうです。</p>
+
 <p>参考までによく使う便利なコマンドはこちら。</p>
+
 <table>
 <thead>
 <tr>
@@ -154,23 +164,28 @@
 <th>動作</th>
 </tr>
 </thead>
+
 <tbody>
 <tr>
 <td>⌘+d</td>
 <td>一個ずつ選択を増やしながらマルチカーソル</td>
 </tr>
+
 <tr>
 <td>⌘+Shift+L</td>
 <td>該当単語を一斉に選択</td>
 </tr>
+
 <tr>
 <td>Option + Shift + I</td>
 <td>選択範囲の末尾にマルチカーソル</td>
 </tr>
+
 <tr>
 <td>M-g g (M-g M-g)</td>
 <td>該当行にジャンンプ</td>
 </tr>
+
 <tr>
 <td>Ctrl-x z</td>
 <td>Zen Mode</td>

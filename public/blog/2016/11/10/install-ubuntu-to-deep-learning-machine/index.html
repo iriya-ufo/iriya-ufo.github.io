@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2016-11-10T01:38:43+09:00" />
 <meta itemprop="name" content="Deep Learning Machine に Ubuntu のインストール">
 <meta itemprop="description" content="『Hardware Architecture for Machine Learning』で作ったマシンに Ubuntu 16.04 LTS をインストールしました。 Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓">
+
+
 <meta itemprop="datePublished" content="2016-11-10T01:38:43&#43;09:00" />
 <meta itemprop="dateModified" content="2016-11-10T01:38:43&#43;09:00" />
-<meta itemprop="wordCount" content="577">
+<meta itemprop="wordCount" content="582">
 
 
 
-<meta itemprop="keywords" content="machine learning," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="machine learning," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Deep Learning Machine に Ubuntu のインストール"/>
 <meta name="twitter:description" content="『Hardware Architecture for Machine Learning』で作ったマシンに Ubuntu 16.04 LTS をインストールしました。 Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓"/>
 
@@ -135,27 +138,43 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    
   </div>
 </div>
     <div class="post-content">
       <p><a href="/blog/2016/11/09/hardware-architecture-for-machine-learning/">『Hardware Architecture for Machine Learning』</a>で作ったマシンに Ubuntu 16.04 LTS をインストールしました。</p>
+
 <p>Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓いたのでその解決法を記載します。</p>
+
 <p>状況としては Ubuntu 16.04 を DVD に焼いたあと起動するも、インストーラー画面までいかずに <code>snd_hda_intel failed to add i915_bpo component master</code> というエラーが出て落ちていました。</p>
+
 <p>まず BIOS の設定でマルチモニターを有効化します。具体的には <code>BIOS起動</code> → <code>Advanced</code> → <code>Chipset Configration</code> → <code>IGPU Multi-Monitor</code> を <code>Enable</code> に変更します。
 そして、いったんマシンの電源を切り、HDMI をマザーボード側に繋ぐとインストーラーが起動しました。</p>
+
 <p>インストーラー画面は問題なく進んでいき、Ubuntu のインストール自体は正常に終了します。
 ところが再起動がかかると画面に何も映りません。マザーボード側、グラフィックボード側とどちらに挿してもダメでした。
 これは Nvidia GTX-1080 のドライバが入っていないためらしいです。困ったことにドライバを入れようにも画面に映らないので、とにかく Ubuntu の画面を出してコマンドが打てるようにするため
 グラフィックボードを一度筐体から取り外します。そして再起動すると Ubuntu が起動しました。</p>
+
 <p>ターミナルから以下のコマンドでドライバーをインストールします。</p>
-<pre><code>$ sudo add-apt-repository ppa:graphics-drivers/ppa
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ sudo add-apt-repository ppa:graphics-drivers/ppa
 $ sudo apt-get update
 $ sudo apt-get install nvidia-367
 $ sudo apt-get install mesa-common-dev
-$ sudo apt-get install freeglut3-dev
-</code></pre>
+$ sudo apt-get install freeglut3-dev</pre></td></tr></table>
+</div>
+</div>
 <p>これで、グラフィックボードをつけて再起動すれば Ubuntu が起動します。</p>
+
 <p>次回は<a href="/blog/2016/11/19/tensorflow-running-by-gpu/">『GPU 経由で TensorFlow を実行』</a>できるようにします。</p>
 
     </div>

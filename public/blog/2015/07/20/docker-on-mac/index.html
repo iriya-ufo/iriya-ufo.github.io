@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2015-07-20T14:28:57+00:00" />
 <meta itemprop="name" content="Mac に Docker 環境を構築する">
 <meta itemprop="description" content="とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では">
+
+
 <meta itemprop="datePublished" content="2015-07-20T14:28:57&#43;00:00" />
 <meta itemprop="dateModified" content="2015-07-20T14:28:57&#43;00:00" />
-<meta itemprop="wordCount" content="2099">
+<meta itemprop="wordCount" content="2193">
 
 
 
-<meta itemprop="keywords" content="docker," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="docker," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac に Docker 環境を構築する"/>
 <meta name="twitter:description" content="とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では"/>
 
@@ -136,44 +139,95 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">事前準備</a></li>
-    <li><a href="#docker-">docker パッケージのインストール</a></li>
-    <li><a href="#docker-1">docker イメージのダウンロード</a></li>
-    <li><a href="#docker-2">docker イメージの起動・停止・確認</a></li>
-    <li><a href="#docker-3">Docker の操作</a></li>
-    <li><a href="#dockerfile-">Dockerfile の作成</a></li>
-    <li><a href="#docker-hub">Docker Hub</a></li>
-    <li><a href="#heading1">参考</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#事前準備">事前準備</a></li>
+<li><a href="#docker-パッケージのインストール">docker パッケージのインストール</a></li>
+<li><a href="#docker-イメージのダウンロード">docker イメージのダウンロード</a></li>
+<li><a href="#docker-イメージの起動-停止-確認">docker イメージの起動・停止・確認</a></li>
+<li><a href="#docker-の操作">Docker の操作</a></li>
+<li><a href="#dockerfile-の作成">Dockerfile の作成</a></li>
+<li><a href="#docker-hub">Docker Hub</a></li>
+<li><a href="#参考">参考</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <!-- raw HTML omitted -->
+      
+
+<p><img src="/images/2015/07/homepage-docker-logo.png" class="image"></p>
+
 <p>とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では簡単には環境構築できなかったりするのもあるあるですよね。レガシーな環境っていやですね。そこでプログラムを動かす環境を仮想で作ってしまおうという考えに至るわけですが、一昔前と違って様々な手段が登場しました。</p>
+
 <p>今回はコンテナ型の仮想環境を構築できる <a href="https://www.docker.com/">Docker</a> を使ってみます。なお Docker にはセキュリティ上の根本的欠陥があるとして、Docker と決別した Linxu ディストリビューションもあったりします。</p>
+
 <p><a href="http://japan.zdnet.com/article/35057363/">CoreOSが「Docker」と決別&ndash;独自のコンテナ実装「Rocket」を公開</a></p>
+
 <p>Rocket の方がナウイ感じがしますが、いかんせん情報が少ないので今回は Docker でいきます。</p>
-<h2 id="heading">事前準備</h2>
+
+<h2 id="事前準備">事前準備</h2>
+
 <p><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> と <a href="http://brew.sh/index_ja.html">homebrew</a> をインストールしておいてください。
 VirtualBox は Linux カーネルでしか動作しない Docker を Mac で動かすために必要です。homebrew は boot2docker と呼ばれる Docker 用の Linux イメージのパッケージ管理と docker コマンド郡の管理のために必要です。</p>
-<h2 id="docker-">docker パッケージのインストール</h2>
+
+<h2 id="docker-パッケージのインストール">docker パッケージのインストール</h2>
+
 <p>docker ツール群をインストールしましょう。Mac だと簡単です。</p>
-<pre><code>$ brew install docker boot2docker
-$ docker -v
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ brew install docker boot2docker
+$ docker -v</pre></td></tr></table>
+</div>
+</div>
 <p>バージョンが表示されたらインストールできています。</p>
-<h2 id="docker-1">docker イメージのダウンロード</h2>
-<pre><code>$ boot2docker init
-</code></pre>
+
+<h2 id="docker-イメージのダウンロード">docker イメージのダウンロード</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ boot2docker init</pre></td></tr></table>
+</div>
+</div>
 <p>Docker の仮想イメージが <code>~/.boot2docker</code> にダウンロードされます。</p>
-<h2 id="docker-2">docker イメージの起動・停止・確認</h2>
+
+<h2 id="docker-イメージの起動-停止-確認">docker イメージの起動・停止・確認</h2>
+
 <p>次のコマンドで docker イメージが起動されます。</p>
-<pre><code>$ boot2docker up
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ boot2docker up</pre></td></tr></table>
+</div>
+</div>
 <p>初回は環境変数などが表示されるので、<code>zshrc</code> とか <code>.bashrc</code> に追記しておきましょう。また VirtualBox を起動すると boot2docker が動作しているのがわかると思います。</p>
-<pre><code>Waiting for VM and Docker daemon to start...
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">Waiting for VM and Docker daemon to start...
 ........................oooooooooooooooooo
 Started.
 Writing /Users/iriya/.boot2docker/certs/boot2docker-vm/ca.pem
@@ -184,51 +238,118 @@ To connect the Docker client to the Docker daemon, please set:
 # 以下に環境変数が表示されるのでそれぞれシェルに設定
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/iriya/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
-</code></pre>
+export DOCKER_TLS_VERIFY=1</pre></td></tr></table>
+</div>
+</div>
 <p>停止と状態確認は以下の通りです。</p>
-<pre><code>$ boot2docker stop
-$ boot2docker status
-</code></pre>
-<h2 id="docker-3">Docker の操作</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ boot2docker stop
+$ boot2docker status</pre></td></tr></table>
+</div>
+</div>
+<h2 id="docker-の操作">Docker の操作</h2>
+
 <p>ここまでで Docker の環境は用意できました。実際の仮想環境は Docker ホスト上に<strong>コンテナ</strong>という形で作っていくことになります。動作イメージはこのような感じです。</p>
-<!-- raw HTML omitted -->
+
+<p><img src="/images/2015/07/docker-image-2.png" class="image"></p>
+
 <p>それでは練習として CentOS イメージのダウンロードと確認をしてみましょう。</p>
-<pre><code>$ docker pull centos:centos6
-$ docker images
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker pull centos:centos6
+$ docker images</pre></td></tr></table>
+</div>
+</div>
 <p>オプションの確認は下記コマンドでできます。</p>
-<pre><code>$ docker —help
-$ docker COMMAND —help
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker —help
+$ docker COMMAND —help</pre></td></tr></table>
+</div>
+</div>
 <p>では次にコンテナの起動をしてみましょう。</p>
-<pre><code>$ docker run -t -i -d --name centos6 centos:centos6 /bin/bash
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker run -t -i -d --name centos6 centos:centos6 /bin/bash
 
 -d はバックグラウンド
 -i は Keep STDIN open even if not attached
--t は Allocate a pseudo-TTY
-</code></pre>
+-t は Allocate a pseudo-TTY</pre></td></tr></table>
+</div>
+</div>
 <p>プロセスの確認をしてみます。</p>
-<pre><code>$ docker ps
-</code></pre>
-<p>コンテナにアタッチしたりデタッチするには以下のようにします。アタッチする際はプロセスで確認したID番号を指定します。なおアタッチしている状態で exit するとデタッチではなくプロセスの終了になるので注意しましょう。</p>
-<pre><code>$ docker attach a732c1346103 # アタッチ
-C-p C-q                      # デタッチ
-</code></pre>
-<p>いろいろいじってるとゴミができます。ゴミは整理したほうがいいですね。レポジトリ名が<code>&lt;none&gt;</code>のイメージを全て削除する方法です。</p>
-<pre><code>$ docker rmi -f `docker images | grep &quot;&lt;none&gt;&quot; | awk '{ print $3 }'`
-</code></pre>
-<p>イメージIDを指定して削除する方法です。</p>
-<pre><code>$ docker rmi a005304e4e74
-</code></pre>
-<h2 id="dockerfile-">Dockerfile の作成</h2>
-<p>先ほどは centos のミニマムバージョンを起動していろいろ試してみました。ここでは実際に Ruby と MySQL が入った環境を作ってみましょう。構築は Dockerfile というものを作ってそこに書いていく感じになります。用途ごとにディレクトリを作成するとよいでしょう。</p>
-<pre><code>$ mkdir ~/docker/rbenv-mysql
-$ vim ~/docker/rbenv-mysql/Dockerfile
-</code></pre>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker ps</pre></td></tr></table>
+</div>
+</div>
+<p>コンテナにアタッチしたりデタッチするには以下のようにします。アタッチする際はプロセスで確認したID番号を指定します。なおアタッチしている状態で exit するとデタッチではなくプロセスの終了になるので注意しましょう。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker attach a732c1346103 # アタッチ
+C-p C-q                      # デタッチ</pre></td></tr></table>
+</div>
+</div>
+<p>いろいろいじってるとゴミができます。ゴミは整理したほうがいいですね。レポジトリ名が<code>&lt;none&gt;</code>のイメージを全て削除する方法です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker rmi -f `docker images | grep &#34;&lt;none&gt;&#34; | awk &#39;{ print $3 }&#39;`</pre></td></tr></table>
+</div>
+</div>
+<p>イメージIDを指定して削除する方法です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker rmi a005304e4e74</pre></td></tr></table>
+</div>
+</div>
+<h2 id="dockerfile-の作成">Dockerfile の作成</h2>
+
+<p>先ほどは centos のミニマムバージョンを起動していろいろ試してみました。ここでは実際に Ruby と MySQL が入った環境を作ってみましょう。構築は Dockerfile というものを作ってそこに書いていく感じになります。用途ごとにディレクトリを作成するとよいでしょう。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ mkdir ~/docker/rbenv-mysql
+$ vim ~/docker/rbenv-mysql/Dockerfile</pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code class="language-sh ~/docker/rbenv-mysql/Dockerfile" data-lang="sh ~/docker/rbenv-mysql/Dockerfile"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -273,66 +394,90 @@ $ vim ~/docker/rbenv-mysql/Dockerfile
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">FROM ubuntu:14.04
-MAINTAINER Naoto Inoue
-
-<span class="c1"># パッケージのインストールとアップデート</span>
-RUN apt-get update <span class="o">&amp;&amp;</span> apt-get -y upgrade
-RUN apt-get -y install build-essential
-RUN apt-get -y install git vim curl
-RUN apt-get install -y zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev
-
-<span class="c1"># rbenv のインストール</span>
-RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
-RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
-RUN ./root/.rbenv/plugins/ruby-build/install.sh
-ENV PATH /root/.rbenv/bin:<span class="nv">$PATH</span>
-RUN <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; /etc/profile.d/rbenv.sh
-RUN <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; .bashrc
-
-<span class="c1"># ruby のインストール</span>
-ENV CONFIGURE_OPTS --disable-install-doc
-ADD ./versions.txt /root/versions.txt
-RUN xargs -L <span class="m">1</span> rbenv install &lt; /root/versions.txt
-RUN <span class="nb">echo</span> <span class="s1">&#39;gem: --no-rdoc --no-ri&#39;</span> &gt;&gt; /.gemrc
-RUN bash -l -c <span class="s1">&#39;for v in $(cat /root/versions.txt); do rbenv global $v; gem install bundler; done&#39;</span>
-RUN rbenv global 1.9.2-p320
-
-<span class="c1"># mysql のインストール</span>
-RUN <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
+<pre class="chroma"><code class="language-sh ~/docker/rbenv-mysql/Dockerfile" data-lang="sh ~/docker/rbenv-mysql/Dockerfile"><span class="k">FROM</span><span class="s"> ubuntu:14.04</span><span class="err">
+</span><span class="err"></span><span class="k">MAINTAINER</span><span class="s"> Naoto Inoue</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># パッケージのインストールとアップデート</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get update <span class="o">&amp;&amp;</span> apt-get -y upgrade<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get -y install build-essential<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get -y install git vim curl<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get install -y zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># rbenv のインストール</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> git clone https://github.com/sstephenson/rbenv.git /root/.rbenv<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> ./root/.rbenv/plugins/ruby-build/install.sh<span class="err">
+</span><span class="err"></span><span class="k">ENV</span><span class="s"> PATH /root/.rbenv/bin:$PATH</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; /etc/profile.d/rbenv.sh<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; .bashrc<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># ruby のインストール</span><span class="err">
+</span><span class="err"></span><span class="k">ENV</span><span class="s"> CONFIGURE_OPTS --disable-install-doc</span><span class="err">
+</span><span class="err"></span><span class="k">ADD</span><span class="s"> ./versions.txt /root/versions.txt</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> xargs -L <span class="m">1</span> rbenv install &lt; /root/versions.txt<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s1">&#39;gem: --no-rdoc --no-ri&#39;</span> &gt;&gt; /.gemrc<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> bash -l -c <span class="s1">&#39;for v in $(cat /root/versions.txt); do rbenv global $v; gem install bundler; done&#39;</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> rbenv global <span class="m">1</span>.9.2-p320<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># mysql のインストール</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
 </span><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password_again password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    apt-get -y install mysql-server
-RUN apt-get clean
-
-<span class="c1"># mysql の設定ファイル</span>
-ADD ./mysql-listen.cnf /etc/mysql/conf.d/mysql-listen.cnf
-ADD ./my.cnf /etc/mysql/my.cnf
-
-<span class="c1"># password なしでリモートから root でログインできるようにする</span>
-RUN <span class="o">(</span>/usr/bin/mysqld_safe <span class="p">&amp;</span><span class="o">)</span><span class="p">;</span> sleep 3<span class="p">;</span> <span class="nb">echo</span> <span class="s2">&#34;grant all privileges on *.* to root@&#39;%&#39;;&#34;</span> <span class="p">|</span> mysql -u root -proot
-
-<span class="c1"># ポート開放</span>
-EXPOSE <span class="m">3306</span>
-
-<span class="c1"># 起動オプション</span>
-CMD <span class="o">[</span><span class="s2">&#34;/usr/bin/mysqld_safe&#34;</span><span class="o">]</span>
-</code></pre></td></tr></table>
+</span><span class="se"></span>    apt-get -y install mysql-server<span class="err">
+</span><span class="err"></span><span class="k">RUN</span> apt-get clean<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># mysql の設定ファイル</span><span class="err">
+</span><span class="err"></span><span class="k">ADD</span><span class="s"> ./mysql-listen.cnf /etc/mysql/conf.d/mysql-listen.cnf</span><span class="err">
+</span><span class="err"></span><span class="k">ADD</span><span class="s"> ./my.cnf /etc/mysql/my.cnf</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># password なしでリモートから root でログインできるようにする</span><span class="err">
+</span><span class="err"></span><span class="k">RUN</span> <span class="o">(</span>/usr/bin/mysqld_safe <span class="p">&amp;</span><span class="o">)</span><span class="p">;</span> sleep <span class="m">3</span><span class="p">;</span> <span class="nb">echo</span> <span class="s2">&#34;grant all privileges on *.* to root@&#39;%&#39;;&#34;</span> <span class="p">|</span> mysql -u root -proot<span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># ポート開放</span><span class="err">
+</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 3306</span><span class="err">
+</span><span class="err">
+</span><span class="err"></span><span class="c"># 起動オプション</span><span class="err">
+</span><span class="err"></span><span class="k">CMD</span><span class="s"> [&#34;/usr/bin/mysqld_safe&#34;]</span></code></pre></td></tr></table>
 </div>
-</div><p>Linux 触ったことある人なら何をやっているかはだいたい分かると思います。上記の <strong>ADD</strong> コマンドはファイルを Docker 側に渡す書き方です。同じディレクトリに <code>my.cnf</code>、<code>mysql-listen.cnf</code>、<code>versions.txt</code> のファイルを作っておきましょう。versions.txt にはインストールしたい Ruby のバージョンを書いておきます。</p>
+</div>
+<p>Linux 触ったことある人なら何をやっているかはだいたい分かると思います。上記の <strong>ADD</strong> コマンドはファイルを Docker 側に渡す書き方です。同じディレクトリに <code>my.cnf</code>、<code>mysql-listen.cnf</code>、<code>versions.txt</code> のファイルを作っておきましょう。versions.txt にはインストールしたい Ruby のバージョンを書いておきます。</p>
+
 <p>Dockerfile ができたらビルドします。ビルドする際に <code>-t</code> オプションでイメージ名を決められるのですが、<code>&lt;アカウント名&gt;/&lt;パッケージ名&gt;</code> という形式が推奨されているようです。</p>
-<pre><code>$ docker build -t iriya/rbenv-mysql .
-$ docker images # 作成されたイメージの確認
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker build -t iriya/rbenv-mysql .
+$ docker images # 作成されたイメージの確認</pre></td></tr></table>
+</div>
+</div>
 <p>作成したイメージからの起動はこのようにします。</p>
-<pre><code>$ docker run -i -t iriya/rbenv-mysql /bin/bash
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker run -i -t iriya/rbenv-mysql /bin/bash</pre></td></tr></table>
+</div>
+</div>
 <h2 id="docker-hub">Docker Hub</h2>
+
 <p>Docker には <a href="https://hub.docker.com/account/signup/">Docker Hub</a> という GitHub のようなコミュニティがあります。ここに作成したイメージをアップしておくと誰かの役にたつかもしれません。アップの仕方は非常に簡単です。アカウントを作った後に以下のコマンドを打つだけで終わります。</p>
-<pre><code>$ docker login
-$ docker push iriya/rbenv-mysql
-</code></pre>
-<p><!-- raw HTML omitted -->こちら<!-- raw HTML omitted -->がイメージになります。<strong>pull</strong> コマンドでダウンロードできます。よかったら使ってみてください。</p>
-<h2 id="heading1">参考</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ docker login
+$ docker push iriya/rbenv-mysql</pre></td></tr></table>
+</div>
+</div>
+<p><a href="https://registry.hub.docker.com/u/iriya/rbenv-mysql/" target="_blank">こちら</a>がイメージになります。<strong>pull</strong> コマンドでダウンロードできます。よかったら使ってみてください。</p>
+
+<h2 id="参考">参考</h2>
+
 <p><a href="http://deeeet.com/writing/2013/12/08/docker-cheat/">すぐにDockerを試したい人のための基礎コマンド</a></p>
 
     </div>

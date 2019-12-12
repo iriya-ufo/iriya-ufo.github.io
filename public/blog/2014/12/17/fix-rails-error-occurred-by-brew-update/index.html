@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2014-12-17T23:05:08+00:00" />
 <meta itemprop="name" content="brew のアップグレードで rails プロジェクトなどが動かなくなったら">
 <meta itemprop="description" content="brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっていま">
+
+
 <meta itemprop="datePublished" content="2014-12-17T23:05:08&#43;00:00" />
 <meta itemprop="dateModified" content="2014-12-17T23:05:08&#43;00:00" />
-<meta itemprop="wordCount" content="477">
+<meta itemprop="wordCount" content="484">
 
 
 
-<meta itemprop="keywords" content="homebrew," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="homebrew," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="brew のアップグレードで rails プロジェクトなどが動かなくなったら"/>
 <meta name="twitter:description" content="brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっていま"/>
 
@@ -136,28 +139,57 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">エラーの例</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#エラーの例">エラーの例</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっています。よくあるのは keg-only なパッケージによる影響です。</p>
-<h2 id="heading">エラーの例</h2>
+      
+
+<p>brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっています。よくあるのは keg-only なパッケージによる影響です。</p>
+
+<h2 id="エラーの例">エラーの例</h2>
+
 <p>openssl 周りでエラーが起こっているのだと思われます。brew でインストールした openssl のバージョンが上がったのでしょう。</p>
-<pre><code>/Users/iriya/.rbenv/versions/2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require': dlopen(/Users/iriya/.rbenv/versions/2.0.0-p353/lib/ruby/2.
-0.0/x86_64-darwin11.4.2/openssl.bundle, 9): Symbol not found: _SSLv2_client_method (LoadError)
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">/Users/iriya/.rbenv/versions/2.0.0-p353/lib/ruby/site_ruby/2.0.0/rubygems/core_ext/kernel_require.rb:55:in `require&#39;: dlopen(/Users/iriya/.rbenv/versions/2.0.0-p353/lib/ruby/2.
+0.0/x86_64-darwin11.4.2/openssl.bundle, 9): Symbol not found: _SSLv2_client_method (LoadError)</pre></td></tr></table>
+</div>
+</div>
 <p>解決方法は関係ありそうな brew のパッケージをリンクし直すことです。上記例なら openssl です。そして openssl は keg-only なパッケージですので force をつけることに注意します。また OS に元々入ってる openssl を使っていないかも確かめましょう。</p>
-<pre><code>$ brew link openssl --force
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ brew link openssl --force
 $ which openssl            # openssl の呼び出し元を調べます
 $ openssl version          # バージョンを調べます
-$ /usr/bin/openssl version # システムにインストールされているバージョンを調べます
-</code></pre>
+$ /usr/bin/openssl version # システムにインストールされているバージョンを調べます</pre></td></tr></table>
+</div>
+</div>
 <p>ここで一度エラーが起こった内容のコマンドをもう一度実行してみます。例えば rails の起動とか gem のインストールとかです。動けばOK。もし動かなかったら ruby の再インストールをします。ここでは rbenv を使っている前提です。</p>
-<pre><code>$ CONFIGURE_OPTS=&quot;--with-readline-dir=/usr/local --with-openssl-dir=/usr/local&quot; rbenv install 2.0.0-p353
-</code></pre>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ CONFIGURE_OPTS=&#34;--with-readline-dir=/usr/local --with-openssl-dir=/usr/local&#34; rbenv install 2.0.0-p353</pre></td></tr></table>
+</div>
+</div>
 <p>これでもう一度実行してみましょう。直ってるはずです。え？直ってない？自力で解決してください。</p>
 
     </div>

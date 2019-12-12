@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>review on iriya-ufo&#39;s blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 12 Dec 2019 12:36:22 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/12/12/mingo/</guid>
-      <description>幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている</description>
+      <description>改訂2版 みんなのGo言語posted with amazlet at 19.11.18松木 雅幸 (著), mattn (著), 藤原 俊一郎 (著), 中島 大一 (著), 上田 拓也 (著), 牧 大輔</description>
     </item>
     
     <item>
@@ -26,7 +26,7 @@
       <pubDate>Mon, 18 Nov 2019 15:07:17 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</guid>
-      <description>これを読む人は、あの同心円状の The Clean Architecture の図を見たことがあるだろう。 もしかしたら The Clean Architecture についてのより詳しい説明を求めていたかもしれない。 だが本書</description>
+      <description>Clean Architecture 達人に学ぶソフトウェアの構造と設計posted with amazlet at 19.11.18Robert C.Martin KADOKAWA (2018-07-27) 売り上げランキング: 8,168 Amazon.co.jpで詳細を見る これを読む人は、あ</description>
     </item>
     
     <item>
@@ -35,7 +35,7 @@
       <pubDate>Wed, 09 Oct 2019 12:54:09 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/10/09/media-makers/</guid>
-      <description>何かと Twitter で炎上することで有名？な 田端 信太郎 氏が書かれた本。 これだけメディアの本質を理解している人なので、Twitter 発言はもはやわざとだと</description>
+      <description>MEDIA MAKERS―社会が動く「影響力」の正体 宣伝会議posted with amazlet at 19.10.09宣伝会議 (2012-12-19) 売り上げランキング: 6,563 Amazon.co.jp</description>
     </item>
     
     <item>
@@ -44,7 +44,7 @@
       <pubDate>Tue, 08 Oct 2019 17:02:10 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/10/08/how-to-write-adcopy/</guid>
-      <description>広告コピーを書いている人も、そうでない人も読んだほうがいい良書。 コピーライターとしての仕事の本質がぎゅっと詰まっているが、その本質というのは</description>
+      <description>広告コピーってこう書くんだ!読本posted with amazlet at 19.10.08谷山 雅計 宣伝会議 売り上げランキング: 29,398 Amazon.co.jpで詳細を見る</description>
     </item>
     
     <item>
@@ -53,7 +53,7 @@
       <pubDate>Fri, 04 Oct 2019 21:09:05 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/10/04/hatenko-phoenix-owndays/</guid>
-      <description>倒産しかけのメガネ店の身売り先を探していたはずが、いつの間にかその会社に熱が入り自らが買って出て会社再建に乗り出す話し。 書き方のテイストが小</description>
+      <description>破天荒フェニックス オンデーズ再生物語 (NewsPicks Book)posted with amazlet at 19.10.04田中 修治 幻冬舎 (2018-09-05) 売り上げランキング: 1,580 Amazon.co.jpで詳細を見る 倒産</description>
     </item>
     
     <item>
@@ -62,7 +62,7 @@
       <pubDate>Tue, 01 Oct 2019 16:15:05 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/10/01/why-your-job-does-not-quit/</guid>
-      <description>Windows95 の開発に携わった元マイクロソフトエンジニアの中島 聡さんの書かれた本。 Kindle Unlimited で読めます。 著者の幼少期の体験などを交えながら、ロケットスタートで</description>
+      <description>なぜ、あなたの仕事は終わらないのか スピードは最強の武器であるposted with amazlet at 19.10.01文響社 (2016-06-08) 売り上げランキング: 83 Amazon.c</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Tue, 01 Oct 2019 10:26:35 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/10/01/finance-theory-history/</guid>
-      <description>タイトルからして難しそうな印象を受けるが中身は平易な言葉で書かれており数式などは出てこない。理論を細かく解説する類のものではなくファイナン</description>
+      <description>ファイナンス理論全史――儲けの法則と相場の本質posted with amazlet at 19.10.01田渕 直也 ダイヤモンド社 売り上げランキング: 113,783 Amazon.c</description>
     </item>
     
     <item>
@@ -80,7 +80,7 @@
       <pubDate>Mon, 30 Sep 2019 15:09:34 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/09/30/markethack-technique-of-us-stock/</guid>
-      <description>じっちゃまの愛称で親しまれている広瀬隆雄さんの著書です。 御年60でありながら Twitter でめっちゃ発言してたり Note とか売ってたりしてなかなかIT感度の高</description>
+      <description>MarketHack流 世界一わかりやすい米国式投資の技法posted with amazlet at 19.09.30広瀬 隆雄 東洋経済新報社 売り上げランキング: 29,935 Ama</description>
     </item>
     
     <item>
@@ -89,7 +89,7 @@
       <pubDate>Tue, 10 Sep 2019 01:10:29 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/09/10/the-long-and-short-of-it-john-kay/</guid>
-      <description>ファイナンス理論の基本を説明しつつ、賢明な投資家になるための道標となるような本である。 結論から言ってしまえば以下の三点に集約される。 分散せよ</description>
+      <description>世界最強のエコノミストが教える お金を増やす一番知的なやり方 賢明なる投資家のためのパーソナル・ファイナンス読本posted with amazlet at 19.09.0</description>
     </item>
     
     <item>
@@ -98,7 +98,7 @@
       <pubDate>Thu, 09 May 2019 15:20:48 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/05/09/no-hard-work/</guid>
-      <description>前記事で Netflix の人事戦略のレビューを書きましたが、今回はベースキャンプ社(旧37signals)という会社の働き方の本を読みました。 この会社、エ</description>
+      <description>NO HARD WORK!: 無駄ゼロで結果を出すぼくらの働き方posted with amazlet at 19.05.09ジェイソン フリード デイヴィッド ハイネマイヤー ハンソン Jason Fried David Heinemeier Hansson 早川</description>
     </item>
     
     <item>
@@ -107,7 +107,7 @@
       <pubDate>Thu, 09 May 2019 13:12:51 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/05/09/building-a-culture-of-freedom-and-responsibility/</guid>
-      <description>ある日のネットフリックスの経営会議で、私たちは突然気がついた。あと９か月もすれば、アメリカの全インターネット・トラフィックの３分の１を、うち</description>
+      <description>NETFLIXの最強人事戦略 自由と責任の文化を築くposted with amazlet at 19.05.09パティ・マッコード 光文社 売り上げランキング: 3,134 Amazo</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@
       <pubDate>Mon, 06 May 2019 19:31:59 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/05/06/learn-rdb-design-from-mastery/</guid>
-      <description>データベース設計ってどうやるの？って所をちゃんと知りたかったので読んでみた。若干期待していたのと違ったがたくさん学びもあった。 自分がタイトル</description>
+      <description>達人に学ぶDB設計 徹底指南書 初級者で終わりたくないあなたへposted with amazlet at 19.05.06ミック 翔泳社 売り上げランキング: 11,263 Amazon.</description>
     </item>
     
     <item>
@@ -125,7 +125,7 @@
       <pubDate>Tue, 30 Apr 2019 02:19:52 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/</guid>
-      <description>Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい</description>
+      <description>体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践 posted with amazlet at 19.04.29 徳丸 浩 SBクリエイティブ 売り上げランキング:</description>
     </item>
     
     <item>
@@ -134,7 +134,7 @@
       <pubDate>Wed, 23 Jan 2019 01:21:00 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/01/23/high-dividend-usa-stock/</guid>
-      <description>後輩が貸してくれたので読んでみました。 Amazon のリンクに行くと結構なレビューがついてますが、星1〜星5まで評価が別れていてその内容を読むと、信者っ</description>
+      <description>バカでも稼げる 「米国株」高配当投資posted with amazlet at 19.01.22バフェット太郎 ぱる出版 売り上げランキング: 7,556 Amazon.co.jpで詳</description>
     </item>
     
     <item>
@@ -143,7 +143,7 @@
       <pubDate>Tue, 22 Jan 2019 10:51:07 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/01/22/the-four-gafa/</guid>
-      <description>書店に平積みにされていたのでなんとなく読んでみた。 GAFA とは Google, Amazon, Facebook, Apple のそれぞれ頭文字を取ってつけた造語だ。 それらを四騎士に例え GAFA 以前の世界と GAFA 以</description>
+      <description>the four GAFA 四騎士が創り変えた世界 posted with amazlet at 17.01.16 スコット・ギャロウェイ (著), 渡会 圭子 (翻訳) 東洋経済新報社 売り上げランキング: 579 Amazon.co.</description>
     </item>
     
     <item>
@@ -152,7 +152,7 @@
       <pubDate>Sat, 28 Jan 2017 17:42:31 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/01/28/the-thing-you-should-do-until-35-years-old/</guid>
-      <description>会社にあったので読んでみた。 読者対象はタイトルの通り35歳までの人ということだが、なぜこの年齢なのかというと、35歳までは**『人の心は柔軟</description>
+      <description>35歳までに必ずやるべきことposted with amazlet at 17.01.28重茂 達 かんき出版 売り上げランキング: 223,875 Amazon.co.jpで詳細を見る 会社</description>
     </item>
     
     <item>
@@ -161,7 +161,7 @@
       <pubDate>Tue, 17 Jan 2017 03:32:08 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/01/17/amazon-dot-com-light-and-shadow/</guid>
-      <description>以前『仁義なき宅配』を読んだのですが、その本と同じ著者が書いた Amazon 潜入記だったので気になって読んでみました。 2005年に出版された本で、もう1</description>
+      <description>アマゾン・ドット・コムの光と影posted with amazlet at 17.01.16横田増生 情報センター出版局 売り上げランキング: 56,968 Amazon.co.jpで詳</description>
     </item>
     
     <item>
@@ -170,7 +170,7 @@
       <pubDate>Mon, 19 Dec 2016 19:39:38 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/19/review-of-how-to-earn-10m-yen-by-freelance/</guid>
-      <description>お金が欲しいなんて今まであまり思ってこなかったけど、最近とある事がきっかけでもっとあったらいいなと思うようになった。守るべきものができたとい</description>
+      <description>エンジニアがフリーランスで年収1000万円になるための稼ぎ方posted with amazlet at 16.12.19技術評論社 (2016-11-29) 売り上げランキング: 22,164 Amazon</description>
     </item>
     
     <item>
@@ -179,7 +179,7 @@
       <pubDate>Mon, 19 Dec 2016 14:35:29 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/19/review-of-business-creation-mit/</guid>
-      <description>これからスタートアップやるんだけど、具体的に何をどうしたらいいんだろうという人向けの本。 ビジネスをするには何かしらの『商品』を世の中に出して</description>
+      <description>ビジネス・クリエーション! ---アイデアや技術から新しい製品・サービスを創る24ステップposted with amazlet at 16.12.19ビル・オーレット ダ</description>
     </item>
     
     <item>
@@ -188,7 +188,7 @@
       <pubDate>Sat, 03 Dec 2016 22:37:12 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/03/sugoi-kaigi/</guid>
-      <description>会社で週一のイテレーションをしている際に「すごい会議」っていう本、いいらしいよと聞いたので読んでみた。 本書の前半部分は会議とは関係ない著者の</description>
+      <description>会社で週一のイテレーションをしている際に「すごい会議」っていう本、いいらしいよと聞いたので読んでみた。 すごい会議－短期間で会社が劇的に変わる</description>
     </item>
     
     <item>
@@ -368,7 +368,7 @@
       <pubDate>Sat, 09 Aug 2014 22:44:24 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/08/09/how-google-thinks-works-and-shapes-our-lives/</guid>
-      <description>グーグルネット覇者の真実を読みました。 ほとんど読み飛ばしました。気になった点だけ引用させて頂きます。 細かい話しまで書かれていたので気になる方</description>
+      <description>グーグルネット覇者の真実を読みました。 ほとんど読み飛ばしました。気になった点だけ引用させて頂きます。 真の意味での失敗はひとつしかなく、それは</description>
     </item>
     
     <item>
@@ -377,7 +377,7 @@
       <pubDate>Sat, 09 Aug 2014 22:07:51 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/08/09/einsteins-mind-of-education/</guid>
-      <description>教える能力で大事な事 教育事業を救う方法 アインシュタインは一貫して体験を重視しているようです。 女子教育について</description>
+      <description>教える能力で大事な事 「教える能力というのは面白く教える事である。どんな抽象的な教材でも、それが生徒の心の琴線に共鳴を起こさせるようにし、好奇</description>
     </item>
     
   </channel>

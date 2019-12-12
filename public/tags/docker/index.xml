@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>docker on iriya-ufo&#39;s blog</title>
@@ -62,7 +62,7 @@
       <pubDate>Sat, 10 Oct 2015 21:33:25 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</guid>
-      <description>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &amp;quot;boot2docker-vm&amp;quot;: machine does not</description>
+      <description>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 1 2 3 4 WARNING: The &amp;#39;boot2docker&amp;#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine</description>
     </item>
     
     <item>

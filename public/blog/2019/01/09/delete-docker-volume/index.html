@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2019-01-09T11:27:47+09:00" />
 <meta itemprop="name" content="docker-compose up で db が立ち上がらない時は volume を削除してみる">
 <meta itemprop="description" content="とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14">
+
+
 <meta itemprop="datePublished" content="2019-01-09T11:27:47&#43;09:00" />
 <meta itemprop="dateModified" content="2019-01-09T11:27:47&#43;09:00" />
 <meta itemprop="wordCount" content="727">
 
 
 
-<meta itemprop="keywords" content="docker," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="docker," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="docker-compose up で db が立ち上がらない時は volume を削除してみる"/>
 <meta name="twitter:description" content="とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14"/>
 
@@ -135,15 +138,16 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents"></nav>
+    
   </div>
 </div>
     <div class="post-content">
       <p>とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。</p>
+
 <p><code>docker-compose up</code> するとこんな感じのエラーがでる。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -177,39 +181,39 @@
 <pre class="chroma"><code class="language-bash" data-lang="bash">Starting app_db_1 ... <span class="k">done</span>
 Creating app_web_1 ... <span class="k">done</span>
 Attaching to app_db_1, app_web_1
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.523451Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option <span class="o">(</span>see documentation <span class="k">for</span> more details<span class="o">)</span>.
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.524650Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld <span class="o">(</span>mysqld 5.7.24<span class="o">)</span> starting as process <span class="m">1</span> ...
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528223Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: PUNCH HOLE support available
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528319Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Mutexes and rw_locks use GCC atomic builtins
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528348Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Uses event mutexes
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">(</span><span class="o">)</span> is used <span class="k">for</span> memory barrier
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528394Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Compressed tables use zlib 1.2.11
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528543Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using Linux native AIO
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528969Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Number of pools: <span class="m">1</span>
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.529276Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using CPU crc32 instructions
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.530867Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Initializing buffer pool, total <span class="nv">size</span> <span class="o">=</span> 128M, <span class="nv">instances</span> <span class="o">=</span> 1, chunk <span class="nv">size</span> <span class="o">=</span> 128M
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.540619Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Completed initialization of buffer pool
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">(</span><span class="o">)</span>.
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.554602Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Highest supported file format is Barracuda.
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.554769Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Unsupported redo log format. The redo log was created with MariaDB 10.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.554873Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Plugin initialization aborted with error Generic error
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160053Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> init <span class="k">function</span> returned error.
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160184Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> registration as a STORAGE ENGINE failed.
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160209Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Failed to initialize <span class="nb">builtin</span> plugins.
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160224Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Aborting
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.523451Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option <span class="o">(</span>see documentation <span class="k">for</span> more details<span class="o">)</span>.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.524650Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld <span class="o">(</span>mysqld <span class="m">5</span>.7.24<span class="o">)</span> starting as process <span class="m">1</span> ...
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528223Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: PUNCH HOLE support available
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528319Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Mutexes and rw_locks use GCC atomic builtins
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528348Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Uses event mutexes
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">()</span> is used <span class="k">for</span> memory barrier
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528394Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Compressed tables use zlib <span class="m">1</span>.2.11
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528543Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using Linux native AIO
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.528969Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Number of pools: <span class="m">1</span>
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.529276Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using CPU crc32 instructions
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.530867Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Initializing buffer pool, total <span class="nv">size</span> <span class="o">=</span> 128M, <span class="nv">instances</span> <span class="o">=</span> <span class="m">1</span>, chunk <span class="nv">size</span> <span class="o">=</span> 128M
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.540619Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Completed initialization of buffer pool
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">()</span>.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.554602Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Highest supported file format is Barracuda.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.554769Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Unsupported redo log format. The redo log was created with MariaDB <span class="m">10</span>.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:45.554873Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Plugin initialization aborted with error Generic error
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160053Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> init <span class="k">function</span> returned error.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160184Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> registration as a STORAGE ENGINE failed.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160209Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Failed to initialize <span class="nb">builtin</span> plugins.
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160224Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Aborting
 db_1   <span class="p">|</span>
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160239Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Binlog end
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160356Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Shutting down plugin <span class="s1">&#39;CSV&#39;</span>
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.163497Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld: Shutdown <span class="nb">complete</span>
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160239Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Binlog end
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.160356Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Shutting down plugin <span class="s1">&#39;CSV&#39;</span>
+db_1   <span class="p">|</span> <span class="m">2019</span>-01-09T01:57:46.163497Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld: Shutdown <span class="nb">complete</span>
 db_1   <span class="p">|</span>
-app_db_1 exited with code <span class="m">1</span>
-</code></pre></td></tr></table>
+app_db_1 exited with code <span class="m">1</span></code></pre></td></tr></table>
 </div>
-</div><p>db のコンテナが起動に失敗しているようだが、エラー内容でググってもあまり有効な解決策に繋がらない。
+</div>
+<p>db のコンテナが起動に失敗しているようだが、エラー内容でググってもあまり有効な解決策に繋がらない。
 最終的に volume を削除して立ち上げて治すことで解決できた。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -220,19 +224,21 @@ app_db_1 exited with code <span class="m">1</span>
 $ docker volume ls
 
 <span class="c1"># Volume の削除</span>
-$ docker volume rm VOLUME_NAME
-</code></pre></td></tr></table>
+$ docker volume rm VOLUME_NAME</code></pre></td></tr></table>
 </div>
-</div><p>なぜ volume 削除で治ったのかという原因なんだけども、おそらく <code>docker-compose.yml</code> を色々いじっていく過程で MySQL のバージョンを変更したためだと思われる。
+</div>
+<p>なぜ volume 削除で治ったのかという原因なんだけども、おそらく <code>docker-compose.yml</code> を色々いじっていく過程で MySQL のバージョンを変更したためだと思われる。
 ここが解決の糸口になった。</p>
+
 <ul>
 <li><a href="https://qiita.com/yamazaki/items/5d7f7ee4daa2c1db5aae">Laradock v5.5.2 で一度docker-compose upしちゃった後に、v5.5.1に戻しても、MySQLが起動しない問題</a></li>
 </ul>
+
 <p>ちなみに <code>docker-compose.yml</code> の中身は以下のようにしている。
 他の Rails プロジェクトで同様の書き方で動作していたので、今回のエラーの原因になかなかたどり着けなかった。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -297,8 +303,7 @@ $ docker volume rm VOLUME_NAME
 </span><span class="w">      </span>-<span class="w"> </span>.<span class="p">:</span>/usr/src/app<span class="w">
 </span><span class="w">
 </span><span class="w"></span>volumes<span class="p">:</span><span class="w">
-</span><span class="w">  </span>dbdata<span class="p">:</span><span class="w">
-</span></code></pre></td></tr></table>
+</span><span class="w">  </span>dbdata<span class="p">:</span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

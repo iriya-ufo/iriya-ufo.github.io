@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.60.0 with theme even" />
+<meta name="generator" content="Hugo 0.58.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/" />
@@ -46,13 +46,16 @@
 <meta property="article:modified_time" content="2013-05-13T18:08:14+00:00" />
 <meta itemprop="name" content="rbenv で Mac OS X に Ruby 2.0.0 をインストールする">
 <meta itemprop="description" content="rvm はクールじゃないので rbenv を使って Ruby をインストールします。 事前準備 はじめに『Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明して">
+
+
 <meta itemprop="datePublished" content="2013-05-13T18:08:14&#43;00:00" />
 <meta itemprop="dateModified" content="2013-05-13T18:08:14&#43;00:00" />
-<meta itemprop="wordCount" content="391">
+<meta itemprop="wordCount" content="396">
 
 
 
-<meta itemprop="keywords" content="mac,ruby," /><meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="mac,ruby," />
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="rbenv で Mac OS X に Ruby 2.0.0 をインストールする"/>
 <meta name="twitter:description" content="rvm はクールじゃないので rbenv を使って Ruby をインストールします。 事前準備 はじめに『Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明して"/>
 
@@ -136,35 +139,62 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-  <ul>
-    <li><a href="#heading">事前準備</a></li>
-    <li><a href="#ruby-">Ruby のインストール</a></li>
-    <li><a href="#heading1">デフォルト使用設定</a></li>
-    <li><a href="#ruby--gem-">Ruby や Gem のパスを通す</a></li>
-  </ul>
+<ul>
+<li>
+<ul>
+<li><a href="#事前準備">事前準備</a></li>
+<li><a href="#ruby-のインストール">Ruby のインストール</a></li>
+<li><a href="#デフォルト使用設定">デフォルト使用設定</a></li>
+<li><a href="#ruby-や-gem-のパスを通す">Ruby や Gem のパスを通す</a></li>
+</ul></li>
+</ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      <p>rvm はクールじゃないので rbenv を使って Ruby をインストールします。</p>
-<h2 id="heading">事前準備</h2>
+      
+
+<p>rvm はクールじゃないので rbenv を使って Ruby をインストールします。</p>
+
+<h2 id="事前準備">事前準備</h2>
+
 <p>はじめに『<a href="http://www.oiax.jp/rails/zakkan/rails_3_1_installation_on_macosx.html">Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明してみました</a>』を参考に準備をしておきます。
 このサイトは Rails のインストールについてですが Xcode, Homebrew など初歩からかなり丁寧に書いているのでオススメです。</p>
-<h2 id="ruby-">Ruby のインストール</h2>
+
+<h2 id="ruby-のインストール">Ruby のインストール</h2>
+
 <p>準備が出来たら以下コマンドを順次行います。</p>
-<pre><code>$ brew update
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ brew update
 $ brew upgrade ruby-build
-$ CONFIGURE_OPTS=&quot;--with-readline-dir=/usr/local --with-openssl-dir=/usr/local&quot; rbenv install 2.0.0-dev
-</code></pre>
-<h2 id="heading1">デフォルト使用設定</h2>
+$ CONFIGURE_OPTS=&#34;--with-readline-dir=/usr/local --with-openssl-dir=/usr/local&#34; rbenv install 2.0.0-dev</pre></td></tr></table>
+</div>
+</div>
+<h2 id="デフォルト使用設定">デフォルト使用設定</h2>
+
 <p>デフォルトで使用する Ruby のバージョンを決定します。</p>
-<pre><code>$ rbenv global VERSION_NUMBER
-$ rbenv versions # 確認
-</code></pre>
-<h2 id="ruby--gem-">Ruby や Gem のパスを通す</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><span class="lnt">1
+</span><span class="lnt">2
+</span></pre></td>
+<td class="lntd">
+<pre class="chroma">$ rbenv global VERSION_NUMBER
+$ rbenv versions # 確認</pre></td></tr></table>
+</div>
+</div>
+<h2 id="ruby-や-gem-のパスを通す">Ruby や Gem のパスを通す</h2>
+
 <p>rbenv の場合、インストールした Gem などを使う前に <code>$ rbenv rehash</code> としてパスを通してやる必要があります。
 ただ毎回これを行うのは面倒かつ忘れてしまうので、自動化します。
 <code>rbenv-rehash</code> という Gem をインストールするのも一つの方法ですが、シェルにラッパーを書いてあげるのがいいでしょう。</p>
+
 <p>『<a href="http://rhysd.hatenablog.com/entry/20120226/1330265121">rbenv で gem を使った時に rbenv rehash しなくて良くする</a>』が大変参考になります。</p>
 
     </div>

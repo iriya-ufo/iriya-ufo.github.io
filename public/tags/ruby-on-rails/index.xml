@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ruby on rails on iriya-ufo&#39;s blog</title>
@@ -44,7 +44,7 @@
       <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</guid>
-      <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 ローカ</description>
+      <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の</description>
     </item>
     
     <item>
@@ -71,7 +71,7 @@
       <pubDate>Sun, 12 May 2013 04:22:10 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2013/05/12/rails-update/</guid>
-      <description>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11</description>
+      <description>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート 1 2 3 $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート 1 2 3 $ sudo gem update</description>
     </item>
     
   </channel>
