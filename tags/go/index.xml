@@ -6,10 +6,19 @@
     <description>Recent content in go on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 08 Dec 2019 01:36:06 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 12 Dec 2019 12:36:22 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/go/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>「改訂2版 みんなのGo言語」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/12/12/mingo/</link>
+      <pubDate>Thu, 12 Dec 2019 12:36:22 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/12/mingo/</guid>
+      <description>幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている</description>
+    </item>
     
     <item>
       <title>VSCode に Go の開発環境を整える</title>
