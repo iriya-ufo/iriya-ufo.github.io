@@ -6,7 +6,7 @@ date: 2019-11-18T15:07:17+09:00
 lastmod: 2019-11-18T15:30:17+09:00
 comments: true
 categories:
-  - "programming"
+  - "review"
 tags:
   - "clean architecture"
 ---
