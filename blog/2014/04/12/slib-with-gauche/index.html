@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/04/12/slib-with-gauche/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-04-12T17:17:10+00:00" />
 <meta itemprop="name" content="Mac の Gauche で SLIB を使う">
 <meta itemprop="description" content="Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。 ここからダウンロードしてくれば使えるようになります。 The SLIB">
-
-
 <meta itemprop="datePublished" content="2014-04-12T17:17:10&#43;00:00" />
 <meta itemprop="dateModified" content="2014-04-12T17:17:10&#43;00:00" />
-<meta itemprop="wordCount" content="170">
+<meta itemprop="wordCount" content="166">
 
 
 
-<meta itemprop="keywords" content="gauche," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="gauche," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac の Gauche で SLIB を使う"/>
 <meta name="twitter:description" content="Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。 ここからダウンロードしてくれば使えるようになります。 The SLIB"/>
 
@@ -139,50 +136,33 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#インストール方法">インストール方法</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">インストール方法</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。</p>
-
+      <p>Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。</p>
 <p>ここからダウンロードしてくれば使えるようになります。</p>
-
 <p><a href="http://people.csail.mit.edu/jaffer/SLIB.html" title="SLIB" target="_blank">The SLIB Portable Scheme Library</a></p>
-
-<h2 id="インストール方法">インストール方法</h2>
-
+<h2 id="heading">インストール方法</h2>
 <p>Gauche デフォルトのライブラリパスにコピーしてあげるだけです。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ cd ~/Downloads
+<pre><code>$ cd ~/Downloads
 $ curl -O http://groups.csail.mit.edu/mac/ftpdir/scm/slib-3b4.zip
 $ unzip slib-3b4.zip
-$ cp -r slib /usr/local</pre></td></tr></table>
-</div>
-</div>
+$ cp -r slib /usr/local
+</code></pre>
 <p>これで、例えば以下のようにして Gauche で trace のデバッグができるようになりました。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">use</span> <span class="nv">slib</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;trace</span><span class="p">)</span></code></pre></td></tr></table>
+<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;trace</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

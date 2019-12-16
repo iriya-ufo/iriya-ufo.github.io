@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/03/14/lets-manage-gem/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-03-14T02:23:08+00:00" />
 <meta itemprop="name" content="gem を管理しよう">
 <meta itemprop="description" content="Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは $ gem install hoge とかやってるかと思います。そんな">
-
-
 <meta itemprop="datePublished" content="2014-03-14T02:23:08&#43;00:00" />
 <meta itemprop="dateModified" content="2014-03-14T02:23:08&#43;00:00" />
-<meta itemprop="wordCount" content="529">
+<meta itemprop="wordCount" content="524">
 
 
 
-<meta itemprop="keywords" content="ruby," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ruby," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="gem を管理しよう"/>
 <meta name="twitter:description" content="Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは $ gem install hoge とかやってるかと思います。そんな"/>
 
@@ -138,53 +135,26 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは <code>$ gem install hoge</code> とかやってるかと思います。そんなこんなでいろいろインストールするとぐちゃぐちゃになってきて Rails を動かし始めたらもう訳が分からなくなるでしょう。一つの環境でしか使わないならいいでしょうが、複数で同じ環境を構築したいなどとなると少し大変です。
 そこで bundler の出番です。bundler は gem パッケージの管理を依存関係の問題も含めて解決してくれます。</p>
-
 <p>まずは gem をアップデートしましょう。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ gem update --system</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ gem update --system
+</code></pre>
 <p>既存の gem が入ってぐちゃぐちゃになってる場合、全部綺麗に削除してしまいましょう。デフォルトではいる gem は削除できませんとメッセージが出るのでそれ以外を削除します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ gem uni $(gem li --no-versions)</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ gem uni $(gem li --no-versions)
+</code></pre>
 <p>bundler をインストールしましょう。他にも、これはシステム全体にインストールしてもいいかなと思うものは入れちゃってOKです。私は pry だけ入れました。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ gem i bundler
-$ gem i pry</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ gem i bundler
+$ gem i pry
+</code></pre>
 <p>あとはプロジェクト毎に入れたい gem を Gemfile というファイルに記述していけば大丈夫です。<code>$ bundle init</code> コマンドで Gemfile のひな形ができます。</p>
-
 <p>例えば Rails プロジェクトなどでは以下のようにして gem を管理するとよいでしょう。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ bundle install --path vendor/bundle --without production</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ bundle install --path vendor/bundle --without production
+</code></pre>
 <p>実行時は <code>$ bundle exec</code> をつけて実行してください。</p>
 
     </div>

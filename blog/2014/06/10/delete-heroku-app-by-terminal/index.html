@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/06/10/delete-heroku-app-by-terminal/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-06-10T01:35:28+00:00" />
 <meta itemprop="name" content="コマンドから Heroku アプリを削除">
 <meta itemprop="description" content="Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削">
-
-
 <meta itemprop="datePublished" content="2014-06-10T01:35:28&#43;00:00" />
 <meta itemprop="dateModified" content="2014-06-10T01:35:28&#43;00:00" />
-<meta itemprop="wordCount" content="183">
+<meta itemprop="wordCount" content="181">
 
 
 
-<meta itemprop="keywords" content="heroku," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="heroku," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="コマンドから Heroku アプリを削除"/>
 <meta name="twitter:description" content="Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削"/>
 
@@ -139,37 +136,24 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#heading">参考</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削除するのがオススメです。
+      <p>Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削除するのがオススメです。
 なお Heroku アプリを削除するとそのアプリで使っていたオプションなども根こそぎ削除されるので気をつけてください。</p>
-
 <p>以下のコマンドで削除できます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ heroku apps:info # アプリの確認
-$ heroku apps:destroy --app アプリ名</pre></td></tr></table>
-</div>
-</div>
-<h3 id="参考">参考</h3>
-
+<pre><code>$ heroku apps:info # アプリの確認
+$ heroku apps:destroy --app アプリ名
+</code></pre>
+<h3 id="heading">参考</h3>
 <p><a href="http://morizyun.github.io/blog/heroku-postgresql-useful-commands/">Heroku でよく使うコマンド一覧</a></p>
 
     </div>

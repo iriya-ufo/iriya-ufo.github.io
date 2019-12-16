@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/03/08/update-git-by-ubuntu/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-03-08T15:16:11+00:00" />
 <meta itemprop="name" content="Ubuntu の git を最新にする">
 <meta itemprop="description" content="Ubuntu への git インストールは apt-get で出来ますがバージョンが古いので最新バージョンをインストールする方法です。ソースコンパイルは行わずパッケージマネジャ">
-
-
 <meta itemprop="datePublished" content="2014-03-08T15:16:11&#43;00:00" />
 <meta itemprop="dateModified" content="2014-03-08T15:16:11&#43;00:00" />
-<meta itemprop="wordCount" content="94">
+<meta itemprop="wordCount" content="91">
 
 
 
-<meta itemprop="keywords" content="git," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="git," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Ubuntu の git を最新にする"/>
 <meta name="twitter:description" content="Ubuntu への git インストールは apt-get で出来ますがバージョンが古いので最新バージョンをインストールする方法です。ソースコンパイルは行わずパッケージマネジャ"/>
 
@@ -138,23 +135,16 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>Ubuntu への git インストールは apt-get で出来ますがバージョンが古いので最新バージョンをインストールする方法です。ソースコンパイルは行わずパッケージマネジャーで管理します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo apt-add-repository ppa:git-core/ppa
+<pre><code>$ sudo apt-add-repository ppa:git-core/ppa
 $ sudo apt-get update
-$ sudo sudo apt-get upgrade</pre></td></tr></table>
-</div>
-</div>
+$ sudo sudo apt-get upgrade
+</code></pre>
+
     </div>
 
     <div class="post-copyright">

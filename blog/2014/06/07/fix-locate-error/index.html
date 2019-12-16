@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/06/07/fix-locate-error/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-06-07T22:35:26+00:00" />
 <meta itemprop="name" content="Mac OS X で locate エラーの直し方">
 <meta itemprop="description" content="Linux でお世話になってるファイルを探すコマンドの locate ですが、当然 Mac にもあります。 しかしデータベースを更新するコマンドが違ってて Linux だと updatedb ですが Mac は /usr/libexec/locate.updatedb">
-
-
 <meta itemprop="datePublished" content="2014-06-07T22:35:26&#43;00:00" />
 <meta itemprop="dateModified" content="2014-06-07T22:35:26&#43;00:00" />
-<meta itemprop="wordCount" content="456">
+<meta itemprop="wordCount" content="444">
 
 
 
-<meta itemprop="keywords" content="unix," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="unix," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac OS X で locate エラーの直し方"/>
 <meta name="twitter:description" content="Linux でお世話になってるファイルを探すコマンドの locate ですが、当然 Mac にもあります。 しかしデータベースを更新するコマンドが違ってて Linux だと updatedb ですが Mac は /usr/libexec/locate.updatedb"/>
 
@@ -138,7 +135,7 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
@@ -146,46 +143,23 @@
 しかしデータベースを更新するコマンドが違ってて Linux だと <code>updatedb</code> ですが Mac は <code>/usr/libexec/locate.updatedb</code> になります。
 毎回コマンドを打つのはたるいのでエイリアスを張っていたのですが、あるときうまくDBが更新されていないようだと気づきました。
 こんなエラーがでます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ updatedb 
+<pre><code>$ updatedb 
 Password:
-mktemp: too few X&#39;s in template ‘updatedb’
+mktemp: too few X's in template ‘updatedb’
 chown: missing operand after ‘nobody’
-Try &#39;chown --help&#39; for more information.
+Try 'chown --help' for more information.
 shell-init: error retrieving current directory: getcwd: cannot access parent directories: Permission denied
 shell-init: error retrieving current directory: getcwd: cannot access parent directories: Permission denied
 shell-init: error retrieving current directory: getcwd: cannot access parent directories: Permission denied
 /usr/libexec/locate.updatedb: line 97: /var/db/locate.database: Permission denied
 rm: missing operand
-Try &#39;rm --help&#39; for more information.</pre></td></tr></table>
-</div>
-</div>
+Try 'rm --help' for more information.
+</code></pre>
 <p>こいつの原因は GNU 由来の mktemp が Mac デフォルトの mktemp と動作が違うためのエラーのようです。そういえば coreutils をインストールしたんでした。</p>
-
 <p>いくつか解決策は考えられそうです。もしかしたら他のコマンドも GNU と BSD の違いで気付かずにエラーが発生してる可能性がありそうなので、GNU コマンドを使いたい場合はコマンドの先頭に <code>g</code> を明示的につけて実行することにします。
 ということで今まで設定していた以下の一行を消すことにしました。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH</pre></td></tr></table>
-</div>
-</div>
+<pre><code>export PATH=/usr/local/opt/coreutils/libexec/gnubin:$PATH
+</code></pre>
 <p>これで無事解決です。</p>
 
     </div>

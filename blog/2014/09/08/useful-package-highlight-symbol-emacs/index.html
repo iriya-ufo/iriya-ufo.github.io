@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/09/08/useful-package-highlight-symbol-emacs/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-09-08T16:01:00+00:00" />
 <meta itemprop="name" content="highlight-symbol が便利">
 <meta itemprop="description" content="ちょっとした事なんですが、プログラムを書いてると、「このシンボルを目立つようにマーク付けしておきたいなぁ」なんて思うことがあります。関数とか">
-
-
 <meta itemprop="datePublished" content="2014-09-08T16:01:00&#43;00:00" />
 <meta itemprop="dateModified" content="2014-09-08T16:01:00&#43;00:00" />
 <meta itemprop="wordCount" content="247">
 
 
 
-<meta itemprop="keywords" content="emacs," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="emacs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="highlight-symbol が便利"/>
 <meta name="twitter:description" content="ちょっとした事なんですが、プログラムを書いてると、「このシンボルを目立つようにマーク付けしておきたいなぁ」なんて思うことがあります。関数とか"/>
 
@@ -138,16 +135,15 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>ちょっとした事なんですが、プログラムを書いてると、「このシンボルを目立つようにマーク付けしておきたいなぁ」なんて思うことがあります。関数とか変数とか関係なくちょこっとマークしてそれを常にハイライトしておくんですね。<code>highlight-symbol</code> を使うとこれが実現できそうです。</p>
-
 <p>パッケージリストにあるのでさくっとインストールして下記を <code>.elisp</code> などに書いておけば動きます。(キーバインドはお好みで)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -157,10 +153,11 @@
 <td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;highlight-symbol</span><span class="p">)</span>
 <span class="c1">;; 使いたい色を設定、repeat してくれる</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">highlight-symbol-colors</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;DarkOrange&#34;</span> <span class="s">&#34;DodgerBlue1&#34;</span> <span class="s">&#34;DeepPink1&#34;</span><span class="p">))</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">highlight-symbol-colors</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;DarkOrange&#34;</span> <span class="s">&#34;DodgerBlue1&#34;</span> <span class="s">&#34;DeepPink1&#34;</span><span class="p">)</span><span class="p">)</span>
 <span class="c1">;; キーバインドの設定</span>
 <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-o&#34;</span><span class="p">)</span> <span class="ss">&#39;highlight-symbol-at-point</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-C-o&#34;</span><span class="p">)</span> <span class="ss">&#39;highlight-symbol-remove-all</span><span class="p">)</span></code></pre></td></tr></table>
+<span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-C-o&#34;</span><span class="p">)</span> <span class="ss">&#39;highlight-symbol-remove-all</span><span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
 </div>
     </div>

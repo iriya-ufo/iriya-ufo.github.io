@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2013-09-18T21:35:15+00:00" />
 <meta itemprop="name" content="i-node が枯渇してファイルの作成ができなくなった件">
 <meta itemprop="description" content="久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく">
-
-
 <meta itemprop="datePublished" content="2013-09-18T21:35:15&#43;00:00" />
 <meta itemprop="dateModified" content="2013-09-18T21:35:15&#43;00:00" />
-<meta itemprop="wordCount" content="635">
+<meta itemprop="wordCount" content="622">
 
 
 
-<meta itemprop="keywords" content="ubuntu," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="ubuntu," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="i-node が枯渇してファイルの作成ができなくなった件"/>
 <meta name="twitter:description" content="久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく"/>
 
@@ -138,83 +135,45 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
       <p>久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。
 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。</p>
-
 <p>Ubuntu はよくできているので、エラーメッセージに出るコマンドの通りに打つとたいてい治ります、が今回は無理でした。</p>
-
-<p>再度でたエラーメッセージは&rdquo;デバイスに空き領域がありません&rdquo;。
+<p>再度でたエラーメッセージは&quot;デバイスに空き領域がありません&rdquo;。
 あれ、HDDには十分な空き領域があるのになんでだろう。</p>
-
 <p>結果、i-node が枯渇してることが分かりました。
 私の Ubuntu は、ずーーーーっとアップデートで対応してきたので相当ムダなファイルが多いのでしょう。</p>
-
 <p>ちなみに i-node は <code>$ df -i</code> と打つことで調べられます。</p>
-
 <p>どこに大量のファイルがあるのか以下のコマンドで調査していきます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo find . -xdev -type f | cut -d &#34;/&#34; -f 2 | sort | uniq -c | sort -n</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ sudo find . -xdev -type f | cut -d &quot;/&quot; -f 2 | sort | uniq -c | sort -n
+</code></pre>
 <p>結果、こんな場所に大量のファイルが・・・</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">/lib/modules
+<pre><code>/lib/modules
 /usr/src
 /tmp
-/var/log</pre></td></tr></table>
-</div>
-</div>
+/var/log
+</code></pre>
 <p>原因は昔のカーネルが残っていたことでした。
 2.6系のカーネルなんか残してても意味ないですね。
 ほとんど削除することで i-node の領域が確保できました。
 ちなみに i-node 100% から 35% に減少しました。</p>
-
 <p>これで apt-get できる！と思ったらまたエラー発生です。
 apt/lists のパッケージのハッシュ値が違うと怒られました。
 以下のコマンドで直せます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo apt-get clean
+<pre><code>$ sudo apt-get clean
 $ cd /var/lib/apt
 $ sudo mv lists lists.old
 $ sudo mkdir -p lists/partial
 $ sudo apt-get clean
-$ sudo apt-get update</pre></td></tr></table>
-</div>
-</div>
+$ sudo apt-get update
+</code></pre>
 <p>そして最新のカーネルを強制インストールすることで作業完了です。
 またカーネル更新すると必ず virtualbox の更新もしないといけないので(もしインストールしてたらね)更新します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ sudo apt-get install virtualbox-dkms --reinstall</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ sudo apt-get install virtualbox-dkms --reinstall
+</code></pre>
 <p>これで終わり！</p>
 
     </div>
