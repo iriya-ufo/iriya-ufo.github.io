@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>hugo on iriya-ufo&#39;s blog</title>
@@ -6,10 +6,19 @@
     <description>Recent content in hugo on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 27 Dec 2018 10:17:23 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 11:56:34 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Hugo でインライン HTML が表示されなくなった</title>
+      <link>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</link>
+      <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</guid>
+      <description>基本的に Hugo でブログを書くときは markdown を利用して書いています。 ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記</description>
+    </item>
     
     <item>
       <title>Octopress から Hugo へ移行した</title>

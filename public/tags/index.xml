@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on iriya-ufo&#39;s blog</title>
@@ -6,10 +6,19 @@
     <description>Recent content in Tags on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 12 Dec 2019 12:36:22 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2019 11:56:34 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo</title>
+      <link>https://iriya-ufo.net/tags/hugo/</link>
+      <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>go</title>
@@ -170,15 +179,6 @@
       <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/tags/percol/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://iriya-ufo.net/tags/hugo/</link>
-      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/hugo/</guid>
       <description></description>
     </item>
     

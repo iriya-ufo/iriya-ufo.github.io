@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/ml/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2018-12-20T12:41:52+08:00" />
 <meta itemprop="name" content="機械学習とかの関連まとめ">
 <meta itemprop="description" content="機械学習とかの関連まとめ 機械学習の基礎も分からない状態から、スクラッチで勉強を始めて深層学習をマスターするまでの記録。 始めた段階のスキルセッ">
-
-
 <meta itemprop="datePublished" content="2018-12-20T12:38:52&#43;08:00" />
 <meta itemprop="dateModified" content="2018-12-20T12:41:52&#43;08:00" />
 <meta itemprop="wordCount" content="1083">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="機械学習とかの関連まとめ"/>
 <meta name="twitter:description" content="機械学習とかの関連まとめ 機械学習の基礎も分からない状態から、スクラッチで勉強を始めて深層学習をマスターするまでの記録。 始めた段階のスキルセッ"/>
 
@@ -123,121 +120,85 @@
         <div id="content" class="content">
           <article class="post">
   <div class="post-content">
-    
-
-<h1 id="機械学習とかの関連まとめ">機械学習とかの関連まとめ</h1>
-
+    <h1 id="heading">機械学習とかの関連まとめ</h1>
 <p>機械学習の基礎も分からない状態から、スクラッチで勉強を始めて深層学習をマスターするまでの記録。</p>
-
 <p>始めた段階のスキルセットは以下。</p>
-
 <ul>
 <li>ネットワークと UNIX サーバー周りの知識が趣味レベルである</li>
 <li>Rails エンジニア歴二年くらい</li>
 <li>低レイヤー言語や Python 経験は無し</li>
 <li>高校レベル数学は分かるが大学レベルは無理</li>
 </ul>
-
 <p>やりたいことおよびゴールは以下。</p>
-
 <ul>
 <li>機械学習関連における理論の理解とアルゴリズムの実装</li>
 <li>面白くて有用なプロダクトを一つ作る (音声認識と自然言語処理あたりを考え中)</li>
 </ul>
-
-<h2 id="人工知能への入り口">人工知能への入り口</h2>
-
+<h2 id="heading-1">人工知能への入り口</h2>
 <p>人工知能という言葉は人によって定義があいまいな場合があります。
 何がすごくてどういったことができるようになるのか、俯瞰した知識をいれるために以下の本をオススメします。
 数式などもなくて一般の人にも読みやすい本です。</p>
-
 <ul>
 <li><a href="https://www.amazon.co.jp/%E4%BA%BA%E5%B7%A5%E7%9F%A5%E8%83%BD%E3%81%AF%E4%BA%BA%E9%96%93%E3%82%92%E8%B6%85%E3%81%88%E3%82%8B%E3%81%8B-%E8%A7%92%E5%B7%9D%EF%BC%A5%EF%BC%B0%EF%BC%B5%EF%BC%A2%E9%81%B8%E6%9B%B8-%E6%9D%BE%E5%B0%BE-%E8%B1%8A-ebook/dp/B00UAAK07S?ie=UTF8&amp;btkr=1&amp;ref_=dp-kindle-redirect">人工知能は人間を超えるか</a></li>
 <li><a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01M3OH87R/iriyaufo-22/ref=nosim/">よくわかる人工知能　最先端の人だけが知っているディープラーニングのひみつ</a></li>
 <li><a href="https://www.amazon.co.jp/dp/B01M07JC4Y/iriya-ufo22/ref=dp-kindle-redirect?_encoding=UTF8&amp;btkr=1">コンピューターで脳がつくれるか</a></li>
 </ul>
-
-<h2 id="ハードウェア構築">ハードウェア構築</h2>
-
+<h2 id="heading-2">ハードウェア構築</h2>
 <p>機械学習をさせるための計算資源は、普通のノートPCではまだまだ不十分です。そこで演算専用マシンを作ります。
 コスパ的には20万円くらいかければちょうどいいと思います。それより必要ならスペックアップするか企業に借りるかクラウドを使うといいでしょう。</p>
-
 <ul>
 <li><a href="/blog/2016/11/09/hardware-architecture-for-machine-learning/">Hardware Architecture for Machine Learning</a></li>
 </ul>
-
-<h2 id="開発環境構築">開発環境構築</h2>
-
+<h2 id="heading-3">開発環境構築</h2>
 <ul>
 <li><a href="/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/">Deep Learning Machine に Ubuntu のインストール</a></li>
 <li><a href="/blog/2016/11/19/tensorflow-running-by-gpu/">TensorFlow を GPU で動かす</a></li>
 <li><a href="/blog/2016/11/18/pyenv-and-anaconda-on-docker/">Docker コンテナに anaconda 環境を構築</a></li>
 <li><a href="/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/">Docker 版 Jupyter Notebooks でホストとデータを共有する</a></li>
 </ul>
-
-<h2 id="python-入門">Python 入門</h2>
-
+<h2 id="python-">Python 入門</h2>
 <p>機械学習では Python を使うことが多いので、初めて触る場合はざっと調べておくといいです。</p>
-
 <ul>
 <li><a href="http://docs.python.jp/3/tutorial/index.html">Python チュートリアル</a> &mdash; 他言語にて開発経験のある方向け</li>
 </ul>
-
-<h2 id="機械学習基礎">機械学習基礎</h2>
-
+<h2 id="heading-4">機械学習基礎</h2>
 <ul>
 <li><a href="/blog/2016/11/19/ml-and-math/">機械学習と数学</a></li>
 </ul>
-
-<h2 id="人工知能関連リンク集">人工知能関連リンク集</h2>
-
+<h2 id="heading-5">人工知能関連リンク集</h2>
 <p>個人的に役に立った記事のリンクをまとめておきます。</p>
-
-<h3 id="ツール">ツール</h3>
-
+<h3 id="heading-6">ツール</h3>
 <ul>
 <li><a href="http://playground.tensorflow.org/?utm_medium=email&amp;utm_campaign=2017-01-19_dlnd_jan27notice&amp;utm_source=blueshift&amp;utm_content=2017-01-19_dlnd_jan27notice&amp;bsft_eid=1baa362f-396f-472d-b3f6-ff1eba51866f&amp;bsft_clkid=97244f60-6a5c-4cd7-b813-01ab7a1c3e8c&amp;bsft_uid=1ee6c9a9-f40a-4d8e-93b4-fa8d149d91bd&amp;bsft_mid=013e8172-2a69-480b-881a-7cac7bb4fb8d#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,2&amp;seed=0.89574&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=false&amp;xSquared=false&amp;ySquared=false&amp;cosX=false&amp;sinX=false&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false">Neural Network Playground</a></li>
 <li><a href="https://my.datascientistworkbench.com/">IBM Data Scientist Workbench</a></li>
 </ul>
-
-<h3 id="オープンデータ">オープンデータ</h3>
-
+<h3 id="heading-7">オープンデータ</h3>
 <ul>
 <li><a href="https://docs.google.com/spreadsheets/d/1AQvZ7-Kg0lSZtG1wlgbIsrm90HaTZrJGQMz-uKRRlFw/edit#gid=0">Dataset for machine learning</a></li>
 </ul>
-
-<h3 id="数学関連">数学関連</h3>
-
+<h3 id="heading-8">数学関連</h3>
 <ul>
-<li><a href="http://tutorial.math.lamar.edu/cheat_table.aspx">Paul&rsquo;s Online Math Notes</a></li>
+<li><a href="http://tutorial.math.lamar.edu/cheat_table.aspx">Paul's Online Math Notes</a></li>
 </ul>
-
-<h3 id="チートシート">チートシート</h3>
-
+<h3 id="heading-9">チートシート</h3>
 <ul>
 <li><a href="https://tensorflowkorea.files.wordpress.com/2017/01/pandaspythonfordatascience.png">Python for Data Science Cheat Sheet Pandas Basic</a></li>
 <li><a href="https://quizlet.com/158702343/deep-learning-glossary-flash-cards/">Deep Learning Glossary</a></li>
 </ul>
-
-<h3 id="機械学習編">機械学習編</h3>
-
+<h3 id="heading-10">機械学習編</h3>
 <ul>
 <li><a href="https://www.coursera.org/learn/machine-learning">Coursera Machine Learning</a></li>
 <li><a href="https://www.udemy.com/python-jp/">実践Pytonデータサイエンス</a></li>
 <li><a href="http://www.tsjshg.info/udemy/notebooks.html">実践Pytonデータサイエンス資料</a></li>
 </ul>
-
-<h3 id="deep-learning-概念編">Deep Learning 概念編</h3>
-
+<h3 id="deep-learning-">Deep Learning 概念編</h3>
 <ul>
 <li><a href="https://medium.com/@ageitgey/machine-learning-is-fun-80ea3ec3c471?bsft_eid=1baa362f-396f-472d-b3f6-ff1eba51866f&amp;bsft_clkid=1dba58e0-ba08-44d9-a990-140eabca0f08&amp;bsft_uid=1ee6c9a9-f40a-4d8e-93b4-fa8d149d91bd&amp;bsft_mid=013e8172-2a69-480b-881a-7cac7bb4fb8d#.1je1dhv23">Machine Learning is Fun!</a></li>
 <li><a href="http://qiita.com/icoxfog417/items/242439ecd1a477ece312">【Qiita】ゼロからDeepまで学ぶ強化学習</a></li>
 <li><a href="http://qiita.com/icoxfog417/items/65e800c3a2094457c3a0">【Qiita】はじめるDeep learning</a></li>
 <li><a href="http://postd.cc/how-do-convolutional-neural-networks-work/">畳み込みニューラルネットワークの仕組み</a></li>
 </ul>
-
-<h3 id="deep-learning-チュートリアル">Deep Learning チュートリアル</h3>
-
+<h3 id="deep-learning--1">Deep Learning チュートリアル</h3>
 <ul>
 <li><a href="http://www.deeplearningbook.org/">Deep Learning</a></li>
 <li><a href="http://deeplearning.net/tutorial/">Deep Learning Tutorials</a></li>
@@ -245,9 +206,7 @@
 <li><a href="http://gigazine.net/news/20170127-learning-tensorflow-3hours/">Googleの開発者が作った3時間でディープラーニング(深層学習)をスライドとムービーで学べる集中レッスン</a></li>
 <li><a href="http://weblab.t.u-tokyo.ac.jp/deep-learning%E5%9F%BA%E7%A4%8E%E8%AC%9B%E5%BA%A7%E6%BC%94%E7%BF%92%E3%82%B3%E3%83%B3%E3%83%86%E3%83%B3%E3%83%84-%E5%85%AC%E9%96%8B%E3%83%9A%E3%83%BC%E3%82%B8/">Deep Learning基礎講座演習コンテンツ 公開ページ</a></li>
 </ul>
-
-<h3 id="deep-learning-ライブラリ編">Deep Learning ライブラリ編</h3>
-
+<h3 id="deep-learning--2">Deep Learning ライブラリ編</h3>
 <ul>
 <li><a href="http://qiita.com/icoxfog417/items/96ecaff323434c8d677b">【Qiita】Chainerで始めるニューラルネットワーク</a></li>
 <li><a href="http://qiita.com/jintaka1989/items/3b70b5c5541620536fa2">【Qiita】TensorFlowのチュートリアルを通して、人工知能の原理について学習する</a></li>

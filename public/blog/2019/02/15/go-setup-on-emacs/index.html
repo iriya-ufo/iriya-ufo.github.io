@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2019-02-15T11:35:19+09:00" />
 <meta itemprop="name" content="Emacs に Go の開発環境を整える">
 <meta itemprop="description" content="Mac で Go をサクッとはじめるための手引書 Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go Go Package のインストール 1 2 3 4 5 $ go get github.com/rogpeppe/godef">
-
-
 <meta itemprop="datePublished" content="2019-02-15T11:35:19&#43;09:00" />
 <meta itemprop="dateModified" content="2019-02-15T11:35:19&#43;09:00" />
 <meta itemprop="wordCount" content="334">
 
 
 
-<meta itemprop="keywords" content="go," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="go," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs に Go の開発環境を整える"/>
 <meta name="twitter:description" content="Mac で Go をサクッとはじめるための手引書 Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go Go Package のインストール 1 2 3 4 5 $ go get github.com/rogpeppe/godef"/>
 
@@ -138,26 +135,15 @@
     <div class="post-toc" id="post-toc">
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
-    <nav id="TableOfContents">
-<ul>
-<li><a href="#go-のインストール">Go のインストール</a></li>
-<li><a href="#go-package-のインストール">Go Package のインストール</a></li>
-<li><a href="#emacs-go-package-のインストール">Emacs Go Package のインストール</a></li>
-<li><a href="#elisp-の設定">Elisp の設定</a></li>
-<li><a href="#参考サイト">参考サイト</a></li>
-</ul>
-</nav>
+    <nav id="TableOfContents"></nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p>Mac で Go をサクッとはじめるための手引書</p>
-
-<h1 id="go-のインストール">Go のインストール</h1>
+      <p>Mac で Go をサクッとはじめるための手引書</p>
+<h1 id="go-">Go のインストール</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -174,13 +160,13 @@
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
 
 <span class="c1"># Install</span>
-brew install go</code></pre></td></tr></table>
+brew install go
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="go-package-のインストール">Go Package のインストール</h1>
+</div><h1 id="go-package-">Go Package のインストール</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -191,17 +177,15 @@ brew install go</code></pre></td></tr></table>
 $ go get -u github.com/nsf/gocode                <span class="c1"># 補完パッケージ</span>
 $ go get -v github.com/uudashr/gopkgs/cmd/gopkgs <span class="c1"># Go パッケージ</span>
 $ go get github.com/golang/lint/golint           <span class="c1"># flycheckでシンタックスエラーを検知</span>
-$ go get github.com/kisielk/errcheck             <span class="c1"># flycheckでシンタックスエラーを検知</span></code></pre></td></tr></table>
+$ go get github.com/kisielk/errcheck             <span class="c1"># flycheckでシンタックスエラーを検知</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="emacs-go-package-のインストール">Emacs Go Package のインストール</h1>
-
+</div><h1 id="emacs-go-package-">Emacs Go Package のインストール</h1>
 <p>Emacs のパッケージ管理は Cask を使っているものとする</p>
-
 <p>以下を Caskfile に追加して <code>cask install</code> する</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -212,13 +196,13 @@ $ go get github.com/kisielk/errcheck             <span class="c1"># flycheckで�
 <span class="o">(</span>depends-on <span class="s2">&#34;go-mode&#34;</span><span class="o">)</span>
 <span class="o">(</span>depends-on <span class="s2">&#34;company-go&#34;</span><span class="o">)</span>
 <span class="o">(</span>depends-on <span class="s2">&#34;go-eldoc&#34;</span><span class="o">)</span>
-<span class="o">(</span>depends-on <span class="s2">&#34;go-autocomplete&#34;</span><span class="o">)</span></code></pre></td></tr></table>
+<span class="o">(</span>depends-on <span class="s2">&#34;go-autocomplete&#34;</span><span class="o">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="elisp-の設定">Elisp の設定</h1>
+</div><h1 id="elisp-">Elisp の設定</h1>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -241,23 +225,22 @@ $ go get github.com/kisielk/errcheck             <span class="c1"># flycheckで�
 <span class="c1">;;================================================================</span>
 <span class="c1">;; Go</span>
 <span class="c1">;;================================================================</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;exec-path-from-shell&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;go-mode&#34;</span><span class="p">))</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;</span><span class="s">exec-path-from-shell</span><span class="s">&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;</span><span class="s">go-mode</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;exec-path-from-shell</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">envs</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;PATH&#34;</span> <span class="s">&#34;GOPATH&#34;</span><span class="p">)))</span>
-    <span class="p">(</span><span class="nv">exec-path-from-shell-copy-envs</span> <span class="nv">envs</span><span class="p">))</span>
+  <span class="p">(</span><span class="nb">let</span> <span class="p">(</span><span class="p">(</span><span class="nv">envs</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;</span><span class="s">PATH</span><span class="s">&#34;</span> <span class="s">&#34;</span><span class="s">GOPATH</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+    <span class="p">(</span><span class="nv">exec-path-from-shell-copy-envs</span> <span class="nv">envs</span><span class="p">)</span><span class="p">)</span>
   <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;go-autocomplete</span><span class="p">)</span>
   <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span>
-            <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+            <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="p">)</span>
               <span class="p">(</span><span class="nb">setq</span> <span class="nv">indent-tabs-mode</span> <span class="no">t</span><span class="p">)</span>
               <span class="p">(</span><span class="nv">go-eldoc-setup</span><span class="p">)</span>
-              <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
+              <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;</span><span class="s">goimports</span><span class="s">&#34;</span><span class="p">)</span>
               <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
-              <span class="p">))</span>
-  <span class="p">)</span></code></pre></td></tr></table>
+              <span class="p">)</span><span class="p">)</span>
+  <span class="p">)</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h1 id="参考サイト">参考サイト</h1>
-
+</div><h1 id="heading">参考サイト</h1>
 <ul>
 <li><a href="https://qiita.com/kod314/items/2232d480411c5c2ab002">emacsで快適なGo言語ライフを送るための設定</a></li>
 <li><a href="http://emacs-jp.github.io/programming/golang.html">Goプログラミングの環境構築</a></li>

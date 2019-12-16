@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/11/28/ghq-setup/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2019-11-28T21:37:07+09:00" />
 <meta itemprop="name" content="リポジトリ管理ツール ghq を導入した">
 <meta itemprop="description" content="TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理してますか? 自分は今まで ~/project 配下に適当に突っ込んでやってきました。 Go を触り始めて、プロジェク">
-
-
 <meta itemprop="datePublished" content="2019-11-28T21:37:07&#43;09:00" />
 <meta itemprop="dateModified" content="2019-11-28T21:37:07&#43;09:00" />
 <meta itemprop="wordCount" content="745">
 
 
 
-<meta itemprop="keywords" content="go,ghq," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="go,ghq," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="リポジトリ管理ツール ghq を導入した"/>
 <meta name="twitter:description" content="TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理してますか? 自分は今まで ~/project 配下に適当に突っ込んでやってきました。 Go を触り始めて、プロジェク"/>
 
@@ -139,99 +136,79 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#go-の設定">Go の設定</a></li>
-<li><a href="#ghq-のインストール">ghq のインストール</a></li>
-<li><a href="#ghq-root-の設定">ghq root の設定</a></li>
-<li><a href="#ghq-と-fzf">ghq と fzf</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#go-">Go の設定</a></li>
+    <li><a href="#ghq-">ghq のインストール</a></li>
+    <li><a href="#ghq-root-">ghq root の設定</a></li>
+    <li><a href="#ghq--fzf">ghq と fzf</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<p><a href="https://qiita.com/advent-calendar/2019/tech-commit">TechCommit Advent Calendar 2019</a> 12日目の記事です。</p>
-
+      <p><a href="https://qiita.com/advent-calendar/2019/tech-commit">TechCommit Advent Calendar 2019</a> 12日目の記事です。</p>
 <p>リポジトリきちんと管理してますか?</p>
-
 <p>自分は今まで <code>~/project</code> 配下に適当に突っ込んでやってきました。</p>
-
 <p>Go を触り始めて、プロジェクト管理を Go っぽくやりたくなったのですが、さすがにあの構成は覚えきれない。
 そんなとき <code>ghq</code> というツールを使うことで簡単に実現できそうだと分かったの導入してみました。</p>
-
 <p>ghq は本来 Go とは関係なくリポジトリの管理ツールとして使えるのですが Go と共存させようと思うとちょっと考えなくちゃいけないことがあります。</p>
-
 <p>何に気をつけたらいいかはこちらで丁寧に解説してくれているので説明は省きます。</p>
-
 <ul>
 <li><a href="https://qiita.com/chez-shanpu/items/02c8babc3b94d82d4f61">ghqを用いたgo言語のリポジトリ管理方法について考える</a></li>
 </ul>
-
 <p>いろんな人の設定をみると <code>go get</code> と <code>ghq get</code> を使い分けてるという人と <code>ghq root</code> を <code>$GOPATH/src</code> に設定してすべて同じように管理している人、と2パターンに分かれている感じがしました。</p>
-
 <p>自分は <code>$GOPATH/src</code> に Go と関係のないリポジトリが入ってくるのは微妙な感じがしたので使い分けることにしました。</p>
-
-<h2 id="go-の設定">Go の設定</h2>
-
+<h2 id="go-">Go の設定</h2>
 <p>Go については特段変わったことはしません。以下のよくある <code>$GOPATH</code> を設定するだけです。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin</code></pre></td></tr></table>
+<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>パッケージも通常通り <code>go get</code> で取ってくるようにします。</p>
-
-<h2 id="ghq-のインストール">ghq のインストール</h2>
+</div><p>パッケージも通常通り <code>go get</code> で取ってくるようにします。</p>
+<h2 id="ghq-">ghq のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">$ go get github.com/motemen/ghq</pre></td></tr></table>
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ go get github.com/motemen/ghq
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Mac だと <code>brew install ghq</code> でも大丈夫です。</p>
-
-<h2 id="ghq-root-の設定">ghq root の設定</h2>
-
+</div><p>Mac だと <code>brew install ghq</code> でも大丈夫です。</p>
+<h2 id="ghq-root-">ghq root の設定</h2>
 <p>ghq root は複数設定することができるので、以下のように設定します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-shell" data-lang="shell">$ git config --global --add ghq.root <span class="nv">$HOME</span>/.ghq
-$ git config --global --add ghq.root <span class="nv">$GOPATH</span>/src</code></pre></td></tr></table>
+$ git config --global --add ghq.root <span class="nv">$GOPATH</span>/src
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>そうすると <code>~/.gitconfig</code> に以下が追記されているはずです。</p>
+</div><p>そうすると <code>~/.gitconfig</code> に以下が追記されているはずです。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
-</span></pre></td>
+</span></code></pre></td>
 <td class="lntd">
-<pre class="chroma">[ghq]
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">[ghq]
        root = /Users/your-name/.ghq
-       root = /Users/your-name/.go/src</pre></td></tr></table>
+       root = /Users/your-name/.go/src
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>これで ghq は <code>~/.ghq</code> と <code>~/.go</code> の両方が見えるようになります。
+</div><p>これで ghq は <code>~/.ghq</code> と <code>~/.go</code> の両方が見えるようになります。
 通常のリポジトリは <code>ghq get</code> で取ってきて Go のリポジトリは <code>go get</code> で取ってくるという使い分けをします。</p>
-
-<h2 id="ghq-と-fzf">ghq と fzf</h2>
-
+<h2 id="ghq--fzf">ghq と fzf</h2>
 <p>ghq はフィルタリングツールと組み合わせることで真価を発揮します。
 peco を設定している人が多いですが、自分は fzf と連携させています。
 連携の詳細については<a href="/blog/2019/01/16/percol-to-fzf/">こちらの記事</a>を参照してください。</p>

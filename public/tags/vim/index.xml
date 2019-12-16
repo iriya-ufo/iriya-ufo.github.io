@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vim on iriya-ufo&#39;s blog</title>
@@ -17,7 +17,7 @@
       <pubDate>Thu, 04 Dec 2014 18:58:13 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</guid>
-      <description>自分のための覚書 編集 1 2 3 4 5 6 7 8 9 10 11 :%s/:\(\w\+\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl+v jjjj I # 4行コメントアウト(,#) Ctrl+v jjjj d # 4行コメントイン(,#)</description>
+      <description>自分のための覚書 編集 :%s/:\(\w\+\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl+v jjjj I # 4行コメントアウト(,#) Ctrl+v jjjj d # 4行コメントイン(,#) Ctrl+v jjjj c aaaa # 4行置換 viwy #</description>
     </item>
     
   </channel>

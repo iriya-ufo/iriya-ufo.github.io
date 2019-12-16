@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2014-09-07T17:32:36+00:00" />
 <meta itemprop="name" content="Sinatra アプリを Heroku で動かすまで">
 <meta itemprop="description" content="環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま">
-
-
 <meta itemprop="datePublished" content="2014-09-07T17:32:36&#43;00:00" />
 <meta itemprop="dateModified" content="2014-09-07T17:32:36&#43;00:00" />
-<meta itemprop="wordCount" content="1572">
+<meta itemprop="wordCount" content="1562">
 
 
 
-<meta itemprop="keywords" content="heroku,sinatra," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="heroku,sinatra," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sinatra アプリを Heroku で動かすまで"/>
 <meta name="twitter:description" content="環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま"/>
 
@@ -139,43 +136,35 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#環境">環境</a></li>
-<li><a href="#初期設定">初期設定</a></li>
-<li><a href="#heroku-で動かすために">Heroku で動かすために</a></li>
-<li><a href="#ローカルで動作確認">ローカルで動作確認</a></li>
-<li><a href="#heroku-にデプロイ">Heroku にデプロイ</a></li>
-<li><a href="#postgresql-を使う">PostgreSQL を使う</a></li>
-<li><a href="#データベースに接続">データベースに接続</a></li>
-<li><a href="#再度-heroku-にデプロイ">再度 Heroku にデプロイ</a></li>
-<li><a href="#参考">参考</a></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#heading">環境</a></li>
+    <li><a href="#heading-1">初期設定</a></li>
+    <li><a href="#heroku-">Heroku で動かすために</a></li>
+    <li><a href="#heading-2">ローカルで動作確認</a></li>
+    <li><a href="#heroku--1">Heroku にデプロイ</a></li>
+    <li><a href="#postgresql-">PostgreSQL を使う</a></li>
+    <li><a href="#heading-3">データベースに接続</a></li>
+    <li><a href="#-heroku-">再度 Heroku にデプロイ</a></li>
+    <li><a href="#heading-4">参考</a></li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="環境">環境</h2>
-
-<p>以下のような環境で動かします。
+      <h2 id="heading">環境</h2>
+<p>以下のような環境で動かします。</p>
 <ul>
   <li>Sinatra</li>
   <li>Heroku</li>
   <li>PostgreSQL</li>
   <li>Unicorn</li>
   <li>ActiveRecord</li>
-</ul></p>
-
-<h2 id="初期設定">初期設定</h2>
-
+</ul>
+<h2 id="heading-1">初期設定</h2>
 <p>まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作ります。そこで <code>$ bundle init</code> して Gemfile を作成します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -196,7 +185,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s2">&#34;https://rubygems.org&#34;</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s2">&#34;</span><span class="s2">https://rubygems.org</span><span class="s2">&#34;</span>
 <span class="n">ruby</span> <span class="s1">&#39;2.0.0&#39;</span>
 
 <span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
@@ -214,35 +203,28 @@
   <span class="c1"># Foreman</span>
   <span class="c1"># To run the app from Procfile.</span>
   <span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
-<span class="k">end</span></code></pre></td></tr></table>
+<span class="k">end</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>Gemfile ができたらおなじみの以下コマンドで gem をインストールします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ bundle install --path vendor/bundle --without production</pre></td></tr></table>
-</div>
-</div>
-<h2 id="heroku-で動かすために">Heroku で動かすために</h2>
-
+</div><p>Gemfile ができたらおなじみの以下コマンドで gem をインストールします。</p>
+<pre><code>$ bundle install --path vendor/bundle --without production
+</code></pre>
+<h2 id="heroku-">Heroku で動かすために</h2>
 <p>次に Heroku で動作させるために必要な設定を行っていきます。<code>config.ru</code> と <code>unicorn.rb</code> と <code>Procfile</code> の3つが必要です。ちなみに Gemfile に foreman という gem があったかと思いますが、こいつは Procfile を読み込むことで複数のプロセスを管理できるツールです。こちらに詳しく書いてくれています。</p>
-
 <p><a href="http://qiita.com/7kaji/items/6a59977d2ad85604e7fd" title="foraman でアプリケーションを動かす" target="_blank">foreman でアプリケーションを動かす</a></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby config.ru" data-lang="ruby config.ru"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby config.ru" data-lang="ruby config.ru">require &#39;./main.rb&#39;
-run App.new</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;./main.rb&#39;</span>
+<span class="n">run</span> <span class="no">App</span><span class="o">.</span><span class="n">new</span>
+</code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby config/unicorn.rb" data-lang="ruby config/unicorn.rb"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -266,9 +248,9 @@ run App.new</code></pre></td></tr></table>
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby config/unicorn.rb" data-lang="ruby config/unicorn.rb"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;WEB_CONCURRENCY&#34;</span><span class="o">]</span> <span class="o">||</span> <span class="mi">3</span><span class="p">)</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;</span><span class="s2">WEB_CONCURRENCY</span><span class="s2">&#34;</span><span class="o">]</span> <span class="o">||</span> <span class="mi">3</span><span class="o"></span><span class="p">)</span>
 <span class="n">timeout</span> <span class="mi">15</span>
-<span class="n">preload_app</span> <span class="kp">true</span>
+<span class="o"></span><span class="n">preload_app</span> <span class="kp">true</span>
 
 <span class="n">before_fork</span> <span class="k">do</span> <span class="o">|</span><span class="n">server</span><span class="p">,</span> <span class="n">worker</span><span class="o">|</span>
   <span class="no">Signal</span><span class="o">.</span><span class="n">trap</span> <span class="s1">&#39;TERM&#39;</span> <span class="k">do</span>
@@ -287,22 +269,22 @@ run App.new</code></pre></td></tr></table>
 
   <span class="n">defined?</span><span class="p">(</span><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">)</span> <span class="ow">and</span>
     <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">establish_connection</span>
-<span class="k">end</span></code></pre></td></tr></table>
+<span class="k">end</span>
+</code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby Procfile" data-lang="ruby Procfile"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby Procfile" data-lang="ruby Procfile">web: bundle exec unicorn -p $PORT -c ./config/unicorn.rb</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ss">web</span><span class="p">:</span> <span class="n">bundle</span> <span class="nb">exec</span> <span class="n">unicorn</span> <span class="o">-</span><span class="nb">p</span> <span class="vg">$PORT</span> <span class="o">-</span><span class="n">c</span> <span class="o">.</span><span class="n">/</span><span class="n">config</span><span class="o">/</span><span class="n">unicorn</span><span class="o">.</span><span class="n">rb</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="ローカルで動作確認">ローカルで動作確認</h2>
-
+</div><h2 id="heading-2">ローカルで動作確認</h2>
 <p>ここで一度ローカルで動かしてみましょう。Sinatra のルートディレクトリにおいて <code>main.rb</code> などの名前でファイルを作成してみます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby main.rb" data-lang="ruby main.rb"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -312,83 +294,51 @@ run App.new</code></pre></td></tr></table>
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby main.rb" data-lang="ruby main.rb"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
 <span class="nb">require</span> <span class="s1">&#39;sinatra/base&#39;</span>
 
 <span class="k">class</span> <span class="nc">App</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
   <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
     <span class="s1">&#39;Hello, World!&#39;</span>
   <span class="k">end</span>
-<span class="k">end</span></code></pre></td></tr></table>
+<span class="k">end</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>foreman という gem で起動してみます。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ bundle exec foreman start</pre></td></tr></table>
-</div>
-</div>
-<p>これで <a href="http://localhost:5000">http://localhost:5000</a> にアクセスすれば Sinatra アプリの動作確認ができるかと思います。</p>
-
-<h2 id="heroku-にデプロイ">Heroku にデプロイ</h2>
-
+</div><p>foreman という gem で起動してみます。</p>
+<pre><code>$ bundle exec foreman start
+</code></pre>
+<p>これで http://localhost:5000 にアクセスすれば Sinatra アプリの動作確認ができるかと思います。</p>
+<h2 id="heroku--1">Heroku にデプロイ</h2>
 <p>ここまでのアプリを一度 Heroku にデプロイしてみましょう。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ heroku create APP_NAME
+<pre><code>$ heroku create APP_NAME
 $ git add .
-$ git commit -m &#34;first commit&#34;
-$ git push heroku master</pre></td></tr></table>
-</div>
-</div>
+$ git commit -m &quot;first commit&quot;
+$ git push heroku master
+</code></pre>
 <p>問題がなければ <a href="http://APP_NAME.herokuapp.com">http://APP_NAME.herokuapp.com</a> で公開されているでしょう。</p>
-
-<h2 id="postgresql-を使う">PostgreSQL を使う</h2>
-
+<h2 id="postgresql-">PostgreSQL を使う</h2>
 <p>さてここからデータベースを使った Sinatra アプリの作成に移ります。上記の Heroku デプロイまでは比較的つまづくことなくできるのですが、DBを使う段階で少し嵌ってしまいました。最初は <code>database.yml</code> を使う方向で実装していたのですが(他のサイトでもそのようにしているところがたくさんある)うまくいきません。というのも Heroku はどうやら <code>database.yml</code> を自動的に作成するらしくそちらの設定がうまくできなかったためです。なので今回は使わない方向で実装しています。</p>
-
 <p>下準備として PostgreSQL でデータベースを作成しておきましょう。ローカルに構築する方法は割愛します。Heroku 上に作成するには以下のようにします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ heroku addons:add heroku-postgresql:dev</pre></td></tr></table>
-</div>
-</div>
+<pre><code>$ heroku addons:add heroku-postgresql:dev
+</code></pre>
 <p>できたら Rakefile を作成します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby Rakefile" data-lang="ruby Rakefile"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby Rakefile" data-lang="ruby Rakefile">require &#39;./main.rb&#39;
-require &#39;sinatra/activerecord/rake&#39;</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;./main.rb&#39;</span>
+<span class="nb">require</span> <span class="s1">&#39;sinatra/activerecord/rake&#39;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>次にローカルでマイグレーションファイルを作成します。適当に users テーブルを作ることとします。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ bundle exec rake db:create_migration NAME=&#34;create_users&#34;</pre></td></tr></table>
-</div>
-</div>
+</div><p>次にローカルでマイグレーションファイルを作成します。適当に users テーブルを作ることとします。</p>
+<pre><code>$ bundle exec rake db:create_migration NAME=&quot;create_users&quot;
+</code></pre>
 <p><code>db/migrate</code> 配下にマイグレーションファイルが作成されているのでこれを編集します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="lnt"> 1
+<pre class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -402,7 +352,7 @@ require &#39;sinatra/activerecord/rake&#39;</code></pre></td></tr></table>
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">CreateUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
-  <span class="k">def</span> <span class="nf">change</span>
+  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">change</span>
     <span class="n">create_table</span> <span class="ss">:users</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
       <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:registration_id</span>
       <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:name</span>
@@ -411,66 +361,50 @@ require &#39;sinatra/activerecord/rake&#39;</code></pre></td></tr></table>
       <span class="n">t</span><span class="o">.</span><span class="n">timestamps</span>
     <span class="k">end</span>
   <span class="k">end</span>
-<span class="k">end</span></code></pre></td></tr></table>
+<span class="k">end</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<h2 id="データベースに接続">データベースに接続</h2>
-
+</div><h2 id="heading-3">データベースに接続</h2>
 <p>この段階で <code>database.yml</code> に DB の接続情報を設定して作業したのですが、ローカルではうまくいくものの Heroku で動きませんでした。なので DB の接続情報を <code>main.rb</code> ではなく <code>models/ar.rb</code> というファイルに切り出すことにしました。<code>ar.rb</code> を以下のようにしましょう。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby models/ar.rb" data-lang="ruby models/ar.rb"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby models/ar.rb" data-lang="ruby models/ar.rb"><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">establish_connection</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;DATABASE_URL&#39;</span><span class="o">]</span><span class="p">)</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">establish_connection</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;DATABASE_URL&#39;</span><span class="o">]</span><span class="p">)</span>
 
 <span class="k">class</span> <span class="nc">Ar</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-<span class="k">end</span></code></pre></td></tr></table>
+<span class="k">end</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>ここでのポイントは DATABASE_URL です。Heroku はこの値に設定された URL をデータベース先として接続しにいきます。<code>$ heroku config</code> とすれば確認できます。
+</div><p>ここでのポイントは DATABASE_URL です。Heroku はこの値に設定された URL をデータベース先として接続しにいきます。<code>$ heroku config</code> とすれば確認できます。
 またローカルで起動したときには DATABASE_URL はローカルの PostgreSQL に接続して欲しいですね。そのようにするためには <code>.env</code> ファイルを作成してそこに設定すればいいです。<code>.env</code> ファイルは <code>.gitignore</code> に追加しておきましょう。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code class="language-ruby .env" data-lang="ruby .env"><span class="lnt">1
+<pre class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby .env" data-lang="ruby .env">DATABASE_URL=&#39;postgresql://user_name:@localhost/db_name&#39;</code></pre></td></tr></table>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="no">DATABASE_URL</span><span class="o">=</span><span class="s1">&#39;postgresql://user_name:@localhost/db_name&#39;</span>
+</code></pre></td></tr></table>
 </div>
-</div>
-<p>マイグレーションファイルに従ってデータを作成します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ bundle exec rake db:migrate</pre></td></tr></table>
-</div>
-</div>
+</div><p>マイグレーションファイルに従ってデータを作成します。</p>
+<pre><code>$ bundle exec rake db:migrate
+</code></pre>
 <p>ここまで問題なくできればローカルの環境は終わりです。最後に Heroku にアップしましょう。</p>
-
-<h2 id="再度-heroku-にデプロイ">再度 Heroku にデプロイ</h2>
-
+<h2 id="-heroku-">再度 Heroku にデプロイ</h2>
 <p>さて、いよいよです。コマンドが通ることを祈ってデプロイしてください。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><span class="lnt">1
-</span></pre></td>
-<td class="lntd">
-<pre class="chroma">$ git push heroku master</pre></td></tr></table>
-</div>
-</div>
-<h2 id="参考">参考</h2>
-
-<p>本記事を書くにあたって参考にさせて頂いたサイトです。ありがとうございました。
+<pre><code>$ git push heroku master
+</code></pre>
+<h2 id="heading-4">参考</h2>
+<p>本記事を書くにあたって参考にさせて頂いたサイトです。ありがとうございました。</p>
 <ul>
   <li><a href="http://dev.classmethod.jp/server-side/ruby-on-rails/sinatra-postgresql-unicorn-on-heroku/" target="_blank">[Ruby] Sinatra + PostgreSQL + Unicorn な Web サーバーを Heroku に構築する</a></li>
   <li><a href="http://blog.notsobad.jp/post/60131290938/sinatra-heroku-db" target="_blank">Sinatra x HerokuのDB設定をいい感じにする。</a></li>
   <li><a href="http://qiita.com/myokkie/items/6f65db5d53f19d34a27c" target="_blank">Sinatra-ActiverecordをHerokuにPushする</a></li>
-</ul></p>
+</ul>
 
     </div>
 

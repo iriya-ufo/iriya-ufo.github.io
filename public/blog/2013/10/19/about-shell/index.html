@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.58.3 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/10/19/about-shell/" />
@@ -46,16 +46,13 @@
 <meta property="article:modified_time" content="2013-10-19T18:33:58+00:00" />
 <meta itemprop="name" content="シェル周りまとめ">
 <meta itemprop="description" content="csh tcsh まとめ .login (csh, tcsh) login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。 login 後にシェルを起動しても読み込まれない。 .tcshrc (tcsh) tcsh を起">
-
-
 <meta itemprop="datePublished" content="2013-10-19T18:33:58&#43;00:00" />
 <meta itemprop="dateModified" content="2013-10-19T18:33:58&#43;00:00" />
 <meta itemprop="wordCount" content="545">
 
 
 
-<meta itemprop="keywords" content="shell," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="shell," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="シェル周りまとめ"/>
 <meta name="twitter:description" content="csh tcsh まとめ .login (csh, tcsh) login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。 login 後にシェルを起動しても読み込まれない。 .tcshrc (tcsh) tcsh を起"/>
 
@@ -139,74 +136,53 @@
   <h2 class="post-toc-title">Contents</h2>
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
-<ul>
-<li>
-<ul>
-<li><a href="#csh-tcsh-まとめ">csh tcsh まとめ</a>
-<ul>
-<li><a href="#login-csh-tcsh">.login (csh, tcsh)</a></li>
-<li><a href="#tcshrc-tcsh">.tcshrc (tcsh)</a></li>
-<li><a href="#cshrc-csh-tcsh">.cshrc (csh,tcsh)</a></li>
-<li><a href="#logout-csh-tcsh">.logout (csh, tcsh)</a></li>
-</ul></li>
-<li><a href="#bash-まとめ">bash まとめ</a>
-<ul>
-<li><a href="#profile-sh-bash">.profile (sh, bash)</a></li>
-<li><a href="#bash-profile-bash">.bash_profile (bash)</a></li>
-<li><a href="#bash-logout-bash">.bash_logout (bash)</a></li>
-<li><a href="#bashrc-bash">.bashrc (bash)</a></li>
-</ul></li>
-</ul></li>
-</ul>
+  <ul>
+    <li><a href="#csh-tcsh-">csh tcsh まとめ</a>
+      <ul>
+        <li><a href="#login-csh-tcsh">.login (csh, tcsh)</a></li>
+        <li><a href="#tcshrc-tcsh">.tcshrc (tcsh)</a></li>
+        <li><a href="#cshrc-cshtcsh">.cshrc (csh,tcsh)</a></li>
+        <li><a href="#logout-csh-tcsh">.logout (csh, tcsh)</a></li>
+      </ul>
+    </li>
+    <li><a href="#bash-">bash まとめ</a>
+      <ul>
+        <li><a href="#profile-sh-bash">.profile (sh, bash)</a></li>
+        <li><a href="#bash-profile-bash">.bash_profile (bash)</a></li>
+        <li><a href="#bash-logout-bash">.bash_logout (bash)</a></li>
+        <li><a href="#bashrc-bash">.bashrc (bash)</a></li>
+      </ul>
+    </li>
+  </ul>
 </nav>
   </div>
 </div>
     <div class="post-content">
-      
-
-<h2 id="csh-tcsh-まとめ">csh tcsh まとめ</h2>
-
+      <h2 id="csh-tcsh-">csh tcsh まとめ</h2>
 <h3 id="login-csh-tcsh">.login (csh, tcsh)</h3>
-
 <p>login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。
 login 後にシェルを起動しても読み込まれない。</p>
-
 <h3 id="tcshrc-tcsh">.tcshrc (tcsh)</h3>
-
 <p>tcsh を起動した際に読み込まれる設定ファイル。
 login 後にシェルを起動した際にも毎回読み込まれる。</p>
-
-<h3 id="cshrc-csh-tcsh">.cshrc (csh,tcsh)</h3>
-
+<h3 id="cshrc-cshtcsh">.cshrc (csh,tcsh)</h3>
 <p>csh を起動した際に毎回読み込まれる設定ファイル。
 tcsh の場合には .tcshrc がない場合にこのファイルが読み込まれる。
 .tcshrc の中で .cshrc を読み込むように設定し .cshrc には csh, tcsh に共通する設定を記述することも多い。</p>
-
 <h3 id="logout-csh-tcsh">.logout (csh, tcsh)</h3>
-
 <p>login shellを csh, tcsh にした場合、端末から logout する際に実行される設定ファイル。
 ユーザの tmp ファイルの削除や、画面のクリア、メッセージの表示などを設定することができる。</p>
-
-<h2 id="bash-まとめ">bash まとめ</h2>
-
+<h2 id="bash-">bash まとめ</h2>
 <p>以下の設定ファイルはbashを使用するユーザ向けです。</p>
-
 <h3 id="profile-sh-bash">.profile (sh, bash)</h3>
-
 <p>login shellを sh, bash にした場合(rootのlogin shell を除けば、shにすることはほとんどないが)に端末から login した際に読み込まれる設定ファイル。
 login 後にシェルを起動しても読み込まれない。</p>
-
 <h3 id="bash-profile-bash">.bash_profile (bash)</h3>
-
 <p>login shell を bash にした場合に端末から login した際に読み込まれる設定ファイル。
 login 後にシェルを起動しても読み込まれない。</p>
-
 <h3 id="bash-logout-bash">.bash_logout (bash)</h3>
-
 <p>login shellを bash にした場合、端末から logout する際に実行される設定ファイル。</p>
-
 <h3 id="bashrc-bash">.bashrc (bash)</h3>
-
 <p>bash を起動した際に読み込まれる設定ファイル。
 login 後にシェルを起動した際にも毎回読み込まれる。</p>
 
