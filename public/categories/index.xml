@@ -6,10 +6,19 @@
     <description>Recent content in Categories on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 16 Dec 2019 11:56:34 +0900</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2020 15:38:07 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>review</title>
+      <link>https://iriya-ufo.net/categories/review/</link>
+      <pubDate>Mon, 06 Jan 2020 15:38:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/categories/review/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>programming</title>
@@ -17,15 +26,6 @@
       <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/categories/programming/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>review</title>
-      <link>https://iriya-ufo.net/categories/review/</link>
-      <pubDate>Thu, 12 Dec 2019 12:36:22 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/categories/review/</guid>
       <description></description>
     </item>
     
