@@ -7,6 +7,7 @@ lastmod: 2019-09-10T01:10:29+09:00
 comments: true
 categories:
   - "review"
+  - "stock"
 tags:
   - "stock"
 ---
