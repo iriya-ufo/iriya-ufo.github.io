@@ -10,21 +10,49 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-01-06T15:38:07+09:00</lastmod>
+    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2020-01-06T15:38:07+09:00</lastmod>
+    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-01-06T15:38:07+09:00</lastmod>
+    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/stock/</loc>
+    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/stock/</loc>
+    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/01/11/profit-and-loss/</loc>
+    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,13 +66,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/review/</loc>
-    <lastmod>2020-01-06T15:38:07+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2020-01-06T15:38:07+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -206,13 +227,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/tags/finance/</loc>
-    <lastmod>2019-10-01T10:26:35+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/stock/</loc>
     <lastmod>2019-10-01T10:26:35+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -611,14 +625,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/anime/</loc>
+    <loc>https://iriya-ufo.net/categories/anime/</loc>
     <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/categories/anime/</loc>
+    <loc>https://iriya-ufo.net/tags/anime/</loc>
     <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
