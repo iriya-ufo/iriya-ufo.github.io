@@ -10,21 +10,49 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
+    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/english/</loc>
+    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
+    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
+    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/university-of-the-people/</loc>
+    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/01/22/enroll-in-university-of-the-people/</loc>
+    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -38,13 +66,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/tags/stock/</loc>
-    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2020-01-11T23:50:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
