@@ -6,10 +6,19 @@
     <description>Recent content in Tags on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 22 Jan 2020 11:00:33 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 16:52:53 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>hugo</title>
+      <link>https://iriya-ufo.net/tags/hugo/</link>
+      <pubDate>Wed, 05 Feb 2020 16:52:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>english</title>
@@ -35,15 +44,6 @@
       <pubDate>Mon, 06 Jan 2020 15:38:07 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/tags/rdb/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>hugo</title>
-      <link>https://iriya-ufo.net/tags/hugo/</link>
-      <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/hugo/</guid>
       <description></description>
     </item>
     

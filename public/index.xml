@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 22 Jan 2020 11:00:33 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 05 Feb 2020 16:52:53 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -18,6 +18,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>一言紹介 主にサーバーサイドが好きなエンジニア 略歴 2008/04 〜 数学 / 英語 / 物理の予備校講師、エンジニアとは無縁 2013/07 〜 4人で起業して Web サービスを立ち上げた</description>
+    </item>
+    
+    <item>
+      <title>Hugo にコメント投稿機能をつけました</title>
+      <link>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</link>
+      <pubDate>Wed, 05 Feb 2020 16:52:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</guid>
+      <description>Q. Hugo でコメント投稿機能をつけるにはどうしたらいいのだろう？ A. DISQUS 使いましょう！ 公式サイトでも DISQUS 使いましょう、とある。 やり方は簡単。まず DISQUS でサイ</description>
     </item>
     
     <item>
