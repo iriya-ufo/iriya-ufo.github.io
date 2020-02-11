@@ -6,10 +6,19 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 05 Feb 2020 16:52:53 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 11 Feb 2020 15:55:10 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Mac に nodenv インストールした</title>
+      <link>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</link>
+      <pubDate>Tue, 11 Feb 2020 15:55:10 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</guid>
+      <description>brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ</description>
+    </item>
     
     <item>
       <title>Hugo にコメント投稿機能をつけました</title>
