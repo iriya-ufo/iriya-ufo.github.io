@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/10/10/python-on-mac/" />
@@ -137,11 +137,11 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#python-">Python のインストール</a></li>
-    <li><a href="#pip-">pip のインストール</a></li>
-    <li><a href="#virtualenv-">virtualenv のインストール</a>
+    <li><a href="#python-のインストール">Python のインストール</a></li>
+    <li><a href="#pip-のインストール">pip のインストール</a></li>
+    <li><a href="#virtualenv-のインストール">virtualenv のインストール</a>
       <ul>
-        <li><a href="#virtualenvwrapper-">virtualenvwrapper の使い方</a></li>
+        <li><a href="#virtualenvwrapper-の使い方">virtualenvwrapper の使い方</a></li>
       </ul>
     </li>
   </ul>
@@ -150,7 +150,7 @@
 </div>
     <div class="post-content">
       <p>普段は Ruby 使いの自分です。ちょっと Python のライブラリを使いたい状況に出くわしたので、環境構築を含めまじめにやってみました。昔と違い随分と便利になってますね。</p>
-<h2 id="python-">Python のインストール</h2>
+<h2 id="python-のインストール">Python のインストール</h2>
 <p>Mac も Linux もデフォルトで python はインストールされているが、今後バージョンを切り分けたい時があるかもしれないので、Python 自体のバージョン管理は brew に任せることにする。Linux なら apt-get や yum で代用する。</p>
 <pre><code>$ brew update
 $ brew install python
@@ -160,7 +160,7 @@ $ brew install python
 /usr/local/bin/python
 # システムの python は /usr/bin/python なので、これで成功
 </code></pre>
-<h2 id="pip-">pip のインストール</h2>
+<h2 id="pip-のインストール">pip のインストール</h2>
 <p>pip とは Python のパッケージ管理ツールのこと。brew でインストールした場合、pip も同梱されるのでこの手順はやらなくてよい。</p>
 <p>Linux の場合はこんな感じ</p>
 <pre><code>curl -kL https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
@@ -168,7 +168,7 @@ $ brew install python
 <p>ちなみに upgrade は以下のようにする。</p>
 <pre><code>$ pip install --upgrade pip
 </code></pre>
-<h2 id="virtualenv-">virtualenv のインストール</h2>
+<h2 id="virtualenv-のインストール">virtualenv のインストール</h2>
 <p>virtualenv とは Python の仮想実行環境をつくるもの。プロジェクト毎に独立した環境を切りたい場合などに使う。微妙に違うけど Ruby の rbenv のようなものだと思えばよい。</p>
 <p>インストールは pip で行う。</p>
 <pre><code>$ pip install virtualenv virtualenvwrapper
@@ -178,7 +178,7 @@ $ brew install python
 export PROJECT_HOME=$HOME/Devel
 source /usr/local/bin/virtualenvwrapper.sh
 </code></pre>
-<h3 id="virtualenvwrapper-">virtualenvwrapper の使い方</h3>
+<h3 id="virtualenvwrapper-の使い方">virtualenvwrapper の使い方</h3>
 <p>先ほど virtualenvwrapper も一緒にいれたので、このツールからいろいろやる。</p>
 <p>仮想環境を作る (ホームディレクトリの <code>.virtualenvs</code> に hoge 環境ができる)</p>
 <pre><code>$ mkvirtualenv hoge

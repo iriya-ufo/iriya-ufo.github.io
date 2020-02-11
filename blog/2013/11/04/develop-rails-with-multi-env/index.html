@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/" />
@@ -137,10 +137,10 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#heading">ローカル開発環境を整える</a></li>
-    <li><a href="#heroku-">Heroku で動かす</a>
+    <li><a href="#ローカル開発環境を整える">ローカル開発環境を整える</a></li>
+    <li><a href="#heroku-で動かす">Heroku で動かす</a>
       <ul>
-        <li><a href="#heading-1">参照</a></li>
+        <li><a href="#参照">参照</a></li>
       </ul>
     </li>
   </ul>
@@ -155,7 +155,7 @@
   <li>これから述べる環境構築は Ubuntu プラットフォームの話</li>
 </ul>
 また Ubuntu に開発環境が一切入ってない状態の場合、たくさんインストールすべきものがあるのでここでは割愛します。あくまで私の環境だとこうやれば動いたということです。
-<h2 id="heading">ローカル開発環境を整える</h2>
+<h2 id="ローカル開発環境を整える">ローカル開発環境を整える</h2>
 <p>まず既存のアプリを github からクローンします。</p>
 <pre><code>$ git clone &quot;https://github.com/yourname/app.git&quot;
 </code></pre>
@@ -173,7 +173,7 @@ $ sudo apt-get install nodejs
 <pre><code>$ bundle exec rake db:migrate RAILS_ENV=development
 </code></pre>
 <p>ここまで出来ればローカルアクセスで Rails アプリが動作すると思います。</p>
-<h2 id="heroku-">Heroku で動かす</h2>
+<h2 id="heroku-で動かす">Heroku で動かす</h2>
 <p>アプリは heroku という PaaS で公開します。普段は MacOS の開発環境から heroku にアクセスしていますが、Ubuntu でも同様に heroku に push できるようにしたいと思います。</p>
 <p>まず <code>~/.ssh</code> に USB などで rsa キーをコピーしてきます。なお heroku 用にデフォルトとは別の名前でキーを保存した場合、config ファイルも必要となります。
 config ファイルはこんな感じ。</p>
@@ -189,7 +189,7 @@ config ファイルはこんな感じ。</p>
 解決方法は簡単で git remote でリポジトリを追加すればOKです。</p>
 <pre><code>$ git remote add heroku git@heroku.com:blooming-wildwood-xxxx.git
 </code></pre>
-<h3 id="heading-1">参照</h3>
+<h3 id="参照">参照</h3>
 <p><a href="http://d.hatena.ne.jp/cybaron/20111002/p1" title="複数パソコンからherokuの同一サービスにデプロイする方法" target="_blank">複数パソコンからherokuの同一サービスにデプロイする方法</a></p>
 <p>以上です。</p>
 

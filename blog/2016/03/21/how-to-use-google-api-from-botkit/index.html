@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/" />
@@ -143,9 +143,9 @@
         <li><a href="#botkit">Botkit</a></li>
       </ul>
     </li>
-    <li><a href="#nodejs-">Node.js インストール</a></li>
-    <li><a href="#botkit-">Botkit インストール</a></li>
-    <li><a href="#google-calendar-api-">Google Calendar API を叩いてみる</a></li>
+    <li><a href="#nodejs-インストール">Node.js インストール</a></li>
+    <li><a href="#botkit-インストール">Botkit インストール</a></li>
+    <li><a href="#google-calendar-api-を叩いてみる">Google Calendar API を叩いてみる</a></li>
   </ul>
 </nav>
   </div>
@@ -159,7 +159,7 @@ Node.js で動き、プラグインなどは CoffeeScript で書く</p>
 <p>howdyai が開発した Slack 特化の Bot 開発用フレームワーク
 Node.js で動き、プラグインなどは JavaScript で書く</p>
 <p>Hubot の方がフォルダ構成などはシンプルな感じです。Botkit は Slack がサポートしているということもあってか Slack との連携が非常にやりやすいです。Slack の公式 Bot アプリを作りたい場合などは Botkit 一択ですね。</p>
-<h2 id="nodejs-">Node.js インストール</h2>
+<h2 id="nodejs-インストール">Node.js インストール</h2>
 <p>Botkit は Node.js で動作するのでまず Node.js の環境構築が必要です。AWS に構築します。ローカルでやりたい人はローカル上で Node.js が動く環境まで構築しておきましょう。</p>
 <p>ではまず AWS にインスタンスを作って SSH できるようにしておきます。</p>
 <p>Node.js をインストールします。パッケージもありますがバージョン管理したいので nvm でインストールします。</p>
@@ -181,7 +181,7 @@ $ node -v # 確認
 fi
 </code></pre>
 <p>ここまでで Node.js の環境構築が終わりました。</p>
-<h2 id="botkit-">Botkit インストール</h2>
+<h2 id="botkit-インストール">Botkit インストール</h2>
 <p>こちらの記事に丁寧に書かれています。ローカルユーザーで動かしたかったので sudo はつけませんでした。</p>
 <ul>
 <li><a href="http://toach.click/2016/01/10/slack-botkit/">BotkitでSlackのBotをサクッと作る方法</a></li>
@@ -190,7 +190,7 @@ fi
 <ul>
 <li><a href="https://github.com/howdyai/botkit">Botkit 公式</a></li>
 </ul>
-<h2 id="google-calendar-api-">Google Calendar API を叩いてみる</h2>
+<h2 id="google-calendar-api-を叩いてみる">Google Calendar API を叩いてみる</h2>
 <p>では、Google API を叩いてみます。Google Developers サイトに Node.js からカレンダー API を叩くサンプルがあるのでその通りすれば動きます。</p>
 <ul>
 <li><a href="https://developers.google.com/google-apps/calendar/quickstart/nodejs#prerequisites">Node.js Quickstart</a></li>

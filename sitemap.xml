@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-02-05T16:52:53+09:00</lastmod>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/</loc>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</loc>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/node/</loc>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/nodenv/</loc>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/programming/</loc>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,34 +73,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</loc>
-    <lastmod>2020-02-05T16:52:53+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2020-02-05T16:52:53+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-02-05T16:52:53+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2020-02-05T16:52:53+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2020-02-05T16:52:53+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -653,14 +674,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/categories/anime/</loc>
+    <loc>https://iriya-ufo.net/tags/anime/</loc>
     <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/anime/</loc>
+    <loc>https://iriya-ufo.net/categories/anime/</loc>
     <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
