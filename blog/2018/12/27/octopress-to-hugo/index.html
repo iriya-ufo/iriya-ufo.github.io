@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/" />
@@ -137,23 +137,23 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#インストール">インストール</a></li>
-    <li><a href="#サイトのセットアップ">サイトのセットアップ</a></li>
-    <li><a href="#テーマのインストールと設定">テーマのインストールと設定</a></li>
-    <li><a href="#サンプル投稿">サンプル投稿</a></li>
-    <li><a href="#サーバーを起動して確認">サーバーを起動して確認</a></li>
+    <li><a href="#heading">インストール</a></li>
+    <li><a href="#heading-1">サイトのセットアップ</a></li>
+    <li><a href="#heading-2">テーマのインストールと設定</a></li>
+    <li><a href="#heading-3">サンプル投稿</a></li>
+    <li><a href="#heading-4">サーバーを起動して確認</a></li>
   </ul>
 
   <ul>
-    <li><a href="#記事と画像データのコピー">記事と画像データのコピー</a></li>
-    <li><a href="#octopress-の独自タグを置換">Octopress の独自タグを置換</a></li>
-    <li><a href="#パーマリンク設定">パーマリンク設定</a></li>
+    <li><a href="#heading-5">記事と画像データのコピー</a></li>
+    <li><a href="#octopress--1">Octopress の独自タグを置換</a></li>
+    <li><a href="#heading-6">パーマリンク設定</a></li>
   </ul>
 
   <ul>
-    <li><a href="#github-pages-の変更作業">Github Pages の変更作業</a></li>
-    <li><a href="#記事の更新方法">記事の更新方法</a></li>
-    <li><a href="#別pcなどで取り込む場合">別PCなどで取り込む場合</a></li>
+    <li><a href="#github-pages-">Github Pages の変更作業</a></li>
+    <li><a href="#heading-9">記事の更新方法</a></li>
+    <li><a href="#pc">別PCなどで取り込む場合</a></li>
   </ul>
 </nav>
   </div>
@@ -161,10 +161,10 @@
     <div class="post-content">
       <p><a href="/blog/2016/04/29/how-to-start-octopress/">以前 Octopress に移行</a> してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと<a href="/blog/2018/12/26/blog-services/">別の方法を模索</a>した。
 結果 Hugo に移行することにした。こっから先は Octopress から Hugo への移行方法の備忘録となる。</p>
-<h1 id="hugo-のセットアップ">Hugo のセットアップ</h1>
+<h1 id="hugo-">Hugo のセットアップ</h1>
 <p><a href="https://gohugo.io/getting-started/quick-start/">Quick Start</a> を参考にしてインストールする。
 こちらではテーマのインストールに <code>submodule</code> を利用しているが、ややこしくなるので使わないことにする。</p>
-<h2 id="インストール">インストール</h2>
+<h2 id="heading">インストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -173,7 +173,7 @@
 <pre class="chroma"><code class="language-shell" data-lang="shell">brew install hugo
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="サイトのセットアップ">サイトのセットアップ</h2>
+</div><h2 id="heading-1">サイトのセットアップ</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -186,11 +186,11 @@
 </span><span class="se"></span>git init<span class="p">;</span><span class="se">\
 </span></code></pre></td></tr></table>
 </div>
-</div><h2 id="テーマのインストールと設定">テーマのインストールと設定</h2>
+</div><h2 id="heading-2">テーマのインストールと設定</h2>
 <p><a href="https://themes.gohugo.io/">Hugo Theme Gallery</a> から適当に気に入ったものを探す。</p>
 <p>気に入ったテーマを <code>themes</code> ディレクトリ入れる。
 <code>git submodule add</code> は使わない方針にする。</p>
-<h2 id="サンプル投稿">サンプル投稿</h2>
+<h2 id="heading-3">サンプル投稿</h2>
 <p>サンプル投稿をする。テーマによって <code>post</code> か <code>posts</code> ディレクトリを使用しているので合わせたほうが無難。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -200,7 +200,7 @@
 <pre class="chroma"><code class="language-shell" data-lang="shell">hugo new post/my-first-post.md
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="サーバーを起動して確認">サーバーを起動して確認</h2>
+</div><h2 id="heading-4">サーバーを起動して確認</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre class="chroma"><code><span class="lnt">1
@@ -210,7 +210,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><p>http://localhost:1313/ で確認。</p>
-<h1 id="octopress-からのデータ移行">Octopress からのデータ移行</h1>
+<h1 id="octopress-">Octopress からのデータ移行</h1>
 <p>この移行作業がブログ引っ越しにおいて一番大変な作業になる。過去を全部捨てるなら楽でいいんですけどね。</p>
 <p>さて<a href="https://ja.mhatta.org/blog/2016/08/21/migrated-from-octopress-to-hugo/">こちら</a>を見ると以下のようにあるので slug の設定はしたほうがいいだろう。やり方はリンク元を参照されたい。</p>
 <blockquote>
@@ -218,7 +218,7 @@
 </blockquote>
 <p>その他の移行は<a href="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/">概ねこちらを参考</a>にした。
 以下ほぼ同じ内容だがいくつかこちらで追記した部分もある。</p>
-<h2 id="記事と画像データのコピー">記事と画像データのコピー</h2>
+<h2 id="heading-5">記事と画像データのコピー</h2>
 <p>Markdown 記事のコピー</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -237,7 +237,7 @@
 <pre class="chroma"><code class="language-shell" data-lang="shell">cp -r octopress-site/source/images/ hugo-site/static/images
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="octopress-の独自タグを置換">Octopress の独自タグを置換</h2>
+</div><h2 id="octopress--1">Octopress の独自タグを置換</h2>
 <p>Octopress のみでしか使えない独自記法を Hugo でも扱えるよう書き換える。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -293,7 +293,7 @@ find . -type f -exec sed -i <span class="s2">&#34;&#34;</span> -e <span class="s
 <span class="c1"># {{ root_url }} という表記をやめる</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="パーマリンク設定">パーマリンク設定</h2>
+</div><h2 id="heading-6">パーマリンク設定</h2>
 <p>Octopress と同じパーマリンク設定を保持したい場合に必要な作業となる。
 <a href="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/">こちらを参考</a>にした。</p>
 <div class="highlight"><div class="chroma">
@@ -306,7 +306,7 @@ find . -type f -exec sed -i <span class="s2">&#34;&#34;</span> -e <span class="s
   <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/blog/:year/:month/:day/:slug&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="テーマのカスタマイズ">テーマのカスタマイズ</h1>
+</div><h1 id="heading-7">テーマのカスタマイズ</h1>
 <p>テーマはこちらを利用させて頂いている。</p>
 <p><a href="https://themes.gohugo.io/hugo-theme-even/">https://themes.gohugo.io/hugo-theme-even/</a></p>
 <p>テーマディレクトリの内容をカスタマイズした場合は、以下のコマンドを打つ。</p>
@@ -322,7 +322,7 @@ yarn install
 yarn build
 </code></pre></td></tr></table>
 </div>
-</div><h1 id="デプロイ">デプロイ</h1>
+</div><h1 id="heading-8">デプロイ</h1>
 <p>Octopress と違ってデプロイタスクがないので作る必要がある。</p>
 <p><strong>いくつか注意点</strong></p>
 <ol>
@@ -347,7 +347,7 @@ yarn build
 <li>ビルドした html, css, js などのデータを <code>subtree</code> として <code>master</code> ブランチに作る</li>
 <li>github.io のドキュメントルートを <code>/public</code> とする</li>
 </ul>
-<h2 id="github-pages-の変更作業">Github Pages の変更作業</h2>
+<h2 id="github-pages-">Github Pages の変更作業</h2>
 <p>Octopress で運用していた Github Pages を Hugo に中身を入れ替える作業となる。</p>
 <p>以下 hugo ディレクトリで作業する。</p>
 <div class="highlight"><div class="chroma">
@@ -433,7 +433,7 @@ $ git subtree push --prefix public/ origin master
 </code></pre></td></tr></table>
 </div>
 </div><p>以上で完了となる。</p>
-<h2 id="記事の更新方法">記事の更新方法</h2>
+<h2 id="heading-9">記事の更新方法</h2>
 <p>なお更新は次のようにする。</p>
 <ul>
 <li>通常の作業は <code>source</code> ブランチで行う</li>
@@ -502,12 +502,12 @@ git push origin <span class="nb">source</span>
 <span class="nb">echo</span> <span class="s2">&#34;************ Success Deploy ************&#34;</span>
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="別pcなどで取り込む場合">別PCなどで取り込む場合</h2>
+</div><h2 id="pc">別PCなどで取り込む場合</h2>
 <p>通常の <code>git clone</code> をした後 <code>git subtree add --prefix=public/ origin master</code> で subtree を登録後 <code>master</code> の内容を <code>git subtree pull --prefix=public/ origin master</code> で取り込む。</p>
-<h1 id="カスタムドメインの設定">カスタムドメインの設定</h1>
+<h1 id="heading-10">カスタムドメインの設定</h1>
 <p>カスタムドメイン設定をしている場合 <code>public/CNAME</code> ファイルにドメインの記載が必要となる。</p>
 <p><a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/#use-a-custom-domain">https://gohugo.io/hosting-and-deployment/hosting-on-github/#use-a-custom-domain</a></p>
-<h1 id="参考にさせて頂いた記事">参考にさせて頂いた記事</h1>
+<h1 id="heading-11">参考にさせて頂いた記事</h1>
 <p>先人のお世話になりました。</p>
 <ul>
 <li><a href="https://qiita.com/kwappa/items/03ffdeb89039a7249619">GitHub PagesのUser Pagesでドキュメントルートを変更するにはmasterを殺す</a></li>
