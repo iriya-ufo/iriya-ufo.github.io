@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.61.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/" />
@@ -137,10 +137,10 @@
   <div class="post-toc-content always-active">
     <nav id="TableOfContents">
   <ul>
-    <li><a href="#インストール">インストール</a></li>
-    <li><a href="#boot2docker-で作った-vm-の移行">boot2docker で作った VM の移行</a></li>
-    <li><a href="#環境変数の設定を書き換える">環境変数の設定を書き換える</a></li>
-    <li><a href="#コマンドの差分">コマンドの差分</a></li>
+    <li><a href="#heading">インストール</a></li>
+    <li><a href="#boot2docker--vm-">boot2docker で作った VM の移行</a></li>
+    <li><a href="#heading-1">環境変数の設定を書き換える</a></li>
+    <li><a href="#heading-2">コマンドの差分</a></li>
   </ul>
 </nav>
   </div>
@@ -155,13 +155,13 @@ error in run: Failed to get machine &quot;boot2docker-vm&quot;: machine does not
 <p>boot2docker が非推奨になって docker-machine を使えとあるので移行作業をした。β版なので production では使わないでと書いてある。</p>
 <p>docker-machine はこんなやつ</p>
 <p><a href="https://docs.docker.com/machine/">https://docs.docker.com/machine/</a></p>
-<h2 id="インストール">インストール</h2>
+<h2 id="heading">インストール</h2>
 <pre><code>$ brew install docker-machine
 </code></pre>
-<h2 id="boot2docker-で作った-vm-の移行">boot2docker で作った VM の移行</h2>
+<h2 id="boot2docker--vm-">boot2docker で作った VM の移行</h2>
 <pre><code>$ docker-machine create -d virtualbox --virtualbox-import-boot2docker-vm boot2docker-vm docker-vm
 </code></pre>
-<h2 id="環境変数の設定を書き換える">環境変数の設定を書き換える</h2>
+<h2 id="heading-1">環境変数の設定を書き換える</h2>
 <p><code>.zshrc</code> などに書いていた環境変数を新しい書き方に変える</p>
 <pre><code>今まで
 export DOCKER_HOST=tcp://192.168.59.103:2376
@@ -171,7 +171,7 @@ export DOCKER_TLS_VERIFY=1
 これから
 eval &quot;$(docker-machine env docker-vm)&quot;
 </code></pre>
-<h2 id="コマンドの差分">コマンドの差分</h2>
+<h2 id="heading-2">コマンドの差分</h2>
 <p>今まで docker でやってたコマンドは代わりに docker-machine コマンドを使うようにする。差分は以下を参考。</p>
 <p><a href="http://docs.docker.com/installation/mac/#migrate-from-boot2docker">http://docs.docker.com/installation/mac/#migrate-from-boot2docker</a></p>
 
