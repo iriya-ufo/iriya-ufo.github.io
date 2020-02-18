@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/12/17/start-postgresql/" />
@@ -135,7 +135,7 @@
     
     <div class="post-content">
       <p>環境は Mac でやってますが Linux でもほぼ同じです。</p>
-<h2 id="heading">インストールから初期設定まで</h2>
+<h2 id="インストールから初期設定まで">インストールから初期設定まで</h2>
 <p>Mac なので brew でインストールします。</p>
 <pre><code>$ brew install postgresql
 </code></pre>
@@ -153,7 +153,7 @@
 $ launchctl load -w ~/Library/LaunchAgents/homebrew.mxcl.postgresql.plist
 </code></pre>
 <p>これで準備ができました。</p>
-<h2 id="heading-1">データベース準備の基本</h2>
+<h2 id="データベース準備の基本">データベース準備の基本</h2>
 <p>データベースの一覧を取得します。</p>
 <pre><code>$ psql -l
 </code></pre>
@@ -172,7 +172,7 @@ Type &quot;help&quot; for help.
 alice_db=#
 </code></pre>
 <p>このようにDB名のプロンプトに切り替わったら成功です。</p>
-<h2 id="heading-2">基本のコマンド</h2>
+<h2 id="基本のコマンド">基本のコマンド</h2>
 <p>psql で使う基本的なコマンドです。&ldquo;バックスラッシュ + 1文字&quot;というコマンドはなかなか覚えられないですね。英語の先頭文字と結びつけて覚えるのが近道です。</p>
 <table>
 <tr><th>コマンド</th><th>説明</th></tr>
@@ -184,7 +184,7 @@ alice_db=#
 <tr><td>¥l</td><td>データベースの一覧を表示</td></tr>
 <tr><td>¥i</td><td>ファイルに書かれたSQL文を読み込んで実行</td></tr>
 </table>
-<h2 id="heading-3">素晴らしいサイト</h2>
+<h2 id="素晴らしいサイト">素晴らしいサイト</h2>
 <p>PostgreSQL を練習するのにすばらしいサイトがありますので紹介します。こちらです。</p>
 <ul>
 <li><a href="http://pgexercises.com/" title="PostgreSQL Exercises" target="_blank">PostgreSQL Exercises</a></li>
