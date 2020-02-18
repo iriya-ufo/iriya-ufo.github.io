@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/09/09/install-ag/" />
@@ -135,7 +135,7 @@
     
     <div class="post-content">
       <p>プログラムを書いてると<strong>検索</strong>という行為一つで大きく生産性が変わることをプログラマーは知っています。僕は今まで grep を使ってた、というか grep しか知らなかったのですが同僚から ag について教えてもらったのでいれてみました。とにかく検索が爆速でびっくりです。</p>
-<h2 id="heading">インストールと設定</h2>
+<h2 id="インストールと設定">インストールと設定</h2>
 <p>超カンタンです。</p>
 <pre><code>$ brew install ag
 </code></pre>
@@ -172,7 +172,7 @@ jquery.js
 zsh-completions
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="heading-1">補完を有効にする</h2>
+</div><h2 id="補完を有効にする">補完を有効にする</h2>
 <p>zsh を使ってるのが前提ですが、ag のオプションの補完ができるようにします。またこれを入れると ag に限らず便利な補完機能がもれなくついてきます。どのようなコマンドの補完があるかはインストールすれば分かります。とりあえず便利なので入れておいて損はない。</p>
 <pre><code>$ brew install zsh-completions
 </code></pre>
@@ -193,7 +193,7 @@ compinit -u
 <pre><code>$ rm -f ~/.zcompdump; compinit
 </code></pre>
 <p>シェルの再起動で補完が有効になります。</p>
-<h2 id="emacs--ag-">Emacs から ag を使う</h2>
+<h2 id="emacs-から-ag-を使う">Emacs から ag を使う</h2>
 <p>さて高速検索の ag ですが、普段使ってるエディターと組み合わせることで真価を発揮します。vim の人はググってもらうとして Emacs ユーザーは <code>helm-ag</code> をインストールすれば幸せになれるんじゃないでしょうか。</p>
 <p>インストールはいつもの通り、パッケージリストから探してインストールします。後は特に設定をしないでも使えます。起動は <code>M-x helm-ag</code> です。毎度打つのは面倒なので適当にキーバインドするといいでしょう。</p>
 

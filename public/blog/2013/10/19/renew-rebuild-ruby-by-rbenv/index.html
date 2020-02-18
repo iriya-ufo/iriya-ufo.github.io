@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/" />
@@ -136,12 +136,12 @@
     <div class="post-content">
       <p>Ubuntu の rbenv で管理している ruby を新しくする方法です。
 MacOS だと多分 homebrew とか使ってると思います。今回は割愛です。</p>
-<h2 id="-ruby-">利用可能な ruby のバージョンを確認</h2>
+<h2 id="利用可能な-ruby-のバージョンを確認">利用可能な ruby のバージョンを確認</h2>
 <p>ruby-build で利用可能な ruby のバージョンを確認します。</p>
 <pre><code>$ ruby-build --definitions
 </code></pre>
 <p>ここに最新の ruby が入ってなかったら、ruby-build を更新します。</p>
-<h2 id="ruby-build-">ruby-build の更新</h2>
+<h2 id="ruby-build-の更新">ruby-build の更新</h2>
 <p>多くの人が github からインストールしてると思いますので、まず ruby-build をインストールしたディレクトリに入ります。
 そこで pull master してインストールします。</p>
 <pre><code>$ cd ~/Downloads/ruby-build
@@ -151,11 +151,11 @@ origin	git://github.com/sstephenson/ruby-build.git (push)
 $ git pull origin master
 $ sudo ./install.sh
 </code></pre>
-<h2 id="rbenv--ruby-">rbenv で ruby の最新バージョンをインストール</h2>
+<h2 id="rbenv-で-ruby-の最新バージョンをインストール">rbenv で ruby の最新バージョンをインストール</h2>
 <p>ruby-build を更新したので rbenv で最新の ruby をインストールします。</p>
 <pre><code>$ rbenv install 2.0.0-p247
 </code></pre>
-<h2 id="-ruby--1">デフォルトで使用する ruby のバージョン変更</h2>
+<h2 id="デフォルトで使用する-ruby-のバージョン変更">デフォルトで使用する ruby のバージョン変更</h2>
 <p>先程インストールした最新の ruby をデフォルトとして使うには以下を行います。</p>
 <pre><code>$ rbenv global 2.0.0-p247
 $ rbenv rehash

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/12/04/vim-tips/" />
@@ -135,7 +135,7 @@
     
     <div class="post-content">
       <p>自分のための覚書</p>
-<h2 id="heading">編集</h2>
+<h2 id="編集">編集</h2>
 <pre><code>:%s/:\(\w\+\) =&gt;/\1:/g  # hash の書き方を置換 #正規表現
 Ctrl+v jjjj I           # 4行コメントアウト(,#)
 Ctrl+v jjjj d           # 4行コメントイン(,#)
@@ -148,7 +148,7 @@ viwU                    # カーソル位置の単語を UPPERCASE
 viw~                    # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え
 viw!nkf -Z4             # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ
 </code></pre>
-<h2 id="heading-1">カーソル移動</h2>
+<h2 id="カーソル移動">カーソル移動</h2>
 <pre><code>0                       # 行の先頭へ
 ^                       # 行の空白以外の先頭へ
 $                       # 行の末尾へ
@@ -159,11 +159,11 @@ viw                     # 現在のカーソル位置の単語を選択
 vi&quot;                     # 現在のカーソル位置の&quot;の中を選択
 va&quot;                     # 現在のカーソル位置の&quot;の外を選択
 </code></pre>
-<h2 id="heading-2">モード</h2>
+<h2 id="モード">モード</h2>
 <pre><code>C-[                     # 挿入モードを抜ける
 ESC                     # 挿入モードを抜ける
 </code></pre>
-<h2 id="heading-3">ウィンドウ</h2>
+<h2 id="ウィンドウ">ウィンドウ</h2>
 <pre><code>:vs                     # 垂直分割
 :sp                     # 水平分割
 Ctrl+w w                # 次のウィンドウへ
@@ -177,21 +177,21 @@ Ctrl+w r                # 左右・上下のウィンドウを入れ替え
 :res 100                # 現在のウィンドウの高さを 100 にする
 :vertical res 30        # 現在のウィンドウの横幅を 30 にする
 </code></pre>
-<h2 id="heading-4">特殊処理</h2>
+<h2 id="特殊処理">特殊処理</h2>
 <pre><code>qa                      # マクロ記録開始
 q                       # マクロ記録終了 (@a で使用可能)
 </code></pre>
-<h2 id="heading-5">コマンドラインの履歴</h2>
+<h2 id="コマンドラインの履歴">コマンドラインの履歴</h2>
 <pre><code>q: または : Ctrl+f       # コマンドラインの履歴
 q/                      # 検索
 Ctrl+c                  # 履歴をコマンドラインに送る(編集して使えるようになる)
 </code></pre>
-<h2 id="heading-6">改行文字の変更</h2>
+<h2 id="改行文字の変更">改行文字の変更</h2>
 <pre><code>:%s/
 /
 /g                      # /Ctrl+v Ctrl+m/Ctrl+v Enter/
 </code></pre>
-<h2 id="heading-7">ファイル比較</h2>
+<h2 id="ファイル比較">ファイル比較</h2>
 <pre><code>:vertical diffsplit     # 差分を取りたいファイル
 :do (diff obtain)       # もう一方のファイルから差分を取り込む
 :dp (diff put)          # もう一方のファイルに差分を取り込ませる

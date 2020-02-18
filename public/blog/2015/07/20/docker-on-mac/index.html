@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.61.0 with theme even" />
+<meta name="generator" content="Hugo 0.64.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/" />
@@ -139,20 +139,20 @@
 <p>今回はコンテナ型の仮想環境を構築できる <a href="https://www.docker.com/">Docker</a> を使ってみます。なお Docker にはセキュリティ上の根本的欠陥があるとして、Docker と決別した Linxu ディストリビューションもあったりします。</p>
 <p><a href="http://japan.zdnet.com/article/35057363/">CoreOSが「Docker」と決別&ndash;独自のコンテナ実装「Rocket」を公開</a></p>
 <p>Rocket の方がナウイ感じがしますが、いかんせん情報が少ないので今回は Docker でいきます。</p>
-<h2 id="heading">事前準備</h2>
+<h2 id="事前準備">事前準備</h2>
 <p><a href="https://www.virtualbox.org/wiki/Downloads">VirtualBox</a> と <a href="http://brew.sh/index_ja.html">homebrew</a> をインストールしておいてください。
 VirtualBox は Linux カーネルでしか動作しない Docker を Mac で動かすために必要です。homebrew は boot2docker と呼ばれる Docker 用の Linux イメージのパッケージ管理と docker コマンド郡の管理のために必要です。</p>
-<h2 id="docker-">docker パッケージのインストール</h2>
+<h2 id="docker-パッケージのインストール">docker パッケージのインストール</h2>
 <p>docker ツール群をインストールしましょう。Mac だと簡単です。</p>
 <pre><code>$ brew install docker boot2docker
 $ docker -v
 </code></pre>
 <p>バージョンが表示されたらインストールできています。</p>
-<h2 id="docker--1">docker イメージのダウンロード</h2>
+<h2 id="docker-イメージのダウンロード">docker イメージのダウンロード</h2>
 <pre><code>$ boot2docker init
 </code></pre>
 <p>Docker の仮想イメージが <code>~/.boot2docker</code> にダウンロードされます。</p>
-<h2 id="docker--2">docker イメージの起動・停止・確認</h2>
+<h2 id="docker-イメージの起動停止確認">docker イメージの起動・停止・確認</h2>
 <p>次のコマンドで docker イメージが起動されます。</p>
 <pre><code>$ boot2docker up
 </code></pre>
@@ -174,7 +174,7 @@ export DOCKER_TLS_VERIFY=1
 <pre><code>$ boot2docker stop
 $ boot2docker status
 </code></pre>
-<h2 id="docker--3">Docker の操作</h2>
+<h2 id="docker-の操作">Docker の操作</h2>
 <p>ここまでで Docker の環境は用意できました。実際の仮想環境は Docker ホスト上に<strong>コンテナ</strong>という形で作っていくことになります。動作イメージはこのような感じです。</p>
 <img src="/images/2015/07/docker-image-2.png" class="image">
 <p>それでは練習として CentOS イメージのダウンロードと確認をしてみましょう。</p>
@@ -205,7 +205,7 @@ C-p C-q                      # デタッチ
 <p>イメージIDを指定して削除する方法です。</p>
 <pre><code>$ docker rmi a005304e4e74
 </code></pre>
-<h2 id="dockerfile-">Dockerfile の作成</h2>
+<h2 id="dockerfile-の作成">Dockerfile の作成</h2>
 <p>先ほどは centos のミニマムバージョンを起動していろいろ試してみました。ここでは実際に Ruby と MySQL が入った環境を作ってみましょう。構築は Dockerfile というものを作ってそこに書いていく感じになります。用途ごとにディレクトリを作成するとよいでしょう。</p>
 <pre><code>$ mkdir ~/docker/rbenv-mysql
 $ vim ~/docker/rbenv-mysql/Dockerfile
@@ -316,7 +316,7 @@ $ docker images # 作成されたイメージの確認
 $ docker push iriya/rbenv-mysql
 </code></pre>
 <p><a href="https://registry.hub.docker.com/u/iriya/rbenv-mysql/" target="_blank">こちら</a>がイメージになります。<strong>pull</strong> コマンドでダウンロードできます。よかったら使ってみてください。</p>
-<h2 id="heading-1">参考</h2>
+<h2 id="参考">参考</h2>
 <p><a href="http://deeeet.com/writing/2013/12/08/docker-cheat/">すぐにDockerを試したい人のための基礎コマンド</a></p>
 
     </div>
