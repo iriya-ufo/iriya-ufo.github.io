@@ -3,12 +3,94 @@ layout: post
 title: Mac に Python 環境構築
 slug: python-on-mac
 date: 2015-10-10T19:00:23+00:00
+lastmod: 2020-04-08T16:30:33+09:00
 comments: true
 categories:
   - "programming"
 tags:
   - "python"
 ---
+
+## 【2020年版】Mac に Python をインストールする方法、パッケージの管理方法
+
+### pyenv のインストール
+brew で pyenv をインストールする。
+
+```
+$ brew install pyenv
+$ pyenv -v
+pyenv 1.2.18
+```
+
+PATH を通す。
+
+```
+echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.zshrc
+echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.zshrc
+echo 'eval "$(pyenv init -)"' >> ~/.zshrc
+```
+
+### Python のインストール
+
+```
+$ pyenv install --list # インストール可能なバージョンの表示
+$ pyenv install 3.8.2  # Python のインストール
+$ pyenv versions       # インストール済み一覧
+$ pyenv global 3.8.2   # 標準で使う設定
+```
+
+### pipenv のインストール
+pipenv を使ってパッケージの管理を行う。
+
+```
+$ pip install pipenv
+```
+
+### プロジェクト単位でパッケージを管理する
+プロジェクトディレクトリに移動して初期化する。
+
+```
+$ cd FOO_BAR
+$ pipenv --python 3.8
+```
+
+上記コマンドにより `Pipfile` が作成される。
+
+```
+$ cat Pipfile
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+
+[requires]
+python_version = "3.8"
+```
+
+任意のパッケージをインストールする。パッケージをインストールすると `Pipfile.lock` が作成される(もし無ければ)
+```
+$ pipenv install [any_package]
+```
+
+`Pipfile.lock` がある状態であれば `pipenv install` とすると lock ファイルの内容がインストールされる。
+複数人での開発では `Pipfile.lock` をコミットしておく。
+
+`pipenv` でインストールしたパッケージは `$HOME/.local/share/virtualenvs/python-U6J_gNZf/lib/` に配置される。
+この領域を仮想環境と呼んでいる。プロジェクト配下からこの仮想環境を利用するには以下のようにする。
+
+```
+$ pipenv shell # 仮想環境を有効にする
+$ exit         # 仮想環境から出る
+$ pipenv --rm  # 仮想環境を削除する
+```
+
+----
+
+# !! 下記は古い内容となっているので参考にしないこと
 
 普段は Ruby 使いの自分です。ちょっと Python のライブラリを使いたい状況に出くわしたので、環境構築を含めまじめにやってみました。昔と違い随分と便利になってますね。
 
