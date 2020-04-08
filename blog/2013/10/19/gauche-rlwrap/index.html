@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/" />
@@ -243,16 +243,16 @@ $ touch ~/.rlwrap/gosh_completions
   <span class="p">(</span><span class="nv">define</span> <span class="p">(</span><span class="nv">register</span> <span class="nv">lister</span> <span class="nv">modules</span><span class="p">)</span>
     <span class="p">(</span><span class="nv">for-each</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nf">mod</span><span class="p">)</span>
                 <span class="p">(</span><span class="nv">for-each</span> <span class="p">(</span><span class="nv">cut</span> <span class="nv">hash-table-put!</span> <span class="nv">ht</span> <span class="nv">&lt;&gt;</span> <span class="err">#</span><span class="no">t</span><span class="p">)</span>
-                          <span class="p">(</span><span class="nv">lister</span> <span class="nf">mod</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
-              <span class="nv">modules</span><span class="p">)</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">define</span> <span class="nv">ht</span> <span class="p">(</span><span class="nf">make-hash-table</span><span class="p">)</span><span class="p">)</span>
+                          <span class="p">(</span><span class="nv">lister</span> <span class="nf">mod</span><span class="p">)))</span>
+              <span class="nv">modules</span><span class="p">))</span>
+  <span class="p">(</span><span class="nv">define</span> <span class="nv">ht</span> <span class="p">(</span><span class="nf">make-hash-table</span><span class="p">))</span>
   <span class="p">(</span><span class="nv">register</span> <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="nf">mod</span><span class="p">)</span>
-              <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="p">(</span><span class="nv">module-table</span> <span class="nf">mod</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
-            <span class="p">(</span><span class="nv">module-precedence-list</span> <span class="p">(</span><span class="nv">current-module</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+              <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="p">(</span><span class="nv">module-table</span> <span class="nf">mod</span><span class="p">)))</span>
+            <span class="p">(</span><span class="nv">module-precedence-list</span> <span class="p">(</span><span class="nv">current-module</span><span class="p">)))</span>
   <span class="p">(</span><span class="nv">register</span> <span class="nv">module-exports</span>
-            <span class="p">(</span><span class="nv">all-modules</span><span class="p">)</span><span class="p">)</span>
+            <span class="p">(</span><span class="nv">all-modules</span><span class="p">))</span>
   <span class="p">(</span><span class="nv">for-each</span> <span class="nf">print</span>
-            <span class="p">(</span><span class="nf">sort</span> <span class="p">(</span><span class="nf">map</span> <span class="nv">symbol-&gt;string</span> <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="nv">ht</span><span class="p">)</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+            <span class="p">(</span><span class="nf">sort</span> <span class="p">(</span><span class="nf">map</span> <span class="nv">symbol-&gt;string</span> <span class="p">(</span><span class="nv">hash-table-keys</span> <span class="nv">ht</span><span class="p">))))</span>
   <span class="mi">0</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>

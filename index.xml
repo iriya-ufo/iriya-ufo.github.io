@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 11 Feb 2020 15:55:10 +0900</lastBuildDate>
+    <lastBuildDate>Thu, 20 Dec 2018 12:38:52 +0800</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     
@@ -755,7 +755,7 @@
       <pubDate>Sat, 10 Oct 2015 19:00:23 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2015/10/10/python-on-mac/</guid>
-      <description>普段は Ruby 使いの自分です。ちょっと Python のライブラリを使いたい状況に出くわしたので、環境構築を含めまじめにやってみました。昔と違い随分と便利になっ</description>
+      <description>【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を</description>
     </item>
     
     <item>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/" />
@@ -153,11 +153,11 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; exec-path が GUI で正しく引き継がれない問題を解決</span>
-<span class="p">(</span><span class="k">let</span> <span class="p">(</span><span class="p">(</span><span class="nv">path-str</span>
+<span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">path-str</span>
        <span class="p">(</span><span class="nv">replace-regexp-in-string</span>
-       <span class="s">&#34;\n+$&#34;</span> <span class="s">&#34;&#34;</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&#34;echo $PATH&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+       <span class="s">&#34;\n+$&#34;</span> <span class="s">&#34;&#34;</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&#34;echo $PATH&#34;</span><span class="p">))))</span>
   <span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;PATH&#34;</span> <span class="nv">path-str</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nf">nconc</span> <span class="p">(</span><span class="nv">split-string</span> <span class="nv">path-str</span> <span class="s">&#34;:&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+  <span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nf">nconc</span> <span class="p">(</span><span class="nv">split-string</span> <span class="nv">path-str</span> <span class="s">&#34;:&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)))</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>cmigemo の設定です。</p>
@@ -187,7 +187,7 @@
 <span class="c1">;; 日本語のインクリメンタル検索</span>
 <span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;migemo</span><span class="p">)</span>
 <span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-command</span> <span class="s">&#34;cmigemo&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-options</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;-q&#34;</span> <span class="s">&#34;--emacs&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-options</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;-q&#34;</span> <span class="s">&#34;--emacs&#34;</span><span class="p">))</span>
 <span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-dictionary</span> <span class="s">&#34;/usr/local/share/migemo/utf-8/migemo-dict&#34;</span><span class="p">)</span>
 <span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-user-dictionary</span> <span class="no">nil</span><span class="p">)</span>
 <span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-regex-dictionary</span> <span class="no">nil</span><span class="p">)</span>

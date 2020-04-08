@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/" />
@@ -290,15 +290,15 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 <span class="nv">OPTS</span><span class="o">=</span><span class="s2">&#34;-F /your-app-path/shared/puma.rb&#34;</span>
 
 <span class="c1"># Ruby related path update</span>
-<span class="nv">RUBY_PATH_PATCH</span><span class="o">=</span><span class="s2">&#34;</span><span class="s2">PATH=</span><span class="nv">$PATH</span><span class="s2">:/usr/local/bin:/usr/local/lib &amp;&amp; export PATH &amp;&amp; </span><span class="s2">&#34;</span>
+<span class="nv">RUBY_PATH_PATCH</span><span class="o">=</span><span class="s2">&#34;PATH=</span><span class="nv">$PATH</span><span class="s2">:/usr/local/bin:/usr/local/lib &amp;&amp; export PATH &amp;&amp; &#34;</span>
 <span class="nv">BUNDLE_CMD</span><span class="o">=</span>bundle
 <span class="nv">PUMA_CMD</span><span class="o">=</span>pumactl
 . /etc/profile.d/rbenv.sh
 
-start<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+start<span class="o">()</span> <span class="o">{</span>
   <span class="nb">cd</span> <span class="nv">$APP_PATH</span>
   <span class="c1"># Start puma</span>
-  <span class="nb">echo</span> -n $<span class="s2">&#34;</span><span class="s2">Starting </span><span class="nv">$NAME</span><span class="s2">: </span><span class="s2">&#34;</span>
+  <span class="nb">echo</span> -n $<span class="s2">&#34;Starting </span><span class="nv">$NAME</span><span class="s2">: &#34;</span>
   daemon --pidfile<span class="o">=</span><span class="nv">$UPID</span> --user<span class="o">=</span><span class="nv">$USER</span> <span class="nv">$BUNDLE_CMD</span> <span class="nb">exec</span> <span class="nv">$PUMA_CMD</span> <span class="nv">$OPTS</span> start
   <span class="nv">puma</span><span class="o">=</span><span class="nv">$?</span>
   <span class="o">[</span> <span class="nv">$puma</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> touch <span class="nv">$ULOCK</span>
@@ -307,11 +307,11 @@ start<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">return</span> <span class="nv">$puma</span>
 <span class="o">}</span>
 
-stop<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+stop<span class="o">()</span> <span class="o">{</span>
   <span class="nb">cd</span> <span class="nv">$APP_PATH</span>
 
   <span class="c1"># Stop puma</span>
-  <span class="nb">echo</span> -n $<span class="s2">&#34;</span><span class="s2">Stopping </span><span class="nv">$NAME</span><span class="s2">: </span><span class="s2">&#34;</span>
+  <span class="nb">echo</span> -n $<span class="s2">&#34;Stopping </span><span class="nv">$NAME</span><span class="s2">: &#34;</span>
   killproc -p <span class="nv">$UPID</span>
   <span class="nv">puma</span><span class="o">=</span><span class="nv">$?</span>
   <span class="o">[</span> <span class="nv">$puma</span> -eq <span class="m">0</span> <span class="o">]</span> <span class="o">&amp;&amp;</span> rm -f <span class="nv">$ULOCK</span>
@@ -320,16 +320,16 @@ stop<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
   <span class="k">return</span> <span class="nv">$puma</span>
 <span class="o">}</span>
 
-restart<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+restart<span class="o">()</span> <span class="o">{</span>
   stop
   start
 <span class="o">}</span>
 
-get_status<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+get_status<span class="o">()</span> <span class="o">{</span>
   status -p <span class="nv">$UPID</span> <span class="nv">$NAME</span>
 <span class="o">}</span>
 
-query_status<span class="o">(</span><span class="o">)</span> <span class="o">{</span>
+query_status<span class="o">()</span> <span class="o">{</span>
   get_status &gt;/dev/null 2&gt;<span class="p">&amp;</span><span class="m">1</span>
 <span class="o">}</span>
 
@@ -337,23 +337,23 @@ query_status<span class="o">(</span><span class="o">)</span> <span class="o">{</
   start<span class="o">)</span>
     query_status <span class="o">&amp;&amp;</span> <span class="nb">exit</span> <span class="m">0</span>
     start
-    <span class="p">;</span><span class="p">;</span>
+    <span class="p">;;</span>
   stop<span class="o">)</span>
     query_status <span class="o">||</span> <span class="nb">exit</span> <span class="m">0</span>
     stop
-    <span class="p">;</span><span class="p">;</span>
+    <span class="p">;;</span>
   restart<span class="o">)</span>
     restart
-    <span class="p">;</span><span class="p">;</span>
+    <span class="p">;;</span>
   status<span class="o">)</span>
     get_status
     <span class="nb">exit</span> <span class="nv">$?</span>
-    <span class="p">;</span><span class="p">;</span>
+    <span class="p">;;</span>
   *<span class="o">)</span>
     <span class="nv">N</span><span class="o">=</span>/etc/init.d/<span class="nv">$NAME</span>
-    <span class="nb">echo</span> <span class="s2">&#34;</span><span class="s2">Usage: </span><span class="nv">$N</span><span class="s2"> {start|stop|restart|status}</span><span class="s2">&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
+    <span class="nb">echo</span> <span class="s2">&#34;Usage: </span><span class="nv">$N</span><span class="s2"> {start|stop|restart|status}&#34;</span> &gt;<span class="p">&amp;</span><span class="m">2</span>
     <span class="nb">exit</span> <span class="m">1</span>
-    <span class="p">;</span><span class="p">;</span>
+    <span class="p">;;</span>
 <span class="k">esac</span>
 
 <span class="nb">exit</span> <span class="m">0</span>
@@ -397,24 +397,24 @@ query_status<span class="o">(</span><span class="o">)</span> <span class="o">{</
 <pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ch">#!/usr/bin/env puma</span>
 
 <span class="n">directory</span> <span class="s1">&#39;/your-app-path/current&#39;</span>
-<span class="n">rackup</span> <span class="s2">&#34;</span><span class="s2">/your-app-path/current/config.ru</span><span class="s2">&#34;</span>
+<span class="n">rackup</span> <span class="s2">&#34;/your-app-path/current/config.ru&#34;</span>
 <span class="n">environment</span> <span class="s1">&#39;production&#39;</span>
 <span class="n">daemonize</span> <span class="kp">true</span>
 
-<span class="n">pidfile</span> <span class="s2">&#34;</span><span class="s2">/your-app-path/shared/tmp/pids/puma.pid</span><span class="s2">&#34;</span>
-<span class="n">state_path</span> <span class="s2">&#34;</span><span class="s2">/your-app-path/shared/tmp/state/puma.state</span><span class="s2">&#34;</span>
+<span class="n">pidfile</span> <span class="s2">&#34;/your-app-path/shared/tmp/pids/puma.pid&#34;</span>
+<span class="n">state_path</span> <span class="s2">&#34;/your-app-path/shared/tmp/state/puma.state&#34;</span>
 <span class="n">stdout_redirect</span> <span class="s1">&#39;/your-app-path/current/log/puma.access.log&#39;</span><span class="p">,</span> <span class="s1">&#39;/your-app-path/current/log/puma.error.log&#39;</span><span class="p">,</span> <span class="kp">true</span>
 
-<span class="n">threads</span> <span class="mi">0</span><span class="o"></span><span class="p">,</span><span class="mi">16</span>
-<span class="o"></span><span class="n">workers</span> <span class="mi">0</span>
+<span class="n">threads</span> <span class="mi">0</span><span class="p">,</span><span class="mi">16</span>
+<span class="n">workers</span> <span class="mi">0</span>
 
-<span class="o"></span><span class="n">bind</span> <span class="s1">&#39;unix:///your-app-path/shared/tmp/sockets/puma.sock&#39;</span>
+<span class="n">bind</span> <span class="s1">&#39;unix:///your-app-path/shared/tmp/sockets/puma.sock&#39;</span>
 
 <span class="n">preload_app!</span>
 
 <span class="n">on_restart</span> <span class="k">do</span>
   <span class="nb">puts</span> <span class="s1">&#39;Refreshing Gemfile&#39;</span>
-  <span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;</span><span class="s2">BUNDLE_GEMFILE</span><span class="s2">&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;</span><span class="s2">/your-app-path/current/Gemfile</span><span class="s2">&#34;</span>
+  <span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;BUNDLE_GEMFILE&#34;</span><span class="o">]</span> <span class="o">=</span> <span class="s2">&#34;/your-app-path/current/Gemfile&#34;</span>
 <span class="k">end</span>
 
 
