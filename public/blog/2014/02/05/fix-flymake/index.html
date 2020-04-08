@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/02/05/fix-flymake/" />
@@ -142,8 +142,8 @@ flymake はデフォルトだとシステムの ruby を読みにいきます。
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:h</span> <span class="o">=</span><span class="o">&gt;</span> <span class="mi">1</span> <span class="o"></span><span class="p">}</span> <span class="c1"># ruby1.8 or ruby1.9 以降で動作</span>
-<span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">h</span><span class="p">:</span> <span class="mi">1</span> <span class="o"></span><span class="p">}</span> <span class="c1"># ruby1.8 だとエラーになる</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">:h</span> <span class="o">=&gt;</span> <span class="mi">1</span> <span class="p">}</span> <span class="c1"># ruby1.8 or ruby1.9 以降で動作</span>
+<span class="n">h</span> <span class="o">=</span> <span class="p">{</span> <span class="ss">h</span><span class="p">:</span> <span class="mi">1</span> <span class="p">}</span> <span class="c1"># ruby1.8 だとエラーになる</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>rbenv でインストールした ruby を読ませるため <code>.emacs</code> に以下を追記します。</p>
@@ -155,8 +155,8 @@ flymake はデフォルトだとシステムの ruby を読みにいきます。
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; Setting rbenv path</span>
-<span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;PATH&#34;</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;PATH&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;PATH&#34;</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin:&#34;</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;PATH&#34;</span><span class="p">)))</span>
+<span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/shims&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nc">cons</span> <span class="p">(</span><span class="nv">concat</span> <span class="p">(</span><span class="nv">getenv</span> <span class="s">&#34;HOME&#34;</span><span class="p">)</span> <span class="s">&#34;/.rbenv/bin&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)))</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Emacs を再起動して <code>M-x run-ruby</code> で確認してみましょう。</p>

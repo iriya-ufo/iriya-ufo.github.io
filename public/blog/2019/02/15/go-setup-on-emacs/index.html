@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/" />
@@ -220,18 +220,18 @@ $ go get github.com/kisielk/errcheck             <span class="c1"># flycheck„Åß„
 <span class="c1">;;================================================================</span>
 <span class="c1">;; Go</span>
 <span class="c1">;;================================================================</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;</span><span class="s">exec-path-from-shell</span><span class="s">&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;</span><span class="s">go-mode</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span>
+<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;exec-path-from-shell&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;go-mode&#34;</span><span class="p">))</span>
   <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;exec-path-from-shell</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">let</span> <span class="p">(</span><span class="p">(</span><span class="nv">envs</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;</span><span class="s">PATH</span><span class="s">&#34;</span> <span class="s">&#34;</span><span class="s">GOPATH</span><span class="s">&#34;</span><span class="p">)</span><span class="p">)</span><span class="p">)</span>
-    <span class="p">(</span><span class="nv">exec-path-from-shell-copy-envs</span> <span class="nv">envs</span><span class="p">)</span><span class="p">)</span>
+  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">envs</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;PATH&#34;</span> <span class="s">&#34;GOPATH&#34;</span><span class="p">)))</span>
+    <span class="p">(</span><span class="nv">exec-path-from-shell-copy-envs</span> <span class="nv">envs</span><span class="p">))</span>
   <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;go-autocomplete</span><span class="p">)</span>
   <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span>
-            <span class="p">(</span><span class="nb">lambda</span> <span class="p">(</span><span class="p">)</span>
+            <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
               <span class="p">(</span><span class="nb">setq</span> <span class="nv">indent-tabs-mode</span> <span class="no">t</span><span class="p">)</span>
               <span class="p">(</span><span class="nv">go-eldoc-setup</span><span class="p">)</span>
-              <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;</span><span class="s">goimports</span><span class="s">&#34;</span><span class="p">)</span>
+              <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
               <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
-              <span class="p">)</span><span class="p">)</span>
+              <span class="p">))</span>
   <span class="p">)</span>
 </code></pre></td></tr></table>
 </div>

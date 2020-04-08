@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/" />
@@ -177,14 +177,14 @@ db_1   <span class="p">|</span> 2019-01-09T01:57:45.524650Z <span class="m">0</s
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.528223Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: PUNCH HOLE support available
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.528319Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Mutexes and rw_locks use GCC atomic builtins
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.528348Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Uses event mutexes
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">(</span><span class="o">)</span> is used <span class="k">for</span> memory barrier
+db_1   <span class="p">|</span> 2019-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">()</span> is used <span class="k">for</span> memory barrier
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.528394Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Compressed tables use zlib 1.2.11
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.528543Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using Linux native AIO
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.528969Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Number of pools: <span class="m">1</span>
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.529276Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using CPU crc32 instructions
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.530867Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Initializing buffer pool, total <span class="nv">size</span> <span class="o">=</span> 128M, <span class="nv">instances</span> <span class="o">=</span> 1, chunk <span class="nv">size</span> <span class="o">=</span> 128M
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.540619Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Completed initialization of buffer pool
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">(</span><span class="o">)</span>.
+db_1   <span class="p">|</span> 2019-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">()</span>.
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.554602Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Highest supported file format is Barracuda.
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.554769Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Unsupported redo log format. The redo log was created with MariaDB 10.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html
 db_1   <span class="p">|</span> 2019-01-09T01:57:45.554873Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Plugin initialization aborted with error Generic error
@@ -264,35 +264,35 @@ $ docker volume rm VOLUME_NAME
 <pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">  </span><span class="k">db</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mysql<span class="p">:</span><span class="m">5.7</span><span class="w">
+</span><span class="w">  </span><span class="k">db</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mysql<span class="p">:</span><span class="m">5.7</span><span class="w">
 </span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span><span class="k">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
+</span><span class="w">      </span><span class="k">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
 </span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
 </span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span>- <span class="s2">&#34;dbdata:/var/lib/mysql&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;dbdata:/var/lib/mysql&#34;</span><span class="w">
 </span><span class="w">      </span>- <span class="s2">&#34;./resources/containers/mariadb:/etc/mysql/conf.d&#34;</span><span class="w">
 </span><span class="w">
 </span><span class="w">  </span><span class="k">web</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">    </span><span class="k">build</span><span class="p">:</span><span class="w"> </span>.<span class="w">
+</span><span class="w">    </span><span class="k">build</span><span class="p">:</span><span class="w"> </span>.<span class="w">
 </span><span class="w">    </span><span class="k">command</span><span class="p">:</span><span class="w"> </span>bundle<span class="w"> </span>exec<span class="w"> </span>rails<span class="w"> </span>s<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span><span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;0.0.0.0&#39;</span><span class="w">
 </span><span class="w">    </span><span class="k">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="w">    </span><span class="k">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
 </span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span>- <span class="s2">&#34;3000:3000&#34;</span><span class="w">
+</span><span class="w">      </span>- <span class="s2">&#34;3000:3000&#34;</span><span class="w">
 </span><span class="w">    </span><span class="k">env_file</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span>- .env<span class="w">
+</span><span class="w">      </span>- .env<span class="w">
 </span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span><span class="k">RAILS_ENV</span><span class="p">:</span><span class="w"> </span>development<span class="w">
+</span><span class="w">      </span><span class="k">RAILS_ENV</span><span class="p">:</span><span class="w"> </span>development<span class="w">
 </span><span class="w">      </span><span class="k">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mysql2://root:password@db:3306&#34;</span><span class="w">
 </span><span class="w">    </span><span class="k">depends_on</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span>- db<span class="w">
+</span><span class="w">      </span>- db<span class="w">
 </span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">      </span>- .<span class="p">:</span>/usr/src/app<span class="w">
+</span><span class="w">      </span>- .<span class="p">:</span>/usr/src/app<span class="w">
 </span><span class="w">
 </span><span class="w"></span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w"></span><span class="w">  </span><span class="k">dbdata</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="k">dbdata</span><span class="p">:</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div>

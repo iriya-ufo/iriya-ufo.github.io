@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.64.1 with theme even" />
+<meta name="generator" content="Hugo 0.68.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/" />
@@ -168,7 +168,7 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s2">&#34;</span><span class="s2">https://rubygems.org</span><span class="s2">&#34;</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s2">&#34;https://rubygems.org&#34;</span>
 <span class="n">ruby</span> <span class="s1">&#39;2.0.0&#39;</span>
 
 <span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
@@ -231,9 +231,9 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;</span><span class="s2">WEB_CONCURRENCY</span><span class="s2">&#34;</span><span class="o">]</span> <span class="o">||</span> <span class="mi">3</span><span class="o"></span><span class="p">)</span>
+<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;WEB_CONCURRENCY&#34;</span><span class="o">]</span> <span class="o">||</span> <span class="mi">3</span><span class="p">)</span>
 <span class="n">timeout</span> <span class="mi">15</span>
-<span class="o"></span><span class="n">preload_app</span> <span class="kp">true</span>
+<span class="n">preload_app</span> <span class="kp">true</span>
 
 <span class="n">before_fork</span> <span class="k">do</span> <span class="o">|</span><span class="n">server</span><span class="p">,</span> <span class="n">worker</span><span class="o">|</span>
   <span class="no">Signal</span><span class="o">.</span><span class="n">trap</span> <span class="s1">&#39;TERM&#39;</span> <span class="k">do</span>
@@ -335,7 +335,7 @@ $ git push heroku master
 </span></code></pre></td>
 <td class="lntd">
 <pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">CreateUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
-  <span class="k">def</span> <span class="nc"></span><span class="o"></span><span class="nf">change</span>
+  <span class="k">def</span> <span class="nf">change</span>
     <span class="n">create_table</span> <span class="ss">:users</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
       <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:registration_id</span>
       <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:name</span>
