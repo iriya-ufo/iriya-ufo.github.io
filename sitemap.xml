@@ -10,7 +10,49 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-04-08T16:30:33+09:00</lastmod>
+    <lastmod>2020-04-09T10:39:08+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/cs1101/</loc>
+    <lastmod>2020-04-09T10:39:08+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2020-04-09T10:39:08+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2020-04-09T10:39:08+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/univ1001/</loc>
+    <lastmod>2020-04-09T10:39:08+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/university-of-the-people/</loc>
+    <lastmod>2020-04-09T10:39:08+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/04/09/starting-the-university-of-the-people-term4/</loc>
+    <lastmod>2020-04-09T10:39:08+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -37,21 +79,7 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-04-08T16:30:33+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2020-04-08T16:30:33+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2020-04-08T16:30:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -73,13 +101,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/tags/english/</loc>
-    <lastmod>2020-01-22T11:00:33+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/university-of-the-people/</loc>
     <lastmod>2020-01-22T11:00:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
