@@ -9,8 +9,6 @@ categories:
   - "review"
 ---
 
-<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4334962211/iriyaufo-22" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/512WdBM%2BYhL._SL160_.jpg" alt="NETFLIXの最強人事戦略 自由と責任の文化を築く" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4334962211/iriyaufo-22" name="amazletlink" target="_blank">NETFLIXの最強人事戦略 自由と責任の文化を築く</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.05.09</div></div><div class="amazlet-detail">パティ・マッコード <br />光文社 <br />売り上げランキング: 3,134<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4334962211/iriyaufo-22" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
 > ある日のネットフリックスの経営会議で、私たちは突然気がついた。あと９か月もすれば、アメリカの全インターネット・トラフィックの３分の１を、うちの会社が占めるようになるのだと。
 
 > > パティ・マッコード. NETFLIXの最強人事戦略～自由と責任の文化を築く～ (Japanese Edition) (Kindle の位置No.68-70). Kindle 版.
@@ -97,3 +95,5 @@ Netflix ではどのレベルや職種に対しても情報がオープンに開
 チームを構成するメンバーは独立した一人前の大人であり、彼らは自由な意思決定を行うとともに Netflix に対し責任を果たす。
 
 カルチャーデックに書ききれないその文化の育成が、本書では臨場感を持って書かれています。スタートアップ界隈の人にはぜひ一読をオススメします。
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4334962211/iriyaufo-22" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/512WdBM%2BYhL._SL160_.jpg" alt="NETFLIXの最強人事戦略 自由と責任の文化を築く" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4334962211/iriyaufo-22" name="amazletlink" target="_blank">NETFLIXの最強人事戦略 自由と責任の文化を築く</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.05.09</div></div><div class="amazlet-detail">パティ・マッコード <br />光文社 <br />売り上げランキング: 3,134<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4334962211/iriyaufo-22" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>

@@ -9,28 +9,6 @@ categories:
   - "review"
 ---
 
-<div class="amazlet-box" style="margin-bottom:1.5em;">
-    <div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;">
-        <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B07DNCCG5Q/iriyaufo-22" name="amazletlink" target="_blank">
-            <img src="https://images-fe.ssl-images-amazon.com/images/I/51iwJ7rVXDL._SL160_.jpg" alt="the four GAFA　四騎士が創り変えた世界" style="border: none;" />
-        </a>
-    </div>
-    <div class="amazlet-info" style="line-height:120%; margin-bottom: 10px">
-        <div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
-            <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B07DNCCG5Q/iriyaufo-22" name="amazletlink" target="_blank">the four GAFA　四騎士が創り変えた世界</a>
-            <div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 17.01.16</div>
-        </div>
-        <div class="amazlet-detail">スコット・ギャロウェイ (著), 渡会 圭子 (翻訳) <br />東洋経済新報社 <br />売り上げランキング: 579<br />
-        </div>
-        <div class="amazlet-sub-info" style="float: left;">
-            <div class="amazlet-link" style="margin-top: 5px">
-                <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B07DNCCG5Q/iriyaufo-22" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a>
-            </div>
-        </div>
-    </div>
-    <div class="amazlet-footer" style="clear: left"></div>
-</div>
-
 書店に平積みにされていたのでなんとなく読んでみた。
 
 GAFA とは Google, Amazon, Facebook, Apple のそれぞれ頭文字を取ってつけた造語だ。
@@ -81,3 +59,25 @@ Facebook 自体が若者離れで低迷する中、札束を叩いての買収�
 有名大学を中退せずに(我々はザッカーバーグではない)卒業し、都会にでて交流を絶やさず、会社に入れば報酬に株を組み込み、好きなことではなく得意なことに打ち込め。
 
 とまぁ、耳が痛い話しだが真っ当に生きよということを言っているのだろう。スタートアップは万人向けではないのだ。
+
+<div class="amazlet-box" style="margin-bottom:1.5em;">
+    <div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;">
+        <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B07DNCCG5Q/iriyaufo-22" name="amazletlink" target="_blank">
+            <img src="https://images-fe.ssl-images-amazon.com/images/I/51iwJ7rVXDL._SL160_.jpg" alt="the four GAFA　四騎士が創り変えた世界" style="border: none;" />
+        </a>
+    </div>
+    <div class="amazlet-info" style="line-height:120%; margin-bottom: 10px">
+        <div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
+            <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B07DNCCG5Q/iriyaufo-22" name="amazletlink" target="_blank">the four GAFA　四騎士が創り変えた世界</a>
+            <div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 17.01.16</div>
+        </div>
+        <div class="amazlet-detail">スコット・ギャロウェイ (著), 渡会 圭子 (翻訳) <br />東洋経済新報社 <br />売り上げランキング: 579<br />
+        </div>
+        <div class="amazlet-sub-info" style="float: left;">
+            <div class="amazlet-link" style="margin-top: 5px">
+                <a href="http://www.amazon.co.jp/exec/obidos/ASIN/B07DNCCG5Q/iriyaufo-22" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a>
+            </div>
+        </div>
+    </div>
+    <div class="amazlet-footer" style="clear: left"></div>
+</div>

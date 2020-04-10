@@ -11,28 +11,6 @@ tags:
   - "security"
 ---
 
-<div class="amazlet-box" style="margin-bottom:0px;">
-  <div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;">
-    <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">
-      <img src="https://images-fe.ssl-images-amazon.com/images/I/513hw-04L8L._SL160_.jpg" alt="体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践" style="border: none;" />
-    </a>
-  </div>
-  <div class="amazlet-info" style="line-height:120%; margin-bottom: 10px">
-    <div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
-      <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践</a>
-      <div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.04.29</div>
-    </div>
-    <div class="amazlet-detail">徳丸 浩 <br />SBクリエイティブ <br />売り上げランキング: 3,131<br />
-    </div>
-    <div class="amazlet-sub-info" style="float: left;">
-      <div class="amazlet-link" style="margin-top: 5px">
-        <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a>
-      </div>
-    </div>
-  </div>
-  <div class="amazlet-footer" style="clear: left"></div>
-</div>
-
 Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい。
 
 セキュリティと聞くと『バッファ・オーバーフローを起こさせてそこから任意のコードを実行し...』みたいな妄想が捗るが本書はそういった類のものではない。
@@ -221,3 +199,25 @@ Web セキュリティに関してはこの本は必読だと思うので読ん�
 こちらは Rails を題材にして種々の脆弱性を紹介している。
 
 - [Railsエンジニアのためのウェブセキュリティ入門](https://www.slideshare.net/ockeghem/ruby-on-rails-security-142250872)
+
+<div class="amazlet-box" style="margin-bottom:0px;">
+  <div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;">
+    <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">
+      <img src="https://images-fe.ssl-images-amazon.com/images/I/513hw-04L8L._SL160_.jpg" alt="体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践" style="border: none;" />
+    </a>
+  </div>
+  <div class="amazlet-info" style="line-height:120%; margin-bottom: 10px">
+    <div class="amazlet-name" style="margin-bottom:10px;line-height:120%">
+      <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">体系的に学ぶ 安全なWebアプリケーションの作り方 第2版 脆弱性が生まれる原理と対策の実践</a>
+      <div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.04.29</div>
+    </div>
+    <div class="amazlet-detail">徳丸 浩 <br />SBクリエイティブ <br />売り上げランキング: 3,131<br />
+    </div>
+    <div class="amazlet-sub-info" style="float: left;">
+      <div class="amazlet-link" style="margin-top: 5px">
+        <a href="http://www.amazon.co.jp/exec/obidos/ASIN/4797393165/iriyaufo-22" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a>
+      </div>
+    </div>
+  </div>
+  <div class="amazlet-footer" style="clear: left"></div>
+</div>

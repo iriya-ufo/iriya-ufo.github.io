@@ -11,8 +11,6 @@ tags:
   - "clean architecture"
 ---
 
-<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048930656/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/51LkcwTMC8L._SL160_.jpg" alt="Clean Architecture 達人に学ぶソフトウェアの構造と設計" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048930656/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">Clean Architecture 達人に学ぶソフトウェアの構造と設計</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.11.18</div></div><div class="amazlet-detail">Robert C.Martin <br />KADOKAWA (2018-07-27)<br />売り上げランキング: 8,168<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048930656/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
 これを読む人は、あの同心円状の The Clean Architecture の図を見たことがあるだろう。
 もしかしたら The Clean Architecture についてのより詳しい説明を求めていたかもしれない。
 だが本書では詳細は取り扱っていない。
@@ -85,3 +83,5 @@ tags:
 ## まとめ
 
 他にも色々学びがある書籍だったが、図がないと説明が難しい部分も多いので、ここまでにしておく。
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048930656/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/51LkcwTMC8L._SL160_.jpg" alt="Clean Architecture 達人に学ぶソフトウェアの構造と設計" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048930656/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">Clean Architecture 達人に学ぶソフトウェアの構造と設計</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.11.18</div></div><div class="amazlet-detail">Robert C.Martin <br />KADOKAWA (2018-07-27)<br />売り上げランキング: 8,168<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4048930656/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>

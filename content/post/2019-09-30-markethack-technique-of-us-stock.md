@@ -12,8 +12,6 @@ tags:
   - "stock"
 ---
 
-<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4492733027/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/416H%2Bl630lL._SL160_.jpg" alt="MarketHack流 世界一わかりやすい米国式投資の技法" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4492733027/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">MarketHack流 世界一わかりやすい米国式投資の技法</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.09.30</div></div><div class="amazlet-detail">広瀬 隆雄 <br />東洋経済新報社 <br />売り上げランキング: 29,935<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4492733027/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
-
 じっちゃまの愛称で親しまれている広瀬隆雄さんの著書です。
 御年60でありながら [Twitter](https://twitter.com/hirosetakao?lang=ja) でめっちゃ発言してたり [Note](https://note.mu/hirosetakao) とか売ってたりしてなかなかIT感度の高いお方です。
 
@@ -120,3 +118,5 @@ tags:
 最終的には市場に参入して読み取っていく力を養っていかないといけないですね。
 
 [^1]: 本書内の画像と内容は古いものでしたので、適当に現在2019年9月の内容で書き換えてます。
+
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4492733027/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/416H%2Bl630lL._SL160_.jpg" alt="MarketHack流 世界一わかりやすい米国式投資の技法" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4492733027/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">MarketHack流 世界一わかりやすい米国式投資の技法</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.09.30</div></div><div class="amazlet-detail">広瀬 隆雄 <br />東洋経済新報社 <br />売り上げランキング: 29,935<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="http://www.amazon.co.jp/exec/obidos/ASIN/4492733027/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
