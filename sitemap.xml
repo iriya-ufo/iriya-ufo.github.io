@@ -10,7 +10,42 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-05-25T20:52:44+09:00</lastmod>
+    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/diary/</loc>
+    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/hhkb/</loc>
+    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/06/16/enhance-hhkb/</loc>
+    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -23,21 +58,7 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-05-25T20:52:44+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://iriya-ufo.net/categories/review/</loc>
-    <lastmod>2020-05-25T20:52:44+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2020-05-25T20:52:44+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -473,13 +494,6 @@
   <url>
     <loc>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</loc>
     <lastmod>2018-12-27T10:17:23+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/diary/</loc>
-    <lastmod>2018-12-26T16:42:16+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
