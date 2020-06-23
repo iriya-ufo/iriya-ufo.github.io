@@ -6,10 +6,19 @@
     <description>Recent content in Categories on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 16 Jun 2020 21:15:00 +0900</lastBuildDate>
+    <lastBuildDate>Tue, 23 Jun 2020 08:51:57 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/categories/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>university of the people</title>
+      <link>https://iriya-ufo.net/categories/university-of-the-people/</link>
+      <pubDate>Tue, 23 Jun 2020 08:51:57 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/categories/university-of-the-people/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>diary</title>
@@ -26,15 +35,6 @@
       <pubDate>Mon, 25 May 2020 20:52:44 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/categories/review/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>university of the people</title>
-      <link>https://iriya-ufo.net/categories/university-of-the-people/</link>
-      <pubDate>Thu, 09 Apr 2020 10:39:08 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/categories/university-of-the-people/</guid>
       <description></description>
     </item>
     
