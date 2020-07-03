@@ -6,10 +6,19 @@
     <description>Recent content in Tags on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 23 Jun 2020 08:51:57 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 03 Jul 2020 17:20:45 +0900</lastBuildDate>
     
 	<atom:link href="https://iriya-ufo.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>stock</title>
+      <link>https://iriya-ufo.net/tags/stock/</link>
+      <pubDate>Fri, 03 Jul 2020 17:20:45 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/tags/stock/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>cs1101</title>
@@ -107,15 +116,6 @@
       <pubDate>Wed, 22 Jan 2020 11:00:33 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/tags/english/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>stock</title>
-      <link>https://iriya-ufo.net/tags/stock/</link>
-      <pubDate>Sat, 11 Jan 2020 23:50:37 +0900</pubDate>
-      
-      <guid>https://iriya-ufo.net/tags/stock/</guid>
       <description></description>
     </item>
     
