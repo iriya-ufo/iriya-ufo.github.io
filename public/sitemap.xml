@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-06-23T08:51:57+09:00</lastmod>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/</loc>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/review/</loc>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/stock/</loc>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/stock/</loc>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/07/03/easiest-stock-text-in-the-world/</loc>
+    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,28 +79,7 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2020-06-23T08:51:57+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://iriya-ufo.net/tags/pols1503/</loc>
-    <lastmod>2020-06-23T08:51:57+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-06-23T08:51:57+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2020-06-23T08:51:57+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -101,13 +129,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/tags/finance/</loc>
-    <lastmod>2020-05-25T20:52:44+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/review/</loc>
     <lastmod>2020-05-25T20:52:44+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -193,20 +214,6 @@
   <url>
     <loc>https://iriya-ufo.net/blog/2020/01/22/enroll-in-university-of-the-people/</loc>
     <lastmod>2020-01-22T11:00:33+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/stock/</loc>
-    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/stock/</loc>
-    <lastmod>2020-01-11T23:50:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
