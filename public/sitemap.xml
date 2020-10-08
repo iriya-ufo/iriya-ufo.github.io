@@ -10,34 +10,69 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-09-21T01:43:44+09:00</lastmod>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/finance/</loc>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2020-09-21T01:43:44+09:00</lastmod>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-09-21T01:43:44+09:00</lastmod>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2020-09-21T01:43:44+09:00</lastmod>
+    <loc>https://iriya-ufo.net/categories/review/</loc>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/stock/</loc>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/stock/</loc>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/10/08/dan-takahashi-review/</loc>
+    <lastmod>2020-10-08T00:58:05+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/programming/</loc>
     <lastmod>2020-09-21T01:43:44+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -53,27 +88,6 @@
   <url>
     <loc>https://iriya-ufo.net/blog/2020/09/21/vscode-extension/</loc>
     <lastmod>2020-09-21T01:43:44+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/review/</loc>
-    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/stock/</loc>
-    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/stock/</loc>
-    <lastmod>2020-07-03T17:20:45+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -144,13 +158,6 @@
   <url>
     <loc>https://iriya-ufo.net/blog/2020/06/16/enhance-hhkb/</loc>
     <lastmod>2020-06-16T21:15:00+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/finance/</loc>
-    <lastmod>2020-05-25T20:52:44+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
