@@ -6,11 +6,7 @@
     <description>Recent content in shell on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 19 Oct 2013 18:33:58 +0000</lastBuildDate>
-    
-	<atom:link href="https://iriya-ufo.net/tags/shell/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sat, 19 Oct 2013 18:33:58 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>シェル周りまとめ</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/about-shell/</link>

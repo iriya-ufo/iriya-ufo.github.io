@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.74.3 with theme even" />
+<meta name="generator" content="Hugo 0.76.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/" />
@@ -48,7 +48,7 @@
 <meta itemprop="description" content="とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14">
 <meta itemprop="datePublished" content="2019-01-09T11:27:47+09:00" />
 <meta itemprop="dateModified" content="2019-01-09T11:27:47+09:00" />
-<meta itemprop="wordCount" content="734">
+<meta itemprop="wordCount" content="741">
 
 
 
@@ -262,38 +262,38 @@ $ docker volume rm VOLUME_NAME
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="k">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+<pre class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
 </span><span class="w">
-</span><span class="w"></span><span class="k">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">db</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">image</span><span class="p">:</span><span class="w"> </span>mysql<span class="p">:</span><span class="m">5.7</span><span class="w">
-</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
-</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:5.7</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="s2">&#34;dbdata:/var/lib/mysql&#34;</span><span class="w">
 </span><span class="w">      </span>- <span class="s2">&#34;./resources/containers/mariadb:/etc/mysql/conf.d&#34;</span><span class="w">
 </span><span class="w">
-</span><span class="w">  </span><span class="k">web</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="k">build</span><span class="p">:</span><span class="w"> </span>.<span class="w">
-</span><span class="w">    </span><span class="k">command</span><span class="p">:</span><span class="w"> </span>bundle<span class="w"> </span>exec<span class="w"> </span>rails<span class="w"> </span>s<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span><span class="w"> </span>-b<span class="w"> </span><span class="s1">&#39;0.0.0.0&#39;</span><span class="w">
-</span><span class="w">    </span><span class="k">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">    </span><span class="k">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">    </span><span class="k">ports</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">web</span><span class="p">:</span><span class="w">
+</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
+</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">bundle exec rails s -p 3000 -b &#39;0.0.0.0&#39;</span><span class="w">
+</span><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
 </span><span class="w">      </span>- <span class="s2">&#34;3000:3000&#34;</span><span class="w">
-</span><span class="w">    </span><span class="k">env_file</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- .env<span class="w">
-</span><span class="w">    </span><span class="k">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="k">RAILS_ENV</span><span class="p">:</span><span class="w"> </span>development<span class="w">
-</span><span class="w">      </span><span class="k">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mysql2://root:password@db:3306&#34;</span><span class="w">
-</span><span class="w">    </span><span class="k">depends_on</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- db<span class="w">
-</span><span class="w">    </span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- .<span class="p">:</span>/usr/src/app<span class="w">
+</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">.env</span><span class="w">
+</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span><span class="nt">RAILS_ENV</span><span class="p">:</span><span class="w"> </span><span class="l">development</span><span class="w">
+</span><span class="w">      </span><span class="nt">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mysql2://root:password@db:3306&#34;</span><span class="w">
+</span><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">db</span><span class="w">
+</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">      </span>- <span class="l">.:/usr/src/app</span><span class="w">
 </span><span class="w">
-</span><span class="w"></span><span class="k">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="k">dbdata</span><span class="p">:</span><span class="w">
+</span><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span><span class="w">  </span><span class="nt">dbdata</span><span class="p">:</span><span class="w">
 </span></code></pre></td></tr></table>
 </div>
 </div>

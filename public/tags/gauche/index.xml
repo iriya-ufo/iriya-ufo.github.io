@@ -6,11 +6,7 @@
     <description>Recent content in gauche on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 20 Aug 2014 02:07:11 +0000</lastBuildDate>
-    
-	<atom:link href="https://iriya-ufo.net/tags/gauche/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Wed, 20 Aug 2014 02:07:11 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/gauche/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gauche のユーザーリファレンスを読む</title>
       <link>https://iriya-ufo.net/blog/2014/08/20/read-gauche-reference/</link>

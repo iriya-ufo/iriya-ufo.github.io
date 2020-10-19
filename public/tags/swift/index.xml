@@ -6,11 +6,7 @@
     <description>Recent content in swift on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 24 Aug 2014 18:13:51 +0000</lastBuildDate>
-    
-	<atom:link href="https://iriya-ufo.net/tags/swift/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 24 Aug 2014 18:13:51 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#8216;MacOSX10.9.sdk&amp;#8217; does not support Swift</title>
       <link>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</link>
