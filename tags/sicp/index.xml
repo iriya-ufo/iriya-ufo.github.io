@@ -6,11 +6,7 @@
     <description>Recent content in sicp on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 18 May 2014 03:41:22 +0000</lastBuildDate>
-    
-	<atom:link href="https://iriya-ufo.net/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 18 May 2014 03:41:22 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/sicp/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>続・SICP読書会</title>
       <link>https://iriya-ufo.net/blog/2014/05/18/sicp-reading/</link>

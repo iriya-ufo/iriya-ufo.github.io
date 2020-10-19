@@ -6,11 +6,7 @@
     <description>Recent content in ruby on rails on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 08 Apr 2016 00:52:01 +0000</lastBuildDate>
-    
-	<atom:link href="https://iriya-ufo.net/tags/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Fri, 08 Apr 2016 00:52:01 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bower-rails 使ってみた</title>
       <link>https://iriya-ufo.net/blog/2016/04/08/start-bower-rails/</link>

@@ -198,14 +198,7 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/node/</loc>
-    <lastmod>2020-02-11T15:55:10+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/nodenv/</loc>
+    <loc>https://iriya-ufo.net/tags/node.js/</loc>
     <lastmod>2020-02-11T15:55:10+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -906,13 +899,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</loc>
-    <lastmod>2016-04-07T22:54:11+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/nodejs/</loc>
     <lastmod>2016-04-07T22:54:11+00:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

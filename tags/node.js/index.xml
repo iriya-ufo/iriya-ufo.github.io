@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>nodejs on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/nodejs/</link>
-    <description>Recent content in nodejs on iriya-ufo&#39;s blog</description>
+    <title>node.js on iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/tags/node.js/</link>
+    <description>Recent content in node.js on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 07 Apr 2016 22:54:11 +0000</lastBuildDate>
-    
-	<atom:link href="https://iriya-ufo.net/tags/nodejs/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Tue, 11 Feb 2020 15:55:10 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac に nodenv インストールした</title>
+      <link>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</link>
+      <pubDate>Tue, 11 Feb 2020 15:55:10 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</guid>
+      <description>brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ</description>
+    </item>
     
     <item>
       <title>Mac に Node.js インストールした</title>
