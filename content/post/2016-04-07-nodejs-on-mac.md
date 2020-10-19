@@ -7,7 +7,7 @@ comments: true
 categories:
   - "programming"
 tags:
-  - "nodejs"
+  - "node.js"
 ---
 
 今更すぎるけどいれた。

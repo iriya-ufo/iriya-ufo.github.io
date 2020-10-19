@@ -8,7 +8,7 @@ categories:
   - "programming"
 tags:
   - "heroku"
-  - "nodejs"
+  - "node.js"
 ---
 
 そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。

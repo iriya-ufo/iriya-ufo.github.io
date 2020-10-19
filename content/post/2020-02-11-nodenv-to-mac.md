@@ -8,8 +8,7 @@ comments: true
 categories:
   - "programming"
 tags:
-  - "nodenv"
-  - "node"
+  - "node.js"
 ---
 
 brew でいれてたけど限界がきたのでバージョン管理ツール使う。

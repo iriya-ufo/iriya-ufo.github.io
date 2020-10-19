@@ -9,7 +9,7 @@ categories:
 tags:
   - "botkit"
   - "google api"
-  - "nodejs"
+  - "node.js"
 ---
 
 前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。
