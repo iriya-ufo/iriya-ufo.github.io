@@ -3,7 +3,7 @@ layout: post
 title: "Mac に nodenv インストールした"
 slug: nodenv-to-mac
 date: 2020-02-11T15:55:10+09:00
-lastmod: 2020-02-11T15:55:10+09:00
+lastmod: 2020-10-20T23:55:10+09:00
 comments: true
 categories:
   - "programming"
@@ -114,6 +114,8 @@ $ nodenv local 12.14.1
 ```
 
 ## yarn のインストール
+
+yarn を使いたい場合はいれる。ただ[こちらのサイト](https://developers.freee.co.jp/entry/sayonara-yarn)にもある通り yarn のメリットだった速度は npm 6 ではほぼ同等となり `package-lock.json` というロックファイルの機構もあるため npm による問題はあまりなくなってきている。
 
 ```shell
 $ npm install -g yarn
