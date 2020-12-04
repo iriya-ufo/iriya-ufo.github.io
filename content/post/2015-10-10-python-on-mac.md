@@ -79,6 +79,11 @@ $ pipenv install [any_package]
 `Pipfile.lock` がある状態であれば `pipenv install` とすると lock ファイルの内容がインストールされる。
 複数人での開発では `Pipfile.lock` をコミットしておく。
 
+pipenv 導入以前で `requirements.txt` がある場合、その内容に従ってインストールする方法は以下の通り。
+```
+$ pipenv install -r ./requirements.txt
+```
+
 `pipenv` でインストールしたパッケージは `$HOME/.local/share/virtualenvs/python-U6J_gNZf/lib/` に配置される。
 この領域を仮想環境と呼んでいる。プロジェクト配下からこの仮想環境を利用するには以下のようにする。
 
