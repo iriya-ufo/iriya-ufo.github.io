@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.76.3 with theme even" />
+<meta name="generator" content="Hugo 0.78.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/10/10/python-on-mac/" />
@@ -48,7 +48,7 @@
 <meta itemprop="description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を">
 <meta itemprop="datePublished" content="2015-10-10T19:00:23+00:00" />
 <meta itemprop="dateModified" content="2020-04-08T16:30:33+09:00" />
-<meta itemprop="wordCount" content="1159">
+<meta itemprop="wordCount" content="1203">
 
 
 
@@ -242,7 +242,16 @@ python_version = &#34;3.8&#34;
 </div>
 </div><p><code>Pipfile.lock</code> がある状態であれば <code>pipenv install</code> とすると lock ファイルの内容がインストールされる。
 複数人での開発では <code>Pipfile.lock</code> をコミットしておく。</p>
-<p><code>pipenv</code> でインストールしたパッケージは <code>$HOME/.local/share/virtualenvs/python-U6J_gNZf/lib/</code> に配置される。
+<p>pipenv 導入以前で <code>requirements.txt</code> がある場合、その内容に従ってインストールする方法は以下の通り。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ pipenv install -r ./requirements.txt
+</code></pre></td></tr></table>
+</div>
+</div><p><code>pipenv</code> でインストールしたパッケージは <code>$HOME/.local/share/virtualenvs/python-U6J_gNZf/lib/</code> に配置される。
 この領域を仮想環境と呼んでいる。プロジェクト配下からこの仮想環境を利用するには以下のようにする。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
