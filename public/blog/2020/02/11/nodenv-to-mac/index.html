@@ -43,12 +43,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/" />
 <meta property="article:published_time" content="2020-02-11T15:55:10+09:00" />
-<meta property="article:modified_time" content="2020-10-20T23:55:10+09:00" />
+<meta property="article:modified_time" content="2020-12-05T15:55:10+09:00" />
 <meta itemprop="name" content="Mac に nodenv インストールした">
 <meta itemprop="description" content="brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ">
 <meta itemprop="datePublished" content="2020-02-11T15:55:10+09:00" />
-<meta itemprop="dateModified" content="2020-10-20T23:55:10+09:00" />
-<meta itemprop="wordCount" content="703">
+<meta itemprop="dateModified" content="2020-12-05T15:55:10+09:00" />
+<meta itemprop="wordCount" content="808">
 
 
 
@@ -243,7 +243,8 @@ Counting installed Node versions: none
 Auditing installed plugins: OK
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="インストール可能な-node-の一覧">インストール可能な node の一覧</h2>
+</div><p>※ Arch Linux で同じことをやった場合 node-build がないため install に失敗した、解消方法を後述。</p>
+<h2 id="インストール可能な-node-の一覧">インストール可能な node の一覧</h2>
 <p><code>rbenv</code> とほぼ使い方は一緒。fooenv 系はどれもそうなのかな。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -320,7 +321,22 @@ $ which yarn
 <pre class="chroma"><code class="language-shell" data-lang="shell">$ brew upgrade nodenv node-build
 </code></pre></td></tr></table>
 </div>
+</div><h2 id="node-build-がないと怒られた場合">node-build がないと怒られた場合</h2>
+<p>チェックツールで <code>nodenv install</code> が出来ないと言われた場合 <code>node-build</code> をインストールする必要がある。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre class="chroma"><code class="language-fallback" data-lang="fallback"># As a nodenv plugin
+$ mkdir -p &#34;$(nodenv root)&#34;/plugins
+$ git clone https://github.com/nodenv/node-build.git &#34;$(nodenv root)&#34;/plugins/node-build
+</code></pre></td></tr></table>
 </div>
+</div><p>(cf. <a href="https://github.com/nodenv/node-build#installation">https://github.com/nodenv/node-build#installation</a>)</p>
+
     </div>
 
     <div class="post-copyright">
@@ -331,7 +347,7 @@ $ which yarn
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2020-10-20
+        2020-12-05
         
     </span>
   </p>
