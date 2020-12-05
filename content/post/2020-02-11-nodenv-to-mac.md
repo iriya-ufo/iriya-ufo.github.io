@@ -3,7 +3,7 @@ layout: post
 title: "Mac に nodenv インストールした"
 slug: nodenv-to-mac
 date: 2020-02-11T15:55:10+09:00
-lastmod: 2020-10-20T23:55:10+09:00
+lastmod: 2020-12-05T15:55:10+09:00
 comments: true
 categories:
   - "programming"
@@ -79,6 +79,8 @@ Counting installed Node versions: none
 Auditing installed plugins: OK
 ```
 
+※ Arch Linux で同じことをやった場合 node-build がないため install に失敗した、解消方法を後述。
+
 ## インストール可能な node の一覧
 
 `rbenv` とほぼ使い方は一緒。fooenv 系はどれもそうなのかな。
@@ -130,3 +132,14 @@ $ which yarn
 ```shell
 $ brew upgrade nodenv node-build
 ```
+
+## node-build がないと怒られた場合
+チェックツールで `nodenv install` が出来ないと言われた場合 `node-build` をインストールする必要がある。
+
+```
+# As a nodenv plugin
+$ mkdir -p "$(nodenv root)"/plugins
+$ git clone https://github.com/nodenv/node-build.git "$(nodenv root)"/plugins/node-build
+```
+
+(cf. https://github.com/nodenv/node-build#installation)
