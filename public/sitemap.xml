@@ -10,7 +10,35 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2020-12-05T15:55:10+09:00</lastmod>
+    <lastmod>2020-12-20T02:11:07+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/diary/</loc>
+    <lastmod>2020-12-20T02:11:07+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/</loc>
+    <lastmod>2020-12-20T02:11:07+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2020-12-20T02:11:07+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2020/12/20/techcommit-advent-calendar-2020/</loc>
+    <lastmod>2020-12-20T02:11:07+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -18,20 +46,6 @@
   <url>
     <loc>https://iriya-ufo.net/tags/finance/</loc>
     <lastmod>2020-10-08T00:58:05+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2020-12-05T15:55:10+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2020-12-05T15:55:10+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -137,13 +151,6 @@
   <url>
     <loc>https://iriya-ufo.net/blog/2020/06/23/starting-the-university-of-the-people-term5/</loc>
     <lastmod>2020-06-23T08:51:57+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/diary/</loc>
-    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
