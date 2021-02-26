@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 20 Dec 2020 02:11:07 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 24 Feb 2021 01:25:46 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>【2020年】株投資の損益を計算した</title>
+      <link>https://iriya-ufo.net/blog/2021/02/24/profit-and-loss-2020/</link>
+      <pubDate>Wed, 24 Feb 2021 01:25:46 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/02/24/profit-and-loss-2020/</guid>
+      <description>ようやく2020年の株投資の損益がまとめられたので公開します(これまでの振り返りはこちら)。 投資における損益計算シート 成績結果 2020年の損</description>
     </item>
     
     <item>
@@ -1408,7 +1417,7 @@
       <pubDate>Sun, 05 Jan 2014 04:16:06 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2014/01/05/my-life-turning-point-2013/</guid>
-      <description>2013年は僕にとって大きな変化があった年でした。何があったのか振り返ってみて2014年の糧にしたいと思います。(ブログ書いてる間に2013</description>
+      <description>2013年は僕にとって大きな変化があった年でした。何があったのか振り返ってみて2014年の糧にしたいと思います(ブログ書いてる間に2013年</description>
     </item>
     
     <item>
