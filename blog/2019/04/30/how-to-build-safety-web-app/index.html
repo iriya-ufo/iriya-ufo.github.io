@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.79.0 with theme even" />
+<meta name="generator" content="Hugo 0.80.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/" />
@@ -151,7 +151,7 @@ sandbox には以下の制限がある。</p>
 <h1 id="cors-cross-origin-resource-sharing">CORS (Cross Origin Resource Sharing)</h1>
 <p>先の同一オリジンポリシーにより別ドメインへのリクエストは厳しく制限されるが、一方で不便な場面に出くわすことも多い。そこで CORS という仕様が策定された。
 これは header に <code>Access-Control-Allow-Origin</code> などを付与することによって Origin を超えたアクセスを許可できるようになる。</p>
-<p>いくつか種類があるので以下を参照されたい。(外部リンク、本書に記載無し)</p>
+<p>いくつか種類があるので以下を参照されたい(外部リンク、本書に記載無し)。</p>
 <ul>
 <li><a href="https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34">Qiita:CORSまとめ</a></li>
 </ul>
@@ -160,7 +160,7 @@ sandbox には以下の制限がある。</p>
 <p>XSS の対策は属性値を <code>&quot;</code> で囲んだり、特殊記号をエスケープすることで対策できる。しかしパターンが多数あり完全な対策は困難。</p>
 <p>保険的対策として <code>X-XSS-Protection</code> ヘッダーを入れることで危険を軽減できる。これはブラウザがXSSを検知し無害な出力にエスケープしてくれる機能である。
 Apache や Nginx の設定で付与しておくとよい。</p>
-<p>クッキーに <code>HttpOnly</code> 属性を付与することによって、XSS 攻撃の典型的な手法であるセッションIDの盗み出しを防止することができる。(限定的対応)</p>
+<p>クッキーに <code>HttpOnly</code> 属性を付与することによって、XSS 攻撃の典型的な手法であるセッションIDの盗み出しを防止することができる(限定的対応)。</p>
 <p>JavaScript を動的生成している場合はこちらも同様にエスケープ処理をしなければいけないがルールが複雑。
 できれば js の動的生成はしないようにする、がどうしてもしたい場合はカスタムデータ属性を利用するとよい。</p>
 <h1 id="sql-インジェクション">SQL インジェクション</h1>
@@ -301,6 +301,7 @@ HttpOnly: これをつけると js からアクセスできないようにでき
   </div>
   <div class="amazlet-footer" style="clear: left"></div>
 </div>
+
     </div>
 
     <div class="post-copyright">
@@ -382,7 +383,7 @@ HttpOnly: これをつけると js からアクセスできないようにでき
   <span class="copyright-year">
     &copy; 
     2013 - 
-    2020
+    2021
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
