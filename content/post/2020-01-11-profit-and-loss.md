@@ -9,6 +9,7 @@ categories:
   - "stock"
 tags:
   - "stock"
+  - "investment-performance"
 ---
 
 今までの株投資の損益を計算しました。ちょっと成績悪すぎて落第レベルです・・・。
