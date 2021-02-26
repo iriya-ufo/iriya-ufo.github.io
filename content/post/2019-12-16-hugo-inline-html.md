@@ -15,7 +15,7 @@ tags:
 
 ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記事を書いたりすることもあります。
 
-あるとき Amazon リンクを書いた html 部分がごっそり消えていたのに気づきました。(特にエラーにはならない)
+あるとき Amazon リンクを書いた html 部分がごっそり消えていたのに気づきました(特にエラーにはならない)。
 
 [Change Log](https://github.com/gohugoio/hugo/releases/tag/v0.60.0) を見てるとどうやら v0.60.0 からインライン html で改修が入ったようです。
 

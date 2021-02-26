@@ -54,7 +54,7 @@ gdbm と pcre 周りの link を再設定します。
     $ brew list | xargs brew unlink
     $ brew list | xargs brew link
 
-以下のものについては `--force` 付きで強制的に relink しました。 (brew doctor で keg-only だから unlink しろと怒られます)
+以下のものについては `--force` 付きで強制的に relink しました(brew doctor で keg-only だから unlink しろと怒られます)。
 
     gettext
     libffi

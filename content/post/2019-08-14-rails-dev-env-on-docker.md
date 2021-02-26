@@ -26,7 +26,7 @@ DB は PostgreSQL を使います。永続化に Volume を利用します。
 
 ## ディレクトリ構成
 
-`RAILS_ROOT` 配下の構成です。(一部抜粋)
+`RAILS_ROOT` 配下の構成です(一部抜粋)。
 
 ```
 RAILS_ROOT

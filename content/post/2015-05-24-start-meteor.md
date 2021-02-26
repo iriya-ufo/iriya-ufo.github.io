@@ -31,7 +31,7 @@ tags:
 
 ## 所感
 - きっちりリリースするプロダクトでは使わないほうがいい。使い捨てか超光速プロトタイプ向け。
-- DB が Mongo な点でお察し。(※ 別に Mongo が悪いわけじゃないです。向き不向きをきちんと理解しておくということです)
+- DB が Mongo な点でお察し
 - [Spacebars](https://github.com/meteor/meteor/blob/devel/packages/spacebars/README.md) が気持ち悪い。
 
 **ここまで読んだうえでちょっと触ってみたい、という人は以下に進みましょう。**
