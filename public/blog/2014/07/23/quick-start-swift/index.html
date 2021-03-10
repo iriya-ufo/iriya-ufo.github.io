@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/" />
@@ -41,19 +41,15 @@
 <meta property="og:title" content="Swift をとりあえず実行するまでの手順" />
 <meta property="og:description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/" />
-<meta property="article:published_time" content="2014-07-23T03:06:46+00:00" />
-<meta property="article:modified_time" content="2014-07-23T03:06:46+00:00" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-07-23T03:06:46&#43;00:00" />
+<meta property="article:modified_time" content="2014-07-23T03:06:46&#43;00:00" />
+
 <meta itemprop="name" content="Swift をとりあえず実行するまでの手順">
-<meta itemprop="description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に">
-<meta itemprop="datePublished" content="2014-07-23T03:06:46+00:00" />
-<meta itemprop="dateModified" content="2014-07-23T03:06:46+00:00" />
-<meta itemprop="wordCount" content="1243">
-
-
-
-<meta itemprop="keywords" content="swift,xcode," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に"><meta itemprop="datePublished" content="2014-07-23T03:06:46&#43;00:00" />
+<meta itemprop="dateModified" content="2014-07-23T03:06:46&#43;00:00" />
+<meta itemprop="wordCount" content="1238">
+<meta itemprop="keywords" content="swift,xcode," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Swift をとりあえず実行するまでの手順"/>
 <meta name="twitter:description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に"/>
 
@@ -153,10 +149,10 @@
 <p>画面が立ち上がりますので <code>ViewController.swift</code> ファイルの中の <code>override func viewDidLoad()</code> の場所に <code>println(&quot;Hello, World&quot;)</code> を記述します。これで実行するとシミュレータ上で <code>Hellow, World</code> が表示されます。</p>
 <p>以上駆け足で Xcode で Hello, World をやってみました。実行まで結構面倒くさいですね。でも安心してください Swift はコンパイラプログラミング言語だけど、Xcode の Playgrounds の上やターミナルでインタラクティブにデバッグする事が可能になっています。Playgrounds のやり方は割愛させて頂きますが、コマンドラインから Swift をインタラクティブに行う方法を述べます。</p>
 <h2 id="コマンドラインから実行する">コマンドラインから実行する</h2>
-<p>Swift REPL は以下のようにして実行できます(Xcode のインストールが必要)。</p>
+<p>Swift REPL は以下のようにして実行できます (Xcode のインストールが必要)。</p>
 <pre><code>$ /Applications/Xcode6-Beta4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift
 Welcome to Swift!  Type :help for assistance.
-1&gt;  
+1&gt;
 </code></pre>
 <p>毎回打つのはめんどくさいのでシェルのエイリアスに登録しておくとよいでしょう。</p>
 <p>また <code>xcrun</code> というコマンドを使うと Xcode 周りの面倒をいい感じに見てくれるらしいので Swift REPL を使うときはセットでの使用をオススメします。

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/" />
@@ -41,19 +41,15 @@
 <meta property="og:title" content="「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ" />
 <meta property="og:description" content="Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/" />
-<meta property="article:published_time" content="2019-04-30T02:19:52+09:00" />
-<meta property="article:modified_time" content="2019-04-30T02:19:52+09:00" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-04-30T02:19:52&#43;09:00" />
+<meta property="article:modified_time" content="2019-04-30T02:19:52&#43;09:00" />
+
 <meta itemprop="name" content="「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ">
-<meta itemprop="description" content="Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい">
-<meta itemprop="datePublished" content="2019-04-30T02:19:52+09:00" />
-<meta itemprop="dateModified" content="2019-04-30T02:19:52+09:00" />
-<meta itemprop="wordCount" content="3977">
-
-
-
-<meta itemprop="keywords" content="security," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい"><meta itemprop="datePublished" content="2019-04-30T02:19:52&#43;09:00" />
+<meta itemprop="dateModified" content="2019-04-30T02:19:52&#43;09:00" />
+<meta itemprop="wordCount" content="3965">
+<meta itemprop="keywords" content="security," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ"/>
 <meta name="twitter:description" content="Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい"/>
 
@@ -145,13 +141,13 @@ sandbox には以下の制限がある。</p>
 <ul>
 <li>ローカルファイルへのアクセス禁止</li>
 <li>プリンタなどの資源の利用禁止</li>
-<li>ネットワークアクセスの制限(同一オリジンポリシー)</li>
+<li>ネットワークアクセスの制限 (同一オリジンポリシー)</li>
 </ul>
-<p>XSS(クロスサイトスクリプティング) は 攻撃的な js を送り込んで同一オリジンポリシー下のもとで js を実行し、攻撃する手法である。</p>
+<p>XSS (クロスサイトスクリプティング) は 攻撃的な js を送り込んで同一オリジンポリシー下のもとで js を実行し、攻撃する手法である。</p>
 <h1 id="cors-cross-origin-resource-sharing">CORS (Cross Origin Resource Sharing)</h1>
 <p>先の同一オリジンポリシーにより別ドメインへのリクエストは厳しく制限されるが、一方で不便な場面に出くわすことも多い。そこで CORS という仕様が策定された。
 これは header に <code>Access-Control-Allow-Origin</code> などを付与することによって Origin を超えたアクセスを許可できるようになる。</p>
-<p>いくつか種類があるので以下を参照されたい(外部リンク、本書に記載無し)。</p>
+<p>いくつか種類があるので以下を参照されたい (外部リンク、本書に記載無し)。</p>
 <ul>
 <li><a href="https://qiita.com/tomoyukilabs/items/81698edd5812ff6acb34">Qiita:CORSまとめ</a></li>
 </ul>
@@ -160,7 +156,7 @@ sandbox には以下の制限がある。</p>
 <p>XSS の対策は属性値を <code>&quot;</code> で囲んだり、特殊記号をエスケープすることで対策できる。しかしパターンが多数あり完全な対策は困難。</p>
 <p>保険的対策として <code>X-XSS-Protection</code> ヘッダーを入れることで危険を軽減できる。これはブラウザがXSSを検知し無害な出力にエスケープしてくれる機能である。
 Apache や Nginx の設定で付与しておくとよい。</p>
-<p>クッキーに <code>HttpOnly</code> 属性を付与することによって、XSS 攻撃の典型的な手法であるセッションIDの盗み出しを防止することができる(限定的対応)。</p>
+<p>クッキーに <code>HttpOnly</code> 属性を付与することによって、XSS 攻撃の典型的な手法であるセッションIDの盗み出しを防止することができる (限定的対応)。</p>
 <p>JavaScript を動的生成している場合はこちらも同様にエスケープ処理をしなければいけないがルールが複雑。
 できれば js の動的生成はしないようにする、がどうしてもしたい場合はカスタムデータ属性を利用するとよい。</p>
 <h1 id="sql-インジェクション">SQL インジェクション</h1>
@@ -178,7 +174,7 @@ Apache や Nginx の設定で付与しておくとよい。</p>
 </ul>
 <h1 id="重要な処理と-csrf">重要な処理と CSRF</h1>
 <p>Web アプリケーションには様々な機能があるが、その中でもクレジットの決済やパスワードの変更などの処理は特にセキュリティを意識すべき機能である。そのような処理を「重要な処理」と呼ぶことにする。
-重要な処理を悪用したものとしてCSRF(クロスサイトリクエストフォージェリ)が挙げられる。</p>
+重要な処理を悪用したものとして CSRF (クロスサイトリクエストフォージェリ) が挙げられる。</p>
 <p>CSRF の攻撃例は以下のようなものがある。</p>
 <ul>
 <li>利用者のアカウントによる物品の購入</li>
@@ -191,7 +187,7 @@ Apache や Nginx の設定で付与しておくとよい。</p>
 <li>利用者がサービスのログインしている</li>
 <li>攻撃者が罠サイトを設置する</li>
 <li>利用者が罠サイトを閲覧する</li>
-<li>罠の JavaScript により、被害者のブラウザ上で攻撃対象サイトに対し、パスワード変更のPOSTメソッドを送信する(重要な処理)</li>
+<li>罠の JavaScript により、被害者のブラウザ上で攻撃対象サイトに対し、パスワード変更のPOSTメソッドを送信する</li>
 <li>パスワードが変更される</li>
 </ul>
 <p>hidden パラメータなどで確認画面を挟んでいても先程の例のような攻撃は可能である。</p>
@@ -211,7 +207,7 @@ Apache や Nginx の設定で付与しておくとよい。</p>
 <p>1 は罠サイトからでも攻撃対象サイトにリクエストが送信できることを意味し、 2 は罠経由のリクエストでもセッションIDのクッキー値が送信されるので認証された状態で攻撃リクエストが送信されるということを意味する。</p>
 <p>CSRF の対策は、対策の必要なページを区別し、正規利用者の意図したリクエストを確認できるようにすることである。
 対策の必要なページというのは、ECサイトを例にするとカート商品の購入処理であったり、会員情報のパスワード変更やクレジットカード登録などである。</p>
-<p>正規利用者の意図したリクエストの確認方法は、秘密情報(トークン)の埋め込み、パスワード再入力、リファラのチェックがある。なおトークンは第三者に推測されにくい乱数を用いて生成する。</p>
+<p>正規利用者の意図したリクエストの確認方法は、秘密情報 (トークン) の埋め込み、パスワード再入力、リファラのチェックがある。なおトークンは第三者に推測されにくい乱数を用いて生成する。</p>
 <p>CSRF を防ぐ対策ではないが、重要な処理の実行後にメールアドレスに処理内容を通知することで、CSRF 攻撃が起きたときの被害を縮小できる。
 ただしメールは平文なので重要な情報は含めずに、重要な処理が実行されたことだけをメール送信する。
 詳細内容はサイトにログインして購入履歴や送信履歴をみるようにしてもらう。</p>

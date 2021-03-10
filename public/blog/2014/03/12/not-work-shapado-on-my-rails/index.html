@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/" />
@@ -41,19 +41,15 @@
 <meta property="og:title" content="Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった" />
 <meta property="og:description" content="プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみよ" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/" />
-<meta property="article:published_time" content="2014-03-12T02:12:34+00:00" />
-<meta property="article:modified_time" content="2014-03-12T02:12:34+00:00" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-03-12T02:12:34&#43;00:00" />
+<meta property="article:modified_time" content="2014-03-12T02:12:34&#43;00:00" />
+
 <meta itemprop="name" content="Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった">
-<meta itemprop="description" content="プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみよ">
-<meta itemprop="datePublished" content="2014-03-12T02:12:34+00:00" />
-<meta itemprop="dateModified" content="2014-03-12T02:12:34+00:00" />
-<meta itemprop="wordCount" content="2214">
-
-
-
-<meta itemprop="keywords" content="ruby on rails," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみよ"><meta itemprop="datePublished" content="2014-03-12T02:12:34&#43;00:00" />
+<meta itemprop="dateModified" content="2014-03-12T02:12:34&#43;00:00" />
+<meta itemprop="wordCount" content="2193">
+<meta itemprop="keywords" content="ruby on rails," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった"/>
 <meta name="twitter:description" content="プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみよ"/>
 
@@ -164,7 +160,7 @@ For more comprehensive documentation, see
         http://docs.mongodb.org/
 Questions? Try the support group
         http://groups.google.com/group/mongodb-user
-&gt; 
+&gt;
 </code></pre>
 <p>大丈夫ですね。</p>
 <p><code>help</code> とか打てば使い方が表示されます。MySQL などと違って簡単ですね :)
@@ -185,7 +181,7 @@ $ cd shpado/
 $ cp config/mongoid.yml.sample config/mongoid.yml
 $ cp config/auth_providers.yml.sample config/auth_providers.yml
 </code></pre>
-<p>パフォーマンス監視してます(ドヤァ。とかいうとかっこいいので NewRelic いれましょう。
+<p>パフォーマンス監視の NewRelic を入れます。
 ここでアカウント作ります。</p>
 <p><a href="https://rpm.newrelic.com/">https://rpm.newrelic.com/</a></p>
 <p>アカウント作ったら License Key を取得して <code>newrelic.yml</code> に設定します。</p>
@@ -253,22 +249,22 @@ install ruby-stemmer `gem install ruby-stemmer` to activate the full text search
 &gt;&gt; Setting up LinkedIn provider
 ** Invoke db:drop (first_time)
 ** Invoke db:mongoid:drop (first_time)
-** Invoke environment 
+** Invoke environment
 ** Execute db:mongoid:drop
 ** Execute db:drop
 ** Invoke setup:versions (first_time)
-** Invoke environment 
+** Invoke environment
 ** Execute setup:versions
 ** Invoke setup:create_admin (first_time)
-** Invoke environment 
+** Invoke environment
 ** Execute setup:create_admin
 ** Invoke setup:default_theme (first_time)
-** Invoke environment 
+** Invoke environment
 ** Execute setup:default_theme
 Error processing 531f1f5e3407653ee4000013: undefined method `empty?' for nil:NilClass
 Error processing 531f1f5e3407653ee4000013: undefined method `empty?' for nil:NilClass
 ** Invoke setup:default_group (first_time)
-** Invoke environment 
+** Invoke environment
 ** Execute setup:default_group
 rake aborted!
 Called id for nil, which would mistakenly be 8 -- if you really wanted the id of nil, use object_id

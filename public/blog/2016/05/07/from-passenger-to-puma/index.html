@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/" />
@@ -41,19 +41,15 @@
 <meta property="og:title" content="Passenger をやめて Puma にした" />
 <meta property="og:description" content="とあるプロジェクトで Nginx &#43; Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/" />
-<meta property="article:published_time" content="2016-05-07T15:23:21+09:00" />
-<meta property="article:modified_time" content="2016-05-07T15:23:21+09:00" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2016-05-07T15:23:21&#43;09:00" />
+<meta property="article:modified_time" content="2016-05-07T15:23:21&#43;09:00" />
+
 <meta itemprop="name" content="Passenger をやめて Puma にした">
-<meta itemprop="description" content="とあるプロジェクトで Nginx &#43; Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設">
-<meta itemprop="datePublished" content="2016-05-07T15:23:21+09:00" />
-<meta itemprop="dateModified" content="2016-05-07T15:23:21+09:00" />
+<meta itemprop="description" content="とあるプロジェクトで Nginx &#43; Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設"><meta itemprop="datePublished" content="2016-05-07T15:23:21&#43;09:00" />
+<meta itemprop="dateModified" content="2016-05-07T15:23:21&#43;09:00" />
 <meta itemprop="wordCount" content="845">
-
-
-
-<meta itemprop="keywords" content="puma,passenger," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="puma,passenger," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Passenger をやめて Puma にした"/>
 <meta name="twitter:description" content="とあるプロジェクトで Nginx &#43; Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設"/>
 
@@ -141,7 +137,7 @@
 <li>Nginx や Passenger は設定済みで動作していた</li>
 <li>Capistrano でデプロイしている</li>
 <li>システム全体に rbenv で ruby をインストールしている</li>
-<li>デプロイユーザーが別にいる(今回の場合 <code>deployer</code>)</li>
+<li>デプロイユーザーが別にいる (今回の場合 <code>deployer</code>)</li>
 </ul>
 <h2 id="sudo-の許可">sudo の許可</h2>
 <p>deployer で puma の再起動ができるようにするため <code>sudo</code> 権限を与える。全コマンドの <code>sudo</code> は危険なので特定コマンドのみに制限する。</p>
