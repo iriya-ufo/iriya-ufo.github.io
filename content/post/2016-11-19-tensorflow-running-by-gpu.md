@@ -21,7 +21,7 @@ tags:
 
 ## 構築環境
 - [CUDA](https://ja.wikipedia.org/wiki/CUDA) --- Nvidia が提供する GPU 向けの統合開発環境
-- [cuDNN](https://developer.nvidia.com/cudnn) --- Nvidia が作ったディープラーニング用のライブラリ(SDK)で GPU をフル活用できるようになっている
+- [cuDNN](https://developer.nvidia.com/cudnn) --- Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている
 - [NVIDIA Docker](https://github.com/NVIDIA/nvidia-docker) --- Nvidia が提供している、コンテナから GPU を操作できるようにするもの
 - [TensorFlow](https://www.tensorflow.org/) --- Google が開発したオープンソースの機械学習ライブラリ
 

@@ -24,7 +24,7 @@ PATH を `.zshrc` に追加
 
     $ mkdir -p ~/.nodebrew/src
 
-Node.js のインストール(安定版)
+Node.js のインストール (安定版)
 
     $ nodebrew install-binary stable
     $ nodebrew use stable

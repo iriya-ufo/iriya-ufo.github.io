@@ -46,7 +46,7 @@ Shapado は mongodb を使用していますのでその環境を整えましょ
             http://docs.mongodb.org/
     Questions? Try the support group
             http://groups.google.com/group/mongodb-user
-    > 
+    >
 
 大丈夫ですね。
 
@@ -60,7 +60,7 @@ git とか当たり前のように使ってるでしょう？ ruby は rbenv と
     $ gem install bundler
 
 ### ダウンロード
-[Shapado](https://github.com/ricodigo/shapado ) を Fork して git clone で手元に持ってきます。ま、別に Fork しなくてもいいですが。
+[Shapado](https://github.com/ricodigo/shapado) を Fork して git clone で手元に持ってきます。ま、別に Fork しなくてもいいですが。
 
     $ git clone git@github.com:yourname/shapado.git
     $ cd shpado/
@@ -72,7 +72,7 @@ git とか当たり前のように使ってるでしょう？ ruby は rbenv と
     $ cp config/mongoid.yml.sample config/mongoid.yml
     $ cp config/auth_providers.yml.sample config/auth_providers.yml
 
-パフォーマンス監視してます(ドヤァ。とかいうとかっこいいので NewRelic いれましょう。
+パフォーマンス監視の NewRelic を入れます。
 ここでアカウント作ります。
 
 https://rpm.newrelic.com/
@@ -120,7 +120,7 @@ Gemfile から twitter 関連を外して再度 `$ bundle install` を。
     $ brew install libmagic
 
 次のエラーです。Ruby 2.0 を使ってるので iconv 関連で起動しませんでした。Gemfile に `gem 'iconv'` を足して `$ bundle install` します。mongodb が起動していなかったせいでエラーが出たので起動してから rake bootstrap しました。
- 
+
     Created /Users/iriya/.bughunterrc with username=admin password=admin
     Loaded
     syck has been removed, psych is used instead
@@ -131,13 +131,13 @@ Gemfile から twitter 関連を外して再度 `$ bundle install` を。
 rake bootstrap が出来ないのでここで諦めます。まずは `rails s` での起動を目指す。
 
 `/etc/hosts` に以下を追記して `rails s` で起動しました。
-    
+
     "0.0.0.0 localhost.lan group1.localhost.lan group2.localhost.lan"
 
 ここでうまくいったと思ったのですが、リダイレクトループになってしまったので諦めました。
 
 以下 rake bootstrap の trace です。
-    
+
     iriya@mba> bundle exec rake bootstrap RAILS_ENV=development --trace                                   (git)-[master]-
     Loaded
     syck has been removed, psych is used instead
@@ -158,22 +158,22 @@ rake bootstrap が出来ないのでここで諦めます。まずは `rails s` 
     >> Setting up LinkedIn provider
     ** Invoke db:drop (first_time)
     ** Invoke db:mongoid:drop (first_time)
-    ** Invoke environment 
+    ** Invoke environment
     ** Execute db:mongoid:drop
     ** Execute db:drop
     ** Invoke setup:versions (first_time)
-    ** Invoke environment 
+    ** Invoke environment
     ** Execute setup:versions
     ** Invoke setup:create_admin (first_time)
-    ** Invoke environment 
+    ** Invoke environment
     ** Execute setup:create_admin
     ** Invoke setup:default_theme (first_time)
-    ** Invoke environment 
+    ** Invoke environment
     ** Execute setup:default_theme
     Error processing 531f1f5e3407653ee4000013: undefined method `empty?' for nil:NilClass
     Error processing 531f1f5e3407653ee4000013: undefined method `empty?' for nil:NilClass
     ** Invoke setup:default_group (first_time)
-    ** Invoke environment 
+    ** Invoke environment
     ** Execute setup:default_group
     rake aborted!
     Called id for nil, which would mistakenly be 8 -- if you really wanted the id of nil, use object_id

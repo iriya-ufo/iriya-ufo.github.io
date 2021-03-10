@@ -68,5 +68,5 @@ Leiningen は Clojure のビルドツール兼パッケージ管理をするも�
     M-x cider-jack-in
 
 ## 参考
-- <a href="http://matstani.github.io/blog/2013/04/19/clojure-dev-env-emacs/" target="_blank">Clojure開発環境インストール手順(Emacs)</a>
+- <a href="http://matstani.github.io/blog/2013/04/19/clojure-dev-env-emacs/" target="_blank">Clojure開発環境インストール手順 (Emacs)</a>
 - <a href="https://github.com/clojure-emacs/cider" target="_blank">cider | github</a>

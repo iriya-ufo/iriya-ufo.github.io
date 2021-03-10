@@ -36,11 +36,11 @@ Swift を実行するには Xcode 6 beta が必要です。コマンドライン
 以上駆け足で Xcode で Hello, World をやってみました。実行まで結構面倒くさいですね。でも安心してください Swift はコンパイラプログラミング言語だけど、Xcode の Playgrounds の上やターミナルでインタラクティブにデバッグする事が可能になっています。Playgrounds のやり方は割愛させて頂きますが、コマンドラインから Swift をインタラクティブに行う方法を述べます。
 
 ## コマンドラインから実行する
-Swift REPL は以下のようにして実行できます(Xcode のインストールが必要)。
+Swift REPL は以下のようにして実行できます (Xcode のインストールが必要)。
 
     $ /Applications/Xcode6-Beta4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swift
     Welcome to Swift!  Type :help for assistance.
-    1>  
+    1>
 
 毎回打つのはめんどくさいのでシェルのエイリアスに登録しておくとよいでしょう。
 

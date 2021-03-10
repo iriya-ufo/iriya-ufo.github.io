@@ -17,7 +17,7 @@ tags:
 - Nginx や Passenger は設定済みで動作していた
 - Capistrano でデプロイしている
 - システム全体に rbenv で ruby をインストールしている
-- デプロイユーザーが別にいる(今回の場合 `deployer`)
+- デプロイユーザーが別にいる (今回の場合 `deployer`)
 
 ## sudo の許可
 deployer で puma の再起動ができるようにするため `sudo` 権限を与える。全コマンドの `sudo` は危険なので特定コマンドのみに制限する。

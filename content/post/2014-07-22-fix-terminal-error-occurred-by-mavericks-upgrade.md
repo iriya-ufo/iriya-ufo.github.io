@@ -22,7 +22,7 @@ tags:
     $ xcode-select --install
 
 ここで zsh のチェックをすると、以下のようなエラーでした。
- 
+
     $ /usr/local/bin/zsh --version
     dyld: Library not loaded: /usr/local/lib/libgdbm.4.dylib
       Referenced from: /usr/local/bin/zsh
@@ -54,7 +54,7 @@ gdbm と pcre 周りの link を再設定します。
     $ brew list | xargs brew unlink
     $ brew list | xargs brew link
 
-以下のものについては `--force` 付きで強制的に relink しました(brew doctor で keg-only だから unlink しろと怒られます)。
+以下のものについては `--force` 付きで強制的に relink しました (brew doctor で keg-only だから unlink しろと怒られます)。
 
     gettext
     libffi
@@ -67,7 +67,7 @@ gdbm と pcre 周りの link を再設定します。
     typeset -U path PATH
 
 emacs の起動ができなかったので brew で再インストールします。
- 
+
     $ brew remove emacs
     $ brew install emacs --cocoa --use-git-head
     $ brew linkapps
@@ -79,7 +79,7 @@ emacs の起動ができなかったので brew で再インストールしま�
 僕は普段 Google 日本語入力を使用しているのですが、Mavericks から U.S. の入力ソースが削除できないっぽい感じになっていました。
 少しトリッキーですが<a href="http://hetima.hatenablog.jp/entry/2013/10/26/032001" target="_blank">こちら</a>を参考にして、一度ことえりを追加したら U.S. を削除できました。
 
-しかし依然として emacs の起動ができません。どうやらインラインパッチのあたった emacs ではないようなので再度インストールします。 
+しかし依然として emacs の起動ができません。どうやらインラインパッチのあたった emacs ではないようなので再度インストールします。
 `/usr/local/Library/Formula/emacs.rb` を見るとオプションで制御できるようになっているっぽいのでオプション付きでインストールします。
 
     $ brew remove emacs

@@ -35,4 +35,4 @@ COSMIC EXPLORER はとくに好きなアルバムで何回も聞いてて、今�
 
 みんな Perfume のライブ行ったほうがいいよ。
 
-<a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01BRG63HE/-22/ref=nosim/" rel="nofollow" ><img src="http://ecx.images-amazon.com/images/I/61HQ0zBHu5L._SS500_.jpg" style="border: none;" alt="COSMIC EXPLORER(初回限定盤A)(2CD+Blu-ray)" /></a> 
+<a href="http://www.amazon.co.jp/exec/obidos/ASIN/B01BRG63HE/-22/ref=nosim/" rel="nofollow" ><img src="http://ecx.images-amazon.com/images/I/61HQ0zBHu5L._SS500_.jpg" style="border: none;" alt="COSMIC EXPLORER (初回限定盤A) (2CD+Blu-ray)" /></a>

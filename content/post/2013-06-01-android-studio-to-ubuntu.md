@@ -24,8 +24,7 @@ Ubuntu のバージョンは 12.04 です。
 export PATH=$PATH:$HOME/Downloads/android-studio/bin
 ```
 
-端末から以下を実行で起動します。
-(ただ私の環境では JDK のエラーがでました。Android Studio は Oracle JDK 推奨ですが、Open JDK が入っていたためです。)
+端末から以下を実行で起動します (ただ私の環境では JDK のエラーがでました。Android Studio は Oracle JDK 推奨ですが、Open JDK が入っていたためです)。
 
     $ studio.sh
 

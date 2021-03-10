@@ -83,7 +83,7 @@ end
 ### Development Setting
 group :development do
   gem 'heroku'
- 
+
   # Manage Procfile-based applications
   gem 'foreman'
 
@@ -189,7 +189,7 @@ pickle-email-*.html
 ## Heroku を使う準備
 
 まず Heroku のサイトへいって Sign Up します。
-Mac OS X 用のツール(Toolbelt)をダウンロード、インストールします。
+Mac OS X 用のツール (Toolbelt) をダウンロード、インストールします。
 Heroku 用の SSH key を作成します。GitHub で作った鍵があればそれを使えばいいと思います。
 私は別々に分けて作ったのでちょっとトラブルがありました。
 デフォルトでは秘密鍵は `id_rsa` が読み込まれるようですが、Heroku 用に名前を変えて作ったためオートロードできなかったっぽいです。
@@ -206,7 +206,7 @@ Host heroku.com
 ```
 
 Heroku にログインします。
-    
+
     $ heroku login
     Email: # メールアドレスを入力します
     Password: # パスワードを入力します

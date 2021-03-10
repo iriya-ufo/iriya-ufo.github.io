@@ -51,7 +51,7 @@ apt/lists のパッケージのハッシュ値が違うと怒られました。
     $ sudo apt-get update
 
 そして最新のカーネルを強制インストールすることで作業完了です。
-またカーネル更新すると必ず virtualbox の更新もしないといけないので(もしインストールしてたらね)更新します。
+またカーネル更新すると必ず virtualbox の更新もしないといけないので (もしインストールしてたらね) 更新します。
 
     $ sudo apt-get install virtualbox-dkms --reinstall
 

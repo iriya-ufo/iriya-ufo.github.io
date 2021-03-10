@@ -45,7 +45,7 @@ cmigemo の設定です。
 (setq migemo-coding-system 'utf-8-unix)
 (load-library "migemo")
 (migemo-init)
-;; IME の制御  
+;; IME の制御
 ;; emacs 起動時は英数モードから始める
 (add-hook 'after-init-hook 'mac-change-language-to-us)
 ;; minibuffer 内は英数モードにする

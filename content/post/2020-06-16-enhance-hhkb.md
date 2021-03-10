@@ -19,7 +19,7 @@ HHKB ばかり使っているときは気づかなかったんですが、あの
 
 - [BKE Topre Dome Replacements V1](https://www.keyclack.com/products/bke-topre-dome-replacements?variant=21063030997069)
 
-Weight は `Ultra Light` を選んでください、約40gの押下圧になります(HHKBは45g)。
+Weight は `Ultra Light` を選んでください、約40gの押下圧になります (HHKBは45g)。
 Quantity は 68pcs あれば HHKB のキートップであれば十分です。Add-on には静音化パーツもつけられるようになってますが、これよりは Silence X の方がいいので、ここでは買わないようにします。
 
 次に静音化パーツですが、こちらから Silence X を購入します。なお、コロナ禍に購入してしまったためか配送の物量が止まっていると言われ2ヶ月間、配送準備されませんでした。二度目の問い合わせの際に追加料金を払えば別の速い配送業者使うけどと言われ釈然としませんでしたが、追加の配送料を支払うことですぐに発送してくれました。

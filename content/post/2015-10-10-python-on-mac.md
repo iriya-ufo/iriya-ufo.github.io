@@ -71,7 +71,7 @@ verify_ssl = true
 python_version = "3.8"
 ```
 
-任意のパッケージをインストールする。パッケージをインストールすると `Pipfile.lock` が作成される(もし無ければ)
+任意のパッケージをインストールする。パッケージをインストールすると `Pipfile.lock` が作成される (もし無ければ)
 ```
 $ pipenv install [any_package]
 ```

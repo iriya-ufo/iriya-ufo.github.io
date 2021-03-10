@@ -25,7 +25,7 @@ categories:
 
 今までありがとう。はてなダイアリー。
 
-はてなの過去ログ(旧新のURLは同じとこを指しているがなんとなく両方残す)
+はてなの過去ログ (旧新のURLは同じとこを指しているがなんとなく両方残す)
 
 - 旧URL http://d.hatena.ne.jp/iriya_ufo/archive
 - 新URL https://iriya-ufo.hateblo.jp/archive
