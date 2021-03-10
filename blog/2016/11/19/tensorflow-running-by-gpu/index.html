@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" />
@@ -41,19 +41,15 @@
 <meta property="og:title" content="TensorFlow を GPU で動かす" />
 <meta property="og:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" />
-<meta property="article:published_time" content="2016-11-19T23:37:43+09:00" />
-<meta property="article:modified_time" content="2016-11-19T23:37:43+09:00" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2016-11-19T23:37:43&#43;09:00" />
+<meta property="article:modified_time" content="2016-11-19T23:37:43&#43;09:00" />
+
 <meta itemprop="name" content="TensorFlow を GPU で動かす">
-<meta itemprop="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま">
-<meta itemprop="datePublished" content="2016-11-19T23:37:43+09:00" />
-<meta itemprop="dateModified" content="2016-11-19T23:37:43+09:00" />
-<meta itemprop="wordCount" content="708">
-
-
-
-<meta itemprop="keywords" content="machine learning,tensorflow," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま"><meta itemprop="datePublished" content="2016-11-19T23:37:43&#43;09:00" />
+<meta itemprop="dateModified" content="2016-11-19T23:37:43&#43;09:00" />
+<meta itemprop="wordCount" content="704">
+<meta itemprop="keywords" content="machine learning,tensorflow," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TensorFlow を GPU で動かす"/>
 <meta name="twitter:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま"/>
 
@@ -146,7 +142,7 @@
 <h2 id="構築環境">構築環境</h2>
 <ul>
 <li><a href="https://ja.wikipedia.org/wiki/CUDA">CUDA</a> &mdash; Nvidia が提供する GPU 向けの統合開発環境</li>
-<li><a href="https://developer.nvidia.com/cudnn">cuDNN</a> &mdash; Nvidia が作ったディープラーニング用のライブラリ(SDK)で GPU をフル活用できるようになっている</li>
+<li><a href="https://developer.nvidia.com/cudnn">cuDNN</a> &mdash; Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている</li>
 <li><a href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Docker</a> &mdash; Nvidia が提供している、コンテナから GPU を操作できるようにするもの</li>
 <li><a href="https://www.tensorflow.org/">TensorFlow</a> &mdash; Google が開発したオープンソースの機械学習ライブラリ</li>
 </ul>

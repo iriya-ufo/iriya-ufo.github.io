@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.80.0 with theme even" />
+<meta name="generator" content="Hugo 0.81.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/" />
@@ -41,19 +41,15 @@
 <meta property="og:title" content="Sinatra アプリを Heroku で動かすまで" />
 <meta property="og:description" content="環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/" />
-<meta property="article:published_time" content="2014-09-07T17:32:36+00:00" />
-<meta property="article:modified_time" content="2014-09-07T17:32:36+00:00" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2014-09-07T17:32:36&#43;00:00" />
+<meta property="article:modified_time" content="2014-09-07T17:32:36&#43;00:00" />
+
 <meta itemprop="name" content="Sinatra アプリを Heroku で動かすまで">
-<meta itemprop="description" content="環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま">
-<meta itemprop="datePublished" content="2014-09-07T17:32:36+00:00" />
-<meta itemprop="dateModified" content="2014-09-07T17:32:36+00:00" />
+<meta itemprop="description" content="環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま"><meta itemprop="datePublished" content="2014-09-07T17:32:36&#43;00:00" />
+<meta itemprop="dateModified" content="2014-09-07T17:32:36&#43;00:00" />
 <meta itemprop="wordCount" content="1562">
-
-
-
-<meta itemprop="keywords" content="heroku,sinatra," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="heroku,sinatra," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Sinatra アプリを Heroku で動かすまで"/>
 <meta name="twitter:description" content="環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま"/>
 
@@ -301,7 +297,7 @@ $ git push heroku master
 </code></pre>
 <p>問題がなければ <a href="http://APP_NAME.herokuapp.com">http://APP_NAME.herokuapp.com</a> で公開されているでしょう。</p>
 <h2 id="postgresql-を使う">PostgreSQL を使う</h2>
-<p>さてここからデータベースを使った Sinatra アプリの作成に移ります。上記の Heroku デプロイまでは比較的つまづくことなくできるのですが、DBを使う段階で少し嵌ってしまいました。最初は <code>database.yml</code> を使う方向で実装していたのですが(他のサイトでもそのようにしているところがたくさんある)うまくいきません。というのも Heroku はどうやら <code>database.yml</code> を自動的に作成するらしくそちらの設定がうまくできなかったためです。なので今回は使わない方向で実装しています。</p>
+<p>さてここからデータベースを使った Sinatra アプリの作成に移ります。上記の Heroku デプロイまでは比較的つまづくことなくできるのですが、DBを使う段階で少し嵌ってしまいました。最初は <code>database.yml</code> を使う方向で実装していたのですが (他のサイトでもそのようにしているところがたくさんある) うまくいきません。というのも Heroku はどうやら <code>database.yml</code> を自動的に作成するらしくそちらの設定がうまくできなかったためです。なので今回は使わない方向で実装しています。</p>
 <p>下準備として PostgreSQL でデータベースを作成しておきましょう。ローカルに構築する方法は割愛します。Heroku 上に作成するには以下のようにします。</p>
 <pre><code>$ heroku addons:add heroku-postgresql:dev
 </code></pre>
