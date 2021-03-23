@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 24 Feb 2021 01:25:46 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 23 Mar 2021 15:27:54 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>Go の src ディレクトリを移動した</title>
+      <link>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</link>
+      <pubDate>Tue, 23 Mar 2021 15:27:54 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</guid>
+      <description>以前「リポジトリ管理ツール ghq を導入した」という記事を書きましたが、Go も Modules が主流になって様子が変わったので、一度整理することにしました。 Go の</description>
     </item>
     
     <item>
@@ -184,7 +193,7 @@
       <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</guid>
-      <description>TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理してますか? 自分は今まで ~/project 配下に適当に突っ込んでやってきました。 Go を触り始めて、プロジェク</description>
+      <description>更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し</description>
     </item>
     
     <item>
