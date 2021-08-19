@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="git のコマンド補完 まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでア" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2013-05-18T07:58:33&#43;00:00" />
-<meta property="article:modified_time" content="2013-05-18T07:58:33&#43;00:00" />
+<meta property="article:published_time" content="2013-05-18T07:58:33+00:00" />
+<meta property="article:modified_time" content="2013-05-18T07:58:33+00:00" />
 
 <meta itemprop="name" content="zsh で git のコマンド補完及びブランチ名の表示">
-<meta itemprop="description" content="git のコマンド補完 まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでア"><meta itemprop="datePublished" content="2013-05-18T07:58:33&#43;00:00" />
-<meta itemprop="dateModified" content="2013-05-18T07:58:33&#43;00:00" />
+<meta itemprop="description" content="git のコマンド補完 まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでア"><meta itemprop="datePublished" content="2013-05-18T07:58:33+00:00" />
+<meta itemprop="dateModified" content="2013-05-18T07:58:33+00:00" />
 <meta itemprop="wordCount" content="618">
 <meta itemprop="keywords" content="git,homebrew,zsh," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="zsh で git のコマンド補完及びブランチ名の表示"/>
@@ -154,7 +154,7 @@ $ brew cleanup  # 古い Formula の削除
 私はこんな感じでシンプルに使ってます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -164,7 +164,7 @@ $ brew cleanup  # 古い Formula の削除
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># VCS Setting</span>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># VCS Setting</span>
 autoload -Uz vcs_info
 precmd <span class="o">()</span> <span class="o">{</span>
     <span class="nv">psvar</span><span class="o">=()</span>

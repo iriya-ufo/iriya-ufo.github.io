@@ -6,11 +6,11 @@
     <description>Recent content in jupyter on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 04 Dec 2016 14:17:17 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 04 Dec 2016 14:17:17 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/jupyter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Docker 版 Jupyter Notebooks でホストとデータを共有する</title>
       <link>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</link>
-      <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
+      <pubDate>Sun, 04 Dec 2016 14:17:17 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</guid>
       <description>前回 Anaconda 環境の Docker イメージを作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うこ</description>

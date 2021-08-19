@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/11/28/ghq-setup/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2019/11/28/ghq-setup/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-11-28T21:37:07&#43;09:00" />
-<meta property="article:modified_time" content="2020-02-18T14:37:07&#43;09:00" />
+<meta property="article:published_time" content="2019-11-28T21:37:07+09:00" />
+<meta property="article:modified_time" content="2020-02-18T14:37:07+09:00" />
 
 <meta itemprop="name" content="リポジトリ管理ツール ghq を導入した">
-<meta itemprop="description" content="更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し"><meta itemprop="datePublished" content="2019-11-28T21:37:07&#43;09:00" />
-<meta itemprop="dateModified" content="2020-02-18T14:37:07&#43;09:00" />
+<meta itemprop="description" content="更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し"><meta itemprop="datePublished" content="2019-11-28T21:37:07+09:00" />
+<meta itemprop="dateModified" content="2020-02-18T14:37:07+09:00" />
 <meta itemprop="wordCount" content="806">
 <meta itemprop="keywords" content="go,ghq," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="リポジトリ管理ツール ghq を導入した"/>
@@ -153,11 +153,11 @@
 <p>Go については特段変わったことはしません。以下のよくある <code>$GOPATH</code> を設定するだけです。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
 </code></pre></td></tr></table>
 </div>
@@ -165,10 +165,10 @@
 <h2 id="ghq-のインストール">ghq のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ go get github.com/motemen/ghq
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ go get github.com/motemen/ghq
 </code></pre></td></tr></table>
 </div>
 </div><p>Mac だと <code>brew install ghq</code> でも大丈夫です。</p>
@@ -176,23 +176,23 @@
 <p>ghq root は複数設定することができるので、以下のように設定します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ git config --global --add ghq.root <span class="nv">$GOPATH</span>/src
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ git config --global --add ghq.root <span class="nv">$GOPATH</span>/src
 $ git config --global --add ghq.root <span class="nv">$HOME</span>/.ghq
 </code></pre></td></tr></table>
 </div>
 </div><p>そうすると <code>~/.gitconfig</code> に以下が追記されているはずです。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[ghq]
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[ghq]
        root = /Users/your-name/.go/src
        root = /Users/your-name/.ghq
 </code></pre></td></tr></table>

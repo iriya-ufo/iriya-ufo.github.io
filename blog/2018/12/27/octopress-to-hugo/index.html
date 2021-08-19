@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2018-12-27T10:17:23&#43;09:00" />
-<meta property="article:modified_time" content="2018-12-27T10:17:23&#43;09:00" />
+<meta property="article:published_time" content="2018-12-27T10:17:23+09:00" />
+<meta property="article:modified_time" content="2018-12-27T10:17:23+09:00" />
 
 <meta itemprop="name" content="Octopress から Hugo へ移行した">
-<meta itemprop="description" content="以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は"><meta itemprop="datePublished" content="2018-12-27T10:17:23&#43;09:00" />
-<meta itemprop="dateModified" content="2018-12-27T10:17:23&#43;09:00" />
+<meta itemprop="description" content="以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は"><meta itemprop="datePublished" content="2018-12-27T10:17:23+09:00" />
+<meta itemprop="dateModified" content="2018-12-27T10:17:23+09:00" />
 <meta itemprop="wordCount" content="2087">
 <meta itemprop="keywords" content="hugo,octopress," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Octopress から Hugo へ移行した"/>
@@ -139,21 +139,21 @@
 <h2 id="インストール">インストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">brew install hugo
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">brew install hugo
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="サイトのセットアップ">サイトのセットアップ</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hugo new site quickstart
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new site quickstart
 <span class="nb">cd</span> quickstart<span class="p">;</span><span class="se">\
 </span><span class="se"></span>git init<span class="p">;</span><span class="se">\
 </span></code></pre></td></tr></table>
@@ -166,19 +166,19 @@
 <p>サンプル投稿をする。テーマによって <code>post</code> か <code>posts</code> ディレクトリを使用しているので合わせたほうが無難。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hugo new post/my-first-post.md
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo new post/my-first-post.md
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="サーバーを起動して確認">サーバーを起動して確認</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">hugo server -D
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">hugo server -D
 </code></pre></td></tr></table>
 </div>
 </div><p>http://localhost:1313/ で確認。</p>
@@ -194,26 +194,26 @@
 <p>Markdown 記事のコピー</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">cp octopress-site/source/_posts/* hugo-site/content/post/
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cp octopress-site/source/_posts/* hugo-site/content/post/
 </code></pre></td></tr></table>
 </div>
 </div><p>画像のコピー</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">cp -r octopress-site/source/images/ hugo-site/static/images
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">cp -r octopress-site/source/images/ hugo-site/static/images
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="octopress-の独自タグを置換">Octopress の独自タグを置換</h2>
 <p>Octopress のみでしか使えない独自記法を Hugo でも扱えるよう書き換える。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -239,7 +239,7 @@
 </span><span class="lnt">24
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># content/post/ ディレクトリで作業する</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># content/post/ ディレクトリで作業する</span>
 <span class="nb">cd</span> content/post/
 
 <span class="c1"># 記事のタイムスタンプの形式を変える</span>
@@ -270,11 +270,11 @@ find . -type f -exec sed -i <span class="s2">&#34;&#34;</span> -e <span class="s
 <a href="https://gam0022.net/blog/2016/09/25/migrated-from-octopress-to-hugo/">こちらを参考</a>にした。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">permalinks</span><span class="p">]</span>
   <span class="nx">post</span> <span class="p">=</span> <span class="s2">&#34;/blog/:year/:month/:day/:slug&#34;</span>
 </code></pre></td></tr></table>
 </div>
@@ -284,12 +284,12 @@ find . -type f -exec sed -i <span class="s2">&#34;&#34;</span> -e <span class="s
 <p>テーマディレクトリの内容をカスタマイズした場合は、以下のコマンドを打つ。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ./themes/even/
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">cd</span> ./themes/even/
 yarn install
 yarn build
 </code></pre></td></tr></table>
@@ -324,13 +324,13 @@ yarn build
 <p>以下 hugo ディレクトリで作業する。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># Octopress で運用していたリポジトリを追記</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="c1"># Octopress で運用していたリポジトリを追記</span>
 $ git remote -v
 origin  git@github.com:<span class="o">[</span>username<span class="o">]</span>/<span class="o">[</span>username<span class="o">]</span>.github.io.git <span class="o">(</span>fetch<span class="o">)</span>
 origin  git@github.com:<span class="o">[</span>username<span class="o">]</span>/<span class="o">[</span>username<span class="o">]</span>.github.io.git <span class="o">(</span>push<span class="o">)</span>
@@ -339,13 +339,13 @@ origin  git@github.com:<span class="o">[</span>username<span class="o">]</span>/
 </div><p>マスターブランチから source ブランチをチェックアウト</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ git checkout -b <span class="nb">source</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ git checkout -b <span class="nb">source</span>
 $ git branch
   master
 * <span class="nb">source</span>
@@ -354,17 +354,17 @@ $ git branch
 </div><p>既存の source に強制 push (<strong>強制 push なので注意する</strong>)</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ git push -f origin <span class="nb">source</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ git push -f origin <span class="nb">source</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>Github のページに行って <code>settings</code> → <code>Branches</code> → Default branch を <code>source</code> に変更する (<code>master</code> ブランチを消すため)</p>
 <p>ローカルとリモートの <code>master</code> ブランチを削除する</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -372,7 +372,7 @@ $ git branch
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ git branch -d master
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ git branch -d master
 Deleted branch master <span class="o">(</span>was eafdf11<span class="o">)</span>.
 
 $ git push -f --delete origin master
@@ -383,23 +383,23 @@ To github.com:<span class="o">[</span>username<span class="o">]</span>/<span cla
 </div><p>hugo コマンドで静的データを生成する</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ rm -rf public/
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ rm -rf public/
 $ hugo
 </code></pre></td></tr></table>
 </div>
 </div><p>コミット &amp;&amp; push</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ git add .
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ git add .
 $ git commit -m <span class="s2">&#34;release `date &#39;+%Y-%m-%d %H:%M’`&#34;</span>
 $ git subtree push --prefix public/ origin master
 </code></pre></td></tr></table>
@@ -414,7 +414,7 @@ $ git subtree push --prefix public/ origin master
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -444,7 +444,7 @@ $ git subtree push --prefix public/ origin master
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="cp">#!/bin/bash
 </span><span class="cp"></span>
 <span class="k">if</span> <span class="o">[[</span> <span class="k">$(</span>git status -s<span class="k">)</span> <span class="o">]]</span>
 <span class="k">then</span>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="とあるプロジェクトで Nginx &#43; Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2016-05-07T15:23:21&#43;09:00" />
-<meta property="article:modified_time" content="2016-05-07T15:23:21&#43;09:00" />
+<meta property="article:published_time" content="2016-05-07T15:23:21+00:00" />
+<meta property="article:modified_time" content="2016-05-07T15:23:21+00:00" />
 
 <meta itemprop="name" content="Passenger をやめて Puma にした">
-<meta itemprop="description" content="とあるプロジェクトで Nginx &#43; Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設"><meta itemprop="datePublished" content="2016-05-07T15:23:21&#43;09:00" />
-<meta itemprop="dateModified" content="2016-05-07T15:23:21&#43;09:00" />
+<meta itemprop="description" content="とあるプロジェクトで Nginx &#43; Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設"><meta itemprop="datePublished" content="2016-05-07T15:23:21+00:00" />
+<meta itemprop="dateModified" content="2016-05-07T15:23:21+00:00" />
 <meta itemprop="wordCount" content="845">
 <meta itemprop="keywords" content="puma,passenger," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Passenger をやめて Puma にした"/>
@@ -148,12 +148,12 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 <h2 id="rbenv-path-の設定">rbenv PATH の設定</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">RBENV_ROOT</span><span class="o">=</span><span class="s2">&#34;/usr/local/rbenv&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nb">export</span> <span class="nv">RBENV_ROOT</span><span class="o">=</span><span class="s2">&#34;/usr/local/rbenv&#34;</span>
 <span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&#34;</span><span class="nv">$RBENV_ROOT</span><span class="s2">/bin:</span><span class="nv">$PATH</span><span class="s2">&#34;</span>
 <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>rbenv init -<span class="k">)</span><span class="s2">&#34;</span>
 </code></pre></td></tr></table>
@@ -162,7 +162,7 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 <p>所有者は root で <code>chmod 755</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -259,7 +259,7 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 </span><span class="lnt">95
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="cp">#!/bin/bash
 </span><span class="cp"></span><span class="c1">#</span>
 <span class="c1"># puma-myproject</span>
 
@@ -360,7 +360,7 @@ query_status<span class="o">()</span> <span class="o">{</span>
 <p>所有者は deployer で <code>chmod 644</code></p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -391,7 +391,7 @@ query_status<span class="o">()</span> <span class="o">{</span>
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ch">#!/usr/bin/env puma</span>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ch">#!/usr/bin/env puma</span>
 
 <span class="n">directory</span> <span class="s1">&#39;/your-app-path/current&#39;</span>
 <span class="n">rackup</span> <span class="s2">&#34;/your-app-path/current/config.ru&#34;</span>
@@ -426,7 +426,7 @@ query_status<span class="o">()</span> <span class="o">{</span>
 <p>バックアップを作っておく</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -436,7 +436,7 @@ query_status<span class="o">()</span> <span class="o">{</span>
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">3c3
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">3c3
 &lt; worker_processes  auto;
 <span class="gd">---
 </span><span class="gd"></span>&gt; worker_processes  1;
@@ -448,7 +448,7 @@ query_status<span class="o">()</span> <span class="o">{</span>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -473,7 +473,7 @@ query_status<span class="o">()</span> <span class="o">{</span>
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-diff" data-lang="diff">1,4d0
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">1,4d0
 &lt; upstream app {
 &lt;     server unix:///your-app-path/current/tmp/sockets/puma.sock;
 &lt; }
@@ -507,11 +507,11 @@ $ chkconfig puma on
 <code>.env</code> ファイルを作成する。所有者は deployer とする。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">SECRET_KEY_BASE</span><span class="o">=</span><span class="s2">&#34;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34;</span>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">SECRET_KEY_BASE</span><span class="o">=</span><span class="s2">&#34;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx&#34;</span>
 <span class="nv">RAILS_ENV</span><span class="o">=</span><span class="s2">&#34;production&#34;</span>
 </code></pre></td></tr></table>
 </div>

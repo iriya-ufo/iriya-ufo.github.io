@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-08-14T10:10:30&#43;09:00" />
-<meta property="article:modified_time" content="2019-08-14T10:10:30&#43;09:00" />
+<meta property="article:published_time" content="2019-08-14T10:10:30+09:00" />
+<meta property="article:modified_time" content="2019-08-14T10:10:30+09:00" />
 
 <meta itemprop="name" content="Rails の開発環境を Docker で構築する">
-<meta itemprop="description" content="開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま"><meta itemprop="datePublished" content="2019-08-14T10:10:30&#43;09:00" />
-<meta itemprop="dateModified" content="2019-08-14T10:10:30&#43;09:00" />
+<meta itemprop="description" content="開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま"><meta itemprop="datePublished" content="2019-08-14T10:10:30+09:00" />
+<meta itemprop="dateModified" content="2019-08-14T10:10:30+09:00" />
 <meta itemprop="wordCount" content="181">
 <meta itemprop="keywords" content="rails,docker," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Rails の開発環境を Docker で構築する"/>
@@ -145,7 +145,7 @@ DB は PostgreSQL を使います。永続化に Volume を利用します。</p
 <p><code>RAILS_ROOT</code> 配下の構成です (一部抜粋)。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -163,7 +163,7 @@ DB は PostgreSQL を使います。永続化に Volume を利用します。</p
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">RAILS_ROOT
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">RAILS_ROOT
 ├── .dockerignore
 ├── .env
 ├── .gitignore

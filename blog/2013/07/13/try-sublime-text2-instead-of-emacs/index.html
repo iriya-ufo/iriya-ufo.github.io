@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2013-07-13T15:43:18&#43;00:00" />
-<meta property="article:modified_time" content="2013-07-13T15:43:18&#43;00:00" />
+<meta property="article:published_time" content="2013-07-13T15:43:18+00:00" />
+<meta property="article:modified_time" content="2013-07-13T15:43:18+00:00" />
 
 <meta itemprop="name" content="Emacs 使いが Sublime Text 2 を練習してみた">
-<meta itemprop="description" content="知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema"><meta itemprop="datePublished" content="2013-07-13T15:43:18&#43;00:00" />
-<meta itemprop="dateModified" content="2013-07-13T15:43:18&#43;00:00" />
+<meta itemprop="description" content="知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema"><meta itemprop="datePublished" content="2013-07-13T15:43:18+00:00" />
+<meta itemprop="dateModified" content="2013-07-13T15:43:18+00:00" />
 <meta itemprop="wordCount" content="878">
 <meta itemprop="keywords" content="emacs,sublime text," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs 使いが Sublime Text 2 を練習してみた"/>
@@ -156,10 +156,10 @@ $ sudo apt-get install sublime-text
 <p>以下のコードをコンソールに入力して Enter キー押下します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib2</span><span class="o">,</span><span class="nn">os</span><span class="p">;</span> <span class="n">pf</span><span class="o">=</span><span class="s1">&#39;Package Control.sublime-package&#39;</span><span class="p">;</span> <span class="n">ipp</span><span class="o">=</span><span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">();</span> <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">else</span> <span class="bp">None</span><span class="p">;</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">()));</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ipp</span><span class="p">,</span><span class="n">pf</span><span class="p">),</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://sublime.wbond.net/&#39;</span><span class="o">+</span><span class="n">pf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;%20&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">());</span> <span class="k">print</span> <span class="s1">&#39;Please restart Sublime Text to finish installation&#39;</span>
+<pre tabindex="0" class="chroma"><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">urllib2</span><span class="o">,</span><span class="nn">os</span><span class="p">;</span> <span class="n">pf</span><span class="o">=</span><span class="s1">&#39;Package Control.sublime-package&#39;</span><span class="p">;</span> <span class="n">ipp</span><span class="o">=</span><span class="n">sublime</span><span class="o">.</span><span class="n">installed_packages_path</span><span class="p">();</span> <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">ipp</span><span class="p">)</span> <span class="k">else</span> <span class="kc">None</span><span class="p">;</span> <span class="n">urllib2</span><span class="o">.</span><span class="n">install_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">build_opener</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">ProxyHandler</span><span class="p">()));</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">ipp</span><span class="p">,</span><span class="n">pf</span><span class="p">),</span><span class="s1">&#39;wb&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">urllib2</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="s1">&#39;http://sublime.wbond.net/&#39;</span><span class="o">+</span><span class="n">pf</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;%20&#39;</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">());</span> <span class="nb">print</span> <span class="s1">&#39;Please restart Sublime Text to finish installation&#39;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>再起動を促すメッセージが表示されるので Sublime Text を再起動します。これで Package Control が有効になります。</p>

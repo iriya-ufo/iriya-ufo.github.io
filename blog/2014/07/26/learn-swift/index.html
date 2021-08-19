@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/07/26/learn-swift/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Sw" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2014/07/26/learn-swift/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2014-07-26T15:55:36&#43;00:00" />
-<meta property="article:modified_time" content="2014-07-26T15:55:36&#43;00:00" />
+<meta property="article:published_time" content="2014-07-26T15:55:36+00:00" />
+<meta property="article:modified_time" content="2014-07-26T15:55:36+00:00" />
 
 <meta itemprop="name" content="Swift をインタラクティブに実行しながら勉強しよう (関数編)">
-<meta itemprop="description" content="Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Sw"><meta itemprop="datePublished" content="2014-07-26T15:55:36&#43;00:00" />
-<meta itemprop="dateModified" content="2014-07-26T15:55:36&#43;00:00" />
+<meta itemprop="description" content="Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Sw"><meta itemprop="datePublished" content="2014-07-26T15:55:36+00:00" />
+<meta itemprop="dateModified" content="2014-07-26T15:55:36+00:00" />
 <meta itemprop="wordCount" content="1116">
 <meta itemprop="keywords" content="swift," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Swift をインタラクティブに実行しながら勉強しよう (関数編)"/>
@@ -145,10 +145,10 @@
 <p>それではさっそく Hellow, World しましょう。適当な場所に拡張子 <code>.swift</code> でファイルを作り以下の一行を書きます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="bp">println</span><span class="p">(</span><span class="err">“</span><span class="n">Hello</span> <span class="n">World</span><span class="err">”</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="bp">println</span><span class="p">(</span><span class="err">“</span><span class="n">Hello</span> <span class="n">World</span><span class="err">”</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>実行してみましょう。<code>-i</code> オプションをつけるとバイナリファイルを生成せずに直接実行されます。</p>
@@ -160,12 +160,12 @@ Hello, world
 <p>このまま続けましょう。いきなりですが関数を書きます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
 <span class="n">doNothing</span><span class="p">()</span>
 </code></pre></td></tr></table>
@@ -173,12 +173,12 @@ Hello, world
 </div><p>実行しても何もおきませんね。なので少し変えます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nv">nothing</span> <span class="p">=</span> <span class="n">doNothing</span><span class="p">()</span>
 </code></pre></td></tr></table>
@@ -186,7 +186,7 @@ Hello, world
 </div><p>むむむ <strong>warning</strong> が出ました。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -195,7 +195,7 @@ Hello, world
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sample.swift:3:5: warning: variable &#39;nothing&#39; inferred to have type &#39;()&#39;, which may be unexpected
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sample.swift:3:5: warning: variable &#39;nothing&#39; inferred to have type &#39;()&#39;, which may be unexpected
 var nothing = doNothing()
     ^
 sample.swift:3:5: note: add an explicit type annotation to silence this warning
@@ -207,12 +207,12 @@ var nothing = doNothing()
 </div><p>関数の返り値を <code>nothing</code> 変数に代入しようとしたのですがダメみたいです。warning によると関数は空のタプル <code>'()'</code> を返してるようですね。これを明示的に宣言する必要があるみたいです。このようにします。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="p">()</span> <span class="p">=</span> <span class="n">doNothing</span><span class="p">()</span>
 </code></pre></td></tr></table>
@@ -220,12 +220,12 @@ var nothing = doNothing()
 </div><p>これで warning が消えました。swift では <code>var</code> で変数宣言をして <code>foo</code> を変数名として <code>:</code> コロンの後に型を書くというやり方をします。また以下も動作します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">doNothing</span><span class="p">()</span> <span class="p">{</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="nb">Void</span> <span class="p">=</span> <span class="n">doNothing</span><span class="p">()</span>
 </code></pre></td></tr></table>
@@ -233,13 +233,13 @@ var nothing = doNothing()
 </div><p>それでは試しに文字列を返す関数を書いてみます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">()</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">return</span> <span class="s">&#34;Hi&#34;</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">retString</span><span class="p">()</span>
@@ -248,7 +248,7 @@ var nothing = doNothing()
 </div><p>あれ、今度はエラーが出ました。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -256,7 +256,7 @@ var nothing = doNothing()
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sample.swift:4:19: error: &#39;()&#39; is not convertible to &#39;String&#39;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sample.swift:4:19: error: &#39;()&#39; is not convertible to &#39;String&#39;
 var foo: String = retString()
                   ^
 sample.swift:2:12: error: type &#39;()&#39; does not conform to protocol &#39;StringLiteralConvertible&#39;
@@ -267,13 +267,13 @@ sample.swift:2:12: error: type &#39;()&#39; does not conform to protocol &#39;St
 </div><p>なるほど <code>retString</code> 関数は文字列を返して欲しかったのに依然としてタプルを返していますね、そしてそれを文字列に変換できないという旨のエラーです。関数の返り値に Void 以外を返す場合、型を宣言する必要があるようですね。こうしましょう。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">()</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
     <span class="k">return</span> <span class="s">&#34;Hi&#34;</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">retString</span><span class="p">()</span>
@@ -282,13 +282,13 @@ sample.swift:2:12: error: type &#39;()&#39; does not conform to protocol &#39;St
 </div><p>やりました！エラーが消えました。ついでに引数も渡してみましょうかね。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">(</span><span class="n">str</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
     <span class="k">return</span> <span class="s">&#34;Hi &#34;</span> <span class="o">+</span> <span class="n">str</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">retString</span><span class="p">(</span><span class="s">&#34;How&#39;s it going?&#34;</span><span class="p">)</span>
@@ -297,12 +297,12 @@ sample.swift:2:12: error: type &#39;()&#39; does not conform to protocol &#39;St
 </div><p>またエラー発生です。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">sample.swift:1:16: error: use of undeclared type &#39;str&#39;
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">sample.swift:1:16: error: use of undeclared type &#39;str&#39;
 func retString(str) -&gt; String {
                ^~~
 </code></pre></td></tr></table>
@@ -310,14 +310,14 @@ func retString(str) -&gt; String {
 </div><p>ほうほう、ここも型宣言が必要なのですか。こうすれば通るかな？</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">(</span><span class="n">str</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-swift" data-lang="swift"><span class="kd">func</span> <span class="nf">retString</span><span class="p">(</span><span class="n">str</span><span class="p">:</span> <span class="nb">String</span><span class="p">)</span> <span class="p">-&gt;</span> <span class="nb">String</span> <span class="p">{</span>
     <span class="k">return</span> <span class="s">&#34;Hi &#34;</span> <span class="o">+</span> <span class="n">str</span>
 <span class="p">}</span>
 <span class="kd">var</span> <span class="nv">foo</span><span class="p">:</span> <span class="nb">String</span> <span class="p">=</span> <span class="n">retString</span><span class="p">(</span><span class="s">&#34;How&#39;s it going?&#34;</span><span class="p">)</span>

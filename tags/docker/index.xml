@@ -6,7 +6,16 @@
     <description>Recent content in docker on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 14 Aug 2019 10:10:30 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Aug 2021 17:02:52 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hacobune で Go のアプリケーションを公開してみた</title>
+      <link>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</link>
+      <pubDate>Thu, 19 Aug 2021 17:02:52 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</guid>
+      <description>さくらインターネットさんから Hacobune というおもしろそうなサービスが発表されました。 インフラを意識せずにSaaS開発ができる 次世代PaaS「Haco</description>
+    </item>
+    
     <item>
       <title>Rails の開発環境を Docker で構築する</title>
       <link>https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/</link>
@@ -28,7 +37,7 @@
     <item>
       <title>Ubuntu に Docker をインストール</title>
       <link>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</link>
-      <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
+      <pubDate>Sun, 13 Nov 2016 04:01:16 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</guid>
       <description>公式サイトを参考にする。 Install Docker on Ubuntu メモリーとスワップ設定、UFW、DNSの設定はおこなっていない。</description>
@@ -37,7 +46,7 @@
     <item>
       <title>Docker for Mac を使う</title>
       <link>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</link>
-      <pubDate>Sun, 31 Jul 2016 14:11:03 +0900</pubDate>
+      <pubDate>Sun, 31 Jul 2016 14:11:03 +0000</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</guid>
       <description>『Mac に Docker 環境を構築する』を書いてしばらくしたら boot2docker が非推奨となって『Docker-machine で Mac に Docker 環境を構築する』を書いたら今度は Docker</description>

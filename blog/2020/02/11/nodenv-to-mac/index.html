@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2020-02-11T15:55:10&#43;09:00" />
-<meta property="article:modified_time" content="2020-12-05T15:55:10&#43;09:00" />
+<meta property="article:published_time" content="2020-02-11T15:55:10+09:00" />
+<meta property="article:modified_time" content="2020-12-05T15:55:10+09:00" />
 
 <meta itemprop="name" content="Mac に nodenv インストールした">
-<meta itemprop="description" content="brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ"><meta itemprop="datePublished" content="2020-02-11T15:55:10&#43;09:00" />
-<meta itemprop="dateModified" content="2020-12-05T15:55:10&#43;09:00" />
+<meta itemprop="description" content="brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ"><meta itemprop="datePublished" content="2020-02-11T15:55:10+09:00" />
+<meta itemprop="dateModified" content="2020-12-05T15:55:10+09:00" />
 <meta itemprop="wordCount" content="808">
 <meta itemprop="keywords" content="node.js," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac に nodenv インストールした"/>
@@ -137,7 +137,7 @@
 <p>とりあえず今の環境を消してきれいにする。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -147,7 +147,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ which yarn
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ which yarn
 /usr/local/bin/yarn
 $ which node
 /usr/local/bin/node
@@ -160,7 +160,7 @@ n not found
 </div><p>消していく。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -168,7 +168,7 @@ n not found
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ npm uninstall npm -g <span class="c1"># node の削除の前にこれをやる</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ npm uninstall npm -g <span class="c1"># node の削除の前にこれをやる</span>
 $ rm -rf ~/.npm
 $ brew uninstall yarn
 Uninstalling /usr/local/Cellar/yarn/1.22.0... <span class="o">(</span><span class="m">14</span> files, 5MB<span class="o">)</span>
@@ -179,7 +179,7 @@ Uninstalling /usr/local/Cellar/node/13.8.0... <span class="o">(</span>4,686 file
 </div><p>消えた。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -187,7 +187,7 @@ Uninstalling /usr/local/Cellar/node/13.8.0... <span class="o">(</span>4,686 file
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ which yarn
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ which yarn
 yarn not found
 $ which node
 node not found
@@ -199,27 +199,27 @@ npm not found
 <p><a href="https://github.com/nodenv/nodenv">公式サイト</a>の通りに進めていく。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ brew install nodenv <span class="c1"># node-build もインストールされる</span>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ brew install nodenv <span class="c1"># node-build もインストールされる</span>
 </code></pre></td></tr></table>
 </div>
 </div><p><code>~/.zshrc</code> に下記を追記してターミナル再起動。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-.zshrc" data-lang=".zshrc"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.nodenv/bin:<span class="nv">$PATH</span>
+<pre tabindex="0" class="chroma"><code class="language-.zshrc" data-lang=".zshrc"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.nodenv/bin:<span class="nv">$PATH</span>
 <span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>nodenv init -<span class="k">)</span><span class="s2">&#34;</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>正常にインストールできたかチェックしてくれるツールらしい。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -229,7 +229,7 @@ npm not found
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
 Checking for `nodenv&#39; in PATH: /usr/local/bin/nodenv
 Checking for nodenv shims in PATH: OK
 Checking `nodenv install&#39; support: /usr/local/bin/nodenv-install (node-build 4.7.1)
@@ -244,23 +244,23 @@ Auditing installed plugins: OK
 <p><code>rbenv</code> とほぼ使い方は一緒。fooenv 系はどれもそうなのかな。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ nodenv install -l
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv install -l
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="node-インストール">node インストール</h2>
 <p>インストールしてグローバルに設定。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ nodenv install 12.14.1
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv install 12.14.1
 $ nodenv global 12.14.1
 $ nodenv versions
 * 12.14.1 <span class="o">(</span><span class="nb">set</span> by /Users/iriya/.nodenv/version<span class="o">)</span>
@@ -269,13 +269,13 @@ $ nodenv versions
 </div><p><code>npm</code> の場所を確認。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ nodenv which npm
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv which npm
 /Users/iriya/.nodenv/versions/12.14.1/bin/npm
 $ which npm
 /Users/iriya/.nodenv/shims/npm
@@ -284,24 +284,24 @@ $ which npm
 </div><p>特定のディレクトリでバージョンを固定したい場合。下記コマンドを実行した場所に <code>.node-version</code> というファイルが作成される。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ nodenv <span class="nb">local</span> 12.14.1
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv <span class="nb">local</span> 12.14.1
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="yarn-のインストール">yarn のインストール</h2>
 <p>yarn を使いたい場合はいれる。ただ<a href="https://developers.freee.co.jp/entry/sayonara-yarn">こちらのサイト</a>にもある通り yarn のメリットだった速度は npm 6 ではほぼ同等となり <code>package-lock.json</code> というロックファイルの機構もあるため npm による問題はあまりなくなってきている。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ npm install -g yarn
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ npm install -g yarn
 $ yarn -v
 1.22.0
 $ which yarn
@@ -311,22 +311,22 @@ $ which yarn
 </div><h2 id="nodenv-のアップグレード">nodenv のアップグレード</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-shell" data-lang="shell">$ brew upgrade nodenv node-build
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ brew upgrade nodenv node-build
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="node-build-がないと怒られた場合">node-build がないと怒られた場合</h2>
 <p>チェックツールで <code>nodenv install</code> が出来ないと言われた場合 <code>node-build</code> をインストールする必要がある。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># As a nodenv plugin
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># As a nodenv plugin
 $ mkdir -p &#34;$(nodenv root)&#34;/plugins
 $ git clone https://github.com/nodenv/node-build.git &#34;$(nodenv root)&#34;/plugins/node-build
 </code></pre></td></tr></table>

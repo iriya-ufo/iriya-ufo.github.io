@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2015-04-23T23:10:30&#43;00:00" />
-<meta property="article:modified_time" content="2015-04-23T23:10:30&#43;00:00" />
+<meta property="article:published_time" content="2015-04-23T23:10:30+00:00" />
+<meta property="article:modified_time" content="2015-04-23T23:10:30+00:00" />
 
 <meta itemprop="name" content="Mac に Clojure 環境いれてみた">
-<meta itemprop="description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな"><meta itemprop="datePublished" content="2015-04-23T23:10:30&#43;00:00" />
-<meta itemprop="dateModified" content="2015-04-23T23:10:30&#43;00:00" />
+<meta itemprop="description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな"><meta itemprop="datePublished" content="2015-04-23T23:10:30+00:00" />
+<meta itemprop="dateModified" content="2015-04-23T23:10:30+00:00" />
 <meta itemprop="wordCount" content="636">
 <meta itemprop="keywords" content="clojure," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Mac に Clojure 環境いれてみた"/>
@@ -140,14 +140,14 @@ Mac でのやり方と、ついでに Emacs でいい感じにする設定を書
 <p>以下を Cask に追加して <code>$ cask install</code> してください。Cask を使ってない場合は <code>M-x package-install</code> とかで大丈夫です。環境構築が楽になるので Cask おすすめです。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;paredit&#34;</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;paredit&#34;</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;rainbow-delimiters&#34;</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;clojure-mode&#34;</span><span class="p">)</span>
 <span class="p">(</span><span class="nv">depends-on</span> <span class="s">&#34;clojurescript-mode&#34;</span><span class="p">)</span>
@@ -159,7 +159,7 @@ Mac でのやり方と、ついでに Emacs でいい感じにする設定を書
 <p><code>.emacs</code> とか <code>init.el</code> に以下を追記します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -171,7 +171,7 @@ Mac でのやり方と、ついでに Emacs でいい感じにする設定を書
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;;</span>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;;</span>
 <span class="c1">;;================================================================</span>
 <span class="c1">;; Clojure</span>
 <span class="c1">;;================================================================</span>
@@ -194,10 +194,10 @@ $ lein --version
 <code>~/.lein/profiles.clj</code> に以下を書きます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">{:user</span> <span class="nv">{:plugins</span> <span class="nv">[[cider/cider-nrepl</span> <span class="s">&#34;0.8.2&#34;</span><span class="nv">]]}}</span>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="nv">{:user</span> <span class="nv">{:plugins</span> <span class="nv">[[cider/cider-nrepl</span> <span class="s">&#34;0.8.2&#34;</span><span class="nv">]]}}</span>
 </code></pre></td></tr></table>
 </div>
 </div><p>あとは lein プロジェクトで Emacs から呼び出してやればOKです。</p>
