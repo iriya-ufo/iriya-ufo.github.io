@@ -12,7 +12,7 @@ tags:
   - "investment-performance"
 ---
 
-今までの株投資の損益を計算しました。ちょっと成績悪すぎて落第レベルです……
+今までの株投資の損益を計算しました。ちょっと成績悪すぎて落第レベルです……。
 
 - [投資における損益計算シート](https://docs.google.com/spreadsheets/d/1U6vwpXWB5lR9FtSiTgY9JCDhNz3wELyLojiwEzbnnjA/edit?usp=sharing)
 
