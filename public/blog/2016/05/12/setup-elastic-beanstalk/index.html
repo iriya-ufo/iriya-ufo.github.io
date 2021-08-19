@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2016-05-12T18:46:38&#43;09:00" />
-<meta property="article:modified_time" content="2016-05-12T18:46:38&#43;09:00" />
+<meta property="article:published_time" content="2016-05-12T18:46:38+00:00" />
+<meta property="article:modified_time" content="2016-05-12T18:46:38+00:00" />
 
 <meta itemprop="name" content="Elastic BeansTalk で遊んでみた">
-<meta itemprop="description" content="Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移"><meta itemprop="datePublished" content="2016-05-12T18:46:38&#43;09:00" />
-<meta itemprop="dateModified" content="2016-05-12T18:46:38&#43;09:00" />
+<meta itemprop="description" content="Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移"><meta itemprop="datePublished" content="2016-05-12T18:46:38+00:00" />
+<meta itemprop="dateModified" content="2016-05-12T18:46:38+00:00" />
 <meta itemprop="wordCount" content="1536">
 <meta itemprop="keywords" content="aws," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Elastic BeansTalk で遊んでみた"/>
@@ -192,10 +192,10 @@ SSH をセットアップしますか?	y キー (いいえ)
 <p>ここで以下のエラーが発生した。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">[Instance: i-xxxxxxxx] Command failed on instance. Return code: 11 Output: (TRUNCATED)...ps://rubygems.org/... Fetching dependency metadata from https://rubygems.org/.. You need to install git to be able to use gems from git repositories. For help installing git, please refer to GitHub&#39;s tutorial at https://help.github.com/articles/set-up-git. Hook /opt/elasticbeanstalk/hooks/appdeploy/pre/10_bundle_install.sh failed. For more detail, check /var/log/eb-activity.log using console or EB CLI.
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Instance: i-xxxxxxxx] Command failed on instance. Return code: 11 Output: (TRUNCATED)...ps://rubygems.org/... Fetching dependency metadata from https://rubygems.org/.. You need to install git to be able to use gems from git repositories. For help installing git, please refer to GitHub&#39;s tutorial at https://help.github.com/articles/set-up-git. Hook /opt/elasticbeanstalk/hooks/appdeploy/pre/10_bundle_install.sh failed. For more detail, check /var/log/eb-activity.log using console or EB CLI.
 </code></pre></td></tr></table>
 </div>
 </div><p>gem を GitHub のリポジトリからダウンロードするなら git をインストールしろ、とある。
@@ -204,19 +204,19 @@ SSH をセットアップしますか?	y キー (いいえ)
 <p>カスタマイズした設定をサーバーにデプロイしたい場合 <code>.ebextensions/01packages.config</code> というように <code>.ebextensions</code> というディレクトリを作ってその中にコンフィグを書いていく。コンフィグはアルファベット順に実行されるので 01 02 &hellip; という感じで接頭辞をつけておくとよい。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">packages:
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">packages:
   yum:
     git: <span class="o">[]</span>
 </code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -226,7 +226,7 @@ SSH をセットアップしますか?	y キー (いいえ)
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Symlink the ondeck database.yml to database.yml.example</span>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Symlink the ondeck database.yml to database.yml.example</span>
 files:
   <span class="s2">&#34;/opt/elasticbeanstalk/hooks/appdeploy/pre/01a_symlink_database_yml.sh&#34;</span>:
     mode: <span class="s2">&#34;000777&#34;</span>
@@ -238,7 +238,7 @@ files:
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -298,7 +298,7 @@ files:
 </span><span class="lnt">58
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-sh" data-lang="sh">files:
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">files:
   <span class="s2">&#34;/etc/init.d/puma&#34;</span>:
     mode: <span class="s2">&#34;000777&#34;</span>
     content: <span class="p">|</span>

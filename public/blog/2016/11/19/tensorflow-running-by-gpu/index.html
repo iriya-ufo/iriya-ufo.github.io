@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2016-11-19T23:37:43&#43;09:00" />
-<meta property="article:modified_time" content="2016-11-19T23:37:43&#43;09:00" />
+<meta property="article:published_time" content="2016-11-19T23:37:43+00:00" />
+<meta property="article:modified_time" content="2016-11-19T23:37:43+00:00" />
 
 <meta itemprop="name" content="TensorFlow を GPU で動かす">
-<meta itemprop="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま"><meta itemprop="datePublished" content="2016-11-19T23:37:43&#43;09:00" />
-<meta itemprop="dateModified" content="2016-11-19T23:37:43&#43;09:00" />
+<meta itemprop="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま"><meta itemprop="datePublished" content="2016-11-19T23:37:43+00:00" />
+<meta itemprop="dateModified" content="2016-11-19T23:37:43+00:00" />
 <meta itemprop="wordCount" content="704">
 <meta itemprop="keywords" content="machine learning,tensorflow," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TensorFlow を GPU で動かす"/>
@@ -150,24 +150,24 @@
 <h3 id="cuda-インストール">CUDA インストール</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install nvidia-cuda-toolkit
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install nvidia-cuda-toolkit
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="cudnn-インストール">cuDNN インストール</h3>
 <p><a href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a> からユーザー登録をしてライブラリをダウンロードする。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ tar xfzv cudnn-8.0-linux-x64-v5.1.tgz
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ tar xfzv cudnn-8.0-linux-x64-v5.1.tgz
 $ cd cuda
 $ sudo cp lib64/* /usr/lib/x86_64-linux-gnu
 $ sudo cp include/cudnn.h /usr/include
@@ -177,7 +177,7 @@ $ sudo chmod a+r /usr/lib/x86_64-linux-gnu/libcudnn*
 </div><h3 id="nvidia-docker-インストール">NVIDIA Docker インストール</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -185,7 +185,7 @@ $ sudo chmod a+r /usr/lib/x86_64-linux-gnu/libcudnn*
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback"># Install nvidia-docker and nvidia-docker-plugin
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># Install nvidia-docker and nvidia-docker-plugin
 $ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
 $ sudo dpkg -i /tmp/nvidia-docker*.deb &amp;&amp; rm /tmp/nvidia-docker*.deb
 
@@ -202,10 +202,10 @@ $ nvidia-docker run --rm nvidia/cuda nvidia-smi
 </ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-fallback" data-lang="fallback">$ nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu
 </code></pre></td></tr></table>
 </div>
 </div><p>Jupyter Notebook が起動するので <code>http://ホストIPアドレス:8888/</code> にアクセスしてみる。</p>

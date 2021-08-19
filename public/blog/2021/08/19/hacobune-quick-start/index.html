@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Hacobune で Go のアプリケーションを公開してみた - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="さくらインターネットさんから Hacobune というおもしろそうなサービスが発表されました。 インフラを意識せずにSaaS開発ができる 次世代PaaS「Haco" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Hacobune で Go のアプリケーションを公開してみた" />
+<meta property="og:description" content="さくらインターネットさんから Hacobune というおもしろそうなサービスが発表されました。 インフラを意識せずにSaaS開発ができる 次世代PaaS「Haco" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-08-19T17:02:52+09:00" />
+<meta property="article:modified_time" content="2021-08-19T17:02:52+09:00" />
+
+<meta itemprop="name" content="Hacobune で Go のアプリケーションを公開してみた">
+<meta itemprop="description" content="さくらインターネットさんから Hacobune というおもしろそうなサービスが発表されました。 インフラを意識せずにSaaS開発ができる 次世代PaaS「Haco"><meta itemprop="datePublished" content="2021-08-19T17:02:52+09:00" />
+<meta itemprop="dateModified" content="2021-08-19T17:02:52+09:00" />
+<meta itemprop="wordCount" content="1659">
+<meta itemprop="keywords" content="hacobune,docker," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Hacobune で Go のアプリケーションを公開してみた"/>
+<meta name="twitter:description" content="さくらインターネットさんから Hacobune というおもしろそうなサービスが発表されました。 インフラを意識せずにSaaS開発ができる 次世代PaaS「Haco"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Hacobune で Go のアプリケーションを公開してみた</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-08-19 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>さくらインターネットさんから Hacobune というおもしろそうなサービスが発表されました。</p>
+<ul>
+<li><a href="https://www.sakura.ad.jp/information/announcements/2021/08/12/1968207782/">インフラを意識せずにSaaS開発ができる 次世代PaaS「Hacobune」のオープンβ版を2021年8月12日に無料提供開始</a></li>
+</ul>
+<p>PaaS 型のクラウドサービスということですけど Docker イメージもしくは Dockerfile が必須ということなのでコンテナの PaaS として考えるとよさそうですね。
+さくらインターネット + Docker と聞くと <a href="https://www.sakura.ad.jp/information/announcements/2019/09/30/1968201223/">Arukas を思い出してウッとなりますが</a> Hacobune はどこまで頑張ってくれるでしょうか……。</p>
+<p>今回少し触ってみたので備忘録がてら書き記しておきます。</p>
+<h2 id="クイックスタート">クイックスタート</h2>
+<h3 id="アカウント作成とログイン">アカウント作成とログイン</h3>
+<p>Hacobune はさくらのクラウドサービスの一つなので、さくらインターネットのアカウントを作成するところから始めます。</p>
+<ul>
+<li><a href="https://secure.sakura.ad.jp/signup3/member-register/input.html">さくらインターネット会員登録</a></li>
+</ul>
+<p>アカウントが作成できたら以下のリンクより、さくらのクラウドサービスにログインします。</p>
+<ul>
+<li><a href="https://secure.sakura.ad.jp/cloud/">さくらのクラウドログイン</a></li>
+</ul>
+<h3 id="プロジェクトの作成とアプリケーションの構築">プロジェクトの作成とアプリケーションの構築</h3>
+<p>クラウドサービスにログインしたら Hacobune を選択します。</p>
+<p><img src="/images/2021/08/sakura-cloud.png" alt="sakura-cloud"></p>
+<p>Hacobune の画面で最初に行うのはプロジェクトの作成です。ドキュメントによるとプロジェクトとアプリケーションの関係は以下のようになっているそうです。</p>
+<p><strong>プロジェクト</strong></p>
+<blockquote>
+<p>最初に作成するリソースです。
+ネットワークとローカルDNSを提供します。
+作成したプロジェクト内部でアプリケーションやボリュームなど各種リソースを作成します。
+Hacobune（β版）における最大単位です。
+※プロジェクト内ではアプリケーション名やアドオン名、ジョブ名をホスト名として指定することで通信できます。</p>
+</blockquote>
+<p><strong>アプリケーション</strong></p>
+<blockquote>
+<p>実際にコードが実行されるリソースです。
+DockerイメージやGithubを用いたアプリケーションのデプロイを行うことが可能です。
+その他にも、環境変数設定やIP制限、オートスケール設定を行うことが可能です。
+また、同じプロジェクト配下に作成されたアプリケーション同士は設定したホスト名で通信することができます。 Hacobune（β版）における最小単位です。
+※アプリケーションへのインターネットからアクセスは、httpsのみ対応しています</p>
+</blockquote>
+<h4 id="プロジェクトの作成">プロジェクトの作成</h4>
+<p>新規作成ボタンからプロジェクトの作成を行います。非常にシンプルな作成画面です。</p>
+<p><img src="/images/2021/08/hacobune-project.png" alt="hacobune-project"></p>
+<h4 id="アプリケーションの作成">アプリケーションの作成</h4>
+<p>以下の内容でアプリケーションを作成しました。
+プライベートなコンテナレジストリとして gitlab を登録してみました。レジストリの登録ではユーザー名とパスワードしかなかったので二段階認証は未対応だと思われます。
+また Docker イメージ名のプレースホルダーに <code>docker.io/nginx:latest</code> とあったので、ドメイン名も含めて必要なのかなと思い試してみましたが Pull エラーになりました。ドメイン名の部分は必要なさそうです。</p>
+<p>ちなみにデプロイ方法で GitHub との連携に不具合があったらしく、現時点（2021/08/20）では GitHub でのデプロイは出来なくなっているようでした。</p>
+<p><img src="/images/2021/08/hacobune-application.png" alt="hacobune-application"></p>
+<p>ドメインに関して Hacobune ではデフォルトドメインとして <code>c1.hacobuneapp.com</code> が与えられていました。
+アプリケーション作成画面では、外部公開にチェックをいれるとサブドメインの部分が自由入力できるようになっており、後続のドメインはデフォルトドメインである <code>c1.hacobuneapp.com</code> のみ選択可能となっているようです。
+この後続の部分はアカウント毎に異なるのかなと思いましたが、サービス全体で共通のようでした。そのため例えばサブドメインに <code>test</code> は登録できなかったです。実質早いもの勝ちという感じですね。</p>
+<p>ここまででアプリケーションの作成が完了となり、下記 URL で公開することができました。</p>
+<ul>
+<li><a href="https://canaria-api.c1.hacobuneapp.com/">https://canaria-api.c1.hacobuneapp.com/</a></li>
+</ul>
+<h2 id="総評">総評</h2>
+<p>全体を触ってみた感じですが、シンプルで分かりやすく好印象です。https がデフォルトで有効化していたり、動作がきびきびして快適なのはいいですね。
+機能はまだまだこれからだと思うので楽しみにしています。</p>
+<p>Hacobune は Lab プロダクトということで実験的な位置づけのサービスなので今は無料で使うことができます。
+現時点での作成上限は以下のようになっていました。ちょっと試してみるにはいい感じのボリューム感ですね。</p>
+<p><img src="/images/2021/08/hacobune-limit.png" alt="hacobune-limit"></p>
+<h2 id="参考資料">参考資料</h2>
+<ul>
+<li><a href="https://manual.c1.hacobuneapp.com/docs">Hacobune（β版）ドキュメント</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-08-19
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/hacobune/">hacobune</a>
+          <a href="/tags/docker/">docker</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/2021/03/23/moving-go-src/">
+            <span class="next-text nav-default">Go の src ディレクトリを移動した</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2021
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

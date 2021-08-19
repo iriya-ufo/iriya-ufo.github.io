@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.82.0 with theme even" />
+<meta name="generator" content="Hugo 0.87.0 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/" />
@@ -42,12 +42,12 @@
 <meta property="og:description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/" /><meta property="article:section" content="post" />
-<meta property="article:published_time" content="2019-12-08T01:36:06&#43;09:00" />
-<meta property="article:modified_time" content="2019-12-08T01:36:06&#43;09:00" />
+<meta property="article:published_time" content="2019-12-08T01:36:06+09:00" />
+<meta property="article:modified_time" content="2019-12-08T01:36:06+09:00" />
 
 <meta itemprop="name" content="VSCode に Go の開発環境を整える">
-<meta itemprop="description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $"><meta itemprop="datePublished" content="2019-12-08T01:36:06&#43;09:00" />
-<meta itemprop="dateModified" content="2019-12-08T01:36:06&#43;09:00" />
+<meta itemprop="description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $"><meta itemprop="datePublished" content="2019-12-08T01:36:06+09:00" />
+<meta itemprop="dateModified" content="2019-12-08T01:36:06+09:00" />
 <meta itemprop="wordCount" content="559">
 <meta itemprop="keywords" content="go,vscode," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="VSCode に Go の開発環境を整える"/>
@@ -138,7 +138,7 @@
 <h2 id="go-のインストール">Go のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -148,7 +148,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ mkdir <span class="nv">$HOME</span>/.go
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ mkdir <span class="nv">$HOME</span>/.go
 
 <span class="c1"># Add this line to ~/.zshrc</span>
 <span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
@@ -161,18 +161,18 @@ brew install go
 </div><p>バージョン確認</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ go version
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ go version
 go version go1.13.4 darwin/amd64
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="repl-のインストール">REPL のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -182,7 +182,7 @@ go version go1.13.4 darwin/amd64
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>off go get -u github.com/motemen/gore/cmd/gore
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>off go get -u github.com/motemen/gore/cmd/gore
 
 $ gore <span class="c1"># 確認</span>
 gore version 0.4.1  :help <span class="k">for</span> <span class="nb">help</span>
@@ -195,7 +195,7 @@ hello
 </div><h2 id="go-package-のインストール">Go Package のインストール</h2>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
 </span><span class="lnt">3
 </span><span class="lnt">4
@@ -205,7 +205,7 @@ hello
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># gopkgs is a tool that provides list of available Go packages that can be imported.</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># gopkgs is a tool that provides list of available Go packages that can be imported.</span>
 $ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest
 
 <span class="c1"># Golint is a linter for Go source code.</span>
@@ -230,10 +230,10 @@ $ go get -u github.com/kisielk/errcheck
 <p>Language Server の <code>gopls</code> をインストールする。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt">1
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get golang.org/x/tools/gopls@latest
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get golang.org/x/tools/gopls@latest
 </code></pre></td></tr></table>
 </div>
 </div><p>(cf. <a href="https://github.com/golang/tools/blob/master/gopls/doc/user.md">https://github.com/golang/tools/blob/master/gopls/doc/user.md</a>)</p>
@@ -243,7 +243,7 @@ $ go get -u github.com/kisielk/errcheck
 <p>こんな感じで <code>settings.json</code> に追記して VSCode を再起動する。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre class="chroma"><code><span class="lnt"> 1
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
 </span><span class="lnt"> 2
 </span><span class="lnt"> 3
 </span><span class="lnt"> 4
@@ -275,7 +275,7 @@ $ go get -u github.com/kisielk/errcheck
 </span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
     <span class="nt">&#34;go.useLanguageServer&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nt">&#34;go.alternateTools&#34;</span><span class="p">:</span> <span class="p">{</span>
         <span class="nt">&#34;go-langserver&#34;</span><span class="p">:</span> <span class="s2">&#34;gopls&#34;</span>
