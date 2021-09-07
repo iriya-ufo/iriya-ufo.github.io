@@ -10,7 +10,56 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2021-08-19T17:02:52+09:00</lastmod>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</loc>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/ducky-one-2-mini-rgb/</loc>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/hhkb/</loc>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/</loc>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/programming/</loc>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2021-09-07T23:40:42+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -31,34 +80,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</loc>
-    <lastmod>2021-08-19T17:02:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2021-08-19T17:02:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2021-08-19T17:02:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2021-08-19T17:02:52+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2021-08-19T17:02:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -207,13 +228,6 @@
   <url>
     <loc>https://iriya-ufo.net/blog/2020/06/23/starting-the-university-of-the-people-term5/</loc>
     <lastmod>2020-06-23T08:51:57+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/hhkb/</loc>
-    <lastmod>2020-06-16T21:15:00+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -605,322 +619,322 @@
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/10/18/delete-post/</loc>
-    <lastmod>2017-10-18T01:02:03+00:00</lastmod>
+    <lastmod>2017-10-18T01:02:03+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/unix/</loc>
-    <lastmod>2017-05-28T23:53:36+00:00</lastmod>
+    <lastmod>2017-05-28T23:53:36+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/05/28/unix-time/</loc>
-    <lastmod>2017-05-28T23:53:36+00:00</lastmod>
+    <lastmod>2017-05-28T23:53:36+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</loc>
-    <lastmod>2017-02-15T15:03:24+00:00</lastmod>
+    <lastmod>2017-02-15T15:03:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/machine-learning/</loc>
-    <lastmod>2017-02-15T15:03:24+00:00</lastmod>
+    <lastmod>2017-02-15T15:03:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</loc>
-    <lastmod>2017-02-03T12:52:03+00:00</lastmod>
+    <lastmod>2017-02-03T12:52:03+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</loc>
-    <lastmod>2017-02-01T01:31:59+00:00</lastmod>
+    <lastmod>2017-02-01T01:31:59+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/01/28/the-thing-you-should-do-until-35-years-old/</loc>
-    <lastmod>2017-01-28T17:42:31+00:00</lastmod>
+    <lastmod>2017-01-28T17:42:31+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</loc>
-    <lastmod>2017-01-27T16:05:43+00:00</lastmod>
+    <lastmod>2017-01-27T16:05:43+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2017/01/17/amazon-dot-com-light-and-shadow/</loc>
-    <lastmod>2017-01-17T03:32:08+00:00</lastmod>
+    <lastmod>2017-01-17T03:32:08+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/12/19/review-of-how-to-earn-10m-yen-by-freelance/</loc>
-    <lastmod>2016-12-19T19:39:38+00:00</lastmod>
+    <lastmod>2016-12-19T19:39:38+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/12/19/review-of-business-creation-mit/</loc>
-    <lastmod>2016-12-19T14:35:29+00:00</lastmod>
+    <lastmod>2016-12-19T14:35:29+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</loc>
-    <lastmod>2016-12-04T14:17:17+00:00</lastmod>
+    <lastmod>2016-12-04T14:17:17+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/jupyter/</loc>
-    <lastmod>2016-12-04T14:17:17+00:00</lastmod>
+    <lastmod>2016-12-04T14:17:17+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/12/03/sugoi-kaigi/</loc>
-    <lastmod>2016-12-03T22:37:12+00:00</lastmod>
+    <lastmod>2016-12-03T22:37:12+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/tensorflow/</loc>
-    <lastmod>2016-11-19T23:37:43+00:00</lastmod>
+    <lastmod>2016-11-19T23:37:43+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</loc>
-    <lastmod>2016-11-19T23:37:43+00:00</lastmod>
+    <lastmod>2016-11-19T23:37:43+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/math/</loc>
-    <lastmod>2016-11-19T00:12:13+00:00</lastmod>
+    <lastmod>2016-11-19T00:12:13+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</loc>
-    <lastmod>2016-11-19T00:12:13+00:00</lastmod>
+    <lastmod>2016-11-19T00:12:13+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</loc>
-    <lastmod>2016-11-18T12:17:31+00:00</lastmod>
+    <lastmod>2016-11-18T12:17:31+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/ubuntu/</loc>
-    <lastmod>2016-11-13T04:01:16+00:00</lastmod>
+    <lastmod>2016-11-13T04:01:16+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</loc>
-    <lastmod>2016-11-13T04:01:16+00:00</lastmod>
+    <lastmod>2016-11-13T04:01:16+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/ai/</loc>
-    <lastmod>2016-11-10T02:39:37+00:00</lastmod>
+    <lastmod>2016-11-10T02:39:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</loc>
-    <lastmod>2016-11-10T02:39:37+00:00</lastmod>
+    <lastmod>2016-11-10T02:39:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</loc>
-    <lastmod>2016-11-10T01:38:43+00:00</lastmod>
+    <lastmod>2016-11-10T01:38:43+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</loc>
-    <lastmod>2016-11-09T14:58:31+00:00</lastmod>
+    <lastmod>2016-11-09T14:58:31+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</loc>
-    <lastmod>2016-10-31T00:39:13+00:00</lastmod>
+    <lastmod>2016-10-31T00:39:13+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</loc>
-    <lastmod>2016-07-31T14:11:03+00:00</lastmod>
+    <lastmod>2016-07-31T14:11:03+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/06/17/perfume-live/</loc>
-    <lastmod>2016-06-17T02:22:31+00:00</lastmod>
+    <lastmod>2016-06-17T02:22:31+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/anime/</loc>
-    <lastmod>2016-05-25T00:13:25+00:00</lastmod>
+    <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/categories/anime/</loc>
-    <lastmod>2016-05-25T00:13:25+00:00</lastmod>
+    <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/25/movie-sound-euphonium/</loc>
-    <lastmod>2016-05-25T00:13:25+00:00</lastmod>
+    <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/ruby/</loc>
-    <lastmod>2016-05-22T23:15:38+00:00</lastmod>
+    <lastmod>2016-05-22T23:15:38+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/</loc>
-    <lastmod>2016-05-22T23:15:38+00:00</lastmod>
+    <lastmod>2016-05-22T23:15:38+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/18/waga-toso-review/</loc>
-    <lastmod>2016-05-18T18:44:35+00:00</lastmod>
+    <lastmod>2016-05-18T18:44:35+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/aws/</loc>
-    <lastmod>2016-05-12T18:46:38+00:00</lastmod>
+    <lastmod>2016-05-12T18:46:38+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/</loc>
-    <lastmod>2016-05-12T18:46:38+00:00</lastmod>
+    <lastmod>2016-05-12T18:46:38+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/medical/</loc>
-    <lastmod>2016-05-11T23:29:09+00:00</lastmod>
+    <lastmod>2016-05-11T23:29:09+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/11/nephrotic-syndrome/</loc>
-    <lastmod>2016-05-11T23:29:09+00:00</lastmod>
+    <lastmod>2016-05-11T23:29:09+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/09/jeff-bezos-and-the-age-of-amazon/</loc>
-    <lastmod>2016-05-09T00:45:28+00:00</lastmod>
+    <lastmod>2016-05-09T00:45:28+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/08/remote-team-makes-better/</loc>
-    <lastmod>2016-05-08T17:20:50+00:00</lastmod>
+    <lastmod>2016-05-08T17:20:50+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/passenger/</loc>
-    <lastmod>2016-05-07T15:23:21+00:00</lastmod>
+    <lastmod>2016-05-07T15:23:21+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/</loc>
-    <lastmod>2016-05-07T15:23:21+00:00</lastmod>
+    <lastmod>2016-05-07T15:23:21+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/puma/</loc>
-    <lastmod>2016-05-07T15:23:21+00:00</lastmod>
+    <lastmod>2016-05-07T15:23:21+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</loc>
-    <lastmod>2016-04-30T03:08:48+00:00</lastmod>
+    <lastmod>2016-04-30T03:08:48+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</loc>
-    <lastmod>2016-04-29T19:22:13+00:00</lastmod>
+    <lastmod>2016-04-29T19:22:13+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

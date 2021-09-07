@@ -6,11 +6,11 @@
     <description>Recent content in ruby on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 22 May 2016 23:15:38 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2016 23:15:38 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>メタプログラミング Ruby</title>
       <link>https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/</link>
-      <pubDate>Sun, 22 May 2016 23:15:38 +0000</pubDate>
+      <pubDate>Sun, 22 May 2016 23:15:38 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/</guid>
       <description>今どきのプログラミングといえば Web Web といえば Ruby on Rails といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rail</description>

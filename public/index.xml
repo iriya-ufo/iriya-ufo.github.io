@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 19 Aug 2021 17:02:52 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 07 Sep 2021 23:40:42 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>Ducky One 2 Mini RGB キーボードを買った</title>
+      <link>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</link>
+      <pubDate>Tue, 07 Sep 2021 23:40:42 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</guid>
+      <description>僕は今までずっと HHKB Pro2 を愛用してきました。初めて HHKB を触ったときの打鍵感がすごくよくて感動したのを覚えています。 それからときどき Realforce を使ったりもし</description>
     </item>
     
     <item>
@@ -424,7 +433,7 @@
     <item>
       <title>Octopress 記事削除</title>
       <link>https://iriya-ufo.net/blog/2017/10/18/delete-post/</link>
-      <pubDate>Wed, 18 Oct 2017 01:02:03 +0000</pubDate>
+      <pubDate>Wed, 18 Oct 2017 01:02:03 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/10/18/delete-post/</guid>
       <description>Octopress で記事の削除は source/_posts/post.markdown を削除すればいい、はずなんだがなぜか消えない。 新しい記事を投稿することによって削除されるかどうかを試してみる。</description>
@@ -433,7 +442,7 @@
     <item>
       <title>UNIX 時刻の変換</title>
       <link>https://iriya-ufo.net/blog/2017/05/28/unix-time/</link>
-      <pubDate>Sun, 28 May 2017 23:53:36 +0000</pubDate>
+      <pubDate>Sun, 28 May 2017 23:53:36 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/05/28/unix-time/</guid>
       <description>UNIX 時間はビルトインコマンドで変換できる Linux の場合 date --date &amp;quot;@1495526373&amp;quot; Mac の場合 date -r 1495526373 UNIX 時間とは</description>
@@ -442,7 +451,7 @@
     <item>
       <title>Complete Chart of Neural Networks</title>
       <link>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</link>
-      <pubDate>Wed, 15 Feb 2017 15:03:24 +0000</pubDate>
+      <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</guid>
       <description></description>
@@ -451,7 +460,7 @@
     <item>
       <title>Deep Learning Nanodegree Foundation Program を受講します</title>
       <link>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</link>
-      <pubDate>Fri, 03 Feb 2017 12:52:03 +0000</pubDate>
+      <pubDate>Fri, 03 Feb 2017 12:52:03 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</guid>
       <description>Udacity というオンライン学習プラットフォームで人工知能のナノ学位コースが始まるよと発表されました。 Introducing Siraj Raval’s Deep Learning Nanodegree Foundation Program! 人工知能の勉強は独学</description>
@@ -460,7 +469,7 @@
     <item>
       <title>IBM の Data Scientist Workbench がすごい</title>
       <link>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</link>
-      <pubDate>Wed, 01 Feb 2017 01:31:59 +0000</pubDate>
+      <pubDate>Wed, 01 Feb 2017 01:31:59 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</guid>
       <description>機械学習をやってる人やデータサイエンスやってる人は Jupyter Notebooks を使ってる人が多いと思います。 環境構築はそれほど難しくないのですが、これが Web 上で簡単に</description>
@@ -469,7 +478,7 @@
     <item>
       <title>「35歳までに必ずやるべきこと」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2017/01/28/the-thing-you-should-do-until-35-years-old/</link>
-      <pubDate>Sat, 28 Jan 2017 17:42:31 +0000</pubDate>
+      <pubDate>Sat, 28 Jan 2017 17:42:31 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/01/28/the-thing-you-should-do-until-35-years-old/</guid>
       <description>会社にあったので読んでみた。 読者対象はタイトルの通り35歳までの人ということだが、なぜこの年齢なのかというと、35歳までは**『人の心は柔軟</description>
@@ -478,7 +487,7 @@
     <item>
       <title>Octopress Deploy エラーなおした</title>
       <link>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</link>
-      <pubDate>Fri, 27 Jan 2017 16:05:43 +0000</pubDate>
+      <pubDate>Fri, 27 Jan 2017 16:05:43 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</guid>
       <description>当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。 エラー内容はこんな感じ。 ## Pushing generated _deploy website</description>
@@ -487,7 +496,7 @@
     <item>
       <title>「アマゾン・ドット・コムの光と影」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2017/01/17/amazon-dot-com-light-and-shadow/</link>
-      <pubDate>Tue, 17 Jan 2017 03:32:08 +0000</pubDate>
+      <pubDate>Tue, 17 Jan 2017 03:32:08 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/01/17/amazon-dot-com-light-and-shadow/</guid>
       <description>以前『仁義なき宅配』を読んだのですが、その本と同じ著者が書いた Amazon 潜入記だったので気になって読んでみました。 2005年に出版された本で、もう1</description>
@@ -496,7 +505,7 @@
     <item>
       <title>「エンジニアがフリーランスで年収1000万円になるための稼ぎ方」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/12/19/review-of-how-to-earn-10m-yen-by-freelance/</link>
-      <pubDate>Mon, 19 Dec 2016 19:39:38 +0000</pubDate>
+      <pubDate>Mon, 19 Dec 2016 19:39:38 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/19/review-of-how-to-earn-10m-yen-by-freelance/</guid>
       <description>お金が欲しいなんて今まであまり思ってこなかったけど、最近とある事がきっかけでもっとあったらいいなと思うようになった。守るべきものができたとい</description>
@@ -505,7 +514,7 @@
     <item>
       <title>「ビジネス・クリエーション！」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/12/19/review-of-business-creation-mit/</link>
-      <pubDate>Mon, 19 Dec 2016 14:35:29 +0000</pubDate>
+      <pubDate>Mon, 19 Dec 2016 14:35:29 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/19/review-of-business-creation-mit/</guid>
       <description>これからスタートアップやるんだけど、具体的に何をどうしたらいいんだろうという人向けの本。 ビジネスをするには何かしらの『商品』を世の中に出して</description>
@@ -514,7 +523,7 @@
     <item>
       <title>Docker 版 Jupyter Notebooks でホストとデータを共有する</title>
       <link>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</link>
-      <pubDate>Sun, 04 Dec 2016 14:17:17 +0000</pubDate>
+      <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</guid>
       <description>前回 Anaconda 環境の Docker イメージを作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うこ</description>
@@ -523,7 +532,7 @@
     <item>
       <title>「すごい会議」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/12/03/sugoi-kaigi/</link>
-      <pubDate>Sat, 03 Dec 2016 22:37:12 +0000</pubDate>
+      <pubDate>Sat, 03 Dec 2016 22:37:12 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/12/03/sugoi-kaigi/</guid>
       <description>会社で週一のイテレーションをしている際に「すごい会議」っていう本、いいらしいよと聞いたので読んでみた。 本書の前半部分は会議とは関係ない著者の</description>
@@ -532,7 +541,7 @@
     <item>
       <title>TensorFlow を GPU で動かす</title>
       <link>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</link>
-      <pubDate>Sat, 19 Nov 2016 23:37:43 +0000</pubDate>
+      <pubDate>Sat, 19 Nov 2016 23:37:43 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</guid>
       <description>前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま</description>
@@ -541,7 +550,7 @@
     <item>
       <title>機械学習と数学</title>
       <link>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</link>
-      <pubDate>Sat, 19 Nov 2016 00:12:13 +0000</pubDate>
+      <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</guid>
       <description>人工知能といえば機械学習、そして機械学習といえば数学。チュートリアルやらライブラリやらで、これだけ手軽になった機械学習といえども現段階ではち</description>
@@ -550,7 +559,7 @@
     <item>
       <title>Docker コンテナに anaconda 環境を構築</title>
       <link>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</link>
-      <pubDate>Fri, 18 Nov 2016 12:17:31 +0000</pubDate>
+      <pubDate>Fri, 18 Nov 2016 12:17:31 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</guid>
       <description>機械学習の主流言語といえば Python ですよね。最近はインストール方法も変わってきており、より便利な方法があるようです。 今回は Anaconda の環境を Docker で作って、さ</description>
@@ -559,7 +568,7 @@
     <item>
       <title>Ubuntu に Docker をインストール</title>
       <link>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</link>
-      <pubDate>Sun, 13 Nov 2016 04:01:16 +0000</pubDate>
+      <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</guid>
       <description>公式サイトを参考にする。 Install Docker on Ubuntu メモリーとスワップ設定、UFW、DNSの設定はおこなっていない。</description>
@@ -568,7 +577,7 @@
     <item>
       <title>「コンピューターで脳がつくれるか」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</link>
-      <pubDate>Thu, 10 Nov 2016 02:39:37 +0000</pubDate>
+      <pubDate>Thu, 10 Nov 2016 02:39:37 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</guid>
       <description>人工知能に関する平易で読みやすい本、特化型AIと汎用AIの違いについてよく分かる。 脳のモデルと学習モデルの比較をしている点が面白かった。 大脳</description>
@@ -577,7 +586,7 @@
     <item>
       <title>Deep Learning Machine に Ubuntu のインストール</title>
       <link>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</link>
-      <pubDate>Thu, 10 Nov 2016 01:38:43 +0000</pubDate>
+      <pubDate>Thu, 10 Nov 2016 01:38:43 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</guid>
       <description>『Hardware Architecture for Machine Learning』で作ったマシンに Ubuntu 16.04 LTS をインストールしました。 Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓</description>
@@ -586,7 +595,7 @@
     <item>
       <title>hardware architecture for machine learning</title>
       <link>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</link>
-      <pubDate>Wed, 09 Nov 2016 14:58:31 +0000</pubDate>
+      <pubDate>Wed, 09 Nov 2016 14:58:31 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</guid>
       <description>機械学習をさせるための専用演算マシンを構築しました。 クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれは</description>
@@ -595,7 +604,7 @@
     <item>
       <title>「よくわかる 人工知能」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</link>
-      <pubDate>Mon, 31 Oct 2016 00:39:13 +0000</pubDate>
+      <pubDate>Mon, 31 Oct 2016 00:39:13 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</guid>
       <description>人工知能という言葉を聞いてどんなイメージを抱くだろう。 以前『人工知能は人間を超えるか』という書籍を読んで、これからの人工知能の行末について想</description>
@@ -604,7 +613,7 @@
     <item>
       <title>Docker for Mac を使う</title>
       <link>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</link>
-      <pubDate>Sun, 31 Jul 2016 14:11:03 +0000</pubDate>
+      <pubDate>Sun, 31 Jul 2016 14:11:03 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</guid>
       <description>『Mac に Docker 環境を構築する』を書いてしばらくしたら boot2docker が非推奨となって『Docker-machine で Mac に Docker 環境を構築する』を書いたら今度は Docker</description>
@@ -613,7 +622,7 @@
     <item>
       <title>Perfume のライブに行ってきた</title>
       <link>https://iriya-ufo.net/blog/2016/06/17/perfume-live/</link>
-      <pubDate>Fri, 17 Jun 2016 02:22:31 +0000</pubDate>
+      <pubDate>Fri, 17 Jun 2016 02:22:31 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/06/17/perfume-live/</guid>
       <description>『Perfume 6th Tour 2016「COSMIC EXPLORER」スタンディングエディション in 幕張メッセ』行ってきました。 初めてのライブで右も左も</description>
@@ -622,7 +631,7 @@
     <item>
       <title>「劇場版 響け！ユーフォニアム」感想</title>
       <link>https://iriya-ufo.net/blog/2016/05/25/movie-sound-euphonium/</link>
-      <pubDate>Wed, 25 May 2016 00:13:25 +0000</pubDate>
+      <pubDate>Wed, 25 May 2016 00:13:25 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/25/movie-sound-euphonium/</guid>
       <description>観てきました！「劇場版 響け！ユーフォニアム」 いやぁよかったです。感想を一言でと問われれば・・・ 音響が神！ 映画館の大スクリーンと迫力ある音響、</description>
@@ -631,7 +640,7 @@
     <item>
       <title>メタプログラミング Ruby</title>
       <link>https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/</link>
-      <pubDate>Sun, 22 May 2016 23:15:38 +0000</pubDate>
+      <pubDate>Sun, 22 May 2016 23:15:38 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/</guid>
       <description>今どきのプログラミングといえば Web Web といえば Ruby on Rails といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rail</description>
@@ -640,7 +649,7 @@
     <item>
       <title>「我が闘争」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/05/18/waga-toso-review/</link>
-      <pubDate>Wed, 18 May 2016 18:44:35 +0000</pubDate>
+      <pubDate>Wed, 18 May 2016 18:44:35 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/18/waga-toso-review/</guid>
       <description>全体的な話しの流れは『以前読んだホリエモンの本』と似たような内容だった。 幼少期の話しが多く、どちらかというと自己啓発的な感じが『ゼロ』で、起</description>
@@ -649,7 +658,7 @@
     <item>
       <title>Elastic BeansTalk で遊んでみた</title>
       <link>https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/</link>
-      <pubDate>Thu, 12 May 2016 18:46:38 +0000</pubDate>
+      <pubDate>Thu, 12 May 2016 18:46:38 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/</guid>
       <description>Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移</description>
@@ -658,7 +667,7 @@
     <item>
       <title>ネフローゼが治ったり治らなかったり</title>
       <link>https://iriya-ufo.net/blog/2016/05/11/nephrotic-syndrome/</link>
-      <pubDate>Wed, 11 May 2016 23:29:09 +0000</pubDate>
+      <pubDate>Wed, 11 May 2016 23:29:09 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/11/nephrotic-syndrome/</guid>
       <description>前回記事の更新から二ヶ月ほど経ちました。しばらくは大丈夫だったのですが、なんか体調悪いなぁと思ったら再発していたということが、この短いスパン</description>
@@ -667,7 +676,7 @@
     <item>
       <title>「ジェフ・ベゾス 果てなき野望」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/05/09/jeff-bezos-and-the-age-of-amazon/</link>
-      <pubDate>Mon, 09 May 2016 00:45:28 +0000</pubDate>
+      <pubDate>Mon, 09 May 2016 00:45:28 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/09/jeff-bezos-and-the-age-of-amazon/</guid>
       <description>Amazon はなぜこれほどまでに巨大企業に成長できたのだろう。Google と違って最新鋭のテクノロジーから始まったわけではない、Apple のように美し</description>
@@ -676,7 +685,7 @@
     <item>
       <title>「リモートチームでうまくいく」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/05/08/remote-team-makes-better/</link>
-      <pubDate>Sun, 08 May 2016 17:20:50 +0000</pubDate>
+      <pubDate>Sun, 08 May 2016 17:20:50 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/08/remote-team-makes-better/</guid>
       <description>リモートワークを取り入れて布教していることで有名なソニックガーデンさんの社長、倉貫さんの書かれた本。 リモートワークにはメリットとデメリットが</description>
@@ -685,7 +694,7 @@
     <item>
       <title>Passenger をやめて Puma にした</title>
       <link>https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/</link>
-      <pubDate>Sat, 07 May 2016 15:23:21 +0000</pubDate>
+      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/</guid>
       <description>とあるプロジェクトで Nginx + Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設</description>
@@ -694,7 +703,7 @@
     <item>
       <title>Octopress のテーマをカスタマイズする</title>
       <link>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</link>
-      <pubDate>Sat, 30 Apr 2016 03:08:48 +0000</pubDate>
+      <pubDate>Sat, 30 Apr 2016 03:08:48 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</guid>
       <description>3rd Party Octopress Themes ここにテーマのテンプレートがあるので、好きなテーマを探して来てインストールすればよい。 リンク切れになってたり、全く違うサイトになって</description>
@@ -703,7 +712,7 @@
     <item>
       <title>WordPress から GitHub Pages &#43; Octopress に移行した</title>
       <link>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</link>
-      <pubDate>Fri, 29 Apr 2016 19:22:13 +0000</pubDate>
+      <pubDate>Fri, 29 Apr 2016 19:22:13 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</guid>
       <description>今まで http://iriya-ufo.net は WordPress で運用してきたのだけれど、GitHub Pages + Octopress に移行することにした。 WordPress を辞めたくなった理由 WordPress で記事を書くときは Emacs を立ち上げ markdown で書い</description>
