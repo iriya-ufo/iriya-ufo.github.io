@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 07 Sep 2021 23:40:42 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Sep 2021 01:13:25 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2021-09 版</title>
+      <link>https://iriya-ufo.net/blog/2021/09/14/vscode-extension-2/</link>
+      <pubDate>Tue, 14 Sep 2021 01:13:25 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/09/14/vscode-extension-2/</guid>
+      <description>前回から早くも1年が経ったので整理してみました。 2021年9月現在で57個（以下アルファベット順） スターがついているのはお気に入りという意味</description>
     </item>
     
     <item>
