@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 14 Sep 2021 01:13:25 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Sep 2021 23:03:02 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>「オブジェクト指向でなぜつくるのか 第3版」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2021/09/23/how-objects-work-3rd/</link>
+      <pubDate>Thu, 23 Sep 2021 23:03:02 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/09/23/how-objects-work-3rd/</guid>
+      <description>この本、割と評判のいい本なのですが、個人的にはそこまでべた褒めするほどでもなかったです。 結局、オブジェクト指向でなぜつくるのかという問いに対</description>
     </item>
     
     <item>
