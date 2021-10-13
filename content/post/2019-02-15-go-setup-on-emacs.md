@@ -9,7 +9,16 @@ categories:
   - "programming"
 tags:
   - "go"
+  - "emacs"
 ---
+
+記事の情報が古くなってしまったので書き直しました。以下を参照してください。
+
+- [[2021年版] Emacs に Go の開発環境を整える]({{< relref "2021-10-13-go-setup-on-emacs-ver2" >}})
+
+----
+
+ここからは以前の内容です。
 
 Mac で Go をサクッとはじめるための手引書
 
