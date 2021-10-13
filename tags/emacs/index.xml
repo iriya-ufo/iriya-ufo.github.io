@@ -6,7 +6,16 @@
     <description>Recent content in emacs on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 06 Aug 2019 17:31:53 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Oct 2021 13:54:35 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/emacs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[2021年版] Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</link>
+      <pubDate>Wed, 13 Oct 2021 13:54:35 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</guid>
+      <description>以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト</description>
+    </item>
+    
     <item>
       <title>VSCode で Emacs キーバインドを使う</title>
       <link>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</link>
@@ -14,6 +23,15 @@
       
       <guid>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</guid>
       <description>長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン</description>
+    </item>
+    
+    <item>
+      <title>Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</link>
+      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</guid>
+      <description>記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。</description>
     </item>
     
     <item>

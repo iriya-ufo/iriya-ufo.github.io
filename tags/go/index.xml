@@ -6,7 +6,16 @@
     <description>Recent content in go on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 23 Mar 2021 15:27:54 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Oct 2021 13:54:35 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[2021年版] Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</link>
+      <pubDate>Wed, 13 Oct 2021 13:54:35 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</guid>
+      <description>以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト</description>
+    </item>
+    
     <item>
       <title>Go の src ディレクトリを移動した</title>
       <link>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</link>
@@ -49,7 +58,7 @@
       <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</guid>
-      <description>Mac で Go をサクッとはじめるための手引書 Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go Go Package のインストール 1 2 3 4 5 $ go get github.com/rogpeppe/godef</description>
+      <description>記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。</description>
     </item>
     
   </channel>
