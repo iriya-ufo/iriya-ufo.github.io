@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 13 Oct 2021 13:54:35 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 20 Oct 2021 09:45:28 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>プロジェクト管理ツールなに使ってるか聞いてみた</title>
+      <link>https://iriya-ufo.net/blog/2021/10/20/project-management-tool/</link>
+      <pubDate>Wed, 20 Oct 2021 09:45:28 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/10/20/project-management-tool/</guid>
+      <description>とあるコミュニティでプロジェクト管理ツールなに使ってるか聞いてみました。 20人ほどから回答を頂けましたので各ツールを簡単にまとめてみました。</description>
     </item>
     
     <item>
