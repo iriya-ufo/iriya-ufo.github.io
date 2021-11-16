@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 20 Oct 2021 09:45:28 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Nov 2021 00:09:00 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>「モダンJavaScriptの基本から始める React実践の教科書」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2021/11/17/review-modern-react/</link>
+      <pubDate>Wed, 17 Nov 2021 00:09:00 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/11/17/review-modern-react/</guid>
+      <description>読んだ感想 React の入門書として一冊あげるとすればこの本でしょう、というくらいオススメできる内容でした。 対象読者としては JavaScript に少し不安もありつつ React を</description>
     </item>
     
     <item>
