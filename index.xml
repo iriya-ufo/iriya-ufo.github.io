@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 17 Nov 2021 00:09:00 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 19 Nov 2021 00:55:44 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>「Reactハンズオンラーニング 第2版 ―Webアプリケーション開発のベストプラクティス」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</link>
+      <pubDate>Fri, 19 Nov 2021 00:55:44 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</guid>
+      <description>読んだ感想 React を業務で使っている知人から、書籍で学ぶならこれ一択！とオススメされたのが「Reactハンズオンラーニング」でした。 読んでみたとこ</description>
     </item>
     
     <item>
