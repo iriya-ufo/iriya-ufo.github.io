@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 19 Nov 2021 00:55:44 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 23:38:39 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>React を完全に理解するために行った学習方法</title>
+      <link>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</link>
+      <pubDate>Tue, 30 Nov 2021 23:38:39 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</guid>
+      <description>新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？ 効率の良い学習方法とい</description>
     </item>
     
     <item>

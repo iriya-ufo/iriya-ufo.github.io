@@ -6,7 +6,16 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 20 Oct 2021 09:45:28 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 30 Nov 2021 23:38:39 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React を完全に理解するために行った学習方法</title>
+      <link>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</link>
+      <pubDate>Tue, 30 Nov 2021 23:38:39 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</guid>
+      <description>新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？ 効率の良い学習方法とい</description>
+    </item>
+    
     <item>
       <title>プロジェクト管理ツールなに使ってるか聞いてみた</title>
       <link>https://iriya-ufo.net/blog/2021/10/20/project-management-tool/</link>
