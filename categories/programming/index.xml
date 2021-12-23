@@ -6,7 +6,16 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 17 Dec 2021 16:16:18 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Dec 2021 15:24:24 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Jest の代わりに Vitest 使ってみる</title>
+      <link>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</link>
+      <pubDate>Thu, 23 Dec 2021 15:24:24 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</guid>
+      <description>つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う</description>
+    </item>
+    
     <item>
       <title>React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite</title>
       <link>https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</link>
