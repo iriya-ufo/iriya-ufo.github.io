@@ -48,7 +48,7 @@
 <meta itemprop="name" content="React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite">
 <meta itemprop="description" content="はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環"><meta itemprop="datePublished" content="2021-12-17T16:16:18+09:00" />
 <meta itemprop="dateModified" content="2021-12-20T16:16:18+09:00" />
-<meta itemprop="wordCount" content="2736">
+<meta itemprop="wordCount" content="2900">
 <meta itemprop="keywords" content="react," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite"/>
 <meta name="twitter:description" content="はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環"/>
@@ -185,7 +185,7 @@ $ npm install
 $ npm run dev
 </code></pre></td></tr></table>
 </div>
-</div><p>docker やリモートサーバーの場合は <code>vite.config.ts</code> を編集します。</p>
+</div><p>docker やリモートサーバーの場合は <code>vite.config.ts</code> に <code>host</code> を追記します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -204,6 +204,48 @@ export default defineConfig({
 +    host: &#39;0.0.0.0&#39;,
 +  },
 })
+</code></pre></td></tr></table>
+</div>
+</div><p>また import などを行うときに相対パスではなく絶対パスで行いたいので <code>vite.config.ts</code> に以下を設定します。
+なお通常絶対パスの指定は <code>create-react-app</code> で作成したアプリの場合 <code>tsconfig.json</code> などに <code>baseUrl</code> を記述するかと思いますが Vite では無視されるので注意してください。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">import { defineConfig } from &#39;vite&#39;;
+import react from &#39;@vitejs/plugin-react&#39;;
++import path from &#39;path&#39;;
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
++  root: &#39;./&#39;,
++  resolve: {
++    alias: {
++      &#39;@/&#39;: path.join(__dirname, &#39;./src/&#39;),
++    },
++  },
+  server: {
+    host: &#39;0.0.0.0&#39;,
+  },
+});
 </code></pre></td></tr></table>
 </div>
 </div><p>開発環境をよりよくするために eslint, prettier などを設定します。
