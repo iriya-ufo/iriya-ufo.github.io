@@ -48,7 +48,7 @@ $ npm install
 $ npm run dev
 ```
 
-docker やリモートサーバーの場合は `vite.config.ts` を編集します。
+docker やリモートサーバーの場合は `vite.config.ts` に `host` を追記します。
 
 ```
 // https://vitejs.dev/config/
@@ -58,6 +58,29 @@ export default defineConfig({
 +    host: '0.0.0.0',
 +  },
 })
+```
+
+また import などを行うときに相対パスではなく絶対パスで行いたいので `vite.config.ts` に以下を設定します。
+なお通常絶対パスの指定は `create-react-app` で作成したアプリの場合 `tsconfig.json` などに `baseUrl` を記述するかと思いますが Vite では無視されるので注意してください。
+
+```
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
++import path from 'path';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
++  root: './',
++  resolve: {
++    alias: {
++      '@/': path.join(__dirname, './src/'),
++    },
++  },
+  server: {
+    host: '0.0.0.0',
+  },
+});
 ```
 
 開発環境をよりよくするために eslint, prettier などを設定します。
