@@ -3,7 +3,7 @@ layout: post
 title: "Hacobune で Go のアプリケーションを公開してみた"
 slug: hacobune-quick-start
 date: 2021-08-19T17:02:52+09:00
-lastmod: 2021-08-19T17:02:52+09:00
+lastmod: 2022-02-15T18:02:52+09:00
 comments: true
 categories:
   - "programming"
@@ -11,6 +11,16 @@ tags:
   - "hacobune"
   - "docker"
 ---
+
+## 2022年2月15日更新
+
+- [Hacobune オープンβ版の提供終了に関するお知らせ](https://www.sakura.ad.jp/information/announcements/2022/01/31/1968208892/)
+
+オープンβ版が終了することになったそうです。正式版がリリースされるという内容でもないので、もしかしたらこのままサービス終了するのでしょうか。悲しいですね。
+
+----
+
+## Hacobune について
 
 さくらインターネットさんから Hacobune というおもしろそうなサービスが発表されました。
 
