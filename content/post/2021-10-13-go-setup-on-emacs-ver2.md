@@ -3,7 +3,7 @@ layout: post
 title: "[2021年版] Emacs に Go の開発環境を整える"
 slug: go-setup-on-emacs-ver2
 date: 2021-10-13T13:54:35+09:00
-lastmod: 2021-10-13T13:54:35+09:00
+lastmod: 2022-02-18T13:54:35+09:00
 comments: true
 categories:
   - "programming"
@@ -31,10 +31,12 @@ brew install go
 ## Go Package のインストール
 
 まずは `gopls (Language Server)` とその他をインストールします。
+`goimports` は `import` の過不足を自動で補完してくれるものです。好みでインストールしてください。
 
 ```bash
-$ go get golang.org/x/tools/gopls@latest         # Language Server
-$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs # Go パッケージ
+$ go get golang.org/x/tools/gopls@latest             # Language Server
+$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs     # Go パッケージ
+$ go install golang.org/x/tools/cmd/goimports@latest # import の過不足を自動で補完
 ```
 
 ## Emacs Go Package のインストール
@@ -87,8 +89,24 @@ go-mode に lsp を hook するだけでいい感じに使えます。
 lsp-mode は最初に Go ファイルを開くと workspace を聞いてきます。
 インポートすると `.emacs.d/` に `.lsp-session-v1` というテキストファイルが作られます。
 
-少し触ってみましたがいい感じですね。
-簡単な設定でそこそこいい感じに使えるので他の言語でも lsp を導入したくなってきました。
+また `goimports` を使いたい場合は Elisp に以下を追記します（go-mode がある前提です）。`go fmt` も自動で行ってくれます。
+
+``` emacs-lisp
+(setq gofmt-command "goimports")
+(add-hook 'before-save-hook 'gofmt-before-save)
+```
+
+## 便利な Tips
+
+`go-mode` でよく使う便利な Tips です。
+
+### 定義元ジャンプ
+
+`M-.` で定義元にジャンプできます。`M-,` で戻ることができます。
+
+### godoc
+
+`M-x godoc` でドキュメントが引けます。
 
 ## VSCode からインストールされたパッケージ群
 
