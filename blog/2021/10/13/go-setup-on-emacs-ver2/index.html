@@ -43,12 +43,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-10-13T13:54:35+09:00" />
-<meta property="article:modified_time" content="2021-10-13T13:54:35+09:00" />
+<meta property="article:modified_time" content="2022-02-18T13:54:35+09:00" />
 
 <meta itemprop="name" content="[2021年版] Emacs に Go の開発環境を整える">
 <meta itemprop="description" content="以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト"><meta itemprop="datePublished" content="2021-10-13T13:54:35+09:00" />
-<meta itemprop="dateModified" content="2021-10-13T13:54:35+09:00" />
-<meta itemprop="wordCount" content="660">
+<meta itemprop="dateModified" content="2022-02-18T13:54:35+09:00" />
+<meta itemprop="wordCount" content="787">
 <meta itemprop="keywords" content="go,emacs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[2021年版] Emacs に Go の開発環境を整える"/>
 <meta name="twitter:description" content="以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト"/>
@@ -157,15 +157,18 @@ brew install go
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="go-package-のインストール">Go Package のインストール</h2>
-<p>まずは <code>gopls (Language Server)</code> とその他をインストールします。</p>
+<p>まずは <code>gopls (Language Server)</code> とその他をインストールします。
+<code>goimports</code> は <code>import</code> の過不足を自動で補完してくれるものです。好みでインストールしてください。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ go get golang.org/x/tools/gopls@latest         <span class="c1"># Language Server</span>
-$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs <span class="c1"># Go パッケージ</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ go get golang.org/x/tools/gopls@latest             <span class="c1"># Language Server</span>
+$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs     <span class="c1"># Go パッケージ</span>
+$ go install golang.org/x/tools/cmd/goimports@latest <span class="c1"># import の過不足を自動で補完</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="emacs-go-package-のインストール">Emacs Go Package のインストール</h2>
@@ -242,8 +245,23 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 </div>
 </div><p>lsp-mode は最初に Go ファイルを開くと workspace を聞いてきます。
 インポートすると <code>.emacs.d/</code> に <code>.lsp-session-v1</code> というテキストファイルが作られます。</p>
-<p>少し触ってみましたがいい感じですね。
-簡単な設定でそこそこいい感じに使えるので他の言語でも lsp を導入したくなってきました。</p>
+<p>また <code>goimports</code> を使いたい場合は Elisp に以下を追記します（go-mode がある前提です）。<code>go fmt</code> も自動で行ってくれます。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="便利な-tips">便利な Tips</h2>
+<p><code>go-mode</code> でよく使う便利な Tips です。</p>
+<h3 id="定義元ジャンプ">定義元ジャンプ</h3>
+<p><code>M-.</code> で定義元にジャンプできます。<code>M-,</code> で戻ることができます。</p>
+<h3 id="godoc">godoc</h3>
+<p><code>M-x godoc</code> でドキュメントが引けます。</p>
 <h2 id="vscode-からインストールされたパッケージ群">VSCode からインストールされたパッケージ群</h2>
 <p>余談ですが VSCode で Go の環境を整えて Go ファイルのあるディレクトリを開くと、いくつかパッケージのインストールを勧められます。
 そこで <code>Install All</code> すると2021年10月現在以下のパッケージが入りました。デフォルトで入るパッケージなので入れておくと吉かもしれません。</p>
@@ -284,7 +302,7 @@ gopls
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2021-10-13
+        2022-02-18
         
     </span>
   </p>
