@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Emacs で Magit を使う - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.92.2 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2022/02/22/magit/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Emacs で Magit を使う" />
+<meta property="og:description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2022/02/22/magit/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2022-02-22T00:09:18+09:00" />
+<meta property="article:modified_time" content="2022-02-22T00:09:18+09:00" />
+
+<meta itemprop="name" content="Emacs で Magit を使う">
+<meta itemprop="description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。"><meta itemprop="datePublished" content="2022-02-22T00:09:18+09:00" />
+<meta itemprop="dateModified" content="2022-02-22T00:09:18+09:00" />
+<meta itemprop="wordCount" content="841">
+<meta itemprop="keywords" content="emacs,magit," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Emacs で Magit を使う"/>
+<meta name="twitter:description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Emacs で Magit を使う</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2022-02-22 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p><a href="https://magit.vc">Magit</a> は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。</p>
+<h2 id="インストール">インストール</h2>
+<p><code>M-x package-list-packages</code> からインストールできます。
+自分で使っているパッケージマネジャーがあればそれに従ってください。</p>
+<h2 id="セットアップ">セットアップ</h2>
+<p>elisp に以下を追加します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;C-x g&#34;</span><span class="p">)</span> <span class="ss">&#39;magit-status</span><span class="p">)</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>後ほど magit を起動すると思いますが、起動したあと <code>.emacs.d</code> ディレクトリに <code>transient</code> というディレクトリができるかと思います。
+これは magit の UI を出すために使っているものです。<code>.emacs.d</code> を git 管理している場合などは除外しておくといいでしょう。</p>
+<h2 id="使い方とよく使うコマンド">使い方とよく使うコマンド</h2>
+<p>Git 管理配下のディレクトリで <code>C-x g</code> とすると、以下のような magit のモードになります。
+ここで <code>?</code> とするとコマンド一覧が見られます。なおこのモードから抜ける場合は <code>q</code> を押します。
+また見えづらいですが、左端に<code>&gt;</code> 記号がある場所で <code>TAB</code> を押すことで表示・非表示ができます。</p>
+<p><img src="/images/2022/02/magit01.png" alt="magit01"></p>
+<p>基本的にファイルを編集したあと、このモードに入り git コマンドを実行という流れになります。
+<code>magit-status</code> にはファイル変更の自動検知はないので、開いたままの場合は <code>g</code> で変更を読み込みできます。</p>
+<p>以下 <code>git</code> コマンドとの比較チートシートです。</p>
+<table>
+<thead>
+<tr>
+<th>やりたいこと</th>
+<th>Git の場合</th>
+<th>Magit の場合</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>stage に追加</td>
+<td>git add &lt;file&gt;</td>
+<td>ファイルの行で s</td>
+</tr>
+<tr>
+<td>stage に追加(全て)</td>
+<td>git add &ndash;all</td>
+<td>Untracked files の行で s</td>
+</tr>
+<tr>
+<td>unstage</td>
+<td>git restore &ndash;staged &lt;file&gt;</td>
+<td>ファイルの行で u</td>
+</tr>
+<tr>
+<td>unstage(全て)</td>
+<td>git reset</td>
+<td>Staged changes の行で u</td>
+</tr>
+<tr>
+<td>commit</td>
+<td>git commit</td>
+<td>c を二回タイプ後、メッセージ入力して C-c C-c</td>
+</tr>
+<tr>
+<td>branch checkout</td>
+<td>git checkout &lt;branch&gt;</td>
+<td>b b 移動したいブランチで RET</td>
+</tr>
+<tr>
+<td>branch の作成</td>
+<td>git checkout -b &lt;branch&gt;</td>
+<td>b c コピー元を選択後 RET ブランチ名入力 RET</td>
+</tr>
+<tr>
+<td>branch の削除</td>
+<td>git branch -d &lt;branch&gt;</td>
+<td>b k 削除したいブランチで RET</td>
+</tr>
+<tr>
+<td>stash</td>
+<td>git stash</td>
+<td>z z</td>
+</tr>
+<tr>
+<td>stash list</td>
+<td>git stash list</td>
+<td>z l</td>
+</tr>
+<tr>
+<td>stash pop</td>
+<td>git stash pop</td>
+<td>z p</td>
+</tr>
+<tr>
+<td>stash drop</td>
+<td>git stash drop</td>
+<td>z k</td>
+</tr>
+<tr>
+<td>diff on staging</td>
+<td>git diff &ndash;cached</td>
+<td>確認したいファイルの行で TAB</td>
+</tr>
+<tr>
+<td>diff on modified</td>
+<td>git diff</td>
+<td>確認したいファイルの行で TAB</td>
+</tr>
+<tr>
+<td>log on current</td>
+<td>git log</td>
+<td>l l で表示 n,p で移動 q で終了</td>
+</tr>
+<tr>
+<td>push</td>
+<td>git push</td>
+<td>P u</td>
+</tr>
+<tr>
+<td>pull</td>
+<td>git pull</td>
+<td>F u</td>
+</tr>
+</tbody>
+</table>
+<p>個人的に感動したのは Untracked files な状態のファイル行で <code>i</code> とすると <code>.gitignore</code> に追加されるコマンドです。</p>
+<h2 id="動画で使い方を見る">動画で使い方を見る</h2>
+<p>たぶんこの手の操作は文字じゃなくて動画で見たほうが分かりやすいと思うので、参考になりそうなものを貼っておきます。</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_zfvQkJsYwI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2022-02-22
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/emacs/">emacs</a>
+          <a href="/tags/magit/">magit</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/2022/01/16/profit-and-loss-2021/">
+            <span class="next-text nav-default">【2021年】株投資の損益を計算した</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2022
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

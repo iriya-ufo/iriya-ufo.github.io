@@ -6,7 +6,16 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 23 Dec 2021 15:24:24 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Feb 2022 00:09:18 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs で Magit を使う</title>
+      <link>https://iriya-ufo.net/blog/2022/02/22/magit/</link>
+      <pubDate>Tue, 22 Feb 2022 00:09:18 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/02/22/magit/</guid>
+      <description>Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。</description>
+    </item>
+    
     <item>
       <title>Jest の代わりに Vitest 使ってみる</title>
       <link>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</link>
