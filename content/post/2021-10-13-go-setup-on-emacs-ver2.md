@@ -89,11 +89,21 @@ go-mode に lsp を hook するだけでいい感じに使えます。
 lsp-mode は最初に Go ファイルを開くと workspace を聞いてきます。
 インポートすると `.emacs.d/` に `.lsp-session-v1` というテキストファイルが作られます。
 
-また `goimports` を使いたい場合は Elisp に以下を追記します（go-mode がある前提です）。`go fmt` も自動で行ってくれます。
+その他 `goimports` と compile option の追加を行いました。
+`M-x compile` もしくは `C-c c` でビルドが走ります。
+なお `goimports` は `go fmt` も自動で行ってくれます。
 
 ``` emacs-lisp
-(setq gofmt-command "goimports")
-(add-hook 'before-save-hook 'gofmt-before-save)
+(defun go-mode-omnibus ()
+  ;; Go code formatting by goimports
+  (setq gofmt-command "goimports")
+  (add-hook 'before-save-hook 'gofmt-before-save)
+  ;; Customize compile command to run go build
+  (if (not (string-match "go" compile-command))
+      (set (make-local-variable 'compile-command)
+           "go build -v && go test -v && go vet"))
+  )
+(add-hook 'go-mode-hook 'go-mode-omnibus)
 ```
 
 ## 便利な Tips
