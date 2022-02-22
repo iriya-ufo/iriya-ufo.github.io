@@ -48,7 +48,7 @@
 <meta itemprop="name" content="[2021年版] Emacs に Go の開発環境を整える">
 <meta itemprop="description" content="以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト"><meta itemprop="datePublished" content="2021-10-13T13:54:35+09:00" />
 <meta itemprop="dateModified" content="2022-02-18T13:54:35+09:00" />
-<meta itemprop="wordCount" content="787">
+<meta itemprop="wordCount" content="834">
 <meta itemprop="keywords" content="go,emacs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="[2021年版] Emacs に Go の開発環境を整える"/>
 <meta name="twitter:description" content="以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト"/>
@@ -245,15 +245,33 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 </div>
 </div><p>lsp-mode は最初に Go ファイルを開くと workspace を聞いてきます。
 インポートすると <code>.emacs.d/</code> に <code>.lsp-session-v1</code> というテキストファイルが作られます。</p>
-<p>また <code>goimports</code> を使いたい場合は Elisp に以下を追記します（go-mode がある前提です）。<code>go fmt</code> も自動で行ってくれます。</p>
+<p>その他 <code>goimports</code> と compile option の追加を行いました。
+<code>M-x compile</code> もしくは <code>C-c c</code> でビルドが走ります。
+なお <code>goimports</code> は <code>go fmt</code> も自動で行ってくれます。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">go-mode-omnibus</span> <span class="p">()</span>
+  <span class="c1">;; Go code formatting by goimports</span>
+  <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
+  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
+  <span class="c1">;; Customize compile command to run go build</span>
+  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nf">string-match</span> <span class="s">&#34;go&#34;</span> <span class="nv">compile-command</span><span class="p">))</span>
+      <span class="p">(</span><span class="nf">set</span> <span class="p">(</span><span class="nf">make-local-variable</span> <span class="ss">&#39;compile-command</span><span class="p">)</span>
+           <span class="s">&#34;go build -v &amp;&amp; go test -v &amp;&amp; go vet&#34;</span><span class="p">))</span>
+  <span class="p">)</span>
+<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span> <span class="ss">&#39;go-mode-omnibus</span><span class="p">)</span>
 </code></pre></td></tr></table>
 </div>
 </div><h2 id="便利な-tips">便利な Tips</h2>
