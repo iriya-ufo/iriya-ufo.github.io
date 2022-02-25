@@ -3,7 +3,7 @@ layout: post
 title: "React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite"
 slug: how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite
 date: 2021-12-17T16:16:18+09:00
-lastmod: 2021-12-20T16:16:18+09:00
+lastmod: 2022-02-25T16:16:18+09:00
 comments: true
 categories:
   - "programming"
@@ -61,7 +61,6 @@ export default defineConfig({
 ```
 
 また import などを行うときに相対パスではなく絶対パスで行いたいので `vite.config.ts` に以下を設定します。
-なお通常絶対パスの指定は `create-react-app` で作成したアプリの場合 `tsconfig.json` などに `baseUrl` を記述するかと思いますが Vite では無視されるので注意してください。
 
 ```
 import { defineConfig } from 'vite';
@@ -83,7 +82,18 @@ export default defineConfig({
 });
 ```
 
-開発環境をよりよくするために eslint, prettier などを設定します。
+このとき下記のようなエラーが出る場合は `$ npm i -D @types/node` とすることで解消されます。
+
+- `Cannot find module 'path' or its corresponding type declarations.`
+- `Cannot find name '__dirname'.`
+
+![path-error](/images/2022/02/path-error.png)
+
+記事によっては `path.join` が `path.resolve` となっていたりしますが、この辺の細かい話しはこちらを参照してください。
+
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="http://var.blog.jp/archives/77266771.html" data-iframely-url="//iframely.net/2uf5qNV?card=small"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
+
+さて次に、開発環境をよりよくするために eslint, prettier などを設定します。
 なお [eslint-plugin-prettier](https://github.com/prettier/eslint-plugin-prettier) は非推奨なので使用しません。
 
 ```bash
@@ -119,10 +129,29 @@ $ npm i -D eslint-plugin-{react,react-hooks}
     "noEmit": true,
     "jsx": "react-jsx"
   },
-  "include": ["./src"],
-  "exclude": ["node_modules"]
+  "include": ["src"],
+  "exclude": ["node_modules"],
+  "extends": "./tsconfig.paths.json"
 }
 ```
+
+`tsconfig.paths.json` を作成します。
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+ここで『さっき絶対パスの指定は `vite.config.ts` で書いたじゃないか』と思うかもしれません。少しややこしいのですがあれはプログラム側がパスを認識させるために書いています。Vite では `tsconfig.json` にパスを書いても無視されてしまうので。
+では、なぜわざわざ `tsconfig.paths.json` でパスの設定をしているかというと VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。
+
+そのため Vite ではなく `create-react-app` で作成したアプリの場合は `tsconfig.json` に path の設定を書くだけで大丈夫です。
 
 `.eslintrc.json` を作成します。
 
