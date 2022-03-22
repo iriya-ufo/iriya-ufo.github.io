@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/" />
@@ -151,15 +151,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ mkdir <span class="nv">$HOME</span>/.go
-
-<span class="c1"># Add this line to ~/.zshrc</span>
-<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
-
-<span class="c1"># Install</span>
-brew install go
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir <span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add this line to ~/.zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install</span>
+</span></span><span class="line"><span class="cl">brew install go
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="go-package-のインストール">Go Package のインストール</h1>
 <div class="highlight"><div class="chroma">
@@ -171,12 +171,12 @@ brew install go
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ go get github.com/rogpeppe/godef               <span class="c1"># 関数定義等の参照パッケージ</span>
-$ go get -u github.com/nsf/gocode                <span class="c1"># 補完パッケージ</span>
-$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs <span class="c1"># Go パッケージ</span>
-$ go get github.com/golang/lint/golint           <span class="c1"># flycheckでシンタックスエラーを検知</span>
-$ go get github.com/kisielk/errcheck             <span class="c1"># flycheckでシンタックスエラーを検知</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ go get github.com/rogpeppe/godef               <span class="c1"># 関数定義等の参照パッケージ</span>
+</span></span><span class="line"><span class="cl">$ go get -u github.com/nsf/gocode                <span class="c1"># 補完パッケージ</span>
+</span></span><span class="line"><span class="cl">$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs <span class="c1"># Go パッケージ</span>
+</span></span><span class="line"><span class="cl">$ go get github.com/golang/lint/golint           <span class="c1"># flycheckでシンタックスエラーを検知</span>
+</span></span><span class="line"><span class="cl">$ go get github.com/kisielk/errcheck             <span class="c1"># flycheckでシンタックスエラーを検知</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="emacs-go-package-のインストール">Emacs Go Package のインストール</h1>
 <p>Emacs のパッケージ管理は Cask を使っているものとする</p>
@@ -190,12 +190,12 @@ $ go get github.com/kisielk/errcheck             <span class="c1"># flycheckで�
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="o">(</span>depends-on <span class="s2">&#34;flymake-go&#34;</span><span class="o">)</span>
-<span class="o">(</span>depends-on <span class="s2">&#34;go-mode&#34;</span><span class="o">)</span>
-<span class="o">(</span>depends-on <span class="s2">&#34;company-go&#34;</span><span class="o">)</span>
-<span class="o">(</span>depends-on <span class="s2">&#34;go-eldoc&#34;</span><span class="o">)</span>
-<span class="o">(</span>depends-on <span class="s2">&#34;go-autocomplete&#34;</span><span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;flymake-go&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;go-mode&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;company-go&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;go-eldoc&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;go-autocomplete&#34;</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="elisp-の設定">Elisp の設定</h1>
 <div class="highlight"><div class="chroma">
@@ -219,24 +219,24 @@ $ go get github.com/kisielk/errcheck             <span class="c1"># flycheckで�
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="c1">;;</span>
-<span class="c1">;;================================================================</span>
-<span class="c1">;; Go</span>
-<span class="c1">;;================================================================</span>
-<span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;exec-path-from-shell&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;go-mode&#34;</span><span class="p">))</span>
-  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;exec-path-from-shell</span><span class="p">)</span>
-  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">envs</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;PATH&#34;</span> <span class="s">&#34;GOPATH&#34;</span><span class="p">)))</span>
-    <span class="p">(</span><span class="nv">exec-path-from-shell-copy-envs</span> <span class="nv">envs</span><span class="p">))</span>
-  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;go-autocomplete</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span>
-            <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
-              <span class="p">(</span><span class="nb">setq</span> <span class="nv">indent-tabs-mode</span> <span class="no">t</span><span class="p">)</span>
-              <span class="p">(</span><span class="nv">go-eldoc-setup</span><span class="p">)</span>
-              <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
-              <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
-              <span class="p">))</span>
-  <span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="c1">;;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;;================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; Go</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;;================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;exec-path-from-shell&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;go-mode&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;exec-path-from-shell</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">envs</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;PATH&#34;</span> <span class="s">&#34;GOPATH&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">exec-path-from-shell-copy-envs</span> <span class="nv">envs</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;go-autocomplete</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nb">setq</span> <span class="nv">indent-tabs-mode</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nv">go-eldoc-setup</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="参考サイト">参考サイト</h1>
 <ul>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/" />
@@ -165,26 +165,26 @@
 </span><span class="lnt">19
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s2">&#34;https://rubygems.org&#34;</span>
-<span class="n">ruby</span> <span class="s1">&#39;2.0.0&#39;</span>
-
-<span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
-<span class="n">gem</span> <span class="s1">&#39;haml&#39;</span>
-<span class="n">gem</span> <span class="s1">&#39;unicorn&#39;</span>
-<span class="n">gem</span> <span class="s1">&#39;pg&#39;</span>
-
-<span class="c1"># ActiveRecord</span>
-<span class="n">gem</span> <span class="s1">&#39;sinatra-activerecord&#39;</span>
-<span class="n">gem</span> <span class="s1">&#39;activerecord&#39;</span>
-
-<span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">&#39;rake&#39;</span>
-  <span class="n">gem</span> <span class="s1">&#39;sinatra-contrib&#39;</span>
-  <span class="c1"># Foreman</span>
-  <span class="c1"># To run the app from Procfile.</span>
-  <span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
-<span class="k">end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">source</span> <span class="s2">&#34;https://rubygems.org&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">ruby</span> <span class="s1">&#39;2.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;haml&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;unicorn&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;pg&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ActiveRecord</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;sinatra-activerecord&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;activerecord&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;rake&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;sinatra-contrib&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># Foreman</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># To run the app from Procfile.</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Gemfile ができたらおなじみの以下コマンドで gem をインストールします。</p>
 <pre><code>$ bundle install --path vendor/bundle --without production
@@ -198,9 +198,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;./main.rb&#39;</span>
-<span class="n">run</span> <span class="no">App</span><span class="o">.</span><span class="n">new</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;./main.rb&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">run</span> <span class="no">App</span><span class="o">.</span><span class="n">new</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -228,37 +228,37 @@
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;WEB_CONCURRENCY&#34;</span><span class="o">]</span> <span class="o">||</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">timeout</span> <span class="mi">15</span>
-<span class="n">preload_app</span> <span class="kp">true</span>
-
-<span class="n">before_fork</span> <span class="k">do</span> <span class="o">|</span><span class="n">server</span><span class="p">,</span> <span class="n">worker</span><span class="o">|</span>
-  <span class="no">Signal</span><span class="o">.</span><span class="n">trap</span> <span class="s1">&#39;TERM&#39;</span> <span class="k">do</span>
-    <span class="nb">puts</span> <span class="s1">&#39;Unicorn master intercepting TERM and sending myself QUIT instead&#39;</span>
-    <span class="no">Process</span><span class="o">.</span><span class="n">kill</span> <span class="s1">&#39;QUIT&#39;</span><span class="p">,</span> <span class="no">Process</span><span class="o">.</span><span class="n">pid</span>
-  <span class="k">end</span>
-
-  <span class="n">defined?</span><span class="p">(</span><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">)</span> <span class="ow">and</span>
-    <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">disconnect!</span>
-<span class="k">end</span>
-
-<span class="n">after_fork</span> <span class="k">do</span> <span class="o">|</span><span class="n">server</span><span class="p">,</span> <span class="n">worker</span><span class="o">|</span>
-  <span class="no">Signal</span><span class="o">.</span><span class="n">trap</span> <span class="s1">&#39;TERM&#39;</span> <span class="k">do</span>
-    <span class="nb">puts</span> <span class="s1">&#39;Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT&#39;</span>
-  <span class="k">end</span>
-
-  <span class="n">defined?</span><span class="p">(</span><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">)</span> <span class="ow">and</span>
-    <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">establish_connection</span>
-<span class="k">end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">worker_processes</span> <span class="nb">Integer</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s2">&#34;WEB_CONCURRENCY&#34;</span><span class="o">]</span> <span class="o">||</span> <span class="mi">3</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">timeout</span> <span class="mi">15</span>
+</span></span><span class="line"><span class="cl"><span class="n">preload_app</span> <span class="kp">true</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">before_fork</span> <span class="k">do</span> <span class="o">|</span><span class="n">server</span><span class="p">,</span> <span class="n">worker</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="no">Signal</span><span class="o">.</span><span class="n">trap</span> <span class="s1">&#39;TERM&#39;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s1">&#39;Unicorn master intercepting TERM and sending myself QUIT instead&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="no">Process</span><span class="o">.</span><span class="n">kill</span> <span class="s1">&#39;QUIT&#39;</span><span class="p">,</span> <span class="no">Process</span><span class="o">.</span><span class="n">pid</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">defined?</span><span class="p">(</span><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">)</span> <span class="ow">and</span>
+</span></span><span class="line"><span class="cl">    <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">connection</span><span class="o">.</span><span class="n">disconnect!</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">after_fork</span> <span class="k">do</span> <span class="o">|</span><span class="n">server</span><span class="p">,</span> <span class="n">worker</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">  <span class="no">Signal</span><span class="o">.</span><span class="n">trap</span> <span class="s1">&#39;TERM&#39;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="nb">puts</span> <span class="s1">&#39;Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="n">defined?</span><span class="p">(</span><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="p">)</span> <span class="ow">and</span>
+</span></span><span class="line"><span class="cl">    <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">establish_connection</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="ss">web</span><span class="p">:</span> <span class="n">bundle</span> <span class="nb">exec</span> <span class="n">unicorn</span> <span class="o">-</span><span class="nb">p</span> <span class="vg">$PORT</span> <span class="o">-</span><span class="n">c</span> <span class="o">.</span><span class="n">/</span><span class="n">config</span><span class="o">/</span><span class="n">unicorn</span><span class="o">.</span><span class="n">rb</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="ss">web</span><span class="p">:</span> <span class="n">bundle</span> <span class="nb">exec</span> <span class="n">unicorn</span> <span class="o">-</span><span class="nb">p</span> <span class="vg">$PORT</span> <span class="o">-</span><span class="n">c</span> <span class="o">.</span><span class="n">/</span><span class="n">config</span><span class="o">/</span><span class="n">unicorn</span><span class="o">.</span><span class="n">rb</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="ローカルで動作確認">ローカルで動作確認</h2>
 <p>ここで一度ローカルで動かしてみましょう。Sinatra のルートディレクトリにおいて <code>main.rb</code> などの名前でファイルを作成してみます。</p>
@@ -274,15 +274,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
-<span class="nb">require</span> <span class="s1">&#39;sinatra/base&#39;</span>
-
-<span class="k">class</span> <span class="nc">App</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
-  <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
-    <span class="s1">&#39;Hello, World!&#39;</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;sinatra&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;sinatra/base&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">App</span> <span class="o">&lt;</span> <span class="no">Sinatra</span><span class="o">::</span><span class="no">Base</span>
+</span></span><span class="line"><span class="cl">  <span class="n">get</span> <span class="s1">&#39;/&#39;</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;Hello, World!&#39;</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>foreman という gem で起動してみます。</p>
 <pre><code>$ bundle exec foreman start
@@ -308,9 +308,9 @@ $ git push heroku master
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="nb">require</span> <span class="s1">&#39;./main.rb&#39;</span>
-<span class="nb">require</span> <span class="s1">&#39;sinatra/activerecord/rake&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;./main.rb&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="nb">require</span> <span class="s1">&#39;sinatra/activerecord/rake&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>次にローカルでマイグレーションファイルを作成します。適当に users テーブルを作ることとします。</p>
 <pre><code>$ bundle exec rake db:create_migration NAME=&quot;create_users&quot;
@@ -331,18 +331,18 @@ $ git push heroku master
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="k">class</span> <span class="nc">CreateUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
-  <span class="k">def</span> <span class="nf">change</span>
-    <span class="n">create_table</span> <span class="ss">:users</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
-      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:registration_id</span>
-      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:name</span>
-      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:email</span>
-
-      <span class="n">t</span><span class="o">.</span><span class="n">timestamps</span>
-    <span class="k">end</span>
-  <span class="k">end</span>
-<span class="k">end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">CreateUsers</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+</span></span><span class="line"><span class="cl">  <span class="k">def</span> <span class="nf">change</span>
+</span></span><span class="line"><span class="cl">    <span class="n">create_table</span> <span class="ss">:users</span> <span class="k">do</span> <span class="o">|</span><span class="n">t</span><span class="o">|</span>
+</span></span><span class="line"><span class="cl">      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:registration_id</span>
+</span></span><span class="line"><span class="cl">      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:name</span>
+</span></span><span class="line"><span class="cl">      <span class="n">t</span><span class="o">.</span><span class="n">string</span> <span class="ss">:email</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="n">t</span><span class="o">.</span><span class="n">timestamps</span>
+</span></span><span class="line"><span class="cl">    <span class="k">end</span>
+</span></span><span class="line"><span class="cl">  <span class="k">end</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="データベースに接続">データベースに接続</h2>
 <p>この段階で <code>database.yml</code> に DB の接続情報を設定して作業したのですが、ローカルではうまくいくものの Heroku で動きませんでした。なので DB の接続情報を <code>main.rb</code> ではなく <code>models/ar.rb</code> というファイルに切り出すことにしました。<code>ar.rb</code> を以下のようにしましょう。</p>
@@ -354,11 +354,11 @@ $ git push heroku master
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">establish_connection</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;DATABASE_URL&#39;</span><span class="o">]</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">Ar</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
-<span class="k">end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span><span class="o">.</span><span class="n">establish_connection</span><span class="p">(</span><span class="no">ENV</span><span class="o">[</span><span class="s1">&#39;DATABASE_URL&#39;</span><span class="o">]</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">class</span> <span class="nc">Ar</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>ここでのポイントは DATABASE_URL です。Heroku はこの値に設定された URL をデータベース先として接続しにいきます。<code>$ heroku config</code> とすれば確認できます。
 またローカルで起動したときには DATABASE_URL はローカルの PostgreSQL に接続して欲しいですね。そのようにするためには <code>.env</code> ファイルを作成してそこに設定すればいいです。<code>.env</code> ファイルは <code>.gitignore</code> に追加しておきましょう。</p>
@@ -367,8 +367,8 @@ $ git push heroku master
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="no">DATABASE_URL</span><span class="o">=</span><span class="s1">&#39;postgresql://user_name:@localhost/db_name&#39;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="no">DATABASE_URL</span><span class="o">=</span><span class="s1">&#39;postgresql://user_name:@localhost/db_name&#39;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>マイグレーションファイルに従ってデータを作成します。</p>
 <pre><code>$ bundle exec rake db:migrate

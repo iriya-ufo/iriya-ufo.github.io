@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/" />
@@ -163,23 +163,23 @@ DB は PostgreSQL を使います。永続化に Volume を利用します。</p
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">RAILS_ROOT
-├── .dockerignore
-├── .env
-├── .gitignore
-├── Dockerfile
-├── Gemfile
-...
-├── Makefile
-├── README.md
-...
-├── config/
-│   ...
-│   ├── database.yml
-...
-├── docker-compose.yml
-...
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">RAILS_ROOT
+</span></span><span class="line"><span class="cl">├── .dockerignore
+</span></span><span class="line"><span class="cl">├── .env
+</span></span><span class="line"><span class="cl">├── .gitignore
+</span></span><span class="line"><span class="cl">├── Dockerfile
+</span></span><span class="line"><span class="cl">├── Gemfile
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">├── Makefile
+</span></span><span class="line"><span class="cl">├── README.md
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">├── config/
+</span></span><span class="line"><span class="cl">│   ...
+</span></span><span class="line"><span class="cl">│   ├── database.yml
+</span></span><span class="line"><span class="cl">...
+</span></span><span class="line"><span class="cl">├── docker-compose.yml
+</span></span><span class="line"><span class="cl">...
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="ファイルの中身">ファイルの中身</h2>
 <script type="text/javascript" src="https://gist.github.com/963f30e7ecd4704ad16358e68d34e394.js"></script>

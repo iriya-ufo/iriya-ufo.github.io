@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/12/rails-update/" />
@@ -173,16 +173,16 @@ Select gem to uninstall:
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff">$ diff app_test/Gemfile app_rails/Gemfile
-3c3
-&lt; gem &#39;rails&#39;, &#39;3.2.11&#39;
-<span class="gd">---
-</span><span class="gd"></span>&gt; gem &#39;rails&#39;, &#39;3.2.9&#39;
-18c18
-&lt;   # gem &#39;therubyracer&#39;, :platforms =&gt; :ruby
-<span class="gd">---
-</span><span class="gd"></span>&gt;   gem &#39;therubyracer&#39;, &#39;0.10.2&#39;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl">$ diff app_test/Gemfile app_rails/Gemfile
+</span></span><span class="line"><span class="cl">3c3
+</span></span><span class="line"><span class="cl">&lt; gem &#39;rails&#39;, &#39;3.2.11&#39;
+</span></span><span class="line"><span class="cl"><span class="gd">---
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span>&gt; gem &#39;rails&#39;, &#39;3.2.9&#39;
+</span></span><span class="line"><span class="cl">18c18
+</span></span><span class="line"><span class="cl">&lt;   # gem &#39;therubyracer&#39;, :platforms =&gt; :ruby
+</span></span><span class="line"><span class="cl"><span class="gd">---
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span>&gt;   gem &#39;therubyracer&#39;, &#39;0.10.2&#39;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="bundle-のアップデート">bundle のアップデート</h2>
 <pre><code>$ bundle update

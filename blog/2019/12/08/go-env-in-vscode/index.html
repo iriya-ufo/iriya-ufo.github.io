@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/" />
@@ -148,15 +148,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ mkdir <span class="nv">$HOME</span>/.go
-
-<span class="c1"># Add this line to ~/.zshrc</span>
-<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
-
-<span class="c1"># Install</span>
-brew install go
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir <span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add this line to ~/.zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install</span>
+</span></span><span class="line"><span class="cl">brew install go
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>バージョン確認</p>
 <div class="highlight"><div class="chroma">
@@ -165,9 +165,9 @@ brew install go
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ go version
-go version go1.13.4 darwin/amd64
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ go version
+</span></span><span class="line"><span class="cl">go version go1.13.4 darwin/amd64
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="repl-のインストール">REPL のインストール</h2>
 <div class="highlight"><div class="chroma">
@@ -182,15 +182,15 @@ go version go1.13.4 darwin/amd64
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>off go get -u github.com/motemen/gore/cmd/gore
-
-$ gore <span class="c1"># 確認</span>
-gore version 0.4.1  :help <span class="k">for</span> <span class="nb">help</span>
-gore&gt; fmt.Println<span class="o">(</span><span class="s2">&#34;hello&#34;</span><span class="o">)</span>
-hello
-<span class="m">6</span>
-&lt;nil&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">GO111MODULE</span><span class="o">=</span>off go get -u github.com/motemen/gore/cmd/gore
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ gore <span class="c1"># 確認</span>
+</span></span><span class="line"><span class="cl">gore version 0.4.1  :help <span class="k">for</span> <span class="nb">help</span>
+</span></span><span class="line"><span class="cl">gore&gt; fmt.Println<span class="o">(</span><span class="s2">&#34;hello&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">hello
+</span></span><span class="line"><span class="cl"><span class="m">6</span>
+</span></span><span class="line"><span class="cl">&lt;nil&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="go-package-のインストール">Go Package のインストール</h2>
 <div class="highlight"><div class="chroma">
@@ -205,15 +205,15 @@ hello
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># gopkgs is a tool that provides list of available Go packages that can be imported.</span>
-$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest
-
-<span class="c1"># Golint is a linter for Go source code.</span>
-$ go get -u golang.org/x/lint/golint
-
-<span class="c1"># errcheck is a program for checking for unchecked errors in go programs.</span>
-$ go get -u github.com/kisielk/errcheck
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># gopkgs is a tool that provides list of available Go packages that can be imported.</span>
+</span></span><span class="line"><span class="cl">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Golint is a linter for Go source code.</span>
+</span></span><span class="line"><span class="cl">$ go get -u golang.org/x/lint/golint
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># errcheck is a program for checking for unchecked errors in go programs.</span>
+</span></span><span class="line"><span class="cl">$ go get -u github.com/kisielk/errcheck
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="補完ツールのインストール">補完ツールのインストール</h2>
 <p>補完については <code>gocode</code> を <code>go get</code> してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。</p>
@@ -233,8 +233,8 @@ $ go get -u github.com/kisielk/errcheck
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get golang.org/x/tools/gopls@latest
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get golang.org/x/tools/gopls@latest
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>(cf. <a href="https://github.com/golang/tools/blob/master/gopls/doc/user.md">https://github.com/golang/tools/blob/master/gopls/doc/user.md</a>)</p>
 <h3 id="vscode-に-go-のプラグインをインストール">VSCode に Go のプラグインをインストール</h3>
@@ -275,37 +275,37 @@ $ go get -u github.com/kisielk/errcheck
 </span><span class="lnt">30
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-    <span class="nt">&#34;go.useLanguageServer&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;go.alternateTools&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;go-langserver&#34;</span><span class="p">:</span> <span class="s2">&#34;gopls&#34;</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;go.languageServerExperimentalFeatures&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;format&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;autoComplete&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;rename&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;goToDefinition&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;hover&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;signatureHelp&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;goToTypeDefinition&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;goToImplementation&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;documentSymbols&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;workspaceSymbols&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;findReferences&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;diagnostics&#34;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;[go]&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;editor.snippetSuggestions&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
-        <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
-            <span class="nt">&#34;source.organizeImports&#34;</span><span class="p">:</span> <span class="kc">true</span>
-        <span class="p">},</span>
-    <span class="p">},</span>
-    <span class="nt">&#34;gopls&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;usePlaceholders&#34;</span><span class="p">:</span> <span class="kc">false</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;go.useLanguageServer&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;go.alternateTools&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;go-langserver&#34;</span><span class="p">:</span> <span class="s2">&#34;gopls&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;go.languageServerExperimentalFeatures&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;format&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;autoComplete&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;rename&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;goToDefinition&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;hover&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;signatureHelp&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;goToTypeDefinition&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;goToImplementation&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;documentSymbols&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;workspaceSymbols&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;findReferences&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;diagnostics&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;[go]&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.snippetSuggestions&#34;</span><span class="p">:</span> <span class="s2">&#34;none&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nt">&#34;source.organizeImports&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;gopls&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;usePlaceholders&#34;</span><span class="p">:</span> <span class="kc">false</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>以上で補完が効くようになった。</p>
 

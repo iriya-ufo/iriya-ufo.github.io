@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/" />
@@ -254,50 +254,50 @@ $ vim ~/docker/rbenv-mysql/Dockerfile
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">FROM ubuntu:14.04
-MAINTAINER Naoto Inoue
-
-<span class="c1"># パッケージのインストールとアップデート</span>
-RUN apt-get update <span class="o">&amp;&amp;</span> apt-get -y upgrade
-RUN apt-get -y install build-essential
-RUN apt-get -y install git vim curl
-RUN apt-get install -y zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev
-
-<span class="c1"># rbenv のインストール</span>
-RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
-RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
-RUN ./root/.rbenv/plugins/ruby-build/install.sh
-ENV PATH /root/.rbenv/bin:<span class="nv">$PATH</span>
-RUN <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; /etc/profile.d/rbenv.sh
-RUN <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; .bashrc
-
-<span class="c1"># ruby のインストール</span>
-ENV CONFIGURE_OPTS --disable-install-doc
-ADD ./versions.txt /root/versions.txt
-RUN xargs -L <span class="m">1</span> rbenv install &lt; /root/versions.txt
-RUN <span class="nb">echo</span> <span class="s1">&#39;gem: --no-rdoc --no-ri&#39;</span> &gt;&gt; /.gemrc
-RUN bash -l -c <span class="s1">&#39;for v in $(cat /root/versions.txt); do rbenv global $v; gem install bundler; done&#39;</span>
-RUN rbenv global 1.9.2-p320
-
-<span class="c1"># mysql のインストール</span>
-RUN <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password_again password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
-</span><span class="se"></span>    apt-get -y install mysql-server
-RUN apt-get clean
-
-<span class="c1"># mysql の設定ファイル</span>
-ADD ./mysql-listen.cnf /etc/mysql/conf.d/mysql-listen.cnf
-ADD ./my.cnf /etc/mysql/my.cnf
-
-<span class="c1"># password なしでリモートから root でログインできるようにする</span>
-RUN <span class="o">(</span>/usr/bin/mysqld_safe <span class="p">&amp;</span><span class="o">)</span><span class="p">;</span> sleep 3<span class="p">;</span> <span class="nb">echo</span> <span class="s2">&#34;grant all privileges on *.* to root@&#39;%&#39;;&#34;</span> <span class="p">|</span> mysql -u root -proot
-
-<span class="c1"># ポート開放</span>
-EXPOSE <span class="m">3306</span>
-
-<span class="c1"># 起動オプション</span>
-CMD <span class="o">[</span><span class="s2">&#34;/usr/bin/mysqld_safe&#34;</span><span class="o">]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">FROM ubuntu:14.04
+</span></span><span class="line"><span class="cl">MAINTAINER Naoto Inoue
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># パッケージのインストールとアップデート</span>
+</span></span><span class="line"><span class="cl">RUN apt-get update <span class="o">&amp;&amp;</span> apt-get -y upgrade
+</span></span><span class="line"><span class="cl">RUN apt-get -y install build-essential
+</span></span><span class="line"><span class="cl">RUN apt-get -y install git vim curl
+</span></span><span class="line"><span class="cl">RUN apt-get install -y zlib1g-dev libssl-dev libreadline-dev libyaml-dev libxml2-dev libxslt-dev
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># rbenv のインストール</span>
+</span></span><span class="line"><span class="cl">RUN git clone https://github.com/sstephenson/rbenv.git /root/.rbenv
+</span></span><span class="line"><span class="cl">RUN git clone https://github.com/sstephenson/ruby-build.git /root/.rbenv/plugins/ruby-build
+</span></span><span class="line"><span class="cl">RUN ./root/.rbenv/plugins/ruby-build/install.sh
+</span></span><span class="line"><span class="cl">ENV PATH /root/.rbenv/bin:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl">RUN <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; /etc/profile.d/rbenv.sh
+</span></span><span class="line"><span class="cl">RUN <span class="nb">echo</span> <span class="s1">&#39;eval &#34;$(rbenv init -)&#34;&#39;</span> &gt;&gt; .bashrc
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ruby のインストール</span>
+</span></span><span class="line"><span class="cl">ENV CONFIGURE_OPTS --disable-install-doc
+</span></span><span class="line"><span class="cl">ADD ./versions.txt /root/versions.txt
+</span></span><span class="line"><span class="cl">RUN xargs -L <span class="m">1</span> rbenv install &lt; /root/versions.txt
+</span></span><span class="line"><span class="cl">RUN <span class="nb">echo</span> <span class="s1">&#39;gem: --no-rdoc --no-ri&#39;</span> &gt;&gt; /.gemrc
+</span></span><span class="line"><span class="cl">RUN bash -l -c <span class="s1">&#39;for v in $(cat /root/versions.txt); do rbenv global $v; gem install bundler; done&#39;</span>
+</span></span><span class="line"><span class="cl">RUN rbenv global 1.9.2-p320
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># mysql のインストール</span>
+</span></span><span class="line"><span class="cl">RUN <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password_again password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl"><span class="se"></span>    apt-get -y install mysql-server
+</span></span><span class="line"><span class="cl">RUN apt-get clean
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># mysql の設定ファイル</span>
+</span></span><span class="line"><span class="cl">ADD ./mysql-listen.cnf /etc/mysql/conf.d/mysql-listen.cnf
+</span></span><span class="line"><span class="cl">ADD ./my.cnf /etc/mysql/my.cnf
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># password なしでリモートから root でログインできるようにする</span>
+</span></span><span class="line"><span class="cl">RUN <span class="o">(</span>/usr/bin/mysqld_safe <span class="p">&amp;</span><span class="o">)</span><span class="p">;</span> sleep 3<span class="p">;</span> <span class="nb">echo</span> <span class="s2">&#34;grant all privileges on *.* to root@&#39;%&#39;;&#34;</span> <span class="p">|</span> mysql -u root -proot
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># ポート開放</span>
+</span></span><span class="line"><span class="cl">EXPOSE <span class="m">3306</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 起動オプション</span>
+</span></span><span class="line"><span class="cl">CMD <span class="o">[</span><span class="s2">&#34;/usr/bin/mysqld_safe&#34;</span><span class="o">]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Linux 触ったことある人なら何をやっているかはだいたい分かると思います。上記の <strong>ADD</strong> コマンドはファイルを Docker 側に渡す書き方です。同じディレクトリに <code>my.cnf</code>、<code>mysql-listen.cnf</code>、<code>versions.txt</code> のファイルを作っておきましょう。versions.txt にはインストールしたい Ruby のバージョンを書いておきます。</p>
 <p>Dockerfile ができたらビルドします。ビルドする際に <code>-t</code> オプションでイメージ名を決められるのですが、<code>&lt;アカウント名&gt;/&lt;パッケージ名&gt;</code> という形式が推奨されているようです。</p>

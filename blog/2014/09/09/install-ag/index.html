@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/09/09/install-ag/" />
@@ -154,20 +154,20 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">*~
-*.swp
-*.sql
-*.tags*
-*.tmp*
-*.old
-*.pdf
-*.log
-.git
-.svn
-jquery-*.js
-jquery.js
-zsh-completions
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">*~
+</span></span><span class="line"><span class="cl">*.swp
+</span></span><span class="line"><span class="cl">*.sql
+</span></span><span class="line"><span class="cl">*.tags*
+</span></span><span class="line"><span class="cl">*.tmp*
+</span></span><span class="line"><span class="cl">*.old
+</span></span><span class="line"><span class="cl">*.pdf
+</span></span><span class="line"><span class="cl">*.log
+</span></span><span class="line"><span class="cl">.git
+</span></span><span class="line"><span class="cl">.svn
+</span></span><span class="line"><span class="cl">jquery-*.js
+</span></span><span class="line"><span class="cl">jquery.js
+</span></span><span class="line"><span class="cl">zsh-completions
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="補完を有効にする">補完を有効にする</h2>
 <p>zsh を使ってるのが前提ですが、ag のオプションの補完ができるようにします。またこれを入れると ag に限らず便利な補完機能がもれなくついてきます。どのようなコマンドの補完があるかはインストールすれば分かります。とりあえず便利なので入れておいて損はない。</p>
@@ -181,10 +181,10 @@ zsh-completions
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="nv">fpath</span><span class="o">=(</span>~/.zsh/functions/Completion<span class="o">(</span>N-/<span class="o">)</span> /usr/local/share/zsh-completions /usr/local/share/zsh/functions <span class="si">${</span><span class="nv">fpath</span><span class="si">}</span><span class="o">)</span>
-autoload -U compinit
-compinit -u
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="nv">fpath</span><span class="o">=(</span>~/.zsh/functions/Completion<span class="o">(</span>N-/<span class="o">)</span> /usr/local/share/zsh-completions /usr/local/share/zsh/functions <span class="si">${</span><span class="nv">fpath</span><span class="si">}</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">autoload -U compinit
+</span></span><span class="line"><span class="cl">compinit -u
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>zcompdump をリビルドします。</p>
 <pre><code>$ rm -f ~/.zcompdump; compinit

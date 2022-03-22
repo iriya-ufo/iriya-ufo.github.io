@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/" />
@@ -166,36 +166,36 @@
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">Starting app_db_1 ... <span class="k">done</span>
-Creating app_web_1 ... <span class="k">done</span>
-Attaching to app_db_1, app_web_1
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.523451Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option <span class="o">(</span>see documentation <span class="k">for</span> more details<span class="o">)</span>.
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.524650Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld <span class="o">(</span>mysqld 5.7.24<span class="o">)</span> starting as process <span class="m">1</span> ...
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528223Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: PUNCH HOLE support available
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528319Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Mutexes and rw_locks use GCC atomic builtins
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528348Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Uses event mutexes
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">()</span> is used <span class="k">for</span> memory barrier
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528394Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Compressed tables use zlib 1.2.11
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528543Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using Linux native AIO
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.528969Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Number of pools: <span class="m">1</span>
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.529276Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using CPU crc32 instructions
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.530867Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Initializing buffer pool, total <span class="nv">size</span> <span class="o">=</span> 128M, <span class="nv">instances</span> <span class="o">=</span> 1, chunk <span class="nv">size</span> <span class="o">=</span> 128M
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.540619Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Completed initialization of buffer pool
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">()</span>.
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.554602Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Highest supported file format is Barracuda.
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.554769Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Unsupported redo log format. The redo log was created with MariaDB 10.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html
-db_1   <span class="p">|</span> 2019-01-09T01:57:45.554873Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Plugin initialization aborted with error Generic error
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160053Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> init <span class="k">function</span> returned error.
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160184Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> registration as a STORAGE ENGINE failed.
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160209Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Failed to initialize <span class="nb">builtin</span> plugins.
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160224Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Aborting
-db_1   <span class="p">|</span>
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160239Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Binlog end
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.160356Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Shutting down plugin <span class="s1">&#39;CSV&#39;</span>
-db_1   <span class="p">|</span> 2019-01-09T01:57:46.163497Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld: Shutdown <span class="nb">complete</span>
-db_1   <span class="p">|</span>
-app_db_1 exited with code <span class="m">1</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Starting app_db_1 ... <span class="k">done</span>
+</span></span><span class="line"><span class="cl">Creating app_web_1 ... <span class="k">done</span>
+</span></span><span class="line"><span class="cl">Attaching to app_db_1, app_web_1
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.523451Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option <span class="o">(</span>see documentation <span class="k">for</span> more details<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.524650Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld <span class="o">(</span>mysqld 5.7.24<span class="o">)</span> starting as process <span class="m">1</span> ...
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528223Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: PUNCH HOLE support available
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528319Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Mutexes and rw_locks use GCC atomic builtins
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528348Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Uses event mutexes
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">()</span> is used <span class="k">for</span> memory barrier
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528394Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Compressed tables use zlib 1.2.11
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528543Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using Linux native AIO
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528969Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Number of pools: <span class="m">1</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.529276Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using CPU crc32 instructions
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.530867Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Initializing buffer pool, total <span class="nv">size</span> <span class="o">=</span> 128M, <span class="nv">instances</span> <span class="o">=</span> 1, chunk <span class="nv">size</span> <span class="o">=</span> 128M
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.540619Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Completed initialization of buffer pool
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">()</span>.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.554602Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Highest supported file format is Barracuda.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.554769Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Unsupported redo log format. The redo log was created with MariaDB 10.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.554873Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Plugin initialization aborted with error Generic error
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160053Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> init <span class="k">function</span> returned error.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160184Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> registration as a STORAGE ENGINE failed.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160209Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Failed to initialize <span class="nb">builtin</span> plugins.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160224Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Aborting
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160239Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Binlog end
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160356Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Shutting down plugin <span class="s1">&#39;CSV&#39;</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.163497Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld: Shutdown <span class="nb">complete</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span>
+</span></span><span class="line"><span class="cl">app_db_1 exited with code <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>db のコンテナが起動に失敗しているようだが、エラー内容でググってもあまり有効な解決策に繋がらない。
 最終的に volume を削除して立ち上げて治すことで解決できた。</p>
@@ -208,12 +208,12 @@ app_db_1 exited with code <span class="m">1</span>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># Volume の一覧</span>
-$ docker volume ls
-
-<span class="c1"># Volume の削除</span>
-$ docker volume rm VOLUME_NAME
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># Volume の一覧</span>
+</span></span><span class="line"><span class="cl">$ docker volume ls
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Volume の削除</span>
+</span></span><span class="line"><span class="cl">$ docker volume rm VOLUME_NAME
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>なぜ volume 削除で治ったのかという原因なんだけども、おそらく <code>docker-compose.yml</code> を色々いじっていく過程で MySQL のバージョンを変更したためだと思われる。
 ここが解決の糸口になった。</p>
@@ -258,39 +258,39 @@ $ docker volume rm VOLUME_NAME
 </span><span class="lnt">32
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:5.7</span><span class="w">
-</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
-</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
-</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;dbdata:/var/lib/mysql&#34;</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;./resources/containers/mariadb:/etc/mysql/conf.d&#34;</span><span class="w">
-</span><span class="w">
-</span><span class="w">  </span><span class="nt">web</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
-</span><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">bundle exec rails s -p 3000 -b &#39;0.0.0.0&#39;</span><span class="w">
-</span><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
-</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="s2">&#34;3000:3000&#34;</span><span class="w">
-</span><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="l">.env</span><span class="w">
-</span><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span><span class="nt">RAILS_ENV</span><span class="p">:</span><span class="w"> </span><span class="l">development</span><span class="w">
-</span><span class="w">      </span><span class="nt">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mysql2://root:password@db:3306&#34;</span><span class="w">
-</span><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="l">db</span><span class="w">
-</span><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="l">.:/usr/src/app</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">dbdata</span><span class="p">:</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">db</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l">mysql:5.7</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">MYSQL_ROOT_PASSWORD</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;password&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;3306:3306&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;dbdata:/var/lib/mysql&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;./resources/containers/mariadb:/etc/mysql/conf.d&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">web</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">command</span><span class="p">:</span><span class="w"> </span><span class="l">bundle exec rails s -p 3000 -b &#39;0.0.0.0&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">tty</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">stdin_open</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="s2">&#34;3000:3000&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">env_file</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">.env</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">environment</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">RAILS_ENV</span><span class="p">:</span><span class="w"> </span><span class="l">development</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span><span class="nt">DATABASE_URL</span><span class="p">:</span><span class="w"> </span><span class="s2">&#34;mysql2://root:password@db:3306&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">depends_on</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">db</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="l">.:/usr/src/app</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">volumes</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">dbdata</span><span class="p">:</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

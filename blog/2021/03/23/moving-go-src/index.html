@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2021/03/23/moving-go-src/" />
@@ -146,8 +146,8 @@ $GOPATH は特段変更する必要がないのでそのままにしておきま
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ rm -rf <span class="nv">$GOPATH</span>/bin <span class="nv">$GOPATH</span>/pkg <span class="nv">$GOPATH</span>/src
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ rm -rf <span class="nv">$GOPATH</span>/bin <span class="nv">$GOPATH</span>/pkg <span class="nv">$GOPATH</span>/src
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>.gitconfig</code> の root 設定で <code>~/.go/src</code> を消します。</p>
 <div class="highlight"><div class="chroma">
@@ -157,10 +157,10 @@ $GOPATH は特段変更する必要がないのでそのままにしておきま
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"> [ghq]
-<span class="gd">-       root = /Users/iriya/.go/src
-</span><span class="gd"></span>        root = /Users/iriya/.ghq
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"> [ghq]
+</span></span><span class="line"><span class="cl"><span class="gd">-       root = /Users/iriya/.go/src
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span>        root = /Users/iriya/.ghq
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>運用方法としては Go のツールやライブラリなどが欲しいときは <code>go get</code> で取ってきて、ソースコードが欲しいときは <code>ghq get</code> で取ってくるようにしました。
 これでソースコードの管理は <code>~/.ghq</code> 配下に収まります。</p>

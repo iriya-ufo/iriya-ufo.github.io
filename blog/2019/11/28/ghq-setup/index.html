@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/11/28/ghq-setup/" />
@@ -157,9 +157,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>パッケージも通常通り <code>go get</code> で取ってくるようにします。</p>
 <h2 id="ghq-のインストール">ghq のインストール</h2>
@@ -168,8 +168,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ go get github.com/motemen/ghq
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get github.com/motemen/ghq
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Mac だと <code>brew install ghq</code> でも大丈夫です。</p>
 <h2 id="ghq-root-の設定">ghq root の設定</h2>
@@ -180,9 +180,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ git config --global --add ghq.root <span class="nv">$GOPATH</span>/src
-$ git config --global --add ghq.root <span class="nv">$HOME</span>/.ghq
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ git config --global --add ghq.root <span class="nv">$GOPATH</span>/src
+</span></span><span class="line"><span class="cl">$ git config --global --add ghq.root <span class="nv">$HOME</span>/.ghq
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>そうすると <code>~/.gitconfig</code> に以下が追記されているはずです。</p>
 <div class="highlight"><div class="chroma">
@@ -192,10 +192,10 @@ $ git config --global --add ghq.root <span class="nv">$HOME</span>/.ghq
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[ghq]
-       root = /Users/your-name/.go/src
-       root = /Users/your-name/.ghq
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[ghq]
+</span></span><span class="line"><span class="cl">       root = /Users/your-name/.go/src
+</span></span><span class="line"><span class="cl">       root = /Users/your-name/.ghq
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>これで ghq は <code>~/.ghq</code> と <code>~/.go</code> の両方が見えるようになります。後に書かれている方が優先されます。
 通常のリポジトリは <code>ghq get</code> で取ってきて Go のリポジトリは <code>go get</code> で取ってくるという使い分けをします。</p>

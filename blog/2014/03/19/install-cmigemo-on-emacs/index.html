@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/" />
@@ -149,13 +149,13 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; exec-path が GUI で正しく引き継がれない問題を解決</span>
-<span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">path-str</span>
-       <span class="p">(</span><span class="nv">replace-regexp-in-string</span>
-       <span class="s">&#34;\n+$&#34;</span> <span class="s">&#34;&#34;</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&#34;echo $PATH&#34;</span><span class="p">))))</span>
-  <span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;PATH&#34;</span> <span class="nv">path-str</span><span class="p">)</span>
-  <span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nf">nconc</span> <span class="p">(</span><span class="nv">split-string</span> <span class="nv">path-str</span> <span class="s">&#34;:&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)))</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;; exec-path が GUI で正しく引き継がれない問題を解決</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">let</span> <span class="p">((</span><span class="nv">path-str</span>
+</span></span><span class="line"><span class="cl">       <span class="p">(</span><span class="nv">replace-regexp-in-string</span>
+</span></span><span class="line"><span class="cl">       <span class="s">&#34;\n+$&#34;</span> <span class="s">&#34;&#34;</span> <span class="p">(</span><span class="nv">shell-command-to-string</span> <span class="s">&#34;echo $PATH&#34;</span><span class="p">))))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">setenv</span> <span class="s">&#34;PATH&#34;</span> <span class="nv">path-str</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="k">setq</span> <span class="nv">exec-path</span> <span class="p">(</span><span class="nf">nconc</span> <span class="p">(</span><span class="nv">split-string</span> <span class="nv">path-str</span> <span class="s">&#34;:&#34;</span><span class="p">)</span> <span class="nv">exec-path</span><span class="p">)))</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>cmigemo の設定です。</p>
 <div class="highlight"><div class="chroma">
@@ -180,25 +180,25 @@
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; cmigemo</span>
-<span class="c1">;; 日本語のインクリメンタル検索</span>
-<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;migemo</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-command</span> <span class="s">&#34;cmigemo&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-options</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;-q&#34;</span> <span class="s">&#34;--emacs&#34;</span><span class="p">))</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-dictionary</span> <span class="s">&#34;/usr/local/share/migemo/utf-8/migemo-dict&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-user-dictionary</span> <span class="no">nil</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-regex-dictionary</span> <span class="no">nil</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-coding-system</span> <span class="ss">&#39;utf-8-unix</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">load-library</span> <span class="s">&#34;migemo&#34;</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">migemo-init</span><span class="p">)</span>
-<span class="c1">;; IME の制御</span>
-<span class="c1">;; emacs 起動時は英数モードから始める</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;after-init-hook</span> <span class="ss">&#39;mac-change-language-to-us</span><span class="p">)</span>
-<span class="c1">;; minibuffer 内は英数モードにする</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;minibuffer-setup-hook</span> <span class="ss">&#39;mac-change-language-to-us</span><span class="p">)</span>
-<span class="c1">;; [migemo]isearch のとき IME を英数モードにする</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;isearch-mode-hook</span> <span class="ss">&#39;mac-change-language-to-us</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;; cmigemo</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; 日本語のインクリメンタル検索</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;migemo</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-command</span> <span class="s">&#34;cmigemo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-options</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;-q&#34;</span> <span class="s">&#34;--emacs&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-dictionary</span> <span class="s">&#34;/usr/local/share/migemo/utf-8/migemo-dict&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-user-dictionary</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-regex-dictionary</span> <span class="no">nil</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">migemo-coding-system</span> <span class="ss">&#39;utf-8-unix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">load-library</span> <span class="s">&#34;migemo&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">migemo-init</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; IME の制御</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; emacs 起動時は英数モードから始める</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;after-init-hook</span> <span class="ss">&#39;mac-change-language-to-us</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; minibuffer 内は英数モードにする</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;minibuffer-setup-hook</span> <span class="ss">&#39;mac-change-language-to-us</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; [migemo]isearch のとき IME を英数モードにする</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;isearch-mode-hook</span> <span class="ss">&#39;mac-change-language-to-us</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

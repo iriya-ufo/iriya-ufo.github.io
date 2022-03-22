@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/" />
@@ -172,20 +172,20 @@ $ svn co http://svn.clozure.com/publicsvn/openmcl/release/1.10/darwinx86/ccl
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;;====================================</span>
-<span class="c1">;; Common Lisp</span>
-<span class="c1">;;====================================</span>
-<span class="c1">;; デフォルト処理系の設定</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">inferior-lisp-program</span> <span class="s">&#34;/usr/local/ccl/dx86cl64&#34;</span><span class="p">)</span>
-<span class="c1">;; slime の設定</span>
-<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;slime</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">slime-setup</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">slime-repl</span> <span class="nv">slime-fancy</span> <span class="nv">slime-banner</span> <span class="nv">slime-indentation</span><span class="p">))</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">slime-net-coding-system</span> <span class="ss">&#39;utf-8-unix</span><span class="p">)</span>
-<span class="c1">;; slime の補完</span>
-<span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;ac-slime</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-repl-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;;====================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; Common Lisp</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;;====================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; デフォルト処理系の設定</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">inferior-lisp-program</span> <span class="s">&#34;/usr/local/ccl/dx86cl64&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; slime の設定</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;slime</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">slime-setup</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">slime-repl</span> <span class="nv">slime-fancy</span> <span class="nv">slime-banner</span> <span class="nv">slime-indentation</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">slime-net-coding-system</span> <span class="ss">&#39;utf-8-unix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; slime の補完</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;ac-slime</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-repl-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Emacs で開発するときは <code>M-x slime</code> として REPL を立ち上げて開発をしていきます。</p>
 
