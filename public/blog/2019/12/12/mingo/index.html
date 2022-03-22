@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/12/12/mingo/" />
@@ -146,8 +146,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ go get -u github.com/motemen/gore/cmd/gore
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get -u github.com/motemen/gore/cmd/gore
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>コードフォーマッター gofmt</strong></p>
 <p>Go には標準で <code>gofmt</code> というフォーマッターが付いている。
@@ -158,8 +158,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ gofmt -w main.go # -w オプション: 対象のファイルを整形後の内容で上書きする
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ gofmt -w main.go # -w オプション: 対象のファイルを整形後の内容で上書きする
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>lint ツール</strong></p>
 <p>Go には標準で lint ツールが付いている。</p>
@@ -173,8 +173,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ go get golang.org/x/tools/cmd/gorename
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get golang.org/x/tools/cmd/gorename
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>ソースコード解析ツール guru</strong></p>
 <div class="highlight"><div class="chroma">
@@ -182,8 +182,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ go get golang.org/x/tools/cmd/guru
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get golang.org/x/tools/cmd/guru
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>Language Server Protocol</strong></p>
 <div class="highlight"><div class="chroma">
@@ -191,8 +191,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ go get golang.org/x/tools/cmd/gopls
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get golang.org/x/tools/cmd/gopls
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>ディレクトリ名とパッケージ名</strong></p>
 <p>Go はディレクトリ単位でパッケージが切られる。</p>
@@ -222,11 +222,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">e.g.
-  tmp dir を作る
-  tmp dir にファイルを作る
-  tmp dir を削除する
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">e.g.
+</span></span><span class="line"><span class="cl">  tmp dir を作る
+</span></span><span class="line"><span class="cl">  tmp dir にファイルを作る
+</span></span><span class="line"><span class="cl">  tmp dir を削除する
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>このような場合、ファイルストリームを閉じてからディレクトリを消さなければいけない。
 Go では <code>defer</code> を使用すると呼び出したスコープを抜ける際に、呼び出された順番とは逆の順番で実行される。</p>
@@ -250,8 +250,8 @@ Go では <code>defer</code> を使用すると呼び出したスコープを抜
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ go get github.com/dustin/go-humanize
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get github.com/dustin/go-humanize
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="第4章-コマンドラインツールを作る-中島大一">第4章 コマンドラインツールを作る (中島大一)</h2>
 <p>コマンドラインツールを作る際のテクニックなど。</p>
@@ -270,13 +270,13 @@ Go では <code>defer</code> を使用すると呼び出したスコープを抜
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>           <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>      <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">lib</span><span class="o">/</span>
-    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
-    <span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">todo</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>           <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>      <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">lib</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">todo</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>ライブラリをメインとする場合のディレクトリ構成</li>
@@ -292,14 +292,14 @@ Go では <code>defer</code> を使用すると呼び出したスコープを抜
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>               <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>          <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
-<span class="p">|</span><span class="o">-</span> <span class="nx">cmd</span><span class="o">/</span>
-    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="o">/</span>
-        <span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
-        <span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>               <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>          <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">cmd</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">        <span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">        <span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>サブコマンドを持ったCLIツール</strong></p>
 <p>本書内ではサードパッケージについて、いくつか紹介していた。</p>

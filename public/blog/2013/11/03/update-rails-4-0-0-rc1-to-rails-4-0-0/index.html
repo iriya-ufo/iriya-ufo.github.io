@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/" />
@@ -164,18 +164,18 @@ $ gem i bundler
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="gd">-gem &#39;rails&#39;, &#39;4.0.0.rc1&#39;
-</span><span class="gd"></span><span class="gi">+gem &#39;rails&#39;, &#39;4.0.0&#39;
-</span><span class="gi"></span>
-<span class="gd">-gem &#39;sass-rails&#39;, &#39;~&gt; 4.0.0.rc1&#39;
-</span><span class="gd"></span><span class="gi">+gem &#39;sass-rails&#39;
-</span><span class="gi"></span>
-<span class="gd">-gem &#39;bootstrap-sass&#39;
-</span><span class="gd"></span><span class="gi">+gem &#39;bootstrap-sass&#39;, &#39;2.3.2.2&#39;
-</span><span class="gi"></span>
-<span class="gd">-gem &#39;jbuilder&#39;, &#39;~&gt; 1.0.1&#39;
-</span><span class="gd"></span><span class="gi">+gem &#39;jbuilder&#39;, &#39;1.0.2&#39;
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gd">-gem &#39;rails&#39;, &#39;4.0.0.rc1&#39;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+gem &#39;rails&#39;, &#39;4.0.0&#39;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>
+</span></span><span class="line"><span class="cl"><span class="gd">-gem &#39;sass-rails&#39;, &#39;~&gt; 4.0.0.rc1&#39;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+gem &#39;sass-rails&#39;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>
+</span></span><span class="line"><span class="cl"><span class="gd">-gem &#39;bootstrap-sass&#39;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+gem &#39;bootstrap-sass&#39;, &#39;2.3.2.2&#39;
+</span></span></span><span class="line"><span class="cl"><span class="gi"></span>
+</span></span><span class="line"><span class="cl"><span class="gd">-gem &#39;jbuilder&#39;, &#39;~&gt; 1.0.1&#39;
+</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gi">+gem &#39;jbuilder&#39;, &#39;1.0.2&#39;
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>$ bundle update</code> にて Rails をインストールして起動したらエラーメッセージがでました。</p>
 <pre><code>/Users/iriya/.rbenv/versions/2.0.0-p247/lib/ruby/site_ruby/2.0.0/rubygems.rb:286:in `bin_path': can't find gem rails ([&quot;&gt;= 0&quot;]) with executable rails (Gem::GemNotFoundException)

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/" />
@@ -195,8 +195,8 @@ SSH をセットアップしますか?	y キー (いいえ)
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[Instance: i-xxxxxxxx] Command failed on instance. Return code: 11 Output: (TRUNCATED)...ps://rubygems.org/... Fetching dependency metadata from https://rubygems.org/.. You need to install git to be able to use gems from git repositories. For help installing git, please refer to GitHub&#39;s tutorial at https://help.github.com/articles/set-up-git. Hook /opt/elasticbeanstalk/hooks/appdeploy/pre/10_bundle_install.sh failed. For more detail, check /var/log/eb-activity.log using console or EB CLI.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Instance: i-xxxxxxxx] Command failed on instance. Return code: 11 Output: (TRUNCATED)...ps://rubygems.org/... Fetching dependency metadata from https://rubygems.org/.. You need to install git to be able to use gems from git repositories. For help installing git, please refer to GitHub&#39;s tutorial at https://help.github.com/articles/set-up-git. Hook /opt/elasticbeanstalk/hooks/appdeploy/pre/10_bundle_install.sh failed. For more detail, check /var/log/eb-activity.log using console or EB CLI.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>gem を GitHub のリポジトリからダウンロードするなら git をインストールしろ、とある。
 <code>$ eb ssh</code> でインスタンスにログインして git をインストールしてもいいがそれではせっかくの Paas の利点が失われるので、設定ファイルを書いて対応する。</p>
@@ -209,10 +209,10 @@ SSH をセットアップしますか?	y キー (いいえ)
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">packages:
-  yum:
-    git: <span class="o">[]</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">packages:
+</span></span><span class="line"><span class="cl">  yum:
+</span></span><span class="line"><span class="cl">    git: <span class="o">[]</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -226,15 +226,15 @@ SSH をセットアップしますか?	y キー (いいえ)
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># Symlink the ondeck database.yml to database.yml.example</span>
-files:
-  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/appdeploy/pre/01a_symlink_database_yml.sh&#34;</span>:
-    mode: <span class="s2">&#34;000777&#34;</span>
-    content: <span class="p">|</span>
-      <span class="c1">#!/bin/bash</span>
-      <span class="nb">cd</span> /var/app/ondeck/config
-      ln -sf database.yml.example database.yml
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Symlink the ondeck database.yml to database.yml.example</span>
+</span></span><span class="line"><span class="cl">files:
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/appdeploy/pre/01a_symlink_database_yml.sh&#34;</span>:
+</span></span><span class="line"><span class="cl">    mode: <span class="s2">&#34;000777&#34;</span>
+</span></span><span class="line"><span class="cl">    content: <span class="p">|</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">#!/bin/bash</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">cd</span> /var/app/ondeck/config
+</span></span><span class="line"><span class="cl">      ln -sf database.yml.example database.yml
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -298,65 +298,65 @@ files:
 </span><span class="lnt">58
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">files:
-  <span class="s2">&#34;/etc/init.d/puma&#34;</span>:
-    mode: <span class="s2">&#34;000777&#34;</span>
-    content: <span class="p">|</span>
-      <span class="c1">#!/usr/bin/env bash</span>
-
-      . /opt/elasticbeanstalk/support/envvars.d/sysenv
-      <span class="nv">RAILS_ENV</span><span class="o">=</span>production
-
-      <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
-        start<span class="o">)</span>
-          /etc/init.d/passenger stop
-          <span class="nb">cd</span> /var/app/current
-          bundle <span class="nb">exec</span> puma -C config/puma.rb
-        <span class="p">;;</span>
-        stop<span class="o">)</span>
-          <span class="k">if</span> <span class="o">[</span> -f /var/app/support/pids/puma.pid <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
-            <span class="nb">kill</span> -TERM <span class="sb">`</span>cat /var/app/support/pids/puma.pid<span class="sb">`</span>
-            rm -rf /var/app/support/pids/puma.pid
-          <span class="k">fi</span>
-        <span class="p">;;</span>
-        *<span class="o">)</span>
-          <span class="nb">echo</span> <span class="s2">&#34;puma [start|stop]&#34;</span>
-          <span class="nb">exit</span> <span class="m">1</span>
-        <span class="p">;;</span>
-      <span class="k">esac</span>
-      <span class="nb">exit</span> <span class="m">0</span>
-
-  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/preinit/26_puma_start.sh&#34;</span>:
-    mode: <span class="s2">&#34;000777&#34;</span>
-    content: <span class="p">|</span>
-      /etc/init.d/puma start
-
-  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/restartappserver/enact/01_restart.sh&#34;</span>:
-    mode: <span class="s2">&#34;000777&#34;</span>
-    content: <span class="p">|</span>
-      /etc/init.d/puma stop
-      /etc/init.d/puma start
-
-  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/configdeploy/enact/99_reload_app_server.sh&#34;</span>:
-    mode: <span class="s2">&#34;000777&#34;</span>
-    content: <span class="p">|</span>
-      /etc/init.d/puma stop
-      /etc/init.d/puma start
-
-  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/appdeploy/enact/99_reload_app_server.sh&#34;</span>:
-    mode: <span class="s2">&#34;000777&#34;</span>
-    content: <span class="p">|</span>
-      /etc/init.d/puma stop
-      /etc/init.d/puma start
-
-commands:
-  remove_25_passenger:
-    command: <span class="s2">&#34;rm -f /opt/elasticbeanstalk/hooks/preinit/25_passenger.sh&#34;</span>
-    ignoreErrors: <span class="nb">true</span>
-  remove_26_passenger_start:
-    command: <span class="s2">&#34;rm -f /opt/elasticbeanstalk/hooks/preinit/26_passenger_start.sh&#34;</span>
-    ignoreErrors: <span class="nb">true</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">files:
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;/etc/init.d/puma&#34;</span>:
+</span></span><span class="line"><span class="cl">    mode: <span class="s2">&#34;000777&#34;</span>
+</span></span><span class="line"><span class="cl">    content: <span class="p">|</span>
+</span></span><span class="line"><span class="cl">      <span class="c1">#!/usr/bin/env bash</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      . /opt/elasticbeanstalk/support/envvars.d/sysenv
+</span></span><span class="line"><span class="cl">      <span class="nv">RAILS_ENV</span><span class="o">=</span>production
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">      <span class="k">case</span> <span class="s2">&#34;</span><span class="nv">$1</span><span class="s2">&#34;</span> in
+</span></span><span class="line"><span class="cl">        start<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          /etc/init.d/passenger stop
+</span></span><span class="line"><span class="cl">          <span class="nb">cd</span> /var/app/current
+</span></span><span class="line"><span class="cl">          bundle <span class="nb">exec</span> puma -C config/puma.rb
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        stop<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          <span class="k">if</span> <span class="o">[</span> -f /var/app/support/pids/puma.pid <span class="o">]</span><span class="p">;</span> <span class="k">then</span>
+</span></span><span class="line"><span class="cl">            <span class="nb">kill</span> -TERM <span class="sb">`</span>cat /var/app/support/pids/puma.pid<span class="sb">`</span>
+</span></span><span class="line"><span class="cl">            rm -rf /var/app/support/pids/puma.pid
+</span></span><span class="line"><span class="cl">          <span class="k">fi</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">        *<span class="o">)</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">echo</span> <span class="s2">&#34;puma [start|stop]&#34;</span>
+</span></span><span class="line"><span class="cl">          <span class="nb">exit</span> <span class="m">1</span>
+</span></span><span class="line"><span class="cl">        <span class="p">;;</span>
+</span></span><span class="line"><span class="cl">      <span class="k">esac</span>
+</span></span><span class="line"><span class="cl">      <span class="nb">exit</span> <span class="m">0</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/preinit/26_puma_start.sh&#34;</span>:
+</span></span><span class="line"><span class="cl">    mode: <span class="s2">&#34;000777&#34;</span>
+</span></span><span class="line"><span class="cl">    content: <span class="p">|</span>
+</span></span><span class="line"><span class="cl">      /etc/init.d/puma start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/restartappserver/enact/01_restart.sh&#34;</span>:
+</span></span><span class="line"><span class="cl">    mode: <span class="s2">&#34;000777&#34;</span>
+</span></span><span class="line"><span class="cl">    content: <span class="p">|</span>
+</span></span><span class="line"><span class="cl">      /etc/init.d/puma stop
+</span></span><span class="line"><span class="cl">      /etc/init.d/puma start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/configdeploy/enact/99_reload_app_server.sh&#34;</span>:
+</span></span><span class="line"><span class="cl">    mode: <span class="s2">&#34;000777&#34;</span>
+</span></span><span class="line"><span class="cl">    content: <span class="p">|</span>
+</span></span><span class="line"><span class="cl">      /etc/init.d/puma stop
+</span></span><span class="line"><span class="cl">      /etc/init.d/puma start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="s2">&#34;/opt/elasticbeanstalk/hooks/appdeploy/enact/99_reload_app_server.sh&#34;</span>:
+</span></span><span class="line"><span class="cl">    mode: <span class="s2">&#34;000777&#34;</span>
+</span></span><span class="line"><span class="cl">    content: <span class="p">|</span>
+</span></span><span class="line"><span class="cl">      /etc/init.d/puma stop
+</span></span><span class="line"><span class="cl">      /etc/init.d/puma start
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">commands:
+</span></span><span class="line"><span class="cl">  remove_25_passenger:
+</span></span><span class="line"><span class="cl">    command: <span class="s2">&#34;rm -f /opt/elasticbeanstalk/hooks/preinit/25_passenger.sh&#34;</span>
+</span></span><span class="line"><span class="cl">    ignoreErrors: <span class="nb">true</span>
+</span></span><span class="line"><span class="cl">  remove_26_passenger_start:
+</span></span><span class="line"><span class="cl">    command: <span class="s2">&#34;rm -f /opt/elasticbeanstalk/hooks/preinit/26_passenger_start.sh&#34;</span>
+</span></span><span class="line"><span class="cl">    ignoreErrors: <span class="nb">true</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

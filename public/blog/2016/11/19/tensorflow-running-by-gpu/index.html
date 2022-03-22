@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" />
@@ -153,8 +153,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ sudo apt-get install nvidia-cuda-toolkit
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ sudo apt-get install nvidia-cuda-toolkit
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="cudnn-インストール">cuDNN インストール</h3>
 <p><a href="https://developer.nvidia.com/cudnn">https://developer.nvidia.com/cudnn</a> からユーザー登録をしてライブラリをダウンロードする。</p>
@@ -167,12 +167,12 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ tar xfzv cudnn-8.0-linux-x64-v5.1.tgz
-$ cd cuda
-$ sudo cp lib64/* /usr/lib/x86_64-linux-gnu
-$ sudo cp include/cudnn.h /usr/include
-$ sudo chmod a+r /usr/lib/x86_64-linux-gnu/libcudnn*
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ tar xfzv cudnn-8.0-linux-x64-v5.1.tgz
+</span></span><span class="line"><span class="cl">$ cd cuda
+</span></span><span class="line"><span class="cl">$ sudo cp lib64/* /usr/lib/x86_64-linux-gnu
+</span></span><span class="line"><span class="cl">$ sudo cp include/cudnn.h /usr/include
+</span></span><span class="line"><span class="cl">$ sudo chmod a+r /usr/lib/x86_64-linux-gnu/libcudnn*
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="nvidia-docker-インストール">NVIDIA Docker インストール</h3>
 <div class="highlight"><div class="chroma">
@@ -185,13 +185,13 @@ $ sudo chmod a+r /usr/lib/x86_64-linux-gnu/libcudnn*
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># Install nvidia-docker and nvidia-docker-plugin
-$ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
-$ sudo dpkg -i /tmp/nvidia-docker*.deb &amp;&amp; rm /tmp/nvidia-docker*.deb
-
-# Test nvidia-smi
-$ nvidia-docker run --rm nvidia/cuda nvidia-smi
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Install nvidia-docker and nvidia-docker-plugin
+</span></span><span class="line"><span class="cl">$ wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
+</span></span><span class="line"><span class="cl">$ sudo dpkg -i /tmp/nvidia-docker*.deb &amp;&amp; rm /tmp/nvidia-docker*.deb
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Test nvidia-smi
+</span></span><span class="line"><span class="cl">$ nvidia-docker run --rm nvidia/cuda nvidia-smi
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>認識できているようだ。</p>
 <p><img src="https://i.gyazo.com/91166d8447efd8d74b646c7fd33d3844.png" alt="nvidia-docker"></p>
@@ -205,8 +205,8 @@ $ nvidia-docker run --rm nvidia/cuda nvidia-smi
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ nvidia-docker run -it -p 8888:8888 gcr.io/tensorflow/tensorflow:latest-gpu
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Jupyter Notebook が起動するので <code>http://ホストIPアドレス:8888/</code> にアクセスしてみる。</p>
 <p><img src="https://i.gyazo.com/dd4f9bcc4d7af38aba37d45439ea30b5.png" alt="jupyter_tensorflow"></p>

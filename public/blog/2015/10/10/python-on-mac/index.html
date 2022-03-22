@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/10/10/python-on-mac/" />
@@ -141,10 +141,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ brew install pyenv
-$ pyenv -v
-pyenv 1.2.18
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ brew install pyenv
+</span></span><span class="line"><span class="cl">$ pyenv -v
+</span></span><span class="line"><span class="cl">pyenv 1.2.18
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>PATH を通す。</p>
 <div class="highlight"><div class="chroma">
@@ -154,10 +154,10 @@ pyenv 1.2.18
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc
-echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
-echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc
+</span></span><span class="line"><span class="cl">echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
+</span></span><span class="line"><span class="cl">echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="python-のインストール">Python のインストール</h3>
 <div class="highlight"><div class="chroma">
@@ -168,11 +168,11 @@ echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ pyenv install --list # インストール可能なバージョンの表示
-$ pyenv install 3.8.2  # Python のインストール
-$ pyenv versions       # インストール済み一覧
-$ pyenv global 3.8.2   # 標準で使う設定
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pyenv install --list # インストール可能なバージョンの表示
+</span></span><span class="line"><span class="cl">$ pyenv install 3.8.2  # Python のインストール
+</span></span><span class="line"><span class="cl">$ pyenv versions       # インストール済み一覧
+</span></span><span class="line"><span class="cl">$ pyenv global 3.8.2   # 標準で使う設定
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="pipenv-のインストール">pipenv のインストール</h3>
 <p>pipenv を使ってパッケージの管理を行う。</p>
@@ -181,8 +181,8 @@ $ pyenv global 3.8.2   # 標準で使う設定
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ pip install pipenv
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pip install pipenv
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="プロジェクト単位でパッケージを管理する">プロジェクト単位でパッケージを管理する</h3>
 <p>プロジェクトディレクトリに移動して初期化する。</p>
@@ -192,9 +192,9 @@ $ pyenv global 3.8.2   # 標準で使う設定
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cd FOO_BAR
-$ pipenv --python 3.8
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd FOO_BAR
+</span></span><span class="line"><span class="cl">$ pipenv --python 3.8
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上記コマンドにより <code>Pipfile</code> が作成される。</p>
 <div class="highlight"><div class="chroma">
@@ -213,19 +213,19 @@ $ pipenv --python 3.8
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ cat Pipfile
-[[source]]
-name = &#34;pypi&#34;
-url = &#34;https://pypi.org/simple&#34;
-verify_ssl = true
-
-[dev-packages]
-
-[packages]
-
-[requires]
-python_version = &#34;3.8&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cat Pipfile
+</span></span><span class="line"><span class="cl">[[source]]
+</span></span><span class="line"><span class="cl">name = &#34;pypi&#34;
+</span></span><span class="line"><span class="cl">url = &#34;https://pypi.org/simple&#34;
+</span></span><span class="line"><span class="cl">verify_ssl = true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[dev-packages]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[packages]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[requires]
+</span></span><span class="line"><span class="cl">python_version = &#34;3.8&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>任意のパッケージをインストールする。パッケージをインストールすると <code>Pipfile.lock</code> が作成される (もし無ければ)</p>
 <div class="highlight"><div class="chroma">
@@ -233,8 +233,8 @@ python_version = &#34;3.8&#34;
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ pipenv install [any_package]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pipenv install [any_package]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>Pipfile.lock</code> がある状態であれば <code>pipenv install</code> とすると lock ファイルの内容がインストールされる。
 複数人での開発では <code>Pipfile.lock</code> をコミットしておく。</p>
@@ -244,8 +244,8 @@ python_version = &#34;3.8&#34;
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ pipenv install -r ./requirements.txt
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pipenv install -r ./requirements.txt
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>pipenv</code> でインストールしたパッケージは <code>$HOME/.local/share/virtualenvs/python-U6J_gNZf/lib/</code> に配置される。
 この領域を仮想環境と呼んでいる。プロジェクト配下からこの仮想環境を利用するには以下のようにする。</p>
@@ -256,10 +256,10 @@ python_version = &#34;3.8&#34;
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ pipenv shell # 仮想環境を有効にする
-$ exit         # 仮想環境から出る
-$ pipenv --rm  # 仮想環境を削除する
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pipenv shell # 仮想環境を有効にする
+</span></span><span class="line"><span class="cl">$ exit         # 仮想環境から出る
+</span></span><span class="line"><span class="cl">$ pipenv --rm  # 仮想環境を削除する
+</span></span></code></pre></td></tr></table>
 </div>
 </div><hr>
 <h1 id="-下記は古い内容となっているので参考にしないこと">!! 下記は古い内容となっているので参考にしないこと</h1>

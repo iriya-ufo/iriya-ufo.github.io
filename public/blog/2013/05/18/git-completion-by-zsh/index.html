@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/" />
@@ -164,15 +164,15 @@ $ brew cleanup  # 古い Formula の削除
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="c1"># VCS Setting</span>
-autoload -Uz vcs_info
-precmd <span class="o">()</span> <span class="o">{</span>
-    <span class="nv">psvar</span><span class="o">=()</span>
-    <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8 vcs_info
-    <span class="o">[[</span> -n <span class="s2">&#34;</span><span class="nv">$vcs_info_msg_0_</span><span class="s2">&#34;</span> <span class="o">]]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> psvar<span class="o">[</span>1<span class="o">]=</span><span class="s2">&#34;</span><span class="nv">$vcs_info_msg_0_</span><span class="s2">&#34;</span>
-<span class="o">}</span>
-<span class="nv">RPROMPT</span><span class="o">=</span><span class="s2">&#34;%1(v|%F{green}%1v%f|)&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># VCS Setting</span>
+</span></span><span class="line"><span class="cl">autoload -Uz vcs_info
+</span></span><span class="line"><span class="cl">precmd <span class="o">()</span> <span class="o">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">psvar</span><span class="o">=()</span>
+</span></span><span class="line"><span class="cl">    <span class="nv">LANG</span><span class="o">=</span>en_US.UTF-8 vcs_info
+</span></span><span class="line"><span class="cl">    <span class="o">[[</span> -n <span class="s2">&#34;</span><span class="nv">$vcs_info_msg_0_</span><span class="s2">&#34;</span> <span class="o">]]</span> <span class="p">&amp;</span>amp<span class="p">;&amp;</span>amp<span class="p">;</span> psvar<span class="o">[</span>1<span class="o">]=</span><span class="s2">&#34;</span><span class="nv">$vcs_info_msg_0_</span><span class="s2">&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="o">}</span>
+</span></span><span class="line"><span class="cl"><span class="nv">RPROMPT</span><span class="o">=</span><span class="s2">&#34;%1(v|%F{green}%1v%f|)&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="参考">参考</h3>
 <ul>

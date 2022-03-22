@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/" />
@@ -142,10 +142,10 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm uninstall jest @types/jest eslint-plugin-jest
-$ npm uninstall @testing-library/<span class="o">{</span>react,jest-dom,user-event<span class="o">}</span>
-$ npm uninstall @babel/preset-<span class="o">{</span>react,typescript,env<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm uninstall jest @types/jest eslint-plugin-jest
+</span></span><span class="line"><span class="cl">$ npm uninstall @testing-library/<span class="o">{</span>react,jest-dom,user-event<span class="o">}</span>
+</span></span><span class="line"><span class="cl">$ npm uninstall @babel/preset-<span class="o">{</span>react,typescript,env<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>設定ファイル系も削除します。</p>
 <div class="highlight"><div class="chroma">
@@ -155,10 +155,10 @@ $ npm uninstall @babel/preset-<span class="o">{</span>react,typescript,env<span 
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ rm jest.setup.ts
-$ rm jest.config.js
-$ rm babel.config.js
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rm jest.setup.ts
+</span></span><span class="line"><span class="cl">$ rm jest.config.js
+</span></span><span class="line"><span class="cl">$ rm babel.config.js
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>.eslintrc.json</code> を編集します。</p>
 <div class="highlight"><div class="chroma">
@@ -194,36 +194,36 @@ $ rm babel.config.js
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">---</span> <span class="err">a/.eslintrc.json</span>
-<span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
-<span class="err">@@</span> <span class="mi">-4</span><span class="err">,</span><span class="mi">8</span> <span class="err">+</span><span class="mi">4</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
-     <span class="s2">&#34;es6&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-     <span class="s2">&#34;node&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-     <span class="s2">&#34;browser&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-<span class="err">-</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-<span class="err">-</span>    <span class="s2">&#34;jest/globals&#34;</span><span class="err">:</span> <span class="kc">true</span>
-<span class="err">+</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span>
-   <span class="err">},</span>
-   <span class="c1">// パーサー
-</span><span class="c1"></span>   <span class="s2">&#34;parser&#34;</span><span class="err">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="err">,</span>
-<span class="err">@@</span> <span class="mi">-24</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">23</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
-       <span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;detect&#34;</span>
-     <span class="err">}</span>
-   <span class="err">},</span>
-<span class="err">-</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">,</span> <span class="s2">&#34;jest&#34;</span><span class="p">]</span><span class="err">,</span>
-<span class="err">+</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">]</span><span class="err">,</span>
-   <span class="c1">// 基本的にルールは recommended に従う
-</span><span class="c1"></span>   <span class="c1">// prettier は配列の最後尾に書く
-</span><span class="c1"></span>   <span class="s2">&#34;extends&#34;</span><span class="err">:</span> <span class="p">[</span>
-<span class="err">@@</span> <span class="mi">-33</span><span class="p">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">32</span><span class="p">,</span><span class="mi">6</span> <span class="err">@@</span>
-     <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
-     <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
-     <span class="s2">&#34;plugin:react-hooks/recommended&#34;</span><span class="p">,</span>
-<span class="err">-</span>    <span class="s2">&#34;plugin:jest/recommended&#34;</span><span class="p">,</span>
-     <span class="s2">&#34;prettier&#34;</span>
-   <span class="p">]</span><span class="err">,</span>
-   <span class="s2">&#34;rules&#34;</span><span class="err">:</span> <span class="p">{</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-4</span><span class="err">,</span><span class="mi">8</span> <span class="err">+</span><span class="mi">4</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;es6&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;node&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;browser&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;jest/globals&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// パーサー
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;parser&#34;</span><span class="err">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-24</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">23</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">       <span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;detect&#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="err">}</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">,</span> <span class="s2">&#34;jest&#34;</span><span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// 基本的にルールは recommended に従う
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="c1">// prettier は配列の最後尾に書く
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;extends&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-33</span><span class="p">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">32</span><span class="p">,</span><span class="mi">6</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:react-hooks/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;plugin:jest/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;rules&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>package.json</code> から <code>test</code> を削除します。</p>
 <div class="highlight"><div class="chroma">
@@ -242,19 +242,19 @@ $ rm babel.config.js
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">---</span> <span class="err">a/package.json</span>
-<span class="err">+++</span> <span class="err">b/package.json</span>
-<span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">8</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
-     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
-     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
-     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
-<span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
-<span class="err">-</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;jest&#34;</span>
-<span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
-   <span class="err">},</span>
-   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
-     <span class="nt">&#34;@emotion/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.7.1&#34;</span><span class="p">,</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">8</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;jest&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;@emotion/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.7.1&#34;</span><span class="p">,</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>emotion の testing utilities をアンインストールします。</p>
 <div class="highlight"><div class="chroma">
@@ -262,8 +262,8 @@ $ rm babel.config.js
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm uninstall @emotion/jest
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm uninstall @emotion/jest
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>これで綺麗に消えました。</p>
 <h2 id="vitest">Vitest</h2>
@@ -273,8 +273,8 @@ $ rm babel.config.js
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm i -D vitest c8
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm i -D vitest c8
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>.gitignore</code> に以下を追加します。</p>
 <div class="highlight"><div class="chroma">
@@ -282,8 +282,8 @@ $ rm babel.config.js
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">coverage
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">coverage
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>package.json</code> を編集します。</p>
 <div class="highlight"><div class="chroma">
@@ -303,20 +303,20 @@ $ rm babel.config.js
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">---</span> <span class="err">a/package.json</span>
-<span class="err">+++</span> <span class="err">b/package.json</span>
-<span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">9</span> <span class="err">@@</span>
-     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
-     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
-     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
-<span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
-<span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
-<span class="err">+</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;vitest&#34;</span><span class="err">,</span>
-<span class="err">+</span>    <span class="s2">&#34;coverage&#34;</span><span class="err">:</span> <span class="s2">&#34;vitest --coverage&#34;</span>
-   <span class="err">},</span>
-   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
-     <span class="nt">&#34;@emotion/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.7.1&#34;</span><span class="p">,</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">9</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;vitest&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;coverage&#34;</span><span class="err">:</span> <span class="s2">&#34;vitest --coverage&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;@emotion/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.7.1&#34;</span><span class="p">,</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>以上となります。</p>
 

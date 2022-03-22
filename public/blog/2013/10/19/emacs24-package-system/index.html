@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/10/19/emacs24-package-system/" />
@@ -144,11 +144,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;http://melpa.milkbox.net/packages/&#34;</span><span class="p">)</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;marmalade&#34;</span> <span class="o">.</span> <span class="s">&#34;http://marmalade-repo.org/packages/&#34;</span><span class="p">))</span>
-<span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;package</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;melpa&#34;</span> <span class="o">.</span> <span class="s">&#34;http://melpa.milkbox.net/packages/&#34;</span><span class="p">)</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-to-list</span> <span class="ss">&#39;package-archives</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;marmalade&#34;</span> <span class="o">.</span> <span class="s">&#34;http://marmalade-repo.org/packages/&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">package-initialize</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="パッケージのインストール">パッケージのインストール</h2>
 <p><code>M-x list-packages</code> でインストールできるパッケージの一覧がでます。

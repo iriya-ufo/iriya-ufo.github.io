@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/" />
@@ -147,15 +147,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ which yarn
-/usr/local/bin/yarn
-$ which node
-/usr/local/bin/node
-$ which npm <span class="c1"># npm 自体は node のインストールで自動的に入ってくる</span>
-/usr/local/bin/npm
-$ which n <span class="c1"># 昔 n を入れてた気がしたがそんなことはなかった</span>
-n not found
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ which yarn
+</span></span><span class="line"><span class="cl">/usr/local/bin/yarn
+</span></span><span class="line"><span class="cl">$ which node
+</span></span><span class="line"><span class="cl">/usr/local/bin/node
+</span></span><span class="line"><span class="cl">$ which npm <span class="c1"># npm 自体は node のインストールで自動的に入ってくる</span>
+</span></span><span class="line"><span class="cl">/usr/local/bin/npm
+</span></span><span class="line"><span class="cl">$ which n <span class="c1"># 昔 n を入れてた気がしたがそんなことはなかった</span>
+</span></span><span class="line"><span class="cl">n not found
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>消していく。</p>
 <div class="highlight"><div class="chroma">
@@ -168,13 +168,13 @@ n not found
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ npm uninstall npm -g <span class="c1"># node の削除の前にこれをやる</span>
-$ rm -rf ~/.npm
-$ brew uninstall yarn
-Uninstalling /usr/local/Cellar/yarn/1.22.0... <span class="o">(</span><span class="m">14</span> files, 5MB<span class="o">)</span>
-$ brew uninstall node
-Uninstalling /usr/local/Cellar/node/13.8.0... <span class="o">(</span>4,686 files, 60.2MB<span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ npm uninstall npm -g <span class="c1"># node の削除の前にこれをやる</span>
+</span></span><span class="line"><span class="cl">$ rm -rf ~/.npm
+</span></span><span class="line"><span class="cl">$ brew uninstall yarn
+</span></span><span class="line"><span class="cl">Uninstalling /usr/local/Cellar/yarn/1.22.0... <span class="o">(</span><span class="m">14</span> files, 5MB<span class="o">)</span>
+</span></span><span class="line"><span class="cl">$ brew uninstall node
+</span></span><span class="line"><span class="cl">Uninstalling /usr/local/Cellar/node/13.8.0... <span class="o">(</span>4,686 files, 60.2MB<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>消えた。</p>
 <div class="highlight"><div class="chroma">
@@ -187,13 +187,13 @@ Uninstalling /usr/local/Cellar/node/13.8.0... <span class="o">(</span>4,686 file
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ which yarn
-yarn not found
-$ which node
-node not found
-$ which npm
-npm not found
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ which yarn
+</span></span><span class="line"><span class="cl">yarn not found
+</span></span><span class="line"><span class="cl">$ which node
+</span></span><span class="line"><span class="cl">node not found
+</span></span><span class="line"><span class="cl">$ which npm
+</span></span><span class="line"><span class="cl">npm not found
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="nodenv-インストール">nodenv インストール</h2>
 <p><a href="https://github.com/nodenv/nodenv">公式サイト</a>の通りに進めていく。</p>
@@ -202,8 +202,8 @@ npm not found
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ brew install nodenv <span class="c1"># node-build もインストールされる</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew install nodenv <span class="c1"># node-build もインストールされる</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>~/.zshrc</code> に下記を追記してターミナル再起動。</p>
 <div class="highlight"><div class="chroma">
@@ -212,9 +212,9 @@ npm not found
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-.zshrc" data-lang=".zshrc"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.nodenv/bin:<span class="nv">$PATH</span>
-<span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>nodenv init -<span class="k">)</span><span class="s2">&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-.zshrc" data-lang=".zshrc"><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$HOME</span>/.nodenv/bin:<span class="nv">$PATH</span>
+</span></span><span class="line"><span class="cl"><span class="nb">eval</span> <span class="s2">&#34;</span><span class="k">$(</span>nodenv init -<span class="k">)</span><span class="s2">&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>正常にインストールできたかチェックしてくれるツールらしい。</p>
 <div class="highlight"><div class="chroma">
@@ -229,15 +229,15 @@ npm not found
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">$ curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
-Checking for `nodenv&#39; in PATH: /usr/local/bin/nodenv
-Checking for nodenv shims in PATH: OK
-Checking `nodenv install&#39; support: /usr/local/bin/nodenv-install (node-build 4.7.1)
-Counting installed Node versions: none
-  There aren&#39;t any Node versions installed under `/Users/iriya/.nodenv/versions&#39;.
-  You can install Node versions like so: nodenv install 2.2.4
-Auditing installed plugins: OK
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ curl -fsSL https://github.com/nodenv/nodenv-installer/raw/master/bin/nodenv-doctor | bash
+</span></span><span class="line"><span class="cl">Checking for `nodenv&#39; in PATH: /usr/local/bin/nodenv
+</span></span><span class="line"><span class="cl">Checking for nodenv shims in PATH: OK
+</span></span><span class="line"><span class="cl">Checking `nodenv install&#39; support: /usr/local/bin/nodenv-install (node-build 4.7.1)
+</span></span><span class="line"><span class="cl">Counting installed Node versions: none
+</span></span><span class="line"><span class="cl">  There aren&#39;t any Node versions installed under `/Users/iriya/.nodenv/versions&#39;.
+</span></span><span class="line"><span class="cl">  You can install Node versions like so: nodenv install 2.2.4
+</span></span><span class="line"><span class="cl">Auditing installed plugins: OK
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>※ Arch Linux で同じことをやった場合 node-build がないため install に失敗した、解消方法を後述。</p>
 <h2 id="インストール可能な-node-の一覧">インストール可能な node の一覧</h2>
@@ -247,8 +247,8 @@ Auditing installed plugins: OK
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv install -l
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ nodenv install -l
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="node-インストール">node インストール</h2>
 <p>インストールしてグローバルに設定。</p>
@@ -260,11 +260,11 @@ Auditing installed plugins: OK
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv install 12.14.1
-$ nodenv global 12.14.1
-$ nodenv versions
-* 12.14.1 <span class="o">(</span><span class="nb">set</span> by /Users/iriya/.nodenv/version<span class="o">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ nodenv install 12.14.1
+</span></span><span class="line"><span class="cl">$ nodenv global 12.14.1
+</span></span><span class="line"><span class="cl">$ nodenv versions
+</span></span><span class="line"><span class="cl">* 12.14.1 <span class="o">(</span><span class="nb">set</span> by /Users/iriya/.nodenv/version<span class="o">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>npm</code> の場所を確認。</p>
 <div class="highlight"><div class="chroma">
@@ -275,11 +275,11 @@ $ nodenv versions
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv which npm
-/Users/iriya/.nodenv/versions/12.14.1/bin/npm
-$ which npm
-/Users/iriya/.nodenv/shims/npm
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ nodenv which npm
+</span></span><span class="line"><span class="cl">/Users/iriya/.nodenv/versions/12.14.1/bin/npm
+</span></span><span class="line"><span class="cl">$ which npm
+</span></span><span class="line"><span class="cl">/Users/iriya/.nodenv/shims/npm
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>特定のディレクトリでバージョンを固定したい場合。下記コマンドを実行した場所に <code>.node-version</code> というファイルが作成される。</p>
 <div class="highlight"><div class="chroma">
@@ -287,8 +287,8 @@ $ which npm
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ nodenv <span class="nb">local</span> 12.14.1
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ nodenv <span class="nb">local</span> 12.14.1
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="yarn-のインストール">yarn のインストール</h2>
 <p>yarn を使いたい場合はいれる。ただ<a href="https://developers.freee.co.jp/entry/sayonara-yarn">こちらのサイト</a>にもある通り yarn のメリットだった速度は npm 6 ではほぼ同等となり <code>package-lock.json</code> というロックファイルの機構もあるため npm による問題はあまりなくなってきている。</p>
@@ -301,12 +301,12 @@ $ which npm
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ npm install -g yarn
-$ yarn -v
-1.22.0
-$ which yarn
-/Users/iriya/.nodenv/shims/yarn
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ npm install -g yarn
+</span></span><span class="line"><span class="cl">$ yarn -v
+</span></span><span class="line"><span class="cl">1.22.0
+</span></span><span class="line"><span class="cl">$ which yarn
+</span></span><span class="line"><span class="cl">/Users/iriya/.nodenv/shims/yarn
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="nodenv-のアップグレード">nodenv のアップグレード</h2>
 <div class="highlight"><div class="chroma">
@@ -314,8 +314,8 @@ $ which yarn
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell">$ brew upgrade nodenv node-build
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">$ brew upgrade nodenv node-build
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="node-build-がないと怒られた場合">node-build がないと怒られた場合</h2>
 <p>チェックツールで <code>nodenv install</code> が出来ないと言われた場合 <code>node-build</code> をインストールする必要がある。</p>
@@ -326,10 +326,10 @@ $ which yarn
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># As a nodenv plugin
-$ mkdir -p &#34;$(nodenv root)&#34;/plugins
-$ git clone https://github.com/nodenv/node-build.git &#34;$(nodenv root)&#34;/plugins/node-build
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># As a nodenv plugin
+</span></span><span class="line"><span class="cl">$ mkdir -p &#34;$(nodenv root)&#34;/plugins
+</span></span><span class="line"><span class="cl">$ git clone https://github.com/nodenv/node-build.git &#34;$(nodenv root)&#34;/plugins/node-build
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>(cf. <a href="https://github.com/nodenv/node-build#installation">https://github.com/nodenv/node-build#installation</a>)</p>
 

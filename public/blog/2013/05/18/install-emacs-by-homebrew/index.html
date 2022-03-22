@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/18/install-emacs-by-homebrew/" />
@@ -150,12 +150,12 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh">def patches
-  <span class="k">if</span> build.include? <span class="s2">&#34;cocoa&#34;</span> and not build.head?
-     <span class="o">{</span> :p0 <span class="o">=</span><span class="p">&amp;</span>gt<span class="p">;</span> <span class="s2">&#34;https://gist.github.com/ganta/5139150/raw/8f6fc32747c40a51de597ce73085f56764a7d3ed/japanese-patch-for-emacs-24.3.patch&#34;</span> <span class="o">}</span>
-  end
-end
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">def patches
+</span></span><span class="line"><span class="cl">  <span class="k">if</span> build.include? <span class="s2">&#34;cocoa&#34;</span> and not build.head?
+</span></span><span class="line"><span class="cl">     <span class="o">{</span> :p0 <span class="o">=</span><span class="p">&amp;</span>gt<span class="p">;</span> <span class="s2">&#34;https://gist.github.com/ganta/5139150/raw/8f6fc32747c40a51de597ce73085f56764a7d3ed/japanese-patch-for-emacs-24.3.patch&#34;</span> <span class="o">}</span>
+</span></span><span class="line"><span class="cl">  end
+</span></span><span class="line"><span class="cl">end
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Emacs をインストールします。</p>
 <pre><code>$ brew install emacs --cocoa --use-git-head

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/" />
@@ -146,15 +146,15 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ mkdir <span class="nv">$HOME</span>/.go
-
-<span class="c1"># Add this line to ~/.zshrc</span>
-<span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
-<span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
-
-<span class="c1"># Install</span>
-brew install go
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir <span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add this line to ~/.zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install</span>
+</span></span><span class="line"><span class="cl">brew install go
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="go-package-のインストール">Go Package のインストール</h2>
 <p>まずは <code>gopls (Language Server)</code> とその他をインストールします。
@@ -166,10 +166,10 @@ brew install go
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ go get golang.org/x/tools/gopls@latest             <span class="c1"># Language Server</span>
-$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs     <span class="c1"># Go パッケージ</span>
-$ go install golang.org/x/tools/cmd/goimports@latest <span class="c1"># import の過不足を自動で補完</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ go get golang.org/x/tools/gopls@latest             <span class="c1"># Language Server</span>
+</span></span><span class="line"><span class="cl">$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs     <span class="c1"># Go パッケージ</span>
+</span></span><span class="line"><span class="cl">$ go install golang.org/x/tools/cmd/goimports@latest <span class="c1"># import の過不足を自動で補完</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="emacs-go-package-のインストール">Emacs Go Package のインストール</h2>
 <p>次に Emacs 関連のパッケージをインストールします。</p>
@@ -182,10 +182,10 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nf">use-package</span> <span class="nv">lsp-mode</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">use-package</span> <span class="nv">lsp-ui</span><span class="p">)</span>
-<span class="p">(</span><span class="nf">use-package</span> <span class="nv">company-lsp</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">use-package</span> <span class="nv">lsp-mode</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">use-package</span> <span class="nv">lsp-ui</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">use-package</span> <span class="nv">company-lsp</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>ついでに lsp 関連の設定も書いておきます。</p>
 <div class="highlight"><div class="chroma">
@@ -207,22 +207,22 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="c1">;; lsp-mode keybinds</span>
-<span class="p">(</span><span class="nb">defun</span> <span class="nv">lsp-mode-init</span> <span class="p">()</span>
-  <span class="p">(</span><span class="nv">lsp</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-*&#34;</span><span class="p">)</span> <span class="ss">&#39;xref-pop-marker-stack</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-.&#34;</span><span class="p">)</span> <span class="ss">&#39;xref-find-definitions</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-/&#34;</span><span class="p">)</span> <span class="ss">&#39;xref-find-references</span><span class="p">))</span>
-
-<span class="c1">;; lsp-ui config</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-enable</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-header</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-include-signature</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-max-width</span> <span class="mi">150</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-max-height</span> <span class="mi">30</span><span class="p">)</span>
-<span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-peek-enable</span> <span class="no">t</span><span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;lsp-mode-hook</span> <span class="ss">&#39;lsp-ui-mode</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;; lsp-mode keybinds</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">lsp-mode-init</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">lsp</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-*&#34;</span><span class="p">)</span> <span class="ss">&#39;xref-pop-marker-stack</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-.&#34;</span><span class="p">)</span> <span class="ss">&#39;xref-find-definitions</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">global-set-key</span> <span class="p">(</span><span class="nv">kbd</span> <span class="s">&#34;M-/&#34;</span><span class="p">)</span> <span class="ss">&#39;xref-find-references</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">;; lsp-ui config</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-enable</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-header</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-include-signature</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-max-width</span> <span class="mi">150</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-doc-max-height</span> <span class="mi">30</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">lsp-ui-peek-enable</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;lsp-mode-hook</span> <span class="ss">&#39;lsp-ui-mode</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>go-mode パッケージをインストールしておきます。</p>
 <div class="highlight"><div class="chroma">
@@ -230,8 +230,8 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="p">(</span><span class="nf">use-package</span> <span class="nv">go-mode</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nf">use-package</span> <span class="nv">go-mode</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="elisp-の設定">Elisp の設定</h2>
 <p>go-mode に lsp を hook するだけでいい感じに使えます。</p>
@@ -240,8 +240,8 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span> <span class="nf">#&#39;</span><span class="nv">lsp</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span> <span class="nf">#&#39;</span><span class="nv">lsp</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>lsp-mode は最初に Go ファイルを開くと workspace を聞いてきます。
 インポートすると <code>.emacs.d/</code> に <code>.lsp-session-v1</code> というテキストファイルが作られます。</p>
@@ -262,17 +262,17 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="p">(</span><span class="nb">defun</span> <span class="nv">go-mode-omnibus</span> <span class="p">()</span>
-  <span class="c1">;; Go code formatting by goimports</span>
-  <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
-  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
-  <span class="c1">;; Customize compile command to run go build</span>
-  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nf">string-match</span> <span class="s">&#34;go&#34;</span> <span class="nv">compile-command</span><span class="p">))</span>
-      <span class="p">(</span><span class="nf">set</span> <span class="p">(</span><span class="nf">make-local-variable</span> <span class="ss">&#39;compile-command</span><span class="p">)</span>
-           <span class="s">&#34;go build -v &amp;&amp; go test -v &amp;&amp; go vet&#34;</span><span class="p">))</span>
-  <span class="p">)</span>
-<span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span> <span class="ss">&#39;go-mode-omnibus</span><span class="p">)</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="p">(</span><span class="nb">defun</span> <span class="nv">go-mode-omnibus</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; Go code formatting by goimports</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">;; Customize compile command to run go build</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">if</span> <span class="p">(</span><span class="nv">not</span> <span class="p">(</span><span class="nf">string-match</span> <span class="s">&#34;go&#34;</span> <span class="nv">compile-command</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">      <span class="p">(</span><span class="nf">set</span> <span class="p">(</span><span class="nf">make-local-variable</span> <span class="ss">&#39;compile-command</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">           <span class="s">&#34;go build -v &amp;&amp; go test -v &amp;&amp; go vet&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span> <span class="ss">&#39;go-mode-omnibus</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="便利な-tips">便利な Tips</h2>
 <p><code>go-mode</code> でよく使う便利な Tips です。</p>
@@ -297,17 +297,17 @@ lsp-ui はドキュメントのリファレンスなどを表示するもので 
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">gopkgs
-go-outline
-gotests
-gomodifytags
-impl
-goplay
-dlv
-dlv-dap
-staticcheck
-gopls
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">gopkgs
+</span></span><span class="line"><span class="cl">go-outline
+</span></span><span class="line"><span class="cl">gotests
+</span></span><span class="line"><span class="cl">gomodifytags
+</span></span><span class="line"><span class="cl">impl
+</span></span><span class="line"><span class="cl">goplay
+</span></span><span class="line"><span class="cl">dlv
+</span></span><span class="line"><span class="cl">dlv-dap
+</span></span><span class="line"><span class="cl">staticcheck
+</span></span><span class="line"><span class="cl">gopls
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
     </div>

@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/" />
@@ -241,12 +241,12 @@ frame や iframe を使わないサイトでは <code>DENY</code> を指定、fr
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Domain: 指定しないのがデフォルトかつ最も安全
-Path
-Expires
-Secure: この属性をつけると https のみサーバーに送信される、できればつける
-HttpOnly: これをつけると js からアクセスできないようにできる、つけた方がよい
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Domain: 指定しないのがデフォルトかつ最も安全
+</span></span><span class="line"><span class="cl">Path
+</span></span><span class="line"><span class="cl">Expires
+</span></span><span class="line"><span class="cl">Secure: この属性をつけると https のみサーバーに送信される、できればつける
+</span></span><span class="line"><span class="cl">HttpOnly: これをつけると js からアクセスできないようにできる、つけた方がよい
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h1 id="リダイレクト処理にまつわる脆弱性">リダイレクト処理にまつわる脆弱性</h1>
 <p>Web アプリケーションの中にはパラメータに指定したURLにリダイレクトできる機能を備えているものがある。

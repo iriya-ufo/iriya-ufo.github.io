@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/" />
@@ -163,12 +163,12 @@
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># バージョンの確認</span>
-$ node -v
-v16.13.0
-$ npm -v
-8.1.0
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># バージョンの確認</span>
+</span></span><span class="line"><span class="cl">$ node -v
+</span></span><span class="line"><span class="cl">v16.13.0
+</span></span><span class="line"><span class="cl">$ npm -v
+</span></span><span class="line"><span class="cl">8.1.0
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>React 環境を <a href="https://vitejs.dev">vite</a> を使って構築します。</p>
 <div class="highlight"><div class="chroma">
@@ -179,11 +179,11 @@ $ npm -v
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm init vite myapp -- --template react-ts
-$ <span class="nb">cd</span> myapp
-$ npm install
-$ npm run dev
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm init vite myapp -- --template react-ts
+</span></span><span class="line"><span class="cl">$ <span class="nb">cd</span> myapp
+</span></span><span class="line"><span class="cl">$ npm install
+</span></span><span class="line"><span class="cl">$ npm run dev
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>docker やリモートサーバーの場合は <code>vite.config.ts</code> に <code>host</code> を追記します。</p>
 <div class="highlight"><div class="chroma">
@@ -197,14 +197,14 @@ $ npm run dev
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-+  server: {
-+    host: &#39;0.0.0.0&#39;,
-+  },
-})
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// https://vitejs.dev/config/
+</span></span><span class="line"><span class="cl">export default defineConfig({
+</span></span><span class="line"><span class="cl">  plugins: [react()],
+</span></span><span class="line"><span class="cl">+  server: {
+</span></span><span class="line"><span class="cl">+    host: &#39;0.0.0.0&#39;,
+</span></span><span class="line"><span class="cl">+  },
+</span></span><span class="line"><span class="cl">})
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>また import などを行うときに相対パスではなく絶対パスで行いたいので <code>vite.config.ts</code> に以下を設定します。</p>
 <div class="highlight"><div class="chroma">
@@ -228,24 +228,24 @@ export default defineConfig({
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">import { defineConfig } from &#39;vite&#39;;
-import react from &#39;@vitejs/plugin-react&#39;;
-+import path from &#39;path&#39;;
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-+  root: &#39;./&#39;,
-+  resolve: {
-+    alias: {
-+      &#39;@/&#39;: path.join(__dirname, &#39;./src/&#39;),
-+    },
-+  },
-  server: {
-    host: &#39;0.0.0.0&#39;,
-  },
-});
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import { defineConfig } from &#39;vite&#39;;
+</span></span><span class="line"><span class="cl">import react from &#39;@vitejs/plugin-react&#39;;
+</span></span><span class="line"><span class="cl">+import path from &#39;path&#39;;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// https://vitejs.dev/config/
+</span></span><span class="line"><span class="cl">export default defineConfig({
+</span></span><span class="line"><span class="cl">  plugins: [react()],
+</span></span><span class="line"><span class="cl">+  root: &#39;./&#39;,
+</span></span><span class="line"><span class="cl">+  resolve: {
+</span></span><span class="line"><span class="cl">+    alias: {
+</span></span><span class="line"><span class="cl">+      &#39;@/&#39;: path.join(__dirname, &#39;./src/&#39;),
+</span></span><span class="line"><span class="cl">+    },
+</span></span><span class="line"><span class="cl">+  },
+</span></span><span class="line"><span class="cl">  server: {
+</span></span><span class="line"><span class="cl">    host: &#39;0.0.0.0&#39;,
+</span></span><span class="line"><span class="cl">  },
+</span></span><span class="line"><span class="cl">});
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>このとき下記のようなエラーが出る場合は <code>$ npm i -D @types/node</code> とすることで解消されます。</p>
 <ul>
@@ -269,15 +269,15 @@ export default defineConfig({
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># ESLint と Prettier</span>
-$ npm i -D eslint prettier eslint-config-prettier
-
-<span class="c1"># TypeScript ESLint Plugin</span>
-$ npm i -D @typescript-eslint/<span class="o">{</span>parser,eslint-plugin<span class="o">}</span>
-
-<span class="c1"># React ESLint Plugin</span>
-$ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># ESLint と Prettier</span>
+</span></span><span class="line"><span class="cl">$ npm i -D eslint prettier eslint-config-prettier
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># TypeScript ESLint Plugin</span>
+</span></span><span class="line"><span class="cl">$ npm i -D @typescript-eslint/<span class="o">{</span>parser,eslint-plugin<span class="o">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># React ESLint Plugin</span>
+</span></span><span class="line"><span class="cl">$ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>tsconfig.json</code> を編集します。</p>
 <div class="highlight"><div class="chroma">
@@ -307,30 +307,30 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">23
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;es2021&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;useDefineForClassFields&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;lib&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;es2021&#34;</span><span class="p">,</span> <span class="s2">&#34;dom&#34;</span><span class="p">,</span> <span class="s2">&#34;dom.iterable&#34;</span><span class="p">],</span>
-    <span class="nt">&#34;sourceMap&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;allowJs&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&#34;skipLibCheck&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&#34;esModuleInterop&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
-    <span class="nt">&#34;allowSyntheticDefaultImports&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;strict&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;forceConsistentCasingInFileNames&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;module&#34;</span><span class="p">:</span> <span class="s2">&#34;esnext&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;moduleResolution&#34;</span><span class="p">:</span> <span class="s2">&#34;node&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;resolveJsonModule&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;isolatedModules&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;noEmit&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;jsx&#34;</span><span class="p">:</span> <span class="s2">&#34;react-jsx&#34;</span>
-  <span class="p">},</span>
-  <span class="nt">&#34;include&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;src&#34;</span><span class="p">],</span>
-  <span class="nt">&#34;exclude&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;node_modules&#34;</span><span class="p">],</span>
-  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="s2">&#34;./tsconfig.paths.json&#34;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;target&#34;</span><span class="p">:</span> <span class="s2">&#34;es2021&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;useDefineForClassFields&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;lib&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;es2021&#34;</span><span class="p">,</span> <span class="s2">&#34;dom&#34;</span><span class="p">,</span> <span class="s2">&#34;dom.iterable&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;sourceMap&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;allowJs&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;skipLibCheck&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;esModuleInterop&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;allowSyntheticDefaultImports&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;strict&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;forceConsistentCasingInFileNames&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;module&#34;</span><span class="p">:</span> <span class="s2">&#34;esnext&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;moduleResolution&#34;</span><span class="p">:</span> <span class="s2">&#34;node&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;resolveJsonModule&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;isolatedModules&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;noEmit&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;jsx&#34;</span><span class="p">:</span> <span class="s2">&#34;react-jsx&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;include&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;src&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;exclude&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;node_modules&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="s2">&#34;./tsconfig.paths.json&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>tsconfig.paths.json</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -345,15 +345,15 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;baseUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;.&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;paths&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;@/*&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;./src/*&#34;</span><span class="p">]</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;baseUrl&#34;</span><span class="p">:</span> <span class="s2">&#34;.&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;paths&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;@/*&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;./src/*&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>ここで『さっき絶対パスの指定は <code>vite.config.ts</code> で書いたじゃないか』と思うかもしれません。少しややこしいのですがあれはプログラム側がパスを認識させるために書いています。Vite では <code>tsconfig.json</code> にパスを書いても無視されてしまうので。
 では、なぜわざわざ <code>tsconfig.paths.json</code> でパスの設定をしているかというと VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。</p>
@@ -406,50 +406,50 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">43
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="c1">// 適用する環境
-</span><span class="c1"></span>  <span class="nt">&#34;env&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;es6&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;node&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;browser&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;commonjs&#34;</span><span class="p">:</span> <span class="kc">true</span>
-  <span class="p">},</span>
-  <span class="c1">// パーサー
-</span><span class="c1"></span>  <span class="nt">&#34;parser&#34;</span><span class="p">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="p">,</span>
-  <span class="c1">// jsx を使います
-</span><span class="c1"></span>  <span class="nt">&#34;parserOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;ecmaVersion&#34;</span><span class="p">:</span> <span class="mi">2018</span><span class="p">,</span>
-    <span class="nt">&#34;ecmaFeatures&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;jsx&#34;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-    <span class="c1">// import 文でモジュールを使用します
-</span><span class="c1"></span>    <span class="nt">&#34;sourceType&#34;</span><span class="p">:</span> <span class="s2">&#34;module&#34;</span>
-  <span class="p">},</span>
-  <span class="c1">// React のバージョンは自動検出に
-</span><span class="c1"></span>  <span class="nt">&#34;settings&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="p">{</span>
-      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;detect&#34;</span>
-    <span class="p">}</span>
-  <span class="p">},</span>
-  <span class="nt">&#34;plugins&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">],</span>
-  <span class="c1">// 基本的にルールは recommended に従う
-</span><span class="c1"></span>  <span class="c1">// prettier は配列の最後尾に書く
-</span><span class="c1"></span>  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="p">[</span>
-    <span class="s2">&#34;eslint:recommended&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;plugin:@typescript-eslint/eslint-recommended&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;plugin:react-hooks/recommended&#34;</span><span class="p">,</span>
-    <span class="s2">&#34;prettier&#34;</span>
-  <span class="p">],</span>
-  <span class="nt">&#34;rules&#34;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="c1">// import React from &#39;react&#39; を書かなくてもいいようにする
-</span><span class="c1"></span>    <span class="nt">&#34;react/react-in-jsx-scope&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span><span class="p">,</span>
-    <span class="c1">// TypeScirpt なので prop-types は要らない
-</span><span class="c1"></span>    <span class="nt">&#34;react/prop-types&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 適用する環境
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;env&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;es6&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;node&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;browser&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;commonjs&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// パーサー
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;parser&#34;</span><span class="p">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// jsx を使います
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;parserOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ecmaVersion&#34;</span><span class="p">:</span> <span class="mi">2018</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;ecmaFeatures&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;jsx&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// import 文でモジュールを使用します
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;sourceType&#34;</span><span class="p">:</span> <span class="s2">&#34;module&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// React のバージョンは自動検出に
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;settings&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;detect&#34;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;plugins&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="c1">// 基本的にルールは recommended に従う
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// prettier は配列の最後尾に書く
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;eslint:recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;plugin:@typescript-eslint/eslint-recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;plugin:react-hooks/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;prettier&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;rules&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// import React from &#39;react&#39; を書かなくてもいいようにする
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;react/react-in-jsx-scope&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">// TypeScirpt なので prop-types は要らない
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;react/prop-types&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>.eslintignore</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -462,13 +462,13 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">node_modules</span>
-<span class="err">.DS_Store</span>
-<span class="err">dist</span>
-<span class="err">dist-ssr</span>
-<span class="err">*.local</span>
-<span class="err">node_modules/*</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">node_modules</span>
+</span></span><span class="line"><span class="cl"><span class="err">.DS_Store</span>
+</span></span><span class="line"><span class="cl"><span class="err">dist</span>
+</span></span><span class="line"><span class="cl"><span class="err">dist-ssr</span>
+</span></span><span class="line"><span class="cl"><span class="err">*.local</span>
+</span></span><span class="line"><span class="cl"><span class="err">node_modules/*</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>.prettierrc.json</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -480,12 +480,12 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="p">{</span>
-  <span class="nt">&#34;singleQuote&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&#34;bracketSameLine&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="nt">&#34;bracketSpacing&#34;</span><span class="p">:</span> <span class="kc">true</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;singleQuote&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;bracketSameLine&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;bracketSpacing&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>.prettierignore</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -498,13 +498,13 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">node_modules</span>
-<span class="err">.DS_Store</span>
-<span class="err">dist</span>
-<span class="err">dist-ssr</span>
-<span class="err">*.local</span>
-<span class="err">node_modules/*</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">node_modules</span>
+</span></span><span class="line"><span class="cl"><span class="err">.DS_Store</span>
+</span></span><span class="line"><span class="cl"><span class="err">dist</span>
+</span></span><span class="line"><span class="cl"><span class="err">dist-ssr</span>
+</span></span><span class="line"><span class="cl"><span class="err">*.local</span>
+</span></span><span class="line"><span class="cl"><span class="err">node_modules/*</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="vscode-設定">VSCode 設定</h3>
 <p>拡張機能をインストールします。</p>
@@ -551,40 +551,40 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">33
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;[json]&#34;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="s2">&#34;[javascript]&#34;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="s2">&#34;[javascriptreact]&#34;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="s2">&#34;[typescript]&#34;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="s2">&#34;[typescriptreact]&#34;</span><span class="err">:</span> <span class="p">{</span>
-    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
-    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
-        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
-    <span class="p">},</span>
-<span class="p">}</span><span class="err">,</span>
-<span class="err">...</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;[json]&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;[javascript]&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;[javascriptreact]&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;[typescript]&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="s2">&#34;[typescriptreact]&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.formatOnSave&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.defaultFormatter&#34;</span><span class="p">:</span> <span class="s2">&#34;esbenp.prettier-vscode&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;editor.codeActionsOnSave&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&#34;source.fixAll.eslint&#34;</span><span class="p">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">...</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>package.json</code> を編集して lint の実行を簡単にします。実行方法は下記の通りです。</p>
 <ul>
@@ -613,16 +613,16 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
-     <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;vite&#34;</span><span class="p">,</span>
-     <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;tsc &amp;&amp; vite build&#34;</span><span class="p">,</span>
-<span class="err">-</span>    <span class="nt">&#34;preview&#34;</span><span class="p">:</span> <span class="s2">&#34;vite preview&#34;</span>
-<span class="err">+</span>    <span class="s2">&#34;preview&#34;</span><span class="p">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="p">,</span>
-<span class="err">+</span>    <span class="nt">&#34;eslint&#34;</span><span class="p">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="p">,</span>
-<span class="err">+</span>    <span class="nt">&#34;prettier&#34;</span><span class="p">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="p">,</span>
-<span class="err">+</span>    <span class="nt">&#34;lint&#34;</span><span class="p">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
-   <span class="p">}</span><span class="err">,</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;scripts&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;dev&#34;</span><span class="p">:</span> <span class="s2">&#34;vite&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;build&#34;</span><span class="p">:</span> <span class="s2">&#34;tsc &amp;&amp; vite build&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="nt">&#34;preview&#34;</span><span class="p">:</span> <span class="s2">&#34;vite preview&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;preview&#34;</span><span class="p">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="nt">&#34;eslint&#34;</span><span class="p">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="nt">&#34;prettier&#34;</span><span class="p">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="nt">&#34;lint&#34;</span><span class="p">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">}</span><span class="err">,</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="テスト環境">テスト環境</h2>
 <p>Jest を使ったテスト環境を作っていきます。まずは必要なパッケージをインストールします。</p>
@@ -633,10 +633,10 @@ $ npm i -D eslint-plugin-<span class="o">{</span>react,react-hooks<span class="o
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm i -D jest @types/jest eslint-plugin-jest
-$ npm i -D @testing-library/<span class="o">{</span>react,jest-dom,user-event<span class="o">}</span>
-$ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class="o">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm i -D jest @types/jest eslint-plugin-jest
+</span></span><span class="line"><span class="cl">$ npm i -D @testing-library/<span class="o">{</span>react,jest-dom,user-event<span class="o">}</span>
+</span></span><span class="line"><span class="cl">$ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>なお <code>eslint-plugin-jest</code> は <code>eslint</code> がインストール&amp;設定済みであることを前提とします。</p>
 <p><code>jest.setup.ts</code> を作成します。</p>
@@ -645,8 +645,8 @@ $ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="kr">import</span> <span class="s1">&#39;@testing-library/jest-dom&#39;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="kr">import</span> <span class="s1">&#39;@testing-library/jest-dom&#39;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>jest.config.js</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -665,19 +665,19 @@ $ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">roots</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;rootDir&gt;/src&#39;</span><span class="p">],</span>
-  <span class="nx">testMatch</span><span class="o">:</span> <span class="p">[</span>
-    <span class="s1">&#39;**/__tests__/**/*.+(ts|tsx|js)&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;**/?(*.)+(spec|test).+(ts|tsx|js)&#39;</span><span class="p">,</span>
-  <span class="p">],</span>
-  <span class="nx">transform</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s1">&#39;^.+\\.(ts|tsx)$&#39;</span><span class="o">:</span> <span class="s1">&#39;&lt;rootDir&gt;/node_modules/babel-jest&#39;</span><span class="p">,</span>
-  <span class="p">},</span>
-  <span class="nx">testEnvironment</span><span class="o">:</span> <span class="s1">&#39;jsdom&#39;</span><span class="p">,</span>
-  <span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;rootDir&gt;/jest.setup.ts&#39;</span><span class="p">],</span>
-<span class="p">};</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">roots</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;rootDir&gt;/src&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">testMatch</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;**/__tests__/**/*.+(ts|tsx|js)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;**/?(*.)+(spec|test).+(ts|tsx|js)&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">transform</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;^.+\\.(ts|tsx)$&#39;</span><span class="o">:</span> <span class="s1">&#39;&lt;rootDir&gt;/node_modules/babel-jest&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">testEnvironment</span><span class="o">:</span> <span class="s1">&#39;jsdom&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;rootDir&gt;/jest.setup.ts&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>babel.config.js</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -698,21 +698,21 @@ $ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span>
-    <span class="p">[</span>
-      <span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">,</span>
-      <span class="p">{</span>
-        <span class="nx">targets</span><span class="o">:</span> <span class="p">{</span>
-          <span class="nx">node</span><span class="o">:</span> <span class="s1">&#39;current&#39;</span><span class="p">,</span>
-        <span class="p">},</span>
-      <span class="p">},</span>
-    <span class="p">],</span>
-    <span class="s1">&#39;@babel/preset-react&#39;</span><span class="p">,</span>
-    <span class="s1">&#39;@babel/preset-typescript&#39;</span><span class="p">,</span>
-  <span class="p">],</span>
-<span class="p">};</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">presets</span><span class="o">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">[</span>
+</span></span><span class="line"><span class="cl">      <span class="s1">&#39;@babel/preset-env&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">targets</span><span class="o">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">          <span class="nx">node</span><span class="o">:</span> <span class="s1">&#39;current&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">],</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;@babel/preset-react&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="s1">&#39;@babel/preset-typescript&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">};</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>.eslintrc.json</code> を編集します。</p>
 <div class="highlight"><div class="chroma">
@@ -748,36 +748,36 @@ $ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class
 </span><span class="lnt">29
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">---</span> <span class="err">a/.eslintrc.json</span>
-<span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
-<span class="err">@@</span> <span class="mi">-4</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">4</span><span class="err">,</span><span class="mi">8</span> <span class="err">@@</span>
-     <span class="s2">&#34;es6&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-     <span class="s2">&#34;node&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-     <span class="s2">&#34;browser&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-<span class="err">-</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span>
-<span class="err">+</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
-<span class="err">+</span>    <span class="s2">&#34;jest/globals&#34;</span><span class="err">:</span> <span class="kc">true</span>
-   <span class="err">},</span>
-   <span class="c1">// パーサー
-</span><span class="c1"></span>   <span class="s2">&#34;parser&#34;</span><span class="err">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="err">,</span>
-<span class="err">@@</span> <span class="mi">-23</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">24</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
-       <span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;detect&#34;</span>
-     <span class="err">}</span>
-   <span class="err">},</span>
-<span class="err">-</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">]</span><span class="err">,</span>
-<span class="err">+</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">,</span> <span class="s2">&#34;jest&#34;</span><span class="p">]</span><span class="err">,</span>
-   <span class="c1">// 基本的にルールは recommended に従う
-</span><span class="c1"></span>   <span class="c1">// prettier は配列の最後尾に書く
-</span><span class="c1"></span>   <span class="s2">&#34;extends&#34;</span><span class="err">:</span> <span class="p">[</span>
-<span class="err">@@</span> <span class="mi">-32</span><span class="p">,</span><span class="mi">6</span> <span class="err">+</span><span class="mi">33</span><span class="p">,</span><span class="mi">7</span> <span class="err">@@</span>
-     <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
-     <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
-     <span class="s2">&#34;plugin:react-hooks/recommended&#34;</span><span class="p">,</span>
-<span class="err">+</span>    <span class="s2">&#34;plugin:jest/recommended&#34;</span><span class="p">,</span>
-     <span class="s2">&#34;prettier&#34;</span>
-   <span class="p">]</span><span class="err">,</span>
-   <span class="s2">&#34;rules&#34;</span><span class="err">:</span> <span class="p">{</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-4</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">4</span><span class="err">,</span><span class="mi">8</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;es6&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;node&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;browser&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;jest/globals&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// パーサー
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;parser&#34;</span><span class="err">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-23</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">24</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">       <span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;detect&#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="err">}</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">,</span> <span class="s2">&#34;jest&#34;</span><span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// 基本的にルールは recommended に従う
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="c1">// prettier は配列の最後尾に書く
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;extends&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-32</span><span class="p">,</span><span class="mi">6</span> <span class="err">+</span><span class="mi">33</span><span class="p">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:react-hooks/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;plugin:jest/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;rules&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>package.json</code> を編集します。</p>
 <div class="highlight"><div class="chroma">
@@ -796,19 +796,19 @@ $ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">---</span> <span class="err">a/package.json</span>
-<span class="err">+++</span> <span class="err">b/package.json</span>
-<span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">8</span> <span class="err">@@</span>
-     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
-     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
-     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
-<span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
-<span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
-<span class="err">+</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;jest&#34;</span>
-   <span class="err">},</span>
-   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
-     <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="s2">&#34;^17.0.2&#34;</span><span class="p">,</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">8</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;jest&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="s2">&#34;^17.0.2&#34;</span><span class="p">,</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>src/App.test.tsx</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -818,10 +818,10 @@ $ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;that jest is working&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
-  <span class="nx">expect</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-tsx" data-lang="tsx"><span class="line"><span class="cl"><span class="nx">test</span><span class="p">(</span><span class="s1">&#39;that jest is working&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">expect</span><span class="p">(</span><span class="kc">true</span><span class="p">).</span><span class="nx">toBe</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>テストを実行してみます。</p>
 <div class="highlight"><div class="chroma">
@@ -841,20 +841,20 @@ $ npm i -D @babel/preset-<span class="o">{</span>react,typescript,env<span class
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm run <span class="nb">test</span>
-
-&gt; myapp@0.0.0 <span class="nb">test</span>
-&gt; jest
-
- PASS  src/App.test.tsx
-  ✓ that jest is working <span class="o">(</span><span class="m">2</span> ms<span class="o">)</span>
-
-Test Suites: <span class="m">1</span> passed, <span class="m">1</span> total
-Tests:       <span class="m">1</span> passed, <span class="m">1</span> total
-Snapshots:   <span class="m">0</span> total
-Time:        1.126 s
-Ran all <span class="nb">test</span> suites.
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm run <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">&gt; myapp@0.0.0 <span class="nb">test</span>
+</span></span><span class="line"><span class="cl">&gt; jest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"> PASS  src/App.test.tsx
+</span></span><span class="line"><span class="cl">  ✓ that jest is working <span class="o">(</span><span class="m">2</span> ms<span class="o">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Test Suites: <span class="m">1</span> passed, <span class="m">1</span> total
+</span></span><span class="line"><span class="cl">Tests:       <span class="m">1</span> passed, <span class="m">1</span> total
+</span></span><span class="line"><span class="cl">Snapshots:   <span class="m">0</span> total
+</span></span><span class="line"><span class="cl">Time:        1.126 s
+</span></span><span class="line"><span class="cl">Ran all <span class="nb">test</span> suites.
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="material-ui">Material UI</h2>
 <p>UI ライブラリとして <a href="https://mui.com">Material UI</a> を使用します。必要なパッケージをインストールします。</p>
@@ -865,10 +865,10 @@ Ran all <span class="nb">test</span> suites.
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm i @mui/material @emotion/react @emotion/styled
-$ npm i @fontsource/roboto <span class="c1"># お好みで</span>
-$ npm i @mui/icons-material
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm i @mui/material @emotion/react @emotion/styled
+</span></span><span class="line"><span class="cl">$ npm i @fontsource/roboto <span class="c1"># お好みで</span>
+</span></span><span class="line"><span class="cl">$ npm i @mui/icons-material
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>emotion の testing utilities をインストールします。jest の環境構築が済んでいることが前提です。</p>
 <div class="highlight"><div class="chroma">
@@ -876,8 +876,8 @@ $ npm i @mui/icons-material
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm i -D @emotion/jest
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm i -D @emotion/jest
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>jest.config.js</code> を編集します。</p>
 <div class="highlight"><div class="chroma">
@@ -892,15 +892,15 @@ $ npm i @mui/icons-material
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="o">---</span> <span class="nx">a</span><span class="o">/</span><span class="nx">jest</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">js</span>
-<span class="o">+++</span> <span class="nx">b</span><span class="o">/</span><span class="nx">jest</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">js</span>
-<span class="err">@@</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span> <span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span> <span class="err">@@</span> <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
-   <span class="p">},</span>
-   <span class="nx">testEnvironment</span><span class="o">:</span> <span class="s1">&#39;jsdom&#39;</span><span class="p">,</span>
-   <span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;rootDir&gt;/jest.setup.ts&#39;</span><span class="p">],</span>
-<span class="o">+</span>  <span class="nx">snapshotSerializers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;@emotion/jest/serializer&#39;</span><span class="p">],</span>
- <span class="p">};</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-jsx" data-lang="jsx"><span class="line"><span class="cl"><span class="o">---</span> <span class="nx">a</span><span class="o">/</span><span class="nx">jest</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">js</span>
+</span></span><span class="line"><span class="cl"><span class="o">+++</span> <span class="nx">b</span><span class="o">/</span><span class="nx">jest</span><span class="p">.</span><span class="nx">config</span><span class="p">.</span><span class="nx">js</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="o">-</span><span class="mi">9</span><span class="p">,</span><span class="mi">4</span> <span class="o">+</span><span class="mi">9</span><span class="p">,</span><span class="mi">5</span> <span class="err">@@</span> <span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">   <span class="p">},</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">testEnvironment</span><span class="o">:</span> <span class="s1">&#39;jsdom&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">   <span class="nx">setupFilesAfterEnv</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;&lt;rootDir&gt;/jest.setup.ts&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>  <span class="nx">snapshotSerializers</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;@emotion/jest/serializer&#39;</span><span class="p">],</span>
+</span></span><span class="line"><span class="cl"> <span class="p">};</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="その他ライブラリ">その他ライブラリ</h2>
 <p>その他、使い勝手のよいライブラリをいくつかインストールします。詳しい使い方は他サイト参照してください。</p>
@@ -911,10 +911,10 @@ $ npm i @mui/icons-material
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm i axios           <span class="c1"># https://github.com/axios/axios</span>
-$ npm i react-hook-form <span class="c1"># https://react-hook-form.com/jp/</span>
-$ npm i react-location  <span class="c1"># https://react-location.tanstack.com</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm i axios           <span class="c1"># https://github.com/axios/axios</span>
+</span></span><span class="line"><span class="cl">$ npm i react-hook-form <span class="c1"># https://react-hook-form.com/jp/</span>
+</span></span><span class="line"><span class="cl">$ npm i react-location  <span class="c1"># https://react-location.tanstack.com</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="recoil">Recoil</h3>
 <div class="highlight"><div class="chroma">
@@ -922,8 +922,8 @@ $ npm i react-location  <span class="c1"># https://react-location.tanstack.com</
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">$ npm i recoil <span class="c1"># https://recoiljs.org</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm i recoil <span class="c1"># https://recoiljs.org</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>eslintrc.json</code> を編集します。</p>
 <div class="highlight"><div class="chroma">
@@ -948,25 +948,25 @@ $ npm i react-location  <span class="c1"># https://react-location.tanstack.com</
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="err">---</span> <span class="err">a/.eslintrc.json</span>
-<span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
-<span class="err">@@</span> <span class="mi">-40</span><span class="err">,</span><span class="mi">6</span> <span class="err">+</span><span class="mi">40</span><span class="err">,</span><span class="mi">14</span> <span class="err">@@</span>
-     <span class="c1">// import React from &#39;react&#39; を書かなくてもいいようにする
-</span><span class="c1"></span>     <span class="s2">&#34;react/react-in-jsx-scope&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span><span class="err">,</span>
-     <span class="c1">// TypeScirpt なので prop-types は要らない
-</span><span class="c1"></span><span class="err">-</span>    <span class="s2">&#34;react/prop-types&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span>
-<span class="err">+</span>    <span class="s2">&#34;react/prop-types&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span><span class="err">,</span>
-<span class="err">+</span>    <span class="c1">// react-hooks with recoil
-</span><span class="c1"></span><span class="err">+</span>    <span class="s2">&#34;react-hooks/rules-of-hooks&#34;</span><span class="err">:</span> <span class="s2">&#34;error&#34;</span><span class="err">,</span>
-<span class="err">+</span>    <span class="s2">&#34;react-hooks/exhaustive-deps&#34;</span><span class="err">:</span> <span class="p">[</span>
-<span class="err">+</span>      <span class="s2">&#34;warn&#34;</span><span class="p">,</span>
-<span class="err">+</span>      <span class="p">{</span>
-<span class="err">+</span>        <span class="nt">&#34;additionalHooks&#34;</span><span class="p">:</span> <span class="s2">&#34;(useRecoilCallback|useRecoilTransaction_UNSTABLE)&#34;</span>
-<span class="err">+</span>      <span class="p">}</span>
-<span class="err">+</span>    <span class="p">]</span>
-   <span class="err">}</span>
- <span class="err">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-40</span><span class="err">,</span><span class="mi">6</span> <span class="err">+</span><span class="mi">40</span><span class="err">,</span><span class="mi">14</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// import React from &#39;react&#39; を書かなくてもいいようにする
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="s2">&#34;react/react-in-jsx-scope&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">// TypeScirpt なので prop-types は要らない
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">-</span>    <span class="s2">&#34;react/prop-types&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;react/prop-types&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="c1">// react-hooks with recoil
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">+</span>    <span class="s2">&#34;react-hooks/rules-of-hooks&#34;</span><span class="err">:</span> <span class="s2">&#34;error&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;react-hooks/exhaustive-deps&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>      <span class="s2">&#34;warn&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>      <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>        <span class="nt">&#34;additionalHooks&#34;</span><span class="p">:</span> <span class="s2">&#34;(useRecoilCallback|useRecoilTransaction_UNSTABLE)&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>      <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="p">]</span>
+</span></span><span class="line"><span class="cl">   <span class="err">}</span>
+</span></span><span class="line"><span class="cl"> <span class="err">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="docker">Docker</h2>
 <p>Docker 環境の構築ですが、サービス要件によっては使わないほうがいい場合もあると思っています。
@@ -988,9 +988,9 @@ $ npm i react-location  <span class="c1"># https://react-location.tanstack.com</
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">node_modules
-.git
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">node_modules
+</span></span><span class="line"><span class="cl">.git
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>Dockerfile</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -1023,33 +1023,33 @@ $ npm i react-location  <span class="c1"># https://react-location.tanstack.com</
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="c">#</span><span class="err">
-</span><span class="err"></span><span class="c"># STAGE 1</span><span class="err">
-</span><span class="err"></span><span class="c">#</span><span class="err">
-</span><span class="err"></span><span class="c"># Uses a Node LTS image to build</span><span class="err">
-</span><span class="err"></span><span class="c">#</span><span class="err">
-</span><span class="err"></span><span class="k">FROM</span><span class="s"> node:16-bullseye AS build</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /opt/app</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">COPY</span> package.json package-lock.json ./<span class="err">
-</span><span class="err"></span><span class="k">RUN</span> npm i -g npm@latest <span class="o">&amp;&amp;</span> npm ci --no-optional<span class="err">
-</span><span class="err"></span><span class="k">COPY</span> tsconfig.json index.html vite.config.ts ./<span class="err">
-</span><span class="err"></span><span class="k">COPY</span> src ./src<span class="err">
-</span><span class="err"></span><span class="k">RUN</span> npm run build<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="c">#</span><span class="err">
-</span><span class="err"></span><span class="c"># STAGE 2</span><span class="err">
-</span><span class="err"></span><span class="c">#</span><span class="err">
-</span><span class="err"></span><span class="c"># Create final image</span><span class="err">
-</span><span class="err"></span><span class="c">#</span><span class="err">
-</span><span class="err"></span><span class="k">FROM</span><span class="s"> nginx:stable-alpine</span><span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">COPY</span> docker/nginx/nginx.conf /etc/nginx/nginx.conf<span class="err">
-</span><span class="err"></span><span class="k">COPY</span> --from<span class="o">=</span>build /opt/app/dist /public<span class="err">
-</span><span class="err">
-</span><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 80</span><span class="err">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># STAGE 1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Uses a Node LTS image to build</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:16-bullseye AS build</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /opt/app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package.json package-lock.json ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm i -g npm@latest <span class="o">&amp;&amp;</span> npm ci --no-optional<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> tsconfig.json index.html vite.config.ts ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> src ./src<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm run build<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># STAGE 2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Create final image</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> nginx:stable-alpine</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> docker/nginx/nginx.conf /etc/nginx/nginx.conf<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> --from<span class="o">=</span>build /opt/app/dist /public<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 80</span><span class="err">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>docker/nginx/nginx.conf</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -1083,34 +1083,34 @@ $ npm i react-location  <span class="c1"># https://react-location.tanstack.com</
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">worker_processes 2;
-
-events {
-    worker_connections 1024;
-    multi_accept on;
-    use epoll;
-}
-
-http {
-    include /etc/nginx/mime.types;
-
-    server {
-        listen 80;
-        server_name 127.0.0.1;
-        access_log /dev/stdout;
-        error_log stderr;
-
-        location / {
-            root /public;
-            index index.html;
-            try_files $uri $uri/ /index.html =404;
-            gzip on;
-            gzip_types text/css application/javascript application/json image/svg+xml;
-            gzip_comp_level 9;
-        }
-    }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">worker_processes 2;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">events {
+</span></span><span class="line"><span class="cl">    worker_connections 1024;
+</span></span><span class="line"><span class="cl">    multi_accept on;
+</span></span><span class="line"><span class="cl">    use epoll;
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">http {
+</span></span><span class="line"><span class="cl">    include /etc/nginx/mime.types;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    server {
+</span></span><span class="line"><span class="cl">        listen 80;
+</span></span><span class="line"><span class="cl">        server_name 127.0.0.1;
+</span></span><span class="line"><span class="cl">        access_log /dev/stdout;
+</span></span><span class="line"><span class="cl">        error_log stderr;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        location / {
+</span></span><span class="line"><span class="cl">            root /public;
+</span></span><span class="line"><span class="cl">            index index.html;
+</span></span><span class="line"><span class="cl">            try_files $uri $uri/ /index.html =404;
+</span></span><span class="line"><span class="cl">            gzip on;
+</span></span><span class="line"><span class="cl">            gzip_types text/css application/javascript application/json image/svg+xml;
+</span></span><span class="line"><span class="cl">            gzip_comp_level 9;
+</span></span><span class="line"><span class="cl">        }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>docker-compose.yml</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
@@ -1124,14 +1124,14 @@ http {
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
-</span><span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w">
-</span><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
-</span><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
-</span><span class="w">      </span>- <span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">      </span>- <span class="m">8080</span><span class="p">:</span><span class="m">80</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>$ docker compose build</code> でビルドします。</p>
 <p><code>$ docker compose up</code> でコンテナを起動します。</p>

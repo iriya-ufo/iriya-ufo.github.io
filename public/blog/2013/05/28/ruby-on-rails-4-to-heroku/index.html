@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.92.2 with theme even" />
+<meta name="generator" content="Hugo 0.94.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/" />
@@ -241,81 +241,81 @@ $ gem i rails --version 4.0.0.rc1 # 検索コマンドで3系が表示された�
 </span><span class="lnt">74
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="n">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
-
-<span class="c1"># Ruby 2.0.0 on Heroku</span>
-<span class="c1"># Heroku で Rails 4 を使うために下の一行が必須です</span>
-<span class="n">ruby</span> <span class="s2">&#34;2.0.0&#34;</span>
-
-<span class="c1"># Bundle edge Rails instead: gem &#39;rails&#39;, github: &#39;rails/rails&#39;</span>
-<span class="n">gem</span> <span class="s1">&#39;rails&#39;</span><span class="p">,</span> <span class="s1">&#39;4.0.0.rc1&#39;</span>
-
-<span class="c1">### Development and Test Setting</span>
-<span class="c1"># 開発環境とテスト環境では sqlite3 を使うようにします</span>
-<span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
-  <span class="c1"># Use sqlite3</span>
-  <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
-
-  <span class="c1"># Testing framework</span>
-  <span class="n">gem</span> <span class="s1">&#39;rspec-rails&#39;</span>
-
-  <span class="c1"># Speeding up Testing</span>
-  <span class="n">gem</span> <span class="s1">&#39;spork&#39;</span>
-
-  <span class="c1"># Detect the change of file for OSX</span>
-  <span class="n">gem</span> <span class="s1">&#39;rb-fsevent&#39;</span>
-<span class="k">end</span>
-
-<span class="c1">### Development Setting</span>
-<span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
-
-  <span class="c1"># Manage Procfile-based applications</span>
-  <span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
-
-  <span class="c1"># Auto reload the browser when files are changed</span>
-  <span class="c1"># ブラウザのオートロード</span>
-  <span class="n">gem</span> <span class="s1">&#39;guard-livereload&#39;</span>
-
-  <span class="c1"># Use debugger</span>
-  <span class="n">gem</span> <span class="s1">&#39;pry-rails&#39;</span>
-<span class="k">end</span>
-
-<span class="c1">### Production Setting</span>
-<span class="c1"># Heroku は PostgreSQL が必須です</span>
-<span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
-  <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span> <span class="c1"># Heroku use PostgreSQL</span>
-<span class="k">end</span>
-
-<span class="c1"># Use SCSS for stylesheets</span>
-<span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 4.0.0.rc1&#39;</span>
-
-<span class="c1"># Use Uglifier as compressor for JavaScript assets</span>
-<span class="n">gem</span> <span class="s1">&#39;uglifier&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 1.3.0&#39;</span>
-
-<span class="c1"># Use CoffeeScript for .js.coffee assets and views</span>
-<span class="n">gem</span> <span class="s1">&#39;coffee-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 4.0.0&#39;</span>
-
-<span class="c1"># See https://github.com/sstephenson/execjs#readme for more supported runtimes</span>
-<span class="c1"># gem &#39;therubyracer&#39;, platforms: :ruby</span>
-
-<span class="c1"># Use jquery as the JavaScript library</span>
-<span class="n">gem</span> <span class="s1">&#39;jquery-rails&#39;</span>
-
-<span class="c1"># Use Haml</span>
-<span class="n">gem</span> <span class="s1">&#39;haml-rails&#39;</span>
-
-<span class="c1"># Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks</span>
-<span class="n">gem</span> <span class="s1">&#39;turbolinks&#39;</span>
-
-<span class="c1"># Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder</span>
-<span class="n">gem</span> <span class="s1">&#39;jbuilder&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0.1&#39;</span>
-
-<span class="n">group</span> <span class="ss">:doc</span> <span class="k">do</span>
-  <span class="c1"># bundle exec rake doc:rails generates the API under doc/api.</span>
-  <span class="n">gem</span> <span class="s1">&#39;sdoc&#39;</span><span class="p">,</span> <span class="nb">require</span><span class="p">:</span> <span class="kp">false</span>
-<span class="k">end</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ruby 2.0.0 on Heroku</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Heroku で Rails 4 を使うために下の一行が必須です</span>
+</span></span><span class="line"><span class="cl"><span class="n">ruby</span> <span class="s2">&#34;2.0.0&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Bundle edge Rails instead: gem &#39;rails&#39;, github: &#39;rails/rails&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;rails&#39;</span><span class="p">,</span> <span class="s1">&#39;4.0.0.rc1&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Development and Test Setting</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 開発環境とテスト環境では sqlite3 を使うようにします</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># Use sqlite3</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Testing framework</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;rspec-rails&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Speeding up Testing</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;spork&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Detect the change of file for OSX</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;rb-fsevent&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Development Setting</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Manage Procfile-based applications</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Auto reload the browser when files are changed</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># ブラウザのオートロード</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;guard-livereload&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Use debugger</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;pry-rails&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Production Setting</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Heroku は PostgreSQL が必須です</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span> <span class="c1"># Heroku use PostgreSQL</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use SCSS for stylesheets</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 4.0.0.rc1&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use Uglifier as compressor for JavaScript assets</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;uglifier&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 1.3.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use CoffeeScript for .js.coffee assets and views</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;coffee-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 4.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># See https://github.com/sstephenson/execjs#readme for more supported runtimes</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># gem &#39;therubyracer&#39;, platforms: :ruby</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use jquery as the JavaScript library</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;jquery-rails&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use Haml</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;haml-rails&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;turbolinks&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;jbuilder&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0.1&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:doc</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># bundle exec rake doc:rails generates the API under doc/api.</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;sdoc&#39;</span><span class="p">,</span> <span class="nb">require</span><span class="p">:</span> <span class="kp">false</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="起動確認">起動確認</h2>
 <p>Rails を立ち上げてブラウザから確認します。</p>
@@ -361,34 +361,34 @@ $ rails s # CTRL+C で終了
 </span><span class="lnt">27
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># Ignore un-needed files.
-doc/
-*.swp
-*~
-.DS_Store
-.idea
-
-# Template .gitignore file for Rails from github
-*.rbc
-*.sassc
-.sass-cache
-capybara-*.html
-.rspec
-.rvmrc
-/.bundle
-/vendor/bundle
-/log/*
-/tmp/*
-/db/*.sqlite3
-/db/*.sqlite3-journal
-/public/system/*
-/coverage/
-/spec/tmp/*
-**.orig
-rerun.txt
-pickle-email-*.html
-.project
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Ignore un-needed files.
+</span></span><span class="line"><span class="cl">doc/
+</span></span><span class="line"><span class="cl">*.swp
+</span></span><span class="line"><span class="cl">*~
+</span></span><span class="line"><span class="cl">.DS_Store
+</span></span><span class="line"><span class="cl">.idea
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Template .gitignore file for Rails from github
+</span></span><span class="line"><span class="cl">*.rbc
+</span></span><span class="line"><span class="cl">*.sassc
+</span></span><span class="line"><span class="cl">.sass-cache
+</span></span><span class="line"><span class="cl">capybara-*.html
+</span></span><span class="line"><span class="cl">.rspec
+</span></span><span class="line"><span class="cl">.rvmrc
+</span></span><span class="line"><span class="cl">/.bundle
+</span></span><span class="line"><span class="cl">/vendor/bundle
+</span></span><span class="line"><span class="cl">/log/*
+</span></span><span class="line"><span class="cl">/tmp/*
+</span></span><span class="line"><span class="cl">/db/*.sqlite3
+</span></span><span class="line"><span class="cl">/db/*.sqlite3-journal
+</span></span><span class="line"><span class="cl">/public/system/*
+</span></span><span class="line"><span class="cl">/coverage/
+</span></span><span class="line"><span class="cl">/spec/tmp/*
+</span></span><span class="line"><span class="cl">**.orig
+</span></span><span class="line"><span class="cl">rerun.txt
+</span></span><span class="line"><span class="cl">pickle-email-*.html
+</span></span><span class="line"><span class="cl">.project
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>レポジトリを作って GitHub にアップします。</p>
 <pre><code>$ git init
@@ -415,14 +415,14 @@ Heroku 用の SSH key を作成します。GitHub で作った鍵があればそ
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Host heroku.com
- User git
- port 22
- Hostname heroku.com
- IdentityFile ~/.ssh/heroku_rsa
- TCPKeepAlive yes
- IdentitiesOnly yes
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host heroku.com
+</span></span><span class="line"><span class="cl"> User git
+</span></span><span class="line"><span class="cl"> port 22
+</span></span><span class="line"><span class="cl"> Hostname heroku.com
+</span></span><span class="line"><span class="cl"> IdentityFile ~/.ssh/heroku_rsa
+</span></span><span class="line"><span class="cl"> TCPKeepAlive yes
+</span></span><span class="line"><span class="cl"> IdentitiesOnly yes
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>Heroku にログインします。</p>
 <pre><code>$ heroku login
