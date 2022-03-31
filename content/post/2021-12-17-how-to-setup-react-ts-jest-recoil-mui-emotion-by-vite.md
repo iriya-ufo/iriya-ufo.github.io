@@ -3,7 +3,7 @@ layout: post
 title: "React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite"
 slug: how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite
 date: 2021-12-17T16:16:18+09:00
-lastmod: 2022-02-25T16:16:18+09:00
+lastmod: 2022-03-31T23:16:18+09:00
 comments: true
 categories:
   - "programming"
@@ -537,7 +537,7 @@ WORKDIR /opt/app
 
 COPY package.json package-lock.json ./
 RUN npm i -g npm@latest && npm ci --no-optional
-COPY tsconfig.json index.html vite.config.ts ./
+COPY tsconfig.json tsconfig.paths.json index.html vite.config.ts ./
 COPY src ./src
 RUN npm run build
 
@@ -586,11 +586,9 @@ http {
 }
 ```
 
-`docker-compose.yml` を作成します。
+`compose.yml` を作成します。
 
 ```yaml
-version: '3'
-
 services:
   app:
     build: .
