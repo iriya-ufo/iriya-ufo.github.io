@@ -43,12 +43,12 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-12-17T16:16:18+09:00" />
-<meta property="article:modified_time" content="2022-02-25T16:16:18+09:00" />
+<meta property="article:modified_time" content="2022-03-31T23:16:18+09:00" />
 
 <meta itemprop="name" content="React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite">
 <meta itemprop="description" content="はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環"><meta itemprop="datePublished" content="2021-12-17T16:16:18+09:00" />
-<meta itemprop="dateModified" content="2022-02-25T16:16:18+09:00" />
-<meta itemprop="wordCount" content="3191">
+<meta itemprop="dateModified" content="2022-03-31T23:16:18+09:00" />
+<meta itemprop="wordCount" content="3190">
 <meta itemprop="keywords" content="react," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite"/>
 <meta name="twitter:description" content="はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環"/>
@@ -1034,7 +1034,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package.json package-lock.json ./<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm i -g npm@latest <span class="o">&amp;&amp;</span> npm ci --no-optional<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> tsconfig.json index.html vite.config.ts ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> tsconfig.json tsconfig.paths.json index.html vite.config.ts ./<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> src ./src<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm run build<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
@@ -1112,7 +1112,7 @@
 </span></span><span class="line"><span class="cl">}
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><code>docker-compose.yml</code> を作成します。</p>
+</div><p><code>compose.yml</code> を作成します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -1120,13 +1120,9 @@
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s1">&#39;3&#39;</span><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w">
-</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nt">services</span><span class="p">:</span><span class="w">
+<pre tabindex="0" class="chroma"><code class="language-yaml" data-lang="yaml"><span class="line"><span class="cl"><span class="nt">services</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="nt">app</span><span class="p">:</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">build</span><span class="p">:</span><span class="w"> </span><span class="l">.</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nt">ports</span><span class="p">:</span><span class="w">
@@ -1156,7 +1152,7 @@
   <p class="copyright-item">
     <span class="item-title">LastMod</span>
     <span class="item-content">
-        2022-02-25
+        2022-03-31
         
     </span>
   </p>
