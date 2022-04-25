@@ -10,14 +10,49 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2022-03-31T23:16:18+09:00</lastmod>
+    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/emacs/</loc>
+    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</loc>
+    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2022-03-31T23:16:18+09:00</lastmod>
+    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/programming/</loc>
+    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,36 +65,8 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2022-03-31T23:16:18+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2022-03-31T23:16:18+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
-    <lastmod>2022-03-31T23:16:18+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://iriya-ufo.net/blog/2022/03/23/md600v3/</loc>
     <lastmod>2022-03-23T01:24:23+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/emacs/</loc>
-    <lastmod>2022-02-22T00:09:18+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -74,6 +81,13 @@
   <url>
     <loc>https://iriya-ufo.net/tags/magit/</loc>
     <lastmod>2022-02-22T00:09:18+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2022/01/16/profit-and-loss-2021/</loc>
+    <lastmod>2022-01-16T00:33:43+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -94,13 +108,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/stock/</loc>
-    <lastmod>2022-01-16T00:33:43+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/blog/2022/01/16/profit-and-loss-2021/</loc>
     <lastmod>2022-01-16T00:33:43+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -135,14 +142,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/categories/review/</loc>
+    <loc>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</loc>
     <lastmod>2021-11-19T00:55:44+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</loc>
+    <loc>https://iriya-ufo.net/categories/review/</loc>
     <lastmod>2021-11-19T00:55:44+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -212,14 +219,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/oop/</loc>
+    <loc>https://iriya-ufo.net/blog/2021/09/23/how-objects-work-3rd/</loc>
     <lastmod>2021-09-23T23:03:02+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2021/09/23/how-objects-work-3rd/</loc>
+    <loc>https://iriya-ufo.net/tags/oop/</loc>
     <lastmod>2021-09-23T23:03:02+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -310,14 +317,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/finance/</loc>
+    <loc>https://iriya-ufo.net/blog/2020/10/08/dan-takahashi-review/</loc>
     <lastmod>2020-10-08T00:58:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2020/10/08/dan-takahashi-review/</loc>
+    <loc>https://iriya-ufo.net/tags/finance/</loc>
     <lastmod>2020-10-08T00:58:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -394,14 +401,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/coaching/</loc>
+    <loc>https://iriya-ufo.net/blog/2020/04/11/trillion-dollar-coach/</loc>
     <lastmod>2020-04-11T01:28:23+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2020/04/11/trillion-dollar-coach/</loc>
+    <loc>https://iriya-ufo.net/tags/coaching/</loc>
     <lastmod>2020-04-11T01:28:23+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -464,14 +471,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/rdb/</loc>
+    <loc>https://iriya-ufo.net/blog/2020/01/06/learn-from-miss-db/</loc>
     <lastmod>2020-01-06T15:38:07+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2020/01/06/learn-from-miss-db/</loc>
+    <loc>https://iriya-ufo.net/tags/rdb/</loc>
     <lastmod>2020-01-06T15:38:07+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -506,14 +513,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/clean-architecture/</loc>
+    <loc>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</loc>
     <lastmod>2019-11-18T15:30:17+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</loc>
+    <loc>https://iriya-ufo.net/tags/clean-architecture/</loc>
     <lastmod>2019-11-18T15:30:17+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -534,6 +541,13 @@
   </url>
   
   <url>
+    <loc>https://iriya-ufo.net/blog/2019/10/09/media-makers/</loc>
+    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://iriya-ufo.net/tags/kindle-unlimited/</loc>
     <lastmod>2019-10-09T12:54:09+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -548,8 +562,8 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2019/10/09/media-makers/</loc>
-    <lastmod>2019-10-09T12:54:09+09:00</lastmod>
+    <loc>https://iriya-ufo.net/blog/2019/10/08/how-to-write-adcopy/</loc>
+    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -562,21 +576,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2019/10/08/how-to-write-adcopy/</loc>
-    <lastmod>2019-10-08T17:02:10+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/startup/</loc>
+    <loc>https://iriya-ufo.net/blog/2019/10/04/hatenko-phoenix-owndays/</loc>
     <lastmod>2019-10-04T21:09:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2019/10/04/hatenko-phoenix-owndays/</loc>
+    <loc>https://iriya-ufo.net/tags/startup/</loc>
     <lastmod>2019-10-04T21:09:05+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -646,13 +653,6 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/database/</loc>
-    <lastmod>2019-05-06T19:31:59+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://iriya-ufo.net/blog/2019/05/06/learn-rdb-design-from-mastery/</loc>
     <lastmod>2019-05-06T19:31:59+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -660,14 +660,21 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/security/</loc>
-    <lastmod>2019-04-30T02:19:52+09:00</lastmod>
+    <loc>https://iriya-ufo.net/tags/database/</loc>
+    <lastmod>2019-05-06T19:31:59+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/</loc>
+    <lastmod>2019-04-30T02:19:52+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/security/</loc>
     <lastmod>2019-04-30T02:19:52+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -912,14 +919,14 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/tags/ai/</loc>
+    <loc>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</loc>
     <lastmod>2016-11-10T02:39:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</loc>
+    <loc>https://iriya-ufo.net/tags/ai/</loc>
     <lastmod>2016-11-10T02:39:37+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -961,6 +968,13 @@
   </url>
   
   <url>
+    <loc>https://iriya-ufo.net/blog/2016/05/25/movie-sound-euphonium/</loc>
+    <lastmod>2016-05-25T00:13:25+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://iriya-ufo.net/tags/anime/</loc>
     <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -969,13 +983,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/anime/</loc>
-    <lastmod>2016-05-25T00:13:25+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/blog/2016/05/25/movie-sound-euphonium/</loc>
     <lastmod>2016-05-25T00:13:25+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
