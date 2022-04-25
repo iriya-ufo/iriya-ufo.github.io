@@ -6,7 +6,16 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 23 Mar 2022 01:24:23 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 25 Apr 2022 21:16:32 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs に Neotree を導入する</title>
+      <link>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</link>
+      <pubDate>Mon, 25 Apr 2022 21:16:32 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</guid>
+      <description>Neotree をインストールしました。 straight を使っているので use-package と書くだけでインストールされます。 使い方は以下 elisp 見ればなんとなく分かるでしょう。 1 2 3 4 5 6 7</description>
+    </item>
+    
     <item>
       <title>分離式キーボード BAROCCO MD600v3 を買った</title>
       <link>https://iriya-ufo.net/blog/2022/03/23/md600v3/</link>
