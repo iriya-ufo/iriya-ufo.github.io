@@ -9,8 +9,50 @@
   </url>
   
   <url>
+    <loc>https://iriya-ufo.net/tags/asdf/</loc>
+    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
+    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/</loc>
+    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/programming/</loc>
+    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</loc>
+    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -24,34 +66,6 @@
   
   <url>
     <loc>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</loc>
-    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2022-04-25T21:16:32+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
     <lastmod>2022-04-25T21:16:32+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
