@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 25 Apr 2022 21:16:32 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 29 Apr 2022 21:09:55 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
       <link>https://iriya-ufo.net/about/</link>
@@ -14,6 +14,15 @@
       
       <guid>https://iriya-ufo.net/about/</guid>
       <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>Xenv から asdf に移行する</title>
+      <link>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</link>
+      <pubDate>Fri, 29 Apr 2022 21:09:55 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</guid>
+      <description>きっかけ anyenv 関係をキャッシュするというテクニックで zsh の起動を速くするという記事をみました。 自分は anyenv は使ってませんが、いくつかの Xenv 系を直接インス</description>
     </item>
     
     <item>
