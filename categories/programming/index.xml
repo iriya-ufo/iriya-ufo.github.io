@@ -6,7 +6,16 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 29 Apr 2022 21:09:55 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 15:24:46 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2022-12 版</title>
+      <link>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</link>
+      <pubDate>Tue, 13 Dec 2022 15:24:46 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</guid>
+      <description>前回から1年が経ったので再度整理してみました。 2022年12月現在で65個（以下アルファベット順） Awesome Emacs Keymap Better Comments Better Jinja Copy Relative Path CSS Flexbox Cheatsheet Debugger for Java Deno 新しくイ</description>
+    </item>
+    
     <item>
       <title>Xenv から asdf に移行する</title>
       <link>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</link>
@@ -265,7 +274,7 @@
       <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
       
       <guid>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</guid>
-      <description></description>
+      <description> </description>
     </item>
     
     <item>

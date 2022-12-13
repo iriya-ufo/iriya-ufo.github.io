@@ -6,7 +6,16 @@
     <description>Recent content in vscode on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 14 Sep 2021 01:13:25 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 13 Dec 2022 15:24:46 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2022-12 版</title>
+      <link>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</link>
+      <pubDate>Tue, 13 Dec 2022 15:24:46 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</guid>
+      <description>前回から1年が経ったので再度整理してみました。 2022年12月現在で65個（以下アルファベット順） Awesome Emacs Keymap Better Comments Better Jinja Copy Relative Path CSS Flexbox Cheatsheet Debugger for Java Deno 新しくイ</description>
+    </item>
+    
     <item>
       <title>インストール済み VSCode 拡張機能一覧 2021-09 版</title>
       <link>https://iriya-ufo.net/blog/2021/09/14/vscode-extension-2/</link>
