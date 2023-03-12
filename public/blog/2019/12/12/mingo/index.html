@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>「改訂2版 みんなのGo言語」を読んだ - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.2 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2019/12/12/mingo/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="「改訂2版 みんなのGo言語」を読んだ" />
+<meta property="og:description" content="幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2019/12/12/mingo/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2019-12-12T12:36:22+09:00" />
+<meta property="article:modified_time" content="2019-12-12T12:36:22+09:00" />
+<meta itemprop="name" content="「改訂2版 みんなのGo言語」を読んだ">
+<meta itemprop="description" content="幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている"><meta itemprop="datePublished" content="2019-12-12T12:36:22+09:00" />
+<meta itemprop="dateModified" content="2019-12-12T12:36:22+09:00" />
+<meta itemprop="wordCount" content="1861">
+<meta itemprop="keywords" content="go," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="「改訂2版 みんなのGo言語」を読んだ"/>
+<meta name="twitter:description" content="幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">「改訂2版 みんなのGo言語」を読んだ</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-12-12 </span>
+        <div class="post-category">
+            <a href="/categories/review/"> review </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。</p>
+<p>いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っているテクニックや環境構築などが解説されている。</p>
+<p><a href="https://go-tour-jp.appspot.com/welcome/1">A tour of Go</a> を一通りやった後に読むとよい。</p>
+<h1 id="目次">目次</h1>
+<h2 id="第1章-go-によるチーム開発のはじめ方とコードを書く上での心得-松木雅幸">第1章 Go によるチーム開発のはじめ方とコードを書く上での心得 (松木雅幸)</h2>
+<p>いくつか便利なコマンドラインツールを紹介していたので抜粋する。</p>
+<p><strong>コマンドラインツール</strong></p>
+<ul>
+<li>Go の REPL 環境 gore</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get -u github.com/motemen/gore/cmd/gore
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>コードフォーマッター gofmt</strong></p>
+<p>Go には標準で <code>gofmt</code> というフォーマッターが付いている。
+これはインデントや改行位置、変数の整列などを自動調整してくれるツールである。</p>
+<p>以下のようにして使う (実際は VSCode などに保存時に自動実行されるような設定をいれる)。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ gofmt -w main.go # -w オプション: 対象のファイルを整形後の内容で上書きする
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>lint ツール</strong></p>
+<p>Go には標準で lint ツールが付いている。</p>
+<ul>
+<li><code>go vet</code> はバグの原因になりそうなコードを検出する。</li>
+<li><code>golint</code> は Go らしくないコーディングスタイルに対して警告を出す。</li>
+</ul>
+<p><strong>リネームツール gorename</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get golang.org/x/tools/cmd/gorename
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>ソースコード解析ツール guru</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get golang.org/x/tools/cmd/guru
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>Language Server Protocol</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get golang.org/x/tools/cmd/gopls
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>ディレクトリ名とパッケージ名</strong></p>
+<p>Go はディレクトリ単位でパッケージが切られる。</p>
+<p>main を除き、ディレクトリ名はパッケージ名と同一であることが強く推奨される。</p>
+<p><strong>ファイル分割</strong></p>
+<p>Go は1つのパッケージディレクトリ階層内に複数のソースコードを配置できる。
+同じ階層のコード内の package 宣言はすべて同じである必要がある。</p>
+<p>ファイル分割は任意で構わないが type (型) を定義してそれに対するメソッド定義を1つのファイルに切り出すなどするとよい。</p>
+<p><strong>パッケージ分割</strong></p>
+<p>クラス定義の階層と名前空間が対応しているプログラミング言語は多いが、Go はその感覚でパッケージ分割してはいけない。</p>
+<p>パッケージの中で利用されるコンポーネントの類は type を定義して type ごとにファイルを分けるのが良い。</p>
+<p>単独のライブラリとしてほかのプロジェクトから使えるかどうかがパッケージを分割する基準になる。
+たとえばロガーパッケージをサブパッケージとして分割するなど。
+またサブパッケージのインポートには絶対パスを使う。</p>
+<p>e.g. <code>import &quot;my.example.com/path/to/myproj/logger&quot;</code></p>
+<h2 id="第2章-マルチプラットフォームで動作する社内ツールのつくり方windows-mattn">第2章 マルチプラットフォームで動作する社内ツールのつくり方Windows (mattn)</h2>
+<p>マルチプラットフォームで動作させるコツなど。</p>
+<p><strong>パスの違いを吸収する</strong></p>
+<p>Windows と UNIX のパスの違いを吸収するために <code>path/filepath</code> を使う。</p>
+<p><strong>積極的にdeferを使う</strong></p>
+<p>回収すべきリソースがあり、かつ後処理を実行すべき順番が決まっている場合。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">e.g.
+</span></span><span class="line"><span class="cl">  tmp dir を作る
+</span></span><span class="line"><span class="cl">  tmp dir にファイルを作る
+</span></span><span class="line"><span class="cl">  tmp dir を削除する
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>このような場合、ファイルストリームを閉じてからディレクトリを消さなければいけない。
+Go では <code>defer</code> を使用すると呼び出したスコープを抜ける際に、呼び出された順番とは逆の順番で実行される。</p>
+<p><strong>シングルバイナリにこだわる</strong></p>
+<p>シングルバイナリのメリットはデプロイの簡略化にある。</p>
+<p>Web アプリのようにテンプレートファイルや画像などを設置することでデプロイの手間が増えてしまわないようにアセットツールを有効活用する。</p>
+<p>有名なアセットツール</p>
+<ul>
+<li><code>statik</code></li>
+<li><code>packr</code></li>
+<li><code>go.rice</code></li>
+</ul>
+<h2 id="第3章-実用的なアプリケーションを作るために-藤原俊一郎">第3章 実用的なアプリケーションを作るために (藤原俊一郎)</h2>
+<p>実用的なアプリケーションを作るためのテクニックなど。</p>
+<p><strong>効率的なI/O処理</strong></p>
+<p>入出力では <code>bufio</code> でバッファリングを行う。</p>
+<p><strong>人間が扱いやすい形式の数値</strong></p>
+<p><code>go-humanize</code> を使う。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ go get github.com/dustin/go-humanize
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="第4章-コマンドラインツールを作る-中島大一">第4章 コマンドラインツールを作る (中島大一)</h2>
+<p>コマンドラインツールを作る際のテクニックなど。</p>
+<p><strong>ディレクトリ構成</strong></p>
+<p>バイナリをメインとするか、ライブラリをメインとするかでオススメの構成が変わる。</p>
+<ul>
+<li>バイナリをメインとする場合のディレクトリ構成</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>           <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>      <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">lib</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">todo</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>ライブラリをメインとする場合のディレクトリ構成</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>               <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>          <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
+</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">cmd</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl">        <span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
+</span></span><span class="line"><span class="cl">        <span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>サブコマンドを持ったCLIツール</strong></p>
+<p>本書内ではサードパッケージについて、いくつか紹介していた。</p>
+<p>個人的には <code>spf13/cobra</code> がいいと思う。</p>
+<h2 id="第5章-the-dark-arts-of-reflection-牧-大輔">第5章 The Dark Arts Of Reflection (牧 大輔)</h2>
+<p><code>reflect</code> パッケージに関するテクニックなど。</p>
+<h2 id="第6章-goのテストに関するツールセット-鈴木健太">第6章 Goのテストに関するツールセット (鈴木健太)</h2>
+<p><code>test</code> やベンチマークに関するテクニックなど。</p>
+<h2 id="第7章-データベースの扱い方-mattn">第7章 データベースの扱い方 (mattn)</h2>
+<p>Go でデータベース扱う方法についての解説がされていた。ORM の紹介などもある。</p>
+<p>フレームワーク <code>echo</code> の紹介などもある。</p>
+<div class="amazlet-box" style="margin-bottom:0px;"><div class="amazlet-image" style="float:left;margin:0px 12px 1px 0px;"><a href="https://www.amazon.co.jp/dp/B07VPSXF6N/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank"><img src="https://images-fe.ssl-images-amazon.com/images/I/51jif840ScL._SL160_.jpg" alt="改訂2版 みんなのGo言語" style="border: none;" /></a></div><div class="amazlet-info" style="line-height:120%; margin-bottom: 10px"><div class="amazlet-name" style="margin-bottom:10px;line-height:120%"><a href="https://www.amazon.co.jp/dp/B07VPSXF6N/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">改訂2版 みんなのGo言語</a><div class="amazlet-powered-date" style="font-size:80%;margin-top:5px;line-height:120%">posted with <a href="http://www.amazlet.com/" title="amazlet" target="_blank">amazlet</a> at 19.11.18</div></div><div class="amazlet-detail">松木 雅幸  (著), mattn (著), 藤原 俊一郎 (著), 中島 大一 (著), 上田 拓也  (著), 牧 大輔 (著), 鈴木 健太 (著) <br />技術評論社 (2019/8/1)<br />売り上げランキング: 5,929<br /></div><div class="amazlet-sub-info" style="float: left;"><div class="amazlet-link" style="margin-top: 5px"><a href="https://www.amazon.co.jp/dp/B07VPSXF6N/iriyaufo-22/ref=nosim/" name="amazletlink" target="_blank">Amazon.co.jpで詳細を見る</a></div></div></div><div class="amazlet-footer" style="clear: left"></div></div>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-12-12
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/go/">go</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2019/12/16/hugo-inline-html/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Hugo でインライン HTML が表示されなくなった</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2019/12/08/go-env-in-vscode/">
+            <span class="next-text nav-default">VSCode に Go の開発環境を整える</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

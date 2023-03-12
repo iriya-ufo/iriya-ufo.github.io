@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mac に Common Lisp 処理系をインストールする - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.2 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mac に Common Lisp 処理系をインストールする" />
+<meta property="og:description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-02-10T03:42:46+00:00" />
+<meta property="article:modified_time" content="2015-02-10T03:42:46+00:00" />
+<meta itemprop="name" content="Mac に Common Lisp 処理系をインストールする">
+<meta itemprop="description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと"><meta itemprop="datePublished" content="2015-02-10T03:42:46+00:00" />
+<meta itemprop="dateModified" content="2015-02-10T03:42:46+00:00" />
+<meta itemprop="wordCount" content="718">
+<meta itemprop="keywords" content="common lisp," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mac に Common Lisp 処理系をインストールする"/>
+<meta name="twitter:description" content="Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Mac に Common Lisp 処理系をインストールする</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-02-10 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは <strong>SBCL</strong> と <strong>Clozure CL</strong> です。違いは <a href="http://ja.wikipedia.org/wiki/Common_Lisp" title="Common_Lisp" target="_blank">Wikipedia</a> あたりを参考にしてもらうといいかと。
+簡単に特徴を上げるとすると SBCL はバイトコードへのコンパイルがかなり優秀だがコンパイル速度が遅い、Clozure CL はコンパイルが速くデバッグメッセージなどが分かりやすいけど、バイトコードの速度は SBCL に劣る。といったところでしょうか。
+開発は Clozure CL で本番は SBCL みたいに使い分けるといいかもしれないです。</p>
+<p>今回は両方インストールしてみることにします。</p>
+<h2 id="sbcl-のインストール">SBCL のインストール</h2>
+<pre><code>$ brew install sbcl
+</code></pre>
+<p>REPL するときに、ヒストリーの行き来ができないので rlwrap でラップしてあげます。以下を <code>~/.zshrc</code> などに追加します。</p>
+<pre><code>alias sbcl='rlwrap sbcl'
+</code></pre>
+<p>これで終わりです。後は SLIME などの便利な環境を入れますが、これは Clozure CL でも共通ですので後で書きます。</p>
+<h2 id="clozure-cl-のインストール">Clozure CL のインストール</h2>
+<p><a href="https://itunes.apple.com/us/app/clozure-cl/id489900618?mt=12" title="MacAppStore" target="_blank">Mac App Store</a> から GUI 処理系がダウンロードできるようですが、別に統合開発環境は必要ないので SVN で実行バイナリをダウンロードする形でインストールします。</p>
+<p>インストール方法は公式サイトに準拠します。</p>
+<p><a href="http://ccl.clozure.com/download.html">http://ccl.clozure.com/download.html</a></p>
+<pre><code>$ cd /usr/local/
+$ svn co http://svn.clozure.com/publicsvn/openmcl/release/1.10/darwinx86/ccl
+</code></pre>
+<p>これで <code>/usr/local/ccl</code> 配下に実行バイナリがダウンロードできました。ccl の中にある dx86cl64 というのが 64 bit 版の処理系です。</p>
+<p>SBCL 同様 rlwrap でラップします。以下を <code>~/.zshrc</code> などに追加します。</p>
+<pre><code>alias ccl='rlwrap /usr/local/ccl/dx86cl64'
+</code></pre>
+<h2 id="slime-の設定">SLIME の設定</h2>
+<p>Common Lisp を使う人はみなさん Emacs 使ってると思うので、SLIME いれましょう。24 以降の Emacs だとパッケージからインストールできます。補完を便利にするため ac-slime もいれます。後は <code>.emacs</code> に以下を追記します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lisp" data-lang="lisp"><span class="line"><span class="cl"><span class="c1">;;====================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; Common Lisp</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;;====================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; デフォルト処理系の設定</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">inferior-lisp-program</span> <span class="s">&#34;/usr/local/ccl/dx86cl64&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; slime の設定</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;slime</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">slime-setup</span> <span class="o">&#39;</span><span class="p">(</span><span class="nv">slime-repl</span> <span class="nv">slime-fancy</span> <span class="nv">slime-banner</span> <span class="nv">slime-indentation</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="k">setq</span> <span class="nv">slime-net-coding-system</span> <span class="ss">&#39;utf-8-unix</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; slime の補完</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nf">require</span> <span class="ss">&#39;ac-slime</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;slime-repl-mode-hook</span> <span class="ss">&#39;set-up-slime-ac</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Emacs で開発するときは <code>M-x slime</code> として REPL を立ち上げて開発をしていきます。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2015-02-10
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/common-lisp/">common lisp</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2015/02/20/the-reason-that-i-dont-like-network-business/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">ネットワークビジネスを好きになれない理由</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2015/02/05/rich-dad-poor-dad/">
+            <span class="next-text nav-default">「金持ち父さん 貧乏父さん」を読んだ</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

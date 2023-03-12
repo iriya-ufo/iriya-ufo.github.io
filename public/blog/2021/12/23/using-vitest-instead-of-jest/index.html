@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Jest の代わりに Vitest 使ってみる - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.2 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Jest の代わりに Vitest 使ってみる" />
+<meta property="og:description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-12-23T15:24:24+09:00" />
+<meta property="article:modified_time" content="2021-12-23T15:24:24+09:00" />
+<meta itemprop="name" content="Jest の代わりに Vitest 使ってみる">
+<meta itemprop="description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う"><meta itemprop="datePublished" content="2021-12-23T15:24:24+09:00" />
+<meta itemprop="dateModified" content="2021-12-23T15:24:24+09:00" />
+<meta itemprop="wordCount" content="568">
+<meta itemprop="keywords" content="react," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Jest の代わりに Vitest 使ってみる"/>
+<meta name="twitter:description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Jest の代わりに Vitest 使ってみる</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-12-23 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>つい先日、<a href="/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/">環境構築の記事</a>を書いたのですが、その後 <a href="https://vitest.dev/">Vitest</a> が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。</p>
+<h2 id="jest-関連のアンインストール">Jest 関連のアンインストール</h2>
+<p><a href="/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/">前回の環境構築</a>からの差分なので、入れていない場合は関係ありません。<a href="#vitest">Vitest</a> のインストールからどうぞ。</p>
+<p>jest をアンインストールします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm uninstall jest @types/jest eslint-plugin-jest
+</span></span><span class="line"><span class="cl">$ npm uninstall @testing-library/<span class="o">{</span>react,jest-dom,user-event<span class="o">}</span>
+</span></span><span class="line"><span class="cl">$ npm uninstall @babel/preset-<span class="o">{</span>react,typescript,env<span class="o">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>設定ファイル系も削除します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rm jest.setup.ts
+</span></span><span class="line"><span class="cl">$ rm jest.config.js
+</span></span><span class="line"><span class="cl">$ rm babel.config.js
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>.eslintrc.json</code> を編集します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-4</span><span class="err">,</span><span class="mi">8</span> <span class="err">+</span><span class="mi">4</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;es6&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;node&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;browser&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;jest/globals&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;commonjs&#34;</span><span class="err">:</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// パーサー
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;parser&#34;</span><span class="err">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-24</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">23</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">       <span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;detect&#34;</span>
+</span></span><span class="line"><span class="cl">     <span class="err">}</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">,</span> <span class="s2">&#34;jest&#34;</span><span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">   <span class="c1">// 基本的にルールは recommended に従う
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="c1">// prettier は配列の最後尾に書く
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;extends&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-33</span><span class="p">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">32</span><span class="p">,</span><span class="mi">6</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:react-hooks/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;plugin:jest/recommended&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">]</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;rules&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>package.json</code> から <code>test</code> を削除します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">8</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;jest&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;@emotion/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.7.1&#34;</span><span class="p">,</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>emotion の testing utilities をアンインストールします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm uninstall @emotion/jest
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>これで綺麗に消えました。</p>
+<h2 id="vitest">Vitest</h2>
+<p>Vitest をインストールします。c8 はカバレッジを計測するためのものです。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ npm i -D vitest c8
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>.gitignore</code> に以下を追加します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">coverage
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>package.json</code> を編集します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">---</span> <span class="err">a/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/package.json</span>
+</span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-7</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">7</span><span class="err">,</span><span class="mi">9</span> <span class="err">@@</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;preview&#34;</span><span class="err">:</span> <span class="s2">&#34;vite preview&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;eslint&#34;</span><span class="err">:</span> <span class="s2">&#34;eslint . --ext .js,.ts,.jsx,.tsx --fix&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl">     <span class="s2">&#34;prettier&#34;</span><span class="err">:</span> <span class="s2">&#34;prettier --write .&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;lint&#34;</span><span class="err">:</span> <span class="s2">&#34;npm run eslint &amp;&amp; npm run prettier&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;test&#34;</span><span class="err">:</span> <span class="s2">&#34;vitest&#34;</span><span class="err">,</span>
+</span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;coverage&#34;</span><span class="err">:</span> <span class="s2">&#34;vitest --coverage&#34;</span>
+</span></span><span class="line"><span class="cl">   <span class="err">},</span>
+</span></span><span class="line"><span class="cl">   <span class="s2">&#34;dependencies&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="nt">&#34;@emotion/react&#34;</span><span class="p">:</span> <span class="s2">&#34;^11.7.1&#34;</span><span class="p">,</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>以上となります。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2021-12-23
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/react/">react</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2022/01/16/profit-and-loss-2021/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">【2021年】株投資の損益を計算した</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/">
+            <span class="next-text nav-default">React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

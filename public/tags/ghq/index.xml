@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ghq on iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/tags/ghq/</link>
+    <description>Recent content in ghq on iriya-ufo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 23 Mar 2021 15:27:54 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/ghq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go の src ディレクトリを移動した</title>
+      <link>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</link>
+      <pubDate>Tue, 23 Mar 2021 15:27:54 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</guid>
+      <description>以前「リポジトリ管理ツール ghq を導入した」という記事を書きましたが、Go も Modules が主流になって様子が変わったので、一度整理することにしました。 Go の</description>
+    </item>
+    
+    <item>
+      <title>リポジトリ管理ツール ghq を導入した</title>
+      <link>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</link>
+      <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</guid>
+      <description>更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し</description>
+    </item>
+    
+  </channel>
+</rss>
