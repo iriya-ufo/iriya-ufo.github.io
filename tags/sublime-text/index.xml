@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>sublime text on iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/tags/sublime-text/</link>
+    <description>Recent content in sublime text on iriya-ufo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 13 Jul 2013 15:43:18 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/sublime-text/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 使いが Sublime Text 2 を練習してみた</title>
+      <link>https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</link>
+      <pubDate>Sat, 13 Jul 2013 15:43:18 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</guid>
+      <description>知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema</description>
+    </item>
+    
+  </channel>
+</rss>

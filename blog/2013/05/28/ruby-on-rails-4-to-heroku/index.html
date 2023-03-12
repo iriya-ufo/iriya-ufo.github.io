@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Ruby on Rails 4 のアプリを Heroku で公開する - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.2 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Ruby on Rails 4 のアプリを Heroku で公開する" />
+<meta property="og:description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-05-28T18:00:47+00:00" />
+<meta property="article:modified_time" content="2013-05-28T18:00:47+00:00" />
+<meta itemprop="name" content="Ruby on Rails 4 のアプリを Heroku で公開する">
+<meta itemprop="description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち"><meta itemprop="datePublished" content="2013-05-28T18:00:47+00:00" />
+<meta itemprop="dateModified" content="2013-05-28T18:00:47+00:00" />
+<meta itemprop="wordCount" content="1812">
+<meta itemprop="keywords" content="git,heroku,mac,ruby,ruby on rails," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Ruby on Rails 4 のアプリを Heroku で公開する"/>
+<meta name="twitter:description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Ruby on Rails 4 のアプリを Heroku で公開する</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-05-28 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。
+環境構築は Mac OS X で行っています。</p>
+<h2 id="事前準備">事前準備</h2>
+<p>パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。
+brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。</p>
+<pre><code>$ brew update  # brew を最新にする
+$ brew upgrade # インストールしている Formula をアップデート
+$ brew doctor  # エラーなどのチェック
+</code></pre>
+<p>rbenv で Ruby 2.0.0 をインストールします。</p>
+<pre><code>$ rbenv install 2.0.0-p195
+$ rbenv global 2.0.0-p195 # 2.0.0 をデフォルトにする
+</code></pre>
+<p>gem をアップデートして Rails 4 をインストールします。</p>
+<pre><code>$ gem update --system
+$ gem update bundler
+$ gem i bundler
+$ gem search -r rails             # Rails のバージョンが検索できる
+$ gem i rails --version 4.0.0.rc1 # 検索コマンドで3系が表示された場合、4系のバージョン指定してインストール
+</code></pre>
+<h2 id="rails-アプリ作成">Rails アプリ作成</h2>
+<p>準備は整ったのでアプリを作ります。</p>
+<pre><code>$ rails new rails_app
+</code></pre>
+<h2 id="gemfile-編集">Gemfile 編集</h2>
+<p>いくつかポイントを記しておきます。</p>
+<ul>
+<li>Heroku で Rails 4 を使うには <code>ruby &quot;2.0.0&quot;</code> の一行が必須です。</li>
+<li>開発環境、テスト環境、プロダクション環境でそれぞれデータベースを分けています。</li>
+<li>ブラウザをリロードする手間を省くため <a href="http://naoty.hatenablog.com/entry/2012/05/20/032251">LiveReload</a> を使っています。アドオンをインストールしておきましょう。</li>
+<li>foreman を使って環境変数をロードしています。</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-ruby" data-lang="ruby"><span class="line"><span class="cl"><span class="n">source</span> <span class="s1">&#39;https://rubygems.org&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Ruby 2.0.0 on Heroku</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Heroku で Rails 4 を使うために下の一行が必須です</span>
+</span></span><span class="line"><span class="cl"><span class="n">ruby</span> <span class="s2">&#34;2.0.0&#34;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Bundle edge Rails instead: gem &#39;rails&#39;, github: &#39;rails/rails&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;rails&#39;</span><span class="p">,</span> <span class="s1">&#39;4.0.0.rc1&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Development and Test Setting</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 開発環境とテスト環境では sqlite3 を使うようにします</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:development</span><span class="p">,</span> <span class="ss">:test</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># Use sqlite3</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;sqlite3&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Testing framework</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;rspec-rails&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Speeding up Testing</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;spork&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Detect the change of file for OSX</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;rb-fsevent&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Development Setting</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Manage Procfile-based applications</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;foreman&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Auto reload the browser when files are changed</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># ブラウザのオートロード</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;guard-livereload&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  <span class="c1"># Use debugger</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;pry-rails&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">### Production Setting</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># Heroku は PostgreSQL が必須です</span>
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:production</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;pg&#39;</span> <span class="c1"># Heroku use PostgreSQL</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use SCSS for stylesheets</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;sass-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 4.0.0.rc1&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use Uglifier as compressor for JavaScript assets</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;uglifier&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 1.3.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use CoffeeScript for .js.coffee assets and views</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;coffee-rails&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 4.0.0&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># See https://github.com/sstephenson/execjs#readme for more supported runtimes</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># gem &#39;therubyracer&#39;, platforms: :ruby</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use jquery as the JavaScript library</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;jquery-rails&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Use Haml</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;haml-rails&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;turbolinks&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder</span>
+</span></span><span class="line"><span class="cl"><span class="n">gem</span> <span class="s1">&#39;jbuilder&#39;</span><span class="p">,</span> <span class="s1">&#39;~&gt; 1.0.1&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">group</span> <span class="ss">:doc</span> <span class="k">do</span>
+</span></span><span class="line"><span class="cl">  <span class="c1"># bundle exec rake doc:rails generates the API under doc/api.</span>
+</span></span><span class="line"><span class="cl">  <span class="n">gem</span> <span class="s1">&#39;sdoc&#39;</span><span class="p">,</span> <span class="nb">require</span><span class="p">:</span> <span class="kp">false</span>
+</span></span><span class="line"><span class="cl"><span class="k">end</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="起動確認">起動確認</h2>
+<p>Rails を立ち上げてブラウザから確認します。</p>
+<pre><code>$ bundle update
+$ bundle install
+$ guard init livereload
+$ rails s # CTRL+C で終了
+</code></pre>
+<h2 id="github-に公開">GitHub に公開</h2>
+<p>ここからバージョン管理システムである Git を使って開発していきます。
+ついでに GitHub にアップできるようにします。
+準備として GitHub サイトで新規レポジトリを作成しておきます。その際 README ファイルは作らなくていいです。
+また SSH Key などの登録をし、GitHub にアクセスできるようにしておきます。
+そして Git で管理したくない余計なファイルを除くため <code>.gitignore</code> ファイルを編集します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># Ignore un-needed files.
+</span></span><span class="line"><span class="cl">doc/
+</span></span><span class="line"><span class="cl">*.swp
+</span></span><span class="line"><span class="cl">*~
+</span></span><span class="line"><span class="cl">.DS_Store
+</span></span><span class="line"><span class="cl">.idea
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Template .gitignore file for Rails from github
+</span></span><span class="line"><span class="cl">*.rbc
+</span></span><span class="line"><span class="cl">*.sassc
+</span></span><span class="line"><span class="cl">.sass-cache
+</span></span><span class="line"><span class="cl">capybara-*.html
+</span></span><span class="line"><span class="cl">.rspec
+</span></span><span class="line"><span class="cl">.rvmrc
+</span></span><span class="line"><span class="cl">/.bundle
+</span></span><span class="line"><span class="cl">/vendor/bundle
+</span></span><span class="line"><span class="cl">/log/*
+</span></span><span class="line"><span class="cl">/tmp/*
+</span></span><span class="line"><span class="cl">/db/*.sqlite3
+</span></span><span class="line"><span class="cl">/db/*.sqlite3-journal
+</span></span><span class="line"><span class="cl">/public/system/*
+</span></span><span class="line"><span class="cl">/coverage/
+</span></span><span class="line"><span class="cl">/spec/tmp/*
+</span></span><span class="line"><span class="cl">**.orig
+</span></span><span class="line"><span class="cl">rerun.txt
+</span></span><span class="line"><span class="cl">pickle-email-*.html
+</span></span><span class="line"><span class="cl">.project
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>レポジトリを作って GitHub にアップします。</p>
+<pre><code>$ git init
+$ git add .
+$ git commit -m &quot;Initial commit&quot;
+$ git remote add origin git@github.com:user-name/rails_app.git
+$ git push -u origin master
+</code></pre>
+<h2 id="heroku-を使う準備">Heroku を使う準備</h2>
+<p>まず Heroku のサイトへいって Sign Up します。
+Mac OS X 用のツール (Toolbelt) をダウンロード、インストールします。
+Heroku 用の SSH key を作成します。GitHub で作った鍵があればそれを使えばいいと思います。
+私は別々に分けて作ったのでちょっとトラブルがありました。
+デフォルトでは秘密鍵は <code>id_rsa</code> が読み込まれるようですが、Heroku 用に名前を変えて作ったためオートロードできなかったっぽいです。
+よって <code>.ssh/config</code> を作ることで解決しました。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Host heroku.com
+</span></span><span class="line"><span class="cl"> User git
+</span></span><span class="line"><span class="cl"> port 22
+</span></span><span class="line"><span class="cl"> Hostname heroku.com
+</span></span><span class="line"><span class="cl"> IdentityFile ~/.ssh/heroku_rsa
+</span></span><span class="line"><span class="cl"> TCPKeepAlive yes
+</span></span><span class="line"><span class="cl"> IdentitiesOnly yes
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Heroku にログインします。</p>
+<pre><code>$ heroku login
+Email: # メールアドレスを入力します
+Password: # パスワードを入力します
+ssh-key: # 秘密鍵の場所を指定します
+</code></pre>
+<h2 id="heroku-にアプリを登録">Heroku にアプリを登録</h2>
+<p>Heroku には本番環境と開発環境を分ける方法があります。
+Production 環境には Cedar Stack が使われます。
+詳しくは『<a href="https://devcenter.heroku.com/articles/cedar">Heroku Dev Center</a>』を参照してください。</p>
+<p>まず heroku のバージョン確認しておきましょう。</p>
+<pre><code>$ heroku --version # 2.1.0 以上であればデフォルトで Cedar スタックが使われます
+</code></pre>
+<p>Heroku にアプリを登録します。
+app_name を指定すれば <a href="http://app_name.herokuapp.com">http://app_name.herokuapp.com</a> のURLでアクセスできます。
+指定しなければ適当な名前で作られますが、独自ドメインで運用するなら気にしなくてもいいでしょう。</p>
+<pre><code>$ heroku create app_name
+$ bundle install --without production
+$ git push heroku master # ここで Gemfile に ruby &quot;2.0.0&quot; の追記がないとエラーで失敗します
+$ heroku run rake db:migrate
+$ heroku open # ブラウザーが起動し、作成した Rails アプリが開かれます
+</code></pre>
+<p><strong>The page you were looking for doesn&rsquo;t exist.</strong> というメッセージがでますがこれでOKです。</p>
+<h2 id="独自ドメインで公開">独自ドメインで公開</h2>
+<p>このままだとアクセスする時の URL が覚えづらいので独自ドメインで運用します。
+下記参照ください。</p>
+<ul>
+<li><a href="http://qiita.com/icb54615/items/76acf2a1ea151535c5dc">Qiita の投稿</a></li>
+<li><a href="https://devcenter.heroku.com/articles/custom-domains">Heroku dev center Custom Domains</a></li>
+</ul>
+<p>ざっくりですが以上で Heroku に Rails 4 のアプリを公開できると思います。</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2013-05-28
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/git/">git</a>
+          <a href="/tags/heroku/">heroku</a>
+          <a href="/tags/mac/">mac</a>
+          <a href="/tags/ruby/">ruby</a>
+          <a href="/tags/ruby-on-rails/">ruby on rails</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2013/06/01/android-studio-to-ubuntu/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">Ubuntu に Android Studio をインストール</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2013/05/18/install-emacs-by-homebrew/">
+            <span class="next-text nav-default">Mac OS X にインラインパッチの当たった Emacs を Homebrew でインストール</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

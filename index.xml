@@ -1,0 +1,1982 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/</link>
+    <description>Recent content on iriya-ufo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 18 Feb 2023 18:01:07 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>https://iriya-ufo.net/about/</link>
+      <pubDate>Thu, 20 Dec 2018 12:38:52 +0800</pubDate>
+      
+      <guid>https://iriya-ufo.net/about/</guid>
+      <description>About Me Infrastructure Engineer Career See @ LinkedIn Output 機械学習とかの関連まとめ</description>
+    </item>
+    
+    <item>
+      <title>Emacs に Rust の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2023/02/18/rust-setup-on-emacs/</link>
+      <pubDate>Sat, 18 Feb 2023 18:01:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2023/02/18/rust-setup-on-emacs/</guid>
+      <description>Rust の勉強を始めました。 Mac + Emacs に Rust の開発環境を整えたのでその備忘録です。 Rust のインストール 公式サイトに習い rustup ツールを使って Rust をインストールします</description>
+    </item>
+    
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2022-12 版</title>
+      <link>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</link>
+      <pubDate>Tue, 13 Dec 2022 15:24:46 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</guid>
+      <description>前回から1年が経ったので再度整理してみました。 2022年12月現在で65個（以下アルファベット順） Awesome Emacs Keymap Better Comments Better Jinja Copy Relative Path CSS Flexbox Cheatsheet Debugger for Java Deno 新しくイ</description>
+    </item>
+    
+    <item>
+      <title>「ビジネスエリートになるための 教養としての投資」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2022/04/30/culture-investment/</link>
+      <pubDate>Sat, 30 Apr 2022 23:28:51 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/04/30/culture-investment/</guid>
+      <description>読んだ感想 一昔前に話題になった本で、レビューが高かったので気になって買っていました。 読んだ感想ですが、正直微妙でした。対象とする読者がよく分</description>
+    </item>
+    
+    <item>
+      <title>Xenv から asdf に移行する</title>
+      <link>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</link>
+      <pubDate>Fri, 29 Apr 2022 21:09:55 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</guid>
+      <description>きっかけ anyenv 関係をキャッシュするというテクニックで zsh の起動を速くするという記事をみました。 自分は anyenv は使ってませんが、いくつかの Xenv 系を直接インス</description>
+    </item>
+    
+    <item>
+      <title>Emacs に Neotree を導入する</title>
+      <link>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</link>
+      <pubDate>Mon, 25 Apr 2022 21:16:32 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</guid>
+      <description>Neotree をインストールしました。 straight を使っているので use-package と書くだけでインストールされます。 使い方は以下 elisp 見ればなんとなく分かるでしょう。 1 2 3 4 5 6 7</description>
+    </item>
+    
+    <item>
+      <title>分離式キーボード BAROCCO MD600v3 を買った</title>
+      <link>https://iriya-ufo.net/blog/2022/03/23/md600v3/</link>
+      <pubDate>Wed, 23 Mar 2022 01:24:23 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/03/23/md600v3/</guid>
+      <description>これを買いました。分離式は初めて触るので慣れるかどうか不安もありましたが、しばらく触って見たところ特に大きな問題はなさそうです。 &amp;ldquo</description>
+    </item>
+    
+    <item>
+      <title>Emacs で Magit を使う</title>
+      <link>https://iriya-ufo.net/blog/2022/02/22/magit/</link>
+      <pubDate>Tue, 22 Feb 2022 00:09:18 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/02/22/magit/</guid>
+      <description>Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。</description>
+    </item>
+    
+    <item>
+      <title>【2021年】株投資の損益を計算した</title>
+      <link>https://iriya-ufo.net/blog/2022/01/16/profit-and-loss-2021/</link>
+      <pubDate>Sun, 16 Jan 2022 00:33:43 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2022/01/16/profit-and-loss-2021/</guid>
+      <description>2021年の株投資の損益がまとめられたので公開します (これまでの振り返りはこちら)。 投資における損益計算シート 振り返り スプレッドシートをみれ</description>
+    </item>
+    
+    <item>
+      <title>Jest の代わりに Vitest 使ってみる</title>
+      <link>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</link>
+      <pubDate>Thu, 23 Dec 2021 15:24:24 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</guid>
+      <description>つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う</description>
+    </item>
+    
+    <item>
+      <title>React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite</title>
+      <link>https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</link>
+      <pubDate>Fri, 17 Dec 2021 16:16:18 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</guid>
+      <description>はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環</description>
+    </item>
+    
+    <item>
+      <title>React を完全に理解するために行った学習方法</title>
+      <link>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</link>
+      <pubDate>Tue, 30 Nov 2021 23:38:39 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</guid>
+      <description>新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？ 効率の良い学習方法とい</description>
+    </item>
+    
+    <item>
+      <title>「Reactハンズオンラーニング 第2版 ―Webアプリケーション開発のベストプラクティス」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</link>
+      <pubDate>Fri, 19 Nov 2021 00:55:44 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</guid>
+      <description>読んだ感想 React を業務で使っている知人から、書籍で学ぶならこれ一択！とオススメされたのが「Reactハンズオンラーニング」でした。 読んでみたとこ</description>
+    </item>
+    
+    <item>
+      <title>「モダンJavaScriptの基本から始める React実践の教科書」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2021/11/17/review-modern-react/</link>
+      <pubDate>Wed, 17 Nov 2021 00:09:00 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/11/17/review-modern-react/</guid>
+      <description>読んだ感想 React の入門書として一冊あげるとすればこの本でしょう、というくらいオススメできる内容でした。 対象読者としては JavaScript に少し不安もありつつ React を</description>
+    </item>
+    
+    <item>
+      <title>プロジェクト管理ツールなに使ってるか聞いてみた</title>
+      <link>https://iriya-ufo.net/blog/2021/10/20/project-management-tool/</link>
+      <pubDate>Wed, 20 Oct 2021 09:45:28 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/10/20/project-management-tool/</guid>
+      <description>とあるコミュニティでプロジェクト管理ツールなに使ってるか聞いてみました。 20人ほどから回答を頂けましたので各ツールを簡単にまとめてみました。</description>
+    </item>
+    
+    <item>
+      <title>[2021年版] Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</link>
+      <pubDate>Wed, 13 Oct 2021 13:54:35 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</guid>
+      <description>以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト</description>
+    </item>
+    
+    <item>
+      <title>机をDIYした</title>
+      <link>https://iriya-ufo.net/blog/2021/10/08/diy-desk/</link>
+      <pubDate>Fri, 08 Oct 2021 20:31:54 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/10/08/diy-desk/</guid>
+      <description>部屋が狭いのでコンパクトにまとめたいなぁと思っていたところ、この記事を見つけたので早速DIYしてみました。 購入したもの まず天板をこちらのサイ</description>
+    </item>
+    
+    <item>
+      <title>「入門 React」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2021/09/27/introduction-react-review/</link>
+      <pubDate>Mon, 27 Sep 2021 15:14:47 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/09/27/introduction-react-review/</guid>
+      <description>読んだ感想 いい本でした。しかし中身を見ずにタイトルだけで判断して買うと、期待したものと違うなぁってなるかもしれません。 この本の対象読者はチュ</description>
+    </item>
+    
+    <item>
+      <title>「オブジェクト指向でなぜつくるのか 第3版」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2021/09/23/how-objects-work-3rd/</link>
+      <pubDate>Thu, 23 Sep 2021 23:03:02 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/09/23/how-objects-work-3rd/</guid>
+      <description>この本、割と評判のいい本なのですが、個人的にはそこまでべた褒めするほどでもなかったです。 結局、オブジェクト指向でなぜつくるのかという問いに対</description>
+    </item>
+    
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2021-09 版</title>
+      <link>https://iriya-ufo.net/blog/2021/09/14/vscode-extension-2/</link>
+      <pubDate>Tue, 14 Sep 2021 01:13:25 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/09/14/vscode-extension-2/</guid>
+      <description>前回から早くも1年が経ったので整理してみました。 2021年9月現在で57個（以下アルファベット順） スターがついているのはお気に入りという意味</description>
+    </item>
+    
+    <item>
+      <title>Ducky One 2 Mini RGB キーボードを買った</title>
+      <link>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</link>
+      <pubDate>Tue, 07 Sep 2021 23:40:42 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</guid>
+      <description>僕は今までずっと HHKB Pro2 を愛用してきました。初めて HHKB を触ったときの打鍵感がすごくよくて感動したのを覚えています。 それからときどき Realforce を使ったりもし</description>
+    </item>
+    
+    <item>
+      <title>Hacobune で Go のアプリケーションを公開してみた</title>
+      <link>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</link>
+      <pubDate>Thu, 19 Aug 2021 17:02:52 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</guid>
+      <description>2022年2月15日更新 Hacobune オープンβ版の提供終了に関するお知らせ オープンβ版が終了することになったそうです。正式版がリリースされるという内容</description>
+    </item>
+    
+    <item>
+      <title>Go の src ディレクトリを移動した</title>
+      <link>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</link>
+      <pubDate>Tue, 23 Mar 2021 15:27:54 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</guid>
+      <description>以前「リポジトリ管理ツール ghq を導入した」という記事を書きましたが、Go も Modules が主流になって様子が変わったので、一度整理することにしました。 Go の</description>
+    </item>
+    
+    <item>
+      <title>【2020年】株投資の損益を計算した</title>
+      <link>https://iriya-ufo.net/blog/2021/02/24/profit-and-loss-2020/</link>
+      <pubDate>Wed, 24 Feb 2021 01:25:46 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/02/24/profit-and-loss-2020/</guid>
+      <description>ようやく2020年の株投資の損益がまとめられたので公開します (これまでの振り返りはこちら)。 投資における損益計算シート 成績結果 2020年の損</description>
+    </item>
+    
+    <item>
+      <title>成長が早い人の特徴</title>
+      <link>https://iriya-ufo.net/blog/2020/12/20/techcommit-advent-calendar-2020/</link>
+      <pubDate>Sun, 20 Dec 2020 02:11:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/12/20/techcommit-advent-calendar-2020/</guid>
+      <description>この記事は TechCommit Advent Calendar 2020 の20日目の記事です。 少し自分について紹介させてもらいます。自分は元予備校講師で数学や理科などを教えていました。それからエ</description>
+    </item>
+    
+    <item>
+      <title>「世界のお金持ちが実践するお金の増やし方」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2020/10/08/dan-takahashi-review/</link>
+      <pubDate>Thu, 08 Oct 2020 00:58:05 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/10/08/dan-takahashi-review/</guid>
+      <description>この本の著者は高橋ダンという投資家ユーチューバーで、2020年1月から Youtube を始めて現在 (2020年10月) 25万人以上のチャンネル登録者がいま</description>
+    </item>
+    
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2020-09 版</title>
+      <link>https://iriya-ufo.net/blog/2020/09/21/vscode-extension/</link>
+      <pubDate>Mon, 21 Sep 2020 01:43:44 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/09/21/vscode-extension/</guid>
+      <description>業務ではコードを書かないインフラエンジニアがインストール済みの VSCode 拡張機能一覧 2020年9月現在で47個 (以下アルファベット順) お気に入りには</description>
+    </item>
+    
+    <item>
+      <title>「世界一やさしい米国株の教科書 1年生」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2020/07/03/easiest-stock-text-in-the-world/</link>
+      <pubDate>Fri, 03 Jul 2020 17:20:45 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/07/03/easiest-stock-text-in-the-world/</guid>
+      <description>米国株ブロガーさん達の間でちょっとした話題?になってた本で気になっていたので買いました。こちらです。 世界一やさしい 米国株の教科書 1年生pos</description>
+    </item>
+    
+    <item>
+      <title>University of the People Term5 が始まりました</title>
+      <link>https://iriya-ufo.net/blog/2020/06/23/starting-the-university-of-the-people-term5/</link>
+      <pubDate>Tue, 23 Jun 2020 08:51:57 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/06/23/starting-the-university-of-the-people-term5/</guid>
+      <description>先々週 University of the People Term4 が終わりました。Term4 では Programming Fundamentals と Online Education Strategies の2コースを受講していました。 Programming Fundamentals は Python を使って基本的な文法や考え方を身につけるとい</description>
+    </item>
+    
+    <item>
+      <title>HHKB の押下圧を減らし静音化した</title>
+      <link>https://iriya-ufo.net/blog/2020/06/16/enhance-hhkb/</link>
+      <pubDate>Tue, 16 Jun 2020 21:15:00 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/06/16/enhance-hhkb/</guid>
+      <description>HHKB Pro2(型番PD-KB400BN) を約10年ほど使ってきて、ここ1,2年はなんとなく買った Realforce(型番R2TLS-USV-B</description>
+    </item>
+    
+    <item>
+      <title>「FIRE」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2020/05/25/fire/</link>
+      <pubDate>Mon, 25 May 2020 20:52:44 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/05/25/fire/</guid>
+      <description>米国でムーブメントになっている FIRE (セミリタイア、経済的自立) を実現する具体的手法についての本。『2.26ドルを5年で125万ドルに増やした具</description>
+    </item>
+    
+    <item>
+      <title>「1兆ドルコーチ」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2020/04/11/trillion-dollar-coach/</link>
+      <pubDate>Sat, 11 Apr 2020 01:28:23 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/04/11/trillion-dollar-coach/</guid>
+      <description>タイトルに惹かれて書店で購入。1兆ドルコーチ、ビル・キャンベルは元アメフトコーチであり、シリコンバレーの名だたるテック企業のコーチを務めた伝</description>
+    </item>
+    
+    <item>
+      <title>University of the People Term4 が始まりました</title>
+      <link>https://iriya-ufo.net/blog/2020/04/09/starting-the-university-of-the-people-term4/</link>
+      <pubDate>Thu, 09 Apr 2020 10:39:08 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/04/09/starting-the-university-of-the-people-term4/</guid>
+      <description>先週 University of the People Term3 が終わりました。 English Composition 1 (英語基礎コース) はギリギリ合格することができました！ 自分は13年前くらいに受けたTOEICが580くら</description>
+    </item>
+    
+    <item>
+      <title>Mac に nodenv インストールした</title>
+      <link>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</link>
+      <pubDate>Tue, 11 Feb 2020 15:55:10 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</guid>
+      <description>brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ</description>
+    </item>
+    
+    <item>
+      <title>Hugo にコメント投稿機能をつけました</title>
+      <link>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</link>
+      <pubDate>Wed, 05 Feb 2020 16:52:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</guid>
+      <description>Q. Hugo でコメント投稿機能をつけるにはどうしたらいいのだろう？ A. DISQUS 使いましょう！ 公式サイトでも DISQUS 使いましょう、とある。 やり方は簡単。まず DISQUS でサイ</description>
+    </item>
+    
+    <item>
+      <title>University of the People に入学しました</title>
+      <link>https://iriya-ufo.net/blog/2020/01/22/enroll-in-university-of-the-people/</link>
+      <pubDate>Wed, 22 Jan 2020 11:00:33 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/01/22/enroll-in-university-of-the-people/</guid>
+      <description>完全オンラインでコンピューターサイエンスの学位が取得できる University of the People に入学しました。 きっかけはこちらの方のブログを読んだからです。 働きながら米</description>
+    </item>
+    
+    <item>
+      <title>株投資における損益を真面目に計算してみた</title>
+      <link>https://iriya-ufo.net/blog/2020/01/11/profit-and-loss/</link>
+      <pubDate>Sat, 11 Jan 2020 23:50:37 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/01/11/profit-and-loss/</guid>
+      <description>今までの株投資の損益を計算しました。ちょっと成績悪すぎて落第レベルです……。 投資における損益計算シート この損失について深く反省し今後に活かし</description>
+    </item>
+    
+    <item>
+      <title>「失敗から学ぶRDBの正しい歩き方」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2020/01/06/learn-from-miss-db/</link>
+      <pubDate>Mon, 06 Jan 2020 15:38:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2020/01/06/learn-from-miss-db/</guid>
+      <description>新人のエンジニアに読んで欲しい一冊。 現場2,3年で設計経験の無い人が復習がてら読むのにも向いている。 個人的に &amp;ldquo;第3章 やり過ぎたJ</description>
+    </item>
+    
+    <item>
+      <title>Hugo でインライン HTML が表示されなくなった</title>
+      <link>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</link>
+      <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</guid>
+      <description>基本的に Hugo でブログを書くときは markdown を利用して書いています。 ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記</description>
+    </item>
+    
+    <item>
+      <title>「改訂2版 みんなのGo言語」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/12/12/mingo/</link>
+      <pubDate>Thu, 12 Dec 2019 12:36:22 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/12/mingo/</guid>
+      <description>幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている</description>
+    </item>
+    
+    <item>
+      <title>VSCode に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</link>
+      <pubDate>Sun, 08 Dec 2019 01:36:06 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</guid>
+      <description>Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $</description>
+    </item>
+    
+    <item>
+      <title>リポジトリ管理ツール ghq を導入した</title>
+      <link>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</link>
+      <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</guid>
+      <description>更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し</description>
+    </item>
+    
+    <item>
+      <title>「Clean Architecture 達人に学ぶソフトウェアの構造と設計」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</link>
+      <pubDate>Mon, 18 Nov 2019 15:07:17 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/11/18/clean-architecure/</guid>
+      <description>これを読む人は、あの同心円状の The Clean Architecture の図を見たことがあるだろう。 もしかしたら The Clean Architecture についてのより詳しい説明を求めていたかもしれない。 だが本書</description>
+    </item>
+    
+    <item>
+      <title>Vue.js チートシート</title>
+      <link>https://iriya-ufo.net/blog/2019/10/10/vue-essentials-cheat-sheet/</link>
+      <pubDate>Thu, 10 Oct 2019 21:51:46 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/10/10/vue-essentials-cheat-sheet/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>「MEDIA MAKERS―社会が動く「影響力」の正体 宣伝会議」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/10/09/media-makers/</link>
+      <pubDate>Wed, 09 Oct 2019 12:54:09 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/10/09/media-makers/</guid>
+      <description>何かと Twitter で炎上することで有名？な 田端 信太郎 氏が書かれた本。 これだけメディアの本質を理解している人なので、Twitter 発言はもはやわざとだと</description>
+    </item>
+    
+    <item>
+      <title>「広告コピーってこう書くんだ！読本」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/10/08/how-to-write-adcopy/</link>
+      <pubDate>Tue, 08 Oct 2019 17:02:10 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/10/08/how-to-write-adcopy/</guid>
+      <description>広告コピーを書いている人も、そうでない人も読んだほうがいい良書。 コピーライターとしての仕事の本質がぎゅっと詰まっているが、その本質というのは</description>
+    </item>
+    
+    <item>
+      <title>「破天荒フェニックス オンデーズ再生物語」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/10/04/hatenko-phoenix-owndays/</link>
+      <pubDate>Fri, 04 Oct 2019 21:09:05 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/10/04/hatenko-phoenix-owndays/</guid>
+      <description>倒産しかけのメガネ店の身売り先を探していたはずが、いつの間にかその会社に熱が入り自らが買って出て会社再建に乗り出す話し。 書き方のテイストが小</description>
+    </item>
+    
+    <item>
+      <title>「なぜ、あなたの仕事は終わらないのか」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/10/01/why-your-job-does-not-quit/</link>
+      <pubDate>Tue, 01 Oct 2019 16:15:05 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/10/01/why-your-job-does-not-quit/</guid>
+      <description>Windows95 の開発に携わった元マイクロソフトエンジニアの中島 聡さんの書かれた本。 Kindle Unlimited で読めます。 著者の幼少期の体験などを交えながら、ロケットスタートで</description>
+    </item>
+    
+    <item>
+      <title>「ファイナンス理論全史」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/10/01/finance-theory-history/</link>
+      <pubDate>Tue, 01 Oct 2019 10:26:35 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/10/01/finance-theory-history/</guid>
+      <description>タイトルからして難しそうな印象を受けるが中身は平易な言葉で書かれており数式などは出てこない。理論を細かく解説する類のものではなくファイナン</description>
+    </item>
+    
+    <item>
+      <title>「MarketHack流 世界一わかりやすい米国式投資の技法」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/09/30/markethack-technique-of-us-stock/</link>
+      <pubDate>Mon, 30 Sep 2019 15:09:34 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/09/30/markethack-technique-of-us-stock/</guid>
+      <description>じっちゃまの愛称で親しまれている広瀬隆雄さんの著書です。 御年60でありながら Twitter でめっちゃ発言してたり Note とか売ってたりしてなかなかIT感度の高</description>
+    </item>
+    
+    <item>
+      <title>「世界最強のエコノミストが教える お金を増やす一番知的なやり方」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/09/10/the-long-and-short-of-it-john-kay/</link>
+      <pubDate>Tue, 10 Sep 2019 01:10:29 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/09/10/the-long-and-short-of-it-john-kay/</guid>
+      <description>ファイナンス理論の基本を説明しつつ、賢明な投資家になるための道標となるような本である。 結論から言ってしまえば以下の三点に集約される。 分散せよ</description>
+    </item>
+    
+    <item>
+      <title>Rails の開発環境を Docker で構築する</title>
+      <link>https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/</link>
+      <pubDate>Wed, 14 Aug 2019 10:10:30 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/</guid>
+      <description>開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま</description>
+    </item>
+    
+    <item>
+      <title>VSCode で Emacs キーバインドを使う</title>
+      <link>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</link>
+      <pubDate>Tue, 06 Aug 2019 17:31:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</guid>
+      <description>長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン</description>
+    </item>
+    
+    <item>
+      <title>「NO HARD WORK!: 無駄ゼロで結果を出すぼくらの働き方」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/05/09/no-hard-work/</link>
+      <pubDate>Thu, 09 May 2019 15:20:48 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/05/09/no-hard-work/</guid>
+      <description>前記事で Netflix の人事戦略のレビューを書きましたが、今回はベースキャンプ社 (旧37signals) という会社の働き方の本を読みました。 この会社、エ</description>
+    </item>
+    
+    <item>
+      <title>「NETFLIXの最強人事戦略～自由と責任の文化を築く～」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/05/09/building-a-culture-of-freedom-and-responsibility/</link>
+      <pubDate>Thu, 09 May 2019 13:12:51 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/05/09/building-a-culture-of-freedom-and-responsibility/</guid>
+      <description>ある日のネットフリックスの経営会議で、私たちは突然気がついた。あと９か月もすれば、アメリカの全インターネット・トラフィックの３分の１を、うち</description>
+    </item>
+    
+    <item>
+      <title>「達人に学ぶ DB設計 徹底指南書」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/05/06/learn-rdb-design-from-mastery/</link>
+      <pubDate>Mon, 06 May 2019 19:31:59 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/05/06/learn-rdb-design-from-mastery/</guid>
+      <description>データベース設計ってどうやるの？って所をちゃんと知りたかったので読んでみた。若干期待していたのと違ったがたくさん学びもあった。 自分がタイトル</description>
+    </item>
+    
+    <item>
+      <title>「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/</link>
+      <pubDate>Tue, 30 Apr 2019 02:19:52 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/04/30/how-to-build-safety-web-app/</guid>
+      <description>Web 開発エンジニアであれば読んでおきたい本。600ページを超える大型本でかなり骨太である。サンプルコードは平易なPHPを例にしており読みやすい</description>
+    </item>
+    
+    <item>
+      <title>Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</link>
+      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</guid>
+      <description>記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。</description>
+    </item>
+    
+    <item>
+      <title>「バカでも稼げる 米国株 高配当投資」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/01/23/high-dividend-usa-stock/</link>
+      <pubDate>Wed, 23 Jan 2019 01:21:00 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/01/23/high-dividend-usa-stock/</guid>
+      <description>後輩が貸してくれたので読んでみました。 Amazon のリンクに行くと結構なレビューがついてますが、星1〜星5まで評価が別れていてその内容を読むと、信者っ</description>
+    </item>
+    
+    <item>
+      <title>「the four GAFA 四騎士が創り変えた世界」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/01/22/the-four-gafa/</link>
+      <pubDate>Tue, 22 Jan 2019 10:51:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/01/22/the-four-gafa/</guid>
+      <description>書店に平積みにされていたのでなんとなく読んでみた。 GAFA とは Google, Amazon, Facebook, Apple のそれぞれ頭文字を取ってつけた造語だ。 それらを四騎士に例え GAFA 以前の世界と GAFA 以</description>
+    </item>
+    
+    <item>
+      <title>percol から fzf に移行した</title>
+      <link>https://iriya-ufo.net/blog/2019/01/16/percol-to-fzf/</link>
+      <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/01/16/percol-to-fzf/</guid>
+      <description>新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。 直そうと思って調べてみるとどうやら</description>
+    </item>
+    
+    <item>
+      <title>docker-compose up で db が立ち上がらない時は volume を削除してみる</title>
+      <link>https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/</link>
+      <pubDate>Wed, 09 Jan 2019 11:27:47 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/</guid>
+      <description>とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14</description>
+    </item>
+    
+    <item>
+      <title>Octopress から Hugo へ移行した</title>
+      <link>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</link>
+      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</guid>
+      <description>以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は</description>
+    </item>
+    
+    <item>
+      <title>どこで Blog を書くか問題</title>
+      <link>https://iriya-ufo.net/blog/2018/12/26/blog-services/</link>
+      <pubDate>Wed, 26 Dec 2018 16:42:16 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2018/12/26/blog-services/</guid>
+      <description>ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。 仕方なしにアップデートする</description>
+    </item>
+    
+    <item>
+      <title>はてなダイアリー終了</title>
+      <link>https://iriya-ufo.net/blog/2018/12/26/hatena-diary-to-hatena-blog/</link>
+      <pubDate>Wed, 26 Dec 2018 14:10:51 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2018/12/26/hatena-diary-to-hatena-blog/</guid>
+      <description>久しぶりにブログでも書くかと思ったら Octopress が不調。アップデートも煩わしく思ってこの機会にブログを移転しようか考えた。 紆余曲折を経て Hugo を使うことに</description>
+    </item>
+    
+    <item>
+      <title>機械学習とかの関連まとめ</title>
+      <link>https://iriya-ufo.net/ml/</link>
+      <pubDate>Thu, 20 Dec 2018 12:38:52 +0800</pubDate>
+      
+      <guid>https://iriya-ufo.net/ml/</guid>
+      <description>機械学習とかの関連まとめ 機械学習の基礎も分からない状態から、スクラッチで勉強を始めて深層学習をマスターするまでの記録。 始めた段階のスキルセッ</description>
+    </item>
+    
+    <item>
+      <title>Octopress 記事削除</title>
+      <link>https://iriya-ufo.net/blog/2017/10/18/delete-post/</link>
+      <pubDate>Wed, 18 Oct 2017 01:02:03 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/10/18/delete-post/</guid>
+      <description>Octopress で記事の削除は source/_posts/post.markdown を削除すればいい、はずなんだがなぜか消えない。 新しい記事を投稿することによって削除されるかどうかを試してみる。</description>
+    </item>
+    
+    <item>
+      <title>UNIX 時刻の変換</title>
+      <link>https://iriya-ufo.net/blog/2017/05/28/unix-time/</link>
+      <pubDate>Sun, 28 May 2017 23:53:36 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/05/28/unix-time/</guid>
+      <description>UNIX 時間はビルトインコマンドで変換できる Linux の場合 date --date &amp;quot;@1495526373&amp;quot; Mac の場合 date -r 1495526373 UNIX 時間とは</description>
+    </item>
+    
+    <item>
+      <title>Complete Chart of Neural Networks</title>
+      <link>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</link>
+      <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>Deep Learning Nanodegree Foundation Program を受講します</title>
+      <link>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</link>
+      <pubDate>Fri, 03 Feb 2017 12:52:03 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</guid>
+      <description>Udacity というオンライン学習プラットフォームで人工知能のナノ学位コースが始まるよと発表されました。 Introducing Siraj Raval’s Deep Learning Nanodegree Foundation Program! 人工知能の勉強は独学</description>
+    </item>
+    
+    <item>
+      <title>IBM の Data Scientist Workbench がすごい</title>
+      <link>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</link>
+      <pubDate>Wed, 01 Feb 2017 01:31:59 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</guid>
+      <description>機械学習をやってる人やデータサイエンスやってる人は Jupyter Notebooks を使ってる人が多いと思います。 環境構築はそれほど難しくないのですが、これが Web 上で簡単に</description>
+    </item>
+    
+    <item>
+      <title>「35歳までに必ずやるべきこと」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2017/01/28/the-thing-you-should-do-until-35-years-old/</link>
+      <pubDate>Sat, 28 Jan 2017 17:42:31 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/01/28/the-thing-you-should-do-until-35-years-old/</guid>
+      <description>会社にあったので読んでみた。 読者対象はタイトルの通り35歳までの人ということだが、なぜこの年齢なのかというと、35歳までは**『人の心は柔軟</description>
+    </item>
+    
+    <item>
+      <title>Octopress Deploy エラーなおした</title>
+      <link>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</link>
+      <pubDate>Fri, 27 Jan 2017 16:05:43 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</guid>
+      <description>当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。 エラー内容はこんな感じ。 ## Pushing generated _deploy website</description>
+    </item>
+    
+    <item>
+      <title>「アマゾン・ドット・コムの光と影」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2017/01/17/amazon-dot-com-light-and-shadow/</link>
+      <pubDate>Tue, 17 Jan 2017 03:32:08 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2017/01/17/amazon-dot-com-light-and-shadow/</guid>
+      <description>以前『仁義なき宅配』を読んだのですが、その本と同じ著者が書いた Amazon 潜入記だったので気になって読んでみました。 2005年に出版された本で、もう1</description>
+    </item>
+    
+    <item>
+      <title>「エンジニアがフリーランスで年収1000万円になるための稼ぎ方」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/12/19/review-of-how-to-earn-10m-yen-by-freelance/</link>
+      <pubDate>Mon, 19 Dec 2016 19:39:38 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/12/19/review-of-how-to-earn-10m-yen-by-freelance/</guid>
+      <description>お金が欲しいなんて今まであまり思ってこなかったけど、最近とある事がきっかけでもっとあったらいいなと思うようになった。守るべきものができたとい</description>
+    </item>
+    
+    <item>
+      <title>「ビジネス・クリエーション！」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/12/19/review-of-business-creation-mit/</link>
+      <pubDate>Mon, 19 Dec 2016 14:35:29 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/12/19/review-of-business-creation-mit/</guid>
+      <description>これからスタートアップやるんだけど、具体的に何をどうしたらいいんだろうという人向けの本。 ビジネスをするには何かしらの『商品』を世の中に出して</description>
+    </item>
+    
+    <item>
+      <title>Docker 版 Jupyter Notebooks でホストとデータを共有する</title>
+      <link>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</link>
+      <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</guid>
+      <description>前回 Anaconda 環境の Docker イメージを作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うこ</description>
+    </item>
+    
+    <item>
+      <title>「すごい会議」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/12/03/sugoi-kaigi/</link>
+      <pubDate>Sat, 03 Dec 2016 22:37:12 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/12/03/sugoi-kaigi/</guid>
+      <description>会社で週一のイテレーションをしている際に「すごい会議」っていう本、いいらしいよと聞いたので読んでみた。 本書の前半部分は会議とは関係ない著者の</description>
+    </item>
+    
+    <item>
+      <title>TensorFlow を GPU で動かす</title>
+      <link>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</link>
+      <pubDate>Sat, 19 Nov 2016 23:37:43 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</guid>
+      <description>前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま</description>
+    </item>
+    
+    <item>
+      <title>機械学習と数学</title>
+      <link>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</link>
+      <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</guid>
+      <description>人工知能といえば機械学習、そして機械学習といえば数学。チュートリアルやらライブラリやらで、これだけ手軽になった機械学習といえども現段階ではち</description>
+    </item>
+    
+    <item>
+      <title>Docker コンテナに anaconda 環境を構築</title>
+      <link>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</link>
+      <pubDate>Fri, 18 Nov 2016 12:17:31 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</guid>
+      <description>機械学習の主流言語といえば Python ですよね。最近はインストール方法も変わってきており、より便利な方法があるようです。 今回は Anaconda の環境を Docker で作って、さ</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu に Docker をインストール</title>
+      <link>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</link>
+      <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</guid>
+      <description>公式サイトを参考にする。 Install Docker on Ubuntu メモリーとスワップ設定、UFW、DNSの設定はおこなっていない。</description>
+    </item>
+    
+    <item>
+      <title>「コンピューターで脳がつくれるか」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</link>
+      <pubDate>Thu, 10 Nov 2016 02:39:37 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</guid>
+      <description>人工知能に関する平易で読みやすい本、特化型AIと汎用AIの違いについてよく分かる。 脳のモデルと学習モデルの比較をしている点が面白かった。 大脳</description>
+    </item>
+    
+    <item>
+      <title>Deep Learning Machine に Ubuntu のインストール</title>
+      <link>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</link>
+      <pubDate>Thu, 10 Nov 2016 01:38:43 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</guid>
+      <description>『Hardware Architecture for Machine Learning』で作ったマシンに Ubuntu 16.04 LTS をインストールしました。 Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓</description>
+    </item>
+    
+    <item>
+      <title>hardware architecture for machine learning</title>
+      <link>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</link>
+      <pubDate>Wed, 09 Nov 2016 14:58:31 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</guid>
+      <description>機械学習をさせるための専用演算マシンを構築しました。 クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれは</description>
+    </item>
+    
+    <item>
+      <title>「よくわかる 人工知能」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</link>
+      <pubDate>Mon, 31 Oct 2016 00:39:13 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</guid>
+      <description>人工知能という言葉を聞いてどんなイメージを抱くだろう。 以前『人工知能は人間を超えるか』という書籍を読んで、これからの人工知能の行末について想</description>
+    </item>
+    
+    <item>
+      <title>Docker for Mac を使う</title>
+      <link>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</link>
+      <pubDate>Sun, 31 Jul 2016 14:11:03 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</guid>
+      <description>『Mac に Docker 環境を構築する』を書いてしばらくしたら boot2docker が非推奨となって『Docker-machine で Mac に Docker 環境を構築する』を書いたら今度は Docker</description>
+    </item>
+    
+    <item>
+      <title>Perfume のライブに行ってきた</title>
+      <link>https://iriya-ufo.net/blog/2016/06/17/perfume-live/</link>
+      <pubDate>Fri, 17 Jun 2016 02:22:31 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/06/17/perfume-live/</guid>
+      <description>『Perfume 6th Tour 2016「COSMIC EXPLORER」スタンディングエディション in 幕張メッセ』行ってきました。 初めてのライブで右も左も</description>
+    </item>
+    
+    <item>
+      <title>「劇場版 響け！ユーフォニアム」感想</title>
+      <link>https://iriya-ufo.net/blog/2016/05/25/movie-sound-euphonium/</link>
+      <pubDate>Wed, 25 May 2016 00:13:25 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/25/movie-sound-euphonium/</guid>
+      <description>観てきました！「劇場版 響け！ユーフォニアム」 いやぁよかったです。感想を一言でと問われれば・・・ 音響が神！ 映画館の大スクリーンと迫力ある音響、</description>
+    </item>
+    
+    <item>
+      <title>メタプログラミング Ruby</title>
+      <link>https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/</link>
+      <pubDate>Sun, 22 May 2016 23:15:38 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/</guid>
+      <description>今どきのプログラミングといえば Web Web といえば Ruby on Rails といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rail</description>
+    </item>
+    
+    <item>
+      <title>「我が闘争」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/05/18/waga-toso-review/</link>
+      <pubDate>Wed, 18 May 2016 18:44:35 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/18/waga-toso-review/</guid>
+      <description>全体的な話しの流れは『以前読んだホリエモンの本』と似たような内容だった。 幼少期の話しが多く、どちらかというと自己啓発的な感じが『ゼロ』で、起</description>
+    </item>
+    
+    <item>
+      <title>Elastic BeansTalk で遊んでみた</title>
+      <link>https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/</link>
+      <pubDate>Thu, 12 May 2016 18:46:38 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/</guid>
+      <description>Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移</description>
+    </item>
+    
+    <item>
+      <title>ネフローゼが治ったり治らなかったり</title>
+      <link>https://iriya-ufo.net/blog/2016/05/11/nephrotic-syndrome/</link>
+      <pubDate>Wed, 11 May 2016 23:29:09 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/11/nephrotic-syndrome/</guid>
+      <description>前回記事の更新から二ヶ月ほど経ちました。しばらくは大丈夫だったのですが、なんか体調悪いなぁと思ったら再発していたということが、この短いスパン</description>
+    </item>
+    
+    <item>
+      <title>「ジェフ・ベゾス 果てなき野望」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/05/09/jeff-bezos-and-the-age-of-amazon/</link>
+      <pubDate>Mon, 09 May 2016 00:45:28 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/09/jeff-bezos-and-the-age-of-amazon/</guid>
+      <description>Amazon はなぜこれほどまでに巨大企業に成長できたのだろう。Google と違って最新鋭のテクノロジーから始まったわけではない、Apple のように美し</description>
+    </item>
+    
+    <item>
+      <title>「リモートチームでうまくいく」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/05/08/remote-team-makes-better/</link>
+      <pubDate>Sun, 08 May 2016 17:20:50 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/08/remote-team-makes-better/</guid>
+      <description>リモートワークを取り入れて布教していることで有名なソニックガーデンさんの社長、倉貫さんの書かれた本。 リモートワークにはメリットとデメリットが</description>
+    </item>
+    
+    <item>
+      <title>Passenger をやめて Puma にした</title>
+      <link>https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/</link>
+      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/</guid>
+      <description>とあるプロジェクトで Nginx + Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設</description>
+    </item>
+    
+    <item>
+      <title>Octopress のテーマをカスタマイズする</title>
+      <link>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</link>
+      <pubDate>Sat, 30 Apr 2016 03:08:48 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</guid>
+      <description>3rd Party Octopress Themes ここにテーマのテンプレートがあるので、好きなテーマを探して来てインストールすればよい。 リンク切れになってたり、全く違うサイトになって</description>
+    </item>
+    
+    <item>
+      <title>WordPress から GitHub Pages &#43; Octopress に移行した</title>
+      <link>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</link>
+      <pubDate>Fri, 29 Apr 2016 19:22:13 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</guid>
+      <description>今まで http://iriya-ufo.net は WordPress で運用してきたのだけれど、GitHub Pages + Octopress に移行することにした。 WordPress を辞めたくなった理由 WordPress で記事を書くときは Emacs を立ち上げ markdown で書い</description>
+    </item>
+    
+    <item>
+      <title>bower-rails 使ってみた</title>
+      <link>https://iriya-ufo.net/blog/2016/04/08/start-bower-rails/</link>
+      <pubDate>Fri, 08 Apr 2016 00:52:01 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/04/08/start-bower-rails/</guid>
+      <description>Rails 開発で js とか css とかマジだるい。管理とかだるい。なので bower-rails 使ってみた。 事前準備 bower は node package なので最初に Node.js とかインストールしておく。 Mac に Node.js インストー</description>
+    </item>
+    
+    <item>
+      <title>Mac に Node.js インストールした</title>
+      <link>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</link>
+      <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</guid>
+      <description>今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を</description>
+    </item>
+    
+    <item>
+      <title>希少価値</title>
+      <link>https://iriya-ufo.net/blog/2016/04/03/scarcity-value/</link>
+      <pubDate>Sun, 03 Apr 2016 23:14:56 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/04/03/scarcity-value/</guid>
+      <description>国税庁の民間給与実態統計調査結果によると、年収900万円台の男性の割合は2.7%だそうです。1000万〜1500万台だと幅が広いためか少し増</description>
+    </item>
+    
+    <item>
+      <title>tmux でクリップボードを使う</title>
+      <link>https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/</link>
+      <pubDate>Fri, 25 Mar 2016 15:26:45 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/</guid>
+      <description>いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。</description>
+    </item>
+    
+    <item>
+      <title>Botkit から Google API 叩いてみた</title>
+      <link>https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/</link>
+      <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/</guid>
+      <description>前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。 Hubot</description>
+    </item>
+    
+    <item>
+      <title>Docker DataCenter さわってみた</title>
+      <link>https://iriya-ufo.net/blog/2016/03/08/start-docker-datacenter/</link>
+      <pubDate>Tue, 08 Mar 2016 04:38:29 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/03/08/start-docker-datacenter/</guid>
+      <description>以下の記事をみかけて、これはやらずにいられないと思っていじってみた感想。 コンテナ化したアプリケーションの総合的一元的管理コンソールDocke</description>
+    </item>
+    
+    <item>
+      <title>Slack に Hubot をいれてみた</title>
+      <link>https://iriya-ufo.net/blog/2016/03/04/hubot-on-slack/</link>
+      <pubDate>Fri, 04 Mar 2016 18:10:03 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/03/04/hubot-on-slack/</guid>
+      <description>Hubot は GitHub が開発した bot のフレームワークです。Node.js の上で走って CoffeeScript で動きます。実装環境は AWS にしました。常時稼働させとかなきゃいけないからね</description>
+    </item>
+    
+    <item>
+      <title>ネフローゼ再発したからなんか書く</title>
+      <link>https://iriya-ufo.net/blog/2016/02/09/nephrotic-syndrome/</link>
+      <pubDate>Tue, 09 Feb 2016 00:51:28 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/02/09/nephrotic-syndrome/</guid>
+      <description>今回も原因はよく分かりませんが、再発してしまいました。 前回記事が2014年07月20日なので一年と半年ぶりくらいでしょうか。一年半くらいで周</description>
+    </item>
+    
+    <item>
+      <title>「人工知能は人間を超えるか」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/01/26/does-ai-beat-human/</link>
+      <pubDate>Tue, 26 Jan 2016 02:11:39 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/01/26/does-ai-beat-human/</guid>
+      <description>表紙に惹かれてつい買ってしまった本だったが買ってよかった。タイトルからシンギュラリティの話かなぁと思ってたけどそうではなかった。 人工知能のこ</description>
+    </item>
+    
+    <item>
+      <title>「ゼロ &amp;#8212; なにもない自分に小さなイチを足していく」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/01/18/zero-horiemon/</link>
+      <pubDate>Mon, 18 Jan 2016 03:10:44 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/01/18/zero-horiemon/</guid>
+      <description>ホリエモンを知らない人は日本にどれくらいいるんだろう。IT企業のライブドア、球団買収、ニッポン放送とメディアを騒がして著名になったと思えば、</description>
+    </item>
+    
+    <item>
+      <title>「仁義なき宅配」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2016/01/17/delivery-company-fight/</link>
+      <pubDate>Sun, 17 Jan 2016 02:15:17 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/01/17/delivery-company-fight/</guid>
+      <description>物流関連の仕事をしているならこの本は必読、と言われて渡してもらった本がこれです。 仁義なき宅配: ヤマトVS佐川VS日本郵便VSアマゾン 最近よう</description>
+    </item>
+    
+    <item>
+      <title>目標設定にKPIを定める</title>
+      <link>https://iriya-ufo.net/blog/2016/01/04/set-kpi-of-your-personal-goal/</link>
+      <pubDate>Mon, 04 Jan 2016 01:21:19 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2016/01/04/set-kpi-of-your-personal-goal/</guid>
+      <description>前回記事にて2015年の振り返りっぽいことをやったのですが、2016年に何を目標とするかまだ決めてませんでした。仕事初めの前にきちっと目標を</description>
+    </item>
+    
+    <item>
+      <title>さて、来年は何をやろうかな</title>
+      <link>https://iriya-ufo.net/blog/2015/12/27/what-will-i-do-at-next-year/</link>
+      <pubDate>Sun, 27 Dec 2015 03:14:29 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/12/27/what-will-i-do-at-next-year/</guid>
+      <description>ちょっとPCのフォルダーを整理してたら「2015年度の目標.xls」というのが出てきた。ふと気づくと2015年が終わろうとしている。この段階</description>
+    </item>
+    
+    <item>
+      <title>ガヴちゃん堕天使でまじ可愛い</title>
+      <link>https://iriya-ufo.net/blog/2015/11/30/gavriil-drop-out/</link>
+      <pubDate>Mon, 30 Nov 2015 00:28:51 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/11/30/gavriil-drop-out/</guid>
+      <description>いやぁ、出ましたね。よつばと! 13巻!! めっちゃ待ちましたよ。めっちゃ。もう出ないんじゃないって思ってましたからね。新作読めて最高です。 13</description>
+    </item>
+    
+    <item>
+      <title>「AV男優しみけん 光り輝くクズでありたい」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2015/10/11/shimiken-book-review/</link>
+      <pubDate>Sun, 11 Oct 2015 02:09:29 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/10/11/shimiken-book-review/</guid>
+      <description>みなさんは「しみけん」という男性をご存知だろうか。言わずと知れた人気AV男優である。最近しみけんが出した本「光り輝くクズでありたい」を読んだ</description>
+    </item>
+    
+    <item>
+      <title>docker-machine で Mac に Docker 環境を構築する</title>
+      <link>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</link>
+      <pubDate>Sat, 10 Oct 2015 21:33:25 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</guid>
+      <description>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &amp;quot;boot2docker-vm&amp;quot;: machine does not</description>
+    </item>
+    
+    <item>
+      <title>Mac に Python 環境構築</title>
+      <link>https://iriya-ufo.net/blog/2015/10/10/python-on-mac/</link>
+      <pubDate>Sat, 10 Oct 2015 19:00:23 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/10/10/python-on-mac/</guid>
+      <description>【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を</description>
+    </item>
+    
+    <item>
+      <title>「お釈迦さまの脳科学」を読んでみた</title>
+      <link>https://iriya-ufo.net/blog/2015/07/26/brain-science-of-buddha/</link>
+      <pubDate>Sun, 26 Jul 2015 09:04:13 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/07/26/brain-science-of-buddha/</guid>
+      <description>人間はよく考える生き物です。なぜ生きているのか、幸せとはなにか、そういった普遍的な問いに対して様々な解答がなされてきました。とりわけ仏教の説</description>
+    </item>
+    
+    <item>
+      <title>Mac に Docker 環境を構築する</title>
+      <link>https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/</link>
+      <pubDate>Mon, 20 Jul 2015 14:28:57 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/</guid>
+      <description>とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では</description>
+    </item>
+    
+    <item>
+      <title>人口知能と生命</title>
+      <link>https://iriya-ufo.net/blog/2015/07/11/ai-and-life/</link>
+      <pubDate>Sat, 11 Jul 2015 13:52:57 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/07/11/ai-and-life/</guid>
+      <description>非常に興味深い記事を見つけた。 宗教は人工知能を生命と認められるのか – シンギュラリティと宗教 生命とはなにかという問いは長年の間、議論されてきた</description>
+    </item>
+    
+    <item>
+      <title>行動しなければ何も手にはいらない</title>
+      <link>https://iriya-ufo.net/blog/2015/07/05/get-something-from-action/</link>
+      <pubDate>Sun, 05 Jul 2015 18:46:42 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/07/05/get-something-from-action/</guid>
+      <description>突然だが僕は今、彼女が欲しい。彼女が欲しいと思っている。好きな人となにげない会話をしたりどっか遊びにいったりしたい。でも僕はイケメンでもなけ</description>
+    </item>
+    
+    <item>
+      <title>スタートアップで大事なこと</title>
+      <link>https://iriya-ufo.net/blog/2015/07/03/important-point-about-startup/</link>
+      <pubDate>Fri, 03 Jul 2015 00:38:07 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/07/03/important-point-about-startup/</guid>
+      <description>スタートアップは難しい。人はいない、金はない、技術もない、無いことづくしである。そんな不利な状況を克服して成功するためにはいくつかコツがいる</description>
+    </item>
+    
+    <item>
+      <title>BABYMETAL</title>
+      <link>https://iriya-ufo.net/blog/2015/06/13/babymetal/</link>
+      <pubDate>Sat, 13 Jun 2015 20:09:43 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/06/13/babymetal/</guid>
+      <description>メタル可愛いベイビー、あびゃーーー 気づいたらアルバム購入してた・・・</description>
+    </item>
+    
+    <item>
+      <title>「小さなチーム、大きな仕事」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2015/06/07/small-team-big-job/</link>
+      <pubDate>Sun, 07 Jun 2015 17:26:54 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/06/07/small-team-big-job/</guid>
+      <description>37signals の創業者が書いた本。だいぶ前にIT界隈で賑わった本を今更ながら読んだ。タイトルにある通り、少ない人数のチームでも大きな成果を得る仕事をする</description>
+    </item>
+    
+    <item>
+      <title>Meteor が想像以上にすごかった</title>
+      <link>https://iriya-ufo.net/blog/2015/05/24/start-meteor/</link>
+      <pubDate>Sun, 24 May 2015 05:17:20 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/05/24/start-meteor/</guid>
+      <description>友人に勧められて、ウェブアプリケーションフレームワークの Meteor で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどん</description>
+    </item>
+    
+    <item>
+      <title>「アイデアのつくり方」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2015/05/23/how-to-generate-idea/</link>
+      <pubDate>Sat, 23 May 2015 22:38:43 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/05/23/how-to-generate-idea/</guid>
+      <description>『良書はいつの時代も良書である』 ふらっと立ち寄った本屋でみた帯が印象的で今でもはっきりと覚えている。この帯が書かれた本は「ご冗談でしょう、フ</description>
+    </item>
+    
+    <item>
+      <title>tmux の sync pane 機能に感動した</title>
+      <link>https://iriya-ufo.net/blog/2015/05/22/great-function-of-tmux-sync-pane/</link>
+      <pubDate>Fri, 22 May 2015 22:22:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/05/22/great-function-of-tmux-sync-pane/</guid>
+      <description>「ターミナルの仮想端末といえば screen」ってな感じで使ってたんですが、とあるレンタルサーバーで tmux 設定がデフォになってたんで重い腰をあげて</description>
+    </item>
+    
+    <item>
+      <title>「地頭力を鍛える」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2015/05/21/improve-your-brain/</link>
+      <pubDate>Thu, 21 May 2015 03:53:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/05/21/improve-your-brain/</guid>
+      <description>タイトルに惹かれて読んでみた。これで少しは地頭がよくなるかと思ったけど期待はずれ。 話しの基本は Google や Microsoft も面接に使うというフェルミ推定を主軸に進</description>
+    </item>
+    
+    <item>
+      <title>思い込みの幸せは偽物じゃない</title>
+      <link>https://iriya-ufo.net/blog/2015/05/06/the-surprising-science-of-happiness/</link>
+      <pubDate>Wed, 06 May 2015 03:46:58 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/05/06/the-surprising-science-of-happiness/</guid>
+      <description>人生における本当の幸せとはなにか、誰しも一度は考えて悩んだことのある問いだろう。 僕たちは、自分がどれくらい幸せなのかをついつい他人との比較で</description>
+    </item>
+    
+    <item>
+      <title>Mac に Clojure 環境いれてみた</title>
+      <link>https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/</link>
+      <pubDate>Thu, 23 Apr 2015 23:10:30 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/</guid>
+      <description>Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな</description>
+    </item>
+    
+    <item>
+      <title>「金持ち父さんのキャッシュフロー・クワドラント」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2015/04/15/rich-dad-cash-flow/</link>
+      <pubDate>Wed, 15 Apr 2015 22:02:51 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/04/15/rich-dad-cash-flow/</guid>
+      <description>知り合いに勧められたので読んでみました。前作となる「金持ち父さん、貧乏父さん」も読んでいます。本書は前作に比べてより右側にいくための方法につ</description>
+    </item>
+    
+    <item>
+      <title>ポスト・ヒューマン時代</title>
+      <link>https://iriya-ufo.net/blog/2015/02/22/post-human-era/</link>
+      <pubDate>Sun, 22 Feb 2015 21:39:23 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/02/22/post-human-era/</guid>
+      <description>機械が人間のような知性を備えることで想像のつかないレベルで世界が一変する。それは徐々に変化してそうなるのではなくてある一点を通り過ぎることで</description>
+    </item>
+    
+    <item>
+      <title>ネットワークビジネスを好きになれない理由</title>
+      <link>https://iriya-ufo.net/blog/2015/02/20/the-reason-that-i-dont-like-network-business/</link>
+      <pubDate>Fri, 20 Feb 2015 13:13:08 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/02/20/the-reason-that-i-dont-like-network-business/</guid>
+      <description>「我思う、ゆえに我あり」という有名な言葉を残したのはフランスの哲学者デカルトだ。批判することなく受け入れてきた先入観を排除し全てのものを疑う</description>
+    </item>
+    
+    <item>
+      <title>Mac に Common Lisp 処理系をインストールする</title>
+      <link>https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/</link>
+      <pubDate>Tue, 10 Feb 2015 03:42:46 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/</guid>
+      <description>Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと</description>
+    </item>
+    
+    <item>
+      <title>「金持ち父さん 貧乏父さん」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2015/02/05/rich-dad-poor-dad/</link>
+      <pubDate>Thu, 05 Feb 2015 10:35:40 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/02/05/rich-dad-poor-dad/</guid>
+      <description>言わずと知れたベストセラー本です。知り合いに勧められたので今更ですが読んでみました。 内容を少し今風に変更した改訂版が出ているとのことなのでそ</description>
+    </item>
+    
+    <item>
+      <title>「自分がいなくてもうまくいく仕組み」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2015/01/26/run-your-company-not-depend-on-you/</link>
+      <pubDate>Mon, 26 Jan 2015 00:33:59 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2015/01/26/run-your-company-not-depend-on-you/</guid>
+      <description>最初この本を買ったときは、「自分が会社との関わりを断っても会社がうまくまわるための離れ方のノウハウ」みたいなのを想像してました。 ひろゆきが 2ch</description>
+    </item>
+    
+    <item>
+      <title>乗馬を初体験した</title>
+      <link>https://iriya-ufo.net/blog/2014/12/28/first-horse-riding/</link>
+      <pubDate>Sun, 28 Dec 2014 22:33:56 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/12/28/first-horse-riding/</guid>
+      <description>僕は年始にその年のうちにやりたいことをリストアップしているのですが、2014年のやりたいことの一つに乗馬がありました。今年ももうわずかだなと</description>
+    </item>
+    
+    <item>
+      <title>middleman-s3_sync で colorize のエラーがでた</title>
+      <link>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</link>
+      <pubDate>Sat, 27 Dec 2014 21:55:29 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</guid>
+      <description>静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました</description>
+    </item>
+    
+    <item>
+      <title>brew のアップグレードで rails プロジェクトなどが動かなくなったら</title>
+      <link>https://iriya-ufo.net/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</link>
+      <pubDate>Wed, 17 Dec 2014 23:05:08 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</guid>
+      <description>brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっていま</description>
+    </item>
+    
+    <item>
+      <title>PostgreSQL の基本</title>
+      <link>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</link>
+      <pubDate>Wed, 17 Dec 2014 21:43:32 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</guid>
+      <description>環境は Mac でやってますが Linux でもほぼ同じです。 インストールから初期設定まで Mac なので brew でインストールします。 $ brew install postgresql 最初にデータベースの初期化をし</description>
+    </item>
+    
+    <item>
+      <title>Vim 小技集</title>
+      <link>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</link>
+      <pubDate>Thu, 04 Dec 2014 18:58:13 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</guid>
+      <description>自分のための覚書 編集 :%s/:\(\w\+\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl+v jjjj I # 4行コメントアウト(,#) Ctrl+v jjjj d # 4行コメントイン(,#) Ctrl+v jjjj c aaaa # 4行置換 viwy #</description>
+    </item>
+    
+    <item>
+      <title>「私は、こんな人になら、金を出す！」読了</title>
+      <link>https://iriya-ufo.net/blog/2014/11/24/ideal-person-who-can-take-invest/</link>
+      <pubDate>Mon, 24 Nov 2014 17:04:11 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/11/24/ideal-person-who-can-take-invest/</guid>
+      <description>ベンチャーキャピタル (以下VC) と一言にいっても、体系は種々あって、大きく2つに分けるとすれば会社組織と投資事業組合があります。著者の村口さ</description>
+    </item>
+    
+    <item>
+      <title>Healthcare Hackathon in Tokyo 3rd Report @ Nov. 8</title>
+      <link>https://iriya-ufo.net/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</link>
+      <pubDate>Mon, 17 Nov 2014 03:30:03 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</guid>
+      <description>ちょっと遅くなりましたが Healthcare Hackathon に参加したのでレポートを書きます。医療健康分野というテーマに絞った珍しいハッカソンでした。第3回は 2014/11/08 HUB TOKYO (目黒)</description>
+    </item>
+    
+    <item>
+      <title>ヘルステックスタートアップイベントに参加しました</title>
+      <link>https://iriya-ufo.net/blog/2014/10/11/attend-at-health-tech-startup-event/</link>
+      <pubDate>Sat, 11 Oct 2014 19:23:47 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/10/11/attend-at-health-tech-startup-event/</guid>
+      <description>参加者はだいたいこんな感じ。 150人から200人ほど ヘルスケア領域の人たちが 1/3 IT業界の人たちが 2/3 その他 セッションスペースでは4つのトピック</description>
+    </item>
+    
+    <item>
+      <title>高速検索の ag を入れてみた</title>
+      <link>https://iriya-ufo.net/blog/2014/09/09/install-ag/</link>
+      <pubDate>Tue, 09 Sep 2014 23:43:08 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/09/09/install-ag/</guid>
+      <description>プログラムを書いてると検索という行為一つで大きく生産性が変わることをプログラマーは知っています。僕は今まで grep を使ってた、というか grep しか知らな</description>
+    </item>
+    
+    <item>
+      <title>highlight-symbol が便利</title>
+      <link>https://iriya-ufo.net/blog/2014/09/08/useful-package-highlight-symbol-emacs/</link>
+      <pubDate>Mon, 08 Sep 2014 16:01:00 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/09/08/useful-package-highlight-symbol-emacs/</guid>
+      <description>ちょっとした事なんですが、プログラムを書いてると、「このシンボルを目立つようにマーク付けしておきたいなぁ」なんて思うことがあります。関数とか</description>
+    </item>
+    
+    <item>
+      <title>Sinatra アプリを Heroku で動かすまで</title>
+      <link>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</link>
+      <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
+      <description>環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま</description>
+    </item>
+    
+    <item>
+      <title>&amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#8216;MacOSX10.9.sdk&amp;#8217; does not support Swift</title>
+      <link>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</link>
+      <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
+      <description>Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &amp;lt;unknown&amp;gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ</description>
+    </item>
+    
+    <item>
+      <title>Xcode で作ったプロジェクトを削除する方法</title>
+      <link>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</link>
+      <pubDate>Sun, 24 Aug 2014 16:41:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</guid>
+      <description>練習がてら適当にプロジェクトを作成するといっぱい溜まってくるのでいらないものは消してすっきりしたくなる時があるかと思います。Xcode で作っ</description>
+    </item>
+    
+    <item>
+      <title>Gauche のユーザーリファレンスを読む</title>
+      <link>https://iriya-ufo.net/blog/2014/08/20/read-gauche-reference/</link>
+      <pubDate>Wed, 20 Aug 2014 02:07:11 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/20/read-gauche-reference/</guid>
+      <description>Gauche のリファレンス読むのにはいくつか方法があって、Emacs で el いれて読みだすとか info 入れるとかありますけど、一番簡単な方法はこれでしょう。 Chrome 使</description>
+    </item>
+    
+    <item>
+      <title>「良いコードを書く技術」読了</title>
+      <link>https://iriya-ufo.net/blog/2014/08/16/how-to-write-better-code/</link>
+      <pubDate>Sat, 16 Aug 2014 17:32:43 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/16/how-to-write-better-code/</guid>
+      <description>良いプログラマであるならば良いコードに対する知見があるはずです。初心者の間は何が良いコードで何が悪いコードなのか分からないことが多く、また分</description>
+    </item>
+    
+    <item>
+      <title>「グーグル ネット覇者の真実」読了</title>
+      <link>https://iriya-ufo.net/blog/2014/08/09/how-google-thinks-works-and-shapes-our-lives/</link>
+      <pubDate>Sat, 09 Aug 2014 22:44:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/09/how-google-thinks-works-and-shapes-our-lives/</guid>
+      <description>グーグルネット覇者の真実を読みました。 ほとんど読み飛ばしました。気になった点だけ引用させて頂きます。 真の意味での失敗はひとつしかなく、それは</description>
+    </item>
+    
+    <item>
+      <title>「アインシュタインの教育観」読了</title>
+      <link>https://iriya-ufo.net/blog/2014/08/09/einsteins-mind-of-education/</link>
+      <pubDate>Sat, 09 Aug 2014 22:07:51 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/08/09/einsteins-mind-of-education/</guid>
+      <description>教える能力で大事な事 「教える能力というのは面白く教える事である。どんな抽象的な教材でも、それが生徒の心の琴線に共鳴を起こさせるようにし、好奇</description>
+    </item>
+    
+    <item>
+      <title>Swift をインタラクティブに実行しながら勉強しよう (関数編)</title>
+      <link>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</link>
+      <pubDate>Sat, 26 Jul 2014 15:55:36 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</guid>
+      <description>Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Sw</description>
+    </item>
+    
+    <item>
+      <title>Swift をとりあえず実行するまでの手順</title>
+      <link>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</link>
+      <pubDate>Wed, 23 Jul 2014 03:06:46 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</guid>
+      <description>WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に</description>
+    </item>
+    
+    <item>
+      <title>Mavericks にアップグレードしたらターミナルが落ちた</title>
+      <link>https://iriya-ufo.net/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</link>
+      <pubDate>Tue, 22 Jul 2014 12:31:08 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</guid>
+      <description>今更ですが Lion から Mavericks にアップグレードしました。OS のアップグレードは色々トラブルが起こるのであまりしたくないのですが、流行りについていかないの</description>
+    </item>
+    
+    <item>
+      <title>Emacs に swift-mode をインストール</title>
+      <link>https://iriya-ufo.net/blog/2014/07/21/install-swift-mode-to-emacs/</link>
+      <pubDate>Mon, 21 Jul 2014 14:51:49 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/21/install-swift-mode-to-emacs/</guid>
+      <description>Apple が発表した新言語 Swift が話題になってますね。 ほとんどの人は Xcode で試すのでしょうけど、あんな不便なIDEを使いたくない Emacs 病の人がいるかと思います。</description>
+    </item>
+    
+    <item>
+      <title>入院せずにネフローゼと向き合う</title>
+      <link>https://iriya-ufo.net/blog/2014/07/20/nephrotic-syndrome/</link>
+      <pubDate>Sun, 20 Jul 2014 11:54:57 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/20/nephrotic-syndrome/</guid>
+      <description>何度目の再発だろう？ 久々に再発しました。1年と3ヶ月ぶりです。再発する度に原因を考えているのですがやはり再現理由が分かりません。僕の職業はプ</description>
+    </item>
+    
+    <item>
+      <title>2014年夏アニメはこれが熱い！</title>
+      <link>https://iriya-ufo.net/blog/2014/07/18/summer-anime2014/</link>
+      <pubDate>Fri, 18 Jul 2014 01:17:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/18/summer-anime2014/</guid>
+      <description>2014年夏アニメで個人的にチェックしていた作品の一話を全部観終わったので感想を書きます。 とりあえず一話だけなのでまだまだどうなるか分からん</description>
+    </item>
+    
+    <item>
+      <title>Yahoo！知恵袋でみた鮮やかな解答</title>
+      <link>https://iriya-ufo.net/blog/2014/07/16/yahoo-chiebukuro/</link>
+      <pubDate>Wed, 16 Jul 2014 23:00:27 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/16/yahoo-chiebukuro/</guid>
+      <description>弱者を抹殺する。 不謹慎な質問ですが、疑問に思ったのでお答え頂ければと思い&amp;hellip; 以下の質問に対し、あなたならどう答えるだろう？ 弱者を</description>
+    </item>
+    
+    <item>
+      <title>自分の性格に適した解を見つけ出す</title>
+      <link>https://iriya-ufo.net/blog/2014/07/13/find-your-personal-good-point/</link>
+      <pubDate>Sun, 13 Jul 2014 22:12:31 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/07/13/find-your-personal-good-point/</guid>
+      <description>「なあ白。人は変われるっていうけど、本当にそうかな。飛びたいって願えば、翼が生えるのかな？違うと思うんだ。変えるべきは自分じゃなくて、手段じ</description>
+    </item>
+    
+    <item>
+      <title>【感想】言の葉の庭</title>
+      <link>https://iriya-ufo.net/blog/2014/06/12/kotonoha-no-niwa/</link>
+      <pubDate>Thu, 12 Jun 2014 02:49:02 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/06/12/kotonoha-no-niwa/</guid>
+      <description>TSUTAYAで借りてきてみました。一言で感想を言うと良くも悪くも新海作品だなという感じです。 開始すぐに「え？実写か？」と思うほど雨の描写を</description>
+    </item>
+    
+    <item>
+      <title>便所飯に至る理由</title>
+      <link>https://iriya-ufo.net/blog/2014/06/10/benjo-meshi/</link>
+      <pubDate>Tue, 10 Jun 2014 02:10:58 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/06/10/benjo-meshi/</guid>
+      <description>私は高校生の時に一度だけ便所飯をしたことがあります。べつにいじめられていたとか友だちがいなかったとかいうわけではありません。 その日は休日で朝</description>
+    </item>
+    
+    <item>
+      <title>コマンドから Heroku アプリを削除</title>
+      <link>https://iriya-ufo.net/blog/2014/06/10/delete-heroku-app-by-terminal/</link>
+      <pubDate>Tue, 10 Jun 2014 01:35:28 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/06/10/delete-heroku-app-by-terminal/</guid>
+      <description>Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削</description>
+    </item>
+    
+    <item>
+      <title>Mac OS X で locate エラーの直し方</title>
+      <link>https://iriya-ufo.net/blog/2014/06/07/fix-locate-error/</link>
+      <pubDate>Sat, 07 Jun 2014 22:35:26 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/06/07/fix-locate-error/</guid>
+      <description>Linux でお世話になってるファイルを探すコマンドの locate ですが、当然 Mac にもあります。 しかしデータベースを更新するコマンドが違ってて Linux だと updatedb ですが Mac は /usr/libexec/locate.updatedb</description>
+    </item>
+    
+    <item>
+      <title>続・SICP読書会</title>
+      <link>https://iriya-ufo.net/blog/2014/05/18/sicp-reading/</link>
+      <pubDate>Sun, 18 May 2014 03:41:22 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/05/18/sicp-reading/</guid>
+      <description>最近タスクがこなせていない SICP 読書会になっていましたが、この度新しくメンバーが2人入ってきてテンション上がりました。 場所決めグダグダになって申</description>
+    </item>
+    
+    <item>
+      <title>Windows 7 64bit に Rails の環境を構築</title>
+      <link>https://iriya-ufo.net/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</link>
+      <pubDate>Thu, 08 May 2014 23:39:00 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</guid>
+      <description>最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずこ</description>
+    </item>
+    
+    <item>
+      <title>Mac に AUCTeX をインストールした</title>
+      <link>https://iriya-ufo.net/blog/2014/04/13/auctex-to-mac-emacs/</link>
+      <pubDate>Sun, 13 Apr 2014 15:34:38 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/04/13/auctex-to-mac-emacs/</guid>
+      <description>昔書いてた TeX を Mac 環境で快適に使う設定を始めたのが運のつき・・・めちゃ時間かかりました。 TeX はもうバッドノウハウの固まりって感じがして好きじゃな</description>
+    </item>
+    
+    <item>
+      <title>Mac の Gauche で SLIB を使う</title>
+      <link>https://iriya-ufo.net/blog/2014/04/12/slib-with-gauche/</link>
+      <pubDate>Sat, 12 Apr 2014 17:17:10 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/04/12/slib-with-gauche/</guid>
+      <description>Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。 ここからダウンロードしてくれば使えるようになります。 The SLIB</description>
+    </item>
+    
+    <item>
+      <title>SICP 読書会始めました</title>
+      <link>https://iriya-ufo.net/blog/2014/04/07/sicp-reading/</link>
+      <pubDate>Mon, 07 Apr 2014 02:15:09 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/04/07/sicp-reading/</guid>
+      <description>もうすでに2回ほど挫折してるけど今回こそは読破する勢いで読んでいきます。そのための心強い仲間もできました。興味のある方は歓迎しておりますので</description>
+    </item>
+    
+    <item>
+      <title>Mac の Emacs に cmigemo をインストール</title>
+      <link>https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/</link>
+      <pubDate>Wed, 19 Mar 2014 01:11:21 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/</guid>
+      <description>cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。 まずはインストールから $ brew install cmigemo ここから migemo.el をとって</description>
+    </item>
+    
+    <item>
+      <title>gem を管理しよう</title>
+      <link>https://iriya-ufo.net/blog/2014/03/14/lets-manage-gem/</link>
+      <pubDate>Fri, 14 Mar 2014 02:23:08 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/03/14/lets-manage-gem/</guid>
+      <description>Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは $ gem install hoge とかやってるかと思います。そんな</description>
+    </item>
+    
+    <item>
+      <title>Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった</title>
+      <link>https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/</link>
+      <pubDate>Wed, 12 Mar 2014 02:12:34 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/</guid>
+      <description>プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみよ</description>
+    </item>
+    
+    <item>
+      <title>土日で出来る Node.js 入門</title>
+      <link>https://iriya-ufo.net/blog/2014/03/08/start-nodejs-at-weekend/</link>
+      <pubDate>Sat, 08 Mar 2014 17:29:27 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/03/08/start-nodejs-at-weekend/</guid>
+      <description>そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。 インストール方法 Node.js はまだまだ開発まっし</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu の git を最新にする</title>
+      <link>https://iriya-ufo.net/blog/2014/03/08/update-git-by-ubuntu/</link>
+      <pubDate>Sat, 08 Mar 2014 15:16:11 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/03/08/update-git-by-ubuntu/</guid>
+      <description>Ubuntu への git インストールは apt-get で出来ますがバージョンが古いので最新バージョンをインストールする方法です。ソースコンパイルは行わずパッケージマネジャ</description>
+    </item>
+    
+    <item>
+      <title>rbenv で入れた ruby で flymake がちゃんと動作しなかったので直した</title>
+      <link>https://iriya-ufo.net/blog/2014/02/05/fix-flymake/</link>
+      <pubDate>Wed, 05 Feb 2014 00:28:18 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/02/05/fix-flymake/</guid>
+      <description>Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？ flymake はデフォルトだとシステムの ruby を読み</description>
+    </item>
+    
+    <item>
+      <title>オンラインコースを成功させる6つのポイント</title>
+      <link>https://iriya-ufo.net/blog/2014/01/26/the-6-success-point-of-online-course/</link>
+      <pubDate>Sun, 26 Jan 2014 21:48:56 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/01/26/the-6-success-point-of-online-course/</guid>
+      <description>オンラインで授業を行うときに大切な6つのTipsを見つけたので紹介します。 6 Tips to Make Sure Your Online Courses Serve Students Well オンラインでの授業が生徒にとって有益なものと</description>
+    </item>
+    
+    <item>
+      <title>あなたは子どもたちから創造性を奪っている</title>
+      <link>https://iriya-ufo.net/blog/2014/01/25/dont-take-away-imagination-from-kids/</link>
+      <pubDate>Sat, 25 Jan 2014 01:14:31 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/01/25/dont-take-away-imagination-from-kids/</guid>
+      <description>従来の教育システムから飛び出した子 興味深い記事がありましたので適当に翻訳しつつ見解を述べます。 This Is What Happens When A Kid Leaves Traditional Education 以下リンク記事の意訳 ローガ</description>
+    </item>
+    
+    <item>
+      <title>教育にイノベーションを起こすのは、行政かスタートアップか？</title>
+      <link>https://iriya-ufo.net/blog/2014/01/10/administration-vs-startup-in-education/</link>
+      <pubDate>Fri, 10 Jan 2014 19:39:37 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/01/10/administration-vs-startup-in-education/</guid>
+      <description>最近 EdTech (Education + Technology) という言葉が盛んです。スタートアップ界隈でも教育関連のサービスがたくさん生まれてきています。米国のみならず日本でも注目されている</description>
+    </item>
+    
+    <item>
+      <title>チリ人と過ごした2013年の年末</title>
+      <link>https://iriya-ufo.net/blog/2014/01/06/spent-with-chile-guest-from-airbnb/</link>
+      <pubDate>Mon, 06 Jan 2014 03:42:07 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/01/06/spent-with-chile-guest-from-airbnb/</guid>
+      <description>可愛い天使がやってきた 2013年の年末にチリからゲストがやってきました。写真の子らはナツコとケンジです。滞在期間は4日間。今までにもたくさん</description>
+    </item>
+    
+    <item>
+      <title>2013年を振り返ってみた</title>
+      <link>https://iriya-ufo.net/blog/2014/01/05/my-life-turning-point-2013/</link>
+      <pubDate>Sun, 05 Jan 2014 04:16:06 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2014/01/05/my-life-turning-point-2013/</guid>
+      <description>2013年は僕にとって大きな変化があった年でした。何があったのか振り返ってみて2014年の糧にしたいと思います (ブログ書いてる間に2013年</description>
+    </item>
+    
+    <item>
+      <title>海外の教育系スタートアップで気になるものまとめ</title>
+      <link>https://iriya-ufo.net/blog/2013/12/29/cool-educational-startup-list/</link>
+      <pubDate>Sun, 29 Dec 2013 03:24:34 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/12/29/cool-educational-startup-list/</guid>
+      <description>昨今スタートアップ界隈で EdTech が流行しています。そこで個人的に気になった海外の教育系スタートアップを選んでまとめてみました。 ck-12 Link: ck12 k-12とは幼</description>
+    </item>
+    
+    <item>
+      <title>写真 &#43; 音声アプリの Voicepic がサービス終了</title>
+      <link>https://iriya-ufo.net/blog/2013/12/14/quit-voicepic-startup/</link>
+      <pubDate>Sat, 14 Dec 2013 18:10:09 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/12/14/quit-voicepic-startup/</guid>
+      <description>写真に音声がつけられるアプリ『Voicepic』がサービスを終了することを決めました。理由はユーザー数の伸び率の低下ということらしいです。M</description>
+    </item>
+    
+    <item>
+      <title>プログラミング技術は必要不可欠なものになってゆく</title>
+      <link>https://iriya-ufo.net/blog/2013/12/12/the-reason-that-every-person-should-learn-programming/</link>
+      <pubDate>Thu, 12 Dec 2013 06:24:33 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/12/12/the-reason-that-every-person-should-learn-programming/</guid>
+      <description>世界の最先端を突っ走るアメリカの一番偉い人がプログラミングを学べと言っております。 http://life-is-tech.com/blog/programming/messagefrompresidentobama-5843 フォン・ノイマンがコンピューターの基礎理論を作り上げてか</description>
+    </item>
+    
+    <item>
+      <title>アニメへの愛が詰まったMAD</title>
+      <link>https://iriya-ufo.net/blog/2013/12/09/great-mad-anime/</link>
+      <pubDate>Mon, 09 Dec 2013 05:24:03 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/12/09/great-mad-anime/</guid>
+      <description>ニコニコ動画をみていたら久しぶりにいいものに出会えたので紹介しておきたい。 【ニコニコ動画】qyll - Animegraphy 2013 BGMの選曲とセリフの使い方が素晴ら</description>
+    </item>
+    
+    <item>
+      <title>のんのんびより第4話〜出会いと別れ〜</title>
+      <link>https://iriya-ufo.net/blog/2013/11/15/non-non-biyori-part4/</link>
+      <pubDate>Fri, 15 Nov 2013 06:16:12 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/11/15/non-non-biyori-part4/</guid>
+      <description>のんのんびより第4話後半パートの、れんげにフォーカスした話しが素晴らしかったので感想を書かざるを得ない。 れんげはこのアニメの中で最も特徴的な</description>
+    </item>
+    
+    <item>
+      <title>複数の環境で Rails を開発する</title>
+      <link>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</link>
+      <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</guid>
+      <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の</description>
+    </item>
+    
+    <item>
+      <title>Rails 4.0.0.rc1 から 4.0.0 にアップデートしたら嵌った</title>
+      <link>https://iriya-ufo.net/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</link>
+      <pubDate>Sun, 03 Nov 2013 04:24:00 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</guid>
+      <description>3系から4系のアップデートを参考にしたのだけれど、変にエラーが出て嵌ったので解決方法を書く。 ruby アップデート まず ruby を最新のバージョンにアップデ</description>
+    </item>
+    
+    <item>
+      <title>MacOS のパッケージ管理で便利な Homebrew の使い方</title>
+      <link>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</link>
+      <pubDate>Wed, 30 Oct 2013 03:24:39 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</guid>
+      <description>備忘録のため使い方をまとめます。インストールの仕方は割愛します。 $ brew update # brew を最新にする $ brew outdated # インストール済のパッケージのうち最新のバージョ</description>
+    </item>
+    
+    <item>
+      <title>各ディレクトリの使用量をターミナルで確認する方法</title>
+      <link>https://iriya-ufo.net/blog/2013/10/30/find-disk-usage-by-terminal/</link>
+      <pubDate>Wed, 30 Oct 2013 02:03:20 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/30/find-disk-usage-by-terminal/</guid>
+      <description>ターミナルを使って HDD 容量を確認するのに使うコマンドは df です。 ディレクトリの容量を確認するコマンドは du です。 今回はちょっと便利なオプションを紹</description>
+    </item>
+    
+    <item>
+      <title>センター試験廃止について意見申す</title>
+      <link>https://iriya-ufo.net/blog/2013/10/23/stop-national-center-test-for-university-admissions/</link>
+      <pubDate>Wed, 23 Oct 2013 06:23:09 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/23/stop-national-center-test-for-university-admissions/</guid>
+      <description>どうやら本当にセンター試験がなくなるようなので思うことをつらつらと書いてみます。 とりあえずここを読んでどんな感じに改革するのかみてみました。</description>
+    </item>
+    
+    <item>
+      <title>Gauche で rlwrap を使う</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/</link>
+      <pubDate>Sat, 19 Oct 2013 20:45:17 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/</guid>
+      <description>Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し</description>
+    </item>
+    
+    <item>
+      <title>Emacs の info の使い方と info ドキュメントインストールの仕方</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</link>
+      <pubDate>Sat, 19 Oct 2013 19:19:20 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</guid>
+      <description>info の使い方 info は Emacs の中で説明を読むしくみ。 M-x info または C-h i で開始する。 u up 一つ上に戻る d dir 入口に戻る M-x info info を開始する q quit 終了 space とにかく読み進む p</description>
+    </item>
+    
+    <item>
+      <title>シェル周りまとめ</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/about-shell/</link>
+      <pubDate>Sat, 19 Oct 2013 18:33:58 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/about-shell/</guid>
+      <description>csh tcsh まとめ .login (csh, tcsh) login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。 login 後にシェルを起動しても読み込まれない。 .tcshrc (tcsh) tcsh を起</description>
+    </item>
+    
+    <item>
+      <title>標準のコマンドの関連付けを変更 update-alternatives</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/update-alternatives/</link>
+      <pubDate>Sat, 19 Oct 2013 18:17:35 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/update-alternatives/</guid>
+      <description>Ubuntu にて update-alternatives コマンドを使用すると標準コマンドの関連付けを変更できます。 例として Emacs の関連付けを変更する方法をみてみましょう。 Emacs がどこから実行される</description>
+    </item>
+    
+    <item>
+      <title>Emacs の load-path の調べ方</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/</link>
+      <pubDate>Sat, 19 Oct 2013 18:07:23 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/</guid>
+      <description>Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl+j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (</description>
+    </item>
+    
+    <item>
+      <title>Emacs24 のテーマフレームワークを使おう</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/theme-framework-for-emacs24/</link>
+      <pubDate>Sat, 19 Oct 2013 03:32:28 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/theme-framework-for-emacs24/</guid>
+      <description>以前、自分が書いた記事を備忘録のためにリンク掲載します。 Emacs24 のテーマフレームワークを使おう</description>
+    </item>
+    
+    <item>
+      <title>Emacs24 のパッケージシステムを使おう</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/emacs24-package-system/</link>
+      <pubDate>Sat, 19 Oct 2013 03:26:46 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/emacs24-package-system/</guid>
+      <description>Emacs24 から独自のパッケージシステムが導入されました。 これによって、今までちまちま github などからインストールしていた各種 elisp が一元管理できるようになりバ</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu の rbenv で管理している ruby を新しくする</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</link>
+      <pubDate>Sat, 19 Oct 2013 02:00:50 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</guid>
+      <description>Ubuntu の rbenv で管理している ruby を新しくする方法です。 MacOS だと多分 homebrew とか使ってると思います。今回は割愛です。 利用可能な ruby のバージョンを確認 ruby-build で利用可能な</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu に heroku toolbelt をインストール</title>
+      <link>https://iriya-ufo.net/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</link>
+      <pubDate>Sat, 19 Oct 2013 01:06:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</guid>
+      <description>下記一行を端末から実行でOK $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh</description>
+    </item>
+    
+    <item>
+      <title>最高にクールで便利なメモ帳</title>
+      <link>https://iriya-ufo.net/blog/2013/10/13/useful-notepad/</link>
+      <pubDate>Sun, 13 Oct 2013 04:13:15 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/13/useful-notepad/</guid>
+      <description>やっぱり紙媒体 メモ帳使ってますか？そのメモ帳は紙ですか？電子媒体ですか？ 私は一時期 iPad でメモを取っていたことがありますが、3回使ってみたところ</description>
+    </item>
+    
+    <item>
+      <title>お金の常識を変える通貨「Bitcoin」</title>
+      <link>https://iriya-ufo.net/blog/2013/10/07/bitcoin-impact/</link>
+      <pubDate>Mon, 07 Oct 2013 02:12:24 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/10/07/bitcoin-impact/</guid>
+      <description>皆さん Bitcoin って何かご存知でしょうか？ これ、世界を変える可能性のあるすごい通貨なんです。 僕のチームメンバーである Toby は Bitcoin にかなり詳しい人物で彼が色</description>
+    </item>
+    
+    <item>
+      <title>仕事とプライベートの境界</title>
+      <link>https://iriya-ufo.net/blog/2013/09/18/no-border-with-job-and-private/</link>
+      <pubDate>Wed, 18 Sep 2013 22:24:54 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/09/18/no-border-with-job-and-private/</guid>
+      <description>東京に引っ越して来て1ヶ月ほど経ち、暮らしが安定してきました。 ここらで一つ仕事とプライベードについて書きます。 ほとんどの人は家で朝起きて、職</description>
+    </item>
+    
+    <item>
+      <title>i-node が枯渇してファイルの作成ができなくなった件</title>
+      <link>https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</link>
+      <pubDate>Wed, 18 Sep 2013 21:35:15 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</guid>
+      <description>久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく</description>
+    </item>
+    
+    <item>
+      <title>法人口座開設の条件が厳しい</title>
+      <link>https://iriya-ufo.net/blog/2013/08/05/hard-to-open-corporate-bank-account/</link>
+      <pubDate>Mon, 05 Aug 2013 01:07:38 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/08/05/hard-to-open-corporate-bank-account/</guid>
+      <description>会社を設立してまずすることは口座を開設することではないでしょうか？ でもこれが結構難しいです。 昨今の違法行為を取り締まるために法人口座開設が非</description>
+    </item>
+    
+    <item>
+      <title>Emacs 使いが Sublime Text 2 を練習してみた</title>
+      <link>https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</link>
+      <pubDate>Sat, 13 Jul 2013 15:43:18 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</guid>
+      <description>知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema</description>
+    </item>
+    
+    <item>
+      <title>YES! と言わせる科学的説得術</title>
+      <link>https://iriya-ufo.net/blog/2013/07/11/secrets-from-the-science-of-persuasion/</link>
+      <pubDate>Thu, 11 Jul 2013 02:28:12 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/07/11/secrets-from-the-science-of-persuasion/</guid>
+      <description>興味深い動画をYoutubeで見つけたので自分なりにまとめてみました。 動画は以下をご覧ください。 6つのポイント 相互関係性 欠乏 権威 一貫性 嗜好 合</description>
+    </item>
+    
+    <item>
+      <title>走れ！走れ！走れ！</title>
+      <link>https://iriya-ufo.net/blog/2013/07/09/run-run-run/</link>
+      <pubDate>Tue, 09 Jul 2013 22:50:08 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/07/09/run-run-run/</guid>
+      <description>26になるまで、東京に来た事なんて片手で数えるほどだった。 だけど、ここ2ヶ月ほどでもう8回くらい来てる。 東京に来るたびに思うことがある。 「立</description>
+    </item>
+    
+    <item>
+      <title>もし今この世界に生まれていなかったら</title>
+      <link>https://iriya-ufo.net/blog/2013/07/08/if-they-were-not-born/</link>
+      <pubDate>Mon, 08 Jul 2013 02:04:39 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/07/08/if-they-were-not-born/</guid>
+      <description>久しぶりにいいMADを観ました。 進撃の巨人の登場人物が、もし巨人のいない世界にいたら、を描いたものです。 とりあえず観てください。 【ニコニコ動</description>
+    </item>
+    
+    <item>
+      <title>Hacker News Kansai #9 に参加しました</title>
+      <link>https://iriya-ufo.net/blog/2013/06/29/attend-hacker-news-kansai-09th/</link>
+      <pubDate>Sat, 29 Jun 2013 01:36:03 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/06/29/attend-hacker-news-kansai-09th/</guid>
+      <description>HN Kansai に参加しました。 参加者のほとんどが非日本人です。日本人は僕とあと女性が一人いただけでした。 みなの出身もバラバラで、たぶん7カ国以上の人た</description>
+    </item>
+    
+    <item>
+      <title>ルームシェアできる物件は本当に少ない</title>
+      <link>https://iriya-ufo.net/blog/2013/06/27/hard-to-find-sharing-house/</link>
+      <pubDate>Thu, 27 Jun 2013 23:43:51 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/06/27/hard-to-find-sharing-house/</guid>
+      <description>東京と京都の往復でお金が無くなっていく毎日です。:( さて、東京でスタートアップを始めるにあたって今取り組んでいることは住居探しと会社設立です</description>
+    </item>
+    
+    <item>
+      <title>東京でスタートアップを始めます</title>
+      <link>https://iriya-ufo.net/blog/2013/06/16/start-startup-in-tokyo/</link>
+      <pubDate>Sun, 16 Jun 2013 02:17:06 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/06/16/start-startup-in-tokyo/</guid>
+      <description>東京でスタートアップを始めることになりました。 スタートアップって何？と思う方もいるかと思います。 簡単に言うとすれば、それはベンチャー企業のこ</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu に Android Studio をインストール</title>
+      <link>https://iriya-ufo.net/blog/2013/06/01/android-studio-to-ubuntu/</link>
+      <pubDate>Sat, 01 Jun 2013 03:41:13 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/06/01/android-studio-to-ubuntu/</guid>
+      <description>興味本位でいれてみました。 Ubuntu のバージョンは 12.04 です。 公式から Linux 版の tgz をダウンロードして解凍します。 Getting Started with Android Studio シェルに PATH を設定します。 1 2 # Android Studio</description>
+    </item>
+    
+    <item>
+      <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
+      <link>https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
+      <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
+      <description>Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち</description>
+    </item>
+    
+    <item>
+      <title>Mac OS X にインラインパッチの当たった Emacs を Homebrew でインストール</title>
+      <link>https://iriya-ufo.net/blog/2013/05/18/install-emacs-by-homebrew/</link>
+      <pubDate>Sat, 18 May 2013 08:30:49 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/18/install-emacs-by-homebrew/</guid>
+      <description>先ほど Homebrew のアップデートをしたところ Emacs が使えなくなりました。 古い Emacs が削除されてリンク先が消滅したのが原因でした。 これはいい機会？と思い最新の Emacs</description>
+    </item>
+    
+    <item>
+      <title>zsh で git のコマンド補完及びブランチ名の表示</title>
+      <link>https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/</link>
+      <pubDate>Sat, 18 May 2013 07:58:33 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/</guid>
+      <description>git のコマンド補完 まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでア</description>
+    </item>
+    
+    <item>
+      <title>rbenv で Mac OS X に Ruby 2.0.0 をインストールする</title>
+      <link>https://iriya-ufo.net/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</link>
+      <pubDate>Mon, 13 May 2013 18:08:14 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</guid>
+      <description>rvm はクールじゃないので rbenv を使って Ruby をインストールします。 事前準備 はじめに『Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明して</description>
+    </item>
+    
+    <item>
+      <title>Rails のアップデート</title>
+      <link>https://iriya-ufo.net/blog/2013/05/12/rails-update/</link>
+      <pubDate>Sun, 12 May 2013 04:22:10 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/12/rails-update/</guid>
+      <description>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11</description>
+    </item>
+    
+    <item>
+      <title>SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法</title>
+      <link>https://iriya-ufo.net/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</link>
+      <pubDate>Fri, 10 May 2013 08:47:32 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</guid>
+      <description>サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります</description>
+    </item>
+    
+    <item>
+      <title>SSH ログインが遅い問題を解決</title>
+      <link>https://iriya-ufo.net/blog/2013/05/10/why-so-slow-ssh-login/</link>
+      <pubDate>Fri, 10 May 2013 08:28:07 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/10/why-so-slow-ssh-login/</guid>
+      <description>SSH でログインそのものはできるが非常に時間がかかるという場合、DNS の設定がよろしくない場合があります。 そんな時は、sshd_config に以</description>
+    </item>
+    
+    <item>
+      <title>Ubuntu で DVD リッピング</title>
+      <link>https://iriya-ufo.net/blog/2013/05/07/ubuntu-dvd-ripping/</link>
+      <pubDate>Tue, 07 May 2013 17:29:47 +0000</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2013/05/07/ubuntu-dvd-ripping/</guid>
+      <description>Ubuntu で DVD をリッピングする方法はいくつかあります。 k9copy dvd::rip wine で DVD Decrypter 私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメ</description>
+    </item>
+    
+  </channel>
+</rss>

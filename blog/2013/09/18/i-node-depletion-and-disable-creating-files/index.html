@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>i-node が枯渇してファイルの作成ができなくなった件 - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.2 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="i-node が枯渇してファイルの作成ができなくなった件" />
+<meta property="og:description" content="久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2013-09-18T21:35:15+00:00" />
+<meta property="article:modified_time" content="2013-09-18T21:35:15+00:00" />
+<meta itemprop="name" content="i-node が枯渇してファイルの作成ができなくなった件">
+<meta itemprop="description" content="久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく"><meta itemprop="datePublished" content="2013-09-18T21:35:15+00:00" />
+<meta itemprop="dateModified" content="2013-09-18T21:35:15+00:00" />
+<meta itemprop="wordCount" content="621">
+<meta itemprop="keywords" content="ubuntu," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="i-node が枯渇してファイルの作成ができなくなった件"/>
+<meta name="twitter:description" content="久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">i-node が枯渇してファイルの作成ができなくなった件</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2013-09-18 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。
+適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。</p>
+<p>Ubuntu はよくできているので、エラーメッセージに出るコマンドの通りに打つとたいてい治ります、が今回は無理でした。</p>
+<p>再度でたエラーメッセージは&quot;デバイスに空き領域がありません&quot;。
+あれ、HDDには十分な空き領域があるのになんでだろう。</p>
+<p>結果、i-node が枯渇してることが分かりました。
+私の Ubuntu は、ずーーーーっとアップデートで対応してきたので相当ムダなファイルが多いのでしょう。</p>
+<p>ちなみに i-node は <code>$ df -i</code> と打つことで調べられます。</p>
+<p>どこに大量のファイルがあるのか以下のコマンドで調査していきます。</p>
+<pre><code>$ sudo find . -xdev -type f | cut -d &quot;/&quot; -f 2 | sort | uniq -c | sort -n
+</code></pre>
+<p>結果、こんな場所に大量のファイルが・・・</p>
+<pre><code>/lib/modules
+/usr/src
+/tmp
+/var/log
+</code></pre>
+<p>原因は昔のカーネルが残っていたことでした。
+2.6系のカーネルなんか残してても意味ないですね。
+ほとんど削除することで i-node の領域が確保できました。
+ちなみに i-node 100% から 35% に減少しました。</p>
+<p>これで apt-get できる！と思ったらまたエラー発生です。
+apt/lists のパッケージのハッシュ値が違うと怒られました。
+以下のコマンドで直せます。</p>
+<pre><code>$ sudo apt-get clean
+$ cd /var/lib/apt
+$ sudo mv lists lists.old
+$ sudo mkdir -p lists/partial
+$ sudo apt-get clean
+$ sudo apt-get update
+</code></pre>
+<p>そして最新のカーネルを強制インストールすることで作業完了です。
+またカーネル更新すると必ず virtualbox の更新もしないといけないので (もしインストールしてたらね) 更新します。</p>
+<pre><code>$ sudo apt-get install virtualbox-dkms --reinstall
+</code></pre>
+<p>これで終わり！</p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2013-09-18
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/ubuntu/">ubuntu</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2013/09/18/no-border-with-job-and-private/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">仕事とプライベートの境界</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2013/08/05/hard-to-open-corporate-bank-account/">
+            <span class="next-text nav-default">法人口座開設の条件が厳しい</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

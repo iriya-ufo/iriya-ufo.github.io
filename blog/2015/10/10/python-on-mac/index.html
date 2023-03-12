@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Mac に Python 環境構築 - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="Naoto Inoue" /><meta name="description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.111.2 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2015/10/10/python-on-mac/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:title" content="Mac に Python 環境構築" />
+<meta property="og:description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://iriya-ufo.net/blog/2015/10/10/python-on-mac/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2015-10-10T19:00:23+00:00" />
+<meta property="article:modified_time" content="2020-04-08T16:30:33+09:00" />
+<meta itemprop="name" content="Mac に Python 環境構築">
+<meta itemprop="description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を"><meta itemprop="datePublished" content="2015-10-10T19:00:23+00:00" />
+<meta itemprop="dateModified" content="2020-04-08T16:30:33+09:00" />
+<meta itemprop="wordCount" content="1203">
+<meta itemprop="keywords" content="python," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Mac に Python 環境構築"/>
+<meta name="twitter:description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Mac に Python 環境構築</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2015-10-10 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <h2 id="2020年版mac-に-python-をインストールする方法パッケージの管理方法">【2020年版】Mac に Python をインストールする方法、パッケージの管理方法</h2>
+<h3 id="pyenv-のインストール">pyenv のインストール</h3>
+<p>brew で pyenv をインストールする。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ brew install pyenv
+</span></span><span class="line"><span class="cl">$ pyenv -v
+</span></span><span class="line"><span class="cl">pyenv 1.2.18
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>PATH を通す。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc
+</span></span><span class="line"><span class="cl">echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc
+</span></span><span class="line"><span class="cl">echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="python-のインストール">Python のインストール</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pyenv install --list # インストール可能なバージョンの表示
+</span></span><span class="line"><span class="cl">$ pyenv install 3.8.2  # Python のインストール
+</span></span><span class="line"><span class="cl">$ pyenv versions       # インストール済み一覧
+</span></span><span class="line"><span class="cl">$ pyenv global 3.8.2   # 標準で使う設定
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pipenv-のインストール">pipenv のインストール</h3>
+<p>pipenv を使ってパッケージの管理を行う。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pip install pipenv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="プロジェクト単位でパッケージを管理する">プロジェクト単位でパッケージを管理する</h3>
+<p>プロジェクトディレクトリに移動して初期化する。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cd FOO_BAR
+</span></span><span class="line"><span class="cl">$ pipenv --python 3.8
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>上記コマンドにより <code>Pipfile</code> が作成される。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ cat Pipfile
+</span></span><span class="line"><span class="cl">[[source]]
+</span></span><span class="line"><span class="cl">name = &#34;pypi&#34;
+</span></span><span class="line"><span class="cl">url = &#34;https://pypi.org/simple&#34;
+</span></span><span class="line"><span class="cl">verify_ssl = true
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[dev-packages]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[packages]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[requires]
+</span></span><span class="line"><span class="cl">python_version = &#34;3.8&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>任意のパッケージをインストールする。パッケージをインストールすると <code>Pipfile.lock</code> が作成される (もし無ければ)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pipenv install [any_package]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>Pipfile.lock</code> がある状態であれば <code>pipenv install</code> とすると lock ファイルの内容がインストールされる。
+複数人での開発では <code>Pipfile.lock</code> をコミットしておく。</p>
+<p>pipenv 導入以前で <code>requirements.txt</code> がある場合、その内容に従ってインストールする方法は以下の通り。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pipenv install -r ./requirements.txt
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>pipenv</code> でインストールしたパッケージは <code>$HOME/.local/share/virtualenvs/python-U6J_gNZf/lib/</code> に配置される。
+この領域を仮想環境と呼んでいる。プロジェクト配下からこの仮想環境を利用するには以下のようにする。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pipenv shell # 仮想環境を有効にする
+</span></span><span class="line"><span class="cl">$ exit         # 仮想環境から出る
+</span></span><span class="line"><span class="cl">$ pipenv --rm  # 仮想環境を削除する
+</span></span></code></pre></td></tr></table>
+</div>
+</div><hr>
+<h1 id="-下記は古い内容となっているので参考にしないこと">!! 下記は古い内容となっているので参考にしないこと</h1>
+<p>普段は Ruby 使いの自分です。ちょっと Python のライブラリを使いたい状況に出くわしたので、環境構築を含めまじめにやってみました。昔と違い随分と便利になってますね。</p>
+<h2 id="python-のインストール-1">Python のインストール</h2>
+<p>Mac も Linux もデフォルトで python はインストールされているが、今後バージョンを切り分けたい時があるかもしれないので、Python 自体のバージョン管理は brew に任せることにする。Linux なら apt-get や yum で代用する。</p>
+<pre><code>$ brew update
+$ brew install python
+</code></pre>
+<p>シェル再起動後、有効になっているか確認します。</p>
+<pre><code>$ which python
+/usr/local/bin/python
+# システムの python は /usr/bin/python なので、これで成功
+</code></pre>
+<h2 id="pip-のインストール">pip のインストール</h2>
+<p>pip とは Python のパッケージ管理ツールのこと。brew でインストールした場合、pip も同梱されるのでこの手順はやらなくてよい。</p>
+<p>Linux の場合はこんな感じ</p>
+<pre><code>curl -kL https://raw.github.com/pypa/pip/master/contrib/get-pip.py | python
+</code></pre>
+<p>ちなみに upgrade は以下のようにする。</p>
+<pre><code>$ pip install --upgrade pip
+</code></pre>
+<h2 id="virtualenv-のインストール">virtualenv のインストール</h2>
+<p>virtualenv とは Python の仮想実行環境をつくるもの。プロジェクト毎に独立した環境を切りたい場合などに使う。微妙に違うけど Ruby の rbenv のようなものだと思えばよい。</p>
+<p>インストールは pip で行う。</p>
+<pre><code>$ pip install virtualenv virtualenvwrapper
+</code></pre>
+<p><code>.zshrc</code> に環境変数を書いてリロード</p>
+<pre><code>export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+source /usr/local/bin/virtualenvwrapper.sh
+</code></pre>
+<h3 id="virtualenvwrapper-の使い方">virtualenvwrapper の使い方</h3>
+<p>先ほど virtualenvwrapper も一緒にいれたので、このツールからいろいろやる。</p>
+<p>仮想環境を作る (ホームディレクトリの <code>.virtualenvs</code> に hoge 環境ができる)</p>
+<pre><code>$ mkvirtualenv hoge
+</code></pre>
+<p>作った仮想環境に入る (プロンプトが変わる)</p>
+<pre><code>$ workon hoge
+</code></pre>
+<p>仮想環境にライブラリ入れる (プロンプトの先頭に (hoge) と変更されている状態で行うこと)</p>
+<pre><code>$ pip install numpy
+</code></pre>
+<p>仮想環境から抜ける (プロンプトが消える)</p>
+<pre><code>$ deactivate
+</code></pre>
+<p>仮想環境の削除</p>
+<pre><code>$ rmvirtualenv hoge
+</code></pre>
+<p>その他 virtualenv の詳細</p>
+<ul>
+<li><a href="http://qiita.com/caad1229/items/325ca5c8ad198b0ebce7">http://qiita.com/caad1229/items/325ca5c8ad198b0ebce7</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content">Naoto Inoue</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2020-04-08
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/python/">python</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2015/10/10/docker-machine-on-mac/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">docker-machine で Mac に Docker 環境を構築する</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2015/07/26/brain-science-of-buddha/">
+            <span class="next-text nav-default">「お釈迦さまの脳科学」を読んでみた</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2023
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author">Naoto Inoue</span>
+  </span>
+</div>
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-65168225-1', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

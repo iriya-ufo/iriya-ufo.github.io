@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on iriya-ufo&#39;s blog</title>
+    <link>https://iriya-ufo.net/tags/go/</link>
+    <description>Recent content in go on iriya-ufo&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Wed, 13 Oct 2021 13:54:35 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>[2021年版] Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</link>
+      <pubDate>Wed, 13 Oct 2021 13:54:35 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</guid>
+      <description>以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト</description>
+    </item>
+    
+    <item>
+      <title>Go の src ディレクトリを移動した</title>
+      <link>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</link>
+      <pubDate>Tue, 23 Mar 2021 15:27:54 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</guid>
+      <description>以前「リポジトリ管理ツール ghq を導入した」という記事を書きましたが、Go も Modules が主流になって様子が変わったので、一度整理することにしました。 Go の</description>
+    </item>
+    
+    <item>
+      <title>「改訂2版 みんなのGo言語」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2019/12/12/mingo/</link>
+      <pubDate>Thu, 12 Dec 2019 12:36:22 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/12/mingo/</guid>
+      <description>幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている</description>
+    </item>
+    
+    <item>
+      <title>VSCode に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</link>
+      <pubDate>Sun, 08 Dec 2019 01:36:06 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</guid>
+      <description>Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $</description>
+    </item>
+    
+    <item>
+      <title>リポジトリ管理ツール ghq を導入した</title>
+      <link>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</link>
+      <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</guid>
+      <description>更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し</description>
+    </item>
+    
+    <item>
+      <title>Emacs に Go の開発環境を整える</title>
+      <link>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</link>
+      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
+      
+      <guid>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</guid>
+      <description>記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。</description>
+    </item>
+    
+  </channel>
+</rss>
