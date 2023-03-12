@@ -61,7 +61,6 @@ Emacs の設定ファイルに以下を書きます。パッケージ管理に `
 
 ``` lisp
 (use-package rustic)
-(setq-default rustic-format-trigger 'on-save)
 (add-hook 'rustic-mode-hook #'lsp)
 ```
 
