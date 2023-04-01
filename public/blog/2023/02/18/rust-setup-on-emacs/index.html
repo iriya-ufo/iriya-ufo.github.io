@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.111.2 with theme even" />
+<meta name="generator" content="Hugo 0.111.3 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2023/02/18/rust-setup-on-emacs/" />
@@ -47,7 +47,7 @@
 <meta itemprop="name" content="Emacs に Rust の開発環境を整える">
 <meta itemprop="description" content="Rust の勉強を始めました。 Mac &#43; Emacs に Rust の開発環境を整えたのでその備忘録です。 Rust のインストール 公式サイトに習い rustup ツールを使って Rust をインストールします"><meta itemprop="datePublished" content="2023-02-18T18:01:07+09:00" />
 <meta itemprop="dateModified" content="2023-02-18T18:01:07+09:00" />
-<meta itemprop="wordCount" content="820">
+<meta itemprop="wordCount" content="867">
 <meta itemprop="keywords" content="rust,emacs," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Emacs に Rust の開発環境を整える"/>
 <meta name="twitter:description" content="Rust の勉強を始めました。 Mac &#43; Emacs に Rust の開発環境を整えたのでその備忘録です。 Rust のインストール 公式サイトに習い rustup ツールを使って Rust をインストールします"/>
@@ -219,7 +219,8 @@ Rust のモードは <code>rust-mode</code> が有名かもしれませんが <c
 <h2 id="余談">余談</h2>
 <h3 id="vscode-の場合">VSCode の場合</h3>
 <p>VSCode の場合は <code>rust-analyzer</code> という拡張機能を探してインストールすれば完了です。簡単ですね。
-<code>rust-analyzer</code> バイナリは VSCode の管理ディレクトリにインストールされるようになっているようです。</p>
+<code>rust-analyzer</code> バイナリは VSCode の管理ディレクトリにインストールされるようになっているようです。
+なお Clippy を使う場合、拡張機能の設定で <code>Rust-analyzer &gt; Check: Command</code> の項目をデフォルトの <code>check</code> から <code>clippy</code> に変えておくとよいです。</p>
 
     </div>
 
