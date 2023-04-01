@@ -90,3 +90,4 @@ mini popup を表示させて一覧から選んで実行する場合は `C-c C-p
 
 VSCode の場合は `rust-analyzer` という拡張機能を探してインストールすれば完了です。簡単ですね。
 `rust-analyzer` バイナリは VSCode の管理ディレクトリにインストールされるようになっているようです。
+なお Clippy を使う場合、拡張機能の設定で `Rust-analyzer > Check: Command` の項目をデフォルトの `check` から `clippy` に変えておくとよいです。
