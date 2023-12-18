@@ -6,15 +6,14 @@
     <description>Recent content in magit on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Tue, 22 Feb 2022 00:09:18 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/magit/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 22 Feb 2022 00:09:18 +0900</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/magit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs で Magit を使う</title>
       <link>https://iriya-ufo.net/blog/2022/02/22/magit/</link>
       <pubDate>Tue, 22 Feb 2022 00:09:18 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2022/02/22/magit/</guid>
       <description>Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。</description>
     </item>
-    
   </channel>
 </rss>

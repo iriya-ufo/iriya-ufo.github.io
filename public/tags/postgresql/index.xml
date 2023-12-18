@@ -6,15 +6,14 @@
     <description>Recent content in postgresql on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 17 Dec 2014 21:43:32 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 17 Dec 2014 21:43:32 +0000</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/postgresql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PostgreSQL の基本</title>
       <link>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</link>
       <pubDate>Wed, 17 Dec 2014 21:43:32 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</guid>
       <description>環境は Mac でやってますが Linux でもほぼ同じです。 インストールから初期設定まで Mac なので brew でインストールします。 $ brew install postgresql 最初にデータベースの初期化をし</description>
     </item>
-    
   </channel>
 </rss>

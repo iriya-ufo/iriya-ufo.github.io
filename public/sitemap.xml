@@ -10,7 +10,49 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2023-02-18T18:01:07+09:00</lastmod>
+    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/</loc>
+    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/post/</loc>
+    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/categories/programming/</loc>
+    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/vscode/</loc>
+    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2023/12/18/vscode-extension-4/</loc>
+    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -30,43 +72,8 @@
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2023-02-18T18:01:07+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2023-02-18T18:01:07+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2023-02-18T18:01:07+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://iriya-ufo.net/tags/rust/</loc>
     <lastmod>2023-02-18T18:01:07+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/</loc>
-    <lastmod>2023-02-18T18:01:07+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/vscode/</loc>
-    <lastmod>2022-12-13T15:24:46+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

@@ -6,24 +6,21 @@
     <description>Recent content in ai on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 10 Nov 2016 02:39:37 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Nov 2016 02:39:37 +0900</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>「コンピューターで脳がつくれるか」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</link>
       <pubDate>Thu, 10 Nov 2016 02:39:37 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</guid>
       <description>人工知能に関する平易で読みやすい本、特化型AIと汎用AIの違いについてよく分かる。 脳のモデルと学習モデルの比較をしている点が面白かった。 大脳</description>
     </item>
-    
     <item>
       <title>「よくわかる 人工知能」を読んだ</title>
       <link>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</link>
       <pubDate>Mon, 31 Oct 2016 00:39:13 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</guid>
       <description>人工知能という言葉を聞いてどんなイメージを抱くだろう。 以前『人工知能は人間を超えるか』という書籍を読んで、これからの人工知能の行末について想</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,15 +6,14 @@
     <description>Recent content in meteor on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 24 May 2015 05:17:20 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/meteor/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 24 May 2015 05:17:20 +0000</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/meteor/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Meteor が想像以上にすごかった</title>
       <link>https://iriya-ufo.net/blog/2015/05/24/start-meteor/</link>
       <pubDate>Sun, 24 May 2015 05:17:20 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/05/24/start-meteor/</guid>
       <description>友人に勧められて、ウェブアプリケーションフレームワークの Meteor で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどん</description>
     </item>
-    
   </channel>
 </rss>

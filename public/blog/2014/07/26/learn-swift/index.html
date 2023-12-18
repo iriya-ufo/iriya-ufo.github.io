@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.120.4 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2014/07/26/learn-swift/" />
@@ -44,6 +44,7 @@
 <meta property="og:url" content="https://iriya-ufo.net/blog/2014/07/26/learn-swift/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2014-07-26T15:55:36+00:00" />
 <meta property="article:modified_time" content="2014-07-26T15:55:36+00:00" />
+
 <meta itemprop="name" content="Swift をインタラクティブに実行しながら勉強しよう (関数編)">
 <meta itemprop="description" content="Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Sw"><meta itemprop="datePublished" content="2014-07-26T15:55:36+00:00" />
 <meta itemprop="dateModified" content="2014-07-26T15:55:36+00:00" />
@@ -194,13 +195,13 @@ Hello, world
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sample.swift:3:5: warning: variable &#39;nothing&#39; inferred to have type &#39;()&#39;, which may be unexpected
-</span></span><span class="line"><span class="cl">var nothing = doNothing()
-</span></span><span class="line"><span class="cl">    ^
-</span></span><span class="line"><span class="cl">sample.swift:3:5: note: add an explicit type annotation to silence this warning
-</span></span><span class="line"><span class="cl">var nothing = doNothing()
-</span></span><span class="line"><span class="cl">    ^
-</span></span><span class="line"><span class="cl">           : ()
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sample</span><span class="o">.</span><span class="n">swift</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span> <span class="n">warning</span><span class="p">:</span> <span class="n">variable</span> <span class="s1">&#39;nothing&#39;</span> <span class="n">inferred</span> <span class="n">to</span> <span class="n">have</span> <span class="n">type</span> <span class="s1">&#39;()&#39;</span><span class="p">,</span> <span class="n">which</span> <span class="n">may</span> <span class="n">be</span> <span class="n">unexpected</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">nothing</span> <span class="o">=</span> <span class="n">doNothing</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="o">^</span>
+</span></span><span class="line"><span class="cl"><span class="n">sample</span><span class="o">.</span><span class="n">swift</span><span class="p">:</span><span class="mi">3</span><span class="p">:</span><span class="mi">5</span><span class="p">:</span> <span class="n">note</span><span class="p">:</span> <span class="n">add</span> <span class="n">an</span> <span class="n">explicit</span> <span class="n">type</span> <span class="n">annotation</span> <span class="n">to</span> <span class="n">silence</span> <span class="n">this</span> <span class="n">warning</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">nothing</span> <span class="o">=</span> <span class="n">doNothing</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="o">^</span>
+</span></span><span class="line"><span class="cl">           <span class="p">:</span> <span class="p">()</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>関数の返り値を <code>nothing</code> 変数に代入しようとしたのですがダメみたいです。warning によると関数は空のタプル <code>'()'</code> を返してるようですね。これを明示的に宣言する必要があるみたいです。このようにします。</p>
@@ -255,12 +256,12 @@ Hello, world
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sample.swift:4:19: error: &#39;()&#39; is not convertible to &#39;String&#39;
-</span></span><span class="line"><span class="cl">var foo: String = retString()
-</span></span><span class="line"><span class="cl">                  ^
-</span></span><span class="line"><span class="cl">sample.swift:2:12: error: type &#39;()&#39; does not conform to protocol &#39;StringLiteralConvertible&#39;
-</span></span><span class="line"><span class="cl">    return &#34;Hi&#34;
-</span></span><span class="line"><span class="cl">           ^
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sample</span><span class="o">.</span><span class="n">swift</span><span class="p">:</span><span class="mi">4</span><span class="p">:</span><span class="mi">19</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="s1">&#39;()&#39;</span> <span class="n">is</span> <span class="ow">not</span> <span class="n">convertible</span> <span class="n">to</span> <span class="s1">&#39;String&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">var</span> <span class="n">foo</span><span class="p">:</span> <span class="ne">String</span> <span class="o">=</span> <span class="n">retString</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                  <span class="o">^</span>
+</span></span><span class="line"><span class="cl"><span class="n">sample</span><span class="o">.</span><span class="n">swift</span><span class="p">:</span><span class="mi">2</span><span class="p">:</span><span class="mi">12</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">type</span> <span class="s1">&#39;()&#39;</span> <span class="n">does</span> <span class="ow">not</span> <span class="n">conform</span> <span class="n">to</span> <span class="n">protocol</span> <span class="s1">&#39;StringLiteralConvertible&#39;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">return</span> <span class="s2">&#34;Hi&#34;</span>
+</span></span><span class="line"><span class="cl">           <span class="o">^</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>なるほど <code>retString</code> 関数は文字列を返して欲しかったのに依然としてタプルを返していますね、そしてそれを文字列に変換できないという旨のエラーです。関数の返り値に Void 以外を返す場合、型を宣言する必要があるようですね。こうしましょう。</p>
@@ -301,9 +302,9 @@ Hello, world
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">sample.swift:1:16: error: use of undeclared type &#39;str&#39;
-</span></span><span class="line"><span class="cl">func retString(str) -&gt; String {
-</span></span><span class="line"><span class="cl">               ^~~
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">sample</span><span class="o">.</span><span class="n">swift</span><span class="p">:</span><span class="mi">1</span><span class="p">:</span><span class="mi">16</span><span class="p">:</span> <span class="n">error</span><span class="p">:</span> <span class="n">use</span> <span class="n">of</span> <span class="n">undeclared</span> <span class="n">type</span> <span class="s1">&#39;str&#39;</span>
+</span></span><span class="line"><span class="cl"><span class="k">func</span> <span class="n">retString</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="ne">String</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">               <span class="o">^~~</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>ほうほう、ここも型宣言が必要なのですか。こうすれば通るかな？</p>

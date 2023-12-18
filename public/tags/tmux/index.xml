@@ -6,24 +6,21 @@
     <description>Recent content in tmux on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Fri, 25 Mar 2016 15:26:45 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/tmux/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Mar 2016 15:26:45 +0000</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/tmux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>tmux でクリップボードを使う</title>
       <link>https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/</link>
       <pubDate>Fri, 25 Mar 2016 15:26:45 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/</guid>
       <description>いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。</description>
     </item>
-    
     <item>
       <title>tmux の sync pane 機能に感動した</title>
       <link>https://iriya-ufo.net/blog/2015/05/22/great-function-of-tmux-sync-pane/</link>
       <pubDate>Fri, 22 May 2015 22:22:24 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/05/22/great-function-of-tmux-sync-pane/</guid>
       <description>「ターミナルの仮想端末といえば screen」ってな感じで使ってたんですが、とあるレンタルサーバーで tmux 設定がデフォになってたんで重い腰をあげて</description>
     </item>
-    
   </channel>
 </rss>
