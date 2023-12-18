@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.120.4 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/" />
@@ -44,6 +44,7 @@
 <meta property="og:url" content="https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2021-12-17T16:16:18+09:00" />
 <meta property="article:modified_time" content="2022-03-31T23:16:18+09:00" />
+
 <meta itemprop="name" content="React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite">
 <meta itemprop="description" content="はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環"><meta itemprop="datePublished" content="2021-12-17T16:16:18+09:00" />
 <meta itemprop="dateModified" content="2022-03-31T23:16:18+09:00" />
@@ -196,13 +197,13 @@
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// https://vitejs.dev/config/
-</span></span><span class="line"><span class="cl">export default defineConfig({
-</span></span><span class="line"><span class="cl">  plugins: [react()],
-</span></span><span class="line"><span class="cl">+  server: {
-</span></span><span class="line"><span class="cl">+    host: &#39;0.0.0.0&#39;,
-</span></span><span class="line"><span class="cl">+  },
-</span></span><span class="line"><span class="cl">})
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="o">//</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">vitejs</span><span class="o">.</span><span class="n">dev</span><span class="o">/</span><span class="n">config</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">default</span> <span class="n">defineConfig</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="n">plugins</span><span class="p">:</span> <span class="p">[</span><span class="n">react</span><span class="p">()],</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>  <span class="n">server</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>    <span class="n">host</span><span class="p">:</span> <span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>また import などを行うときに相対パスではなく絶対パスで行いたいので <code>vite.config.ts</code> に以下を設定します。</p>
@@ -227,23 +228,23 @@
 </span><span class="lnt">17
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">import { defineConfig } from &#39;vite&#39;;
-</span></span><span class="line"><span class="cl">import react from &#39;@vitejs/plugin-react&#39;;
-</span></span><span class="line"><span class="cl">+import path from &#39;path&#39;;
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">import</span> <span class="p">{</span> <span class="n">defineConfig</span> <span class="p">}</span> <span class="n">from</span> <span class="s1">&#39;vite&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="n">import</span> <span class="n">react</span> <span class="n">from</span> <span class="s1">&#39;@vitejs/plugin-react&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span><span class="n">import</span> <span class="n">path</span> <span class="n">from</span> <span class="s1">&#39;path&#39;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">// https://vitejs.dev/config/
-</span></span><span class="line"><span class="cl">export default defineConfig({
-</span></span><span class="line"><span class="cl">  plugins: [react()],
-</span></span><span class="line"><span class="cl">+  root: &#39;./&#39;,
-</span></span><span class="line"><span class="cl">+  resolve: {
-</span></span><span class="line"><span class="cl">+    alias: {
-</span></span><span class="line"><span class="cl">+      &#39;@/&#39;: path.join(__dirname, &#39;./src/&#39;),
-</span></span><span class="line"><span class="cl">+    },
-</span></span><span class="line"><span class="cl">+  },
-</span></span><span class="line"><span class="cl">  server: {
-</span></span><span class="line"><span class="cl">    host: &#39;0.0.0.0&#39;,
-</span></span><span class="line"><span class="cl">  },
-</span></span><span class="line"><span class="cl">});
+</span></span><span class="line"><span class="cl"><span class="o">//</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">vitejs</span><span class="o">.</span><span class="n">dev</span><span class="o">/</span><span class="n">config</span><span class="o">/</span>
+</span></span><span class="line"><span class="cl"><span class="k">export</span> <span class="n">default</span> <span class="n">defineConfig</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">  <span class="n">plugins</span><span class="p">:</span> <span class="p">[</span><span class="n">react</span><span class="p">()],</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>  <span class="n">root</span><span class="p">:</span> <span class="s1">&#39;./&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>  <span class="n">resolve</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>    <span class="n">alias</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>      <span class="s1">&#39;@/&#39;</span><span class="p">:</span> <span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">__dirname</span><span class="p">,</span> <span class="s1">&#39;./src/&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>    <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="o">+</span>  <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="n">server</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="n">host</span><span class="p">:</span> <span class="s1">&#39;0.0.0.0&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>このとき下記のようなエラーが出る場合は <code>$ npm i -D @types/node</code> とすることで解消されます。</p>

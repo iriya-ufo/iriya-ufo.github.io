@@ -6,15 +6,14 @@
     <description>Recent content in hacobune on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 19 Aug 2021 17:02:52 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/hacobune/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Aug 2021 17:02:52 +0900</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/hacobune/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hacobune で Go のアプリケーションを公開してみた</title>
       <link>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</link>
       <pubDate>Thu, 19 Aug 2021 17:02:52 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</guid>
       <description>2022年2月15日更新 Hacobune オープンβ版の提供終了に関するお知らせ オープンβ版が終了することになったそうです。正式版がリリースされるという内容</description>
     </item>
-    
   </channel>
 </rss>

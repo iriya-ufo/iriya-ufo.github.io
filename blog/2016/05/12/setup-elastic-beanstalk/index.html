@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.111.3 with theme even" />
+<meta name="generator" content="Hugo 0.120.4 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/" />
@@ -44,6 +44,7 @@
 <meta property="og:url" content="https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2016-05-12T18:46:38+09:00" />
 <meta property="article:modified_time" content="2016-05-12T18:46:38+09:00" />
+
 <meta itemprop="name" content="Elastic BeansTalk で遊んでみた">
 <meta itemprop="description" content="Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移"><meta itemprop="datePublished" content="2016-05-12T18:46:38+09:00" />
 <meta itemprop="dateModified" content="2016-05-12T18:46:38+09:00" />
@@ -194,7 +195,7 @@ SSH をセットアップしますか?	y キー (いいえ)
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[Instance: i-xxxxxxxx] Command failed on instance. Return code: 11 Output: (TRUNCATED)...ps://rubygems.org/... Fetching dependency metadata from https://rubygems.org/.. You need to install git to be able to use gems from git repositories. For help installing git, please refer to GitHub&#39;s tutorial at https://help.github.com/articles/set-up-git. Hook /opt/elasticbeanstalk/hooks/appdeploy/pre/10_bundle_install.sh failed. For more detail, check /var/log/eb-activity.log using console or EB CLI.
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="p">[</span><span class="n">Instance</span><span class="p">:</span> <span class="n">i</span><span class="o">-</span><span class="n">xxxxxxxx</span><span class="p">]</span> <span class="n">Command</span> <span class="n">failed</span> <span class="n">on</span> <span class="n">instance</span><span class="o">.</span> <span class="n">Return</span> <span class="n">code</span><span class="p">:</span> <span class="mi">11</span> <span class="n">Output</span><span class="p">:</span> <span class="p">(</span><span class="n">TRUNCATED</span><span class="p">)</span><span class="o">...</span><span class="n">ps</span><span class="p">:</span><span class="o">//</span><span class="n">rubygems</span><span class="o">.</span><span class="n">org</span><span class="o">/...</span> <span class="n">Fetching</span> <span class="n">dependency</span> <span class="n">metadata</span> <span class="n">from</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">rubygems</span><span class="o">.</span><span class="n">org</span><span class="o">/..</span> <span class="n">You</span> <span class="n">need</span> <span class="n">to</span> <span class="n">install</span> <span class="n">git</span> <span class="n">to</span> <span class="n">be</span> <span class="n">able</span> <span class="n">to</span> <span class="n">use</span> <span class="n">gems</span> <span class="n">from</span> <span class="n">git</span> <span class="n">repositories</span><span class="o">.</span> <span class="n">For</span> <span class="n">help</span> <span class="n">installing</span> <span class="n">git</span><span class="p">,</span> <span class="n">please</span> <span class="n">refer</span> <span class="n">to</span> <span class="n">GitHub</span><span class="s1">&#39;s tutorial at https://help.github.com/articles/set-up-git. Hook /opt/elasticbeanstalk/hooks/appdeploy/pre/10_bundle_install.sh failed. For more detail, check /var/log/eb-activity.log using console or EB CLI.</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>gem を GitHub のリポジトリからダウンロードするなら git をインストールしろ、とある。

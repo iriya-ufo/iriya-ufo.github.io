@@ -6,15 +6,14 @@
     <description>Recent content in middleman on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 27 Dec 2014 21:55:29 +0000</lastBuildDate><atom:link href="https://iriya-ufo.net/tags/middleman/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 27 Dec 2014 21:55:29 +0000</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/middleman/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>middleman-s3_sync で colorize のエラーがでた</title>
       <link>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</link>
       <pubDate>Sat, 27 Dec 2014 21:55:29 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</guid>
       <description>静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました</description>
     </item>
-    
   </channel>
 </rss>

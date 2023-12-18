@@ -6,1005 +6,791 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sat, 18 Feb 2023 18:01:07 +0900</lastBuildDate><atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 18 Dec 2023 15:19:28 +0900</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2023-12 版</title>
+      <link>https://iriya-ufo.net/blog/2023/12/18/vscode-extension-4/</link>
+      <pubDate>Mon, 18 Dec 2023 15:19:28 +0900</pubDate>
+      <guid>https://iriya-ufo.net/blog/2023/12/18/vscode-extension-4/</guid>
+      <description>本記事は TechCommit AdventCalendar2023 18日目の記事です。 前回から1年が経ったので再度整理してみました。 ほとんど開発の機会がなかったので変更はほとんどなく、2つ追加さ</description>
+    </item>
     <item>
       <title>Emacs に Rust の開発環境を整える</title>
       <link>https://iriya-ufo.net/blog/2023/02/18/rust-setup-on-emacs/</link>
       <pubDate>Sat, 18 Feb 2023 18:01:07 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2023/02/18/rust-setup-on-emacs/</guid>
       <description>Rust の勉強を始めました。 Mac + Emacs に Rust の開発環境を整えたのでその備忘録です。 Rust のインストール 公式サイトに習い rustup ツールを使って Rust をインストールします</description>
     </item>
-    
     <item>
       <title>インストール済み VSCode 拡張機能一覧 2022-12 版</title>
       <link>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</link>
       <pubDate>Tue, 13 Dec 2022 15:24:46 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2022/12/13/vscode-extension-3/</guid>
       <description>前回から1年が経ったので再度整理してみました。 2022年12月現在で65個（以下アルファベット順） Awesome Emacs Keymap Better Comments Better Jinja Copy Relative Path CSS Flexbox Cheatsheet Debugger for Java Deno 新しくイ</description>
     </item>
-    
     <item>
       <title>Xenv から asdf に移行する</title>
       <link>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</link>
       <pubDate>Fri, 29 Apr 2022 21:09:55 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</guid>
       <description>きっかけ anyenv 関係をキャッシュするというテクニックで zsh の起動を速くするという記事をみました。 自分は anyenv は使ってませんが、いくつかの Xenv 系を直接インス</description>
     </item>
-    
     <item>
       <title>Emacs に Neotree を導入する</title>
       <link>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</link>
       <pubDate>Mon, 25 Apr 2022 21:16:32 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2022/04/25/neotree-to-emacs/</guid>
       <description>Neotree をインストールしました。 straight を使っているので use-package と書くだけでインストールされます。 使い方は以下 elisp 見ればなんとなく分かるでしょう。 1 2 3 4 5 6 7</description>
     </item>
-    
     <item>
       <title>分離式キーボード BAROCCO MD600v3 を買った</title>
       <link>https://iriya-ufo.net/blog/2022/03/23/md600v3/</link>
       <pubDate>Wed, 23 Mar 2022 01:24:23 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2022/03/23/md600v3/</guid>
       <description>これを買いました。分離式は初めて触るので慣れるかどうか不安もありましたが、しばらく触って見たところ特に大きな問題はなさそうです。 &amp;ldquo</description>
     </item>
-    
     <item>
       <title>Emacs で Magit を使う</title>
       <link>https://iriya-ufo.net/blog/2022/02/22/magit/</link>
       <pubDate>Tue, 22 Feb 2022 00:09:18 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2022/02/22/magit/</guid>
       <description>Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。</description>
     </item>
-    
     <item>
       <title>Jest の代わりに Vitest 使ってみる</title>
       <link>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</link>
       <pubDate>Thu, 23 Dec 2021 15:24:24 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</guid>
       <description>つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う</description>
     </item>
-    
     <item>
       <title>React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite</title>
       <link>https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</link>
       <pubDate>Fri, 17 Dec 2021 16:16:18 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</guid>
       <description>はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環</description>
     </item>
-    
     <item>
       <title>React を完全に理解するために行った学習方法</title>
       <link>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</link>
       <pubDate>Tue, 30 Nov 2021 23:38:39 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</guid>
       <description>新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？ 効率の良い学習方法とい</description>
     </item>
-    
     <item>
       <title>プロジェクト管理ツールなに使ってるか聞いてみた</title>
       <link>https://iriya-ufo.net/blog/2021/10/20/project-management-tool/</link>
       <pubDate>Wed, 20 Oct 2021 09:45:28 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/10/20/project-management-tool/</guid>
       <description>とあるコミュニティでプロジェクト管理ツールなに使ってるか聞いてみました。 20人ほどから回答を頂けましたので各ツールを簡単にまとめてみました。</description>
     </item>
-    
     <item>
       <title>[2021年版] Emacs に Go の開発環境を整える</title>
       <link>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</link>
       <pubDate>Wed, 13 Oct 2021 13:54:35 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/10/13/go-setup-on-emacs-ver2/</guid>
       <description>以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト</description>
     </item>
-    
     <item>
       <title>インストール済み VSCode 拡張機能一覧 2021-09 版</title>
       <link>https://iriya-ufo.net/blog/2021/09/14/vscode-extension-2/</link>
       <pubDate>Tue, 14 Sep 2021 01:13:25 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/09/14/vscode-extension-2/</guid>
       <description>前回から早くも1年が経ったので整理してみました。 2021年9月現在で57個（以下アルファベット順） スターがついているのはお気に入りという意味</description>
     </item>
-    
     <item>
       <title>Ducky One 2 Mini RGB キーボードを買った</title>
       <link>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</link>
       <pubDate>Tue, 07 Sep 2021 23:40:42 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</guid>
       <description>僕は今までずっと HHKB Pro2 を愛用してきました。初めて HHKB を触ったときの打鍵感がすごくよくて感動したのを覚えています。 それからときどき Realforce を使ったりもし</description>
     </item>
-    
     <item>
       <title>Hacobune で Go のアプリケーションを公開してみた</title>
       <link>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</link>
       <pubDate>Thu, 19 Aug 2021 17:02:52 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</guid>
       <description>2022年2月15日更新 Hacobune オープンβ版の提供終了に関するお知らせ オープンβ版が終了することになったそうです。正式版がリリースされるという内容</description>
     </item>
-    
     <item>
       <title>Go の src ディレクトリを移動した</title>
       <link>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</link>
       <pubDate>Tue, 23 Mar 2021 15:27:54 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2021/03/23/moving-go-src/</guid>
       <description>以前「リポジトリ管理ツール ghq を導入した」という記事を書きましたが、Go も Modules が主流になって様子が変わったので、一度整理することにしました。 Go の</description>
     </item>
-    
     <item>
       <title>インストール済み VSCode 拡張機能一覧 2020-09 版</title>
       <link>https://iriya-ufo.net/blog/2020/09/21/vscode-extension/</link>
       <pubDate>Mon, 21 Sep 2020 01:43:44 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2020/09/21/vscode-extension/</guid>
       <description>業務ではコードを書かないインフラエンジニアがインストール済みの VSCode 拡張機能一覧 2020年9月現在で47個 (以下アルファベット順) お気に入りには</description>
     </item>
-    
     <item>
       <title>Mac に nodenv インストールした</title>
       <link>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</link>
       <pubDate>Tue, 11 Feb 2020 15:55:10 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</guid>
       <description>brew でいれてたけど限界がきたのでバージョン管理ツール使う。 nodenv を使うことにした。宗教的理由により anyenv 経由でのインストールはしない。 既存環境のアンイ</description>
     </item>
-    
     <item>
       <title>Hugo にコメント投稿機能をつけました</title>
       <link>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</link>
       <pubDate>Wed, 05 Feb 2020 16:52:53 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</guid>
       <description>Q. Hugo でコメント投稿機能をつけるにはどうしたらいいのだろう？ A. DISQUS 使いましょう！ 公式サイトでも DISQUS 使いましょう、とある。 やり方は簡単。まず DISQUS でサイ</description>
     </item>
-    
     <item>
       <title>Hugo でインライン HTML が表示されなくなった</title>
       <link>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</link>
       <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</guid>
       <description>基本的に Hugo でブログを書くときは markdown を利用して書いています。 ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記</description>
     </item>
-    
     <item>
       <title>VSCode に Go の開発環境を整える</title>
       <link>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</link>
       <pubDate>Sun, 08 Dec 2019 01:36:06 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/</guid>
       <description>Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $</description>
     </item>
-    
     <item>
       <title>リポジトリ管理ツール ghq を導入した</title>
       <link>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</link>
       <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/11/28/ghq-setup/</guid>
       <description>更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し</description>
     </item>
-    
     <item>
       <title>Vue.js チートシート</title>
       <link>https://iriya-ufo.net/blog/2019/10/10/vue-essentials-cheat-sheet/</link>
       <pubDate>Thu, 10 Oct 2019 21:51:46 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/10/10/vue-essentials-cheat-sheet/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Rails の開発環境を Docker で構築する</title>
       <link>https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/</link>
       <pubDate>Wed, 14 Aug 2019 10:10:30 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/</guid>
       <description>開発環境で使える Rails の Docker 環境構築です。 Docker とは関係ない話しも混じってます。 コンテナ構成 シンプルに Ruby をベースに Rails 環境をビルドします。 DB は PostgreSQL を使いま</description>
     </item>
-    
     <item>
       <title>VSCode で Emacs キーバインドを使う</title>
       <link>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</link>
       <pubDate>Tue, 06 Aug 2019 17:31:53 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/</guid>
       <description>長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン</description>
     </item>
-    
     <item>
       <title>Emacs に Go の開発環境を整える</title>
       <link>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</link>
       <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/</guid>
       <description>記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。</description>
     </item>
-    
     <item>
       <title>percol から fzf に移行した</title>
       <link>https://iriya-ufo.net/blog/2019/01/16/percol-to-fzf/</link>
       <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/01/16/percol-to-fzf/</guid>
       <description>新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。 直そうと思って調べてみるとどうやら</description>
     </item>
-    
     <item>
       <title>docker-compose up で db が立ち上がらない時は volume を削除してみる</title>
       <link>https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/</link>
       <pubDate>Wed, 09 Jan 2019 11:27:47 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2019/01/09/delete-docker-volume/</guid>
       <description>とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14</description>
     </item>
-    
     <item>
       <title>Octopress から Hugo へ移行した</title>
       <link>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</link>
       <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</guid>
       <description>以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は</description>
     </item>
-    
     <item>
       <title>Octopress 記事削除</title>
       <link>https://iriya-ufo.net/blog/2017/10/18/delete-post/</link>
       <pubDate>Wed, 18 Oct 2017 01:02:03 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2017/10/18/delete-post/</guid>
       <description>Octopress で記事の削除は source/_posts/post.markdown を削除すればいい、はずなんだがなぜか消えない。 新しい記事を投稿することによって削除されるかどうかを試してみる。</description>
     </item>
-    
     <item>
       <title>UNIX 時刻の変換</title>
       <link>https://iriya-ufo.net/blog/2017/05/28/unix-time/</link>
       <pubDate>Sun, 28 May 2017 23:53:36 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2017/05/28/unix-time/</guid>
       <description>UNIX 時間はビルトインコマンドで変換できる Linux の場合 date --date &amp;quot;@1495526373&amp;quot; Mac の場合 date -r 1495526373 UNIX 時間とは</description>
     </item>
-    
     <item>
       <title>Complete Chart of Neural Networks</title>
       <link>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</link>
       <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</guid>
       <description> </description>
     </item>
-    
     <item>
       <title>Deep Learning Nanodegree Foundation Program を受講します</title>
       <link>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</link>
       <pubDate>Fri, 03 Feb 2017 12:52:03 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</guid>
       <description>Udacity というオンライン学習プラットフォームで人工知能のナノ学位コースが始まるよと発表されました。 Introducing Siraj Raval’s Deep Learning Nanodegree Foundation Program! 人工知能の勉強は独学</description>
     </item>
-    
     <item>
       <title>IBM の Data Scientist Workbench がすごい</title>
       <link>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</link>
       <pubDate>Wed, 01 Feb 2017 01:31:59 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</guid>
       <description>機械学習をやってる人やデータサイエンスやってる人は Jupyter Notebooks を使ってる人が多いと思います。 環境構築はそれほど難しくないのですが、これが Web 上で簡単に</description>
     </item>
-    
     <item>
       <title>Octopress Deploy エラーなおした</title>
       <link>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</link>
       <pubDate>Fri, 27 Jan 2017 16:05:43 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</guid>
       <description>当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。 エラー内容はこんな感じ。 ## Pushing generated _deploy website</description>
     </item>
-    
     <item>
       <title>Docker 版 Jupyter Notebooks でホストとデータを共有する</title>
       <link>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</link>
       <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</guid>
       <description>前回 Anaconda 環境の Docker イメージを作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うこ</description>
     </item>
-    
     <item>
       <title>TensorFlow を GPU で動かす</title>
       <link>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</link>
       <pubDate>Sat, 19 Nov 2016 23:37:43 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</guid>
       <description>前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま</description>
     </item>
-    
     <item>
       <title>機械学習と数学</title>
       <link>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</link>
       <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</guid>
       <description>人工知能といえば機械学習、そして機械学習といえば数学。チュートリアルやらライブラリやらで、これだけ手軽になった機械学習といえども現段階ではち</description>
     </item>
-    
     <item>
       <title>Docker コンテナに anaconda 環境を構築</title>
       <link>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</link>
       <pubDate>Fri, 18 Nov 2016 12:17:31 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</guid>
       <description>機械学習の主流言語といえば Python ですよね。最近はインストール方法も変わってきており、より便利な方法があるようです。 今回は Anaconda の環境を Docker で作って、さ</description>
     </item>
-    
     <item>
       <title>Ubuntu に Docker をインストール</title>
       <link>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</link>
       <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</guid>
       <description>公式サイトを参考にする。 Install Docker on Ubuntu メモリーとスワップ設定、UFW、DNSの設定はおこなっていない。</description>
     </item>
-    
     <item>
       <title>Deep Learning Machine に Ubuntu のインストール</title>
       <link>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</link>
       <pubDate>Thu, 10 Nov 2016 01:38:43 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</guid>
       <description>『Hardware Architecture for Machine Learning』で作ったマシンに Ubuntu 16.04 LTS をインストールしました。 Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓</description>
     </item>
-    
     <item>
       <title>hardware architecture for machine learning</title>
       <link>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</link>
       <pubDate>Wed, 09 Nov 2016 14:58:31 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</guid>
       <description>機械学習をさせるための専用演算マシンを構築しました。 クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれは</description>
     </item>
-    
     <item>
       <title>Docker for Mac を使う</title>
       <link>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</link>
       <pubDate>Sun, 31 Jul 2016 14:11:03 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/07/31/docker-for-mac/</guid>
       <description>『Mac に Docker 環境を構築する』を書いてしばらくしたら boot2docker が非推奨となって『Docker-machine で Mac に Docker 環境を構築する』を書いたら今度は Docker</description>
     </item>
-    
     <item>
       <title>Elastic BeansTalk で遊んでみた</title>
       <link>https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/</link>
       <pubDate>Thu, 12 May 2016 18:46:38 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/05/12/setup-elastic-beanstalk/</guid>
       <description>Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移</description>
     </item>
-    
     <item>
       <title>Passenger をやめて Puma にした</title>
       <link>https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/</link>
       <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/</guid>
       <description>とあるプロジェクトで Nginx + Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。 環境など Nginx や Passenger は設</description>
     </item>
-    
     <item>
       <title>Octopress のテーマをカスタマイズする</title>
       <link>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</link>
       <pubDate>Sat, 30 Apr 2016 03:08:48 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</guid>
       <description>3rd Party Octopress Themes ここにテーマのテンプレートがあるので、好きなテーマを探して来てインストールすればよい。 リンク切れになってたり、全く違うサイトになって</description>
     </item>
-    
     <item>
       <title>WordPress から GitHub Pages &#43; Octopress に移行した</title>
       <link>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</link>
       <pubDate>Fri, 29 Apr 2016 19:22:13 +0900</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</guid>
       <description>今まで http://iriya-ufo.net は WordPress で運用してきたのだけれど、GitHub Pages + Octopress に移行することにした。 WordPress を辞めたくなった理由 WordPress で記事を書くときは Emacs を立ち上げ markdown で書い</description>
     </item>
-    
     <item>
       <title>bower-rails 使ってみた</title>
       <link>https://iriya-ufo.net/blog/2016/04/08/start-bower-rails/</link>
       <pubDate>Fri, 08 Apr 2016 00:52:01 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/04/08/start-bower-rails/</guid>
       <description>Rails 開発で js とか css とかマジだるい。管理とかだるい。なので bower-rails 使ってみた。 事前準備 bower は node package なので最初に Node.js とかインストールしておく。 Mac に Node.js インストー</description>
     </item>
-    
     <item>
       <title>Mac に Node.js インストールした</title>
       <link>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</link>
       <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</guid>
       <description>今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を</description>
     </item>
-    
     <item>
       <title>tmux でクリップボードを使う</title>
       <link>https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/</link>
       <pubDate>Fri, 25 Mar 2016 15:26:45 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/</guid>
       <description>いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。</description>
     </item>
-    
     <item>
       <title>Botkit から Google API 叩いてみた</title>
       <link>https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/</link>
       <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/</guid>
       <description>前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。 Hubot</description>
     </item>
-    
     <item>
       <title>Docker DataCenter さわってみた</title>
       <link>https://iriya-ufo.net/blog/2016/03/08/start-docker-datacenter/</link>
       <pubDate>Tue, 08 Mar 2016 04:38:29 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/03/08/start-docker-datacenter/</guid>
       <description>以下の記事をみかけて、これはやらずにいられないと思っていじってみた感想。 コンテナ化したアプリケーションの総合的一元的管理コンソールDocke</description>
     </item>
-    
     <item>
       <title>Slack に Hubot をいれてみた</title>
       <link>https://iriya-ufo.net/blog/2016/03/04/hubot-on-slack/</link>
       <pubDate>Fri, 04 Mar 2016 18:10:03 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2016/03/04/hubot-on-slack/</guid>
       <description>Hubot は GitHub が開発した bot のフレームワークです。Node.js の上で走って CoffeeScript で動きます。実装環境は AWS にしました。常時稼働させとかなきゃいけないからね</description>
     </item>
-    
     <item>
       <title>docker-machine で Mac に Docker 環境を構築する</title>
       <link>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</link>
       <pubDate>Sat, 10 Oct 2015 21:33:25 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/10/10/docker-machine-on-mac/</guid>
       <description>boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。 WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated. Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP. Docker Toolbox (https://docker.com/toolbox) is the recommended install method. error in run: Failed to get machine &amp;quot;boot2docker-vm&amp;quot;: machine does not</description>
     </item>
-    
     <item>
       <title>Mac に Python 環境構築</title>
       <link>https://iriya-ufo.net/blog/2015/10/10/python-on-mac/</link>
       <pubDate>Sat, 10 Oct 2015 19:00:23 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/10/10/python-on-mac/</guid>
       <description>【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を</description>
     </item>
-    
     <item>
       <title>Mac に Docker 環境を構築する</title>
       <link>https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/</link>
       <pubDate>Mon, 20 Jul 2015 14:28:57 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/</guid>
       <description>とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では</description>
     </item>
-    
     <item>
       <title>Meteor が想像以上にすごかった</title>
       <link>https://iriya-ufo.net/blog/2015/05/24/start-meteor/</link>
       <pubDate>Sun, 24 May 2015 05:17:20 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/05/24/start-meteor/</guid>
       <description>友人に勧められて、ウェブアプリケーションフレームワークの Meteor で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどん</description>
     </item>
-    
     <item>
       <title>tmux の sync pane 機能に感動した</title>
       <link>https://iriya-ufo.net/blog/2015/05/22/great-function-of-tmux-sync-pane/</link>
       <pubDate>Fri, 22 May 2015 22:22:24 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/05/22/great-function-of-tmux-sync-pane/</guid>
       <description>「ターミナルの仮想端末といえば screen」ってな感じで使ってたんですが、とあるレンタルサーバーで tmux 設定がデフォになってたんで重い腰をあげて</description>
     </item>
-    
     <item>
       <title>Mac に Clojure 環境いれてみた</title>
       <link>https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/</link>
       <pubDate>Thu, 23 Apr 2015 23:10:30 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/</guid>
       <description>Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな</description>
     </item>
-    
     <item>
       <title>Mac に Common Lisp 処理系をインストールする</title>
       <link>https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/</link>
       <pubDate>Tue, 10 Feb 2015 03:42:46 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2015/02/10/install-common-lisp-on-mac/</guid>
       <description>Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは SBCL と Clozure CL です。違いは Wikipedia あたりを参考にしてもらうといいかと</description>
     </item>
-    
     <item>
       <title>middleman-s3_sync で colorize のエラーがでた</title>
       <link>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</link>
       <pubDate>Sat, 27 Dec 2014 21:55:29 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</guid>
       <description>静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました</description>
     </item>
-    
     <item>
       <title>brew のアップグレードで rails プロジェクトなどが動かなくなったら</title>
       <link>https://iriya-ufo.net/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</link>
       <pubDate>Wed, 17 Dec 2014 23:05:08 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</guid>
       <description>brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっていま</description>
     </item>
-    
     <item>
       <title>PostgreSQL の基本</title>
       <link>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</link>
       <pubDate>Wed, 17 Dec 2014 21:43:32 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/12/17/start-postgresql/</guid>
       <description>環境は Mac でやってますが Linux でもほぼ同じです。 インストールから初期設定まで Mac なので brew でインストールします。 $ brew install postgresql 最初にデータベースの初期化をし</description>
     </item>
-    
     <item>
       <title>Vim 小技集</title>
       <link>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</link>
       <pubDate>Thu, 04 Dec 2014 18:58:13 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</guid>
       <description>自分のための覚書 編集 :%s/:\(\w\+\) =&amp;gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl+v jjjj I # 4行コメントアウト(,#) Ctrl+v jjjj d # 4行コメントイン(,#) Ctrl+v jjjj c aaaa # 4行置換 viwy #</description>
     </item>
-    
     <item>
       <title>高速検索の ag を入れてみた</title>
       <link>https://iriya-ufo.net/blog/2014/09/09/install-ag/</link>
       <pubDate>Tue, 09 Sep 2014 23:43:08 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/09/09/install-ag/</guid>
       <description>プログラムを書いてると検索という行為一つで大きく生産性が変わることをプログラマーは知っています。僕は今まで grep を使ってた、というか grep しか知らな</description>
     </item>
-    
     <item>
       <title>highlight-symbol が便利</title>
       <link>https://iriya-ufo.net/blog/2014/09/08/useful-package-highlight-symbol-emacs/</link>
       <pubDate>Mon, 08 Sep 2014 16:01:00 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/09/08/useful-package-highlight-symbol-emacs/</guid>
       <description>ちょっとした事なんですが、プログラムを書いてると、「このシンボルを目立つようにマーク付けしておきたいなぁ」なんて思うことがあります。関数とか</description>
     </item>
-    
     <item>
       <title>Sinatra アプリを Heroku で動かすまで</title>
       <link>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</link>
       <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
       <description>環境 以下のような環境で動かします。 Sinatra Heroku PostgreSQL Unicorn ActiveRecord 初期設定 まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作りま</description>
     </item>
-    
     <item>
       <title>&amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#8216;MacOSX10.9.sdk&amp;#8217; does not support Swift</title>
       <link>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</link>
       <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
       <description>Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &amp;lt;unknown&amp;gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ</description>
     </item>
-    
     <item>
       <title>Xcode で作ったプロジェクトを削除する方法</title>
       <link>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:24 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</guid>
       <description>練習がてら適当にプロジェクトを作成するといっぱい溜まってくるのでいらないものは消してすっきりしたくなる時があるかと思います。Xcode で作っ</description>
     </item>
-    
     <item>
       <title>Gauche のユーザーリファレンスを読む</title>
       <link>https://iriya-ufo.net/blog/2014/08/20/read-gauche-reference/</link>
       <pubDate>Wed, 20 Aug 2014 02:07:11 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/08/20/read-gauche-reference/</guid>
       <description>Gauche のリファレンス読むのにはいくつか方法があって、Emacs で el いれて読みだすとか info 入れるとかありますけど、一番簡単な方法はこれでしょう。 Chrome 使</description>
     </item>
-    
     <item>
       <title>Swift をインタラクティブに実行しながら勉強しよう (関数編)</title>
       <link>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</link>
       <pubDate>Sat, 26 Jul 2014 15:55:36 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</guid>
       <description>Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Sw</description>
     </item>
-    
     <item>
       <title>Swift をとりあえず実行するまでの手順</title>
       <link>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</link>
       <pubDate>Wed, 23 Jul 2014 03:06:46 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</guid>
       <description>WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に</description>
     </item>
-    
     <item>
       <title>Mavericks にアップグレードしたらターミナルが落ちた</title>
       <link>https://iriya-ufo.net/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</link>
       <pubDate>Tue, 22 Jul 2014 12:31:08 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</guid>
       <description>今更ですが Lion から Mavericks にアップグレードしました。OS のアップグレードは色々トラブルが起こるのであまりしたくないのですが、流行りについていかないの</description>
     </item>
-    
     <item>
       <title>Emacs に swift-mode をインストール</title>
       <link>https://iriya-ufo.net/blog/2014/07/21/install-swift-mode-to-emacs/</link>
       <pubDate>Mon, 21 Jul 2014 14:51:49 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/07/21/install-swift-mode-to-emacs/</guid>
       <description>Apple が発表した新言語 Swift が話題になってますね。 ほとんどの人は Xcode で試すのでしょうけど、あんな不便なIDEを使いたくない Emacs 病の人がいるかと思います。</description>
     </item>
-    
     <item>
       <title>コマンドから Heroku アプリを削除</title>
       <link>https://iriya-ufo.net/blog/2014/06/10/delete-heroku-app-by-terminal/</link>
       <pubDate>Tue, 10 Jun 2014 01:35:28 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/06/10/delete-heroku-app-by-terminal/</guid>
       <description>Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削</description>
     </item>
-    
     <item>
       <title>Mac OS X で locate エラーの直し方</title>
       <link>https://iriya-ufo.net/blog/2014/06/07/fix-locate-error/</link>
       <pubDate>Sat, 07 Jun 2014 22:35:26 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/06/07/fix-locate-error/</guid>
       <description>Linux でお世話になってるファイルを探すコマンドの locate ですが、当然 Mac にもあります。 しかしデータベースを更新するコマンドが違ってて Linux だと updatedb ですが Mac は /usr/libexec/locate.updatedb</description>
     </item>
-    
     <item>
       <title>続・SICP読書会</title>
       <link>https://iriya-ufo.net/blog/2014/05/18/sicp-reading/</link>
       <pubDate>Sun, 18 May 2014 03:41:22 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/05/18/sicp-reading/</guid>
       <description>最近タスクがこなせていない SICP 読書会になっていましたが、この度新しくメンバーが2人入ってきてテンション上がりました。 場所決めグダグダになって申</description>
     </item>
-    
     <item>
       <title>Windows 7 64bit に Rails の環境を構築</title>
       <link>https://iriya-ufo.net/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</link>
       <pubDate>Thu, 08 May 2014 23:39:00 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</guid>
       <description>最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずこ</description>
     </item>
-    
     <item>
       <title>Mac に AUCTeX をインストールした</title>
       <link>https://iriya-ufo.net/blog/2014/04/13/auctex-to-mac-emacs/</link>
       <pubDate>Sun, 13 Apr 2014 15:34:38 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/04/13/auctex-to-mac-emacs/</guid>
       <description>昔書いてた TeX を Mac 環境で快適に使う設定を始めたのが運のつき・・・めちゃ時間かかりました。 TeX はもうバッドノウハウの固まりって感じがして好きじゃな</description>
     </item>
-    
     <item>
       <title>Mac の Gauche で SLIB を使う</title>
       <link>https://iriya-ufo.net/blog/2014/04/12/slib-with-gauche/</link>
       <pubDate>Sat, 12 Apr 2014 17:17:10 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/04/12/slib-with-gauche/</guid>
       <description>Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。 ここからダウンロードしてくれば使えるようになります。 The SLIB</description>
     </item>
-    
     <item>
       <title>SICP 読書会始めました</title>
       <link>https://iriya-ufo.net/blog/2014/04/07/sicp-reading/</link>
       <pubDate>Mon, 07 Apr 2014 02:15:09 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/04/07/sicp-reading/</guid>
       <description>もうすでに2回ほど挫折してるけど今回こそは読破する勢いで読んでいきます。そのための心強い仲間もできました。興味のある方は歓迎しておりますので</description>
     </item>
-    
     <item>
       <title>Mac の Emacs に cmigemo をインストール</title>
       <link>https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/</link>
       <pubDate>Wed, 19 Mar 2014 01:11:21 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/03/19/install-cmigemo-on-emacs/</guid>
       <description>cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。 まずはインストールから $ brew install cmigemo ここから migemo.el をとって</description>
     </item>
-    
     <item>
       <title>gem を管理しよう</title>
       <link>https://iriya-ufo.net/blog/2014/03/14/lets-manage-gem/</link>
       <pubDate>Fri, 14 Mar 2014 02:23:08 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/03/14/lets-manage-gem/</guid>
       <description>Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは $ gem install hoge とかやってるかと思います。そんな</description>
     </item>
-    
     <item>
       <title>Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった</title>
       <link>https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/</link>
       <pubDate>Wed, 12 Mar 2014 02:12:34 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/</guid>
       <description>プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみよ</description>
     </item>
-    
     <item>
       <title>土日で出来る Node.js 入門</title>
       <link>https://iriya-ufo.net/blog/2014/03/08/start-nodejs-at-weekend/</link>
       <pubDate>Sat, 08 Mar 2014 17:29:27 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/03/08/start-nodejs-at-weekend/</guid>
       <description>そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。 インストール方法 Node.js はまだまだ開発まっし</description>
     </item>
-    
     <item>
       <title>Ubuntu の git を最新にする</title>
       <link>https://iriya-ufo.net/blog/2014/03/08/update-git-by-ubuntu/</link>
       <pubDate>Sat, 08 Mar 2014 15:16:11 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/03/08/update-git-by-ubuntu/</guid>
       <description>Ubuntu への git インストールは apt-get で出来ますがバージョンが古いので最新バージョンをインストールする方法です。ソースコンパイルは行わずパッケージマネジャ</description>
     </item>
-    
     <item>
       <title>rbenv で入れた ruby で flymake がちゃんと動作しなかったので直した</title>
       <link>https://iriya-ufo.net/blog/2014/02/05/fix-flymake/</link>
       <pubDate>Wed, 05 Feb 2014 00:28:18 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2014/02/05/fix-flymake/</guid>
       <description>Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？ flymake はデフォルトだとシステムの ruby を読み</description>
     </item>
-    
     <item>
       <title>プログラミング技術は必要不可欠なものになってゆく</title>
       <link>https://iriya-ufo.net/blog/2013/12/12/the-reason-that-every-person-should-learn-programming/</link>
       <pubDate>Thu, 12 Dec 2013 06:24:33 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/12/12/the-reason-that-every-person-should-learn-programming/</guid>
       <description>世界の最先端を突っ走るアメリカの一番偉い人がプログラミングを学べと言っております。 http://life-is-tech.com/blog/programming/messagefrompresidentobama-5843 フォン・ノイマンがコンピューターの基礎理論を作り上げてか</description>
     </item>
-    
     <item>
       <title>複数の環境で Rails を開発する</title>
       <link>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</link>
       <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</guid>
       <description>普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。 既存の</description>
     </item>
-    
     <item>
       <title>Rails 4.0.0.rc1 から 4.0.0 にアップデートしたら嵌った</title>
       <link>https://iriya-ufo.net/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</link>
       <pubDate>Sun, 03 Nov 2013 04:24:00 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</guid>
       <description>3系から4系のアップデートを参考にしたのだけれど、変にエラーが出て嵌ったので解決方法を書く。 ruby アップデート まず ruby を最新のバージョンにアップデ</description>
     </item>
-    
     <item>
       <title>MacOS のパッケージ管理で便利な Homebrew の使い方</title>
       <link>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</link>
       <pubDate>Wed, 30 Oct 2013 03:24:39 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</guid>
       <description>備忘録のため使い方をまとめます。インストールの仕方は割愛します。 $ brew update # brew を最新にする $ brew outdated # インストール済のパッケージのうち最新のバージョ</description>
     </item>
-    
     <item>
       <title>各ディレクトリの使用量をターミナルで確認する方法</title>
       <link>https://iriya-ufo.net/blog/2013/10/30/find-disk-usage-by-terminal/</link>
       <pubDate>Wed, 30 Oct 2013 02:03:20 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/30/find-disk-usage-by-terminal/</guid>
       <description>ターミナルを使って HDD 容量を確認するのに使うコマンドは df です。 ディレクトリの容量を確認するコマンドは du です。 今回はちょっと便利なオプションを紹</description>
     </item>
-    
     <item>
       <title>Gauche で rlwrap を使う</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/</link>
       <pubDate>Sat, 19 Oct 2013 20:45:17 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/</guid>
       <description>Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し</description>
     </item>
-    
     <item>
       <title>Emacs の info の使い方と info ドキュメントインストールの仕方</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</link>
       <pubDate>Sat, 19 Oct 2013 19:19:20 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</guid>
       <description>info の使い方 info は Emacs の中で説明を読むしくみ。 M-x info または C-h i で開始する。 u up 一つ上に戻る d dir 入口に戻る M-x info info を開始する q quit 終了 space とにかく読み進む p</description>
     </item>
-    
     <item>
       <title>シェル周りまとめ</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/about-shell/</link>
       <pubDate>Sat, 19 Oct 2013 18:33:58 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/about-shell/</guid>
       <description>csh tcsh まとめ .login (csh, tcsh) login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。 login 後にシェルを起動しても読み込まれない。 .tcshrc (tcsh) tcsh を起</description>
     </item>
-    
     <item>
       <title>標準のコマンドの関連付けを変更 update-alternatives</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/update-alternatives/</link>
       <pubDate>Sat, 19 Oct 2013 18:17:35 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/update-alternatives/</guid>
       <description>Ubuntu にて update-alternatives コマンドを使用すると標準コマンドの関連付けを変更できます。 例として Emacs の関連付けを変更する方法をみてみましょう。 Emacs がどこから実行される</description>
     </item>
-    
     <item>
       <title>Emacs の load-path の調べ方</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/</link>
       <pubDate>Sat, 19 Oct 2013 18:07:23 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/look-at-load-path-emacs/</guid>
       <description>Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl+j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (</description>
     </item>
-    
     <item>
       <title>Emacs24 のテーマフレームワークを使おう</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/theme-framework-for-emacs24/</link>
       <pubDate>Sat, 19 Oct 2013 03:32:28 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/theme-framework-for-emacs24/</guid>
       <description>以前、自分が書いた記事を備忘録のためにリンク掲載します。 Emacs24 のテーマフレームワークを使おう</description>
     </item>
-    
     <item>
       <title>Emacs24 のパッケージシステムを使おう</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/emacs24-package-system/</link>
       <pubDate>Sat, 19 Oct 2013 03:26:46 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/emacs24-package-system/</guid>
       <description>Emacs24 から独自のパッケージシステムが導入されました。 これによって、今までちまちま github などからインストールしていた各種 elisp が一元管理できるようになりバ</description>
     </item>
-    
     <item>
       <title>Ubuntu の rbenv で管理している ruby を新しくする</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</link>
       <pubDate>Sat, 19 Oct 2013 02:00:50 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</guid>
       <description>Ubuntu の rbenv で管理している ruby を新しくする方法です。 MacOS だと多分 homebrew とか使ってると思います。今回は割愛です。 利用可能な ruby のバージョンを確認 ruby-build で利用可能な</description>
     </item>
-    
     <item>
       <title>Ubuntu に heroku toolbelt をインストール</title>
       <link>https://iriya-ufo.net/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</link>
       <pubDate>Sat, 19 Oct 2013 01:06:24 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</guid>
       <description>下記一行を端末から実行でOK $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh</description>
     </item>
-    
     <item>
       <title>i-node が枯渇してファイルの作成ができなくなった件</title>
       <link>https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</link>
       <pubDate>Wed, 18 Sep 2013 21:35:15 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</guid>
       <description>久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。 適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。 Ubuntu はよく</description>
     </item>
-    
     <item>
       <title>Emacs 使いが Sublime Text 2 を練習してみた</title>
       <link>https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</link>
       <pubDate>Sat, 13 Jul 2013 15:43:18 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</guid>
       <description>知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。 普段は Emacs 使ってる私ですが、結論から言いますと、Ema</description>
     </item>
-    
     <item>
       <title>Ubuntu に Android Studio をインストール</title>
       <link>https://iriya-ufo.net/blog/2013/06/01/android-studio-to-ubuntu/</link>
       <pubDate>Sat, 01 Jun 2013 03:41:13 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/06/01/android-studio-to-ubuntu/</guid>
       <description>興味本位でいれてみました。 Ubuntu のバージョンは 12.04 です。 公式から Linux 版の tgz をダウンロードして解凍します。 Getting Started with Android Studio シェルに PATH を設定します。 1 2 # Android Studio</description>
     </item>
-    
     <item>
       <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
       <link>https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
       <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
       <description>Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち</description>
     </item>
-    
     <item>
       <title>Mac OS X にインラインパッチの当たった Emacs を Homebrew でインストール</title>
       <link>https://iriya-ufo.net/blog/2013/05/18/install-emacs-by-homebrew/</link>
       <pubDate>Sat, 18 May 2013 08:30:49 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/18/install-emacs-by-homebrew/</guid>
       <description>先ほど Homebrew のアップデートをしたところ Emacs が使えなくなりました。 古い Emacs が削除されてリンク先が消滅したのが原因でした。 これはいい機会？と思い最新の Emacs</description>
     </item>
-    
     <item>
       <title>zsh で git のコマンド補完及びブランチ名の表示</title>
       <link>https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/</link>
       <pubDate>Sat, 18 May 2013 07:58:33 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/</guid>
       <description>git のコマンド補完 まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでア</description>
     </item>
-    
     <item>
       <title>rbenv で Mac OS X に Ruby 2.0.0 をインストールする</title>
       <link>https://iriya-ufo.net/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</link>
       <pubDate>Mon, 13 May 2013 18:08:14 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</guid>
       <description>rvm はクールじゃないので rbenv を使って Ruby をインストールします。 事前準備 はじめに『Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明して</description>
     </item>
-    
     <item>
       <title>Rails のアップデート</title>
       <link>https://iriya-ufo.net/blog/2013/05/12/rails-update/</link>
       <pubDate>Sun, 12 May 2013 04:22:10 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/12/rails-update/</guid>
       <description>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11</description>
     </item>
-    
     <item>
       <title>SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法</title>
       <link>https://iriya-ufo.net/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</link>
       <pubDate>Fri, 10 May 2013 08:47:32 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</guid>
       <description>サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります</description>
     </item>
-    
     <item>
       <title>SSH ログインが遅い問題を解決</title>
       <link>https://iriya-ufo.net/blog/2013/05/10/why-so-slow-ssh-login/</link>
       <pubDate>Fri, 10 May 2013 08:28:07 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/10/why-so-slow-ssh-login/</guid>
       <description>SSH でログインそのものはできるが非常に時間がかかるという場合、DNS の設定がよろしくない場合があります。 そんな時は、sshd_config に以</description>
     </item>
-    
     <item>
       <title>Ubuntu で DVD リッピング</title>
       <link>https://iriya-ufo.net/blog/2013/05/07/ubuntu-dvd-ripping/</link>
       <pubDate>Tue, 07 May 2013 17:29:47 +0000</pubDate>
-      
       <guid>https://iriya-ufo.net/blog/2013/05/07/ubuntu-dvd-ripping/</guid>
       <description>Ubuntu で DVD をリッピングする方法はいくつかあります。 k9copy dvd::rip wine で DVD Decrypter 私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメ</description>
     </item>
-    
   </channel>
 </rss>
