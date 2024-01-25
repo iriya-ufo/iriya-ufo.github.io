@@ -6,8 +6,15 @@
     <description>Recent content in programming on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 18 Dec 2023 15:19:28 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 26 Jan 2024 01:26:18 +0900</lastBuildDate>
     <atom:link href="https://iriya-ufo.net/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs 小技集</title>
+      <link>https://iriya-ufo.net/blog/2024/01/26/emacs-tips/</link>
+      <pubDate>Fri, 26 Jan 2024 01:26:18 +0900</pubDate>
+      <guid>https://iriya-ufo.net/blog/2024/01/26/emacs-tips/</guid>
+      <description>自分のための覚書 使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace</description>
+    </item>
     <item>
       <title>インストール済み VSCode 拡張機能一覧 2023-12 版</title>
       <link>https://iriya-ufo.net/blog/2023/12/18/vscode-extension-4/</link>

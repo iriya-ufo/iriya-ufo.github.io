@@ -10,35 +10,49 @@
   
   <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <lastmod>2024-01-26T01:26:18+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/tags/emacs/</loc>
+    <lastmod>2024-01-26T01:26:18+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2024/01/26/emacs-tips/</loc>
+    <lastmod>2024-01-26T01:26:18+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <lastmod>2024-01-26T01:26:18+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <lastmod>2024-01-26T01:26:18+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <lastmod>2024-01-26T01:26:18+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/</loc>
-    <lastmod>2023-12-18T15:19:28+09:00</lastmod>
+    <lastmod>2024-01-26T01:26:18+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -53,13 +67,6 @@
   <url>
     <loc>https://iriya-ufo.net/blog/2023/12/18/vscode-extension-4/</loc>
     <lastmod>2023-12-18T15:19:28+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/emacs/</loc>
-    <lastmod>2023-02-18T18:01:07+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
