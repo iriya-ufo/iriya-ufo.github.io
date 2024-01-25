@@ -14,7 +14,7 @@ $ git subtree add --prefix=public/ origin master
 How to write a post.
 
 ``` shell
-$ hugo new post/2018-12-21-your-post-title.md
+$ hugo new post/`date "+%F"`-your-post-title.md
 ```
 
 Pull the master branch when you use other laptop.
