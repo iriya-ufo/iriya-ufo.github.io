@@ -30,10 +30,10 @@ tags:
 | SSD | [ADATA SP900 256GB](http://www.adata.com/jp/ssd/feature/171) | ¥8,480 |
 | HDD | [東芝 DT01ACA300 3TB SATA600 7200](http://toshiba.semicon-storage.com/jp/product/storage-products/client-hdd/dt01acaxxx.html) | ¥6,780 |
 | GPU | [玄人志向 GF-GTX1080-E8GB/BLF](http://www.kuroutoshikou.com/product/graphics_bord/nvidia/gf-gtx1080-e8gb_blf/release/) | ¥64,800 |
-| 電源 | [ENERMAX PLATIMAX 850W](http://www.enermaxjapan.com/Platimax-850W_top/EPM850EWT_top.html) | ¥21,980 |
+| 電源 | [Fractal Ion+ 2 Platinum 660W](https://www.fractal-design.com/ja/products/power-supplies/ion/ion-2-platinum-660w/black/) | ¥19,790 |
 | ケース | [CMS-693-KKN1-JP](http://apac.coolermaster.com/jp/case/mid-tower-cm690-series/cm693/) | ¥8,980 |
-| 合計 | | (税込) ¥175,262 |
+| 合計 | | (税込) ¥173,072 |
 
-ちなみに、自作とかめんどくさい、お金払ってなんとかならんの？っていう方は**[ここから](https://deepstation.jp/index.html#)**買ってください。
+※ 以前の電源(ENERMAX PLATIMAX 850W)が壊れたので2024年3月に買い替えました。
 
 次回はこのマシンに[『Ubuntu のインストール』]({{< relref "2016-11-10-install-ubuntu-to-deep-learning-machine" >}})を行います。
