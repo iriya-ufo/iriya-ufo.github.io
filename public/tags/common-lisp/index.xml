@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>common lisp on iriya-ufo&#39;s blog</title>
+    <title>Common Lisp on iriya-ufo&#39;s blog</title>
     <link>https://iriya-ufo.net/tags/common-lisp/</link>
-    <description>Recent content in common lisp on iriya-ufo&#39;s blog</description>
+    <description>Recent content in Common Lisp on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 10 Feb 2015 03:42:46 +0000</lastBuildDate>

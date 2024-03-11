@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ruby on rails on iriya-ufo&#39;s blog</title>
+    <title>Ruby on Rails on iriya-ufo&#39;s blog</title>
     <link>https://iriya-ufo.net/tags/ruby-on-rails/</link>
-    <description>Recent content in ruby on rails on iriya-ufo&#39;s blog</description>
+    <description>Recent content in Ruby on Rails on iriya-ufo&#39;s blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 08 Apr 2016 00:52:01 +0000</lastBuildDate>
