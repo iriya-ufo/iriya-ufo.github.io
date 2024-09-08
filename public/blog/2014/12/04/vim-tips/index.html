@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Vim 小技集 - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="" /><meta name="description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.133.1 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2014/12/04/vim-tips/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:url" content="https://iriya-ufo.net/blog/2014/12/04/vim-tips/">
+  <meta property="og:site_name" content="iriya-ufo&#39;s blog">
+  <meta property="og:title" content="Vim 小技集">
+  <meta property="og:description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2014-12-04T18:58:13+00:00">
+    <meta property="article:modified_time" content="2014-12-04T18:58:13+00:00">
+
+  <meta itemprop="name" content="Vim 小技集">
+  <meta itemprop="description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #">
+  <meta itemprop="datePublished" content="2014-12-04T18:58:13+00:00">
+  <meta itemprop="dateModified" content="2014-12-04T18:58:13+00:00">
+  <meta itemprop="wordCount" content="722">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Vim 小技集">
+  <meta name="twitter:description" content="自分のための覚書 編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy #">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Vim 小技集</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2014-12-04 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>自分のための覚書</p>
+<h2 id="編集">編集</h2>
+<pre><code>:%s/:\(\w\+\) =&gt;/\1:/g  # hash の書き方を置換 #正規表現
+Ctrl+v jjjj I           # 4行コメントアウト(,#)
+Ctrl+v jjjj d           # 4行コメントイン(,#)
+Ctrl+v jjjj c aaaa      # 4行置換
+viwy                    # カーソル位置の単語を yank
+viwp                    # カーソル位置の単語を yank している内容で上書き
+cw                      # カーソル位置から単語の最後までを書き換える
+viwu                    # カーソル位置の単語を undercase
+viwU                    # カーソル位置の単語を UPPERCASE
+viw~                    # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え
+viw!nkf -Z4             # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ
+</code></pre>
+<h2 id="カーソル移動">カーソル移動</h2>
+<pre><code>0                       # 行の先頭へ
+^                       # 行の空白以外の先頭へ
+$                       # 行の末尾へ
+w                       # 次の単語の先頭へ
+f*                      # 次の*へ           (例 df&quot;-&gt;&quot;まで削除)
+t*                      # 次の*の前へ       (例 dt&quot;-&gt;&quot;の前まで削除)
+viw                     # 現在のカーソル位置の単語を選択
+vi&quot;                     # 現在のカーソル位置の&quot;の中を選択
+va&quot;                     # 現在のカーソル位置の&quot;の外を選択
+</code></pre>
+<h2 id="モード">モード</h2>
+<pre><code>C-[                     # 挿入モードを抜ける
+ESC                     # 挿入モードを抜ける
+</code></pre>
+<h2 id="ウィンドウ">ウィンドウ</h2>
+<pre><code>:vs                     # 垂直分割
+:sp                     # 水平分割
+Ctrl+w w                # 次のウィンドウへ
+Ctrl+w [hjkl左下上右]    # ウィンドウの移動
+Ctrl+w -                # 高さを小さく  (例 Ctrl+w 10- -&gt; ウィンドウの高さを 10 狭める)
+Ctrl+w +                # 高さを大きく
+Ctrl+w &lt;                # 幅を小さく
+Ctrl+w &gt;                # 幅を大きく
+Ctrl+w =                # 自動調整
+Ctrl+w r                # 左右・上下のウィンドウを入れ替え
+:res 100                # 現在のウィンドウの高さを 100 にする
+:vertical res 30        # 現在のウィンドウの横幅を 30 にする
+</code></pre>
+<h2 id="特殊処理">特殊処理</h2>
+<pre><code>qa                      # マクロ記録開始
+q                       # マクロ記録終了 (@a で使用可能)
+</code></pre>
+<h2 id="コマンドラインの履歴">コマンドラインの履歴</h2>
+<pre><code>q: または : Ctrl+f       # コマンドラインの履歴
+q/                      # 検索
+Ctrl+c                  # 履歴をコマンドラインに送る(編集して使えるようになる)
+</code></pre>
+<h2 id="改行文字の変更">改行文字の変更</h2>
+<pre><code>:%s/
+/
+/g                      # /Ctrl+v Ctrl+m/Ctrl+v Enter/
+</code></pre>
+<h2 id="ファイル比較">ファイル比較</h2>
+<pre><code>:vertical diffsplit     # 差分を取りたいファイル
+:do (diff obtain)       # もう一方のファイルから差分を取り込む
+:dp (diff put)          # もう一方のファイルに差分を取り込ませる
+</code></pre>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content"></span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2014-12-04
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/vim/">vim</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2014/12/17/start-postgresql/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">PostgreSQL の基本</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2014/11/24/ideal-person-who-can-take-invest/">
+            <span class="next-text nav-default">「私は、こんな人になら、金を出す！」読了</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2024
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author"></span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+
+
+
+
+</body>
+</html>

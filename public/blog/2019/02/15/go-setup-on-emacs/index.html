@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>Emacs に Go の開発環境を整える - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="" /><meta name="description" content="記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.133.1 with theme even" />
+
+
+<link rel="canonical" href="https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:url" content="https://iriya-ufo.net/blog/2019/02/15/go-setup-on-emacs/">
+  <meta property="og:site_name" content="iriya-ufo&#39;s blog">
+  <meta property="og:title" content="Emacs に Go の開発環境を整える">
+  <meta property="og:description" content="記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2019-02-15T11:35:19+09:00">
+    <meta property="article:modified_time" content="2019-02-15T11:35:19+09:00">
+
+  <meta itemprop="name" content="Emacs に Go の開発環境を整える">
+  <meta itemprop="description" content="記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。">
+  <meta itemprop="datePublished" content="2019-02-15T11:35:19+09:00">
+  <meta itemprop="dateModified" content="2019-02-15T11:35:19+09:00">
+  <meta itemprop="wordCount" content="404">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Emacs に Go の開発環境を整える">
+  <meta name="twitter:description" content="記事の情報が古くなってしまったので書き直しました。以下を参照してください。 [2021年版] Emacs に Go の開発環境を整える ここからは以前の内容です。">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">Emacs に Go の開発環境を整える</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2019-02-15 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p>記事の情報が古くなってしまったので書き直しました。以下を参照してください。</p>
+<ul>
+<li><a href="/blog/2021/10/13/go-setup-on-emacs-ver2/">[2021年版] Emacs に Go の開発環境を整える</a></li>
+</ul>
+<hr>
+<p>ここからは以前の内容です。</p>
+<p>Mac で Go をサクッとはじめるための手引書</p>
+<h1 id="go-のインストール">Go のインストール</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir <span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add this line to ~/.zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install</span>
+</span></span><span class="line"><span class="cl">brew install go
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="go-package-のインストール">Go Package のインストール</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ go get github.com/rogpeppe/godef               <span class="c1"># 関数定義等の参照パッケージ</span>
+</span></span><span class="line"><span class="cl">$ go get -u github.com/nsf/gocode                <span class="c1"># 補完パッケージ</span>
+</span></span><span class="line"><span class="cl">$ go get -v github.com/uudashr/gopkgs/cmd/gopkgs <span class="c1"># Go パッケージ</span>
+</span></span><span class="line"><span class="cl">$ go get github.com/golang/lint/golint           <span class="c1"># flycheckでシンタックスエラーを検知</span>
+</span></span><span class="line"><span class="cl">$ go get github.com/kisielk/errcheck             <span class="c1"># flycheckでシンタックスエラーを検知</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="emacs-go-package-のインストール">Emacs Go Package のインストール</h1>
+<p>Emacs のパッケージ管理は Cask を使っているものとする</p>
+<p>以下を Caskfile に追加して <code>cask install</code> する</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;flymake-go&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;go-mode&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;company-go&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;go-eldoc&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl"><span class="o">(</span>depends-on <span class="s2">&#34;go-autocomplete&#34;</span><span class="o">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="elisp-の設定">Elisp の設定</h1>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-emacs-lisp" data-lang="emacs-lisp"><span class="line"><span class="cl"><span class="c1">;;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;;================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;; Go</span>
+</span></span><span class="line"><span class="cl"><span class="c1">;;================================================================</span>
+</span></span><span class="line"><span class="cl"><span class="p">(</span><span class="nb">when</span> <span class="p">(</span><span class="nb">and</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;exec-path-from-shell&#34;</span><span class="p">)</span> <span class="p">(</span><span class="nv">locate-library</span> <span class="s">&#34;go-mode&#34;</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;exec-path-from-shell</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">let</span> <span class="p">((</span><span class="nv">envs</span> <span class="o">&#39;</span><span class="p">(</span><span class="s">&#34;PATH&#34;</span> <span class="s">&#34;GOPATH&#34;</span><span class="p">)))</span>
+</span></span><span class="line"><span class="cl">    <span class="p">(</span><span class="nv">exec-path-from-shell-copy-envs</span> <span class="nv">envs</span><span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nb">require</span> <span class="ss">&#39;go-autocomplete</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">  <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;go-mode-hook</span>
+</span></span><span class="line"><span class="cl">            <span class="p">(</span><span class="nb">lambda</span> <span class="p">()</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nb">setq</span> <span class="nv">indent-tabs-mode</span> <span class="no">t</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nv">go-eldoc-setup</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nb">setq</span> <span class="nv">gofmt-command</span> <span class="s">&#34;goimports&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">(</span><span class="nv">add-hook</span> <span class="ss">&#39;before-save-hook</span> <span class="ss">&#39;gofmt-before-save</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">              <span class="p">))</span>
+</span></span><span class="line"><span class="cl">  <span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h1 id="参考サイト">参考サイト</h1>
+<ul>
+<li><a href="https://qiita.com/kod314/items/2232d480411c5c2ab002">emacsで快適なGo言語ライフを送るための設定</a></li>
+<li><a href="http://emacs-jp.github.io/programming/golang.html">Goプログラミングの環境構築</a></li>
+<li><a href="https://cortyuming.hateblo.jp/entry/2016/03/05/064909">Emacs の Go の環境を整えるメモ</a></li>
+</ul>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content"></span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2019-02-15
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/go/">go</a>
+          <a href="/tags/emacs/">emacs</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/blog/2019/04/30/how-to-build-safety-web-app/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">「体系的に学ぶ 安全な Web アプリケーションの作り方 第2版」を読んだ</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
+        <a class="next" href="/blog/2019/01/23/high-dividend-usa-stock/">
+            <span class="next-text nav-default">「バカでも稼げる 米国株 高配当投資」を読んだ</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://twitter.com/iriya_ufo" class="iconfont icon-twitter" title="twitter"></a>
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2024
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author"></span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+
+
+
+
+</body>
+</html>
