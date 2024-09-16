@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Jest の代わりに Vitest 使ってみる - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。
+Jest 関連のアンインストール 前回の環境構築からの差分なので、入れていない場合は関係ありません。Vitest のインストールからどうぞ。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/" />
+<link rel="canonical" href="http://localhost:1313/blog/2021/12/23/using-vitest-instead-of-jest/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/">
+<meta property="og:url" content="http://localhost:1313/blog/2021/12/23/using-vitest-instead-of-jest/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Jest の代わりに Vitest 使ってみる">
-  <meta property="og:description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う">
+  <meta property="og:description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。
+Jest 関連のアンインストール 前回の環境構築からの差分なので、入れていない場合は関係ありません。Vitest のインストールからどうぞ。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +52,15 @@
     <meta property="article:modified_time" content="2021-12-23T15:24:24+09:00">
 
   <meta itemprop="name" content="Jest の代わりに Vitest 使ってみる">
-  <meta itemprop="description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う">
+  <meta itemprop="description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。
+Jest 関連のアンインストール 前回の環境構築からの差分なので、入れていない場合は関係ありません。Vitest のインストールからどうぞ。">
   <meta itemprop="datePublished" content="2021-12-23T15:24:24+09:00">
   <meta itemprop="dateModified" content="2021-12-23T15:24:24+09:00">
   <meta itemprop="wordCount" content="568">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Jest の代わりに Vitest 使ってみる">
-  <meta name="twitter:description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う">
+  <meta name="twitter:description" content="つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。
+Jest 関連のアンインストール 前回の環境構築からの差分なので、入れていない場合は関係ありません。Vitest のインストールからどうぞ。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

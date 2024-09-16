@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -131,7 +131,12 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Gauche で開発をするなら rlwrap は外せませんね。 ということで早速インストールしてみましょう。 端末から以下を実行します。 $ sudo apt-get install rlwrap Gauche の補完ファイルを準備し
+      <p>Gauche で開発をするなら rlwrap は外せませんね。
+ということで早速インストールしてみましょう。</p>
+<p>端末から以下を実行します。</p>
+<pre><code>$ sudo apt-get install rlwrap
+</code></pre>
+<p>Gauche の補完ファイルを準備します。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/gauche-rlwrap/" class="read-more-link">Read more..</a>
@@ -152,7 +157,21 @@
   
   <div class="post-content">
     <div class="post-summary">
-      info の使い方 info は Emacs の中で説明を読むしくみ。 M-x info または C-h i で開始する。 u up 一つ上に戻る d dir 入口に戻る M-x info info を開始する q quit 終了 space とにかく読み進む p
+      <h2 id="info-の使い方">info の使い方</h2>
+<p>info は Emacs の中で説明を読むしくみ。</p>
+<p><code>M-x info</code> または <code>C-h i</code> で開始する。</p>
+<pre><code>u       up      一つ上に戻る
+d       dir     入口に戻る
+M-x info        info を開始する
+q       quit    終了
+space           とにかく読み進む
+p       prev    前の節に戻る
+n       next    次の節に進む
+RET             矢印 (cursor) のある節に進む
+m       menu    (その画面の中の) 名前で指定して移動する
+</code></pre>
+<h2 id="info-ドキュメントのインストール">info ドキュメントのインストール</h2>
+<p>ここでは SICP, Gauche, R5RS の info のインストールをやってみる。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/how-to-use-emacs-info-and-document-install/" class="read-more-link">Read more..</a>
@@ -173,7 +192,13 @@
   
   <div class="post-content">
     <div class="post-summary">
-      csh tcsh まとめ .login (csh, tcsh) login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。 login 後にシェルを起動しても読み込まれない。 .tcshrc (tcsh) tcsh を起
+      <h2 id="csh-tcsh-まとめ">csh tcsh まとめ</h2>
+<h3 id="login-csh-tcsh">.login (csh, tcsh)</h3>
+<p>login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。
+login 後にシェルを起動しても読み込まれない。</p>
+<h3 id="tcshrc-tcsh">.tcshrc (tcsh)</h3>
+<p>tcsh を起動した際に読み込まれる設定ファイル。
+login 後にシェルを起動した際にも毎回読み込まれる。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/about-shell/" class="read-more-link">Read more..</a>
@@ -194,7 +219,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Ubuntu にて update-alternatives コマンドを使用すると標準コマンドの関連付けを変更できます。 例として Emacs の関連付けを変更する方法をみてみましょう。 Emacs がどこから実行される
+      <p>Ubuntu にて <code>update-alternatives</code> コマンドを使用すると標準コマンドの関連付けを変更できます。
+例として Emacs の関連付けを変更する方法をみてみましょう。
+Emacs がどこから実行されるか調べてみます。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/update-alternatives/" class="read-more-link">Read more..</a>
@@ -215,7 +242,17 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Emacs で load-path を調べてそれを見やすく表示させる方法です。 *scratch* バッファで以下を評価します。 load-path [Ctrl+j] 次に ( にカーソルを移動して以下を実行します。 M-x query-replace-regexp RET Query replace regexp: (
+      <p>Emacs で load-path を調べてそれを見やすく表示させる方法です。</p>
+<p><code>*scratch*</code> バッファで以下を評価します。</p>
+<pre><code>load-path [Ctrl+j]
+</code></pre>
+<p>次に <code>(</code> にカーソルを移動して以下を実行します。</p>
+<pre><code>M-x query-replace-regexp RET
+Query replace regexp: (半角空白) RET
+Query replace regexp   with: C-q C-j
+RET
+</code></pre>
+<p>そして <code>!</code> で全て置換します。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/look-at-load-path-emacs/" class="read-more-link">Read more..</a>
@@ -236,7 +273,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      以前、自分が書いた記事を備忘録のためにリンク掲載します。 Emacs24 のテーマフレームワークを使おう
+      <p>以前、自分が書いた記事を備忘録のためにリンク掲載します。</p>
+<ul>
+<li><a href="http://qiita.com/iriya-ufo@github/items/6f3304a23268a51a688e">Emacs24 のテーマフレームワークを使おう</a></li>
+</ul>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/theme-framework-for-emacs24/" class="read-more-link">Read more..</a>
@@ -257,7 +297,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Emacs24 から独自のパッケージシステムが導入されました。 これによって、今までちまちま github などからインストールしていた各種 elisp が一元管理できるようになりバ
+      <p>Emacs24 から独自のパッケージシステムが導入されました。
+これによって、今までちまちま github などからインストールしていた各種 elisp が一元管理できるようになりバージョンアップなども行えるため、素晴らしく便利になりました。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/emacs24-package-system/" class="read-more-link">Read more..</a>
@@ -278,7 +319,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Ubuntu の rbenv で管理している ruby を新しくする方法です。 MacOS だと多分 homebrew とか使ってると思います。今回は割愛です。 利用可能な ruby のバージョンを確認 ruby-build で利用可能な
+      <p>Ubuntu の rbenv で管理している ruby を新しくする方法です。
+MacOS だと多分 homebrew とか使ってると思います。今回は割愛です。</p>
+<h2 id="利用可能な-ruby-のバージョンを確認">利用可能な ruby のバージョンを確認</h2>
+<p>ruby-build で利用可能な ruby のバージョンを確認します。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/" class="read-more-link">Read more..</a>
@@ -299,7 +343,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      下記一行を端末から実行でOK $ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+      <p>下記一行を端末から実行でOK</p>
+<pre><code>$ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+</code></pre>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/19/heroku-toolbelt-to-ubuntu/" class="read-more-link">Read more..</a>
@@ -320,7 +366,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      やっぱり紙媒体 メモ帳使ってますか？そのメモ帳は紙ですか？電子媒体ですか？ 私は一時期 iPad でメモを取っていたことがありますが、3回使ってみたところ
+      <h2 id="やっぱり紙媒体">やっぱり紙媒体</h2>
+<p>メモ帳使ってますか？そのメモ帳は紙ですか？電子媒体ですか？</p>
+<p>私は一時期 iPad でメモを取っていたことがありますが、3回使ってみたところで辞めました。iPad などのタブレットでメモを取ることの最大の欠点は&quot;すぐに記録できない&quot;という点です。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/10/13/useful-notepad/" class="read-more-link">Read more..</a>
@@ -352,7 +400,7 @@
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

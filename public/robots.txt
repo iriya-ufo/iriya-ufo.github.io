@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://iriya-ufo.net/sitemap.xml
+Sitemap: http://localhost:1313/sitemap.xml

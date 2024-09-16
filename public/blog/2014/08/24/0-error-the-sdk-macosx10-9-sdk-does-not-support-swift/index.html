@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>&amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#8216;MacOSX10.9.sdk&amp;#8217; does not support Swift - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。
+&lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサポート対象外ということで起動すらできません。さすが Apple 切り捨て方が潔い。さてどうやって起動するかというと、Xcode6 に付随している最新の sdk を使うように swift の起動オプションに渡してあげたら大丈夫です。以下コマンドです。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/" />
+<link rel="canonical" href="http://localhost:1313/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/">
+<meta property="og:url" content="http://localhost:1313/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="&lt;unknown&gt;:0: error: the SDK &#8216;MacOSX10.9.sdk&#8217; does not support Swift">
-  <meta property="og:description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ">
+  <meta property="og:description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。
+&lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサポート対象外ということで起動すらできません。さすが Apple 切り捨て方が潔い。さてどうやって起動するかというと、Xcode6 に付随している最新の sdk を使うように swift の起動オプションに渡してあげたら大丈夫です。以下コマンドです。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +52,15 @@
     <meta property="article:modified_time" content="2014-08-24T18:13:51+00:00">
 
   <meta itemprop="name" content="&lt;unknown&gt;:0: error: the SDK &#8216;MacOSX10.9.sdk&#8217; does not support Swift">
-  <meta itemprop="description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ">
+  <meta itemprop="description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。
+&lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサポート対象外ということで起動すらできません。さすが Apple 切り捨て方が潔い。さてどうやって起動するかというと、Xcode6 に付随している最新の sdk を使うように swift の起動オプションに渡してあげたら大丈夫です。以下コマンドです。">
   <meta itemprop="datePublished" content="2014-08-24T18:13:51+00:00">
   <meta itemprop="dateModified" content="2014-08-24T18:13:51+00:00">
   <meta itemprop="wordCount" content="259">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="&lt;unknown&gt;:0: error: the SDK &#8216;MacOSX10.9.sdk&#8217; does not support Swift">
-  <meta name="twitter:description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。 &lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサ">
+  <meta name="twitter:description" content="Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。
+&lt;unknown&gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサポート対象外ということで起動すらできません。さすが Apple 切り捨て方が潔い。さてどうやって起動するかというと、Xcode6 に付随している最新の sdk を使うように swift の起動オプションに渡してあげたら大丈夫です。以下コマンドです。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

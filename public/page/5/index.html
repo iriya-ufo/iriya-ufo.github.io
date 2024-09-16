@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -131,7 +131,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      基本的に Hugo でブログを書くときは markdown を利用して書いています。 ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記
+      <p>基本的に Hugo でブログを書くときは markdown を利用して書いています。</p>
+<p>ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記事を書いたりすることもあります。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/12/16/hugo-inline-html/" class="read-more-link">Read more..</a>
@@ -152,7 +153,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。 いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っている
+      <p>幾人かの著名な方々が、それぞれの章を執筆した形式の書籍となっている。</p>
+<p>いわゆる入門書のような基礎文法の解説ではなく、現場でも使える or 使っているテクニックや環境構築などが解説されている。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/12/12/mingo/" class="read-more-link">Read more..</a>
@@ -173,7 +175,92 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $
+      <p>Mac で Go をサクッとはじめるための手引書</p>
+<ul>
+<li><a href="/blog/2019/02/15/go-setup-on-emacs/">Emacs の場合はこちら</a></li>
+</ul>
+<h2 id="go-のインストール">Go のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir <span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add this line to ~/.zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install</span>
+</span></span><span class="line"><span class="cl">brew install go
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>バージョン確認</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ go version
+</span></span><span class="line"><span class="cl">go version go1.13.4 darwin/amd64
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="repl-のインストール">REPL のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nv">GO111MODULE</span><span class="o">=</span>off go get -u github.com/motemen/gore/cmd/gore
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ gore <span class="c1"># 確認</span>
+</span></span><span class="line"><span class="cl">gore version 0.4.1  :help <span class="k">for</span> <span class="nb">help</span>
+</span></span><span class="line"><span class="cl">gore&gt; fmt.Println<span class="o">(</span><span class="s2">&#34;hello&#34;</span><span class="o">)</span>
+</span></span><span class="line"><span class="cl">hello
+</span></span><span class="line"><span class="cl"><span class="m">6</span>
+</span></span><span class="line"><span class="cl">&lt;nil&gt;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="go-package-のインストール">Go Package のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># gopkgs is a tool that provides list of available Go packages that can be imported.</span>
+</span></span><span class="line"><span class="cl">$ <span class="nv">GO111MODULE</span><span class="o">=</span>on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Golint is a linter for Go source code.</span>
+</span></span><span class="line"><span class="cl">$ go get -u golang.org/x/lint/golint
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># errcheck is a program for checking for unchecked errors in go programs.</span>
+</span></span><span class="line"><span class="cl">$ go get -u github.com/kisielk/errcheck
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="補完ツールのインストール">補完ツールのインストール</h2>
+<p>補完については <code>gocode</code> を <code>go get</code> してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/12/08/go-env-in-vscode/" class="read-more-link">Read more..</a>
@@ -194,7 +281,14 @@
   
   <div class="post-content">
     <div class="post-summary">
-      更新しました@2021/03/23 Go の src ディレクトリを移動した ここからは以前の内容です。 TechCommit Advent Calendar 2019 12日目の記事です。 リポジトリきちんと管理し
+      <p>更新しました@2021/03/23</p>
+<ul>
+<li><a href="/blog/2021/03/23/moving-go-src/">Go の src ディレクトリを移動した</a></li>
+</ul>
+<hr>
+<p>ここからは以前の内容です。</p>
+<p><a href="https://qiita.com/advent-calendar/2019/tech-commit">TechCommit Advent Calendar 2019</a> 12日目の記事です。</p>
+<p>リポジトリきちんと管理してますか?</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/11/28/ghq-setup/" class="read-more-link">Read more..</a>
@@ -215,7 +309,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      これを読む人は、あの同心円状の The Clean Architecture の図を見たことがあるだろう。 もしかしたら The Clean Architecture についてのより詳しい説明を求めていたかもしれない。 だが本書
+      <p>これを読む人は、あの同心円状の The Clean Architecture の図を見たことがあるだろう。
+もしかしたら The Clean Architecture についてのより詳しい説明を求めていたかもしれない。
+だが本書では詳細は取り扱っていない。
+アーキテクチャ全般について、より原理原則の立場からアーキテクトとはなにかを語っている。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/11/18/clean-architecure/" class="read-more-link">Read more..</a>
@@ -236,7 +333,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      
+      <p><img src="/images/2019/10/Vue-Essentials-Cheat-Sheet-1.png" alt="vue_cheat_sheet_1">
+<img src="/images/2019/10/Vue-Essentials-Cheat-Sheet-2.png" alt="vue_cheat_sheet_2"></p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/10/10/vue-essentials-cheat-sheet/" class="read-more-link">Read more..</a>
@@ -257,7 +355,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      何かと Twitter で炎上することで有名？な 田端 信太郎 氏が書かれた本。 これだけメディアの本質を理解している人なので、Twitter 発言はもはやわざとだと
+      <p>何かと Twitter で炎上することで有名？な 田端 信太郎 氏が書かれた本。</p>
+<p>これだけメディアの本質を理解している人なので、Twitter 発言はもはやわざとだと思う。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/10/09/media-makers/" class="read-more-link">Read more..</a>
@@ -278,7 +377,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      広告コピーを書いている人も、そうでない人も読んだほうがいい良書。 コピーライターとしての仕事の本質がぎゅっと詰まっているが、その本質というのは
+      <p>広告コピーを書いている人も、そうでない人も読んだほうがいい良書。</p>
+<p>コピーライターとしての仕事の本質がぎゅっと詰まっているが、その本質というのはコピーライターのみならず、クリエイターに通ずるものがあるのではと感じた。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/10/08/how-to-write-adcopy/" class="read-more-link">Read more..</a>
@@ -299,7 +399,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      倒産しかけのメガネ店の身売り先を探していたはずが、いつの間にかその会社に熱が入り自らが買って出て会社再建に乗り出す話し。 書き方のテイストが小
+      <p>倒産しかけのメガネ店の身売り先を探していたはずが、いつの間にかその会社に熱が入り自らが買って出て会社再建に乗り出す話し。</p>
+<p>書き方のテイストが小説風であり、一度読みだしたら止まらない面白さ。
+ノンフィクションでこんなことが起こるのかという程の破天荒っぷり。
+何度も何度も難航する資金繰りで苦痛や苦悩、絶望を味わいながらも決して諦めず、あがき続けて復活する様は最高にかっこいい。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/10/04/hatenko-phoenix-owndays/" class="read-more-link">Read more..</a>
@@ -320,7 +423,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Windows95 の開発に携わった元マイクロソフトエンジニアの中島 聡さんの書かれた本。 Kindle Unlimited で読めます。 著者の幼少期の体験などを交えながら、ロケットスタートで
+      <p>Windows95 の開発に携わった元マイクロソフトエンジニアの中島 聡さんの書かれた本。</p>
+<p>Kindle Unlimited で読めます。</p>
+<p>著者の幼少期の体験などを交えながら、ロケットスタートで仕事を始めることの重要性を説き、それを実践するための時間術とその方法についての本です。
+第六章までは時間術についての方法が書かれており、それ以降は人生訓を説きつつ好きなこと夢中になれることを見つけようみたいな感じの内容です。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/10/01/why-your-job-does-not-quit/" class="read-more-link">Read more..</a>
@@ -352,7 +458,7 @@
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

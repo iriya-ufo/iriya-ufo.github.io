@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>tmux でクリップボードを使う - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="いい加減不便になってきたので設定した。
+$ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/" />
+<link rel="canonical" href="http://localhost:1313/blog/2016/03/25/share-tmux-clipboard/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2016/03/25/share-tmux-clipboard/">
+<meta property="og:url" content="http://localhost:1313/blog/2016/03/25/share-tmux-clipboard/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="tmux でクリップボードを使う">
-  <meta property="og:description" content="いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。">
+  <meta property="og:description" content="いい加減不便になってきたので設定した。
+$ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +52,15 @@
     <meta property="article:modified_time" content="2016-03-25T15:26:45+00:00">
 
   <meta itemprop="name" content="tmux でクリップボードを使う">
-  <meta itemprop="description" content="いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。">
+  <meta itemprop="description" content="いい加減不便になってきたので設定した。
+$ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。">
   <meta itemprop="datePublished" content="2016-03-25T15:26:45+00:00">
   <meta itemprop="dateModified" content="2016-03-25T15:26:45+00:00">
   <meta itemprop="wordCount" content="29">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="tmux でクリップボードを使う">
-  <meta name="twitter:description" content="いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。">
+  <meta name="twitter:description" content="いい加減不便になってきたので設定した。
+$ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

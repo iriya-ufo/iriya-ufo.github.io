@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>TensorFlow を GPU で動かす - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使います。
+前提 GPU (今回は GEFORCE GTX 1080) を積んだマシンがある Ubuntu 16.04 LTS がインストールされている Docker がインストールされている 構築環境 CUDA &mdash; Nvidia が提供する GPU 向けの統合開発環境 cuDNN &mdash; Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている NVIDIA Docker &mdash; Nvidia が提供している、コンテナから GPU を操作できるようにするもの TensorFlow &mdash; Google が開発したオープンソースの機械学習ライブラリ 構築手順 CUDA インストール 1 $ sudo apt-get install nvidia-cuda-toolkit cuDNN インストール https://developer.nvidia.com/cudnn からユーザー登録をしてライブラリをダウンロードする。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/" />
+<link rel="canonical" href="http://localhost:1313/blog/2016/11/19/tensorflow-running-by-gpu/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/">
+<meta property="og:url" content="http://localhost:1313/blog/2016/11/19/tensorflow-running-by-gpu/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="TensorFlow を GPU で動かす">
-  <meta property="og:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま">
+  <meta property="og:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使います。
+前提 GPU (今回は GEFORCE GTX 1080) を積んだマシンがある Ubuntu 16.04 LTS がインストールされている Docker がインストールされている 構築環境 CUDA — Nvidia が提供する GPU 向けの統合開発環境 cuDNN — Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている NVIDIA Docker — Nvidia が提供している、コンテナから GPU を操作できるようにするもの TensorFlow — Google が開発したオープンソースの機械学習ライブラリ 構築手順 CUDA インストール 1 $ sudo apt-get install nvidia-cuda-toolkit cuDNN インストール https://developer.nvidia.com/cudnn からユーザー登録をしてライブラリをダウンロードする。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +52,15 @@
     <meta property="article:modified_time" content="2016-11-19T23:37:43+09:00">
 
   <meta itemprop="name" content="TensorFlow を GPU で動かす">
-  <meta itemprop="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま">
+  <meta itemprop="description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使います。
+前提 GPU (今回は GEFORCE GTX 1080) を積んだマシンがある Ubuntu 16.04 LTS がインストールされている Docker がインストールされている 構築環境 CUDA — Nvidia が提供する GPU 向けの統合開発環境 cuDNN — Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている NVIDIA Docker — Nvidia が提供している、コンテナから GPU を操作できるようにするもの TensorFlow — Google が開発したオープンソースの機械学習ライブラリ 構築手順 CUDA インストール 1 $ sudo apt-get install nvidia-cuda-toolkit cuDNN インストール https://developer.nvidia.com/cudnn からユーザー登録をしてライブラリをダウンロードする。">
   <meta itemprop="datePublished" content="2016-11-19T23:37:43+09:00">
   <meta itemprop="dateModified" content="2016-11-19T23:37:43+09:00">
   <meta itemprop="wordCount" content="704">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="TensorFlow を GPU で動かす">
-  <meta name="twitter:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使いま">
+  <meta name="twitter:description" content="前回は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。 移植性の高い方法で構築したいので Docker を使います。
+前提 GPU (今回は GEFORCE GTX 1080) を積んだマシンがある Ubuntu 16.04 LTS がインストールされている Docker がインストールされている 構築環境 CUDA — Nvidia が提供する GPU 向けの統合開発環境 cuDNN — Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている NVIDIA Docker — Nvidia が提供している、コンテナから GPU を操作できるようにするもの TensorFlow — Google が開発したオープンソースの機械学習ライブラリ 構築手順 CUDA インストール 1 $ sudo apt-get install nvidia-cuda-toolkit cuDNN インストール https://developer.nvidia.com/cudnn からユーザー登録をしてライブラリをダウンロードする。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

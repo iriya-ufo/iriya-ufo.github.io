@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>メタプログラミング Ruby - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,20 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="今どきのプログラミングといえば Web Web といえば Ruby on Rails といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rail" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="今どきのプログラミングといえば Web
+Web といえば Ruby on Rails
+といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rails しか触っていないと Ruby の真のすごさが分からないし、Ruby の本を読んでもなんであれで Rails が作れるのか分からない。 Rails のソースを読んでも黒魔術だらけで全く読めない。 そんな人にこそ『メタプログラミング Ruby』を勧めます。Rails や多くの gem で使われている黒魔術の技術をこれでもかというくらいに分かりやすく基礎から解説してくれています。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/" />
+<link rel="canonical" href="http://localhost:1313/blog/2016/05/22/metaprogramming-ruby/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +41,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2016/05/22/metaprogramming-ruby/">
+<meta property="og:url" content="http://localhost:1313/blog/2016/05/22/metaprogramming-ruby/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="メタプログラミング Ruby">
-  <meta property="og:description" content="今どきのプログラミングといえば Web Web といえば Ruby on Rails といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rail">
+  <meta property="og:description" content="今どきのプログラミングといえば Web
+Web といえば Ruby on Rails
+といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rails しか触っていないと Ruby の真のすごさが分からないし、Ruby の本を読んでもなんであれで Rails が作れるのか分からない。 Rails のソースを読んでも黒魔術だらけで全く読めない。 そんな人にこそ『メタプログラミング Ruby』を勧めます。Rails や多くの gem で使われている黒魔術の技術をこれでもかというくらいに分かりやすく基礎から解説してくれています。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +54,17 @@
     <meta property="article:modified_time" content="2016-05-22T23:15:38+09:00">
 
   <meta itemprop="name" content="メタプログラミング Ruby">
-  <meta itemprop="description" content="今どきのプログラミングといえば Web Web といえば Ruby on Rails といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rail">
+  <meta itemprop="description" content="今どきのプログラミングといえば Web
+Web といえば Ruby on Rails
+といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rails しか触っていないと Ruby の真のすごさが分からないし、Ruby の本を読んでもなんであれで Rails が作れるのか分からない。 Rails のソースを読んでも黒魔術だらけで全く読めない。 そんな人にこそ『メタプログラミング Ruby』を勧めます。Rails や多くの gem で使われている黒魔術の技術をこれでもかというくらいに分かりやすく基礎から解説してくれています。">
   <meta itemprop="datePublished" content="2016-05-22T23:15:38+09:00">
   <meta itemprop="dateModified" content="2016-05-22T23:15:38+09:00">
   <meta itemprop="wordCount" content="402">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="メタプログラミング Ruby">
-  <meta name="twitter:description" content="今どきのプログラミングといえば Web Web といえば Ruby on Rails といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rail">
+  <meta name="twitter:description" content="今どきのプログラミングといえば Web
+Web といえば Ruby on Rails
+といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rails しか触っていないと Ruby の真のすごさが分からないし、Ruby の本を読んでもなんであれで Rails が作れるのか分からない。 Rails のソースを読んでも黒魔術だらけで全く読めない。 そんな人にこそ『メタプログラミング Ruby』を勧めます。Rails や多くの gem で使われている黒魔術の技術をこれでもかというくらいに分かりやすく基礎から解説してくれています。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
