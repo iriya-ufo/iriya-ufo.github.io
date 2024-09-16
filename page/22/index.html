@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -131,7 +131,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      東京でスタートアップを始めることになりました。 スタートアップって何？と思う方もいるかと思います。 簡単に言うとすれば、それはベンチャー企業のこ
+      <p>東京でスタートアップを始めることになりました。
+スタートアップって何？と思う方もいるかと思います。
+簡単に言うとすれば、それはベンチャー企業のことです。
+もちろんベンチャー企業といっても正確な理解は得られません。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/06/16/start-startup-in-tokyo/" class="read-more-link">Read more..</a>
@@ -152,7 +155,22 @@
   
   <div class="post-content">
     <div class="post-summary">
-      興味本位でいれてみました。 Ubuntu のバージョンは 12.04 です。 公式から Linux 版の tgz をダウンロードして解凍します。 Getting Started with Android Studio シェルに PATH を設定します。 1 2 # Android Studio
+      <p>興味本位でいれてみました。
+Ubuntu のバージョンは 12.04 です。</p>
+<p>公式から Linux 版の tgz をダウンロードして解凍します。</p>
+<p><a href="http://developer.android.com/sdk/installing/studio.html">Getting Started with Android Studio</a></p>
+<p>シェルに PATH を設定します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="c1"># Android Studio</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$HOME</span>/Downloads/android-studio/bin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>端末から以下を実行で起動します (ただ私の環境では JDK のエラーがでました。Android Studio は Oracle JDK 推奨ですが、Open JDK が入っていたためです)。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/06/01/android-studio-to-ubuntu/" class="read-more-link">Read more..</a>
@@ -173,7 +191,11 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち
+      <p>Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。
+環境構築は Mac OS X で行っています。</p>
+<h2 id="事前準備">事前準備</h2>
+<p>パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。
+brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/28/ruby-on-rails-4-to-heroku/" class="read-more-link">Read more..</a>
@@ -194,7 +216,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      先ほど Homebrew のアップデートをしたところ Emacs が使えなくなりました。 古い Emacs が削除されてリンク先が消滅したのが原因でした。 これはいい機会？と思い最新の Emacs
+      <p>先ほど Homebrew のアップデートをしたところ Emacs が使えなくなりました。
+古い Emacs が削除されてリンク先が消滅したのが原因でした。
+これはいい機会？と思い最新の Emacs 24.3 を使うことにします。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/18/install-emacs-by-homebrew/" class="read-more-link">Read more..</a>
@@ -215,7 +239,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      git のコマンド補完 まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでア
+      <h2 id="git-のコマンド補完">git のコマンド補完</h2>
+<p>まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでアップデートしました。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/18/git-completion-by-zsh/" class="read-more-link">Read more..</a>
@@ -236,7 +261,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      rvm はクールじゃないので rbenv を使って Ruby をインストールします。 事前準備 はじめに『Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明して
+      <p>rvm はクールじゃないので rbenv を使って Ruby をインストールします。</p>
+<h2 id="事前準備">事前準備</h2>
+<p>はじめに『<a href="http://www.oiax.jp/rails/zakkan/rails_3_1_installation_on_macosx.html">Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明してみました</a>』を参考に準備をしておきます。
+このサイトは Rails のインストールについてですが Xcode, Homebrew など初歩からかなり丁寧に書いているのでオススメです。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/" class="read-more-link">Read more..</a>
@@ -257,7 +285,19 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。 Gem のアップデート $ sudo gem update --system $ gem -v 1.8.24 Rails のアップデート $ sudo gem update rails $ rails -v Rails 3.2.11
+      <p>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。</p>
+<h2 id="gem-のアップデート">Gem のアップデート</h2>
+<pre><code>$ sudo gem update --system
+$ gem -v
+1.8.24
+</code></pre>
+<h2 id="rails-のアップデート">Rails のアップデート</h2>
+<pre><code>$ sudo gem update rails
+$ rails -v
+Rails 3.2.11
+</code></pre>
+<h2 id="古い-rails-をアンインストール">古い Rails をアンインストール</h2>
+<p>古いバージョンの Rails を削除します。新しいバージョンの Rails で動作確認していないなら、念の為に残しておいたほうがよいでしょう。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/12/rails-update/" class="read-more-link">Read more..</a>
@@ -278,7 +318,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります
+      <p>サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります。
+また普通にバックグラウンドジョブとして動かしてもだめです。
+以下のように <code>nohup</code> シグナル送ってプロセスとして動かし続けてあげたら大丈夫です。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/" class="read-more-link">Read more..</a>
@@ -299,7 +341,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      SSH でログインそのものはできるが非常に時間がかかるという場合、DNS の設定がよろしくない場合があります。 そんな時は、sshd_config に以
+      <p>SSH でログインそのものはできるが非常に時間がかかるという場合、DNS の設定がよろしくない場合があります。
+そんな時は、<code>sshd_config</code> に以下を追記してみてください。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/10/why-so-slow-ssh-login/" class="read-more-link">Read more..</a>
@@ -320,7 +363,13 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Ubuntu で DVD をリッピングする方法はいくつかあります。 k9copy dvd::rip wine で DVD Decrypter 私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメ
+      <p>Ubuntu で DVD をリッピングする方法はいくつかあります。</p>
+<ul>
+<li>k9copy</li>
+<li>dvd::rip</li>
+<li>wine で DVD Decrypter</li>
+</ul>
+<p>私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメージとして取り出す方法がうまくいったので書いておきます。環境は Ubuntu 12.04 LTS です。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2013/05/07/ubuntu-dvd-ripping/" class="read-more-link">Read more..</a>
@@ -349,7 +398,7 @@
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Swift をとりあえず実行するまでの手順 - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content=" WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/" />
+<link rel="canonical" href="http://localhost:1313/blog/2014/07/23/quick-start-swift/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +39,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/">
+<meta property="og:url" content="http://localhost:1313/blog/2014/07/23/quick-start-swift/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Swift をとりあえず実行するまでの手順">
-  <meta property="og:description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に">
+  <meta property="og:description" content=" WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +50,13 @@
     <meta property="article:modified_time" content="2014-07-23T03:06:46+00:00">
 
   <meta itemprop="name" content="Swift をとりあえず実行するまでの手順">
-  <meta itemprop="description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に">
+  <meta itemprop="description" content=" WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。">
   <meta itemprop="datePublished" content="2014-07-23T03:06:46+00:00">
   <meta itemprop="dateModified" content="2014-07-23T03:06:46+00:00">
   <meta itemprop="wordCount" content="1238">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Swift をとりあえず実行するまでの手順">
-  <meta name="twitter:description" content="WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に">
+  <meta name="twitter:description" content=" WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

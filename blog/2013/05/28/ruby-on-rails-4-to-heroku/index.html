@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Ruby on Rails 4 のアプリを Heroku で公開する - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。
+事前準備 パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。 brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/" />
+<link rel="canonical" href="http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/">
+<meta property="og:url" content="http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Ruby on Rails 4 のアプリを Heroku で公開する">
-  <meta property="og:description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち">
+  <meta property="og:description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。
+事前準備 パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。 brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +52,15 @@
     <meta property="article:modified_time" content="2013-05-28T18:00:47+00:00">
 
   <meta itemprop="name" content="Ruby on Rails 4 のアプリを Heroku で公開する">
-  <meta itemprop="description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち">
+  <meta itemprop="description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。
+事前準備 パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。 brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。">
   <meta itemprop="datePublished" content="2013-05-28T18:00:47+00:00">
   <meta itemprop="dateModified" content="2013-05-28T18:00:47+00:00">
   <meta itemprop="wordCount" content="1812">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ruby on Rails 4 のアプリを Heroku で公開する">
-  <meta name="twitter:description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。 事前準備 パッケージ管理に Homebrew を使っています。ち">
+  <meta name="twitter:description" content="Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。 環境構築は Mac OS X で行っています。
+事前準備 パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。 brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

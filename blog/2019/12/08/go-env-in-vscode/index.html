@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>VSCode に Go の開発環境を整える - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,20 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="Mac で Go をサクッとはじめるための手引書
+Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認
+1 2 $ go version go version go1.13.4 darwin/amd64 REPL のインストール 1 2 3 4 5 6 7 8 $ GO111MODULE=off go get -u github.com/motemen/gore/cmd/gore $ gore # 確認 gore version 0.4.1 :help for help gore&gt; fmt.Println(&#34;hello&#34;) hello 6 &lt;nil&gt; Go Package のインストール 1 2 3 4 5 6 7 8 # gopkgs is a tool that provides list of available Go packages that can be imported. $ GO111MODULE=on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest # Golint is a linter for Go source code. $ go get -u golang.org/x/lint/golint # errcheck is a program for checking for unchecked errors in go programs. $ go get -u github.com/kisielk/errcheck 補完ツールのインストール 補完については gocode を go get してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/" />
+<link rel="canonical" href="http://localhost:1313/blog/2019/12/08/go-env-in-vscode/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +41,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2019/12/08/go-env-in-vscode/">
+<meta property="og:url" content="http://localhost:1313/blog/2019/12/08/go-env-in-vscode/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="VSCode に Go の開発環境を整える">
-  <meta property="og:description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $">
+  <meta property="og:description" content="Mac で Go をサクッとはじめるための手引書
+Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認
+1 2 $ go version go version go1.13.4 darwin/amd64 REPL のインストール 1 2 3 4 5 6 7 8 $ GO111MODULE=off go get -u github.com/motemen/gore/cmd/gore $ gore # 確認 gore version 0.4.1 :help for help gore&gt; fmt.Println(&#34;hello&#34;) hello 6 &lt;nil&gt; Go Package のインストール 1 2 3 4 5 6 7 8 # gopkgs is a tool that provides list of available Go packages that can be imported. $ GO111MODULE=on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest # Golint is a linter for Go source code. $ go get -u golang.org/x/lint/golint # errcheck is a program for checking for unchecked errors in go programs. $ go get -u github.com/kisielk/errcheck 補完ツールのインストール 補完については gocode を go get してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +54,17 @@
     <meta property="article:modified_time" content="2019-12-08T01:36:06+09:00">
 
   <meta itemprop="name" content="VSCode に Go の開発環境を整える">
-  <meta itemprop="description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $">
+  <meta itemprop="description" content="Mac で Go をサクッとはじめるための手引書
+Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認
+1 2 $ go version go version go1.13.4 darwin/amd64 REPL のインストール 1 2 3 4 5 6 7 8 $ GO111MODULE=off go get -u github.com/motemen/gore/cmd/gore $ gore # 確認 gore version 0.4.1 :help for help gore&gt; fmt.Println(&#34;hello&#34;) hello 6 &lt;nil&gt; Go Package のインストール 1 2 3 4 5 6 7 8 # gopkgs is a tool that provides list of available Go packages that can be imported. $ GO111MODULE=on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest # Golint is a linter for Go source code. $ go get -u golang.org/x/lint/golint # errcheck is a program for checking for unchecked errors in go programs. $ go get -u github.com/kisielk/errcheck 補完ツールのインストール 補完については gocode を go get してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。">
   <meta itemprop="datePublished" content="2019-12-08T01:36:06+09:00">
   <meta itemprop="dateModified" content="2019-12-08T01:36:06+09:00">
   <meta itemprop="wordCount" content="559">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="VSCode に Go の開発環境を整える">
-  <meta name="twitter:description" content="Mac で Go をサクッとはじめるための手引書 Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認 1 2 $">
+  <meta name="twitter:description" content="Mac で Go をサクッとはじめるための手引書
+Emacs の場合はこちら Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go バージョン確認
+1 2 $ go version go version go1.13.4 darwin/amd64 REPL のインストール 1 2 3 4 5 6 7 8 $ GO111MODULE=off go get -u github.com/motemen/gore/cmd/gore $ gore # 確認 gore version 0.4.1 :help for help gore&gt; fmt.Println(&#34;hello&#34;) hello 6 &lt;nil&gt; Go Package のインストール 1 2 3 4 5 6 7 8 # gopkgs is a tool that provides list of available Go packages that can be imported. $ GO111MODULE=on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest # Golint is a linter for Go source code. $ go get -u golang.org/x/lint/golint # errcheck is a program for checking for unchecked errors in go programs. $ go get -u github.com/kisielk/errcheck 補完ツールのインストール 補完については gocode を go get してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

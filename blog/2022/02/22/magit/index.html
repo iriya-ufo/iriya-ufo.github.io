@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Emacs で Magit を使う - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。
+インストール M-x package-list-packages からインストールできます。 自分で使っているパッケージマネジャーがあればそれに従ってください。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2022/02/22/magit/" />
+<link rel="canonical" href="http://localhost:1313/blog/2022/02/22/magit/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2022/02/22/magit/">
+<meta property="og:url" content="http://localhost:1313/blog/2022/02/22/magit/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Emacs で Magit を使う">
-  <meta property="og:description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。">
+  <meta property="og:description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。
+インストール M-x package-list-packages からインストールできます。 自分で使っているパッケージマネジャーがあればそれに従ってください。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +52,15 @@
     <meta property="article:modified_time" content="2022-02-22T00:09:18+09:00">
 
   <meta itemprop="name" content="Emacs で Magit を使う">
-  <meta itemprop="description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。">
+  <meta itemprop="description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。
+インストール M-x package-list-packages からインストールできます。 自分で使っているパッケージマネジャーがあればそれに従ってください。">
   <meta itemprop="datePublished" content="2022-02-22T00:09:18+09:00">
   <meta itemprop="dateModified" content="2022-02-22T00:09:18+09:00">
   <meta itemprop="wordCount" content="841">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Emacs で Magit を使う">
-  <meta name="twitter:description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。 インストール M-x package-list-packages からインストールできます。">
+  <meta name="twitter:description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。
+インストール M-x package-list-packages からインストールできます。 自分で使っているパッケージマネジャーがあればそれに従ってください。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -160,100 +165,100 @@
 <code>magit-status</code> にはファイル変更の自動検知はないので、開いたままの場合は <code>g</code> で変更を読み込みできます。</p>
 <p>以下 <code>git</code> コマンドとの比較チートシートです。</p>
 <table>
-<thead>
-<tr>
-<th>やりたいこと</th>
-<th>Git の場合</th>
-<th>Magit の場合</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>stage に追加</td>
-<td>git add &lt;file&gt;</td>
-<td>ファイルの行で s</td>
-</tr>
-<tr>
-<td>stage に追加(全て)</td>
-<td>git add &ndash;all</td>
-<td>Untracked files の行で s</td>
-</tr>
-<tr>
-<td>unstage</td>
-<td>git restore &ndash;staged &lt;file&gt;</td>
-<td>ファイルの行で u</td>
-</tr>
-<tr>
-<td>unstage(全て)</td>
-<td>git reset</td>
-<td>Staged changes の行で u</td>
-</tr>
-<tr>
-<td>commit</td>
-<td>git commit</td>
-<td>c を二回タイプ後、メッセージ入力して C-c C-c</td>
-</tr>
-<tr>
-<td>branch checkout</td>
-<td>git checkout &lt;branch&gt;</td>
-<td>b b 移動したいブランチで RET</td>
-</tr>
-<tr>
-<td>branch の作成</td>
-<td>git checkout -b &lt;branch&gt;</td>
-<td>b c コピー元を選択後 RET ブランチ名入力 RET</td>
-</tr>
-<tr>
-<td>branch の削除</td>
-<td>git branch -d &lt;branch&gt;</td>
-<td>b k 削除したいブランチで RET</td>
-</tr>
-<tr>
-<td>stash</td>
-<td>git stash</td>
-<td>z z</td>
-</tr>
-<tr>
-<td>stash list</td>
-<td>git stash list</td>
-<td>z l</td>
-</tr>
-<tr>
-<td>stash pop</td>
-<td>git stash pop</td>
-<td>z p</td>
-</tr>
-<tr>
-<td>stash drop</td>
-<td>git stash drop</td>
-<td>z k</td>
-</tr>
-<tr>
-<td>diff on staging</td>
-<td>git diff &ndash;cached</td>
-<td>確認したいファイルの行で TAB</td>
-</tr>
-<tr>
-<td>diff on modified</td>
-<td>git diff</td>
-<td>確認したいファイルの行で TAB</td>
-</tr>
-<tr>
-<td>log on current</td>
-<td>git log</td>
-<td>l l で表示 n,p で移動 q で終了</td>
-</tr>
-<tr>
-<td>push</td>
-<td>git push</td>
-<td>P u</td>
-</tr>
-<tr>
-<td>pull</td>
-<td>git pull</td>
-<td>F u</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">やりたいこと</th>
+          <th style="text-align: left">Git の場合</th>
+          <th style="text-align: left">Magit の場合</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">stage に追加</td>
+          <td style="text-align: left">git add &lt;file&gt;</td>
+          <td style="text-align: left">ファイルの行で s</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">stage に追加(全て)</td>
+          <td style="text-align: left">git add &ndash;all</td>
+          <td style="text-align: left">Untracked files の行で s</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">unstage</td>
+          <td style="text-align: left">git restore &ndash;staged &lt;file&gt;</td>
+          <td style="text-align: left">ファイルの行で u</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">unstage(全て)</td>
+          <td style="text-align: left">git reset</td>
+          <td style="text-align: left">Staged changes の行で u</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">commit</td>
+          <td style="text-align: left">git commit</td>
+          <td style="text-align: left">c を二回タイプ後、メッセージ入力して C-c C-c</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">branch checkout</td>
+          <td style="text-align: left">git checkout &lt;branch&gt;</td>
+          <td style="text-align: left">b b 移動したいブランチで RET</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">branch の作成</td>
+          <td style="text-align: left">git checkout -b &lt;branch&gt;</td>
+          <td style="text-align: left">b c コピー元を選択後 RET ブランチ名入力 RET</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">branch の削除</td>
+          <td style="text-align: left">git branch -d &lt;branch&gt;</td>
+          <td style="text-align: left">b k 削除したいブランチで RET</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">stash</td>
+          <td style="text-align: left">git stash</td>
+          <td style="text-align: left">z z</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">stash list</td>
+          <td style="text-align: left">git stash list</td>
+          <td style="text-align: left">z l</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">stash pop</td>
+          <td style="text-align: left">git stash pop</td>
+          <td style="text-align: left">z p</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">stash drop</td>
+          <td style="text-align: left">git stash drop</td>
+          <td style="text-align: left">z k</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">diff on staging</td>
+          <td style="text-align: left">git diff &ndash;cached</td>
+          <td style="text-align: left">確認したいファイルの行で TAB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">diff on modified</td>
+          <td style="text-align: left">git diff</td>
+          <td style="text-align: left">確認したいファイルの行で TAB</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">log on current</td>
+          <td style="text-align: left">git log</td>
+          <td style="text-align: left">l l で表示 n,p で移動 q で終了</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">push</td>
+          <td style="text-align: left">git push</td>
+          <td style="text-align: left">P u</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">pull</td>
+          <td style="text-align: left">git pull</td>
+          <td style="text-align: left">F u</td>
+      </tr>
+  </tbody>
 </table>
 <p>個人的に感動したのは Untracked files な状態のファイル行で <code>i</code> とすると <code>.gitignore</code> に追加されるコマンドです。</p>
 <h2 id="動画で使い方を見る">動画で使い方を見る</h2>

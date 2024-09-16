@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Emacs 小技集 - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="自分のための覚書 使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="自分のための覚書
+使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ
+Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace # 行末の空白を削除 M-x toggle-truncate-lines # 行の折り返しのオンオフ M-g g RET 行番号 # 特定の行番号へジャンプ M-y # キルリングのリスト C-/ # 取消 Undo C-o # ハイライトシンボル 検索 1 2 M-x find-name-dired # ワイルドカードでファイル名検索 M-x find-grep-dired # ファイルの内容を検索 置換 1 2 3 4 5 6 M-x replace-string # 一括置換 M-x query-replace # 問い合わせ置換 タブ -&gt; スペース置換 C-x h # 全選択して M-x untabify # タブをスペースに変換 ファイルのリネーム 1 2 3 4 C-x C-f RET # Dired モードに入る # リネームしたいファイルで R # バッファにファイル名を打ち込んで RET # q で Dired から抜ける 文字コード 1 2 C-x RET r utf-8 # 文字化けしてる時(UTF-8のファイルなのにSJISで開いちゃった) C-x RET f utf-8 # 文字化けしてない時(SJISのファイルをUTF-8で保存したいとき) " /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2024/01/26/emacs-tips/" />
+<link rel="canonical" href="http://localhost:1313/blog/2024/01/26/emacs-tips/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2024/01/26/emacs-tips/">
+<meta property="og:url" content="http://localhost:1313/blog/2024/01/26/emacs-tips/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Emacs 小技集">
-  <meta property="og:description" content="自分のための覚書 使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace">
+  <meta property="og:description" content="自分のための覚書
+使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ
+Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace # 行末の空白を削除 M-x toggle-truncate-lines # 行の折り返しのオンオフ M-g g RET 行番号 # 特定の行番号へジャンプ M-y # キルリングのリスト C-/ # 取消 Undo C-o # ハイライトシンボル 検索 1 2 M-x find-name-dired # ワイルドカードでファイル名検索 M-x find-grep-dired # ファイルの内容を検索 置換 1 2 3 4 5 6 M-x replace-string # 一括置換 M-x query-replace # 問い合わせ置換 タブ -&gt; スペース置換 C-x h # 全選択して M-x untabify # タブをスペースに変換 ファイルのリネーム 1 2 3 4 C-x C-f RET # Dired モードに入る # リネームしたいファイルで R # バッファにファイル名を打ち込んで RET # q で Dired から抜ける 文字コード 1 2 C-x RET r utf-8 # 文字化けしてる時(UTF-8のファイルなのにSJISで開いちゃった) C-x RET f utf-8 # 文字化けしてない時(SJISのファイルをUTF-8で保存したいとき) ">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +53,17 @@
     <meta property="article:modified_time" content="2024-01-26T01:26:18+09:00">
 
   <meta itemprop="name" content="Emacs 小技集">
-  <meta itemprop="description" content="自分のための覚書 使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace">
+  <meta itemprop="description" content="自分のための覚書
+使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ
+Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace # 行末の空白を削除 M-x toggle-truncate-lines # 行の折り返しのオンオフ M-g g RET 行番号 # 特定の行番号へジャンプ M-y # キルリングのリスト C-/ # 取消 Undo C-o # ハイライトシンボル 検索 1 2 M-x find-name-dired # ワイルドカードでファイル名検索 M-x find-grep-dired # ファイルの内容を検索 置換 1 2 3 4 5 6 M-x replace-string # 一括置換 M-x query-replace # 問い合わせ置換 タブ -&gt; スペース置換 C-x h # 全選択して M-x untabify # タブをスペースに変換 ファイルのリネーム 1 2 3 4 C-x C-f RET # Dired モードに入る # リネームしたいファイルで R # バッファにファイル名を打ち込んで RET # q で Dired から抜ける 文字コード 1 2 C-x RET r utf-8 # 文字化けしてる時(UTF-8のファイルなのにSJISで開いちゃった) C-x RET f utf-8 # 文字化けしてない時(SJISのファイルをUTF-8で保存したいとき) ">
   <meta itemprop="datePublished" content="2024-01-26T01:26:18+09:00">
   <meta itemprop="dateModified" content="2024-01-26T01:26:18+09:00">
   <meta itemprop="wordCount" content="378">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Emacs 小技集">
-  <meta name="twitter:description" content="自分のための覚書 使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace">
+  <meta name="twitter:description" content="自分のための覚書
+使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ
+Tips 1 2 3 4 5 6 7 C-x r t string RET # 複数行の先頭に文字列を挿入 M-x delete-trailing-whitespace # 行末の空白を削除 M-x toggle-truncate-lines # 行の折り返しのオンオフ M-g g RET 行番号 # 特定の行番号へジャンプ M-y # キルリングのリスト C-/ # 取消 Undo C-o # ハイライトシンボル 検索 1 2 M-x find-name-dired # ワイルドカードでファイル名検索 M-x find-grep-dired # ファイルの内容を検索 置換 1 2 3 4 5 6 M-x replace-string # 一括置換 M-x query-replace # 問い合わせ置換 タブ -&gt; スペース置換 C-x h # 全選択して M-x untabify # タブをスペースに変換 ファイルのリネーム 1 2 3 4 C-x C-f RET # Dired モードに入る # リネームしたいファイルで R # バッファにファイル名を打ち込んで RET # q で Dired から抜ける 文字コード 1 2 C-x RET r utf-8 # 文字化けしてる時(UTF-8のファイルなのにSJISで開いちゃった) C-x RET f utf-8 # 文字化けしてない時(SJISのファイルをUTF-8で保存したいとき) ">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

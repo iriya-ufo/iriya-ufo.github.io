@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Mac に Clojure 環境いれてみた - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,19 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。
+JDKのインストール これがないと始まらないですね。JDK とか OpenJDK とか細かいことは気にしないでおきましょう。端末で java とか打ってみて入っていないようでしたら Oracle のサイトからダウンロードしてインストールで一発です。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/" />
+<link rel="canonical" href="http://localhost:1313/blog/2015/04/23/clojure-on-mac/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +40,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2015/04/23/clojure-on-mac/">
+<meta property="og:url" content="http://localhost:1313/blog/2015/04/23/clojure-on-mac/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Mac に Clojure 環境いれてみた">
-  <meta property="og:description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな">
+  <meta property="og:description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。
+JDKのインストール これがないと始まらないですね。JDK とか OpenJDK とか細かいことは気にしないでおきましょう。端末で java とか打ってみて入っていないようでしたら Oracle のサイトからダウンロードしてインストールで一発です。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +52,15 @@
     <meta property="article:modified_time" content="2015-04-23T23:10:30+00:00">
 
   <meta itemprop="name" content="Mac に Clojure 環境いれてみた">
-  <meta itemprop="description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな">
+  <meta itemprop="description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。
+JDKのインストール これがないと始まらないですね。JDK とか OpenJDK とか細かいことは気にしないでおきましょう。端末で java とか打ってみて入っていないようでしたら Oracle のサイトからダウンロードしてインストールで一発です。">
   <meta itemprop="datePublished" content="2015-04-23T23:10:30+00:00">
   <meta itemprop="dateModified" content="2015-04-23T23:10:30+00:00">
   <meta itemprop="wordCount" content="636">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mac に Clojure 環境いれてみた">
-  <meta name="twitter:description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。 JDKのインストール これがないと始まらな">
+  <meta name="twitter:description" content="Closure ではなくて Clozure でもなくて Clojure の環境構築です。 Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。
+JDKのインストール これがないと始まらないですね。JDK とか OpenJDK とか細かいことは気にしないでおきましょう。端末で java とか打ってみて入っていないようでしたら Oracle のサイトからダウンロードしてインストールで一発です。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

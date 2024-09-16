@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -131,7 +131,11 @@
   
   <div class="post-content">
     <div class="post-summary">
-      今更すぎるけどいれた。 まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。 $ brew install nodebrew PATH を
+      <p>今更すぎるけどいれた。</p>
+<p>まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。</p>
+<pre><code>$ brew install nodebrew
+</code></pre>
+<p>PATH を <code>.zshrc</code> に追加</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/04/07/nodejs-on-mac/" class="read-more-link">Read more..</a>
@@ -152,7 +156,7 @@
   
   <div class="post-content">
     <div class="post-summary">
-      国税庁の民間給与実態統計調査結果によると、年収900万円台の男性の割合は2.7%だそうです。1000万〜1500万台だと幅が広いためか少し増
+      <p>国税庁の民間給与実態統計調査結果によると、年収900万円台の男性の割合は2.7%だそうです。1000万〜1500万台だと幅が広いためか少し増えて、4.9%となります。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/04/03/scarcity-value/" class="read-more-link">Read more..</a>
@@ -173,7 +177,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      いい加減不便になってきたので設定した。 $ brew install reattach-to-user-namespace ~/.tmux.conf をいじる。
+      <p>いい加減不便になってきたので設定した。</p>
+<pre><code>$ brew install reattach-to-user-namespace
+</code></pre>
+<p><a href="https://github.com/iriya-ufo/dotfiles/blob/master/Mac/.tmux.conf">~/.tmux.conf</a> をいじる。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/03/25/share-tmux-clipboard/" class="read-more-link">Read more..</a>
@@ -194,7 +201,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。 Hubot
+      <p>前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。</p>
+<h3 id="hubot">Hubot</h3>
+<p>GitHub が開発した Bot 開発用のフレームワーク
+Node.js で動き、プラグインなどは CoffeeScript で書く</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/03/21/how-to-use-google-api-from-botkit/" class="read-more-link">Read more..</a>
@@ -215,7 +225,14 @@
   
   <div class="post-content">
     <div class="post-summary">
-      以下の記事をみかけて、これはやらずにいられないと思っていじってみた感想。 コンテナ化したアプリケーションの総合的一元的管理コンソールDocke
+      <img src="/images/2016/03/ddc.png" class="image">
+<p>以下の記事をみかけて、これはやらずにいられないと思っていじってみた感想。</p>
+<ul>
+<li><a href="http://jp.techcrunch.com/2016/02/24/20160223new-docker-data-center-admin-suite-should-bring-order-to-containerization/">コンテナ化したアプリケーションの総合的一元的管理コンソールDocker DatacenterをDockerが提供</a></li>
+</ul>
+<h2 id="インストール">インストール</h2>
+<p>AWS に small 環境でつくってみた。Amazon Linux だとうまくいかなかったので Ubuntu でやり直した。
+インストールの方法は以下の通り。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/03/08/start-docker-datacenter/" class="read-more-link">Read more..</a>
@@ -236,7 +253,7 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Hubot は GitHub が開発した bot のフレームワークです。Node.js の上で走って CoffeeScript で動きます。実装環境は AWS にしました。常時稼働させとかなきゃいけないからね
+      <p>Hubot は GitHub が開発した bot のフレームワークです。Node.js の上で走って CoffeeScript で動きます。実装環境は AWS にしました。常時稼働させとかなきゃいけないからね。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/03/04/hubot-on-slack/" class="read-more-link">Read more..</a>
@@ -257,7 +274,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      今回も原因はよく分かりませんが、再発してしまいました。 前回記事が2014年07月20日なので一年と半年ぶりくらいでしょうか。一年半くらいで周
+      <p>今回も原因はよく分かりませんが、再発してしまいました。</p>
+<p>前回記事が2014年07月20日なので一年と半年ぶりくらいでしょうか。一年半くらいで周期がめぐってくるんだろうか？笑</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/02/09/nephrotic-syndrome/" class="read-more-link">Read more..</a>
@@ -278,7 +296,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      表紙に惹かれてつい買ってしまった本だったが買ってよかった。タイトルからシンギュラリティの話かなぁと思ってたけどそうではなかった。 人工知能のこ
+      <p>表紙に惹かれてつい買ってしまった本だったが買ってよかった。タイトルからシンギュラリティの話かなぁと思ってたけどそうではなかった。
+人工知能のこれまでの歴史を振り返り、それを踏まえた上で今ブームになっているディープラーニング、何が出来て、何が出来ないのか、今後の未来はどうなっていくのか、といったことについて研究者の立場から冷静になって提言しておられた。
+内容は非常に分かりやすい。高校生でも文系でも十分に理解できる。専門的な話しではなく、あくまで一般の人を対象に、機械学習ってそういうことなのね、ディープラーニングってそういう仕組なのねということが分かるような平易な文章で述べられている。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/01/26/does-ai-beat-human/" class="read-more-link">Read more..</a>
@@ -299,7 +319,7 @@
   
   <div class="post-content">
     <div class="post-summary">
-      ホリエモンを知らない人は日本にどれくらいいるんだろう。IT企業のライブドア、球団買収、ニッポン放送とメディアを騒がして著名になったと思えば、
+      <p>ホリエモンを知らない人は日本にどれくらいいるんだろう。IT企業のライブドア、球団買収、ニッポン放送とメディアを騒がして著名になったと思えば、証券法違反で逮捕。日頃の物言いも相まってか、ホリエモンという人間を好んでない人も多数いたことだろう。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/01/18/zero-horiemon/" class="read-more-link">Read more..</a>
@@ -320,7 +340,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      物流関連の仕事をしているならこの本は必読、と言われて渡してもらった本がこれです。 仁義なき宅配: ヤマトVS佐川VS日本郵便VSアマゾン 最近よう
+      <img src="/images/2016/01/logi.jpg" class="image">
+<p>物流関連の仕事をしているならこの本は必読、と言われて渡してもらった本がこれです。</p>
+<p><a href="http://www.amazon.co.jp/%E4%BB%81%E7%BE%A9%E3%81%AA%E3%81%8D%E5%AE%85%E9%85%8D-%E3%83%A4%E3%83%9E%E3%83%88VS%E4%BD%90%E5%B7%9DVS%E6%97%A5%E6%9C%AC%E9%83%B5%E4%BE%BFVS%E3%82%A2%E3%83%9E%E3%82%BE%E3%83%B3-%E6%A8%AA%E7%94%B0-%E5%A2%97%E7%94%9F/dp/4093798745">仁義なき宅配: ヤマトVS佐川VS日本郵便VSアマゾン</a></p>
+<p>最近ようやく読了したので内容を少し紹介。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/01/17/delivery-company-fight/" class="read-more-link">Read more..</a>
@@ -352,7 +375,7 @@
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

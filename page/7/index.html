@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -132,7 +132,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      後輩が貸してくれたので読んでみました。 Amazon のリンクに行くと結構なレビューがついてますが、星1〜星5まで評価が別れていてその内容を読むと、信者っ
+      <p>後輩が貸してくれたので読んでみました。</p>
+<p>Amazon のリンクに行くと結構なレビューがついてますが、星1〜星5まで評価が別れていてその内容を読むと、信者っぽい人からアンチっぽい人までさまざまです。さすが日本一アンチの多い米国株ブロガーと言っているだけあります。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/01/23/high-dividend-usa-stock/" class="read-more-link">Read more..</a>
@@ -153,7 +154,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      書店に平積みにされていたのでなんとなく読んでみた。 GAFA とは Google, Amazon, Facebook, Apple のそれぞれ頭文字を取ってつけた造語だ。 それらを四騎士に例え GAFA 以前の世界と GAFA 以
+      <p>書店に平積みにされていたのでなんとなく読んでみた。</p>
+<p>GAFA とは Google, Amazon, Facebook, Apple のそれぞれ頭文字を取ってつけた造語だ。
+それらを四騎士に例え GAFA 以前の世界と GAFA 以後では世界が大きく変遷したというのが書いてある。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/01/22/the-four-gafa/" class="read-more-link">Read more..</a>
@@ -174,7 +177,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。 直そうと思って調べてみるとどうやら
+      <p>新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。
+直そうと思って調べてみるとどうやら peco や fzf の方がナウいらしいので移行することにした。
+tmux の相性がいいとのことなので fzf を入れることにする。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/01/16/percol-to-fzf/" class="read-more-link">Read more..</a>
@@ -195,7 +200,74 @@
   
   <div class="post-content">
     <div class="post-summary">
-      とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。 docker-compose up するとこんな感じのエラーがでる。 1 2 3 4 5 6 7 8 9 10 11 12 13 14
+      <p>とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。</p>
+<p><code>docker-compose up</code> するとこんな感じのエラーがでる。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">Starting app_db_1 ... <span class="k">done</span>
+</span></span><span class="line"><span class="cl">Creating app_web_1 ... <span class="k">done</span>
+</span></span><span class="line"><span class="cl">Attaching to app_db_1, app_web_1
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.523451Z <span class="m">0</span> <span class="o">[</span>Warning<span class="o">]</span> TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option <span class="o">(</span>see documentation <span class="k">for</span> more details<span class="o">)</span>.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.524650Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld <span class="o">(</span>mysqld 5.7.24<span class="o">)</span> starting as process <span class="m">1</span> ...
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528223Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: PUNCH HOLE support available
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528319Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Mutexes and rw_locks use GCC atomic builtins
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528348Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Uses event mutexes
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528374Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: GCC <span class="nb">builtin</span> __atomic_thread_fence<span class="o">()</span> is used <span class="k">for</span> memory barrier
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528394Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Compressed tables use zlib 1.2.11
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528543Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using Linux native AIO
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.528969Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Number of pools: <span class="m">1</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.529276Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Using CPU crc32 instructions
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.530867Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Initializing buffer pool, total <span class="nv">size</span> <span class="o">=</span> 128M, <span class="nv">instances</span> <span class="o">=</span> 1, chunk <span class="nv">size</span> <span class="o">=</span> 128M
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.540619Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Completed initialization of buffer pool
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.542550Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority<span class="o">()</span>.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.554602Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> InnoDB: Highest supported file format is Barracuda.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.554769Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Unsupported redo log format. The redo log was created with MariaDB 10.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:45.554873Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> InnoDB: Plugin initialization aborted with error Generic error
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160053Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> init <span class="k">function</span> returned error.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160184Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Plugin <span class="s1">&#39;InnoDB&#39;</span> registration as a STORAGE ENGINE failed.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160209Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Failed to initialize <span class="nb">builtin</span> plugins.
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160224Z <span class="m">0</span> <span class="o">[</span>ERROR<span class="o">]</span> Aborting
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160239Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Binlog end
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.160356Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> Shutting down plugin <span class="s1">&#39;CSV&#39;</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span> 2019-01-09T01:57:46.163497Z <span class="m">0</span> <span class="o">[</span>Note<span class="o">]</span> mysqld: Shutdown <span class="nb">complete</span>
+</span></span><span class="line"><span class="cl">db_1   <span class="p">|</span>
+</span></span><span class="line"><span class="cl">app_db_1 exited with code <span class="m">1</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>db のコンテナが起動に失敗しているようだが、エラー内容でググってもあまり有効な解決策に繋がらない。
+最終的に volume を削除して立ち上げて治すことで解決できた。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2019/01/09/delete-docker-volume/" class="read-more-link">Read more..</a>
@@ -216,7 +288,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      以前 Octopress に移行 してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと別の方法を模索した。 結果 Hugo に移行することにした。こっから先は
+      <p><a href="/blog/2016/04/29/how-to-start-octopress/">以前 Octopress に移行</a> してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと<a href="/blog/2018/12/26/blog-services/">別の方法を模索</a>した。
+結果 Hugo に移行することにした。こっから先は Octopress から Hugo への移行方法の備忘録となる。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2018/12/27/octopress-to-hugo/" class="read-more-link">Read more..</a>
@@ -237,7 +310,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。 仕方なしにアップデートする
+      <p>ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。
+仕方なしにアップデートするもうまく行かずに、結局書いた記事を <code>rm</code> した。
+そんなことがあって、また生産性ゼロの、ブログどこに書いたらいいか問題が勃発してしまったのだった。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2018/12/26/blog-services/" class="read-more-link">Read more..</a>
@@ -258,7 +333,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      久しぶりにブログでも書くかと思ったら Octopress が不調。アップデートも煩わしく思ってこの機会にブログを移転しようか考えた。 紆余曲折を経て Hugo を使うことに
+      <p>久しぶりにブログでも書くかと思ったら Octopress が不調。アップデートも煩わしく思ってこの機会にブログを移転しようか考えた。
+紆余曲折を経て Hugo を使うことになったのだけども、その詳細はいずれ書こう。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2018/12/26/hatena-diary-to-hatena-blog/" class="read-more-link">Read more..</a>
@@ -279,7 +355,8 @@
   
   <div class="post-content">
     <div class="post-summary">
-      Octopress で記事の削除は source/_posts/post.markdown を削除すればいい、はずなんだがなぜか消えない。 新しい記事を投稿することによって削除されるかどうかを試してみる。
+      <p>Octopress で記事の削除は source/_posts/post.markdown を削除すればいい、はずなんだがなぜか消えない。</p>
+<p>新しい記事を投稿することによって削除されるかどうかを試してみる。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2017/10/18/delete-post/" class="read-more-link">Read more..</a>
@@ -300,7 +377,14 @@
   
   <div class="post-content">
     <div class="post-summary">
-      UNIX 時間はビルトインコマンドで変換できる Linux の場合 date --date &quot;@1495526373&quot; Mac の場合 date -r 1495526373 UNIX 時間とは
+      <p>UNIX 時間はビルトインコマンドで変換できる</p>
+<h2 id="linux-の場合">Linux の場合</h2>
+<p><code>date --date &quot;@1495526373&quot;</code></p>
+<h2 id="mac-の場合">Mac の場合</h2>
+<p><code>date -r 1495526373</code></p>
+<ul>
+<li><a href="https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93">UNIX 時間とは</a></li>
+</ul>
     </div>
     <div class="read-more">
       <a href="/blog/2017/05/28/unix-time/" class="read-more-link">Read more..</a>
@@ -321,7 +405,7 @@
   
   <div class="post-content">
     <div class="post-summary">
-       
+      <img src="/images/2017/02/complete_chart_of_neural_networks.jpg" class="image">
     </div>
     <div class="read-more">
       <a href="/blog/2017/02/15/complete-chart-of-neural-networks/" class="read-more-link">Read more..</a>
@@ -353,7 +437,7 @@
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

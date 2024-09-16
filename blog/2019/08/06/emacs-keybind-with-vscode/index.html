@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>VSCode で Emacs キーバインドを使う - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,18 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバインドを覚え直すのは骨が折れるので拡張機能でいい感じのものを探しました。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/" />
+<link rel="canonical" href="http://localhost:1313/blog/2019/08/06/emacs-keybind-with-vscode/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +39,10 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2019/08/06/emacs-keybind-with-vscode/">
+<meta property="og:url" content="http://localhost:1313/blog/2019/08/06/emacs-keybind-with-vscode/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="VSCode で Emacs キーバインドを使う">
-  <meta property="og:description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン">
+  <meta property="og:description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバインドを覚え直すのは骨が折れるので拡張機能でいい感じのものを探しました。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +50,13 @@
     <meta property="article:modified_time" content="2019-08-06T17:31:53+09:00">
 
   <meta itemprop="name" content="VSCode で Emacs キーバインドを使う">
-  <meta itemprop="description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン">
+  <meta itemprop="description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバインドを覚え直すのは骨が折れるので拡張機能でいい感じのものを探しました。">
   <meta itemprop="datePublished" content="2019-08-06T17:31:53+09:00">
   <meta itemprop="dateModified" content="2019-08-06T17:31:53+09:00">
   <meta itemprop="wordCount" content="549">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="VSCode で Emacs キーバインドを使う">
-  <meta name="twitter:description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバイン">
+  <meta name="twitter:description" content="長年使ってきた Emacs から徐々に VSCode に乗り換えています。 できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバインドを覚え直すのは骨が折れるので拡張機能でいい感じのものを探しました。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -144,34 +145,34 @@
 <p>これでしばらく戦えそうです。</p>
 <p>参考までによく使う便利なコマンドはこちら。</p>
 <table>
-<thead>
-<tr>
-<th>コマンド</th>
-<th>動作</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>⌘+d</td>
-<td>一個ずつ選択を増やしながらマルチカーソル</td>
-</tr>
-<tr>
-<td>⌘+Shift+L</td>
-<td>該当単語を一斉に選択</td>
-</tr>
-<tr>
-<td>Option + Shift + I</td>
-<td>選択範囲の末尾にマルチカーソル</td>
-</tr>
-<tr>
-<td>M-g g (M-g M-g)</td>
-<td>該当行にジャンンプ</td>
-</tr>
-<tr>
-<td>Ctrl-x z</td>
-<td>Zen Mode</td>
-</tr>
-</tbody>
+  <thead>
+      <tr>
+          <th style="text-align: left">コマンド</th>
+          <th style="text-align: left">動作</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: left">⌘+d</td>
+          <td style="text-align: left">一個ずつ選択を増やしながらマルチカーソル</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">⌘+Shift+L</td>
+          <td style="text-align: left">該当単語を一斉に選択</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Option + Shift + I</td>
+          <td style="text-align: left">選択範囲の末尾にマルチカーソル</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">M-g g (M-g M-g)</td>
+          <td style="text-align: left">該当行にジャンンプ</td>
+      </tr>
+      <tr>
+          <td style="text-align: left">Ctrl-x z</td>
+          <td style="text-align: left">Zen Mode</td>
+      </tr>
+  </tbody>
 </table>
 
     </div>

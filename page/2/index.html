@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -131,7 +131,14 @@
   
   <div class="post-content">
     <div class="post-summary">
-      2021年の株投資の損益がまとめられたので公開します (これまでの振り返りはこちら)。 投資における損益計算シート 振り返り スプレッドシートをみれ
+      <p>2021年の株投資の損益がまとめられたので公開します (これまでの振り返りは<a href="https://iriya-ufo.net/tags/investment-performance/">こちら</a>)。</p>
+<ul>
+<li><a href="https://docs.google.com/spreadsheets/d/1U6vwpXWB5lR9FtSiTgY9JCDhNz3wELyLojiwEzbnnjA/edit#gid=598918746">投資における損益計算シート</a></li>
+</ul>
+<h2 id="振り返り">振り返り</h2>
+<p>スプレッドシートをみれば確認できますが、取引回数が極めて少ない上に3月以降の取引がありません。
+実は個人的な理由によって資産を全部引き出す必要があったので、今まで持っていた株を全部売った形になります。
+なので2021年は特筆すべきことがありませんでした。またゼロからスタートの気持ちで頑張っていきたいと思います。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2022/01/16/profit-and-loss-2021/" class="read-more-link">Read more..</a>
@@ -152,7 +159,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      つい先日、環境構築の記事を書いたのですが、その後 Vitest が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使う
+      <p>つい先日、<a href="/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/">環境構築の記事</a>を書いたのですが、その後 <a href="https://vitest.dev/">Vitest</a> が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。</p>
+<h2 id="jest-関連のアンインストール">Jest 関連のアンインストール</h2>
+<p><a href="/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/">前回の環境構築</a>からの差分なので、入れていない場合は関係ありません。<a href="#vitest">Vitest</a> のインストールからどうぞ。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/12/23/using-vitest-instead-of-jest/" class="read-more-link">Read more..</a>
@@ -173,7 +182,26 @@
   
   <div class="post-content">
     <div class="post-summary">
-      はじめに 爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。 目次 React の環境とセットアップ VSCode 設定 テスト環
+      <h2 id="はじめに">はじめに</h2>
+<p>爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。</p>
+<h2 id="目次">目次</h2>
+<ul>
+<li><a href="#react-%E3%81%AE%E7%92%B0%E5%A2%83%E3%81%A8%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97">React の環境とセットアップ</a>
+<ul>
+<li><a href="#vscode-%E8%A8%AD%E5%AE%9A">VSCode 設定</a></li>
+</ul>
+</li>
+<li><a href="#%E3%83%86%E3%82%B9%E3%83%88%E7%92%B0%E5%A2%83">テスト環境</a></li>
+<li><a href="#material-ui">Material UI</a></li>
+<li><a href="#%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA">その他ライブラリ</a>
+<ul>
+<li><a href="#recoil">Recoil</a></li>
+</ul>
+</li>
+<li><a href="#docker">Docker</a></li>
+</ul>
+<h2 id="react-の環境とセットアップ">React の環境とセットアップ</h2>
+<p>まずは node をインストールします。node 自体はバージョン管理したいので nodenv を使ってインストールします。nodenv を使ったインストール方法はこちらを参照してください。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/" class="read-more-link">Read more..</a>
@@ -194,7 +222,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？ 効率の良い学習方法とい
+      <p>新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？
+効率の良い学習方法というのは人によってそれぞれ違うと思いますが、自分ならこうしますという記事があれば少しは有益かもしれないと思い本記事を書いています。
+ここでは React を学習するにあたって、どのような教材を用い、どのような方法で学んだかを残しておきます。
+あくまで僕が行ってきた学習方法を書いていますので、これがベストの方法だ、という内容ではないのでご注意ください。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/11/30/how-to-learn-react/" class="read-more-link">Read more..</a>
@@ -215,7 +246,11 @@
   
   <div class="post-content">
     <div class="post-summary">
-      読んだ感想 React を業務で使っている知人から、書籍で学ぶならこれ一択！とオススメされたのが「Reactハンズオンラーニング」でした。 読んでみたとこ
+      <h2 id="読んだ感想">読んだ感想</h2>
+<p>React を業務で使っている知人から、書籍で学ぶならこれ一択！とオススメされたのが「Reactハンズオンラーニング」でした。
+読んでみたところ実際良かったです。ハンズオンと名のついた書籍ですが、内容的にはハンズオン形式ではないので、購入する際は気をつけたほうがいいでしょう。
+先日<a href="/blog/2021/11/17/review-modern-react/">「モダンJavaScriptの基本から始める React実践の教科書」</a>のレビューを書きましたが、こちらの本で物足りないなと感じる場合、ハンズオンラーニングを読むと良さそうです。
+ハンズオンの方がコード例が多いのと、テストやルーティング、サスペンスコンポーネントなどの説明があるのがいいです。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/11/19/review-react-hands-on-learing/" class="read-more-link">Read more..</a>
@@ -236,7 +271,13 @@
   
   <div class="post-content">
     <div class="post-summary">
-      読んだ感想 React の入門書として一冊あげるとすればこの本でしょう、というくらいオススメできる内容でした。 対象読者としては JavaScript に少し不安もありつつ React を
+      <h2 id="読んだ感想">読んだ感想</h2>
+<p>React の入門書として一冊あげるとすればこの本でしょう、というくらいオススメできる内容でした。
+対象読者としては JavaScript に少し不安もありつつ React をこれから学ぶ人といった感じです。
+がっつり第三章まで JavaScript の話しなので React だけ学びたい方は少し分量が少なく感じるかもしれません。
+ただ基本的な抑えておかないといけないことはちゃんと書かれてる感じでした。
+ボリュームはそれほど多くないので、速ければ数時間で読み終えるでしょう。
+随所に書かれたコラムも現場感がある内容でいい感じです。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/11/17/review-modern-react/" class="read-more-link">Read more..</a>
@@ -257,7 +298,9 @@
   
   <div class="post-content">
     <div class="post-summary">
-      とあるコミュニティでプロジェクト管理ツールなに使ってるか聞いてみました。 20人ほどから回答を頂けましたので各ツールを簡単にまとめてみました。
+      <p>とあるコミュニティでプロジェクト管理ツールなに使ってるか聞いてみました。
+20人ほどから回答を頂けましたので各ツールを簡単にまとめてみました。
+回答して頂いたエンジニアはだいたいWeb系ですが、ネットワークとかIoTとかの方もいらっしゃいます。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/10/20/project-management-tool/" class="read-more-link">Read more..</a>
@@ -278,7 +321,34 @@
   
   <div class="post-content">
     <div class="post-summary">
-      以前書いた内容が古くなったので改めて書き直すことにしました。 大きな変更点としては補完に gocode ではなく gopls (Language Server) を使うようにしたことです。 Go のインスト
+      <p><a href="/blog/2019/02/15/go-setup-on-emacs/">以前書いた内容</a>が古くなったので改めて書き直すことにしました。
+大きな変更点としては補完に <code>gocode</code> ではなく <code>gopls (Language Server)</code> を使うようにしたことです。</p>
+<h2 id="go-のインストール">Go のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir <span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add this line to ~/.zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install</span>
+</span></span><span class="line"><span class="cl">brew install go
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="go-package-のインストール">Go Package のインストール</h2>
+<p>まずは <code>gopls (Language Server)</code> とその他をインストールします。
+<code>goimports</code> は <code>import</code> の過不足を自動で補完してくれるものです。好みでインストールしてください。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/10/13/go-setup-on-emacs-ver2/" class="read-more-link">Read more..</a>
@@ -299,7 +369,13 @@
   
   <div class="post-content">
     <div class="post-summary">
-      部屋が狭いのでコンパクトにまとめたいなぁと思っていたところ、この記事を見つけたので早速DIYしてみました。 購入したもの まず天板をこちらのサイ
+      <p><img src="/images/2021/10/diy-desk.jpg" alt="diy-desk"></p>
+<p>部屋が狭いのでコンパクトにまとめたいなぁと思っていたところ、この記事を見つけたので早速DIYしてみました。</p>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://99diy.tokyo/mukuboard_desk/" data-iframely-url="//cdn.iframe.ly/Jxg84hV?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<h2 id="購入したもの">購入したもの</h2>
+<p>まず天板を<a href="https://www.r-toolbox.jp/service/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%AB%E3%83%83%E3%83%88%E7%84%A1%E5%9E%A2%E6%9D%90/">こちら</a>のサイトから購入しました。このサイトではミリ単位で天板の寸法を指定できたり、オイル塗りや簡単な加工オプションも付けられるので大変便利です（ここまでやってもらってDIYといえるだろうか……）。</p>
+<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://www.r-toolbox.jp/service/%e3%83%95%e3%83%aa%e3%83%bc%e3%82%ab%e3%83%83%e3%83%88%e7%84%a1%e5%9e%a2%e6%9d%90/" data-iframely-url="//cdn.iframe.ly/jV5S3fZ?card=small"></a></div></div><script async src="//cdn.iframe.ly/embed.js" charset="utf-8"></script>
+<p>僕が注文した内容はこんな感じです。納期は塗装・加工なしの場合2〜3週間程度、塗装・加工ありの場合3〜4週間程度だそうです。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/10/08/diy-desk/" class="read-more-link">Read more..</a>
@@ -320,7 +396,10 @@
   
   <div class="post-content">
     <div class="post-summary">
-      読んだ感想 いい本でした。しかし中身を見ずにタイトルだけで判断して買うと、期待したものと違うなぁってなるかもしれません。 この本の対象読者はチュ
+      <h2 id="読んだ感想">読んだ感想</h2>
+<p>いい本でした。しかし中身を見ずにタイトルだけで判断して買うと、期待したものと違うなぁってなるかもしれません。
+この本の対象読者はチュートリアルを終えた人や「Hello World」の次が欲しいと思っている人たちです。
+React に一度も触れていない状態で読むと学習効率が悪いでしょう。</p>
     </div>
     <div class="read-more">
       <a href="/blog/2021/09/27/introduction-react-review/" class="read-more-link">Read more..</a>
@@ -352,7 +431,7 @@
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Mac に Python 環境構築 - iriya-ufo&#39;s blog</title>
@@ -16,17 +16,20 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。
+1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を通す。
+1 2 3 echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc Python のインストール 1 2 3 4 $ pyenv install --list # インストール可能なバージョンの表示 $ pyenv install 3.8.2 # Python のインストール $ pyenv versions # インストール済み一覧 $ pyenv global 3.8.2 # 標準で使う設定 pipenv のインストール pipenv を使ってパッケージの管理を行う。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
 
 
 
-<meta name="generator" content="Hugo 0.133.1 with theme even" />
+<meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2015/10/10/python-on-mac/" />
+<link rel="canonical" href="http://localhost:1313/blog/2015/10/10/python-on-mac/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -38,10 +41,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2015/10/10/python-on-mac/">
+<meta property="og:url" content="http://localhost:1313/blog/2015/10/10/python-on-mac/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Mac に Python 環境構築">
-  <meta property="og:description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を">
+  <meta property="og:description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。
+1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を通す。
+1 2 3 echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc Python のインストール 1 2 3 4 $ pyenv install --list # インストール可能なバージョンの表示 $ pyenv install 3.8.2 # Python のインストール $ pyenv versions # インストール済み一覧 $ pyenv global 3.8.2 # 標準で使う設定 pipenv のインストール pipenv を使ってパッケージの管理を行う。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -49,13 +54,17 @@
     <meta property="article:modified_time" content="2020-04-08T16:30:33+09:00">
 
   <meta itemprop="name" content="Mac に Python 環境構築">
-  <meta itemprop="description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を">
+  <meta itemprop="description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。
+1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を通す。
+1 2 3 echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc Python のインストール 1 2 3 4 $ pyenv install --list # インストール可能なバージョンの表示 $ pyenv install 3.8.2 # Python のインストール $ pyenv versions # インストール済み一覧 $ pyenv global 3.8.2 # 標準で使う設定 pipenv のインストール pipenv を使ってパッケージの管理を行う。">
   <meta itemprop="datePublished" content="2015-10-10T19:00:23+00:00">
   <meta itemprop="dateModified" content="2020-04-08T16:30:33+09:00">
   <meta itemprop="wordCount" content="1203">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Mac に Python 環境構築">
-  <meta name="twitter:description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。 1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を">
+  <meta name="twitter:description" content="【2020年版】Mac に Python をインストールする方法、パッケージの管理方法 pyenv のインストール brew で pyenv をインストールする。
+1 2 3 $ brew install pyenv $ pyenv -v pyenv 1.2.18 PATH を通す。
+1 2 3 echo &#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39; &gt;&gt; ~/.zshrc echo &#39;eval &#34;$(pyenv init -)&#34;&#39; &gt;&gt; ~/.zshrc Python のインストール 1 2 3 4 $ pyenv install --list # インストール可能なバージョンの表示 $ pyenv install 3.8.2 # Python のインストール $ pyenv versions # インストール済み一覧 $ pyenv global 3.8.2 # 標準で使う設定 pipenv のインストール pipenv を使ってパッケージの管理を行う。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
