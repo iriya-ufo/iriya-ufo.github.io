@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Rust on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/rust/</link>
+    <description>Recent content in Rust on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 18 Feb 2023 18:01:07 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Emacs に Rust の開発環境を整える</title>
+      <link>http://localhost:1313/blog/2023/02/18/rust-setup-on-emacs/</link>
+      <pubDate>Sat, 18 Feb 2023 18:01:07 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/02/18/rust-setup-on-emacs/</guid>
+      <description>&lt;p&gt;Rust の勉強を始めました。&#xA;Mac + Emacs に Rust の開発環境を整えたのでその備忘録です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;rust-のインストール&#34;&gt;Rust のインストール&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/ja/tools/install&#34;&gt;公式サイト&lt;/a&gt;に習い &lt;code&gt;rustup&lt;/code&gt; ツールを使って Rust をインストールします。&#xA;&lt;code&gt;rustup&lt;/code&gt; は Rust のバージョン管理と関連ツールの管理を行うことができるツールです。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

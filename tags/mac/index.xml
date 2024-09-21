@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mac on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/mac/</link>
+    <description>Recent content in Mac on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 22 Jul 2014 12:31:08 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mavericks にアップグレードしたらターミナルが落ちた</title>
+      <link>http://localhost:1313/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</link>
+      <pubDate>Tue, 22 Jul 2014 12:31:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</guid>
+      <description>&lt;p&gt;今更ですが Lion から Mavericks にアップグレードしました。OS のアップグレードは色々トラブルが起こるのであまりしたくないのですが、流行りについていかないのもなぁと思いアップグレードを実行しました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
+      <link>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
+      <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
+      <description>&lt;p&gt;Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。&#xA;環境構築は Mac OS X で行っています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。&#xA;brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>rbenv で Mac OS X に Ruby 2.0.0 をインストールする</title>
+      <link>http://localhost:1313/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</link>
+      <pubDate>Mon, 13 May 2013 18:08:14 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</guid>
+      <description>&lt;p&gt;rvm はクールじゃないので rbenv を使って Ruby をインストールします。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;はじめに『&lt;a href=&#34;http://www.oiax.jp/rails/zakkan/rails_3_1_installation_on_macosx.html&#34;&gt;Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明してみました&lt;/a&gt;』を参考に準備をしておきます。&#xA;このサイトは Rails のインストールについてですが Xcode, Homebrew など初歩からかなり丁寧に書いているのでオススメです。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

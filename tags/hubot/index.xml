@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hubot on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/hubot/</link>
+    <description>Recent content in Hubot on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 04 Mar 2016 18:10:03 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hubot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Slack に Hubot をいれてみた</title>
+      <link>http://localhost:1313/blog/2016/03/04/hubot-on-slack/</link>
+      <pubDate>Fri, 04 Mar 2016 18:10:03 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/04/hubot-on-slack/</guid>
+      <description>&lt;p&gt;Hubot は GitHub が開発した bot のフレームワークです。Node.js の上で走って CoffeeScript で動きます。実装環境は AWS にしました。常時稼働させとかなきゃいけないからね。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

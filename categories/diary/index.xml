@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Diary on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/categories/diary/</link>
+    <description>Recent content in Diary on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Fri, 08 Oct 2021 20:31:54 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/diary/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>机をDIYした</title>
+      <link>http://localhost:1313/blog/2021/10/08/diy-desk/</link>
+      <pubDate>Fri, 08 Oct 2021 20:31:54 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/10/08/diy-desk/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2021/10/diy-desk.jpg&#34; alt=&#34;diy-desk&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;部屋が狭いのでコンパクトにまとめたいなぁと思っていたところ、この記事を見つけたので早速DIYしてみました。&lt;/p&gt;&#xA;&lt;div class=&#34;iframely-embed&#34;&gt;&lt;div class=&#34;iframely-responsive&#34; style=&#34;height: 140px; padding-bottom: 0;&#34;&gt;&lt;a href=&#34;https://99diy.tokyo/mukuboard_desk/&#34; data-iframely-url=&#34;//cdn.iframe.ly/Jxg84hV?card=small&#34;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;script async src=&#34;//cdn.iframe.ly/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&#xA;&lt;h2 id=&#34;購入したもの&#34;&gt;購入したもの&lt;/h2&gt;&#xA;&lt;p&gt;まず天板を&lt;a href=&#34;https://www.r-toolbox.jp/service/%E3%83%95%E3%83%AA%E3%83%BC%E3%82%AB%E3%83%83%E3%83%88%E7%84%A1%E5%9E%A2%E6%9D%90/&#34;&gt;こちら&lt;/a&gt;のサイトから購入しました。このサイトではミリ単位で天板の寸法を指定できたり、オイル塗りや簡単な加工オプションも付けられるので大変便利です（ここまでやってもらってDIYといえるだろうか……）。&lt;/p&gt;&#xA;&lt;div class=&#34;iframely-embed&#34;&gt;&lt;div class=&#34;iframely-responsive&#34; style=&#34;height: 140px; padding-bottom: 0;&#34;&gt;&lt;a href=&#34;https://www.r-toolbox.jp/service/%e3%83%95%e3%83%aa%e3%83%bc%e3%82%ab%e3%83%83%e3%83%88%e7%84%a1%e5%9e%a2%e6%9d%90/&#34; data-iframely-url=&#34;//cdn.iframe.ly/jV5S3fZ?card=small&#34;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;script async src=&#34;//cdn.iframe.ly/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&#xA;&lt;p&gt;僕が注文した内容はこんな感じです。納期は塗装・加工なしの場合2〜3週間程度、塗装・加工ありの場合3〜4週間程度だそうです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>成長が早い人の特徴</title>
+      <link>http://localhost:1313/blog/2020/12/20/techcommit-advent-calendar-2020/</link>
+      <pubDate>Sun, 20 Dec 2020 02:11:07 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2020/12/20/techcommit-advent-calendar-2020/</guid>
+      <description>&lt;p&gt;この記事は &lt;a href=&#34;https://qiita.com/advent-calendar/2020/tech-commit&#34;&gt;TechCommit Advent Calendar 2020&lt;/a&gt; の20日目の記事です。&lt;/p&gt;&#xA;&lt;p&gt;少し自分について紹介させてもらいます。自分は元予備校講師で数学や理科などを教えていました。それからエンジニアに転職し8年くらいが経ちました。&#xA;元予備校講師ということもあって、エンジニアに転職した後、某スクールや個人経由でプログラミングを教えてたりしてました。&#xA;数十人程度ですが教えてきた経験と TechCommit というコミュニティで色んな方と交流した体験談を交えて「成長が早い人の特徴」について自分の考えをつらつらと書きます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>HHKB の押下圧を減らし静音化した</title>
+      <link>http://localhost:1313/blog/2020/06/16/enhance-hhkb/</link>
+      <pubDate>Tue, 16 Jun 2020 21:15:00 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2020/06/16/enhance-hhkb/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://www.pfu.fujitsu.com/hhkeyboard/hhkbpro2/spec.html&#34;&gt;HHKB Pro2(型番PD-KB400BN)&lt;/a&gt; を約10年ほど使ってきて、ここ1,2年はなんとなく買った &lt;a href=&#34;https://www.realforce.co.jp/products/R2TLS-US-BK/USV.html&#34;&gt;Realforce(型番R2TLS-USV-BK)&lt;/a&gt; を使っていました。Realforce で一番気に入ったのは押下圧でした。&#xA;HHKB ばかり使っているときは気づかなかったんですが、あの押下圧はかなりいいですね。疲れ具合が全然違います。とはいえ僕の持ってるのは変荷重のタイプなので全てが軽いわけではありませんでした。&#xA;そこでもっと軽いタイプで静電容量無接点キーボードを探したんですが、なかなかないんですよね。無いなら作ってしまえということで n 番煎じの記事になりますが、HHKB を分解して押下圧減と静音化を行いました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>どこで Blog を書くか問題</title>
+      <link>http://localhost:1313/blog/2018/12/26/blog-services/</link>
+      <pubDate>Wed, 26 Dec 2018 16:42:16 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2018/12/26/blog-services/</guid>
+      <description>&lt;p&gt;ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。&#xA;仕方なしにアップデートするもうまく行かずに、結局書いた記事を &lt;code&gt;rm&lt;/code&gt; した。&#xA;そんなことがあって、また生産性ゼロの、ブログどこに書いたらいいか問題が勃発してしまったのだった。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>はてなダイアリー終了</title>
+      <link>http://localhost:1313/blog/2018/12/26/hatena-diary-to-hatena-blog/</link>
+      <pubDate>Wed, 26 Dec 2018 14:10:51 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2018/12/26/hatena-diary-to-hatena-blog/</guid>
+      <description>&lt;p&gt;久しぶりにブログでも書くかと思ったら Octopress が不調。アップデートも煩わしく思ってこの機会にブログを移転しようか考えた。&#xA;紆余曲折を経て Hugo を使うことになったのだけども、その詳細はいずれ書こう。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Perfume のライブに行ってきた</title>
+      <link>http://localhost:1313/blog/2016/06/17/perfume-live/</link>
+      <pubDate>Fri, 17 Jun 2016 02:22:31 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/06/17/perfume-live/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.perfume-web.jp/cam/cosmicexplorer/&#34;&gt;&lt;img src=&#34;http://localhost:1313/images/2016/06/perfume.png&#34; class=&#34;image&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;『Perfume 6th Tour 2016「COSMIC EXPLORER」スタンディングエディション in 幕張メッセ』行ってきました。&lt;/p&gt;&#xA;&lt;p&gt;初めてのライブで右も左も分からないような自分でしたが、めちゃくちゃ楽しめました。&#xA;お客さんはざっと2万人〜3万人、そして今回はスタンディングエディションという初の試みで2時間半のライブ時間ずーーーーっと立ちっぱなし！&#xA;終わったあと相当疲れましたが、ライブ中踊れるノリはいいですね、心地よい疲労感です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ネフローゼが治ったり治らなかったり</title>
+      <link>http://localhost:1313/blog/2016/05/11/nephrotic-syndrome/</link>
+      <pubDate>Wed, 11 May 2016 23:29:09 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/05/11/nephrotic-syndrome/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/02/09/nephrotic-syndrome/&#34;&gt;前回記事&lt;/a&gt;の更新から二ヶ月ほど経ちました。しばらくは大丈夫だったのですが、なんか体調悪いなぁと思ったら再発していたということが、この短いスパンで二回くらいありました。だらだらと続くこの感じは今までになかったところです。&#xA;相変わらずステロイドの効きが良いので、2錠 (10mg/day) ほど飲んでおけば数日でよくなってきます。&#xA;睡眠、食事、運動、この辺りのバランスが悪くなって疲れがたまるとダメっぽいですね。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>希少価値</title>
+      <link>http://localhost:1313/blog/2016/04/03/scarcity-value/</link>
+      <pubDate>Sun, 03 Apr 2016 23:14:56 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/03/scarcity-value/</guid>
+      <description>&lt;p&gt;国税庁の民間給与実態統計調査結果によると、年収900万円台の男性の割合は2.7%だそうです。1000万〜1500万台だと幅が広いためか少し増えて、4.9%となります。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ネフローゼ再発したからなんか書く</title>
+      <link>http://localhost:1313/blog/2016/02/09/nephrotic-syndrome/</link>
+      <pubDate>Tue, 09 Feb 2016 00:51:28 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/02/09/nephrotic-syndrome/</guid>
+      <description>&lt;p&gt;今回も原因はよく分かりませんが、再発してしまいました。&lt;/p&gt;&#xA;&lt;p&gt;前回記事が2014年07月20日なので一年と半年ぶりくらいでしょうか。一年半くらいで周期がめぐってくるんだろうか？笑&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>目標設定にKPIを定める</title>
+      <link>http://localhost:1313/blog/2016/01/04/set-kpi-of-your-personal-goal/</link>
+      <pubDate>Mon, 04 Jan 2016 01:21:19 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/01/04/set-kpi-of-your-personal-goal/</guid>
+      <description>&lt;p&gt;前回記事にて2015年の振り返りっぽいことをやったのですが、2016年に何を目標とするかまだ決めてませんでした。仕事初めの前にきちっと目標を立てておこうと思います。&#xA;これまでを振り返ってみて、大きく前進したと言えるのは何か新しいことを始めた年だった気がします。起業した年はすごく大きな変化でした。結果を見ると会社たたんでいるので失敗ということになりますが、自分の中では大きな良い変化でした。&#xA;2015年はちょっと楽な年、だったような気がします。やっぱり少ないながらも安定した収入があるのは平常心を保つのに重要ですね。お金大事です。はい。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>さて、来年は何をやろうかな</title>
+      <link>http://localhost:1313/blog/2015/12/27/what-will-i-do-at-next-year/</link>
+      <pubDate>Sun, 27 Dec 2015 03:14:29 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/12/27/what-will-i-do-at-next-year/</guid>
+      <description>&lt;p&gt;ちょっとPCのフォルダーを整理してたら「2015年度の目標.xls」というのが出てきた。ふと気づくと2015年が終わろうとしている。この段階で、あっ目標立てただけで絶対できてないやつやん、と思いました。だってついさっきファイルの存在を再認識したのですから。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>人口知能と生命</title>
+      <link>http://localhost:1313/blog/2015/07/11/ai-and-life/</link>
+      <pubDate>Sat, 11 Jul 2015 13:52:57 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/07/11/ai-and-life/</guid>
+      <description>&lt;p&gt;非常に興味深い記事を見つけた。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://sign.jp/8fa1e96c&#34;&gt;宗教は人工知能を生命と認められるのか – シンギュラリティと宗教&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;生命とはなにかという問いは長年の間、議論されてきた命題だ。&#xA;生物学的定義では代謝と自己複製を行う個体といい、イデア論と物質主義では真逆の定義をしている、また宗教によってさまざまな解釈があるのは衆知のこと。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>行動しなければ何も手にはいらない</title>
+      <link>http://localhost:1313/blog/2015/07/05/get-something-from-action/</link>
+      <pubDate>Sun, 05 Jul 2015 18:46:42 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/07/05/get-something-from-action/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2015/07/lover.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;突然だが僕は今、彼女が欲しい。彼女が欲しいと思っている。好きな人となにげない会話をしたりどっか遊びにいったりしたい。でも僕はイケメンでもなければ社会的地位が高いわけでもない。そんな僕にどうやったら彼女ができるのだろう？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>スタートアップで大事なこと</title>
+      <link>http://localhost:1313/blog/2015/07/03/important-point-about-startup/</link>
+      <pubDate>Fri, 03 Jul 2015 00:38:07 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/07/03/important-point-about-startup/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2015/07/startup.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;スタートアップは難しい。人はいない、金はない、技術もない、無いことづくしである。そんな不利な状況を克服して成功するためにはいくつかコツがいる。もちろん小手先のテクニックだけではダメだが、やる気だけでなんとかしようとするのもナンセンスだ。スタートアップにはスタートアップの戦い方がある。今回はちょっとした事例を紹介しつつ、あなたのマインドセットをスタートアップ向きに変えることができれば幸いだ。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>BABYMETAL</title>
+      <link>http://localhost:1313/blog/2015/06/13/babymetal/</link>
+      <pubDate>Sat, 13 Jun 2015 20:09:43 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/06/13/babymetal/</guid>
+      <description>&lt;h2 id=&#34;メタル可愛いベイビーあびゃーーー&#34;&gt;メタル可愛いベイビー、あびゃーーー&lt;/h2&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;https://www.youtube.com/embed/WIKqgE4BwAY&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;p&gt;気づいたらアルバム購入してた・・・&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>思い込みの幸せは偽物じゃない</title>
+      <link>http://localhost:1313/blog/2015/05/06/the-surprising-science-of-happiness/</link>
+      <pubDate>Wed, 06 May 2015 03:46:58 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/05/06/the-surprising-science-of-happiness/</guid>
+      <description>&lt;p&gt;人生における本当の幸せとはなにか、誰しも一度は考えて悩んだことのある問いだろう。&lt;/p&gt;&#xA;&lt;p&gt;僕たちは、自分がどれくらい幸せなのかをついつい他人との比較で考えてしまう。しかし他人と比較をしていたら絶対に幸せになれない。隣りの芝生は青いというやつだ。それに下をみても上をみてもキリがないからね。&#xA;一部の賢い人たちは、そんな比較してたって意味がないということを知っている。だから過去の自分と比べるか、なりたい未来を想像して幸せになろうという方向に向かうよう努力している。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ポスト・ヒューマン時代</title>
+      <link>http://localhost:1313/blog/2015/02/22/post-human-era/</link>
+      <pubDate>Sun, 22 Feb 2015 21:39:23 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/02/22/post-human-era/</guid>
+      <description>&lt;p&gt;機械が人間のような知性を備えることで想像のつかないレベルで世界が一変する。それは徐々に変化してそうなるのではなくてある一点を通り過ぎることで加速度的に変化する。それをシンギュラリティ (技術的特異点) と呼ぶ。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ネットワークビジネスを好きになれない理由</title>
+      <link>http://localhost:1313/blog/2015/02/20/the-reason-that-i-dont-like-network-business/</link>
+      <pubDate>Fri, 20 Feb 2015 13:13:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/02/20/the-reason-that-i-dont-like-network-business/</guid>
+      <description>&lt;p&gt;「我思う、ゆえに我あり」という有名な言葉を残したのはフランスの哲学者デカルトだ。批判することなく受け入れてきた先入観を排除し全てのものを疑うことから始まった。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>乗馬を初体験した</title>
+      <link>http://localhost:1313/blog/2014/12/28/first-horse-riding/</link>
+      <pubDate>Sun, 28 Dec 2014 22:33:56 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/12/28/first-horse-riding/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2014/12/horse.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;僕は年始にその年のうちにやりたいことをリストアップしているのですが、2014年のやりたいことの一つに乗馬がありました。今年ももうわずかだなと思っていたところ、やりたいことが出来ていないことに気づき、思い切って今日行ってきたわけです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Healthcare Hackathon in Tokyo 3rd Report @ Nov. 8</title>
+      <link>http://localhost:1313/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</link>
+      <pubDate>Mon, 17 Nov 2014 03:30:03 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</guid>
+      <description>&lt;p&gt;ちょっと遅くなりましたが Healthcare Hackathon に参加したのでレポートを書きます。医療健康分野というテーマに絞った珍しいハッカソンでした。第3回は 2014/11/08 HUB TOKYO (目黒) での開催です。今回は&amp;quot;糖尿病&amp;quot;をテーマに約40名ほどの人たちが参加してました。若干ですがエンジニアの方が多かったです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ヘルステックスタートアップイベントに参加しました</title>
+      <link>http://localhost:1313/blog/2014/10/11/attend-at-health-tech-startup-event/</link>
+      <pubDate>Sat, 11 Oct 2014 19:23:47 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/10/11/attend-at-health-tech-startup-event/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2014/10/IMG_1399.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;参加者はだいたいこんな感じ。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;150人から200人ほど&lt;/li&gt;&#xA;  &lt;li&gt;ヘルスケア領域の人たちが 1/3 &lt;/li&gt;&#xA;  &lt;li&gt;IT業界の人たちが 2/3 &lt;/li&gt;&#xA;  &lt;li&gt;その他&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;セッションスペースでは4つのトピックでそれぞれ1時間ほどの話しがありました。以下リストです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>入院せずにネフローゼと向き合う</title>
+      <link>http://localhost:1313/blog/2014/07/20/nephrotic-syndrome/</link>
+      <pubDate>Sun, 20 Jul 2014 11:54:57 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/07/20/nephrotic-syndrome/</guid>
+      <description>&lt;h2 id=&#34;何度目の再発だろう&#34;&gt;何度目の再発だろう？&lt;/h2&gt;&#xA;&lt;p&gt;久々に再発しました。1年と3ヶ月ぶりです。再発する度に原因を考えているのですがやはり再現理由が分かりません。僕の職業はプログラマーですが再現理由の分からないバグほどイライラするものはないです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Yahoo！知恵袋でみた鮮やかな解答</title>
+      <link>http://localhost:1313/blog/2014/07/16/yahoo-chiebukuro/</link>
+      <pubDate>Wed, 16 Jul 2014 23:00:27 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/07/16/yahoo-chiebukuro/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;弱者を抹殺する。 不謹慎な質問ですが、疑問に思ったのでお答え頂ければと思い&amp;hellip;&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;以下の質問に対し、あなたならどう答えるだろう？&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>便所飯に至る理由</title>
+      <link>http://localhost:1313/blog/2014/06/10/benjo-meshi/</link>
+      <pubDate>Tue, 10 Jun 2014 02:10:58 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/06/10/benjo-meshi/</guid>
+      <description>&lt;p&gt;私は高校生の時に一度だけ便所飯をしたことがあります。べつにいじめられていたとか友だちがいなかったとかいうわけではありません。&lt;/p&gt;&#xA;&lt;p&gt;その日は休日で朝から塾に行って自習をしていました。当然お腹が減るので近くのスーパーまでご飯を買いに行ったんです。その塾では食事をするスペースがありましたが、人が通る廊下に直結しており食事専用スペースという場所ではありませんでした。人に見られやすい場所だったのでそこで食べるのはとても嫌でした。しかし他に場所もないので仕方なくトイレで食事という選択をしたのです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>オンラインコースを成功させる6つのポイント</title>
+      <link>http://localhost:1313/blog/2014/01/26/the-6-success-point-of-online-course/</link>
+      <pubDate>Sun, 26 Jan 2014 21:48:56 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/01/26/the-6-success-point-of-online-course/</guid>
+      <description>&lt;p&gt;オンラインで授業を行うときに大切な6つのTipsを見つけたので紹介します。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://edcetera.rafter.com/6-tips-to-make-sure-your-online-courses-serve-students-well&#34; title=&#34;6 Tips to Make Sure Your Online Courses Serve Students Well&#34; target=&#34;_blank&#34;&gt;6 Tips to Make Sure Your Online Courses Serve Students Well&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;オンラインでの授業が生徒にとって有益なものとなるようにしたい、そのためにできる6つのポイントを紹介する。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>あなたは子どもたちから創造性を奪っている</title>
+      <link>http://localhost:1313/blog/2014/01/25/dont-take-away-imagination-from-kids/</link>
+      <pubDate>Sat, 25 Jan 2014 01:14:31 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/01/25/dont-take-away-imagination-from-kids/</guid>
+      <description>&lt;h2 id=&#34;従来の教育システムから飛び出した子&#34;&gt;従来の教育システムから飛び出した子&lt;/h2&gt;&#xA;&lt;p&gt;興味深い記事がありましたので適当に翻訳しつつ見解を述べます。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://www.collective-evolution.com/2014/01/07/this-is-what-happens-when-a-kid-leaves-traditional-education/&#34; title=&#34;This Is What Happens When A Kid Leaves Traditional Education&#34; target=&#34;_blank&#34;&gt;This Is What Happens When A Kid Leaves Traditional Education&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;以下リンク記事の意訳&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;  &lt;p&gt;ローガンは通常の教育を受けない変わりにホームスクール (注釈 &lt;a href=&#34;http://ja.wikipedia.org/wiki/%E3%83%9B%E3%83%BC%E3%83%A0%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AA%E3%83%B3%E3%82%B0&#34; title=&#34;ホームスクールとは&#34; target=&#34;_blank&#34;&gt;ホームスクールとは？&lt;/a&gt;) で教育を施された13歳の少年だ。ただホームスクールを受けたというだけでなく彼は彼自身で興味関心の赴くままに自分を教育しているのだ。それは従来の教育方法のやり方ではありえない。ローガンは言っている。大きくなったら幸せで健康でありたいと。2013年のTEDトークにて、どうやって目的を達成すればいいかを教育をハッキングしながら実践してきたことについて述べている。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>教育にイノベーションを起こすのは、行政かスタートアップか？</title>
+      <link>http://localhost:1313/blog/2014/01/10/administration-vs-startup-in-education/</link>
+      <pubDate>Fri, 10 Jan 2014 19:39:37 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/01/10/administration-vs-startup-in-education/</guid>
+      <description>&lt;p&gt;最近 EdTech (Education + Technology) という言葉が盛んです。スタートアップ界隈でも教育関連のサービスがたくさん生まれてきています。米国のみならず日本でも注目されている分野です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>チリ人と過ごした2013年の年末</title>
+      <link>http://localhost:1313/blog/2014/01/06/spent-with-chile-guest-from-airbnb/</link>
+      <pubDate>Mon, 06 Jan 2014 03:42:07 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/01/06/spent-with-chile-guest-from-airbnb/</guid>
+      <description>&lt;h2 id=&#34;可愛い天使がやってきた&#34;&gt;可愛い天使がやってきた&lt;/h2&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/2014/01/IMG_0863-e1388917819189.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;2013年の年末にチリからゲストがやってきました。写真の子らはナツコとケンジです。滞在期間は4日間。今までにもたくさんのゲストが来てくれたけど一番印象に残ったのがこのチリからのゲストでした。ちなみに今までに来てくれたゲストの方の国々はこんな感じ。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>2013年を振り返ってみた</title>
+      <link>http://localhost:1313/blog/2014/01/05/my-life-turning-point-2013/</link>
+      <pubDate>Sun, 05 Jan 2014 04:16:06 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/01/05/my-life-turning-point-2013/</guid>
+      <description>&lt;p&gt;2013年は僕にとって大きな変化があった年でした。何があったのか振り返ってみて2014年の糧にしたいと思います (ブログ書いてる間に2013年終わっちゃったけど……)。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>海外の教育系スタートアップで気になるものまとめ</title>
+      <link>http://localhost:1313/blog/2013/12/29/cool-educational-startup-list/</link>
+      <pubDate>Sun, 29 Dec 2013 03:24:34 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/12/29/cool-educational-startup-list/</guid>
+      <description>&lt;p&gt;昨今スタートアップ界隈で EdTech が流行しています。そこで個人的に気になった海外の教育系スタートアップを選んでまとめてみました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ck-12&#34;&gt;ck-12&lt;/h2&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/2013/12/ck12logo.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;Link: &lt;a href=&#34;http://www.ck12.org/student/&#34;&gt;ck12&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;k-12とは幼稚園から始まり高校を卒業するまでの13年間の教育機関のことを指します。ck-12ではSTEM (Science, Technology, Engineering, Mathematics) を主軸にコンテンツを提供しています。コンテンツには&lt;strong&gt;教科書的なテキスト&lt;/strong&gt;に加え&lt;strong&gt;ビデオ&lt;/strong&gt;や&lt;strong&gt;課題テスト&lt;/strong&gt;などがあります。試しに&amp;quot;Arithmetic&amp;quot;と&amp;quot;Physics&amp;quot;を観てみました。課題テストは4択か2択問題になっていますね。ゲーミフィケーション的な要素はなく淡々と進みます。ビデオは解説に役立ちそうな映像などに声をあてている感じでした。決して黒板に解説をするというスタイルではなさそうです。&#xA;全体を通してみた感じ、じっくり一人で勉強するのが好きな生徒が使いそうだなという印象です。テキストはボリュームもあって良好ですしビデオは視覚でみて分かりやすい解説をしているコンテンツがあるからです。学校の先生たちが生徒に予習をさせてくる教材として使わせるのもありだと思いました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>写真 &#43; 音声アプリの Voicepic がサービス終了</title>
+      <link>http://localhost:1313/blog/2013/12/14/quit-voicepic-startup/</link>
+      <pubDate>Sat, 14 Dec 2013 18:10:09 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/12/14/quit-voicepic-startup/</guid>
+      <description>&lt;p&gt;写真に音声がつけられるアプリ&lt;a href=&#34;http://voicepic.me/&#34; title=&#34;voicepic&#34; target=&#34;_blank&#34;&gt;『Voicepic』&lt;/a&gt;がサービスを終了することを決めました。理由はユーザー数の伸び率の低下ということらしいです。Mash Up Awardsなどで優勝しその他のイベントコンテストでも優秀な賞をもらっていたのにあっけなく終了してしまう現実を目の当たりにして、SNSのサービスを展開するのは難しいことなんだと改めて認識しました。&#xA;私の知り合いにもこれからBtoC向けのサービスを展開しようとしているところもありますし、どうやってユーザー獲得をしていくのか観察していきたいです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>センター試験廃止について意見申す</title>
+      <link>http://localhost:1313/blog/2013/10/23/stop-national-center-test-for-university-admissions/</link>
+      <pubDate>Wed, 23 Oct 2013 06:23:09 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/23/stop-national-center-test-for-university-admissions/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2013/10/exam.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;どうやら本当にセンター試験がなくなるようなので思うことをつらつらと書いてみます。&lt;/p&gt;&#xA;&lt;p&gt;とりあえずここを読んでどんな感じに改革するのかみてみました。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a title=&#34;大学入試改革:「教育変える突破口に」　下村博文文科相に聞く&#34; href=&#34;http://mainichi.jp/feature/news/20131021ddm013100013000c.html&#34; target=&#34;_blank&#34;&gt;大学入試改革:「教育変える突破口に」　下村博文文科相に聞く&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>最高にクールで便利なメモ帳</title>
+      <link>http://localhost:1313/blog/2013/10/13/useful-notepad/</link>
+      <pubDate>Sun, 13 Oct 2013 04:13:15 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/13/useful-notepad/</guid>
+      <description>&lt;h2 id=&#34;やっぱり紙媒体&#34;&gt;やっぱり紙媒体&lt;/h2&gt;&#xA;&lt;p&gt;メモ帳使ってますか？そのメモ帳は紙ですか？電子媒体ですか？&lt;/p&gt;&#xA;&lt;p&gt;私は一時期 iPad でメモを取っていたことがありますが、3回使ってみたところで辞めました。iPad などのタブレットでメモを取ることの最大の欠点は&amp;quot;すぐに記録できない&amp;quot;という点です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>お金の常識を変える通貨「Bitcoin」</title>
+      <link>http://localhost:1313/blog/2013/10/07/bitcoin-impact/</link>
+      <pubDate>Mon, 07 Oct 2013 02:12:24 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/07/bitcoin-impact/</guid>
+      <description>&lt;p&gt;皆さん Bitcoin って何かご存知でしょうか？&#xA;これ、世界を変える可能性のあるすごい通貨なんです。&lt;/p&gt;&#xA;&lt;p&gt;僕のチームメンバーである Toby は Bitcoin にかなり詳しい人物で彼が色々と教えてくれました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>仕事とプライベートの境界</title>
+      <link>http://localhost:1313/blog/2013/09/18/no-border-with-job-and-private/</link>
+      <pubDate>Wed, 18 Sep 2013 22:24:54 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/09/18/no-border-with-job-and-private/</guid>
+      <description>&lt;p&gt;東京に引っ越して来て1ヶ月ほど経ち、暮らしが安定してきました。&#xA;ここらで一つ仕事とプライベードについて書きます。&lt;/p&gt;&#xA;&lt;p&gt;ほとんどの人は家で朝起きて、職場に行って、仕事を終えて岐路につきますね。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>法人口座開設の条件が厳しい</title>
+      <link>http://localhost:1313/blog/2013/08/05/hard-to-open-corporate-bank-account/</link>
+      <pubDate>Mon, 05 Aug 2013 01:07:38 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/08/05/hard-to-open-corporate-bank-account/</guid>
+      <description>&lt;p&gt;会社を設立してまずすることは口座を開設することではないでしょうか？&#xA;でもこれが結構難しいです。&#xA;昨今の違法行為を取り締まるために法人口座開設が非常に厳しくなっているようです。&#xA;事業としての実績でもあればすんなりと通るんでしょうが、スタートアップはそういうわけにいきません。&#xA;前途多難です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>YES! と言わせる科学的説得術</title>
+      <link>http://localhost:1313/blog/2013/07/11/secrets-from-the-science-of-persuasion/</link>
+      <pubDate>Thu, 11 Jul 2013 02:28:12 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/07/11/secrets-from-the-science-of-persuasion/</guid>
+      <description>&lt;p&gt;興味深い動画をYoutubeで見つけたので自分なりにまとめてみました。&#xA;動画は以下をご覧ください。&lt;/p&gt;&#xA;&lt;iframe width=&#34;560&#34; height=&#34;315&#34; src=&#34;//www.youtube.com/embed/cFdCzN7RYbw&#34; frameborder=&#34;0&#34; allowfullscreen&gt;&lt;/iframe&gt;&#xA;&lt;h2 id=&#34;6つのポイント&#34;&gt;6つのポイント&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;相互関係性&lt;/li&gt;&#xA;&lt;li&gt;欠乏&lt;/li&gt;&#xA;&lt;li&gt;権威&lt;/li&gt;&#xA;&lt;li&gt;一貫性&lt;/li&gt;&#xA;&lt;li&gt;嗜好&lt;/li&gt;&#xA;&lt;li&gt;合意&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;相互関係性&#34;&gt;相互関係性&lt;/h2&gt;&#xA;&lt;p&gt;何かを受け取ったらその対価を差し上げること。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>走れ！走れ！走れ！</title>
+      <link>http://localhost:1313/blog/2013/07/09/run-run-run/</link>
+      <pubDate>Tue, 09 Jul 2013 22:50:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/07/09/run-run-run/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2013/07/running.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;26になるまで、東京に来た事なんて片手で数えるほどだった。&lt;/p&gt;&#xA;&lt;p&gt;だけど、ここ2ヶ月ほどでもう8回くらい来てる。&lt;/p&gt;&#xA;&lt;p&gt;東京に来るたびに思うことがある。&lt;/p&gt;&#xA;&lt;p&gt;「立ち止まったら死んじゃう」って。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hacker News Kansai #9 に参加しました</title>
+      <link>http://localhost:1313/blog/2013/06/29/attend-hacker-news-kansai-09th/</link>
+      <pubDate>Sat, 29 Jun 2013 01:36:03 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/06/29/attend-hacker-news-kansai-09th/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2013/06/HN-Kansai-9th.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://hnkansai.org/&#34;&gt;HN Kansai&lt;/a&gt; に参加しました。&lt;/p&gt;&#xA;&lt;p&gt;参加者のほとんどが非日本人です。日本人は僕とあと女性が一人いただけでした。&#xA;みなの出身もバラバラで、たぶん7カ国以上の人たちが集まっていたと思います。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>ルームシェアできる物件は本当に少ない</title>
+      <link>http://localhost:1313/blog/2013/06/27/hard-to-find-sharing-house/</link>
+      <pubDate>Thu, 27 Jun 2013 23:43:51 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/06/27/hard-to-find-sharing-house/</guid>
+      <description>&lt;p&gt;東京と京都の往復でお金が無くなっていく毎日です。:(&lt;/p&gt;&#xA;&lt;p&gt;さて、東京でスタートアップを始めるにあたって今取り組んでいることは住居探しと会社設立です。&#xA;会社設立に関しては書類の作成や社内規定などを作成し終えたので、後は税理士さんに一部任せるだけとなりました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>東京でスタートアップを始めます</title>
+      <link>http://localhost:1313/blog/2013/06/16/start-startup-in-tokyo/</link>
+      <pubDate>Sun, 16 Jun 2013 02:17:06 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/06/16/start-startup-in-tokyo/</guid>
+      <description>&lt;p&gt;東京でスタートアップを始めることになりました。&#xA;スタートアップって何？と思う方もいるかと思います。&#xA;簡単に言うとすれば、それはベンチャー企業のことです。&#xA;もちろんベンチャー企業といっても正確な理解は得られません。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

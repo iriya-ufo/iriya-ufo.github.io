@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/aws/</link>
+    <description>Recent content in Aws on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 12 May 2016 18:46:38 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Elastic BeansTalk で遊んでみた</title>
+      <link>http://localhost:1313/blog/2016/05/12/setup-elastic-beanstalk/</link>
+      <pubDate>Thu, 12 May 2016 18:46:38 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/05/12/setup-elastic-beanstalk/</guid>
+      <description>&lt;p&gt;Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移行作業を行ってみたが案外ハマりポイントなどがあったり、不向きなアプリだったのでやめたが、機会があればこれで運用してみたいと思う。備忘録として記録しておく。環境は Mac です。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

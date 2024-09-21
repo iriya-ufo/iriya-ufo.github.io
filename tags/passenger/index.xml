@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Passenger on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/passenger/</link>
+    <description>Recent content in Passenger on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 07 May 2016 15:23:21 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/passenger/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Passenger をやめて Puma にした</title>
+      <link>http://localhost:1313/blog/2016/05/07/from-passenger-to-puma/</link>
+      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/05/07/from-passenger-to-puma/</guid>
+      <description>&lt;p&gt;とあるプロジェクトで Nginx + Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。&lt;/p&gt;&#xA;&lt;h2 id=&#34;環境など&#34;&gt;環境など&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nginx や Passenger は設定済みで動作していた&lt;/li&gt;&#xA;&lt;li&gt;Capistrano でデプロイしている&lt;/li&gt;&#xA;&lt;li&gt;システム全体に rbenv で ruby をインストールしている&lt;/li&gt;&#xA;&lt;li&gt;デプロイユーザーが別にいる (今回の場合 &lt;code&gt;deployer&lt;/code&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;sudo-の許可&#34;&gt;sudo の許可&lt;/h2&gt;&#xA;&lt;p&gt;deployer で puma の再起動ができるようにするため &lt;code&gt;sudo&lt;/code&gt; 権限を与える。全コマンドの &lt;code&gt;sudo&lt;/code&gt; は危険なので特定コマンドのみに制限する。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

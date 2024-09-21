@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Common Lisp on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/common-lisp/</link>
+    <description>Recent content in Common Lisp on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 10 Feb 2015 03:42:46 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/common-lisp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mac に Common Lisp 処理系をインストールする</title>
+      <link>http://localhost:1313/blog/2015/02/10/install-common-lisp-on-mac/</link>
+      <pubDate>Tue, 10 Feb 2015 03:42:46 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/02/10/install-common-lisp-on-mac/</guid>
+      <description>&lt;p&gt;Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは &lt;strong&gt;SBCL&lt;/strong&gt; と &lt;strong&gt;Clozure CL&lt;/strong&gt; です。違いは &lt;a href=&#34;http://ja.wikipedia.org/wiki/Common_Lisp&#34; title=&#34;Common_Lisp&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt; あたりを参考にしてもらうといいかと。&#xA;簡単に特徴を上げるとすると SBCL はバイトコードへのコンパイルがかなり優秀だがコンパイル速度が遅い、Clozure CL はコンパイルが速くデバッグメッセージなどが分かりやすいけど、バイトコードの速度は SBCL に劣る。といったところでしょうか。&#xA;開発は Clozure CL で本番は SBCL みたいに使い分けるといいかもしれないです。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heroku on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/heroku/</link>
+    <description>Recent content in Heroku on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 07 Sep 2014 17:32:36 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/heroku/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Sinatra アプリを Heroku で動かすまで</title>
+      <link>http://localhost:1313/blog/2014/09/07/run-sinatra-app-on-heroku/</link>
+      <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
+      <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;&#xA;&lt;p&gt;以下のような環境で動かします。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Sinatra&lt;/li&gt;&#xA;  &lt;li&gt;Heroku&lt;/li&gt;&#xA;  &lt;li&gt;PostgreSQL&lt;/li&gt;&#xA;  &lt;li&gt;Unicorn&lt;/li&gt;&#xA;  &lt;li&gt;ActiveRecord&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;初期設定&#34;&gt;初期設定&lt;/h2&gt;&#xA;&lt;p&gt;まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作ります。そこで &lt;code&gt;$ bundle init&lt;/code&gt; して Gemfile を作成します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>コマンドから Heroku アプリを削除</title>
+      <link>http://localhost:1313/blog/2014/06/10/delete-heroku-app-by-terminal/</link>
+      <pubDate>Tue, 10 Jun 2014 01:35:28 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/06/10/delete-heroku-app-by-terminal/</guid>
+      <description>&lt;p&gt;Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削除するのがオススメです。&#xA;なお Heroku アプリを削除するとそのアプリで使っていたオプションなども根こそぎ削除されるので気をつけてください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>土日で出来る Node.js 入門</title>
+      <link>http://localhost:1313/blog/2014/03/08/start-nodejs-at-weekend/</link>
+      <pubDate>Sat, 08 Mar 2014 17:29:27 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/08/start-nodejs-at-weekend/</guid>
+      <description>&lt;p&gt;そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。&lt;/p&gt;&#xA;&lt;h2 id=&#34;インストール方法&#34;&gt;インストール方法&lt;/h2&gt;&#xA;&lt;p&gt;Node.js はまだまだ開発まっしぐらなのですぐにバージョンが古くなります。調べたところバージョン管理してくれる nvm (Node Version Manager) というのがあるらしいのでそれを使いましょう。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>複数の環境で Rails を開発する</title>
+      <link>http://localhost:1313/blog/2013/11/04/develop-rails-with-multi-env/</link>
+      <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/11/04/develop-rails-with-multi-env/</guid>
+      <description>&lt;p&gt;普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;既存の Rails プロジェクトのコードは github で管理&lt;/li&gt;&#xA;  &lt;li&gt;Rails アプリは heroku で公開&lt;/li&gt;&#xA;  &lt;li&gt;これから述べる環境構築は Ubuntu プラットフォームの話&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;また Ubuntu に開発環境が一切入ってない状態の場合、たくさんインストールすべきものがあるのでここでは割愛します。あくまで私の環境だとこうやれば動いたということです。&#xA;&lt;h2 id=&#34;ローカル開発環境を整える&#34;&gt;ローカル開発環境を整える&lt;/h2&gt;&#xA;&lt;p&gt;まず既存のアプリを github からクローンします。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu に heroku toolbelt をインストール</title>
+      <link>http://localhost:1313/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</link>
+      <pubDate>Sat, 19 Oct 2013 01:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</guid>
+      <description>&lt;p&gt;下記一行を端末から実行でOK&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
+      <link>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
+      <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
+      <description>&lt;p&gt;Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。&#xA;環境構築は Mac OS X で行っています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。&#xA;brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

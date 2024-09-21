@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ghq on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/ghq/</link>
+    <description>Recent content in Ghq on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Tue, 23 Mar 2021 15:27:54 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ghq/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go の src ディレクトリを移動した</title>
+      <link>http://localhost:1313/blog/2021/03/23/moving-go-src/</link>
+      <pubDate>Tue, 23 Mar 2021 15:27:54 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/03/23/moving-go-src/</guid>
+      <description>&lt;p&gt;以前&lt;a href=&#34;http://localhost:1313/blog/2019/11/28/ghq-setup/&#34;&gt;「リポジトリ管理ツール ghq を導入した」&lt;/a&gt;という記事を書きましたが、Go も Modules が主流になって様子が変わったので、一度整理することにしました。&lt;/p&gt;&#xA;&lt;p&gt;Go の Modules についての説明はこちらが分かりやすかったです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>リポジトリ管理ツール ghq を導入した</title>
+      <link>http://localhost:1313/blog/2019/11/28/ghq-setup/</link>
+      <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/11/28/ghq-setup/</guid>
+      <description>&lt;p&gt;更新しました@2021/03/23&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/03/23/moving-go-src/&#34;&gt;Go の src ディレクトリを移動した&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;ここからは以前の内容です。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiita.com/advent-calendar/2019/tech-commit&#34;&gt;TechCommit Advent Calendar 2019&lt;/a&gt; 12日目の記事です。&lt;/p&gt;&#xA;&lt;p&gt;リポジトリきちんと管理してますか?&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

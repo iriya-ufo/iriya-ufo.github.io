@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ruby on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/ruby/</link>
+    <description>Recent content in Ruby on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 22 May 2016 23:15:38 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>メタプログラミング Ruby</title>
+      <link>http://localhost:1313/blog/2016/05/22/metaprogramming-ruby/</link>
+      <pubDate>Sun, 22 May 2016 23:15:38 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/05/22/metaprogramming-ruby/</guid>
+      <description>&lt;p&gt;今どきのプログラミングといえば Web&lt;/p&gt;&#xA;&lt;p&gt;Web といえば Ruby on Rails&lt;/p&gt;&#xA;&lt;p&gt;といった感じで気軽に Rails から触り始める人は多いと思います。それはそれで結構なんですが、Rails しか触っていないと Ruby の真のすごさが分からないし、Ruby の本を読んでもなんであれで Rails が作れるのか分からない。&#xA;Rails のソースを読んでも黒魔術だらけで全く読めない。&#xA;そんな人にこそ『メタプログラミング Ruby』を勧めます。Rails や多くの gem で使われている黒魔術の技術をこれでもかというくらいに分かりやすく基礎から解説してくれています。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>gem を管理しよう</title>
+      <link>http://localhost:1313/blog/2014/03/14/lets-manage-gem/</link>
+      <pubDate>Fri, 14 Mar 2014 02:23:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/14/lets-manage-gem/</guid>
+      <description>&lt;p&gt;Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは &lt;code&gt;$ gem install hoge&lt;/code&gt; とかやってるかと思います。そんなこんなでいろいろインストールするとぐちゃぐちゃになってきて Rails を動かし始めたらもう訳が分からなくなるでしょう。一つの環境でしか使わないならいいでしょうが、複数で同じ環境を構築したいなどとなると少し大変です。&#xA;そこで bundler の出番です。bundler は gem パッケージの管理を依存関係の問題も含めて解決してくれます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>rbenv で入れた ruby で flymake がちゃんと動作しなかったので直した</title>
+      <link>http://localhost:1313/blog/2014/02/05/fix-flymake/</link>
+      <pubDate>Wed, 05 Feb 2014 00:28:18 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/02/05/fix-flymake/</guid>
+      <description>&lt;p&gt;Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？&#xA;flymake はデフォルトだとシステムの ruby を読みにいきます。rbenv で ruby をインストールしていた場合、パスを設定してやらないとシステムの ruby1.8 を使います。なので 1.9以降の文法を書くとエラーになります。具体的には以下のハッシュ記法などで Syntax Error がでます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu の rbenv で管理している ruby を新しくする</title>
+      <link>http://localhost:1313/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</link>
+      <pubDate>Sat, 19 Oct 2013 02:00:50 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</guid>
+      <description>&lt;p&gt;Ubuntu の rbenv で管理している ruby を新しくする方法です。&#xA;MacOS だと多分 homebrew とか使ってると思います。今回は割愛です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;利用可能な-ruby-のバージョンを確認&#34;&gt;利用可能な ruby のバージョンを確認&lt;/h2&gt;&#xA;&lt;p&gt;ruby-build で利用可能な ruby のバージョンを確認します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
+      <link>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
+      <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
+      <description>&lt;p&gt;Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。&#xA;環境構築は Mac OS X で行っています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。&#xA;brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>rbenv で Mac OS X に Ruby 2.0.0 をインストールする</title>
+      <link>http://localhost:1313/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</link>
+      <pubDate>Mon, 13 May 2013 18:08:14 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</guid>
+      <description>&lt;p&gt;rvm はクールじゃないので rbenv を使って Ruby をインストールします。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;はじめに『&lt;a href=&#34;http://www.oiax.jp/rails/zakkan/rails_3_1_installation_on_macosx.html&#34;&gt;Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明してみました&lt;/a&gt;』を参考に準備をしておきます。&#xA;このサイトは Rails のインストールについてですが Xcode, Homebrew など初歩からかなり丁寧に書いているのでオススメです。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

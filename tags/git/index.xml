@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Git on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/git/</link>
+    <description>Recent content in Git on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 08 Mar 2014 15:16:11 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ubuntu の git を最新にする</title>
+      <link>http://localhost:1313/blog/2014/03/08/update-git-by-ubuntu/</link>
+      <pubDate>Sat, 08 Mar 2014 15:16:11 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/08/update-git-by-ubuntu/</guid>
+      <description>&lt;p&gt;Ubuntu への git インストールは apt-get で出来ますがバージョンが古いので最新バージョンをインストールする方法です。ソースコンパイルは行わずパッケージマネジャーで管理します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
+      <link>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
+      <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
+      <description>&lt;p&gt;Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。&#xA;環境構築は Mac OS X で行っています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。&#xA;brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>zsh で git のコマンド補完及びブランチ名の表示</title>
+      <link>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</link>
+      <pubDate>Sat, 18 May 2013 07:58:33 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</guid>
+      <description>&lt;h2 id=&#34;git-のコマンド補完&#34;&gt;git のコマンド補完&lt;/h2&gt;&#xA;&lt;p&gt;まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでアップデートしました。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

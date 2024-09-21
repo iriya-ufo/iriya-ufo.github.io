@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Zsh on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/zsh/</link>
+    <description>Recent content in Zsh on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sat, 18 May 2013 07:58:33 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/zsh/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>zsh で git のコマンド補完及びブランチ名の表示</title>
+      <link>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</link>
+      <pubDate>Sat, 18 May 2013 07:58:33 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</guid>
+      <description>&lt;h2 id=&#34;git-のコマンド補完&#34;&gt;git のコマンド補完&lt;/h2&gt;&#xA;&lt;p&gt;まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでアップデートしました。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
