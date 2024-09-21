@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google Api on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/google-api/</link>
+    <description>Recent content in Google Api on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Mon, 21 Mar 2016 01:34:27 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/google-api/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Botkit から Google API 叩いてみた</title>
+      <link>http://localhost:1313/blog/2016/03/21/how-to-use-google-api-from-botkit/</link>
+      <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/21/how-to-use-google-api-from-botkit/</guid>
+      <description>&lt;p&gt;前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;hubot&#34;&gt;Hubot&lt;/h3&gt;&#xA;&lt;p&gt;GitHub が開発した Bot 開発用のフレームワーク&#xA;Node.js で動き、プラグインなどは CoffeeScript で書く&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

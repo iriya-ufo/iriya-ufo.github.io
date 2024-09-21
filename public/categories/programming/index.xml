@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Programming on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/categories/programming/</link>
+    <description>Recent content in Programming on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 08 Sep 2024 02:16:39 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/categories/programming/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vite で React の環境構築</title>
+      <link>http://localhost:1313/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/</link>
+      <pubDate>Sun, 08 Sep 2024 02:16:39 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;環境構築の記事&lt;/a&gt;を全面的に書き直しました。&#xA;違いは ESLint と Prettier を使用せず Biome を利用するようにしたことくらいです。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;使用する技術スタック&#xA;&lt;ul&gt;&#xA;&lt;li&gt;React&lt;/li&gt;&#xA;&lt;li&gt;TypeScript&lt;/li&gt;&#xA;&lt;li&gt;Vite&lt;/li&gt;&#xA;&lt;li&gt;pnpm&lt;/li&gt;&#xA;&lt;li&gt;Biome&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;目次&#34;&gt;目次&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#node-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34;&gt;Node のインストール&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#pnpm-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34;&gt;pnpm のインストール&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vite-%E3%81%A7-react-x-typescript-%E3%82%92%E6%A7%8B%E7%AF%89&#34;&gt;Vite で React x TypeScript を構築&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#biome-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&#34;&gt;Biome セットアップ&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vscode-%E8%A8%AD%E5%AE%9A&#34;&gt;VSCode 設定&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#eslint-%E5%89%8A%E9%99%A4&#34;&gt;ESLint 削除&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#%E7%B5%B6%E5%AF%BE%E3%83%91%E3%82%B9%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88&#34;&gt;絶対パスでインポート&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;node-のインストール&#34;&gt;Node のインストール&lt;/h2&gt;&#xA;&lt;p&gt;asdf を利用して Node をインストールします。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs 小技集</title>
+      <link>http://localhost:1313/blog/2024/01/26/emacs-tips/</link>
+      <pubDate>Fri, 26 Jan 2024 01:26:18 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2024/01/26/emacs-tips/</guid>
+      <description>&lt;p&gt;自分のための覚書&lt;/p&gt;&#xA;&lt;p&gt;使用頻度が低いため忘れやすい、でも覚えておくとチョット便利なやーつ&lt;/p&gt;&#xA;&lt;h2 id=&#34;tips&#34;&gt;Tips&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C-x r t string RET             &lt;span class=&#34;c1&#34;&gt;# 複数行の先頭に文字列を挿入&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-x delete-trailing-whitespace &lt;span class=&#34;c1&#34;&gt;# 行末の空白を削除&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-x toggle-truncate-lines      &lt;span class=&#34;c1&#34;&gt;# 行の折り返しのオンオフ&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-g g RET 行番号               &lt;span class=&#34;c1&#34;&gt;# 特定の行番号へジャンプ&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-y                            &lt;span class=&#34;c1&#34;&gt;# キルリングのリスト&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C-/                            &lt;span class=&#34;c1&#34;&gt;# 取消 Undo&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C-o                            &lt;span class=&#34;c1&#34;&gt;# ハイライトシンボル&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;検索&#34;&gt;検索&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-x find-name-dired    &lt;span class=&#34;c1&#34;&gt;# ワイルドカードでファイル名検索&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-x find-grep-dired    &lt;span class=&#34;c1&#34;&gt;# ファイルの内容を検索&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;置換&#34;&gt;置換&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-x replace-string    &lt;span class=&#34;c1&#34;&gt;# 一括置換&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-x query-replace     &lt;span class=&#34;c1&#34;&gt;# 問い合わせ置換&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;タブ -&amp;gt; スペース置換&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C-x h                 &lt;span class=&#34;c1&#34;&gt;# 全選択して&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;M-x untabify          &lt;span class=&#34;c1&#34;&gt;# タブをスペースに変換&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;ファイルのリネーム&#34;&gt;ファイルのリネーム&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C-x C-f RET    &lt;span class=&#34;c1&#34;&gt;# Dired モードに入る&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;c1&#34;&gt;# リネームしたいファイルで R&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;c1&#34;&gt;# バッファにファイル名を打ち込んで RET&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;c1&#34;&gt;# q で Dired から抜ける&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;文字コード&#34;&gt;文字コード&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C-x RET r utf-8    &lt;span class=&#34;c1&#34;&gt;# 文字化けしてる時(UTF-8のファイルなのにSJISで開いちゃった)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;C-x RET f utf-8    &lt;span class=&#34;c1&#34;&gt;# 文字化けしてない時(SJISのファイルをUTF-8で保存したいとき)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2023-12 版</title>
+      <link>http://localhost:1313/blog/2023/12/18/vscode-extension-4/</link>
+      <pubDate>Mon, 18 Dec 2023 15:19:28 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/12/18/vscode-extension-4/</guid>
+      <description>&lt;p&gt;本記事は &lt;a href=&#34;https://adventar.org/calendars/8839&#34;&gt;TechCommit AdventCalendar2023&lt;/a&gt; 18日目の記事です。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2022/12/13/vscode-extension-3/&#34;&gt;前回&lt;/a&gt;から1年が経ったので再度整理してみました。&#xA;ほとんど開発の機会がなかったので変更はほとんどなく、2つ追加されただけでした。&lt;/p&gt;&#xA;&lt;p&gt;2023年12月現在で67個（以下アルファベット順）&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs に Rust の開発環境を整える</title>
+      <link>http://localhost:1313/blog/2023/02/18/rust-setup-on-emacs/</link>
+      <pubDate>Sat, 18 Feb 2023 18:01:07 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2023/02/18/rust-setup-on-emacs/</guid>
+      <description>&lt;p&gt;Rust の勉強を始めました。&#xA;Mac + Emacs に Rust の開発環境を整えたのでその備忘録です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;rust-のインストール&#34;&gt;Rust のインストール&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://www.rust-lang.org/ja/tools/install&#34;&gt;公式サイト&lt;/a&gt;に習い &lt;code&gt;rustup&lt;/code&gt; ツールを使って Rust をインストールします。&#xA;&lt;code&gt;rustup&lt;/code&gt; は Rust のバージョン管理と関連ツールの管理を行うことができるツールです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2022-12 版</title>
+      <link>http://localhost:1313/blog/2022/12/13/vscode-extension-3/</link>
+      <pubDate>Tue, 13 Dec 2022 15:24:46 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/12/13/vscode-extension-3/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/09/14/vscode-extension-2/&#34;&gt;前回&lt;/a&gt;から1年が経ったので再度整理してみました。&lt;/p&gt;&#xA;&lt;p&gt;2022年12月現在で65個（以下アルファベット順）&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx&#34;&gt;Awesome Emacs Keymap&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments&#34;&gt;Better Comments&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml&#34;&gt;Better Jinja&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=alexdima.copy-relative-path&#34;&gt;Copy Relative Path&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dzhavat.css-flexbox-cheatsheet&#34;&gt;CSS Flexbox Cheatsheet&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug&#34;&gt;Debugger for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno&#34;&gt;Deno&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv&#34;&gt;DotENV&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=kaiwood.endwise&#34;&gt;endwise&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=CraigMaslowski.erb&#34;&gt;erb&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets&#34;&gt;ES7 React/Redux/GraphQL/React-Native snippets&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&#34;&gt;ESLint&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory&#34;&gt;Git History&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme&#34;&gt;GitHub Theme&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens&#34;&gt;GitLens&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=golang.Go&#34;&gt;Go&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform&#34;&gt;HashiCorp Terraform&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=akmittal.hugofy&#34;&gt;hugofy&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow&#34;&gt;indent-rainbow&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack&#34;&gt;Java Extension Pack&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test&#34;&gt;Java Test Runner&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MariusAlchimavicius.json-to-ts&#34;&gt;JSON to TS&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wmaurer.vscode-jumpy&#34;&gt;jumpy&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&#34;&gt;Jupyter&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter-keymap&#34;&gt;Jupyter Keymap&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=redhat.java&#34;&gt;Language Support for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=mattn.Lisp&#34;&gt;Lisp&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare&#34;&gt;Live Share&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one&#34;&gt;Markdown All in One&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid&#34;&gt;Markdown Preview Mermaid Support&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme&#34;&gt;Material Icon Theme&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven&#34;&gt;Maven for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme&#34;&gt;One Dark Pro&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tootone.org-mode&#34;&gt;Org Mode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense&#34;&gt;Path Intellisense&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml&#34;&gt;PlantUML&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=csstools.postcss&#34;&gt;PostCSS Language Support&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode&#34;&gt;Prettier - Code formatter&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency&#34;&gt;Project Manager for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance&#34;&gt;Pylance&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-python.python&#34;&gt;Python&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv&#34;&gt;Rainbow CSV&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&#34;&gt;Remote - Containers&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh&#34;&gt;Remote - SSH&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit&#34;&gt;Remote - SSH: Editing Configuration Files&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby&#34;&gt;Ruby&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=sianglim.slim&#34;&gt;Slim&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer&#34;&gt;Swagger Viewer&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss&#34;&gt;Tailwind CSS IntelliSense&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight&#34;&gt;TODO Highlight&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces&#34;&gt;Trailing Spaces&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=sastan.twind-intellisense&#34;&gt;Twind Intellisense&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=octref.vetur&#34;&gt;Vetur&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode&#34;&gt;Visual Studio IntelliCode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.intellicode-api-usage-examples&#34;&gt;IntelliCode API Usage Examples&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ZixuanChen.vitest-explorer&#34;&gt;Vitest&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby&#34;&gt;VSCode Ruby&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=marchrock.vscode-ghq&#34;&gt;vscode-ghq&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons&#34;&gt;vscode-icons&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf&#34;&gt;vscode-pdf&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=sjhuangx.vscode-scheme&#34;&gt;vscode-scheme&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets&#34;&gt;Vue VSCode Snippets&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml&#34;&gt;YAML&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading&#34;&gt;テキスト校正くん&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;本記事は &lt;a href=&#34;https://adventar.org/calendars/7673&#34;&gt;TechCommit AdventCalendar2022&lt;/a&gt; 13日目の記事です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xenv から asdf に移行する</title>
+      <link>http://localhost:1313/blog/2022/04/29/asdf-install/</link>
+      <pubDate>Fri, 29 Apr 2022 21:09:55 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/04/29/asdf-install/</guid>
+      <description>&lt;h2 id=&#34;きっかけ&#34;&gt;きっかけ&lt;/h2&gt;&#xA;&lt;p&gt;anyenv 関係をキャッシュするというテクニックで zsh の起動を速くするという記事をみました。&#xA;自分は anyenv は使ってませんが、いくつかの Xenv 系を直接インストールしてバージョン管理をしていました。&#xA;asdf は速いというのと一つにまとめたいという思いがあったので、移行することにしました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs に Neotree を導入する</title>
+      <link>http://localhost:1313/blog/2022/04/25/neotree-to-emacs/</link>
+      <pubDate>Mon, 25 Apr 2022 21:16:32 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/04/25/neotree-to-emacs/</guid>
+      <description>&lt;p&gt;Neotree をインストールしました。&#xA;straight を使っているので &lt;code&gt;use-package&lt;/code&gt; と書くだけでインストールされます。&#xA;使い方は以下 elisp 見ればなんとなく分かるでしょう。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;30&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;31&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;32&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;33&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;34&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;35&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;36&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;37&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;38&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;39&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;40&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;41&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;42&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;43&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;44&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-go&#34; data-lang=&#34;go&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;------------------------------------------------------------------&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;brief&lt;/span&gt;   &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Neotree&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;note&lt;/span&gt;    &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//github.com/jaypei/emacs-neotree&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;------------------------------------------------------------------&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;use&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kn&#34;&gt;package&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;init&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setq&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;keymap&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;style&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;concise&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setq&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;default&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;show&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hidden&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;files&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;config&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;smart&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;auto&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;t&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;setq&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;theme&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;arrow&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;C-c C-o&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toggle&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;RET&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;enter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hide&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;a&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hidden&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;toggle&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;left&amp;gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;up&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;node&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;bind&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;key&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;&amp;lt;right&amp;gt;&amp;#34;&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;change&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;root&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mode&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;kd&#34;&gt;map&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Change&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;s&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;font&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;size&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Tips&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//github.com/jaypei/emacs-neotree/issues/218&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;scale&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Text scale for neotree.&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;interactive&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;adjust&lt;/span&gt; &lt;span class=&#34;mi&#34;&gt;0&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scale&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;decrease&lt;/span&gt; &lt;span class=&#34;mf&#34;&gt;0.5&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;message&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;nil&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;add&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hook&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;after&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;create&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;hook&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;          &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;lambda&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;_&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;            &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;call&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;interactively&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;text&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;scale&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Hide&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;window&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;after&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;;;&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;Tips&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;from&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;https&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;:&lt;/span&gt;&lt;span class=&#34;c1&#34;&gt;//github.com/jaypei/emacs-neotree/issues/77&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;hide&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;full&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;path&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;optional&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;arg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Open file and hiding neotree.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;The description of FULL-PATH &amp;amp; ARG is in `neotree-enter&amp;#39;.&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;global&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;select&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;mru&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;window&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;arg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;find&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;full&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hide&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;defun&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;neotree&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;enter&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;hide&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;&amp;amp;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;optional&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;arg&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;s&#34;&gt;&amp;#34;Neo-open-file-hide if file, Neo-open-dir if dir.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;s&#34;&gt;The description of ARG is in `neo-buffer--execute&amp;#39;.&amp;#34;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;interactive&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;P&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;buffer&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;--&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;execute&lt;/span&gt; &lt;span class=&#34;nx&#34;&gt;arg&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;file&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;hide&lt;/span&gt; &lt;span class=&#34;err&#34;&gt;&amp;#39;&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;neo&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;open&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;nx&#34;&gt;dir&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;</description>
+    </item>
+    <item>
+      <title>分離式キーボード BAROCCO MD600v3 を買った</title>
+      <link>http://localhost:1313/blog/2022/03/23/md600v3/</link>
+      <pubDate>Wed, 23 Mar 2022 01:24:23 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/03/23/md600v3/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2022/03/md600v3.jpg&#34; alt=&#34;md600v3&#34;&gt;&lt;/p&gt;&#xA;&lt;div class=&#34;iframely-embed&#34;&gt;&lt;div class=&#34;iframely-responsive&#34; style=&#34;height: 140px; padding-bottom: 0;&#34;&gt;&lt;a href=&#34;https://archisite.co.jp/products/mistel/md600v3-rgb/&#34; data-iframely-url=&#34;//iframely.net/fpTF4o3&#34;&gt;&lt;/a&gt;&lt;/div&gt;&lt;/div&gt;&lt;script async src=&#34;//iframely.net/embed.js&#34; charset=&#34;utf-8&#34;&gt;&lt;/script&gt;&#xA;&lt;p&gt;これを買いました。分離式は初めて触るので慣れるかどうか不安もありましたが、しばらく触って見たところ特に大きな問題はなさそうです。&#xA;&amp;ldquo;B&amp;quot;のキーを今までは右手で押していたのでそれを左手に変えるのは若干とまどいましたが、それ以外はほぼホームポジションの位置から打てていたようです。&#xA;キーレイアウトが &lt;a href=&#34;http://localhost:1313/blog/2021/09/07/ducky-one-2-mini-rgb/&#34;&gt;Ducky One 2 Mini&lt;/a&gt; とまったく一緒だったので、その慣れも大きかったかもしれません。&#xA;HHKBと比較した場合、矢印キーが遠く感じるので不便さがあるかも。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs で Magit を使う</title>
+      <link>http://localhost:1313/blog/2022/02/22/magit/</link>
+      <pubDate>Tue, 22 Feb 2022 00:09:18 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/02/22/magit/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://magit.vc&#34;&gt;Magit&lt;/a&gt; は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。&lt;/p&gt;&#xA;&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;M-x package-list-packages&lt;/code&gt; からインストールできます。&#xA;自分で使っているパッケージマネジャーがあればそれに従ってください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Jest の代わりに Vitest 使ってみる</title>
+      <link>http://localhost:1313/blog/2021/12/23/using-vitest-instead-of-jest/</link>
+      <pubDate>Thu, 23 Dec 2021 15:24:24 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/12/23/using-vitest-instead-of-jest/</guid>
+      <description>&lt;p&gt;つい先日、&lt;a href=&#34;http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;環境構築の記事&lt;/a&gt;を書いたのですが、その後 &lt;a href=&#34;https://vitest.dev/&#34;&gt;Vitest&lt;/a&gt; が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。&lt;/p&gt;&#xA;&lt;h2 id=&#34;jest-関連のアンインストール&#34;&gt;Jest 関連のアンインストール&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;前回の環境構築&lt;/a&gt;からの差分なので、入れていない場合は関係ありません。&lt;a href=&#34;#vitest&#34;&gt;Vitest&lt;/a&gt; のインストールからどうぞ。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite</title>
+      <link>http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</link>
+      <pubDate>Fri, 17 Dec 2021 16:16:18 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&#xA;&lt;p&gt;爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;目次&#34;&gt;目次&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#react-%E3%81%AE%E7%92%B0%E5%A2%83%E3%81%A8%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&#34;&gt;React の環境とセットアップ&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vscode-%E8%A8%AD%E5%AE%9A&#34;&gt;VSCode 設定&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#%E3%83%86%E3%82%B9%E3%83%88%E7%92%B0%E5%A2%83&#34;&gt;テスト環境&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#material-ui&#34;&gt;Material UI&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA&#34;&gt;その他ライブラリ&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#recoil&#34;&gt;Recoil&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#docker&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;react-の環境とセットアップ&#34;&gt;React の環境とセットアップ&lt;/h2&gt;&#xA;&lt;p&gt;まずは node をインストールします。node 自体はバージョン管理したいので nodenv を使ってインストールします。nodenv を使ったインストール方法はこちらを参照してください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>React を完全に理解するために行った学習方法</title>
+      <link>http://localhost:1313/blog/2021/11/30/how-to-learn-react/</link>
+      <pubDate>Tue, 30 Nov 2021 23:38:39 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/11/30/how-to-learn-react/</guid>
+      <description>&lt;p&gt;新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？&#xA;効率の良い学習方法というのは人によってそれぞれ違うと思いますが、自分ならこうしますという記事があれば少しは有益かもしれないと思い本記事を書いています。&#xA;ここでは React を学習するにあたって、どのような教材を用い、どのような方法で学んだかを残しておきます。&#xA;あくまで僕が行ってきた学習方法を書いていますので、これがベストの方法だ、という内容ではないのでご注意ください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>プロジェクト管理ツールなに使ってるか聞いてみた</title>
+      <link>http://localhost:1313/blog/2021/10/20/project-management-tool/</link>
+      <pubDate>Wed, 20 Oct 2021 09:45:28 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/10/20/project-management-tool/</guid>
+      <description>&lt;p&gt;とあるコミュニティでプロジェクト管理ツールなに使ってるか聞いてみました。&#xA;20人ほどから回答を頂けましたので各ツールを簡単にまとめてみました。&#xA;回答して頂いたエンジニアはだいたいWeb系ですが、ネットワークとかIoTとかの方もいらっしゃいます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>[2021年版] Emacs に Go の開発環境を整える</title>
+      <link>http://localhost:1313/blog/2021/10/13/go-setup-on-emacs-ver2/</link>
+      <pubDate>Wed, 13 Oct 2021 13:54:35 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/10/13/go-setup-on-emacs-ver2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2019/02/15/go-setup-on-emacs/&#34;&gt;以前書いた内容&lt;/a&gt;が古くなったので改めて書き直すことにしました。&#xA;大きな変更点としては補完に &lt;code&gt;gocode&lt;/code&gt; ではなく &lt;code&gt;gopls (Language Server)&lt;/code&gt; を使うようにしたことです。&lt;/p&gt;&#xA;&lt;h2 id=&#34;go-のインストール&#34;&gt;Go のインストール&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mkdir &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.go&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Add this line to ~/.zshrc&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GOPATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.go&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:&lt;span class=&#34;nv&#34;&gt;$GOPATH&lt;/span&gt;/bin&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install go&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;go-package-のインストール&#34;&gt;Go Package のインストール&lt;/h2&gt;&#xA;&lt;p&gt;まずは &lt;code&gt;gopls (Language Server)&lt;/code&gt; とその他をインストールします。&#xA;&lt;code&gt;goimports&lt;/code&gt; は &lt;code&gt;import&lt;/code&gt; の過不足を自動で補完してくれるものです。好みでインストールしてください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2021-09 版</title>
+      <link>http://localhost:1313/blog/2021/09/14/vscode-extension-2/</link>
+      <pubDate>Tue, 14 Sep 2021 01:13:25 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/09/14/vscode-extension-2/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2020/09/21/vscode-extension/&#34;&gt;前回&lt;/a&gt;から早くも1年が経ったので整理してみました。&lt;/p&gt;&#xA;&lt;p&gt;2021年9月現在で57個（以下アルファベット順）&lt;/p&gt;&#xA;&lt;p&gt;スターがついているのはお気に入りという意味です。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tuttieee.emacs-mcx&#34;&gt;Awesome Emacs Keymap&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=aaron-bond.better-comments&#34;&gt;Better Comments&lt;/a&gt; ⭐&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しく追加しました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=samuelcolvin.jinjahtml&#34;&gt;Better Jinja&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;del&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=CoenraadS.bracket-pair-colorizer&#34;&gt;Bracket Pair Colorizer&lt;/a&gt;&lt;/del&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VSCode で標準機能としてついたため拡張の方は削除しました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=alexdima.copy-relative-path&#34;&gt;Copy Relative Path&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dzhavat.css-flexbox-cheatsheet&#34;&gt;CSS Flexbox Cheatsheet&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-debug&#34;&gt;Debugger for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker&#34;&gt;Docker&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=mikestead.dotenv&#34;&gt;DotENV&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=kaiwood.endwise&#34;&gt;endwise&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=CraigMaslowski.erb&#34;&gt;erb&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets&#34;&gt;ES7 React/Redux/GraphQL/React-Native snippets&lt;/a&gt; ⭐&#xA;&lt;ul&gt;&#xA;&lt;li&gt;React 始めたので新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint&#34;&gt;ESLint&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory&#34;&gt;Git History&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme&#34;&gt;GitHub Theme&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens&#34;&gt;GitLens&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=golang.Go&#34;&gt;Go&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=HashiCorp.terraform&#34;&gt;HashiCorp Terraform&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=akmittal.hugofy&#34;&gt;hugofy&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow&#34;&gt;indent-rainbow&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack&#34;&gt;Java Extension Pack&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-test&#34;&gt;Java Test Runner&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wmaurer.vscode-jumpy&#34;&gt;jumpy&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter&#34;&gt;Jupyter&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter-keymap&#34;&gt;Jupyter Keymap&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=redhat.java&#34;&gt;Language Support for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=mattn.Lisp&#34;&gt;Lisp&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare&#34;&gt;Live Share&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one&#34;&gt;Markdown All in One&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme&#34;&gt;Material Icon Theme&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-maven&#34;&gt;Maven for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=zhuangtongfa.Material-theme&#34;&gt;One Dark Pro&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tootone.org-mode&#34;&gt;Org Mode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=christian-kohler.path-intellisense&#34;&gt;Path Intellisense&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=jebbs.plantuml&#34;&gt;PlantUML&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode&#34;&gt;Prettier - Code formatter&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-dependency&#34;&gt;Project Manager for Java&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance&#34;&gt;Pylance&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-python.python&#34;&gt;Python&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=mechatroner.rainbow-csv&#34;&gt;Rainbow CSV&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers&#34;&gt;Remote - Containers&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh&#34;&gt;Remote - SSH&lt;/a&gt; ⭐&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh-edit&#34;&gt;Remote - SSH: Editing Configuration Files&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby&#34;&gt;Ruby&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;del&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync&#34;&gt;Settings Sync&lt;/a&gt;&lt;/del&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;VSCode 標準機能として対応したので削除しました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=sianglim.slim&#34;&gt;Slim&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=Arjun.swagger-viewer&#34;&gt;Swagger Viewer&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wayou.vscode-todo-highlight&#34;&gt;TODO Highlight&lt;/a&gt; ⭐&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces&#34;&gt;Trailing Spaces&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=octref.vetur&#34;&gt;Vetur&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=VisualStudioExptTeam.vscodeintellicode&#34;&gt;Visual Studio IntelliCode&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=wingrunr21.vscode-ruby&#34;&gt;VSCode Ruby&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=marchrock.vscode-ghq&#34;&gt;vscode-ghq&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=vscode-icons-team.vscode-icons&#34;&gt;vscode-icons&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=tomoki1207.pdf&#34;&gt;vscode-pdf&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=sjhuangx.vscode-scheme&#34;&gt;vscode-scheme&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=sdras.vue-vscode-snippets&#34;&gt;Vue VSCode Snippets&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml&#34;&gt;YAML&lt;/a&gt; ⭐&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://marketplace.visualstudio.com/items?itemName=ICS.japanese-proofreading&#34;&gt;テキスト校正くん&lt;/a&gt; ⭐&#xA;&lt;ul&gt;&#xA;&lt;li&gt;新しくインストールしました&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Ducky One 2 Mini RGB キーボードを買った</title>
+      <link>http://localhost:1313/blog/2021/09/07/ducky-one-2-mini-rgb/</link>
+      <pubDate>Tue, 07 Sep 2021 23:40:42 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/09/07/ducky-one-2-mini-rgb/</guid>
+      <description>&lt;p&gt;僕は今までずっと HHKB Pro2 を愛用してきました。初めて HHKB を触ったときの打鍵感がすごくよくて感動したのを覚えています。&#xA;それからときどき Realforce を使ったりもしてましたが、なんだかんだで HHKB に戻って来ていました。&#xA;小指辛い問題を解消するために&lt;a href=&#34;http://localhost:1313/blog/2020/06/16/enhance-hhkb/&#34;&gt;押下圧を変える改造をしたり、静音化したり&lt;/a&gt;で結構いじったりして愛着もあります。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hacobune で Go のアプリケーションを公開してみた</title>
+      <link>http://localhost:1313/blog/2021/08/19/hacobune-quick-start/</link>
+      <pubDate>Thu, 19 Aug 2021 17:02:52 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/08/19/hacobune-quick-start/</guid>
+      <description>&lt;h2 id=&#34;2022年2月15日更新&#34;&gt;2022年2月15日更新&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.sakura.ad.jp/information/announcements/2022/01/31/1968208892/&#34;&gt;Hacobune オープンβ版の提供終了に関するお知らせ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;オープンβ版が終了することになったそうです。正式版がリリースされるという内容でもないので、もしかしたらこのままサービス終了するのでしょうか。悲しいですね。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Go の src ディレクトリを移動した</title>
+      <link>http://localhost:1313/blog/2021/03/23/moving-go-src/</link>
+      <pubDate>Tue, 23 Mar 2021 15:27:54 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/03/23/moving-go-src/</guid>
+      <description>&lt;p&gt;以前&lt;a href=&#34;http://localhost:1313/blog/2019/11/28/ghq-setup/&#34;&gt;「リポジトリ管理ツール ghq を導入した」&lt;/a&gt;という記事を書きましたが、Go も Modules が主流になって様子が変わったので、一度整理することにしました。&lt;/p&gt;&#xA;&lt;p&gt;Go の Modules についての説明はこちらが分かりやすかったです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>インストール済み VSCode 拡張機能一覧 2020-09 版</title>
+      <link>http://localhost:1313/blog/2020/09/21/vscode-extension/</link>
+      <pubDate>Mon, 21 Sep 2020 01:43:44 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2020/09/21/vscode-extension/</guid>
+      <description>&lt;p&gt;業務ではコードを書かないインフラエンジニアがインストール済みの VSCode 拡張機能一覧&lt;/p&gt;&#xA;&lt;p&gt;2020年9月現在で47個 (以下アルファベット順)&lt;/p&gt;&#xA;&lt;p&gt;お気に入りにはスターをつけてみた&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac に nodenv インストールした</title>
+      <link>http://localhost:1313/blog/2020/02/11/nodenv-to-mac/</link>
+      <pubDate>Tue, 11 Feb 2020 15:55:10 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2020/02/11/nodenv-to-mac/</guid>
+      <description>&lt;p&gt;brew でいれてたけど限界がきたのでバージョン管理ツール使う。&#xA;&lt;code&gt;nodenv&lt;/code&gt; を使うことにした。宗教的理由により &lt;code&gt;anyenv&lt;/code&gt; 経由でのインストールはしない。&lt;/p&gt;&#xA;&lt;h2 id=&#34;既存環境のアンインストール&#34;&gt;既存環境のアンインストール&lt;/h2&gt;&#xA;&lt;p&gt;とりあえず今の環境を消してきれいにする。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo にコメント投稿機能をつけました</title>
+      <link>http://localhost:1313/blog/2020/02/05/added-disqus/</link>
+      <pubDate>Wed, 05 Feb 2020 16:52:53 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2020/02/05/added-disqus/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;Q. Hugo でコメント投稿機能をつけるにはどうしたらいいのだろう？&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A. DISQUS 使いましょう！&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gohugo.io/content-management/comments/&#34;&gt;公式サイト&lt;/a&gt;でも DISQUS 使いましょう、とある。&lt;/p&gt;&#xA;&lt;p&gt;やり方は簡単。まず &lt;a href=&#34;https://disqus.com/&#34;&gt;DISQUS&lt;/a&gt; でサインアップして、サイトの作成と設定をする。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo でインライン HTML が表示されなくなった</title>
+      <link>http://localhost:1313/blog/2019/12/16/hugo-inline-html/</link>
+      <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/12/16/hugo-inline-html/</guid>
+      <description>&lt;p&gt;基本的に Hugo でブログを書くときは markdown を利用して書いています。&lt;/p&gt;&#xA;&lt;p&gt;ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記事を書いたりすることもあります。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VSCode に Go の開発環境を整える</title>
+      <link>http://localhost:1313/blog/2019/12/08/go-env-in-vscode/</link>
+      <pubDate>Sun, 08 Dec 2019 01:36:06 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/12/08/go-env-in-vscode/</guid>
+      <description>&lt;p&gt;Mac で Go をサクッとはじめるための手引書&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2019/02/15/go-setup-on-emacs/&#34;&gt;Emacs の場合はこちら&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;go-のインストール&#34;&gt;Go のインストール&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ mkdir &lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.go&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Add this line to ~/.zshrc&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;GOPATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/.go&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:&lt;span class=&#34;nv&#34;&gt;$GOPATH&lt;/span&gt;/bin&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Install&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;brew install go&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;バージョン確認&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ go version&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;go version go1.13.4 darwin/amd64&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;repl-のインストール&#34;&gt;REPL のインストール&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nv&#34;&gt;GO111MODULE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;off go get -u github.com/motemen/gore/cmd/gore&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ gore &lt;span class=&#34;c1&#34;&gt;# 確認&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gore version 0.4.1  :help &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; &lt;span class=&#34;nb&#34;&gt;help&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;gore&amp;gt; fmt.Println&lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s2&#34;&gt;&amp;#34;hello&amp;#34;&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;hello&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;m&#34;&gt;6&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&amp;lt;nil&amp;gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;go-package-のインストール&#34;&gt;Go Package のインストール&lt;/h2&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;8&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# gopkgs is a tool that provides list of available Go packages that can be imported.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ &lt;span class=&#34;nv&#34;&gt;GO111MODULE&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;on go get github.com/uudashr/gopkgs/cmd/gopkgs@latest&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Golint is a linter for Go source code.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ go get -u golang.org/x/lint/golint&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# errcheck is a program for checking for unchecked errors in go programs.&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ go get -u github.com/kisielk/errcheck&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h2 id=&#34;補完ツールのインストール&#34;&gt;補完ツールのインストール&lt;/h2&gt;&#xA;&lt;p&gt;補完については &lt;code&gt;gocode&lt;/code&gt; を &lt;code&gt;go get&lt;/code&gt; してくるという記事がよく見られるが、これは以下のような事情でちょっと使わない方がいい。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>リポジトリ管理ツール ghq を導入した</title>
+      <link>http://localhost:1313/blog/2019/11/28/ghq-setup/</link>
+      <pubDate>Thu, 28 Nov 2019 21:37:07 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/11/28/ghq-setup/</guid>
+      <description>&lt;p&gt;更新しました@2021/03/23&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/03/23/moving-go-src/&#34;&gt;Go の src ディレクトリを移動した&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;ここからは以前の内容です。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://qiita.com/advent-calendar/2019/tech-commit&#34;&gt;TechCommit Advent Calendar 2019&lt;/a&gt; 12日目の記事です。&lt;/p&gt;&#xA;&lt;p&gt;リポジトリきちんと管理してますか?&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vue.js チートシート</title>
+      <link>http://localhost:1313/blog/2019/10/10/vue-essentials-cheat-sheet/</link>
+      <pubDate>Thu, 10 Oct 2019 21:51:46 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/10/10/vue-essentials-cheat-sheet/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2019/10/Vue-Essentials-Cheat-Sheet-1.png&#34; alt=&#34;vue_cheat_sheet_1&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/2019/10/Vue-Essentials-Cheat-Sheet-2.png&#34; alt=&#34;vue_cheat_sheet_2&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rails の開発環境を Docker で構築する</title>
+      <link>http://localhost:1313/blog/2019/08/14/rails-dev-env-on-docker/</link>
+      <pubDate>Wed, 14 Aug 2019 10:10:30 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/08/14/rails-dev-env-on-docker/</guid>
+      <description>&lt;p&gt;開発環境で使える Rails の Docker 環境構築です。&#xA;Docker とは関係ない話しも混じってます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;コンテナ構成&#34;&gt;コンテナ構成&lt;/h2&gt;&#xA;&lt;p&gt;シンプルに Ruby をベースに Rails 環境をビルドします。&#xA;DB は PostgreSQL を使います。永続化に Volume を利用します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>VSCode で Emacs キーバインドを使う</title>
+      <link>http://localhost:1313/blog/2019/08/06/emacs-keybind-with-vscode/</link>
+      <pubDate>Tue, 06 Aug 2019 17:31:53 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/08/06/emacs-keybind-with-vscode/</guid>
+      <description>&lt;p&gt;長年使ってきた Emacs から徐々に VSCode に乗り換えています。&#xA;できるだけ VSCode のデフォルトや流儀に従うつもりで慣れようと思ったのですが、さすがに素のキーバインドを覚え直すのは骨が折れるので拡張機能でいい感じのものを探しました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs に Go の開発環境を整える</title>
+      <link>http://localhost:1313/blog/2019/02/15/go-setup-on-emacs/</link>
+      <pubDate>Fri, 15 Feb 2019 11:35:19 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/02/15/go-setup-on-emacs/</guid>
+      <description>&lt;p&gt;記事の情報が古くなってしまったので書き直しました。以下を参照してください。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/10/13/go-setup-on-emacs-ver2/&#34;&gt;[2021年版] Emacs に Go の開発環境を整える&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;ここからは以前の内容です。&lt;/p&gt;&#xA;&lt;p&gt;Mac で Go をサクッとはじめるための手引書&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>percol から fzf に移行した</title>
+      <link>http://localhost:1313/blog/2019/01/16/percol-to-fzf/</link>
+      <pubDate>Wed, 16 Jan 2019 13:51:53 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/01/16/percol-to-fzf/</guid>
+      <description>&lt;p&gt;新調した Mac mini の開発環境を整えていたら、どうも percol が動作してくれない。Python3 ではうまく動かないらしい。&#xA;直そうと思って調べてみるとどうやら peco や fzf の方がナウいらしいので移行することにした。&#xA;tmux の相性がいいとのことなので fzf を入れることにする。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>docker-compose up で db が立ち上がらない時は volume を削除してみる</title>
+      <link>http://localhost:1313/blog/2019/01/09/delete-docker-volume/</link>
+      <pubDate>Wed, 09 Jan 2019 11:27:47 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2019/01/09/delete-docker-volume/</guid>
+      <description>&lt;p&gt;とある Rails プロジェクトを Docker 化する過程で db にうまく接続できないエラーに遭遇した。&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;docker-compose up&lt;/code&gt; するとこんな感じのエラーがでる。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt; 1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 4&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 5&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 6&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 7&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 8&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt; 9&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;10&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;11&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;12&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;13&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;14&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;15&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;16&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;17&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;18&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;19&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;20&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;21&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;22&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;23&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;24&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;25&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;26&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;27&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;28&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;29&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Starting app_db_1 ... &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Creating app_web_1 ... &lt;span class=&#34;k&#34;&gt;done&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;Attaching to app_db_1, app_web_1&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.523451Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Warning&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; TIMESTAMP with implicit DEFAULT value is deprecated. Please use --explicit_defaults_for_timestamp server option &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;see documentation &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; more details&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt;.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.524650Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; mysqld &lt;span class=&#34;o&#34;&gt;(&lt;/span&gt;mysqld 5.7.24&lt;span class=&#34;o&#34;&gt;)&lt;/span&gt; starting as process &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt; ...&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.528223Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: PUNCH HOLE support available&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.528319Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Mutexes and rw_locks use GCC atomic builtins&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.528348Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Uses event mutexes&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.528374Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: GCC &lt;span class=&#34;nb&#34;&gt;builtin&lt;/span&gt; __atomic_thread_fence&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt; is used &lt;span class=&#34;k&#34;&gt;for&lt;/span&gt; memory barrier&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.528394Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Compressed tables use zlib 1.2.11&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.528543Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Using Linux native AIO&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.528969Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Number of pools: &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.529276Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Using CPU crc32 instructions&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.530867Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Initializing buffer pool, total &lt;span class=&#34;nv&#34;&gt;size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 128M, &lt;span class=&#34;nv&#34;&gt;instances&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 1, chunk &lt;span class=&#34;nv&#34;&gt;size&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; 128M&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.540619Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Completed initialization of buffer pool&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.542550Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: If the mysqld execution user is authorized, page cleaner thread priority can be changed. See the man page of setpriority&lt;span class=&#34;o&#34;&gt;()&lt;/span&gt;.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.554602Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Highest supported file format is Barracuda.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.554769Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ERROR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Unsupported redo log format. The redo log was created with MariaDB 10.3.10. Please follow the instructions at http://dev.mysql.com/doc/refman/5.7/en/upgrading-downgrading.html&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:45.554873Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ERROR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; InnoDB: Plugin initialization aborted with error Generic error&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:46.160053Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ERROR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Plugin &lt;span class=&#34;s1&#34;&gt;&amp;#39;InnoDB&amp;#39;&lt;/span&gt; init &lt;span class=&#34;k&#34;&gt;function&lt;/span&gt; returned error.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:46.160184Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ERROR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Plugin &lt;span class=&#34;s1&#34;&gt;&amp;#39;InnoDB&amp;#39;&lt;/span&gt; registration as a STORAGE ENGINE failed.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:46.160209Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ERROR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Failed to initialize &lt;span class=&#34;nb&#34;&gt;builtin&lt;/span&gt; plugins.&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:46.160224Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;ERROR&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Aborting&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:46.160239Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Binlog end&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:46.160356Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; Shutting down plugin &lt;span class=&#34;s1&#34;&gt;&amp;#39;CSV&amp;#39;&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt; 2019-01-09T01:57:46.163497Z &lt;span class=&#34;m&#34;&gt;0&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;[&lt;/span&gt;Note&lt;span class=&#34;o&#34;&gt;]&lt;/span&gt; mysqld: Shutdown &lt;span class=&#34;nb&#34;&gt;complete&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;db_1   &lt;span class=&#34;p&#34;&gt;|&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;app_db_1 exited with code &lt;span class=&#34;m&#34;&gt;1&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;db のコンテナが起動に失敗しているようだが、エラー内容でググってもあまり有効な解決策に繋がらない。&#xA;最終的に volume を削除して立ち上げて治すことで解決できた。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Octopress から Hugo へ移行した</title>
+      <link>http://localhost:1313/blog/2018/12/27/octopress-to-hugo/</link>
+      <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2018/12/27/octopress-to-hugo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/04/29/how-to-start-octopress/&#34;&gt;以前 Octopress に移行&lt;/a&gt; してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと&lt;a href=&#34;http://localhost:1313/blog/2018/12/26/blog-services/&#34;&gt;別の方法を模索&lt;/a&gt;した。&#xA;結果 Hugo に移行することにした。こっから先は Octopress から Hugo への移行方法の備忘録となる。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Octopress 記事削除</title>
+      <link>http://localhost:1313/blog/2017/10/18/delete-post/</link>
+      <pubDate>Wed, 18 Oct 2017 01:02:03 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/10/18/delete-post/</guid>
+      <description>&lt;p&gt;Octopress で記事の削除は source/_posts/post.markdown を削除すればいい、はずなんだがなぜか消えない。&lt;/p&gt;&#xA;&lt;p&gt;新しい記事を投稿することによって削除されるかどうかを試してみる。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>UNIX 時刻の変換</title>
+      <link>http://localhost:1313/blog/2017/05/28/unix-time/</link>
+      <pubDate>Sun, 28 May 2017 23:53:36 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/05/28/unix-time/</guid>
+      <description>&lt;p&gt;UNIX 時間はビルトインコマンドで変換できる&lt;/p&gt;&#xA;&lt;h2 id=&#34;linux-の場合&#34;&gt;Linux の場合&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;date --date &amp;quot;@1495526373&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;mac-の場合&#34;&gt;Mac の場合&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;date -r 1495526373&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93&#34;&gt;UNIX 時間とは&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Complete Chart of Neural Networks</title>
+      <link>http://localhost:1313/blog/2017/02/15/complete-chart-of-neural-networks/</link>
+      <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/02/15/complete-chart-of-neural-networks/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2017/02/complete_chart_of_neural_networks.jpg&#34; class=&#34;image&#34;&gt;</description>
+    </item>
+    <item>
+      <title>Deep Learning Nanodegree Foundation Program を受講します</title>
+      <link>http://localhost:1313/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</link>
+      <pubDate>Fri, 03 Feb 2017 12:52:03 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://1onjea25cyhx3uvxgs4vu325.wpengine.netdna-cdn.com/wp-content/uploads/2017/01/blog-1.jpg&#34; alt=&#34;udacity-nanodegree&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Udacity というオンライン学習プラットフォームで人工知能のナノ学位コースが始まるよと発表されました。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://blog.udacity.com/2017/01/siraj-raval-deep-learning-nanodegree-foundation-program.html&#34;&gt;Introducing Siraj Raval’s Deep Learning Nanodegree Foundation Program!&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;人工知能の勉強は独学で少しずつやってましたが、必要な知識が専門的で広範囲に及ぶため、なかなか難しいなと思っていたところなので丁度よいと思って受講始めました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>IBM の Data Scientist Workbench がすごい</title>
+      <link>http://localhost:1313/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</link>
+      <pubDate>Wed, 01 Feb 2017 01:31:59 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;https://i.ytimg.com/vi/3oI9z0Wq5u4/maxresdefault.jpg&#34; alt=&#34;ibm-ds-workbench&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;機械学習をやってる人やデータサイエンスやってる人は Jupyter Notebooks を使ってる人が多いと思います。&#xA;環境構築はそれほど難しくないのですが、これが Web 上で簡単に使えておまけにチュートリアルとかついてたら最高ですよね。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Octopress Deploy エラーなおした</title>
+      <link>http://localhost:1313/blog/2017/01/27/fix-octopress-deploy-error/</link>
+      <pubDate>Fri, 27 Jan 2017 16:05:43 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2017/01/27/fix-octopress-deploy-error/</guid>
+      <description>&lt;p&gt;当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。&lt;/p&gt;&#xA;&lt;p&gt;エラー内容はこんな感じ。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;## Pushing generated _deploy website&#xA;To github.com:iriya-ufo/iriya-ufo.github.io.git&#xA; ! [rejected]        master -&amp;gt; master (non-fast-forward)&#xA;error: failed to push some refs to &#39;git@github.com:iriya-ufo/iriya-ufo.github.io.git&#39;&#xA;hint: Updates were rejected because the tip of your current branch is behind&#xA;hint: its remote counterpart. Integrate the remote changes (e.g.&#xA;hint: &#39;git pull ...&#39;) before pushing again.&#xA;hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;解決方法は以下の通り。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker 版 Jupyter Notebooks でホストとデータを共有する</title>
+      <link>http://localhost:1313/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</link>
+      <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/11/18/pyenv-and-anaconda-on-docker/&#34;&gt;前回 Anaconda 環境の Docker イメージ&lt;/a&gt;を作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うことにします。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>TensorFlow を GPU で動かす</title>
+      <link>http://localhost:1313/blog/2016/11/19/tensorflow-running-by-gpu/</link>
+      <pubDate>Sat, 19 Nov 2016 23:37:43 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/19/tensorflow-running-by-gpu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/&#34;&gt;前回&lt;/a&gt;は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。&#xA;移植性の高い方法で構築したいので Docker を使います。&lt;/p&gt;&#xA;&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GPU (今回は GEFORCE GTX 1080) を積んだマシンがある&lt;/li&gt;&#xA;&lt;li&gt;Ubuntu 16.04 LTS がインストールされている&lt;/li&gt;&#xA;&lt;li&gt;Docker がインストールされている&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;構築環境&#34;&gt;構築環境&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/CUDA&#34;&gt;CUDA&lt;/a&gt; &amp;mdash; Nvidia が提供する GPU 向けの統合開発環境&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;cuDNN&lt;/a&gt; &amp;mdash; Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/NVIDIA/nvidia-docker&#34;&gt;NVIDIA Docker&lt;/a&gt; &amp;mdash; Nvidia が提供している、コンテナから GPU を操作できるようにするもの&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.tensorflow.org/&#34;&gt;TensorFlow&lt;/a&gt; &amp;mdash; Google が開発したオープンソースの機械学習ライブラリ&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;構築手順&#34;&gt;構築手順&lt;/h2&gt;&#xA;&lt;h3 id=&#34;cuda-インストール&#34;&gt;CUDA インストール&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nvidia&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toolkit&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h3 id=&#34;cudnn-インストール&#34;&gt;cuDNN インストール&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;https://developer.nvidia.com/cudnn&lt;/a&gt; からユーザー登録をしてライブラリをダウンロードする。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>機械学習と数学</title>
+      <link>http://localhost:1313/blog/2016/11/19/ml-and-math/</link>
+      <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/19/ml-and-math/</guid>
+      <description>&lt;p&gt;人工知能といえば機械学習、そして機械学習といえば数学。チュートリアルやらライブラリやらで、これだけ手軽になった機械学習といえども現段階ではちょっとまだ簡単に扱えるようにはなっていません。&#xA;その主たる原因は数学だと思います。専門的とはいえ理系大学一年程度の知識があればそこそこいけそうなので頑張りましょう。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker コンテナに anaconda 環境を構築</title>
+      <link>http://localhost:1313/blog/2016/11/18/pyenv-and-anaconda-on-docker/</link>
+      <pubDate>Fri, 18 Nov 2016 12:17:31 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/18/pyenv-and-anaconda-on-docker/</guid>
+      <description>&lt;p&gt;機械学習の主流言語といえば Python ですよね。最近はインストール方法も変わってきており、より便利な方法があるようです。&lt;/p&gt;&#xA;&lt;p&gt;今回は Anaconda の環境を Docker で作って、さらに各種ライブラリを Anaconda の仮想として作成していくような予定でいます。&#xA;Docker にすると各OS毎に環境を作らないで済むのがいいですね。Anaconda 公式でも Docker はいいよって言ってます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu に Docker をインストール</title>
+      <link>http://localhost:1313/blog/2016/11/13/install-docker-on-ubuntu/</link>
+      <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/13/install-docker-on-ubuntu/</guid>
+      <description>&lt;p&gt;公式サイトを参考にする。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.docker.com/engine/installation/linux/ubuntulinux/&#34;&gt;Install Docker on Ubuntu&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;メモリーとスワップ設定、UFW、DNSの設定はおこなっていない。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deep Learning Machine に Ubuntu のインストール</title>
+      <link>http://localhost:1313/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</link>
+      <pubDate>Thu, 10 Nov 2016 01:38:43 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/11/09/hardware-architecture-for-machine-learning/&#34;&gt;『Hardware Architecture for Machine Learning』&lt;/a&gt;で作ったマシンに Ubuntu 16.04 LTS をインストールしました。&lt;/p&gt;&#xA;&lt;p&gt;Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓いたのでその解決法を記載します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>hardware architecture for machine learning</title>
+      <link>http://localhost:1313/blog/2016/11/09/hardware-architecture-for-machine-learning/</link>
+      <pubDate>Wed, 09 Nov 2016 14:58:31 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/11/09/hardware-architecture-for-machine-learning/</guid>
+      <description>&lt;p&gt;機械学習をさせるための専用演算マシンを構築しました。&#xA;クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれはそれで便利だと思います。&#xA;テンションあがりますしね。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker for Mac を使う</title>
+      <link>http://localhost:1313/blog/2016/07/31/docker-for-mac/</link>
+      <pubDate>Sun, 31 Jul 2016 14:11:03 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/07/31/docker-for-mac/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2015/07/20/docker-on-mac/&#34;&gt;『Mac に Docker 環境を構築する』&lt;/a&gt;を書いてしばらくしたら &lt;code&gt;boot2docker&lt;/code&gt; が非推奨となって&lt;a href=&#34;http://localhost:1313/blog/2015/10/10/docker-machine-on-mac/&#34;&gt;『Docker-machine で Mac に Docker 環境を構築する』&lt;/a&gt;を書いたら今度は &lt;a href=&#34;https://docs.docker.com/docker-for-mac/&#34;&gt;Docker for Mac&lt;/a&gt; がナウいとかなって今回の記事に至ります。仮想環境は変化が速くていろいろ大変です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Elastic BeansTalk で遊んでみた</title>
+      <link>http://localhost:1313/blog/2016/05/12/setup-elastic-beanstalk/</link>
+      <pubDate>Thu, 12 May 2016 18:46:38 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/05/12/setup-elastic-beanstalk/</guid>
+      <description>&lt;p&gt;Elastic BeansTalk は AWS が提供している Paas サービスだ。Heroku よりはとっつきにくいけどそれほど難しくはない。慣れてしまえばさくっと環境が作れてよい。今回移行作業を行ってみたが案外ハマりポイントなどがあったり、不向きなアプリだったのでやめたが、機会があればこれで運用してみたいと思う。備忘録として記録しておく。環境は Mac です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Passenger をやめて Puma にした</title>
+      <link>http://localhost:1313/blog/2016/05/07/from-passenger-to-puma/</link>
+      <pubDate>Sat, 07 May 2016 15:23:21 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/05/07/from-passenger-to-puma/</guid>
+      <description>&lt;p&gt;とあるプロジェクトで Nginx + Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。&lt;/p&gt;&#xA;&lt;h2 id=&#34;環境など&#34;&gt;環境など&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Nginx や Passenger は設定済みで動作していた&lt;/li&gt;&#xA;&lt;li&gt;Capistrano でデプロイしている&lt;/li&gt;&#xA;&lt;li&gt;システム全体に rbenv で ruby をインストールしている&lt;/li&gt;&#xA;&lt;li&gt;デプロイユーザーが別にいる (今回の場合 &lt;code&gt;deployer&lt;/code&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;sudo-の許可&#34;&gt;sudo の許可&lt;/h2&gt;&#xA;&lt;p&gt;deployer で puma の再起動ができるようにするため &lt;code&gt;sudo&lt;/code&gt; 権限を与える。全コマンドの &lt;code&gt;sudo&lt;/code&gt; は危険なので特定コマンドのみに制限する。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Octopress のテーマをカスタマイズする</title>
+      <link>http://localhost:1313/blog/2016/04/30/theme-template-for-octopress/</link>
+      <pubDate>Sat, 30 Apr 2016 03:08:48 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/30/theme-template-for-octopress/</guid>
+      <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes&#34;&gt;3rd Party Octopress Themes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;ここにテーマのテンプレートがあるので、好きなテーマを探して来てインストールすればよい。&#xA;リンク切れになってたり、全く違うサイトになって関係のないデザインになってたりするものもあるので注意。&#xA;好みのものがない場合は自作する。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>WordPress から GitHub Pages &#43; Octopress に移行した</title>
+      <link>http://localhost:1313/blog/2016/04/29/how-to-start-octopress/</link>
+      <pubDate>Fri, 29 Apr 2016 19:22:13 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/29/how-to-start-octopress/</guid>
+      <description>&lt;p&gt;今まで &lt;a href=&#34;http://iriya-ufo.net&#34;&gt;http://iriya-ufo.net&lt;/a&gt; は WordPress で運用してきたのだけれど、GitHub Pages + Octopress に移行することにした。&lt;/p&gt;&#xA;&lt;h2 id=&#34;wordpress-を辞めたくなった理由&#34;&gt;WordPress を辞めたくなった理由&lt;/h2&gt;&#xA;&lt;p&gt;WordPress で記事を書くときは Emacs を立ち上げ markdown で書いて、管理画面からコピペしていた。&#xA;WordPress は管理画面からいろいろできるが、あまり使ってない上に逆に記事更新とか面倒だと思った。&#xA;さらに若干コードのデザインが崩れたりして精神衛生上よろしくなかった。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>bower-rails 使ってみた</title>
+      <link>http://localhost:1313/blog/2016/04/08/start-bower-rails/</link>
+      <pubDate>Fri, 08 Apr 2016 00:52:01 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/08/start-bower-rails/</guid>
+      <description>&lt;p&gt;Rails 開発で js とか css とかマジだるい。管理とかだるい。なので bower-rails 使ってみた。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;bower は node package なので最初に Node.js とかインストールしておく。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/04/07/nodejs-on-mac/&#34;&gt;Mac に Node.js インストールした&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac に Node.js インストールした</title>
+      <link>http://localhost:1313/blog/2016/04/07/nodejs-on-mac/</link>
+      <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/04/07/nodejs-on-mac/</guid>
+      <description>&lt;p&gt;今更すぎるけどいれた。&lt;/p&gt;&#xA;&lt;p&gt;まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ brew install nodebrew&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;PATH を &lt;code&gt;.zshrc&lt;/code&gt; に追加&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>tmux でクリップボードを使う</title>
+      <link>http://localhost:1313/blog/2016/03/25/share-tmux-clipboard/</link>
+      <pubDate>Fri, 25 Mar 2016 15:26:45 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/25/share-tmux-clipboard/</guid>
+      <description>&lt;p&gt;いい加減不便になってきたので設定した。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ brew install reattach-to-user-namespace&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://github.com/iriya-ufo/dotfiles/blob/master/Mac/.tmux.conf&#34;&gt;~/.tmux.conf&lt;/a&gt; をいじる。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Botkit から Google API 叩いてみた</title>
+      <link>http://localhost:1313/blog/2016/03/21/how-to-use-google-api-from-botkit/</link>
+      <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/21/how-to-use-google-api-from-botkit/</guid>
+      <description>&lt;p&gt;前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;hubot&#34;&gt;Hubot&lt;/h3&gt;&#xA;&lt;p&gt;GitHub が開発した Bot 開発用のフレームワーク&#xA;Node.js で動き、プラグインなどは CoffeeScript で書く&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Docker DataCenter さわってみた</title>
+      <link>http://localhost:1313/blog/2016/03/08/start-docker-datacenter/</link>
+      <pubDate>Tue, 08 Mar 2016 04:38:29 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/08/start-docker-datacenter/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2016/03/ddc.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;以下の記事をみかけて、これはやらずにいられないと思っていじってみた感想。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://jp.techcrunch.com/2016/02/24/20160223new-docker-data-center-admin-suite-should-bring-order-to-containerization/&#34;&gt;コンテナ化したアプリケーションの総合的一元的管理コンソールDocker DatacenterをDockerが提供&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;&#xA;&lt;p&gt;AWS に small 環境でつくってみた。Amazon Linux だとうまくいかなかったので Ubuntu でやり直した。&#xA;インストールの方法は以下の通り。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Slack に Hubot をいれてみた</title>
+      <link>http://localhost:1313/blog/2016/03/04/hubot-on-slack/</link>
+      <pubDate>Fri, 04 Mar 2016 18:10:03 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2016/03/04/hubot-on-slack/</guid>
+      <description>&lt;p&gt;Hubot は GitHub が開発した bot のフレームワークです。Node.js の上で走って CoffeeScript で動きます。実装環境は AWS にしました。常時稼働させとかなきゃいけないからね。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>docker-machine で Mac に Docker 環境を構築する</title>
+      <link>http://localhost:1313/blog/2015/10/10/docker-machine-on-mac/</link>
+      <pubDate>Sat, 10 Oct 2015 21:33:25 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/10/10/docker-machine-on-mac/</guid>
+      <description>&lt;p&gt;boot2docker で Docker 環境を作っていたのだが、アップデートしてみたら以下の警告が出た。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;WARNING: The &#39;boot2docker&#39; command line interface is officially deprecated.&#xA;Please switch to Docker Machine (https://docs.docker.com/machine/) ASAP.&#xA;Docker Toolbox (https://docker.com/toolbox) is the recommended install method.&#xA;error in run: Failed to get machine &amp;quot;boot2docker-vm&amp;quot;: machine does not exist (Did you run `boot2docker init`?)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;boot2docker が非推奨になって docker-machine を使えとあるので移行作業をした。β版なので production では使わないでと書いてある。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac に Python 環境構築</title>
+      <link>http://localhost:1313/blog/2015/10/10/python-on-mac/</link>
+      <pubDate>Sat, 10 Oct 2015 19:00:23 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/10/10/python-on-mac/</guid>
+      <description>&lt;h2 id=&#34;2020年版mac-に-python-をインストールする方法パッケージの管理方法&#34;&gt;【2020年版】Mac に Python をインストールする方法、パッケージの管理方法&lt;/h2&gt;&#xA;&lt;h3 id=&#34;pyenv-のインストール&#34;&gt;pyenv のインストール&lt;/h3&gt;&#xA;&lt;p&gt;brew で pyenv をインストールする。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ brew install pyenv&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pyenv -v&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;pyenv 1.2.18&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;PATH を通す。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PYENV_ROOT=&amp;#34;$HOME/.pyenv&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zshrc&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;export PATH=&amp;#34;$PYENV_ROOT/bin:$PATH&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zshrc&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;echo&lt;/span&gt; &lt;span class=&#34;s1&#34;&gt;&amp;#39;eval &amp;#34;$(pyenv init -)&amp;#34;&amp;#39;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;~/.&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;zshrc&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h3 id=&#34;python-のインストール&#34;&gt;Python のインストール&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pyenv install --list # インストール可能なバージョンの表示&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pyenv install 3.8.2  # Python のインストール&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pyenv versions       # インストール済み一覧&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pyenv global 3.8.2   # 標準で使う設定&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h3 id=&#34;pipenv-のインストール&#34;&gt;pipenv のインストール&lt;/h3&gt;&#xA;&lt;p&gt;pipenv を使ってパッケージの管理を行う。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac に Docker 環境を構築する</title>
+      <link>http://localhost:1313/blog/2015/07/20/docker-on-mac/</link>
+      <pubDate>Mon, 20 Jul 2015 14:28:57 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/07/20/docker-on-mac/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2015/07/homepage-docker-logo.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;とあるプロジェクトで古い Ruby と Rails をいれて動かさなくちゃいけない、みたいな場面って開発やってる方はあるあるだと思います。そして現最新の Mac OS Yosemite では簡単には環境構築できなかったりするのもあるあるですよね。レガシーな環境っていやですね。そこでプログラムを動かす環境を仮想で作ってしまおうという考えに至るわけですが、一昔前と違って様々な手段が登場しました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Meteor が想像以上にすごかった</title>
+      <link>http://localhost:1313/blog/2015/05/24/start-meteor/</link>
+      <pubDate>Sun, 24 May 2015 05:17:20 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/05/24/start-meteor/</guid>
+      <description>&lt;p&gt;友人に勧められて、ウェブアプリケーションフレームワークの &lt;a href=&#34;https://www.meteor.com/&#34;&gt;Meteor&lt;/a&gt; で遊んでみました。想像以上にすごかったです。Meteor って聞いたことあるけどどんなの？って人のためにざっくり言うとこんな感じ。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>tmux の sync pane 機能に感動した</title>
+      <link>http://localhost:1313/blog/2015/05/22/great-function-of-tmux-sync-pane/</link>
+      <pubDate>Fri, 22 May 2015 22:22:24 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/05/22/great-function-of-tmux-sync-pane/</guid>
+      <description>&lt;p&gt;「ターミナルの仮想端末といえば screen」ってな感じで使ってたんですが、とあるレンタルサーバーで tmux 設定がデフォになってたんで重い腰をあげて tmux に移行してみました。そしたら思いのほか感動したという話しです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac に Clojure 環境いれてみた</title>
+      <link>http://localhost:1313/blog/2015/04/23/clojure-on-mac/</link>
+      <pubDate>Thu, 23 Apr 2015 23:10:30 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/04/23/clojure-on-mac/</guid>
+      <description>&lt;p&gt;Closure ではなくて Clozure でもなくて Clojure の環境構築です。&#xA;Mac でのやり方と、ついでに Emacs でいい感じにする設定を書きます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;jdkのインストール&#34;&gt;JDKのインストール&lt;/h2&gt;&#xA;&lt;p&gt;これがないと始まらないですね。JDK とか OpenJDK とか細かいことは気にしないでおきましょう。端末で java とか打ってみて入っていないようでしたら Oracle のサイトからダウンロードしてインストールで一発です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac に Common Lisp 処理系をインストールする</title>
+      <link>http://localhost:1313/blog/2015/02/10/install-common-lisp-on-mac/</link>
+      <pubDate>Tue, 10 Feb 2015 03:42:46 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2015/02/10/install-common-lisp-on-mac/</guid>
+      <description>&lt;p&gt;Common Lisp は仕様によって規定される言語なので処理系が複数存在します。フリーでメジャーなのは &lt;strong&gt;SBCL&lt;/strong&gt; と &lt;strong&gt;Clozure CL&lt;/strong&gt; です。違いは &lt;a href=&#34;http://ja.wikipedia.org/wiki/Common_Lisp&#34; title=&#34;Common_Lisp&#34; target=&#34;_blank&#34;&gt;Wikipedia&lt;/a&gt; あたりを参考にしてもらうといいかと。&#xA;簡単に特徴を上げるとすると SBCL はバイトコードへのコンパイルがかなり優秀だがコンパイル速度が遅い、Clozure CL はコンパイルが速くデバッグメッセージなどが分かりやすいけど、バイトコードの速度は SBCL に劣る。といったところでしょうか。&#xA;開発は Clozure CL で本番は SBCL みたいに使い分けるといいかもしれないです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>middleman-s3_sync で colorize のエラーがでた</title>
+      <link>http://localhost:1313/blog/2014/12/27/middleman-s3_sync-colorize-error/</link>
+      <pubDate>Sat, 27 Dec 2014 21:55:29 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/12/27/middleman-s3_sync-colorize-error/</guid>
+      <description>&lt;p&gt;静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>brew のアップグレードで rails プロジェクトなどが動かなくなったら</title>
+      <link>http://localhost:1313/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</link>
+      <pubDate>Wed, 17 Dec 2014 23:05:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</guid>
+      <description>&lt;p&gt;brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっています。よくあるのは keg-only なパッケージによる影響です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PostgreSQL の基本</title>
+      <link>http://localhost:1313/blog/2014/12/17/start-postgresql/</link>
+      <pubDate>Wed, 17 Dec 2014 21:43:32 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/12/17/start-postgresql/</guid>
+      <description>&lt;p&gt;環境は Mac でやってますが Linux でもほぼ同じです。&lt;/p&gt;&#xA;&lt;h2 id=&#34;インストールから初期設定まで&#34;&gt;インストールから初期設定まで&lt;/h2&gt;&#xA;&lt;p&gt;Mac なので brew でインストールします。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ brew install postgresql&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;最初にデータベースの初期化をします。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ initdb /usr/local/var/postgres -E utf8&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;試しに PostgreSQL サーバーの起動を確認してみます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Vim 小技集</title>
+      <link>http://localhost:1313/blog/2014/12/04/vim-tips/</link>
+      <pubDate>Thu, 04 Dec 2014 18:58:13 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/12/04/vim-tips/</guid>
+      <description>&lt;p&gt;自分のための覚書&lt;/p&gt;&#xA;&lt;h2 id=&#34;編集&#34;&gt;編集&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:%s/:\(\w\+\) =&amp;gt;/\1:/g  # hash の書き方を置換 #正規表現&#xA;Ctrl+v jjjj I           # 4行コメントアウト(,#)&#xA;Ctrl+v jjjj d           # 4行コメントイン(,#)&#xA;Ctrl+v jjjj c aaaa      # 4行置換&#xA;viwy                    # カーソル位置の単語を yank&#xA;viwp                    # カーソル位置の単語を yank している内容で上書き&#xA;cw                      # カーソル位置から単語の最後までを書き換える&#xA;viwu                    # カーソル位置の単語を undercase&#xA;viwU                    # カーソル位置の単語を UPPERCASE&#xA;viw~                    # カーソル位置の単語を undercase &amp;lt;-&amp;gt; UPPERCASE 入れ替え&#xA;viw!nkf -Z4             # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;0                       # 行の先頭へ&#xA;^                       # 行の空白以外の先頭へ&#xA;$                       # 行の末尾へ&#xA;w                       # 次の単語の先頭へ&#xA;f*                      # 次の*へ           (例 df&amp;quot;-&amp;gt;&amp;quot;まで削除)&#xA;t*                      # 次の*の前へ       (例 dt&amp;quot;-&amp;gt;&amp;quot;の前まで削除)&#xA;viw                     # 現在のカーソル位置の単語を選択&#xA;vi&amp;quot;                     # 現在のカーソル位置の&amp;quot;の中を選択&#xA;va&amp;quot;                     # 現在のカーソル位置の&amp;quot;の外を選択&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;モード&#34;&gt;モード&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;C-[                     # 挿入モードを抜ける&#xA;ESC                     # 挿入モードを抜ける&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;ウィンドウ&#34;&gt;ウィンドウ&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:vs                     # 垂直分割&#xA;:sp                     # 水平分割&#xA;Ctrl+w w                # 次のウィンドウへ&#xA;Ctrl+w [hjkl左下上右]    # ウィンドウの移動&#xA;Ctrl+w -                # 高さを小さく  (例 Ctrl+w 10- -&amp;gt; ウィンドウの高さを 10 狭める)&#xA;Ctrl+w +                # 高さを大きく&#xA;Ctrl+w &amp;lt;                # 幅を小さく&#xA;Ctrl+w &amp;gt;                # 幅を大きく&#xA;Ctrl+w =                # 自動調整&#xA;Ctrl+w r                # 左右・上下のウィンドウを入れ替え&#xA;:res 100                # 現在のウィンドウの高さを 100 にする&#xA;:vertical res 30        # 現在のウィンドウの横幅を 30 にする&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;特殊処理&#34;&gt;特殊処理&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;qa                      # マクロ記録開始&#xA;q                       # マクロ記録終了 (@a で使用可能)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;コマンドラインの履歴&#34;&gt;コマンドラインの履歴&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;q: または : Ctrl+f       # コマンドラインの履歴&#xA;q/                      # 検索&#xA;Ctrl+c                  # 履歴をコマンドラインに送る(編集して使えるようになる)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;改行文字の変更&#34;&gt;改行文字の変更&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:%s/&#xA;/&#xA;/g                      # /Ctrl+v Ctrl+m/Ctrl+v Enter/&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;ファイル比較&#34;&gt;ファイル比較&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:vertical diffsplit     # 差分を取りたいファイル&#xA;:do (diff obtain)       # もう一方のファイルから差分を取り込む&#xA;:dp (diff put)          # もう一方のファイルに差分を取り込ませる&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>高速検索の ag を入れてみた</title>
+      <link>http://localhost:1313/blog/2014/09/09/install-ag/</link>
+      <pubDate>Tue, 09 Sep 2014 23:43:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/09/09/install-ag/</guid>
+      <description>&lt;p&gt;プログラムを書いてると&lt;strong&gt;検索&lt;/strong&gt;という行為一つで大きく生産性が変わることをプログラマーは知っています。僕は今まで grep を使ってた、というか grep しか知らなかったのですが同僚から ag について教えてもらったのでいれてみました。とにかく検索が爆速でびっくりです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>highlight-symbol が便利</title>
+      <link>http://localhost:1313/blog/2014/09/08/useful-package-highlight-symbol-emacs/</link>
+      <pubDate>Mon, 08 Sep 2014 16:01:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/09/08/useful-package-highlight-symbol-emacs/</guid>
+      <description>&lt;p&gt;ちょっとした事なんですが、プログラムを書いてると、「このシンボルを目立つようにマーク付けしておきたいなぁ」なんて思うことがあります。関数とか変数とか関係なくちょこっとマークしてそれを常にハイライトしておくんですね。&lt;code&gt;highlight-symbol&lt;/code&gt; を使うとこれが実現できそうです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Sinatra アプリを Heroku で動かすまで</title>
+      <link>http://localhost:1313/blog/2014/09/07/run-sinatra-app-on-heroku/</link>
+      <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
+      <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;&#xA;&lt;p&gt;以下のような環境で動かします。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Sinatra&lt;/li&gt;&#xA;  &lt;li&gt;Heroku&lt;/li&gt;&#xA;  &lt;li&gt;PostgreSQL&lt;/li&gt;&#xA;  &lt;li&gt;Unicorn&lt;/li&gt;&#xA;  &lt;li&gt;ActiveRecord&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;初期設定&#34;&gt;初期設定&lt;/h2&gt;&#xA;&lt;p&gt;まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作ります。そこで &lt;code&gt;$ bundle init&lt;/code&gt; して Gemfile を作成します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>&amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#8216;MacOSX10.9.sdk&amp;#8217; does not support Swift</title>
+      <link>http://localhost:1313/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</link>
+      <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
+      <description>&lt;p&gt;Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;unknown&amp;gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサポート対象外ということで起動すらできません。さすが Apple 切り捨て方が潔い。さてどうやって起動するかというと、Xcode6 に付随している最新の sdk を使うように swift の起動オプションに渡してあげたら大丈夫です。以下コマンドです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Xcode で作ったプロジェクトを削除する方法</title>
+      <link>http://localhost:1313/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</link>
+      <pubDate>Sun, 24 Aug 2014 16:41:24 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</guid>
+      <description>&lt;p&gt;練習がてら適当にプロジェクトを作成するといっぱい溜まってくるのでいらないものは消してすっきりしたくなる時があるかと思います。Xcode で作ったプロジェクトを完全削除するには以下のようにすればよいです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gauche のユーザーリファレンスを読む</title>
+      <link>http://localhost:1313/blog/2014/08/20/read-gauche-reference/</link>
+      <pubDate>Wed, 20 Aug 2014 02:07:11 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/08/20/read-gauche-reference/</guid>
+      <description>&lt;p&gt;Gauche のリファレンス読むのにはいくつか方法があって、Emacs で el いれて読みだすとか info 入れるとかありますけど、一番簡単な方法はこれでしょう。&#xA;Chrome 使ってる人向けですが、設定にいくと「検索エンジンの設定」があるのでそちらで以下のようにします。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Swift をインタラクティブに実行しながら勉強しよう (関数編)</title>
+      <link>http://localhost:1313/blog/2014/07/26/learn-swift/</link>
+      <pubDate>Sat, 26 Jul 2014 15:55:36 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/07/26/learn-swift/</guid>
+      <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Swift と同時に発表された Xcode バージョン 6 では、コードの実行結果をグラフィカルに確認しながら開発できる Playgrounds が実装された。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Swift をとりあえず実行するまでの手順</title>
+      <link>http://localhost:1313/blog/2014/07/23/quick-start-swift/</link>
+      <pubDate>Wed, 23 Jul 2014 03:06:46 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/07/23/quick-start-swift/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2014/07/swift.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mavericks にアップグレードしたらターミナルが落ちた</title>
+      <link>http://localhost:1313/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</link>
+      <pubDate>Tue, 22 Jul 2014 12:31:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</guid>
+      <description>&lt;p&gt;今更ですが Lion から Mavericks にアップグレードしました。OS のアップグレードは色々トラブルが起こるのであまりしたくないのですが、流行りについていかないのもなぁと思いアップグレードを実行しました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs に swift-mode をインストール</title>
+      <link>http://localhost:1313/blog/2014/07/21/install-swift-mode-to-emacs/</link>
+      <pubDate>Mon, 21 Jul 2014 14:51:49 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/07/21/install-swift-mode-to-emacs/</guid>
+      <description>&lt;p&gt;Apple が発表した新言語 Swift が話題になってますね。&#xA;ほとんどの人は Xcode で試すのでしょうけど、あんな不便なIDEを使いたくない Emacs 病の人がいるかと思います。&lt;/p&gt;&#xA;&lt;p&gt;すでに swift-mode なるものが &lt;code&gt;package.el&lt;/code&gt; からインストールできるようになってるのでさっそくインストールしましょう。&#xA;以下を Emacs で実行すればOK。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>コマンドから Heroku アプリを削除</title>
+      <link>http://localhost:1313/blog/2014/06/10/delete-heroku-app-by-terminal/</link>
+      <pubDate>Tue, 10 Jun 2014 01:35:28 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/06/10/delete-heroku-app-by-terminal/</guid>
+      <description>&lt;p&gt;Heroku に作ったアプリをコマンドから削除する方法です。GUI画面から削除するより簡単で、git remote の設定の削除なども一緒にしてくれるのでコマンドで削除するのがオススメです。&#xA;なお Heroku アプリを削除するとそのアプリで使っていたオプションなども根こそぎ削除されるので気をつけてください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac OS X で locate エラーの直し方</title>
+      <link>http://localhost:1313/blog/2014/06/07/fix-locate-error/</link>
+      <pubDate>Sat, 07 Jun 2014 22:35:26 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/06/07/fix-locate-error/</guid>
+      <description>&lt;p&gt;Linux でお世話になってるファイルを探すコマンドの &lt;code&gt;locate&lt;/code&gt; ですが、当然 Mac にもあります。&#xA;しかしデータベースを更新するコマンドが違ってて Linux だと &lt;code&gt;updatedb&lt;/code&gt; ですが Mac は &lt;code&gt;/usr/libexec/locate.updatedb&lt;/code&gt; になります。&#xA;毎回コマンドを打つのはたるいのでエイリアスを張っていたのですが、あるときうまくDBが更新されていないようだと気づきました。&#xA;こんなエラーがでます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>続・SICP読書会</title>
+      <link>http://localhost:1313/blog/2014/05/18/sicp-reading/</link>
+      <pubDate>Sun, 18 May 2014 03:41:22 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/05/18/sicp-reading/</guid>
+      <description>&lt;p&gt;最近タスクがこなせていない SICP 読書会になっていましたが、この度新しくメンバーが2人入ってきてテンション上がりました。&#xA;場所決めグダグダになって申し訳なかったです。次回からちゃんとやります！&#xA;今度こそ諦めずに読破していこう！！&#xA;これ読破したらなんかプログラムとはなんぞや、が体感で分かりそうな気がします。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Windows 7 64bit に Rails の環境を構築</title>
+      <link>http://localhost:1313/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</link>
+      <pubDate>Thu, 08 May 2014 23:39:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</guid>
+      <description>&lt;p&gt;最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずここを参考にしてもらえればと思います。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac に AUCTeX をインストールした</title>
+      <link>http://localhost:1313/blog/2014/04/13/auctex-to-mac-emacs/</link>
+      <pubDate>Sun, 13 Apr 2014 15:34:38 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/04/13/auctex-to-mac-emacs/</guid>
+      <description>&lt;p&gt;昔書いてた TeX を Mac 環境で快適に使う設定を始めたのが運のつき・・・めちゃ時間かかりました。&#xA;TeX はもうバッドノウハウの固まりって感じがして好きじゃなくなってきたけど、数学するなら TeX 必須なんですよねぇ。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac の Gauche で SLIB を使う</title>
+      <link>http://localhost:1313/blog/2014/04/12/slib-with-gauche/</link>
+      <pubDate>Sat, 12 Apr 2014 17:17:10 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/04/12/slib-with-gauche/</guid>
+      <description>&lt;p&gt;Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。&lt;/p&gt;&#xA;&lt;p&gt;ここからダウンロードしてくれば使えるようになります。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://people.csail.mit.edu/jaffer/SLIB.html&#34; title=&#34;SLIB&#34; target=&#34;_blank&#34;&gt;The SLIB Portable Scheme Library&lt;/a&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SICP 読書会始めました</title>
+      <link>http://localhost:1313/blog/2014/04/07/sicp-reading/</link>
+      <pubDate>Mon, 07 Apr 2014 02:15:09 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/04/07/sicp-reading/</guid>
+      <description>&lt;p&gt;もうすでに2回ほど挫折してるけど今回こそは読破する勢いで読んでいきます。そのための心強い仲間もできました。興味のある方は歓迎しておりますのでご参加ください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac の Emacs に cmigemo をインストール</title>
+      <link>http://localhost:1313/blog/2014/03/19/install-cmigemo-on-emacs/</link>
+      <pubDate>Wed, 19 Mar 2014 01:11:21 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/19/install-cmigemo-on-emacs/</guid>
+      <description>&lt;p&gt;cmigemo はすごく便利です。Mac の Emacs にインストールするのに若干はまったので備忘録として記載します。&lt;/p&gt;&#xA;&lt;p&gt;まずはインストールから&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ brew install cmigemo&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;ここから &lt;code&gt;migemo.el&lt;/code&gt; をとってきてロードパスの通ったところに置きます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>gem を管理しよう</title>
+      <link>http://localhost:1313/blog/2014/03/14/lets-manage-gem/</link>
+      <pubDate>Fri, 14 Mar 2014 02:23:08 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/14/lets-manage-gem/</guid>
+      <description>&lt;p&gt;Ruby でプログラミングしていると gem という便利なパッケージ管理ツールを使うことになるでしょう。最初のうちは &lt;code&gt;$ gem install hoge&lt;/code&gt; とかやってるかと思います。そんなこんなでいろいろインストールするとぐちゃぐちゃになってきて Rails を動かし始めたらもう訳が分からなくなるでしょう。一つの環境でしか使わないならいいでしょうが、複数で同じ環境を構築したいなどとなると少し大変です。&#xA;そこで bundler の出番です。bundler は gem パッケージの管理を依存関係の問題も含めて解決してくれます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった</title>
+      <link>http://localhost:1313/blog/2014/03/12/not-work-shapado-on-my-rails/</link>
+      <pubDate>Wed, 12 Mar 2014 02:12:34 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/12/not-work-shapado-on-my-rails/</guid>
+      <description>&lt;p&gt;プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみようと思いました。Shapado というQ&amp;amp;Aアプリが面白そうだったので Mac にインストールして動かしてみました。これが時間を食いつぶすきっかけになるとは思ってもいなかった・・・&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>土日で出来る Node.js 入門</title>
+      <link>http://localhost:1313/blog/2014/03/08/start-nodejs-at-weekend/</link>
+      <pubDate>Sat, 08 Mar 2014 17:29:27 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/08/start-nodejs-at-weekend/</guid>
+      <description>&lt;p&gt;そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。&lt;/p&gt;&#xA;&lt;h2 id=&#34;インストール方法&#34;&gt;インストール方法&lt;/h2&gt;&#xA;&lt;p&gt;Node.js はまだまだ開発まっしぐらなのですぐにバージョンが古くなります。調べたところバージョン管理してくれる nvm (Node Version Manager) というのがあるらしいのでそれを使いましょう。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu の git を最新にする</title>
+      <link>http://localhost:1313/blog/2014/03/08/update-git-by-ubuntu/</link>
+      <pubDate>Sat, 08 Mar 2014 15:16:11 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/03/08/update-git-by-ubuntu/</guid>
+      <description>&lt;p&gt;Ubuntu への git インストールは apt-get で出来ますがバージョンが古いので最新バージョンをインストールする方法です。ソースコンパイルは行わずパッケージマネジャーで管理します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>rbenv で入れた ruby で flymake がちゃんと動作しなかったので直した</title>
+      <link>http://localhost:1313/blog/2014/02/05/fix-flymake/</link>
+      <pubDate>Wed, 05 Feb 2014 00:28:18 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2014/02/05/fix-flymake/</guid>
+      <description>&lt;p&gt;Emacs ユーザーの皆さんこんにちは。Ruby 書いてますか？rbenv 入れてますか？flymake 使ってますか？&#xA;flymake はデフォルトだとシステムの ruby を読みにいきます。rbenv で ruby をインストールしていた場合、パスを設定してやらないとシステムの ruby1.8 を使います。なので 1.9以降の文法を書くとエラーになります。具体的には以下のハッシュ記法などで Syntax Error がでます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>プログラミング技術は必要不可欠なものになってゆく</title>
+      <link>http://localhost:1313/blog/2013/12/12/the-reason-that-every-person-should-learn-programming/</link>
+      <pubDate>Thu, 12 Dec 2013 06:24:33 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/12/12/the-reason-that-every-person-should-learn-programming/</guid>
+      <description>&lt;p&gt;世界の最先端を突っ走るアメリカの一番偉い人がプログラミングを学べと言っております。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://life-is-tech.com/blog/programming/messagefrompresidentobama-5843&#34;&gt;http://life-is-tech.com/blog/programming/messagefrompresidentobama-5843&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;フォン・ノイマンがコンピューターの基礎理論を作り上げてから高々60年ほどしか経っていないのに、私たちの生活は大きく変わりました。いつでもどこでもインターネットに繋がり誰とでもコンタクトが取れる時代。そこにはテクノロジーの詰まったハードウェアとソフトウェアがあります。少し前まではコンピューターなんてオタクの触るおもちゃだったのに今では誰もが触るおもちゃに。でも遊んでばかりいると日本は世界から取り残されてしまいます。IT億万長者はマイクロソフト、アップル、グーグル、その他色々ありますが全て米国発です。日本がトップを奪取するためには早期教育が必要です。日本人の能力は高いので頑張ればできる。そのための手助けをしてみたいとそう思います。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>複数の環境で Rails を開発する</title>
+      <link>http://localhost:1313/blog/2013/11/04/develop-rails-with-multi-env/</link>
+      <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/11/04/develop-rails-with-multi-env/</guid>
+      <description>&lt;p&gt;普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;既存の Rails プロジェクトのコードは github で管理&lt;/li&gt;&#xA;  &lt;li&gt;Rails アプリは heroku で公開&lt;/li&gt;&#xA;  &lt;li&gt;これから述べる環境構築は Ubuntu プラットフォームの話&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;また Ubuntu に開発環境が一切入ってない状態の場合、たくさんインストールすべきものがあるのでここでは割愛します。あくまで私の環境だとこうやれば動いたということです。&#xA;&lt;h2 id=&#34;ローカル開発環境を整える&#34;&gt;ローカル開発環境を整える&lt;/h2&gt;&#xA;&lt;p&gt;まず既存のアプリを github からクローンします。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rails 4.0.0.rc1 から 4.0.0 にアップデートしたら嵌った</title>
+      <link>http://localhost:1313/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</link>
+      <pubDate>Sun, 03 Nov 2013 04:24:00 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</guid>
+      <description>&lt;p&gt;3系から4系のアップデートを参考にしたのだけれど、変にエラーが出て嵌ったので解決方法を書く。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ruby-アップデート&#34;&gt;ruby アップデート&lt;/h2&gt;&#xA;&lt;p&gt;まず ruby を最新のバージョンにアップデートする。&#xA;ruby は rbenv で管理している。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MacOS のパッケージ管理で便利な Homebrew の使い方</title>
+      <link>http://localhost:1313/blog/2013/10/30/how-to-use-homebrew/</link>
+      <pubDate>Wed, 30 Oct 2013 03:24:39 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/30/how-to-use-homebrew/</guid>
+      <description>&lt;p&gt;備忘録のため使い方をまとめます。インストールの仕方は割愛します。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ brew update   # brew を最新にする&#xA;$ brew outdated # インストール済のパッケージのうち最新のバージョンが公開されてるものを表示&#xA;$ brew upgrade  # インストールしている Formula をアップデート&#xA;$ brew doctor   # エラーなどのチェック&#xA;$ brew cleanup  # 旧バージョンのパッケージを削除&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>各ディレクトリの使用量をターミナルで確認する方法</title>
+      <link>http://localhost:1313/blog/2013/10/30/find-disk-usage-by-terminal/</link>
+      <pubDate>Wed, 30 Oct 2013 02:03:20 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/30/find-disk-usage-by-terminal/</guid>
+      <description>&lt;p&gt;ターミナルを使って HDD 容量を確認するのに使うコマンドは &lt;code&gt;df&lt;/code&gt; です。&#xA;ディレクトリの容量を確認するコマンドは &lt;code&gt;du&lt;/code&gt; です。&lt;/p&gt;&#xA;&lt;p&gt;今回はちょっと便利なオプションを紹介します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Gauche で rlwrap を使う</title>
+      <link>http://localhost:1313/blog/2013/10/19/gauche-rlwrap/</link>
+      <pubDate>Sat, 19 Oct 2013 20:45:17 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/gauche-rlwrap/</guid>
+      <description>&lt;p&gt;Gauche で開発をするなら rlwrap は外せませんね。&#xA;ということで早速インストールしてみましょう。&lt;/p&gt;&#xA;&lt;p&gt;端末から以下を実行します。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ sudo apt-get install rlwrap&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Gauche の補完ファイルを準備します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs の info の使い方と info ドキュメントインストールの仕方</title>
+      <link>http://localhost:1313/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</link>
+      <pubDate>Sat, 19 Oct 2013 19:19:20 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</guid>
+      <description>&lt;h2 id=&#34;info-の使い方&#34;&gt;info の使い方&lt;/h2&gt;&#xA;&lt;p&gt;info は Emacs の中で説明を読むしくみ。&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;M-x info&lt;/code&gt; または &lt;code&gt;C-h i&lt;/code&gt; で開始する。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;u       up      一つ上に戻る&#xA;d       dir     入口に戻る&#xA;M-x info        info を開始する&#xA;q       quit    終了&#xA;space           とにかく読み進む&#xA;p       prev    前の節に戻る&#xA;n       next    次の節に進む&#xA;RET             矢印 (cursor) のある節に進む&#xA;m       menu    (その画面の中の) 名前で指定して移動する&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;info-ドキュメントのインストール&#34;&gt;info ドキュメントのインストール&lt;/h2&gt;&#xA;&lt;p&gt;ここでは SICP, Gauche, R5RS の info のインストールをやってみる。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>シェル周りまとめ</title>
+      <link>http://localhost:1313/blog/2013/10/19/about-shell/</link>
+      <pubDate>Sat, 19 Oct 2013 18:33:58 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/about-shell/</guid>
+      <description>&lt;h2 id=&#34;csh-tcsh-まとめ&#34;&gt;csh tcsh まとめ&lt;/h2&gt;&#xA;&lt;h3 id=&#34;login-csh-tcsh&#34;&gt;.login (csh, tcsh)&lt;/h3&gt;&#xA;&lt;p&gt;login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。&#xA;login 後にシェルを起動しても読み込まれない。&lt;/p&gt;&#xA;&lt;h3 id=&#34;tcshrc-tcsh&#34;&gt;.tcshrc (tcsh)&lt;/h3&gt;&#xA;&lt;p&gt;tcsh を起動した際に読み込まれる設定ファイル。&#xA;login 後にシェルを起動した際にも毎回読み込まれる。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>標準のコマンドの関連付けを変更 update-alternatives</title>
+      <link>http://localhost:1313/blog/2013/10/19/update-alternatives/</link>
+      <pubDate>Sat, 19 Oct 2013 18:17:35 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/update-alternatives/</guid>
+      <description>&lt;p&gt;Ubuntu にて &lt;code&gt;update-alternatives&lt;/code&gt; コマンドを使用すると標準コマンドの関連付けを変更できます。&#xA;例として Emacs の関連付けを変更する方法をみてみましょう。&#xA;Emacs がどこから実行されるか調べてみます。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs の load-path の調べ方</title>
+      <link>http://localhost:1313/blog/2013/10/19/look-at-load-path-emacs/</link>
+      <pubDate>Sat, 19 Oct 2013 18:07:23 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/look-at-load-path-emacs/</guid>
+      <description>&lt;p&gt;Emacs で load-path を調べてそれを見やすく表示させる方法です。&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;*scratch*&lt;/code&gt; バッファで以下を評価します。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;load-path [Ctrl+j]&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;次に &lt;code&gt;(&lt;/code&gt; にカーソルを移動して以下を実行します。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;M-x query-replace-regexp RET&#xA;Query replace regexp: (半角空白) RET&#xA;Query replace regexp   with: C-q C-j&#xA;RET&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;そして &lt;code&gt;!&lt;/code&gt; で全て置換します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs24 のテーマフレームワークを使おう</title>
+      <link>http://localhost:1313/blog/2013/10/19/theme-framework-for-emacs24/</link>
+      <pubDate>Sat, 19 Oct 2013 03:32:28 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/theme-framework-for-emacs24/</guid>
+      <description>&lt;p&gt;以前、自分が書いた記事を備忘録のためにリンク掲載します。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://qiita.com/iriya-ufo@github/items/6f3304a23268a51a688e&#34;&gt;Emacs24 のテーマフレームワークを使おう&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>Emacs24 のパッケージシステムを使おう</title>
+      <link>http://localhost:1313/blog/2013/10/19/emacs24-package-system/</link>
+      <pubDate>Sat, 19 Oct 2013 03:26:46 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/emacs24-package-system/</guid>
+      <description>&lt;p&gt;Emacs24 から独自のパッケージシステムが導入されました。&#xA;これによって、今までちまちま github などからインストールしていた各種 elisp が一元管理できるようになりバージョンアップなども行えるため、素晴らしく便利になりました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu の rbenv で管理している ruby を新しくする</title>
+      <link>http://localhost:1313/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</link>
+      <pubDate>Sat, 19 Oct 2013 02:00:50 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/renew-rebuild-ruby-by-rbenv/</guid>
+      <description>&lt;p&gt;Ubuntu の rbenv で管理している ruby を新しくする方法です。&#xA;MacOS だと多分 homebrew とか使ってると思います。今回は割愛です。&lt;/p&gt;&#xA;&lt;h2 id=&#34;利用可能な-ruby-のバージョンを確認&#34;&gt;利用可能な ruby のバージョンを確認&lt;/h2&gt;&#xA;&lt;p&gt;ruby-build で利用可能な ruby のバージョンを確認します。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu に heroku toolbelt をインストール</title>
+      <link>http://localhost:1313/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</link>
+      <pubDate>Sat, 19 Oct 2013 01:06:24 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/10/19/heroku-toolbelt-to-ubuntu/</guid>
+      <description>&lt;p&gt;下記一行を端末から実行でOK&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
+    </item>
+    <item>
+      <title>i-node が枯渇してファイルの作成ができなくなった件</title>
+      <link>http://localhost:1313/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</link>
+      <pubDate>Wed, 18 Sep 2013 21:35:15 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</guid>
+      <description>&lt;p&gt;久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。&#xA;適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。&lt;/p&gt;&#xA;&lt;p&gt;Ubuntu はよくできているので、エラーメッセージに出るコマンドの通りに打つとたいてい治ります、が今回は無理でした。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Emacs 使いが Sublime Text 2 を練習してみた</title>
+      <link>http://localhost:1313/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</link>
+      <pubDate>Sat, 13 Jul 2013 15:43:18 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/07/13/try-sublime-text2-instead-of-emacs/</guid>
+      <description>&lt;p&gt;知り合いのプログラマーが Sublime Text いいよーっていうもんだから、気になったので練習してみました。&#xA;普段は Emacs 使ってる私ですが、結論から言いますと、Emacs から Sublime Text への移行は無理です！&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu に Android Studio をインストール</title>
+      <link>http://localhost:1313/blog/2013/06/01/android-studio-to-ubuntu/</link>
+      <pubDate>Sat, 01 Jun 2013 03:41:13 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/06/01/android-studio-to-ubuntu/</guid>
+      <description>&lt;p&gt;興味本位でいれてみました。&#xA;Ubuntu のバージョンは 12.04 です。&lt;/p&gt;&#xA;&lt;p&gt;公式から Linux 版の tgz をダウンロードして解凍します。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://developer.android.com/sdk/installing/studio.html&#34;&gt;Getting Started with Android Studio&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;シェルに PATH を設定します。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-sh&#34; data-lang=&#34;sh&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Android Studio&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nb&#34;&gt;export&lt;/span&gt; &lt;span class=&#34;nv&#34;&gt;PATH&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nv&#34;&gt;$PATH&lt;/span&gt;:&lt;span class=&#34;nv&#34;&gt;$HOME&lt;/span&gt;/Downloads/android-studio/bin&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;端末から以下を実行で起動します (ただ私の環境では JDK のエラーがでました。Android Studio は Oracle JDK 推奨ですが、Open JDK が入っていたためです)。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
+      <link>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
+      <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
+      <description>&lt;p&gt;Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。&#xA;環境構築は Mac OS X で行っています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。&#xA;brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mac OS X にインラインパッチの当たった Emacs を Homebrew でインストール</title>
+      <link>http://localhost:1313/blog/2013/05/18/install-emacs-by-homebrew/</link>
+      <pubDate>Sat, 18 May 2013 08:30:49 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/18/install-emacs-by-homebrew/</guid>
+      <description>&lt;p&gt;先ほど Homebrew のアップデートをしたところ Emacs が使えなくなりました。&#xA;古い Emacs が削除されてリンク先が消滅したのが原因でした。&#xA;これはいい機会？と思い最新の Emacs 24.3 を使うことにします。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>zsh で git のコマンド補完及びブランチ名の表示</title>
+      <link>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</link>
+      <pubDate>Sat, 18 May 2013 07:58:33 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</guid>
+      <description>&lt;h2 id=&#34;git-のコマンド補完&#34;&gt;git のコマンド補完&lt;/h2&gt;&#xA;&lt;p&gt;まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでアップデートしました。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>rbenv で Mac OS X に Ruby 2.0.0 をインストールする</title>
+      <link>http://localhost:1313/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</link>
+      <pubDate>Mon, 13 May 2013 18:08:14 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/13/install-ruby2-to-mac-by-rbenv/</guid>
+      <description>&lt;p&gt;rvm はクールじゃないので rbenv を使って Ruby をインストールします。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;はじめに『&lt;a href=&#34;http://www.oiax.jp/rails/zakkan/rails_3_1_installation_on_macosx.html&#34;&gt;Ruby on Rails 3.2 を Mac OS X にインストールする手順をかなり丁寧に説明してみました&lt;/a&gt;』を参考に準備をしておきます。&#xA;このサイトは Rails のインストールについてですが Xcode, Homebrew など初歩からかなり丁寧に書いているのでオススメです。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Rails のアップデート</title>
+      <link>http://localhost:1313/blog/2013/05/12/rails-update/</link>
+      <pubDate>Sun, 12 May 2013 04:22:10 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/12/rails-update/</guid>
+      <description>&lt;p&gt;Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。&lt;/p&gt;&#xA;&lt;h2 id=&#34;gem-のアップデート&#34;&gt;Gem のアップデート&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ sudo gem update --system&#xA;$ gem -v&#xA;1.8.24&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;rails-のアップデート&#34;&gt;Rails のアップデート&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ sudo gem update rails&#xA;$ rails -v&#xA;Rails 3.2.11&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;古い-rails-をアンインストール&#34;&gt;古い Rails をアンインストール&lt;/h2&gt;&#xA;&lt;p&gt;古いバージョンの Rails を削除します。新しいバージョンの Rails で動作確認していないなら、念の為に残しておいたほうがよいでしょう。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法</title>
+      <link>http://localhost:1313/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</link>
+      <pubDate>Fri, 10 May 2013 08:47:32 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</guid>
+      <description>&lt;p&gt;サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります。&#xA;また普通にバックグラウンドジョブとして動かしてもだめです。&#xA;以下のように &lt;code&gt;nohup&lt;/code&gt; シグナル送ってプロセスとして動かし続けてあげたら大丈夫です。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>SSH ログインが遅い問題を解決</title>
+      <link>http://localhost:1313/blog/2013/05/10/why-so-slow-ssh-login/</link>
+      <pubDate>Fri, 10 May 2013 08:28:07 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/10/why-so-slow-ssh-login/</guid>
+      <description>&lt;p&gt;SSH でログインそのものはできるが非常に時間がかかるという場合、DNS の設定がよろしくない場合があります。&#xA;そんな時は、&lt;code&gt;sshd_config&lt;/code&gt; に以下を追記してみてください。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Ubuntu で DVD リッピング</title>
+      <link>http://localhost:1313/blog/2013/05/07/ubuntu-dvd-ripping/</link>
+      <pubDate>Tue, 07 May 2013 17:29:47 +0000</pubDate>
+      <guid>http://localhost:1313/blog/2013/05/07/ubuntu-dvd-ripping/</guid>
+      <description>&lt;p&gt;Ubuntu で DVD をリッピングする方法はいくつかあります。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;k9copy&lt;/li&gt;&#xA;&lt;li&gt;dvd::rip&lt;/li&gt;&#xA;&lt;li&gt;wine で DVD Decrypter&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメージとして取り出す方法がうまくいったので書いておきます。環境は Ubuntu 12.04 LTS です。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

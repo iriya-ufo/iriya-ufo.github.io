@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Investment-Performance on iriya-ufo&#39;s blog</title>
+    <link>http://localhost:1313/tags/investment-performance/</link>
+    <description>Recent content in Investment-Performance on iriya-ufo&#39;s blog</description>
+    <generator>Hugo</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 16 Jan 2022 00:33:43 +0900</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/investment-performance/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>【2021年】株投資の損益を計算した</title>
+      <link>http://localhost:1313/blog/2022/01/16/profit-and-loss-2021/</link>
+      <pubDate>Sun, 16 Jan 2022 00:33:43 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2022/01/16/profit-and-loss-2021/</guid>
+      <description>&lt;p&gt;2021年の株投資の損益がまとめられたので公開します (これまでの振り返りは&lt;a href=&#34;https://iriya-ufo.net/tags/investment-performance/&#34;&gt;こちら&lt;/a&gt;)。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1U6vwpXWB5lR9FtSiTgY9JCDhNz3wELyLojiwEzbnnjA/edit#gid=598918746&#34;&gt;投資における損益計算シート&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;振り返り&#34;&gt;振り返り&lt;/h2&gt;&#xA;&lt;p&gt;スプレッドシートをみれば確認できますが、取引回数が極めて少ない上に3月以降の取引がありません。&#xA;実は個人的な理由によって資産を全部引き出す必要があったので、今まで持っていた株を全部売った形になります。&#xA;なので2021年は特筆すべきことがありませんでした。またゼロからスタートの気持ちで頑張っていきたいと思います。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>【2020年】株投資の損益を計算した</title>
+      <link>http://localhost:1313/blog/2021/02/24/profit-and-loss-2020/</link>
+      <pubDate>Wed, 24 Feb 2021 01:25:46 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2021/02/24/profit-and-loss-2020/</guid>
+      <description>&lt;p&gt;ようやく2020年の株投資の損益がまとめられたので公開します (これまでの振り返りは&lt;a href=&#34;https://iriya-ufo.net/tags/investment-performance/&#34;&gt;こちら&lt;/a&gt;)。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1U6vwpXWB5lR9FtSiTgY9JCDhNz3wELyLojiwEzbnnjA/edit?usp=sharing&#34;&gt;投資における損益計算シート&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;成績結果&#34;&gt;成績結果&lt;/h2&gt;&#xA;&lt;p&gt;2020年の損益は &lt;strong&gt;+39万&lt;/strong&gt; ほどで勝率は &lt;strong&gt;64.58%&lt;/strong&gt; でした。&lt;/p&gt;&#xA;&lt;p&gt;最大損失はインスペック (6656) で &lt;strong&gt;-172,750円&lt;/strong&gt;、最大利益はクラウドストライク (CRWD) の &lt;strong&gt;+106,728円&lt;/strong&gt; でした。&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>株投資における損益を真面目に計算してみた</title>
+      <link>http://localhost:1313/blog/2020/01/11/profit-and-loss/</link>
+      <pubDate>Sat, 11 Jan 2020 23:50:37 +0900</pubDate>
+      <guid>http://localhost:1313/blog/2020/01/11/profit-and-loss/</guid>
+      <description>&lt;p&gt;今までの株投資の損益を計算しました。ちょっと成績悪すぎて落第レベルです……。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://docs.google.com/spreadsheets/d/1U6vwpXWB5lR9FtSiTgY9JCDhNz3wELyLojiwEzbnnjA/edit?usp=sharing&#34;&gt;投資における損益計算シート&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;この損失について深く反省し今後に活かしていきたいと思います。&lt;/p&gt;&#xA;&lt;h2 id=&#34;成績結果&#34;&gt;成績結果&lt;/h2&gt;&#xA;&lt;p&gt;株取引を始めた2018年5月から2019年までを合わせた総投資額は &lt;strong&gt;180万&lt;/strong&gt; ほどで損益は &lt;strong&gt;-53万&lt;/strong&gt; でした。&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
