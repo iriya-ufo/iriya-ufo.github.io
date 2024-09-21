@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Shell on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/shell/</link>
+    <link>https://iriya-ufo.net/tags/shell/</link>
     <description>Recent content in Shell on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 19 Oct 2013 18:33:58 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/shell/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/shell/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>シェル周りまとめ</title>
-      <link>http://localhost:1313/blog/2013/10/19/about-shell/</link>
+      <link>https://iriya-ufo.net/blog/2013/10/19/about-shell/</link>
       <pubDate>Sat, 19 Oct 2013 18:33:58 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/10/19/about-shell/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/10/19/about-shell/</guid>
       <description>&lt;h2 id=&#34;csh-tcsh-まとめ&#34;&gt;csh tcsh まとめ&lt;/h2&gt;&#xA;&lt;h3 id=&#34;login-csh-tcsh&#34;&gt;.login (csh, tcsh)&lt;/h3&gt;&#xA;&lt;p&gt;login shellを csh, tcsh にした場合、端末から login した際に読み込まれる設定ファイル。&#xA;login 後にシェルを起動しても読み込まれない。&lt;/p&gt;&#xA;&lt;h3 id=&#34;tcshrc-tcsh&#34;&gt;.tcshrc (tcsh)&lt;/h3&gt;&#xA;&lt;p&gt;tcsh を起動した際に読み込まれる設定ファイル。&#xA;login 後にシェルを起動した際にも毎回読み込まれる。&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Unix on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/unix/</link>
+    <link>https://iriya-ufo.net/tags/unix/</link>
     <description>Recent content in Unix on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 28 May 2017 23:53:36 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/unix/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/unix/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>UNIX 時刻の変換</title>
-      <link>http://localhost:1313/blog/2017/05/28/unix-time/</link>
+      <link>https://iriya-ufo.net/blog/2017/05/28/unix-time/</link>
       <pubDate>Sun, 28 May 2017 23:53:36 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2017/05/28/unix-time/</guid>
+      <guid>https://iriya-ufo.net/blog/2017/05/28/unix-time/</guid>
       <description>&lt;p&gt;UNIX 時間はビルトインコマンドで変換できる&lt;/p&gt;&#xA;&lt;h2 id=&#34;linux-の場合&#34;&gt;Linux の場合&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;date --date &amp;quot;@1495526373&amp;quot;&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;mac-の場合&#34;&gt;Mac の場合&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;date -r 1495526373&lt;/code&gt;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/UNIX%E6%99%82%E9%96%93&#34;&gt;UNIX 時間とは&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
       <title>Mac OS X で locate エラーの直し方</title>
-      <link>http://localhost:1313/blog/2014/06/07/fix-locate-error/</link>
+      <link>https://iriya-ufo.net/blog/2014/06/07/fix-locate-error/</link>
       <pubDate>Sat, 07 Jun 2014 22:35:26 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/06/07/fix-locate-error/</guid>
+      <guid>https://iriya-ufo.net/blog/2014/06/07/fix-locate-error/</guid>
       <description>&lt;p&gt;Linux でお世話になってるファイルを探すコマンドの &lt;code&gt;locate&lt;/code&gt; ですが、当然 Mac にもあります。&#xA;しかしデータベースを更新するコマンドが違ってて Linux だと &lt;code&gt;updatedb&lt;/code&gt; ですが Mac は &lt;code&gt;/usr/libexec/locate.updatedb&lt;/code&gt; になります。&#xA;毎回コマンドを打つのはたるいのでエイリアスを張っていたのですが、あるときうまくDBが更新されていないようだと気づきました。&#xA;こんなエラーがでます。&lt;/p&gt;</description>
     </item>
     <item>
       <title>各ディレクトリの使用量をターミナルで確認する方法</title>
-      <link>http://localhost:1313/blog/2013/10/30/find-disk-usage-by-terminal/</link>
+      <link>https://iriya-ufo.net/blog/2013/10/30/find-disk-usage-by-terminal/</link>
       <pubDate>Wed, 30 Oct 2013 02:03:20 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/10/30/find-disk-usage-by-terminal/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/10/30/find-disk-usage-by-terminal/</guid>
       <description>&lt;p&gt;ターミナルを使って HDD 容量を確認するのに使うコマンドは &lt;code&gt;df&lt;/code&gt; です。&#xA;ディレクトリの容量を確認するコマンドは &lt;code&gt;du&lt;/code&gt; です。&lt;/p&gt;&#xA;&lt;p&gt;今回はちょっと便利なオプションを紹介します。&lt;/p&gt;</description>
     </item>
   </channel>
