@@ -175,7 +175,7 @@ copyright = ""            # default: author.name ↓        # 默认为下面配
   [params.social]                                         # 社交链接
     # a-email = "dorapocket22@gmail.com"
     # b-stack-overflow = "http://localhost:1313"
-    c-twitter = "https://twitter.com/iriya_ufo"
+    # c-twitter = "https://twitter.com/iriya_ufo"
     # d-facebook = "http://localhost:1313"
     e-linkedin = "https://www.linkedin.com/in/naoto-inoue-a7b7171a1/"
     # f-google = "http://localhost:1313"
