@@ -3,7 +3,7 @@
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <title>2024 09 22 Shadcn Setup - iriya-ufo&#39;s blog</title>
+  <title>shadcn/ui をセットアップする - iriya-ufo&#39;s blog</title>
   <meta name="renderer" content="webkit" />
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
 
@@ -16,7 +16,10 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
 
 
-<meta name="author" content="" /><meta name="description" content="" /><meta name="keywords" content="Hugo, theme, even" />
+<meta name="author" content="" /><meta name="description" content="Vite で React の環境構築の記事で作成した React に shadcn/ui をセットアップしました。
+手順 Tailwind が必要なのでインストールします。
+1 2 $ pnpm i -D tailwindcss postcss autoprefixer $ pnpx tailwindcss init -p Tailwind 関連の初期設定を行います。 公式サイトにあるように tailwind.config.js と ./src/index.css を編集します。
+" /><meta name="keywords" content="Hugo, theme, even" />
 
 
 
@@ -40,21 +43,30 @@
 
 <meta property="og:url" content="http://localhost:1313/blog/2024/09/22/shadcn-setup/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
-  <meta property="og:title" content="2024 09 22 Shadcn Setup">
-  <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
+  <meta property="og:title" content="shadcn/ui をセットアップする">
+  <meta property="og:description" content="Vite で React の環境構築の記事で作成した React に shadcn/ui をセットアップしました。
+手順 Tailwind が必要なのでインストールします。
+1 2 $ pnpm i -D tailwindcss postcss autoprefixer $ pnpx tailwindcss init -p Tailwind 関連の初期設定を行います。 公式サイトにあるように tailwind.config.js と ./src/index.css を編集します。">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
     <meta property="article:published_time" content="2024-09-22T23:49:33+09:00">
     <meta property="article:modified_time" content="2024-09-22T23:49:33+09:00">
+    <meta property="article:tag" content="React">
 
-  <meta itemprop="name" content="2024 09 22 Shadcn Setup">
-  <meta itemprop="description" content="Naoto Inoue&#39;s Personal blog about everything.">
+  <meta itemprop="name" content="shadcn/ui をセットアップする">
+  <meta itemprop="description" content="Vite で React の環境構築の記事で作成した React に shadcn/ui をセットアップしました。
+手順 Tailwind が必要なのでインストールします。
+1 2 $ pnpm i -D tailwindcss postcss autoprefixer $ pnpx tailwindcss init -p Tailwind 関連の初期設定を行います。 公式サイトにあるように tailwind.config.js と ./src/index.css を編集します。">
   <meta itemprop="datePublished" content="2024-09-22T23:49:33+09:00">
   <meta itemprop="dateModified" content="2024-09-22T23:49:33+09:00">
+  <meta itemprop="wordCount" content="298">
+  <meta itemprop="keywords" content="React">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="2024 09 22 Shadcn Setup">
-  <meta name="twitter:description" content="Naoto Inoue&#39;s Personal blog about everything.">
+  <meta name="twitter:title" content="shadcn/ui をセットアップする">
+  <meta name="twitter:description" content="Vite で React の環境構築の記事で作成した React に shadcn/ui をセットアップしました。
+手順 Tailwind が必要なのでインストールします。
+1 2 $ pnpm i -D tailwindcss postcss autoprefixer $ pnpx tailwindcss init -p Tailwind 関連の初期設定を行います。 公式サイトにあるように tailwind.config.js と ./src/index.css を編集します。">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -121,12 +133,12 @@
           <article class="post">
     
     <header class="post-header">
-      <h1 class="post-title">2024 09 22 Shadcn Setup</h1>
+      <h1 class="post-title">shadcn/ui をセットアップする</h1>
 
       <div class="post-meta">
         <span class="post-time"> 2024-09-22 </span>
         <div class="post-category">
-            <a href="/categories//">  </a>
+            <a href="/categories/programming/"> programming </a>
             </div>
         
       </div>
@@ -134,7 +146,69 @@
 
     
     <div class="post-content">
-      
+      <p><a href="/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/">Vite で React の環境構築</a>の記事で作成した React に shadcn/ui をセットアップしました。</p>
+<h2 id="手順">手順</h2>
+<p>Tailwind が必要なのでインストールします。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pnpm i -D tailwindcss postcss autoprefixer
+</span></span><span class="line"><span class="cl">$ pnpx tailwindcss init -p
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Tailwind 関連の初期設定を行います。
+<a href="https://tailwindcss.com/docs/guides/vite">公式サイト</a>にあるように <code>tailwind.config.js</code> と <code>./src/index.css</code> を編集します。</p>
+<p>shadcn/ui ではインポートパスの解決のため <code>tsconfig.json</code> に以下を追記します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl">  <span class="s2">&#34;compilerOptions&#34;</span><span class="err">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;paths&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&#34;@/*&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;./src/*&#34;</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>shadcn/ui の設定ファイルを生成します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ pnpx shadcn@latest init
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>以下項目が聞かれるので適当に選択します。後から <code>components.json</code> を変えることで変更可能です。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">Which</span> <span class="n">style</span> <span class="n">would</span> <span class="n">you</span> <span class="n">like</span> <span class="n">to</span> <span class="n">use</span><span class="err">?</span> <span class="err">›</span> <span class="n">Default</span>
+</span></span><span class="line"><span class="cl"><span class="n">Which</span> <span class="n">color</span> <span class="n">would</span> <span class="n">you</span> <span class="n">like</span> <span class="n">to</span> <span class="n">use</span> <span class="n">as</span> <span class="n">base</span> <span class="n">color</span><span class="err">?</span> <span class="err">›</span> <span class="n">Neutral</span>
+</span></span><span class="line"><span class="cl"><span class="n">Do</span> <span class="n">you</span> <span class="n">want</span> <span class="n">to</span> <span class="n">use</span> <span class="n">CSS</span> <span class="n">variables</span> <span class="k">for</span> <span class="n">colors</span><span class="err">?</span> <span class="err">›</span> <span class="n">no</span> <span class="o">/</span> <span class="n">yes</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>サンプルでボタンを追加などして動作確認してみます。</p>
+<ul>
+<li><a href="https://ui.shadcn.com/docs/components/button">https://ui.shadcn.com/docs/components/button</a></li>
+</ul>
+<h2 id="参考サイト">参考サイト</h2>
+<ul>
+<li><a href="https://zenn.dev/mottox2/articles/react-shadcn-ui">ReactのUIコンポーネントならshadcn/uiがちょうどいい</a></li>
+</ul>
+
     </div>
 
     <div class="post-copyright">
@@ -154,7 +228,7 @@
 </div>
 <footer class="post-footer">
       <div class="post-tags">
-          <a href="/tags//"></a>
+          <a href="/tags/react/">react</a>
           </div>
       <nav class="post-nav">
         

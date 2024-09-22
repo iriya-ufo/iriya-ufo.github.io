@@ -163,22 +163,14 @@ export default defineConfig({
 })
 ```
 
-`tsconfig.json` を編集します。
+`tsconfig.json` に追記します。
 
 ```json
-+ { "path": "./tsconfig.paths.json" }
-```
-
-`tsconfig.paths.json` を作成します。
-
-```json
-+{
 +  "compilerOptions": {
 +    "paths": {
 +      "@/*": ["./src/*"]
 +    }
 +  }
-+}
 ```
 
 このとき下記のようなエラーが出る場合は `$ npm i -D @types/node` とすることで解消されます。
@@ -188,8 +180,8 @@ export default defineConfig({
 
 ![path-error](/images/2022/02/path-error.png)
 
-ちなみに `vite.config.ts` と `tsconfig.paths.json` で同じようなパスの設定を書いてますが、次のような理由があるためです。
+ちなみに `vite.config.ts` と `tsconfig.json` で同じようなパスの設定を書いてますが、次のような理由があるためです。
 Vite では `tsconfig.json` にパスを書いても無視されてしまいます。
 Vite に認識してもらうために `vite.config.ts` にパスの設定を書きます。
-`tsconfig.paths.json` でパスの設定をしている理由は VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。
+`tsconfig.json` でパスの設定をしている理由は VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。
 そのため Vite ではなく `create-react-app` で作成したアプリの場合は `tsconfig.json` に path の設定を書くだけで大丈夫です。

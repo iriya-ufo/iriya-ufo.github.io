@@ -57,7 +57,7 @@
 使用する技術スタック React TypeScript Vite pnpm Biome 目次 Node のインストール pnpm のインストール Vite で React x TypeScript を構築 Biome セットアップ VSCode 設定 ESLint 削除 絶対パスでインポート Node のインストール asdf を利用して Node をインストールします。">
   <meta itemprop="datePublished" content="2024-09-08T02:16:39+09:00">
   <meta itemprop="dateModified" content="2024-09-08T02:16:39+09:00">
-  <meta itemprop="wordCount" content="900">
+  <meta itemprop="wordCount" content="882">
   <meta itemprop="keywords" content="React">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Vite で React の環境構築">
@@ -377,16 +377,7 @@ Biome を使うため削除します。</p>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><code>tsconfig.json</code> を編集します。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">+</span> <span class="p">{</span> <span class="nt">&#34;path&#34;</span><span class="p">:</span> <span class="s2">&#34;./tsconfig.paths.json&#34;</span> <span class="p">}</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p><code>tsconfig.paths.json</code> を作成します。</p>
+</div><p><code>tsconfig.json</code> に追記します。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -394,17 +385,13 @@ Biome を使うため削除します。</p>
 </span><span class="lnt">3
 </span><span class="lnt">4
 </span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">+</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl"><span class="err">+</span>  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="err">+</span>  <span class="s2">&#34;compilerOptions&#34;</span><span class="err">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="nt">&#34;paths&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>      <span class="nt">&#34;@/*&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;./src/*&#34;</span><span class="p">]</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>  <span class="p">}</span>
-</span></span><span class="line"><span class="cl"><span class="err">+</span><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>このとき下記のようなエラーが出る場合は <code>$ npm i -D @types/node</code> とすることで解消されます。</p>
@@ -413,10 +400,10 @@ Biome を使うため削除します。</p>
 <li><code>Cannot find name '__dirname'.</code></li>
 </ul>
 <p><img src="/images/2022/02/path-error.png" alt="path-error"></p>
-<p>ちなみに <code>vite.config.ts</code> と <code>tsconfig.paths.json</code> で同じようなパスの設定を書いてますが、次のような理由があるためです。
+<p>ちなみに <code>vite.config.ts</code> と <code>tsconfig.json</code> で同じようなパスの設定を書いてますが、次のような理由があるためです。
 Vite では <code>tsconfig.json</code> にパスを書いても無視されてしまいます。
 Vite に認識してもらうために <code>vite.config.ts</code> にパスの設定を書きます。
-<code>tsconfig.paths.json</code> でパスの設定をしている理由は VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。
+<code>tsconfig.json</code> でパスの設定をしている理由は VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。
 そのため Vite ではなく <code>create-react-app</code> で作成したアプリの場合は <code>tsconfig.json</code> に path の設定を書くだけで大丈夫です。</p>
 
     </div>
@@ -443,7 +430,7 @@ Vite に認識してもらうために <code>vite.config.ts</code> にパスの�
       <nav class="post-nav">
         <a class="prev" href="/blog/2024/09/22/shadcn-setup/">
             <i class="iconfont icon-left"></i>
-            <span class="prev-text nav-default">2024 09 22 Shadcn Setup</span>
+            <span class="prev-text nav-default">shadcn/ui をセットアップする</span>
             <span class="prev-text nav-mobile">Prev</span>
           </a>
         <a class="next" href="/blog/2024/01/26/emacs-tips/">
