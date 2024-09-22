@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Rails on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/rails/</link>
+    <link>https://iriya-ufo.net/tags/rails/</link>
     <description>Recent content in Rails on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 14 Aug 2019 10:10:30 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/rails/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/rails/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Rails の開発環境を Docker で構築する</title>
-      <link>http://localhost:1313/blog/2019/08/14/rails-dev-env-on-docker/</link>
+      <link>https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/</link>
       <pubDate>Wed, 14 Aug 2019 10:10:30 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2019/08/14/rails-dev-env-on-docker/</guid>
+      <guid>https://iriya-ufo.net/blog/2019/08/14/rails-dev-env-on-docker/</guid>
       <description>&lt;p&gt;開発環境で使える Rails の Docker 環境構築です。&#xA;Docker とは関係ない話しも混じってます。&lt;/p&gt;&#xA;&lt;h2 id=&#34;コンテナ構成&#34;&gt;コンテナ構成&lt;/h2&gt;&#xA;&lt;p&gt;シンプルに Ruby をベースに Rails 環境をビルドします。&#xA;DB は PostgreSQL を使います。永続化に Volume を利用します。&lt;/p&gt;</description>
     </item>
   </channel>

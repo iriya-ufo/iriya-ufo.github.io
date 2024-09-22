@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Sinatra on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/sinatra/</link>
+    <link>https://iriya-ufo.net/tags/sinatra/</link>
     <description>Recent content in Sinatra on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 07 Sep 2014 17:32:36 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/sinatra/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/sinatra/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Sinatra アプリを Heroku で動かすまで</title>
-      <link>http://localhost:1313/blog/2014/09/07/run-sinatra-app-on-heroku/</link>
+      <link>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</link>
       <pubDate>Sun, 07 Sep 2014 17:32:36 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
+      <guid>https://iriya-ufo.net/blog/2014/09/07/run-sinatra-app-on-heroku/</guid>
       <description>&lt;h2 id=&#34;環境&#34;&gt;環境&lt;/h2&gt;&#xA;&lt;p&gt;以下のような環境で動かします。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;Sinatra&lt;/li&gt;&#xA;  &lt;li&gt;Heroku&lt;/li&gt;&#xA;  &lt;li&gt;PostgreSQL&lt;/li&gt;&#xA;  &lt;li&gt;Unicorn&lt;/li&gt;&#xA;  &lt;li&gt;ActiveRecord&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;初期設定&#34;&gt;初期設定&lt;/h2&gt;&#xA;&lt;p&gt;まず Ruby と Git などの環境を整えます。環境が構築できたら Sinatra で作るアプリ用にディレクトリを作ります。そこで &lt;code&gt;$ bundle init&lt;/code&gt; して Gemfile を作成します。&lt;/p&gt;</description>
     </item>
   </channel>
