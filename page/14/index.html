@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -26,9 +26,9 @@
 <meta name="generator" content="Hugo 0.134.2 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -49,8 +49,8 @@
 
   <meta itemprop="name" content="iriya-ufo&#39;s blog">
   <meta itemprop="description" content="Naoto Inoue&#39;s Personal blog about everything.">
-  <meta itemprop="datePublished" content="2024-09-08T02:16:39+09:00">
-  <meta itemprop="dateModified" content="2024-09-08T02:16:39+09:00">
+  <meta itemprop="datePublished" content="2024-09-22T23:49:33+09:00">
+  <meta itemprop="dateModified" content="2024-09-22T23:49:33+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iriya-ufo&#39;s blog">
   <meta name="twitter:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -118,6 +118,27 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/blog/2015/04/15/rich-dad-cash-flow/">「金持ち父さんのキャッシュフロー・クワドラント」を読んだ</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-04-15 </span>
+      <div class="post-category">
+          <a href="/categories/review/"> review </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>知り合いに勧められたので読んでみました。前作となる「金持ち父さん、貧乏父さん」も読んでいます。本書は前作に比べてより<strong>右側</strong>にいくための方法について具体的に述べられています。</p>
+    </div>
+    <div class="read-more">
+      <a href="/blog/2015/04/15/rich-dad-cash-flow/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/blog/2015/02/22/post-human-era/">ポスト・ヒューマン時代</a></h1>
@@ -320,88 +341,6 @@
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/blog/2014/12/04/vim-tips/">Vim 小技集</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2014-12-04 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>自分のための覚書</p>
-<h2 id="編集">編集</h2>
-<pre><code>:%s/:\(\w\+\) =&gt;/\1:/g  # hash の書き方を置換 #正規表現
-Ctrl+v jjjj I           # 4行コメントアウト(,#)
-Ctrl+v jjjj d           # 4行コメントイン(,#)
-Ctrl+v jjjj c aaaa      # 4行置換
-viwy                    # カーソル位置の単語を yank
-viwp                    # カーソル位置の単語を yank している内容で上書き
-cw                      # カーソル位置から単語の最後までを書き換える
-viwu                    # カーソル位置の単語を undercase
-viwU                    # カーソル位置の単語を UPPERCASE
-viw~                    # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え
-viw!nkf -Z4             # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ
-</code></pre>
-<h2 id="カーソル移動">カーソル移動</h2>
-<pre><code>0                       # 行の先頭へ
-^                       # 行の空白以外の先頭へ
-$                       # 行の末尾へ
-w                       # 次の単語の先頭へ
-f*                      # 次の*へ           (例 df&quot;-&gt;&quot;まで削除)
-t*                      # 次の*の前へ       (例 dt&quot;-&gt;&quot;の前まで削除)
-viw                     # 現在のカーソル位置の単語を選択
-vi&quot;                     # 現在のカーソル位置の&quot;の中を選択
-va&quot;                     # 現在のカーソル位置の&quot;の外を選択
-</code></pre>
-<h2 id="モード">モード</h2>
-<pre><code>C-[                     # 挿入モードを抜ける
-ESC                     # 挿入モードを抜ける
-</code></pre>
-<h2 id="ウィンドウ">ウィンドウ</h2>
-<pre><code>:vs                     # 垂直分割
-:sp                     # 水平分割
-Ctrl+w w                # 次のウィンドウへ
-Ctrl+w [hjkl左下上右]    # ウィンドウの移動
-Ctrl+w -                # 高さを小さく  (例 Ctrl+w 10- -&gt; ウィンドウの高さを 10 狭める)
-Ctrl+w +                # 高さを大きく
-Ctrl+w &lt;                # 幅を小さく
-Ctrl+w &gt;                # 幅を大きく
-Ctrl+w =                # 自動調整
-Ctrl+w r                # 左右・上下のウィンドウを入れ替え
-:res 100                # 現在のウィンドウの高さを 100 にする
-:vertical res 30        # 現在のウィンドウの横幅を 30 にする
-</code></pre>
-<h2 id="特殊処理">特殊処理</h2>
-<pre><code>qa                      # マクロ記録開始
-q                       # マクロ記録終了 (@a で使用可能)
-</code></pre>
-<h2 id="コマンドラインの履歴">コマンドラインの履歴</h2>
-<pre><code>q: または : Ctrl+f       # コマンドラインの履歴
-q/                      # 検索
-Ctrl+c                  # 履歴をコマンドラインに送る(編集して使えるようになる)
-</code></pre>
-<h2 id="改行文字の変更">改行文字の変更</h2>
-<pre><code>:%s/
-/
-/g                      # /Ctrl+v Ctrl+m/Ctrl+v Enter/
-</code></pre>
-<h2 id="ファイル比較">ファイル比較</h2>
-<pre><code>:vertical diffsplit     # 差分を取りたいファイル
-:do (diff obtain)       # もう一方のファイルから差分を取り込む
-:dp (diff put)          # もう一方のファイルに差分を取り込ませる
-</code></pre>
-    </div>
-    <div class="read-more">
-      <a href="/blog/2014/12/04/vim-tips/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -425,7 +364,7 @@ Ctrl+c                  # 履歴をコマンドラインに送る(編集して�
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

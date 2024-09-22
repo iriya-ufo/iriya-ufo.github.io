@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Copywriter on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/copywriter/</link>
+    <link>http://localhost:1313/tags/copywriter/</link>
     <description>Recent content in Copywriter on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 08 Oct 2019 17:02:10 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/copywriter/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/copywriter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>「広告コピーってこう書くんだ！読本」を読んだ</title>
-      <link>https://iriya-ufo.net/blog/2019/10/08/how-to-write-adcopy/</link>
+      <link>http://localhost:1313/blog/2019/10/08/how-to-write-adcopy/</link>
       <pubDate>Tue, 08 Oct 2019 17:02:10 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2019/10/08/how-to-write-adcopy/</guid>
+      <guid>http://localhost:1313/blog/2019/10/08/how-to-write-adcopy/</guid>
       <description>&lt;p&gt;広告コピーを書いている人も、そうでない人も読んだほうがいい良書。&lt;/p&gt;&#xA;&lt;p&gt;コピーライターとしての仕事の本質がぎゅっと詰まっているが、その本質というのはコピーライターのみならず、クリエイターに通ずるものがあるのではと感じた。&lt;/p&gt;</description>
     </item>
   </channel>
