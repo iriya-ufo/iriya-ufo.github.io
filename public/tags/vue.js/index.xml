@@ -2,18 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vue.js on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/vue.js/</link>
+    <link>http://localhost:1313/tags/vue.js/</link>
     <description>Recent content in Vue.js on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 18 Nov 2019 15:10:46 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/vue.js/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/vue.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vue.js チートシート</title>
-      <link>https://iriya-ufo.net/blog/2019/10/10/vue-essentials-cheat-sheet/</link>
+      <link>http://localhost:1313/blog/2019/10/10/vue-essentials-cheat-sheet/</link>
       <pubDate>Thu, 10 Oct 2019 21:51:46 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2019/10/10/vue-essentials-cheat-sheet/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://iriya-ufo.net/images/2019/10/Vue-Essentials-Cheat-Sheet-1.png&#34; alt=&#34;vue_cheat_sheet_1&#34;&gt;&#xA;&lt;img src=&#34;https://iriya-ufo.net/images/2019/10/Vue-Essentials-Cheat-Sheet-2.png&#34; alt=&#34;vue_cheat_sheet_2&#34;&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2019/10/10/vue-essentials-cheat-sheet/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/2019/10/Vue-Essentials-Cheat-Sheet-1.png&#34; alt=&#34;vue_cheat_sheet_1&#34;&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/2019/10/Vue-Essentials-Cheat-Sheet-2.png&#34; alt=&#34;vue_cheat_sheet_2&#34;&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

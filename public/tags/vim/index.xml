@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vim on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/vim/</link>
+    <link>http://localhost:1313/tags/vim/</link>
     <description>Recent content in Vim on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 04 Dec 2014 18:58:13 +0000</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Vim 小技集</title>
-      <link>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</link>
+      <link>http://localhost:1313/blog/2014/12/04/vim-tips/</link>
       <pubDate>Thu, 04 Dec 2014 18:58:13 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/12/04/vim-tips/</guid>
+      <guid>http://localhost:1313/blog/2014/12/04/vim-tips/</guid>
       <description>&lt;p&gt;自分のための覚書&lt;/p&gt;&#xA;&lt;h2 id=&#34;編集&#34;&gt;編集&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:%s/:\(\w\+\) =&amp;gt;/\1:/g  # hash の書き方を置換 #正規表現&#xA;Ctrl+v jjjj I           # 4行コメントアウト(,#)&#xA;Ctrl+v jjjj d           # 4行コメントイン(,#)&#xA;Ctrl+v jjjj c aaaa      # 4行置換&#xA;viwy                    # カーソル位置の単語を yank&#xA;viwp                    # カーソル位置の単語を yank している内容で上書き&#xA;cw                      # カーソル位置から単語の最後までを書き換える&#xA;viwu                    # カーソル位置の単語を undercase&#xA;viwU                    # カーソル位置の単語を UPPERCASE&#xA;viw~                    # カーソル位置の単語を undercase &amp;lt;-&amp;gt; UPPERCASE 入れ替え&#xA;viw!nkf -Z4             # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;カーソル移動&#34;&gt;カーソル移動&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;0                       # 行の先頭へ&#xA;^                       # 行の空白以外の先頭へ&#xA;$                       # 行の末尾へ&#xA;w                       # 次の単語の先頭へ&#xA;f*                      # 次の*へ           (例 df&amp;quot;-&amp;gt;&amp;quot;まで削除)&#xA;t*                      # 次の*の前へ       (例 dt&amp;quot;-&amp;gt;&amp;quot;の前まで削除)&#xA;viw                     # 現在のカーソル位置の単語を選択&#xA;vi&amp;quot;                     # 現在のカーソル位置の&amp;quot;の中を選択&#xA;va&amp;quot;                     # 現在のカーソル位置の&amp;quot;の外を選択&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;モード&#34;&gt;モード&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;C-[                     # 挿入モードを抜ける&#xA;ESC                     # 挿入モードを抜ける&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;ウィンドウ&#34;&gt;ウィンドウ&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:vs                     # 垂直分割&#xA;:sp                     # 水平分割&#xA;Ctrl+w w                # 次のウィンドウへ&#xA;Ctrl+w [hjkl左下上右]    # ウィンドウの移動&#xA;Ctrl+w -                # 高さを小さく  (例 Ctrl+w 10- -&amp;gt; ウィンドウの高さを 10 狭める)&#xA;Ctrl+w +                # 高さを大きく&#xA;Ctrl+w &amp;lt;                # 幅を小さく&#xA;Ctrl+w &amp;gt;                # 幅を大きく&#xA;Ctrl+w =                # 自動調整&#xA;Ctrl+w r                # 左右・上下のウィンドウを入れ替え&#xA;:res 100                # 現在のウィンドウの高さを 100 にする&#xA;:vertical res 30        # 現在のウィンドウの横幅を 30 にする&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;特殊処理&#34;&gt;特殊処理&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;qa                      # マクロ記録開始&#xA;q                       # マクロ記録終了 (@a で使用可能)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;コマンドラインの履歴&#34;&gt;コマンドラインの履歴&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;q: または : Ctrl+f       # コマンドラインの履歴&#xA;q/                      # 検索&#xA;Ctrl+c                  # 履歴をコマンドラインに送る(編集して使えるようになる)&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;改行文字の変更&#34;&gt;改行文字の変更&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:%s/&#xA;/&#xA;/g                      # /Ctrl+v Ctrl+m/Ctrl+v Enter/&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;ファイル比較&#34;&gt;ファイル比較&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;:vertical diffsplit     # 差分を取りたいファイル&#xA;:do (diff obtain)       # もう一方のファイルから差分を取り込む&#xA;:dp (diff put)          # もう一方のファイルに差分を取り込ませる&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
   </channel>

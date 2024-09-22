@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Node.js on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/node.js/</link>
+    <link>http://localhost:1313/tags/node.js/</link>
     <description>Recent content in Node.js on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 05 Dec 2020 15:55:10 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/node.js/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mac に nodenv インストールした</title>
-      <link>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</link>
+      <link>http://localhost:1313/blog/2020/02/11/nodenv-to-mac/</link>
       <pubDate>Tue, 11 Feb 2020 15:55:10 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2020/02/11/nodenv-to-mac/</guid>
+      <guid>http://localhost:1313/blog/2020/02/11/nodenv-to-mac/</guid>
       <description>&lt;p&gt;brew でいれてたけど限界がきたのでバージョン管理ツール使う。&#xA;&lt;code&gt;nodenv&lt;/code&gt; を使うことにした。宗教的理由により &lt;code&gt;anyenv&lt;/code&gt; 経由でのインストールはしない。&lt;/p&gt;&#xA;&lt;h2 id=&#34;既存環境のアンインストール&#34;&gt;既存環境のアンインストール&lt;/h2&gt;&#xA;&lt;p&gt;とりあえず今の環境を消してきれいにする。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mac に Node.js インストールした</title>
-      <link>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</link>
+      <link>http://localhost:1313/blog/2016/04/07/nodejs-on-mac/</link>
       <pubDate>Thu, 07 Apr 2016 22:54:11 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/</guid>
+      <guid>http://localhost:1313/blog/2016/04/07/nodejs-on-mac/</guid>
       <description>&lt;p&gt;今更すぎるけどいれた。&lt;/p&gt;&#xA;&lt;p&gt;まず brew を使って Node.js のバージョン管理を行う nodebrew（ruby でいう rbenv のようなもの） をインストールする。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ brew install nodebrew&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;PATH を &lt;code&gt;.zshrc&lt;/code&gt; に追加&lt;/p&gt;</description>
     </item>
     <item>
       <title>Botkit から Google API 叩いてみた</title>
-      <link>https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/</link>
+      <link>http://localhost:1313/blog/2016/03/21/how-to-use-google-api-from-botkit/</link>
       <pubDate>Mon, 21 Mar 2016 01:34:27 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/03/21/how-to-use-google-api-from-botkit/</guid>
+      <guid>http://localhost:1313/blog/2016/03/21/how-to-use-google-api-from-botkit/</guid>
       <description>&lt;p&gt;前回『Slack に Hubot をいれてみた』という記事を書きました。今回は Botkit をインストールして遊んでみました。Hubot と Botkit の違いはこんな感じです。&lt;/p&gt;&#xA;&lt;h3 id=&#34;hubot&#34;&gt;Hubot&lt;/h3&gt;&#xA;&lt;p&gt;GitHub が開発した Bot 開発用のフレームワーク&#xA;Node.js で動き、プラグインなどは CoffeeScript で書く&lt;/p&gt;</description>
     </item>
     <item>
       <title>土日で出来る Node.js 入門</title>
-      <link>https://iriya-ufo.net/blog/2014/03/08/start-nodejs-at-weekend/</link>
+      <link>http://localhost:1313/blog/2014/03/08/start-nodejs-at-weekend/</link>
       <pubDate>Sat, 08 Mar 2014 17:29:27 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/03/08/start-nodejs-at-weekend/</guid>
+      <guid>http://localhost:1313/blog/2014/03/08/start-nodejs-at-weekend/</guid>
       <description>&lt;p&gt;そろそろ流行りの Node.js 勉強しようと思いたち土日にあそんでみました。Ubuntu 12.04 にインストールしてみたよ。&lt;/p&gt;&#xA;&lt;h2 id=&#34;インストール方法&#34;&gt;インストール方法&lt;/h2&gt;&#xA;&lt;p&gt;Node.js はまだまだ開発まっしぐらなのですぐにバージョンが古くなります。調べたところバージョン管理してくれる nvm (Node Version Manager) というのがあるらしいのでそれを使いましょう。&lt;/p&gt;</description>
     </item>
   </channel>
