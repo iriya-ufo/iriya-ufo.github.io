@@ -2,59 +2,66 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>React on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/react/</link>
+    <link>https://iriya-ufo.net/tags/react/</link>
     <description>Recent content in React on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 08 Sep 2024 02:16:39 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 Sep 2024 23:49:33 +0900</lastBuildDate>
+    <atom:link href="https://iriya-ufo.net/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>shadcn/ui をセットアップする</title>
+      <link>https://iriya-ufo.net/blog/2024/09/22/shadcn-setup/</link>
+      <pubDate>Sun, 22 Sep 2024 23:49:33 +0900</pubDate>
+      <guid>https://iriya-ufo.net/blog/2024/09/22/shadcn-setup/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/&#34;&gt;Vite で React の環境構築&lt;/a&gt;の記事で作成した React に shadcn/ui をセットアップしました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;手順&#34;&gt;手順&lt;/h2&gt;&#xA;&lt;p&gt;Tailwind が必要なのでインストールします。&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pnpm i -D tailwindcss postcss autoprefixer&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;$ pnpx tailwindcss init -p&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;p&gt;Tailwind 関連の初期設定を行います。&#xA;&lt;a href=&#34;https://tailwindcss.com/docs/guides/vite&#34;&gt;公式サイト&lt;/a&gt;にあるように &lt;code&gt;tailwind.config.js&lt;/code&gt; と &lt;code&gt;./src/index.css&lt;/code&gt; を編集します。&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Vite で React の環境構築</title>
-      <link>http://localhost:1313/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/</link>
+      <link>https://iriya-ufo.net/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/</link>
       <pubDate>Sun, 08 Sep 2024 02:16:39 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/</guid>
-      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;環境構築の記事&lt;/a&gt;を全面的に書き直しました。&#xA;違いは ESLint と Prettier を使用せず Biome を利用するようにしたことくらいです。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;使用する技術スタック&#xA;&lt;ul&gt;&#xA;&lt;li&gt;React&lt;/li&gt;&#xA;&lt;li&gt;TypeScript&lt;/li&gt;&#xA;&lt;li&gt;Vite&lt;/li&gt;&#xA;&lt;li&gt;pnpm&lt;/li&gt;&#xA;&lt;li&gt;Biome&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;目次&#34;&gt;目次&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#node-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34;&gt;Node のインストール&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#pnpm-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34;&gt;pnpm のインストール&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vite-%E3%81%A7-react-x-typescript-%E3%82%92%E6%A7%8B%E7%AF%89&#34;&gt;Vite で React x TypeScript を構築&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#biome-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&#34;&gt;Biome セットアップ&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vscode-%E8%A8%AD%E5%AE%9A&#34;&gt;VSCode 設定&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#eslint-%E5%89%8A%E9%99%A4&#34;&gt;ESLint 削除&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#%E7%B5%B6%E5%AF%BE%E3%83%91%E3%82%B9%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88&#34;&gt;絶対パスでインポート&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;node-のインストール&#34;&gt;Node のインストール&lt;/h2&gt;&#xA;&lt;p&gt;asdf を利用して Node をインストールします。&lt;/p&gt;</description>
+      <guid>https://iriya-ufo.net/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/</guid>
+      <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;環境構築の記事&lt;/a&gt;を全面的に書き直しました。&#xA;違いは ESLint と Prettier を使用せず Biome を利用するようにしたことくらいです。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;使用する技術スタック&#xA;&lt;ul&gt;&#xA;&lt;li&gt;React&lt;/li&gt;&#xA;&lt;li&gt;TypeScript&lt;/li&gt;&#xA;&lt;li&gt;Vite&lt;/li&gt;&#xA;&lt;li&gt;pnpm&lt;/li&gt;&#xA;&lt;li&gt;Biome&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;目次&#34;&gt;目次&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#node-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34;&gt;Node のインストール&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#pnpm-%E3%81%AE%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB&#34;&gt;pnpm のインストール&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vite-%E3%81%A7-react-x-typescript-%E3%82%92%E6%A7%8B%E7%AF%89&#34;&gt;Vite で React x TypeScript を構築&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#biome-%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&#34;&gt;Biome セットアップ&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vscode-%E8%A8%AD%E5%AE%9A&#34;&gt;VSCode 設定&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#eslint-%E5%89%8A%E9%99%A4&#34;&gt;ESLint 削除&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#%E7%B5%B6%E5%AF%BE%E3%83%91%E3%82%B9%E3%81%A7%E3%82%A4%E3%83%B3%E3%83%9D%E3%83%BC%E3%83%88&#34;&gt;絶対パスでインポート&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;node-のインストール&#34;&gt;Node のインストール&lt;/h2&gt;&#xA;&lt;p&gt;asdf を利用して Node をインストールします。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Jest の代わりに Vitest 使ってみる</title>
-      <link>http://localhost:1313/blog/2021/12/23/using-vitest-instead-of-jest/</link>
+      <link>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</link>
       <pubDate>Thu, 23 Dec 2021 15:24:24 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/12/23/using-vitest-instead-of-jest/</guid>
-      <description>&lt;p&gt;つい先日、&lt;a href=&#34;http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;環境構築の記事&lt;/a&gt;を書いたのですが、その後 &lt;a href=&#34;https://vitest.dev/&#34;&gt;Vitest&lt;/a&gt; が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。&lt;/p&gt;&#xA;&lt;h2 id=&#34;jest-関連のアンインストール&#34;&gt;Jest 関連のアンインストール&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;前回の環境構築&lt;/a&gt;からの差分なので、入れていない場合は関係ありません。&lt;a href=&#34;#vitest&#34;&gt;Vitest&lt;/a&gt; のインストールからどうぞ。&lt;/p&gt;</description>
+      <guid>https://iriya-ufo.net/blog/2021/12/23/using-vitest-instead-of-jest/</guid>
+      <description>&lt;p&gt;つい先日、&lt;a href=&#34;https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;環境構築の記事&lt;/a&gt;を書いたのですが、その後 &lt;a href=&#34;https://vitest.dev/&#34;&gt;Vitest&lt;/a&gt; が公開されたので Jest を置き換えてみます（今はまだ開発中で安定版ではないので個人的な範囲で使うのがいいかと思います）。&lt;/p&gt;&#xA;&lt;h2 id=&#34;jest-関連のアンインストール&#34;&gt;Jest 関連のアンインストール&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/&#34;&gt;前回の環境構築&lt;/a&gt;からの差分なので、入れていない場合は関係ありません。&lt;a href=&#34;#vitest&#34;&gt;Vitest&lt;/a&gt; のインストールからどうぞ。&lt;/p&gt;</description>
     </item>
     <item>
       <title>React x TypeScript x MUIv5 x Recoil x Jest x Docker by Vite</title>
-      <link>http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</link>
+      <link>https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</link>
       <pubDate>Fri, 17 Dec 2021 16:16:18 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</guid>
+      <guid>https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/</guid>
       <description>&lt;h2 id=&#34;はじめに&#34;&gt;はじめに&lt;/h2&gt;&#xA;&lt;p&gt;爆速とウワサの Vite を使って React x TypeScript な環境を作成しました。他にも MUIv5, Recoil, Jest, Docker などもあわせて作りました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;目次&#34;&gt;目次&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#react-%E3%81%AE%E7%92%B0%E5%A2%83%E3%81%A8%E3%82%BB%E3%83%83%E3%83%88%E3%82%A2%E3%83%83%E3%83%97&#34;&gt;React の環境とセットアップ&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#vscode-%E8%A8%AD%E5%AE%9A&#34;&gt;VSCode 設定&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#%E3%83%86%E3%82%B9%E3%83%88%E7%92%B0%E5%A2%83&#34;&gt;テスト環境&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#material-ui&#34;&gt;Material UI&lt;/a&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#%E3%81%9D%E3%81%AE%E4%BB%96%E3%83%A9%E3%82%A4%E3%83%96%E3%83%A9%E3%83%AA&#34;&gt;その他ライブラリ&lt;/a&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#recoil&#34;&gt;Recoil&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;#docker&#34;&gt;Docker&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;react-の環境とセットアップ&#34;&gt;React の環境とセットアップ&lt;/h2&gt;&#xA;&lt;p&gt;まずは node をインストールします。node 自体はバージョン管理したいので nodenv を使ってインストールします。nodenv を使ったインストール方法はこちらを参照してください。&lt;/p&gt;</description>
     </item>
     <item>
       <title>React を完全に理解するために行った学習方法</title>
-      <link>http://localhost:1313/blog/2021/11/30/how-to-learn-react/</link>
+      <link>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</link>
       <pubDate>Tue, 30 Nov 2021 23:38:39 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/11/30/how-to-learn-react/</guid>
+      <guid>https://iriya-ufo.net/blog/2021/11/30/how-to-learn-react/</guid>
       <description>&lt;p&gt;新しい言語やフレームワーク、触れたことのないアーキテクチャなどを習得しようとするとき、どのようにして学習していますか？&#xA;効率の良い学習方法というのは人によってそれぞれ違うと思いますが、自分ならこうしますという記事があれば少しは有益かもしれないと思い本記事を書いています。&#xA;ここでは React を学習するにあたって、どのような教材を用い、どのような方法で学んだかを残しておきます。&#xA;あくまで僕が行ってきた学習方法を書いていますので、これがベストの方法だ、という内容ではないのでご注意ください。&lt;/p&gt;</description>
     </item>
     <item>
       <title>「Reactハンズオンラーニング 第2版 ―Webアプリケーション開発のベストプラクティス」を読んだ</title>
-      <link>http://localhost:1313/blog/2021/11/19/review-react-hands-on-learing/</link>
+      <link>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</link>
       <pubDate>Fri, 19 Nov 2021 00:55:44 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/11/19/review-react-hands-on-learing/</guid>
-      <description>&lt;h2 id=&#34;読んだ感想&#34;&gt;読んだ感想&lt;/h2&gt;&#xA;&lt;p&gt;React を業務で使っている知人から、書籍で学ぶならこれ一択！とオススメされたのが「Reactハンズオンラーニング」でした。&#xA;読んでみたところ実際良かったです。ハンズオンと名のついた書籍ですが、内容的にはハンズオン形式ではないので、購入する際は気をつけたほうがいいでしょう。&#xA;先日&lt;a href=&#34;http://localhost:1313/blog/2021/11/17/review-modern-react/&#34;&gt;「モダンJavaScriptの基本から始める React実践の教科書」&lt;/a&gt;のレビューを書きましたが、こちらの本で物足りないなと感じる場合、ハンズオンラーニングを読むと良さそうです。&#xA;ハンズオンの方がコード例が多いのと、テストやルーティング、サスペンスコンポーネントなどの説明があるのがいいです。&lt;/p&gt;</description>
+      <guid>https://iriya-ufo.net/blog/2021/11/19/review-react-hands-on-learing/</guid>
+      <description>&lt;h2 id=&#34;読んだ感想&#34;&gt;読んだ感想&lt;/h2&gt;&#xA;&lt;p&gt;React を業務で使っている知人から、書籍で学ぶならこれ一択！とオススメされたのが「Reactハンズオンラーニング」でした。&#xA;読んでみたところ実際良かったです。ハンズオンと名のついた書籍ですが、内容的にはハンズオン形式ではないので、購入する際は気をつけたほうがいいでしょう。&#xA;先日&lt;a href=&#34;https://iriya-ufo.net/blog/2021/11/17/review-modern-react/&#34;&gt;「モダンJavaScriptの基本から始める React実践の教科書」&lt;/a&gt;のレビューを書きましたが、こちらの本で物足りないなと感じる場合、ハンズオンラーニングを読むと良さそうです。&#xA;ハンズオンの方がコード例が多いのと、テストやルーティング、サスペンスコンポーネントなどの説明があるのがいいです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>「モダンJavaScriptの基本から始める React実践の教科書」を読んだ</title>
-      <link>http://localhost:1313/blog/2021/11/17/review-modern-react/</link>
+      <link>https://iriya-ufo.net/blog/2021/11/17/review-modern-react/</link>
       <pubDate>Wed, 17 Nov 2021 00:09:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/11/17/review-modern-react/</guid>
+      <guid>https://iriya-ufo.net/blog/2021/11/17/review-modern-react/</guid>
       <description>&lt;h2 id=&#34;読んだ感想&#34;&gt;読んだ感想&lt;/h2&gt;&#xA;&lt;p&gt;React の入門書として一冊あげるとすればこの本でしょう、というくらいオススメできる内容でした。&#xA;対象読者としては JavaScript に少し不安もありつつ React をこれから学ぶ人といった感じです。&#xA;がっつり第三章まで JavaScript の話しなので React だけ学びたい方は少し分量が少なく感じるかもしれません。&#xA;ただ基本的な抑えておかないといけないことはちゃんと書かれてる感じでした。&#xA;ボリュームはそれほど多くないので、速ければ数時間で読み終えるでしょう。&#xA;随所に書かれたコラムも現場感がある内容でいい感じです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>「入門 React」を読んだ</title>
-      <link>http://localhost:1313/blog/2021/09/27/introduction-react-review/</link>
+      <link>https://iriya-ufo.net/blog/2021/09/27/introduction-react-review/</link>
       <pubDate>Mon, 27 Sep 2021 15:14:47 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/09/27/introduction-react-review/</guid>
+      <guid>https://iriya-ufo.net/blog/2021/09/27/introduction-react-review/</guid>
       <description>&lt;h2 id=&#34;読んだ感想&#34;&gt;読んだ感想&lt;/h2&gt;&#xA;&lt;p&gt;いい本でした。しかし中身を見ずにタイトルだけで判断して買うと、期待したものと違うなぁってなるかもしれません。&#xA;この本の対象読者はチュートリアルを終えた人や「Hello World」の次が欲しいと思っている人たちです。&#xA;React に一度も触れていない状態で読むと学習効率が悪いでしょう。&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,25 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ai on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/ai/</link>
+    <link>https://iriya-ufo.net/tags/ai/</link>
     <description>Recent content in Ai on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 10 Nov 2016 02:39:37 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>「コンピューターで脳がつくれるか」を読んだ</title>
-      <link>http://localhost:1313/blog/2016/11/10/can-computer-make-the-brain/</link>
+      <link>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</link>
       <pubDate>Thu, 10 Nov 2016 02:39:37 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2016/11/10/can-computer-make-the-brain/</guid>
+      <guid>https://iriya-ufo.net/blog/2016/11/10/can-computer-make-the-brain/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/4774184101/iriyaufo-22/ref=nosim/&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/51JZ2hiQt1L._SL400_.jpg&#34; style=&#34;border: none;&#34; alt=&#34;コンピューターで「脳」がつくれるか&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;人工知能に関する平易で読みやすい本、特化型AIと汎用AIの違いについてよく分かる。&lt;/p&gt;&#xA;&lt;p&gt;脳のモデルと学習モデルの比較をしている点が面白かった。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;大脳新皮質 &amp;mdash; 教師なし学習&lt;/li&gt;&#xA;&lt;li&gt;大脳基底核 &amp;mdash; 強化学習&lt;/li&gt;&#xA;&lt;li&gt;小脳 &amp;mdash; 教師あり学習&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;あとコラム欄が面白い。いくつか引用しておこう。&lt;/p&gt;</description>
     </item>
     <item>
       <title>「よくわかる 人工知能」を読んだ</title>
-      <link>http://localhost:1313/blog/2016/10/31/ai-the-secret-of-deep-learning/</link>
+      <link>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</link>
       <pubDate>Mon, 31 Oct 2016 00:39:13 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2016/10/31/ai-the-secret-of-deep-learning/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/B01M3OH87R/iriyaufo-22/ref=nosim/&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/41ZRQwbq7KL._SS500_.jpg&#34; style=&#34;border: none;&#34; alt=&#34;よくわかる人工知能　最先端の人だけが知っているディープラーニングのひみつ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;人工知能という言葉を聞いてどんなイメージを抱くだろう。&lt;/p&gt;&#xA;&lt;p&gt;以前&lt;a href=&#34;http://localhost:1313/blog/2016/01/26/does-ai-beat-human/&#34;&gt;『人工知能は人間を超えるか』&lt;/a&gt;という書籍を読んで、これからの人工知能の行末について想像した。&lt;/p&gt;&#xA;&lt;p&gt;最近はメディアでも取り上げられるほどの注目度で、自動運転技術の例であったり、画像処理に対する認識のすごさだったり、あるいは、&lt;a href=&#34;http://rinna.jp/&#34;&gt;りんなちゃん&lt;/a&gt;との対話だったりと研究段階から実用的なものまで幅広く展開されている。&#xA;特にディープラーニングを活用した AlphaGo が囲碁対決で勝ったことは、人工知能という可能性を大きく広げた出来事であったと思う。&lt;/p&gt;</description>
+      <guid>https://iriya-ufo.net/blog/2016/10/31/ai-the-secret-of-deep-learning/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://www.amazon.co.jp/exec/obidos/ASIN/B01M3OH87R/iriyaufo-22/ref=nosim/&#34; rel=&#34;nofollow&#34; target=&#34;_blank&#34;&gt;&lt;img src=&#34;http://ecx.images-amazon.com/images/I/41ZRQwbq7KL._SS500_.jpg&#34; style=&#34;border: none;&#34; alt=&#34;よくわかる人工知能　最先端の人だけが知っているディープラーニングのひみつ&#34; /&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;人工知能という言葉を聞いてどんなイメージを抱くだろう。&lt;/p&gt;&#xA;&lt;p&gt;以前&lt;a href=&#34;https://iriya-ufo.net/blog/2016/01/26/does-ai-beat-human/&#34;&gt;『人工知能は人間を超えるか』&lt;/a&gt;という書籍を読んで、これからの人工知能の行末について想像した。&lt;/p&gt;&#xA;&lt;p&gt;最近はメディアでも取り上げられるほどの注目度で、自動運転技術の例であったり、画像処理に対する認識のすごさだったり、あるいは、&lt;a href=&#34;http://rinna.jp/&#34;&gt;りんなちゃん&lt;/a&gt;との対話だったりと研究段階から実用的なものまで幅広く展開されている。&#xA;特にディープラーニングを活用した AlphaGo が囲碁対決で勝ったことは、人工知能という可能性を大きく広げた出来事であったと思う。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

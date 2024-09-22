@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Asdf on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/asdf/</link>
+    <link>https://iriya-ufo.net/tags/asdf/</link>
     <description>Recent content in Asdf on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 29 Apr 2022 21:09:55 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/asdf/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/asdf/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Xenv から asdf に移行する</title>
-      <link>http://localhost:1313/blog/2022/04/29/asdf-install/</link>
+      <link>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</link>
       <pubDate>Fri, 29 Apr 2022 21:09:55 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2022/04/29/asdf-install/</guid>
+      <guid>https://iriya-ufo.net/blog/2022/04/29/asdf-install/</guid>
       <description>&lt;h2 id=&#34;きっかけ&#34;&gt;きっかけ&lt;/h2&gt;&#xA;&lt;p&gt;anyenv 関係をキャッシュするというテクニックで zsh の起動を速くするという記事をみました。&#xA;自分は anyenv は使ってませんが、いくつかの Xenv 系を直接インストールしてバージョン管理をしていました。&#xA;asdf は速いというのと一つにまとめたいという思いがあったので、移行することにしました。&lt;/p&gt;</description>
     </item>
   </channel>

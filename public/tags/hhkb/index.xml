@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hhkb on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/hhkb/</link>
+    <link>https://iriya-ufo.net/tags/hhkb/</link>
     <description>Recent content in Hhkb on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 07 Sep 2021 23:40:42 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hhkb/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/hhkb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ducky One 2 Mini RGB キーボードを買った</title>
-      <link>http://localhost:1313/blog/2021/09/07/ducky-one-2-mini-rgb/</link>
+      <link>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</link>
       <pubDate>Tue, 07 Sep 2021 23:40:42 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/09/07/ducky-one-2-mini-rgb/</guid>
-      <description>&lt;p&gt;僕は今までずっと HHKB Pro2 を愛用してきました。初めて HHKB を触ったときの打鍵感がすごくよくて感動したのを覚えています。&#xA;それからときどき Realforce を使ったりもしてましたが、なんだかんだで HHKB に戻って来ていました。&#xA;小指辛い問題を解消するために&lt;a href=&#34;http://localhost:1313/blog/2020/06/16/enhance-hhkb/&#34;&gt;押下圧を変える改造をしたり、静音化したり&lt;/a&gt;で結構いじったりして愛着もあります。&lt;/p&gt;</description>
+      <guid>https://iriya-ufo.net/blog/2021/09/07/ducky-one-2-mini-rgb/</guid>
+      <description>&lt;p&gt;僕は今までずっと HHKB Pro2 を愛用してきました。初めて HHKB を触ったときの打鍵感がすごくよくて感動したのを覚えています。&#xA;それからときどき Realforce を使ったりもしてましたが、なんだかんだで HHKB に戻って来ていました。&#xA;小指辛い問題を解消するために&lt;a href=&#34;https://iriya-ufo.net/blog/2020/06/16/enhance-hhkb/&#34;&gt;押下圧を変える改造をしたり、静音化したり&lt;/a&gt;で結構いじったりして愛着もあります。&lt;/p&gt;</description>
     </item>
     <item>
       <title>HHKB の押下圧を減らし静音化した</title>
-      <link>http://localhost:1313/blog/2020/06/16/enhance-hhkb/</link>
+      <link>https://iriya-ufo.net/blog/2020/06/16/enhance-hhkb/</link>
       <pubDate>Tue, 16 Jun 2020 21:15:00 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2020/06/16/enhance-hhkb/</guid>
+      <guid>https://iriya-ufo.net/blog/2020/06/16/enhance-hhkb/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.pfu.fujitsu.com/hhkeyboard/hhkbpro2/spec.html&#34;&gt;HHKB Pro2(型番PD-KB400BN)&lt;/a&gt; を約10年ほど使ってきて、ここ1,2年はなんとなく買った &lt;a href=&#34;https://www.realforce.co.jp/products/R2TLS-US-BK/USV.html&#34;&gt;Realforce(型番R2TLS-USV-BK)&lt;/a&gt; を使っていました。Realforce で一番気に入ったのは押下圧でした。&#xA;HHKB ばかり使っているときは気づかなかったんですが、あの押下圧はかなりいいですね。疲れ具合が全然違います。とはいえ僕の持ってるのは変荷重のタイプなので全てが軽いわけではありませんでした。&#xA;そこでもっと軽いタイプで静電容量無接点キーボードを探したんですが、なかなかないんですよね。無いなら作ってしまえということで n 番煎じの記事になりますが、HHKB を分解して押下圧減と静音化を行いました。&lt;/p&gt;</description>
     </item>
   </channel>
