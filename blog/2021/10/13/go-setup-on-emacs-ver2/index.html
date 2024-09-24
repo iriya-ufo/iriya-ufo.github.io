@@ -58,7 +58,7 @@ Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/
 Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/.zshrc export GOPATH=$HOME/.go export PATH=$PATH:$GOPATH/bin # Install brew install go Go Package のインストール まずは gopls (Language Server) とその他をインストールします。 goimports は import の過不足を自動で補完してくれるものです。好みでインストールしてください。">
   <meta itemprop="datePublished" content="2021-10-13T13:54:35+09:00">
   <meta itemprop="dateModified" content="2022-02-18T13:54:35+09:00">
-  <meta itemprop="wordCount" content="834">
+  <meta itemprop="wordCount" content="865">
   <meta itemprop="keywords" content="Go,Emacs">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="[2021年版] Emacs に Go の開発環境を整える">
@@ -183,7 +183,11 @@ Go のインストール 1 2 3 4 5 6 7 8 $ mkdir $HOME/.go # Add this line to ~/
 </span></span><span class="line"><span class="cl">$ go install golang.org/x/tools/cmd/goimports@latest <span class="c1"># import の過不足を自動で補完</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="emacs-go-package-のインストール">Emacs Go Package のインストール</h2>
+</div><h2 id="go-package-のアップデート">Go Package のアップデート</h2>
+<ul>
+<li><a href="/blog/2024/09/24/go-pkg-update-all/">Go でインストールしたパッケージのアップデート</a></li>
+</ul>
+<h2 id="emacs-go-package-のインストール">Emacs Go Package のインストール</h2>
 <p>次に Emacs 関連のパッケージをインストールします。</p>
 <p>一番コアとなるのは lsp-mode ですね。
 lsp-ui はドキュメントのリファレンスなどを表示するもので company-lsp はコード補完のバックエンドとして company を使うためのパッケージです。</p>

@@ -49,8 +49,8 @@
 
   <meta itemprop="name" content="iriya-ufo&#39;s blog">
   <meta itemprop="description" content="Naoto Inoue&#39;s Personal blog about everything.">
-  <meta itemprop="datePublished" content="2024-09-22T23:49:33+09:00">
-  <meta itemprop="dateModified" content="2024-09-22T23:49:33+09:00">
+  <meta itemprop="datePublished" content="2024-09-24T12:24:24+09:00">
+  <meta itemprop="dateModified" content="2024-09-24T12:24:24+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iriya-ufo&#39;s blog">
   <meta name="twitter:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -118,6 +118,52 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/blog/2024/09/24/go-pkg-update-all/">Go でインストールしたパッケージのアップデート</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2024-09-24 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><code>go get</code> もしくは <code>go install</code> でインストールしたパッケージのアップデート方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ go get -u &lt;pkg&gt;
+</span></span><span class="line"><span class="cl">$ go install &lt;pkg&gt;@latest
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>&lt;pkg&gt;</code> の情報(パス)を知りたい場合、以下のようにする</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ <span class="nb">cd</span> <span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">$ go version -m &lt;pkg-name&gt; <span class="p">|</span> head -n2 <span class="p">|</span> tail -n1 <span class="p">|</span> awk <span class="s1">&#39;{print $2}&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考サイト">参考サイト</h2>
+<ul>
+<li><a href="https://zenn.dev/kyoh86/articles/291618538dcf0d">go installしたものを一括で更新する方法</a></li>
+</ul>
+    </div>
+    <div class="read-more">
+      <a href="/blog/2024/09/24/go-pkg-update-all/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/blog/2024/09/22/shadcn-setup/">shadcn/ui をセットアップする</a></h1>
@@ -641,32 +687,6 @@ straight を使っているので <code>use-package</code> と書くだけでイ
     </div>
     <div class="read-more">
       <a href="/blog/2022/04/25/neotree-to-emacs/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/blog/2022/03/23/md600v3/">分離式キーボード BAROCCO MD600v3 を買った</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2022-03-23 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p><img src="/images/2022/03/md600v3.jpg" alt="md600v3"></p>
-<div class="iframely-embed"><div class="iframely-responsive" style="height: 140px; padding-bottom: 0;"><a href="https://archisite.co.jp/products/mistel/md600v3-rgb/" data-iframely-url="//iframely.net/fpTF4o3"></a></div></div><script async src="//iframely.net/embed.js" charset="utf-8"></script>
-<p>これを買いました。分離式は初めて触るので慣れるかどうか不安もありましたが、しばらく触って見たところ特に大きな問題はなさそうです。
-&ldquo;B&quot;のキーを今までは右手で押していたのでそれを左手に変えるのは若干とまどいましたが、それ以外はほぼホームポジションの位置から打てていたようです。
-キーレイアウトが <a href="/blog/2021/09/07/ducky-one-2-mini-rgb/">Ducky One 2 Mini</a> とまったく一緒だったので、その慣れも大きかったかもしれません。
-HHKBと比較した場合、矢印キーが遠く感じるので不便さがあるかも。</p>
-    </div>
-    <div class="read-more">
-      <a href="/blog/2022/03/23/md600v3/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
