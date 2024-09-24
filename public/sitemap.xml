@@ -10,28 +10,49 @@
   
   <url>
     <loc>http://localhost:1313/categories/</loc>
-    <lastmod>2024-09-22T23:49:33+09:00</lastmod>
+    <lastmod>2024-09-24T12:24:24+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/go/</loc>
+    <lastmod>2024-09-24T12:24:24+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/blog/2024/09/24/go-pkg-update-all/</loc>
+    <lastmod>2024-09-24T12:24:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2024-09-22T23:49:33+09:00</lastmod>
+    <lastmod>2024-09-24T12:24:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/post/</loc>
-    <lastmod>2024-09-22T23:49:33+09:00</lastmod>
+    <lastmod>2024-09-24T12:24:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>http://localhost:1313/categories/programming/</loc>
-    <lastmod>2024-09-22T23:49:33+09:00</lastmod>
+    <lastmod>2024-09-24T12:24:24+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2024-09-24T12:24:24+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -45,13 +66,6 @@
   
   <url>
     <loc>http://localhost:1313/blog/2024/09/22/shadcn-setup/</loc>
-    <lastmod>2024-09-22T23:49:33+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-09-22T23:49:33+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -262,13 +276,6 @@
   
   <url>
     <loc>http://localhost:1313/blog/2021/10/13/go-setup-on-emacs-ver2/</loc>
-    <lastmod>2022-02-18T13:54:35+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>http://localhost:1313/tags/go/</loc>
     <lastmod>2022-02-18T13:54:35+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
