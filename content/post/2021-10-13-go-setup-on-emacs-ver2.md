@@ -39,6 +39,10 @@ $ go get -v github.com/uudashr/gopkgs/cmd/gopkgs     # Go パッケージ
 $ go install golang.org/x/tools/cmd/goimports@latest # import の過不足を自動で補完
 ```
 
+## Go Package のアップデート
+
+- [Go でインストールしたパッケージのアップデート]({{< relref "2024-09-24-go-pkg-update-all" >}})
+
 ## Emacs Go Package のインストール
 
 次に Emacs 関連のパッケージをインストールします。
