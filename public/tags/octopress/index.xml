@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Octopress on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/octopress/</link>
+    <link>http://localhost:1313/tags/octopress/</link>
     <description>Recent content in Octopress on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 27 Dec 2018 10:17:23 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/octopress/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Octopress から Hugo へ移行した</title>
-      <link>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</link>
+      <link>http://localhost:1313/blog/2018/12/27/octopress-to-hugo/</link>
       <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/&#34;&gt;以前 Octopress に移行&lt;/a&gt; してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと&lt;a href=&#34;https://iriya-ufo.net/blog/2018/12/26/blog-services/&#34;&gt;別の方法を模索&lt;/a&gt;した。&#xA;結果 Hugo に移行することにした。こっから先は Octopress から Hugo への移行方法の備忘録となる。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2018/12/27/octopress-to-hugo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/04/29/how-to-start-octopress/&#34;&gt;以前 Octopress に移行&lt;/a&gt; してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと&lt;a href=&#34;http://localhost:1313/blog/2018/12/26/blog-services/&#34;&gt;別の方法を模索&lt;/a&gt;した。&#xA;結果 Hugo に移行することにした。こっから先は Octopress から Hugo への移行方法の備忘録となる。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Octopress 記事削除</title>
-      <link>https://iriya-ufo.net/blog/2017/10/18/delete-post/</link>
+      <link>http://localhost:1313/blog/2017/10/18/delete-post/</link>
       <pubDate>Wed, 18 Oct 2017 01:02:03 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2017/10/18/delete-post/</guid>
+      <guid>http://localhost:1313/blog/2017/10/18/delete-post/</guid>
       <description>&lt;p&gt;Octopress で記事の削除は source/_posts/post.markdown を削除すればいい、はずなんだがなぜか消えない。&lt;/p&gt;&#xA;&lt;p&gt;新しい記事を投稿することによって削除されるかどうかを試してみる。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Octopress Deploy エラーなおした</title>
-      <link>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</link>
+      <link>http://localhost:1313/blog/2017/01/27/fix-octopress-deploy-error/</link>
       <pubDate>Fri, 27 Jan 2017 16:05:43 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2017/01/27/fix-octopress-deploy-error/</guid>
+      <guid>http://localhost:1313/blog/2017/01/27/fix-octopress-deploy-error/</guid>
       <description>&lt;p&gt;当ブログは Octopress と GitHub Pages で運用しているのだけれど、別PCに移行したときにデプロイエラーが出たのでそれをなおした。&lt;/p&gt;&#xA;&lt;p&gt;エラー内容はこんな感じ。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;## Pushing generated _deploy website&#xA;To github.com:iriya-ufo/iriya-ufo.github.io.git&#xA; ! [rejected]        master -&amp;gt; master (non-fast-forward)&#xA;error: failed to push some refs to &#39;git@github.com:iriya-ufo/iriya-ufo.github.io.git&#39;&#xA;hint: Updates were rejected because the tip of your current branch is behind&#xA;hint: its remote counterpart. Integrate the remote changes (e.g.&#xA;hint: &#39;git pull ...&#39;) before pushing again.&#xA;hint: See the &#39;Note about fast-forwards&#39; in &#39;git push --help&#39; for details.&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;解決方法は以下の通り。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Octopress のテーマをカスタマイズする</title>
-      <link>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</link>
+      <link>http://localhost:1313/blog/2016/04/30/theme-template-for-octopress/</link>
       <pubDate>Sat, 30 Apr 2016 03:08:48 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/04/30/theme-template-for-octopress/</guid>
+      <guid>http://localhost:1313/blog/2016/04/30/theme-template-for-octopress/</guid>
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/imathis/octopress/wiki/3rd-Party-Octopress-Themes&#34;&gt;3rd Party Octopress Themes&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;ここにテーマのテンプレートがあるので、好きなテーマを探して来てインストールすればよい。&#xA;リンク切れになってたり、全く違うサイトになって関係のないデザインになってたりするものもあるので注意。&#xA;好みのものがない場合は自作する。&lt;/p&gt;</description>
     </item>
     <item>
       <title>WordPress から GitHub Pages &#43; Octopress に移行した</title>
-      <link>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</link>
+      <link>http://localhost:1313/blog/2016/04/29/how-to-start-octopress/</link>
       <pubDate>Fri, 29 Apr 2016 19:22:13 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/</guid>
+      <guid>http://localhost:1313/blog/2016/04/29/how-to-start-octopress/</guid>
       <description>&lt;p&gt;今まで &lt;a href=&#34;http://iriya-ufo.net&#34;&gt;http://iriya-ufo.net&lt;/a&gt; は WordPress で運用してきたのだけれど、GitHub Pages + Octopress に移行することにした。&lt;/p&gt;&#xA;&lt;h2 id=&#34;wordpress-を辞めたくなった理由&#34;&gt;WordPress を辞めたくなった理由&lt;/h2&gt;&#xA;&lt;p&gt;WordPress で記事を書くときは Emacs を立ち上げ markdown で書いて、管理画面からコピペしていた。&#xA;WordPress は管理画面からいろいろできるが、あまり使ってない上に逆に記事更新とか面倒だと思った。&#xA;さらに若干コードのデザインが崩れたりして精神衛生上よろしくなかった。&lt;/p&gt;</description>
     </item>
   </channel>

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Math on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/math/</link>
+    <link>http://localhost:1313/tags/math/</link>
     <description>Recent content in Math on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 19 Nov 2016 00:12:13 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/math/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/math/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>機械学習と数学</title>
-      <link>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</link>
+      <link>http://localhost:1313/blog/2016/11/19/ml-and-math/</link>
       <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</guid>
+      <guid>http://localhost:1313/blog/2016/11/19/ml-and-math/</guid>
       <description>&lt;p&gt;人工知能といえば機械学習、そして機械学習といえば数学。チュートリアルやらライブラリやらで、これだけ手軽になった機械学習といえども現段階ではちょっとまだ簡単に扱えるようにはなっていません。&#xA;その主たる原因は数学だと思います。専門的とはいえ理系大学一年程度の知識があればそこそこいけそうなので頑張りましょう。&lt;/p&gt;</description>
     </item>
   </channel>

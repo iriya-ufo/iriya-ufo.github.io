@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ubuntu on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/ubuntu/</link>
+    <link>http://localhost:1313/tags/ubuntu/</link>
     <description>Recent content in Ubuntu on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 13 Nov 2016 04:01:16 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ubuntu に Docker をインストール</title>
-      <link>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</link>
+      <link>http://localhost:1313/blog/2016/11/13/install-docker-on-ubuntu/</link>
       <pubDate>Sun, 13 Nov 2016 04:01:16 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/11/13/install-docker-on-ubuntu/</guid>
+      <guid>http://localhost:1313/blog/2016/11/13/install-docker-on-ubuntu/</guid>
       <description>&lt;p&gt;公式サイトを参考にする。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://docs.docker.com/engine/installation/linux/ubuntulinux/&#34;&gt;Install Docker on Ubuntu&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;メモリーとスワップ設定、UFW、DNSの設定はおこなっていない。&lt;/p&gt;</description>
     </item>
     <item>
       <title>i-node が枯渇してファイルの作成ができなくなった件</title>
-      <link>https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</link>
+      <link>http://localhost:1313/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</link>
       <pubDate>Wed, 18 Sep 2013 21:35:15 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</guid>
+      <guid>http://localhost:1313/blog/2013/09/18/i-node-depletion-and-disable-creating-files/</guid>
       <description>&lt;p&gt;久しぶりに Ubuntu を使ってたらカーネルの更新が来てました。&#xA;適当にインストールしてたら何を間違えたのかうまくインストールできずに壊れました。&lt;/p&gt;&#xA;&lt;p&gt;Ubuntu はよくできているので、エラーメッセージに出るコマンドの通りに打つとたいてい治ります、が今回は無理でした。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ubuntu で DVD リッピング</title>
-      <link>https://iriya-ufo.net/blog/2013/05/07/ubuntu-dvd-ripping/</link>
+      <link>http://localhost:1313/blog/2013/05/07/ubuntu-dvd-ripping/</link>
       <pubDate>Tue, 07 May 2013 17:29:47 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/05/07/ubuntu-dvd-ripping/</guid>
+      <guid>http://localhost:1313/blog/2013/05/07/ubuntu-dvd-ripping/</guid>
       <description>&lt;p&gt;Ubuntu で DVD をリッピングする方法はいくつかあります。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;k9copy&lt;/li&gt;&#xA;&lt;li&gt;dvd::rip&lt;/li&gt;&#xA;&lt;li&gt;wine で DVD Decrypter&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;私の環境ではいずれもうまくいきませんでした。最終的にコマンドラインから丸ごと iso イメージとして取り出す方法がうまくいったので書いておきます。環境は Ubuntu 12.04 LTS です。&lt;/p&gt;</description>
     </item>
   </channel>

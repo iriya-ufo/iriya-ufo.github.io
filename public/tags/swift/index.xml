@@ -2,39 +2,39 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Swift on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/swift/</link>
+    <link>http://localhost:1313/tags/swift/</link>
     <description>Recent content in Swift on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 24 Aug 2014 18:13:51 +0000</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>&amp;lt;unknown&amp;gt;:0: error: the SDK &amp;#8216;MacOSX10.9.sdk&amp;#8217; does not support Swift</title>
-      <link>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</link>
+      <link>http://localhost:1313/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</link>
       <pubDate>Sun, 24 Aug 2014 18:13:51 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
+      <guid>http://localhost:1313/blog/2014/08/24/0-error-the-sdk-macosx10-9-sdk-does-not-support-swift/</guid>
       <description>&lt;p&gt;Xcode6-beta6 にて swift をコマンドラインから起動するとタイトルの通りのエラーがでます。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;&amp;lt;unknown&amp;gt;:0: error: the SDK &#39;MacOSX10.9.sdk&#39; does not support Swift&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;MacOSX 10.9 というのは Mavericks ですね。どうやら最新の Xcode は古い sdk はサポート対象外ということで起動すらできません。さすが Apple 切り捨て方が潔い。さてどうやって起動するかというと、Xcode6 に付随している最新の sdk を使うように swift の起動オプションに渡してあげたら大丈夫です。以下コマンドです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Xcode で作ったプロジェクトを削除する方法</title>
-      <link>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</link>
+      <link>http://localhost:1313/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</link>
       <pubDate>Sun, 24 Aug 2014 16:41:24 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</guid>
+      <guid>http://localhost:1313/blog/2014/08/24/how-to-delete-the-project-made-by-xcode/</guid>
       <description>&lt;p&gt;練習がてら適当にプロジェクトを作成するといっぱい溜まってくるのでいらないものは消してすっきりしたくなる時があるかと思います。Xcode で作ったプロジェクトを完全削除するには以下のようにすればよいです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Swift をインタラクティブに実行しながら勉強しよう (関数編)</title>
-      <link>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</link>
+      <link>http://localhost:1313/blog/2014/07/26/learn-swift/</link>
       <pubDate>Sat, 26 Jul 2014 15:55:36 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/07/26/learn-swift/</guid>
+      <guid>http://localhost:1313/blog/2014/07/26/learn-swift/</guid>
       <description>&lt;blockquote&gt;&#xA;&lt;p&gt;Swift はコンパイラ言語でありながら、インタプリタとしてスクリプトを実行することも可能で、対話実行環境（REPL（英語版））も用意されている。Swift と同時に発表された Xcode バージョン 6 では、コードの実行結果をグラフィカルに確認しながら開発できる Playgrounds が実装された。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Swift をとりあえず実行するまでの手順</title>
-      <link>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</link>
+      <link>http://localhost:1313/blog/2014/07/23/quick-start-swift/</link>
       <pubDate>Wed, 23 Jul 2014 03:06:46 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/07/23/quick-start-swift/</guid>
-      <description>&lt;img src=&#34;https://iriya-ufo.net/images/2014/07/swift.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2014/07/23/quick-start-swift/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2014/07/swift.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;WWDC2014 にて発表された Apple の新言語 Swift が話題になっています。これから iOS アプリを開発するなら間違いなく Swift が使えるようになる必要がありますね。ここでは Swift に関する情報のまとめと簡単なプログラムを Swift で実行するまでの流れを書きたいと思います。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
