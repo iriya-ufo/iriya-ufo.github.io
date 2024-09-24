@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hugo on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>https://iriya-ufo.net/tags/hugo/</link>
     <description>Recent content in Hugo on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 05 Feb 2020 16:52:53 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/hugo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hugo にコメント投稿機能をつけました</title>
-      <link>http://localhost:1313/blog/2020/02/05/added-disqus/</link>
+      <link>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</link>
       <pubDate>Wed, 05 Feb 2020 16:52:53 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2020/02/05/added-disqus/</guid>
+      <guid>https://iriya-ufo.net/blog/2020/02/05/added-disqus/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Q. Hugo でコメント投稿機能をつけるにはどうしたらいいのだろう？&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;strong&gt;A. DISQUS 使いましょう！&lt;/strong&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://gohugo.io/content-management/comments/&#34;&gt;公式サイト&lt;/a&gt;でも DISQUS 使いましょう、とある。&lt;/p&gt;&#xA;&lt;p&gt;やり方は簡単。まず &lt;a href=&#34;https://disqus.com/&#34;&gt;DISQUS&lt;/a&gt; でサインアップして、サイトの作成と設定をする。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hugo でインライン HTML が表示されなくなった</title>
-      <link>http://localhost:1313/blog/2019/12/16/hugo-inline-html/</link>
+      <link>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</link>
       <pubDate>Mon, 16 Dec 2019 11:56:34 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2019/12/16/hugo-inline-html/</guid>
+      <guid>https://iriya-ufo.net/blog/2019/12/16/hugo-inline-html/</guid>
       <description>&lt;p&gt;基本的に Hugo でブログを書くときは markdown を利用して書いています。&lt;/p&gt;&#xA;&lt;p&gt;ただ Amazon のリンクを貼ったりするときは外部サービスの吐き出す html を貼り付けて markdown と併用した記事を書いたりすることもあります。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Octopress から Hugo へ移行した</title>
-      <link>http://localhost:1313/blog/2018/12/27/octopress-to-hugo/</link>
+      <link>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</link>
       <pubDate>Thu, 27 Dec 2018 10:17:23 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2018/12/27/octopress-to-hugo/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/04/29/how-to-start-octopress/&#34;&gt;以前 Octopress に移行&lt;/a&gt; してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと&lt;a href=&#34;http://localhost:1313/blog/2018/12/26/blog-services/&#34;&gt;別の方法を模索&lt;/a&gt;した。&#xA;結果 Hugo に移行することにした。こっから先は Octopress から Hugo への移行方法の備忘録となる。&lt;/p&gt;</description>
+      <guid>https://iriya-ufo.net/blog/2018/12/27/octopress-to-hugo/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2016/04/29/how-to-start-octopress/&#34;&gt;以前 Octopress に移行&lt;/a&gt; してから2年弱になるが、アップデートで壊れてしまったのでこの機会にと&lt;a href=&#34;https://iriya-ufo.net/blog/2018/12/26/blog-services/&#34;&gt;別の方法を模索&lt;/a&gt;した。&#xA;結果 Hugo に移行することにした。こっから先は Octopress から Hugo への移行方法の備忘録となる。&lt;/p&gt;</description>
     </item>
     <item>
       <title>どこで Blog を書くか問題</title>
-      <link>http://localhost:1313/blog/2018/12/26/blog-services/</link>
+      <link>https://iriya-ufo.net/blog/2018/12/26/blog-services/</link>
       <pubDate>Wed, 26 Dec 2018 16:42:16 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2018/12/26/blog-services/</guid>
+      <guid>https://iriya-ufo.net/blog/2018/12/26/blog-services/</guid>
       <description>&lt;p&gt;ブログを更新しようか、とせっかくやる気になってキーボードをかたかたやり始めたのに Octopress の調子が悪くなりアップできない。&#xA;仕方なしにアップデートするもうまく行かずに、結局書いた記事を &lt;code&gt;rm&lt;/code&gt; した。&#xA;そんなことがあって、また生産性ゼロの、ブログどこに書いたらいいか問題が勃発してしまったのだった。&lt;/p&gt;</description>
     </item>
   </channel>
