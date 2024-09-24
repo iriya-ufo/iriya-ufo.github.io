@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>English on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/english/</link>
+    <link>http://localhost:1313/tags/english/</link>
     <description>Recent content in English on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 22 Jan 2020 11:00:33 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/english/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/english/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>University of the People に入学しました</title>
-      <link>https://iriya-ufo.net/blog/2020/01/22/enroll-in-university-of-the-people/</link>
+      <link>http://localhost:1313/blog/2020/01/22/enroll-in-university-of-the-people/</link>
       <pubDate>Wed, 22 Jan 2020 11:00:33 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2020/01/22/enroll-in-university-of-the-people/</guid>
+      <guid>http://localhost:1313/blog/2020/01/22/enroll-in-university-of-the-people/</guid>
       <description>&lt;p&gt;完全オンラインでコンピューターサイエンスの学位が取得できる &lt;a href=&#34;https://www.uopeople.edu/&#34;&gt;University of the People&lt;/a&gt; に入学しました。&lt;/p&gt;&#xA;&lt;p&gt;きっかけはこちらの方のブログを読んだからです。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://tmkk.hatenablog.com/entry/2019/12/30/191131&#34;&gt;働きながら米国のコンピュータサイエンスの学士号を取得する、UoPeopleという選択肢&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;元々、高校時代にアメリカの大学に行きたいと思っていたくらいには米国の大学に憧れがありました。結局、費用や英語の能力の面などで諦めたのですが。&lt;/p&gt;</description>
     </item>
   </channel>
