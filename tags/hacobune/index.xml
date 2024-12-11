@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Hacobune on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/hacobune/</link>
+    <link>https://iriya-ufo.net/tags/hacobune/</link>
     <description>Recent content in Hacobune on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 15 Feb 2022 18:02:52 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/hacobune/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/hacobune/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hacobune で Go のアプリケーションを公開してみた</title>
-      <link>http://localhost:1313/blog/2021/08/19/hacobune-quick-start/</link>
+      <link>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</link>
       <pubDate>Thu, 19 Aug 2021 17:02:52 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2021/08/19/hacobune-quick-start/</guid>
+      <guid>https://iriya-ufo.net/blog/2021/08/19/hacobune-quick-start/</guid>
       <description>&lt;h2 id=&#34;2022年2月15日更新&#34;&gt;2022年2月15日更新&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.sakura.ad.jp/information/announcements/2022/01/31/1968208892/&#34;&gt;Hacobune オープンβ版の提供終了に関するお知らせ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;オープンβ版が終了することになったそうです。正式版がリリースされるという内容でもないので、もしかしたらこのままサービス終了するのでしょうか。悲しいですね。&lt;/p&gt;</description>
     </item>
   </channel>

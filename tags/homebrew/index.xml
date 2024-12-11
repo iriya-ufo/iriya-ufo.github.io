@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Homebrew on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/homebrew/</link>
+    <link>https://iriya-ufo.net/tags/homebrew/</link>
     <description>Recent content in Homebrew on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 17 Dec 2014 23:05:08 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/homebrew/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>brew のアップグレードで rails プロジェクトなどが動かなくなったら</title>
-      <link>http://localhost:1313/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</link>
+      <link>https://iriya-ufo.net/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</link>
       <pubDate>Wed, 17 Dec 2014 23:05:08 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</guid>
+      <guid>https://iriya-ufo.net/blog/2014/12/17/fix-rails-error-occurred-by-brew-update/</guid>
       <description>&lt;p&gt;brew をちょくちょくアップグレードしてると古い rails プロジェクトが動作しなくなったりします。直接的な影響ではなく間接的に影響して動作しなくなっています。よくあるのは keg-only なパッケージによる影響です。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mavericks にアップグレードしたらターミナルが落ちた</title>
-      <link>http://localhost:1313/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</link>
+      <link>https://iriya-ufo.net/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</link>
       <pubDate>Tue, 22 Jul 2014 12:31:08 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</guid>
+      <guid>https://iriya-ufo.net/blog/2014/07/22/fix-terminal-error-occurred-by-mavericks-upgrade/</guid>
       <description>&lt;p&gt;今更ですが Lion から Mavericks にアップグレードしました。OS のアップグレードは色々トラブルが起こるのであまりしたくないのですが、流行りについていかないのもなぁと思いアップグレードを実行しました。&lt;/p&gt;</description>
     </item>
     <item>
       <title>MacOS のパッケージ管理で便利な Homebrew の使い方</title>
-      <link>http://localhost:1313/blog/2013/10/30/how-to-use-homebrew/</link>
+      <link>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</link>
       <pubDate>Wed, 30 Oct 2013 03:24:39 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/10/30/how-to-use-homebrew/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/10/30/how-to-use-homebrew/</guid>
       <description>&lt;p&gt;備忘録のため使い方をまとめます。インストールの仕方は割愛します。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ brew update   # brew を最新にする&#xA;$ brew outdated # インストール済のパッケージのうち最新のバージョンが公開されてるものを表示&#xA;$ brew upgrade  # インストールしている Formula をアップデート&#xA;$ brew doctor   # エラーなどのチェック&#xA;$ brew cleanup  # 旧バージョンのパッケージを削除&#xA;&lt;/code&gt;&lt;/pre&gt;</description>
     </item>
     <item>
       <title>zsh で git のコマンド補完及びブランチ名の表示</title>
-      <link>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</link>
+      <link>https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/</link>
       <pubDate>Sat, 18 May 2013 07:58:33 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/05/18/git-completion-by-zsh/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/05/18/git-completion-by-zsh/</guid>
       <description>&lt;h2 id=&#34;git-のコマンド補完&#34;&gt;git のコマンド補完&lt;/h2&gt;&#xA;&lt;p&gt;まず git のコマンド補完ができるようにします。前提として zsh と git は Homebrew でインストールしておきます。私の環境では zsh も git も古かったのでアップデートしました。&lt;/p&gt;</description>
     </item>
   </channel>

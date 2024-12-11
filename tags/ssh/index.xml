@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ssh on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/ssh/</link>
+    <link>https://iriya-ufo.net/tags/ssh/</link>
     <description>Recent content in Ssh on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 10 May 2013 08:47:32 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/ssh/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法</title>
-      <link>http://localhost:1313/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</link>
+      <link>https://iriya-ufo.net/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</link>
       <pubDate>Fri, 10 May 2013 08:47:32 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/</guid>
       <description>&lt;p&gt;サーバーに SSH でログインしている時に、長い時間のかかるプロセスを起動しちゃうと、ふと SSH 接続が切れたりしたらそのプロセスも道連れになって困ります。&#xA;また普通にバックグラウンドジョブとして動かしてもだめです。&#xA;以下のように &lt;code&gt;nohup&lt;/code&gt; シグナル送ってプロセスとして動かし続けてあげたら大丈夫です。&lt;/p&gt;</description>
     </item>
     <item>
       <title>SSH ログインが遅い問題を解決</title>
-      <link>http://localhost:1313/blog/2013/05/10/why-so-slow-ssh-login/</link>
+      <link>https://iriya-ufo.net/blog/2013/05/10/why-so-slow-ssh-login/</link>
       <pubDate>Fri, 10 May 2013 08:28:07 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/05/10/why-so-slow-ssh-login/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/05/10/why-so-slow-ssh-login/</guid>
       <description>&lt;p&gt;SSH でログインそのものはできるが非常に時間がかかるという場合、DNS の設定がよろしくない場合があります。&#xA;そんな時は、&lt;code&gt;sshd_config&lt;/code&gt; に以下を追記してみてください。&lt;/p&gt;</description>
     </item>
   </channel>

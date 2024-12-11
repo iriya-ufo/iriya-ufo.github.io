@@ -2,38 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Gauche on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/gauche/</link>
+    <link>https://iriya-ufo.net/tags/gauche/</link>
     <description>Recent content in Gauche on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 20 Aug 2014 02:07:11 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/gauche/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/gauche/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Gauche のユーザーリファレンスを読む</title>
-      <link>http://localhost:1313/blog/2014/08/20/read-gauche-reference/</link>
+      <link>https://iriya-ufo.net/blog/2014/08/20/read-gauche-reference/</link>
       <pubDate>Wed, 20 Aug 2014 02:07:11 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/08/20/read-gauche-reference/</guid>
+      <guid>https://iriya-ufo.net/blog/2014/08/20/read-gauche-reference/</guid>
       <description>&lt;p&gt;Gauche のリファレンス読むのにはいくつか方法があって、Emacs で el いれて読みだすとか info 入れるとかありますけど、一番簡単な方法はこれでしょう。&#xA;Chrome 使ってる人向けですが、設定にいくと「検索エンジンの設定」があるのでそちらで以下のようにします。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mac の Gauche で SLIB を使う</title>
-      <link>http://localhost:1313/blog/2014/04/12/slib-with-gauche/</link>
+      <link>https://iriya-ufo.net/blog/2014/04/12/slib-with-gauche/</link>
       <pubDate>Sat, 12 Apr 2014 17:17:10 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/04/12/slib-with-gauche/</guid>
+      <guid>https://iriya-ufo.net/blog/2014/04/12/slib-with-gauche/</guid>
       <description>&lt;p&gt;Gauche は brew でインストールしていますが SLIB をインストールしていなかったためエラーがでました。&lt;/p&gt;&#xA;&lt;p&gt;ここからダウンロードしてくれば使えるようになります。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://people.csail.mit.edu/jaffer/SLIB.html&#34; title=&#34;SLIB&#34; target=&#34;_blank&#34;&gt;The SLIB Portable Scheme Library&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Gauche で rlwrap を使う</title>
-      <link>http://localhost:1313/blog/2013/10/19/gauche-rlwrap/</link>
+      <link>https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/</link>
       <pubDate>Sat, 19 Oct 2013 20:45:17 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/10/19/gauche-rlwrap/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/10/19/gauche-rlwrap/</guid>
       <description>&lt;p&gt;Gauche で開発をするなら rlwrap は外せませんね。&#xA;ということで早速インストールしてみましょう。&lt;/p&gt;&#xA;&lt;p&gt;端末から以下を実行します。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ sudo apt-get install rlwrap&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;p&gt;Gauche の補完ファイルを準備します。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Emacs の info の使い方と info ドキュメントインストールの仕方</title>
-      <link>http://localhost:1313/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</link>
+      <link>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</link>
       <pubDate>Sat, 19 Oct 2013 19:19:20 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</guid>
+      <guid>https://iriya-ufo.net/blog/2013/10/19/how-to-use-emacs-info-and-document-install/</guid>
       <description>&lt;h2 id=&#34;info-の使い方&#34;&gt;info の使い方&lt;/h2&gt;&#xA;&lt;p&gt;info は Emacs の中で説明を読むしくみ。&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;M-x info&lt;/code&gt; または &lt;code&gt;C-h i&lt;/code&gt; で開始する。&lt;/p&gt;&#xA;&lt;pre&gt;&lt;code&gt;u       up      一つ上に戻る&#xA;d       dir     入口に戻る&#xA;M-x info        info を開始する&#xA;q       quit    終了&#xA;space           とにかく読み進む&#xA;p       prev    前の節に戻る&#xA;n       next    次の節に進む&#xA;RET             矢印 (cursor) のある節に進む&#xA;m       menu    (その画面の中の) 名前で指定して移動する&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;info-ドキュメントのインストール&#34;&gt;info ドキュメントのインストール&lt;/h2&gt;&#xA;&lt;p&gt;ここでは SICP, Gauche, R5RS の info のインストールをやってみる。&lt;/p&gt;</description>
     </item>
   </channel>
