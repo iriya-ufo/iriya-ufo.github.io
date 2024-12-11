@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Middleman on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/middleman/</link>
+    <link>https://iriya-ufo.net/tags/middleman/</link>
     <description>Recent content in Middleman on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Sat, 27 Dec 2014 21:55:29 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/middleman/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/middleman/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>middleman-s3_sync で colorize のエラーがでた</title>
-      <link>http://localhost:1313/blog/2014/12/27/middleman-s3_sync-colorize-error/</link>
+      <link>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</link>
       <pubDate>Sat, 27 Dec 2014 21:55:29 +0000</pubDate>
-      <guid>http://localhost:1313/blog/2014/12/27/middleman-s3_sync-colorize-error/</guid>
+      <guid>https://iriya-ufo.net/blog/2014/12/27/middleman-s3_sync-colorize-error/</guid>
       <description>&lt;p&gt;静的サイト開発に便利な middleman を使って Amazon S3 バケットにデプロイする際、middleman-s3_sync という gem を使っていましたが、エラーがでました。&lt;/p&gt;</description>
     </item>
   </channel>

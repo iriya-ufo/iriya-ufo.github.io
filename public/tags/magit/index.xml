@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Magit on iriya-ufo&#39;s blog</title>
-    <link>http://localhost:1313/tags/magit/</link>
+    <link>https://iriya-ufo.net/tags/magit/</link>
     <description>Recent content in Magit on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 22 Feb 2022 00:09:18 +0900</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/magit/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://iriya-ufo.net/tags/magit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emacs で Magit を使う</title>
-      <link>http://localhost:1313/blog/2022/02/22/magit/</link>
+      <link>https://iriya-ufo.net/blog/2022/02/22/magit/</link>
       <pubDate>Tue, 22 Feb 2022 00:09:18 +0900</pubDate>
-      <guid>http://localhost:1313/blog/2022/02/22/magit/</guid>
+      <guid>https://iriya-ufo.net/blog/2022/02/22/magit/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://magit.vc&#34;&gt;Magit&lt;/a&gt; は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。&lt;/p&gt;&#xA;&lt;h2 id=&#34;インストール&#34;&gt;インストール&lt;/h2&gt;&#xA;&lt;p&gt;&lt;code&gt;M-x package-list-packages&lt;/code&gt; からインストールできます。&#xA;自分で使っているパッケージマネジャーがあればそれに従ってください。&lt;/p&gt;</description>
     </item>
   </channel>
