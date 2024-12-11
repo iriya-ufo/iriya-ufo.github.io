@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Vim 小技集 - iriya-ufo&#39;s blog</title>
@@ -24,10 +24,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.139.3 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2014/12/04/vim-tips/" />
+<link rel="canonical" href="http://localhost:1313/blog/2014/12/04/vim-tips/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -39,11 +39,11 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2014/12/04/vim-tips/">
+<meta property="og:url" content="http://localhost:1313/blog/2014/12/04/vim-tips/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Vim 小技集">
   <meta property="og:description" content="自分のための覚書
-編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy # カーソル位置の単語を yank viwp # カーソル位置の単語を yank している内容で上書き cw # カーソル位置から単語の最後までを書き換える viwu # カーソル位置の単語を undercase viwU # カーソル位置の単語を UPPERCASE viw~ # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え viw!nkf -Z4 # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ カーソル移動 0 # 行の先頭へ ^ # 行の空白以外の先頭へ $ # 行の末尾へ w # 次の単語の先頭へ f* # 次の*へ (例 df&#34;-&gt;&#34;まで削除) t* # 次の*の前へ (例 dt&#34;-&gt;&#34;の前まで削除) viw # 現在のカーソル位置の単語を選択 vi&#34; # 現在のカーソル位置の&#34;の中を選択 va&#34; # 現在のカーソル位置の&#34;の外を選択 モード C-[ # 挿入モードを抜ける ESC # 挿入モードを抜ける ウィンドウ :vs # 垂直分割 :sp # 水平分割 Ctrl&#43;w w # 次のウィンドウへ Ctrl&#43;w [hjkl左下上右] # ウィンドウの移動 Ctrl&#43;w - # 高さを小さく (例 Ctrl&#43;w 10- -&gt; ウィンドウの高さを 10 狭める) Ctrl&#43;w &#43; # 高さを大きく Ctrl&#43;w &lt; # 幅を小さく Ctrl&#43;w &gt; # 幅を大きく Ctrl&#43;w = # 自動調整 Ctrl&#43;w r # 左右・上下のウィンドウを入れ替え :res 100 # 現在のウィンドウの高さを 100 にする :vertical res 30 # 現在のウィンドウの横幅を 30 にする 特殊処理 qa # マクロ記録開始 q # マクロ記録終了 (@a で使用可能) コマンドラインの履歴 q: または : Ctrl&#43;f # コマンドラインの履歴 q/ # 検索 Ctrl&#43;c # 履歴をコマンドラインに送る(編集して使えるようになる) 改行文字の変更 :%s/ / /g # /Ctrl&#43;v Ctrl&#43;m/Ctrl&#43;v Enter/ ファイル比較 :vertical diffsplit # 差分を取りたいファイル :do (diff obtain) # もう一方のファイルから差分を取り込む :dp (diff put) # もう一方のファイルに差分を取り込ませる ">
+編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy # カーソル位置の単語を yank viwp # カーソル位置の単語を yank している内容で上書き cw # カーソル位置から単語の最後までを書き換える viwu # カーソル位置の単語を undercase viwU # カーソル位置の単語を UPPERCASE viw~ # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え viw!nkf -Z4 # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ カーソル移動 0 # 行の先頭へ ^ # 行の空白以外の先頭へ $ # 行の末尾へ w # 次の単語の先頭へ f* # 次の*へ (例 df&#34;-&gt;&#34;まで削除) t* # 次の*の前へ (例 dt&#34;-&gt;&#34;の前まで削除) viw # 現在のカーソル位置の単語を選択 vi&#34; # 現在のカーソル位置の&#34;の中を選択 va&#34; # 現在のカーソル位置の&#34;の外を選択 モード C-[ # 挿入モードを抜ける ESC # 挿入モードを抜ける ウィンドウ :vs # 垂直分割 :sp # 水平分割 Ctrl&#43;w w # 次のウィンドウへ Ctrl&#43;w [hjkl左下上右] # ウィンドウの移動 Ctrl&#43;w - # 高さを小さく (例 Ctrl&#43;w 10- -&gt; ウィンドウの高さを 10 狭める) Ctrl&#43;w &#43; # 高さを大きく Ctrl&#43;w &lt; # 幅を小さく Ctrl&#43;w &gt; # 幅を大きく Ctrl&#43;w = # 自動調整 Ctrl&#43;w r # 左右・上下のウィンドウを入れ替え :res 100 # 現在のウィンドウの高さを 100 にする :vertical res 30 # 現在のウィンドウの横幅を 30 にする 特殊処理 qa # マクロ記録開始 q # マクロ記録終了 (@a で使用可能) コマンドラインの履歴 q: または : Ctrl&#43;f # コマンドラインの履歴 q/ # 検索 Ctrl&#43;c # 履歴をコマンドラインに送る(編集して使えるようになる) 改行文字の変更 :%s/ / /g # /Ctrl&#43;v Ctrl&#43;m/Ctrl&#43;v Enter/ ファイル比較 :vertical diffsplit # 差分を取りたいファイル :do (diff obtain) # もう一方のファイルから差分を取り込む :dp (diff put) # もう一方のファイルに差分を取り込ませる">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -53,7 +53,7 @@
 
   <meta itemprop="name" content="Vim 小技集">
   <meta itemprop="description" content="自分のための覚書
-編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy # カーソル位置の単語を yank viwp # カーソル位置の単語を yank している内容で上書き cw # カーソル位置から単語の最後までを書き換える viwu # カーソル位置の単語を undercase viwU # カーソル位置の単語を UPPERCASE viw~ # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え viw!nkf -Z4 # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ カーソル移動 0 # 行の先頭へ ^ # 行の空白以外の先頭へ $ # 行の末尾へ w # 次の単語の先頭へ f* # 次の*へ (例 df&#34;-&gt;&#34;まで削除) t* # 次の*の前へ (例 dt&#34;-&gt;&#34;の前まで削除) viw # 現在のカーソル位置の単語を選択 vi&#34; # 現在のカーソル位置の&#34;の中を選択 va&#34; # 現在のカーソル位置の&#34;の外を選択 モード C-[ # 挿入モードを抜ける ESC # 挿入モードを抜ける ウィンドウ :vs # 垂直分割 :sp # 水平分割 Ctrl&#43;w w # 次のウィンドウへ Ctrl&#43;w [hjkl左下上右] # ウィンドウの移動 Ctrl&#43;w - # 高さを小さく (例 Ctrl&#43;w 10- -&gt; ウィンドウの高さを 10 狭める) Ctrl&#43;w &#43; # 高さを大きく Ctrl&#43;w &lt; # 幅を小さく Ctrl&#43;w &gt; # 幅を大きく Ctrl&#43;w = # 自動調整 Ctrl&#43;w r # 左右・上下のウィンドウを入れ替え :res 100 # 現在のウィンドウの高さを 100 にする :vertical res 30 # 現在のウィンドウの横幅を 30 にする 特殊処理 qa # マクロ記録開始 q # マクロ記録終了 (@a で使用可能) コマンドラインの履歴 q: または : Ctrl&#43;f # コマンドラインの履歴 q/ # 検索 Ctrl&#43;c # 履歴をコマンドラインに送る(編集して使えるようになる) 改行文字の変更 :%s/ / /g # /Ctrl&#43;v Ctrl&#43;m/Ctrl&#43;v Enter/ ファイル比較 :vertical diffsplit # 差分を取りたいファイル :do (diff obtain) # もう一方のファイルから差分を取り込む :dp (diff put) # もう一方のファイルに差分を取り込ませる ">
+編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy # カーソル位置の単語を yank viwp # カーソル位置の単語を yank している内容で上書き cw # カーソル位置から単語の最後までを書き換える viwu # カーソル位置の単語を undercase viwU # カーソル位置の単語を UPPERCASE viw~ # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え viw!nkf -Z4 # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ カーソル移動 0 # 行の先頭へ ^ # 行の空白以外の先頭へ $ # 行の末尾へ w # 次の単語の先頭へ f* # 次の*へ (例 df&#34;-&gt;&#34;まで削除) t* # 次の*の前へ (例 dt&#34;-&gt;&#34;の前まで削除) viw # 現在のカーソル位置の単語を選択 vi&#34; # 現在のカーソル位置の&#34;の中を選択 va&#34; # 現在のカーソル位置の&#34;の外を選択 モード C-[ # 挿入モードを抜ける ESC # 挿入モードを抜ける ウィンドウ :vs # 垂直分割 :sp # 水平分割 Ctrl&#43;w w # 次のウィンドウへ Ctrl&#43;w [hjkl左下上右] # ウィンドウの移動 Ctrl&#43;w - # 高さを小さく (例 Ctrl&#43;w 10- -&gt; ウィンドウの高さを 10 狭める) Ctrl&#43;w &#43; # 高さを大きく Ctrl&#43;w &lt; # 幅を小さく Ctrl&#43;w &gt; # 幅を大きく Ctrl&#43;w = # 自動調整 Ctrl&#43;w r # 左右・上下のウィンドウを入れ替え :res 100 # 現在のウィンドウの高さを 100 にする :vertical res 30 # 現在のウィンドウの横幅を 30 にする 特殊処理 qa # マクロ記録開始 q # マクロ記録終了 (@a で使用可能) コマンドラインの履歴 q: または : Ctrl&#43;f # コマンドラインの履歴 q/ # 検索 Ctrl&#43;c # 履歴をコマンドラインに送る(編集して使えるようになる) 改行文字の変更 :%s/ / /g # /Ctrl&#43;v Ctrl&#43;m/Ctrl&#43;v Enter/ ファイル比較 :vertical diffsplit # 差分を取りたいファイル :do (diff obtain) # もう一方のファイルから差分を取り込む :dp (diff put) # もう一方のファイルに差分を取り込ませる">
   <meta itemprop="datePublished" content="2014-12-04T18:58:13+00:00">
   <meta itemprop="dateModified" content="2014-12-04T18:58:13+00:00">
   <meta itemprop="wordCount" content="722">
@@ -61,7 +61,7 @@
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Vim 小技集">
   <meta name="twitter:description" content="自分のための覚書
-編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy # カーソル位置の単語を yank viwp # カーソル位置の単語を yank している内容で上書き cw # カーソル位置から単語の最後までを書き換える viwu # カーソル位置の単語を undercase viwU # カーソル位置の単語を UPPERCASE viw~ # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え viw!nkf -Z4 # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ カーソル移動 0 # 行の先頭へ ^ # 行の空白以外の先頭へ $ # 行の末尾へ w # 次の単語の先頭へ f* # 次の*へ (例 df&#34;-&gt;&#34;まで削除) t* # 次の*の前へ (例 dt&#34;-&gt;&#34;の前まで削除) viw # 現在のカーソル位置の単語を選択 vi&#34; # 現在のカーソル位置の&#34;の中を選択 va&#34; # 現在のカーソル位置の&#34;の外を選択 モード C-[ # 挿入モードを抜ける ESC # 挿入モードを抜ける ウィンドウ :vs # 垂直分割 :sp # 水平分割 Ctrl&#43;w w # 次のウィンドウへ Ctrl&#43;w [hjkl左下上右] # ウィンドウの移動 Ctrl&#43;w - # 高さを小さく (例 Ctrl&#43;w 10- -&gt; ウィンドウの高さを 10 狭める) Ctrl&#43;w &#43; # 高さを大きく Ctrl&#43;w &lt; # 幅を小さく Ctrl&#43;w &gt; # 幅を大きく Ctrl&#43;w = # 自動調整 Ctrl&#43;w r # 左右・上下のウィンドウを入れ替え :res 100 # 現在のウィンドウの高さを 100 にする :vertical res 30 # 現在のウィンドウの横幅を 30 にする 特殊処理 qa # マクロ記録開始 q # マクロ記録終了 (@a で使用可能) コマンドラインの履歴 q: または : Ctrl&#43;f # コマンドラインの履歴 q/ # 検索 Ctrl&#43;c # 履歴をコマンドラインに送る(編集して使えるようになる) 改行文字の変更 :%s/ / /g # /Ctrl&#43;v Ctrl&#43;m/Ctrl&#43;v Enter/ ファイル比較 :vertical diffsplit # 差分を取りたいファイル :do (diff obtain) # もう一方のファイルから差分を取り込む :dp (diff put) # もう一方のファイルに差分を取り込ませる ">
+編集 :%s/:\(\w\&#43;\) =&gt;/\1:/g # hash の書き方を置換 #正規表現 Ctrl&#43;v jjjj I # 4行コメントアウト(,#) Ctrl&#43;v jjjj d # 4行コメントイン(,#) Ctrl&#43;v jjjj c aaaa # 4行置換 viwy # カーソル位置の単語を yank viwp # カーソル位置の単語を yank している内容で上書き cw # カーソル位置から単語の最後までを書き換える viwu # カーソル位置の単語を undercase viwU # カーソル位置の単語を UPPERCASE viw~ # カーソル位置の単語を undercase &lt;-&gt; UPPERCASE 入れ替え viw!nkf -Z4 # ｶｰｿﾙ位置の行を半角ｶﾀｶﾅ カーソル移動 0 # 行の先頭へ ^ # 行の空白以外の先頭へ $ # 行の末尾へ w # 次の単語の先頭へ f* # 次の*へ (例 df&#34;-&gt;&#34;まで削除) t* # 次の*の前へ (例 dt&#34;-&gt;&#34;の前まで削除) viw # 現在のカーソル位置の単語を選択 vi&#34; # 現在のカーソル位置の&#34;の中を選択 va&#34; # 現在のカーソル位置の&#34;の外を選択 モード C-[ # 挿入モードを抜ける ESC # 挿入モードを抜ける ウィンドウ :vs # 垂直分割 :sp # 水平分割 Ctrl&#43;w w # 次のウィンドウへ Ctrl&#43;w [hjkl左下上右] # ウィンドウの移動 Ctrl&#43;w - # 高さを小さく (例 Ctrl&#43;w 10- -&gt; ウィンドウの高さを 10 狭める) Ctrl&#43;w &#43; # 高さを大きく Ctrl&#43;w &lt; # 幅を小さく Ctrl&#43;w &gt; # 幅を大きく Ctrl&#43;w = # 自動調整 Ctrl&#43;w r # 左右・上下のウィンドウを入れ替え :res 100 # 現在のウィンドウの高さを 100 にする :vertical res 30 # 現在のウィンドウの横幅を 30 にする 特殊処理 qa # マクロ記録開始 q # マクロ記録終了 (@a で使用可能) コマンドラインの履歴 q: または : Ctrl&#43;f # コマンドラインの履歴 q/ # 検索 Ctrl&#43;c # 履歴をコマンドラインに送る(編集して使えるようになる) 改行文字の変更 :%s/ / /g # /Ctrl&#43;v Ctrl&#43;m/Ctrl&#43;v Enter/ ファイル比較 :vertical diffsplit # 差分を取りたいファイル :do (diff obtain) # もう一方のファイルから差分を取り込む :dp (diff put) # もう一方のファイルに差分を取り込ませる">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>

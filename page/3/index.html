@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>iriya-ufo&#39;s blog</title>
@@ -23,12 +23,12 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.139.3 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/" />
-  <link href="https://iriya-ufo.net/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
-  <link href="https://iriya-ufo.net/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+<link rel="canonical" href="http://localhost:1313/" />
+  <link href="http://localhost:1313/index.xml" rel="alternate" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
+  <link href="http://localhost:1313/index.xml" rel="feed" type="application/rss+xml" title="iriya-ufo&#39;s blog" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/">
+<meta property="og:url" content="http://localhost:1313/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="iriya-ufo&#39;s blog">
   <meta property="og:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -49,8 +49,8 @@
 
   <meta itemprop="name" content="iriya-ufo&#39;s blog">
   <meta itemprop="description" content="Naoto Inoue&#39;s Personal blog about everything.">
-  <meta itemprop="datePublished" content="2024-09-24T12:24:24+09:00">
-  <meta itemprop="dateModified" content="2024-09-24T12:24:24+09:00">
+  <meta itemprop="datePublished" content="2024-12-11T22:26:23+09:00">
+  <meta itemprop="dateModified" content="2024-12-11T22:26:23+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iriya-ufo&#39;s blog">
   <meta name="twitter:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -118,6 +118,54 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/blog/2021/10/13/go-setup-on-emacs-ver2/">[2021年版] Emacs に Go の開発環境を整える</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2021-10-13 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p><a href="/blog/2019/02/15/go-setup-on-emacs/">以前書いた内容</a>が古くなったので改めて書き直すことにしました。
+大きな変更点としては補完に <code>gocode</code> ではなく <code>gopls (Language Server)</code> を使うようにしたことです。</p>
+<h2 id="go-のインストール">Go のインストール</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mkdir <span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Add this line to ~/.zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">GOPATH</span><span class="o">=</span><span class="nv">$HOME</span>/.go
+</span></span><span class="line"><span class="cl"><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="nv">$PATH</span>:<span class="nv">$GOPATH</span>/bin
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># Install</span>
+</span></span><span class="line"><span class="cl">brew install go
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="go-package-のインストール">Go Package のインストール</h2>
+<p>まずは <code>gopls (Language Server)</code> とその他をインストールします。
+<code>goimports</code> は <code>import</code> の過不足を自動で補完してくれるものです。好みでインストールしてください。</p>
+    </div>
+    <div class="read-more">
+      <a href="/blog/2021/10/13/go-setup-on-emacs-ver2/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/blog/2021/10/08/diy-desk/">机をDIYした</a></h1>
@@ -448,30 +496,6 @@ React に一度も触れていない状態で読むと学習効率が悪いで�
   </div>
 </article>
 
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/blog/2020/10/08/dan-takahashi-review/">「世界のお金持ちが実践するお金の増やし方」を読んだ</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2020-10-08 </span>
-      <div class="post-category">
-          <a href="/categories/review/"> review </a>
-          <a href="/categories/stock/"> stock </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>この本の著者は<a href="https://www.youtube.com/channel/UCFXl12dZUPs7MLy_dMkMZYw">高橋ダンという投資家ユーチューバー</a>で、2020年1月から Youtube を始めて現在 (2020年10月) 25万人以上のチャンネル登録者がいます。
-日本とアメリカのハーフ、コーネル大学を卒業しウォール街で投資銀行業務の経験があり、その後独立してヘッジファンドを立ち上げ売却をした、となんともすごい経歴です。
-Youtube は日本語版と英語版でそれぞれのチャンネルがあり、両方同じ内容で毎日2つずつUPしています。経済ニュース、投資、などが主なテーマですが時々、教育や健康などのトピックについても語っています。</p>
-    </div>
-    <div class="read-more">
-      <a href="/blog/2020/10/08/dan-takahashi-review/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
     </section>
   
   <nav class="pagination">
@@ -495,7 +519,7 @@ Youtube は日本語版と英語版でそれぞれのチャンネルがあり、
       <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
       <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
   
-      <a href="https://iriya-ufo.net/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+      <a href="http://localhost:1313/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
     
 </div>
 

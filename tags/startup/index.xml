@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Startup on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/startup/</link>
+    <link>http://localhost:1313/tags/startup/</link>
     <description>Recent content in Startup on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 04 Oct 2019 21:09:05 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/startup/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/startup/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>「破天荒フェニックス オンデーズ再生物語」を読んだ</title>
-      <link>https://iriya-ufo.net/blog/2019/10/04/hatenko-phoenix-owndays/</link>
+      <link>http://localhost:1313/blog/2019/10/04/hatenko-phoenix-owndays/</link>
       <pubDate>Fri, 04 Oct 2019 21:09:05 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2019/10/04/hatenko-phoenix-owndays/</guid>
+      <guid>http://localhost:1313/blog/2019/10/04/hatenko-phoenix-owndays/</guid>
       <description>&lt;p&gt;倒産しかけのメガネ店の身売り先を探していたはずが、いつの間にかその会社に熱が入り自らが買って出て会社再建に乗り出す話し。&lt;/p&gt;&#xA;&lt;p&gt;書き方のテイストが小説風であり、一度読みだしたら止まらない面白さ。&#xA;ノンフィクションでこんなことが起こるのかという程の破天荒っぷり。&#xA;何度も何度も難航する資金繰りで苦痛や苦悩、絶望を味わいながらも決して諦めず、あがき続けて復活する様は最高にかっこいい。&lt;/p&gt;</description>
     </item>
     <item>
       <title>スタートアップで大事なこと</title>
-      <link>https://iriya-ufo.net/blog/2015/07/03/important-point-about-startup/</link>
+      <link>http://localhost:1313/blog/2015/07/03/important-point-about-startup/</link>
       <pubDate>Fri, 03 Jul 2015 00:38:07 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2015/07/03/important-point-about-startup/</guid>
-      <description>&lt;img src=&#34;https://iriya-ufo.net/images/2015/07/startup.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;スタートアップは難しい。人はいない、金はない、技術もない、無いことづくしである。そんな不利な状況を克服して成功するためにはいくつかコツがいる。もちろん小手先のテクニックだけではダメだが、やる気だけでなんとかしようとするのもナンセンスだ。スタートアップにはスタートアップの戦い方がある。今回はちょっとした事例を紹介しつつ、あなたのマインドセットをスタートアップ向きに変えることができれば幸いだ。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2015/07/03/important-point-about-startup/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2015/07/startup.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;スタートアップは難しい。人はいない、金はない、技術もない、無いことづくしである。そんな不利な状況を克服して成功するためにはいくつかコツがいる。もちろん小手先のテクニックだけではダメだが、やる気だけでなんとかしようとするのもナンセンスだ。スタートアップにはスタートアップの戦い方がある。今回はちょっとした事例を紹介しつつ、あなたのマインドセットをスタートアップ向きに変えることができれば幸いだ。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Healthcare Hackathon in Tokyo 3rd Report @ Nov. 8</title>
-      <link>https://iriya-ufo.net/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</link>
+      <link>http://localhost:1313/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</link>
       <pubDate>Mon, 17 Nov 2014 03:30:03 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</guid>
+      <guid>http://localhost:1313/blog/2014/11/17/healthcare-hackathon-in-tokyo-3rd-report-nov-8/</guid>
       <description>&lt;p&gt;ちょっと遅くなりましたが Healthcare Hackathon に参加したのでレポートを書きます。医療健康分野というテーマに絞った珍しいハッカソンでした。第3回は 2014/11/08 HUB TOKYO (目黒) での開催です。今回は&amp;quot;糖尿病&amp;quot;をテーマに約40名ほどの人たちが参加してました。若干ですがエンジニアの方が多かったです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>ヘルステックスタートアップイベントに参加しました</title>
-      <link>https://iriya-ufo.net/blog/2014/10/11/attend-at-health-tech-startup-event/</link>
+      <link>http://localhost:1313/blog/2014/10/11/attend-at-health-tech-startup-event/</link>
       <pubDate>Sat, 11 Oct 2014 19:23:47 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/10/11/attend-at-health-tech-startup-event/</guid>
-      <description>&lt;img src=&#34;https://iriya-ufo.net/images/2014/10/IMG_1399.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;参加者はだいたいこんな感じ。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;150人から200人ほど&lt;/li&gt;&#xA;  &lt;li&gt;ヘルスケア領域の人たちが 1/3 &lt;/li&gt;&#xA;  &lt;li&gt;IT業界の人たちが 2/3 &lt;/li&gt;&#xA;  &lt;li&gt;その他&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;セッションスペースでは4つのトピックでそれぞれ1時間ほどの話しがありました。以下リストです。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2014/10/11/attend-at-health-tech-startup-event/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2014/10/IMG_1399.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;参加者はだいたいこんな感じ。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;150人から200人ほど&lt;/li&gt;&#xA;  &lt;li&gt;ヘルスケア領域の人たちが 1/3 &lt;/li&gt;&#xA;  &lt;li&gt;IT業界の人たちが 2/3 &lt;/li&gt;&#xA;  &lt;li&gt;その他&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;セッションスペースでは4つのトピックでそれぞれ1時間ほどの話しがありました。以下リストです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>海外の教育系スタートアップで気になるものまとめ</title>
-      <link>https://iriya-ufo.net/blog/2013/12/29/cool-educational-startup-list/</link>
+      <link>http://localhost:1313/blog/2013/12/29/cool-educational-startup-list/</link>
       <pubDate>Sun, 29 Dec 2013 03:24:34 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/12/29/cool-educational-startup-list/</guid>
-      <description>&lt;p&gt;昨今スタートアップ界隈で EdTech が流行しています。そこで個人的に気になった海外の教育系スタートアップを選んでまとめてみました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ck-12&#34;&gt;ck-12&lt;/h2&gt;&#xA;&lt;img src=&#34;https://iriya-ufo.net/images/2013/12/ck12logo.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;Link: &lt;a href=&#34;http://www.ck12.org/student/&#34;&gt;ck12&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;k-12とは幼稚園から始まり高校を卒業するまでの13年間の教育機関のことを指します。ck-12ではSTEM (Science, Technology, Engineering, Mathematics) を主軸にコンテンツを提供しています。コンテンツには&lt;strong&gt;教科書的なテキスト&lt;/strong&gt;に加え&lt;strong&gt;ビデオ&lt;/strong&gt;や&lt;strong&gt;課題テスト&lt;/strong&gt;などがあります。試しに&amp;quot;Arithmetic&amp;quot;と&amp;quot;Physics&amp;quot;を観てみました。課題テストは4択か2択問題になっていますね。ゲーミフィケーション的な要素はなく淡々と進みます。ビデオは解説に役立ちそうな映像などに声をあてている感じでした。決して黒板に解説をするというスタイルではなさそうです。&#xA;全体を通してみた感じ、じっくり一人で勉強するのが好きな生徒が使いそうだなという印象です。テキストはボリュームもあって良好ですしビデオは視覚でみて分かりやすい解説をしているコンテンツがあるからです。学校の先生たちが生徒に予習をさせてくる教材として使わせるのもありだと思いました。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2013/12/29/cool-educational-startup-list/</guid>
+      <description>&lt;p&gt;昨今スタートアップ界隈で EdTech が流行しています。そこで個人的に気になった海外の教育系スタートアップを選んでまとめてみました。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ck-12&#34;&gt;ck-12&lt;/h2&gt;&#xA;&lt;img src=&#34;http://localhost:1313/images/2013/12/ck12logo.png&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;Link: &lt;a href=&#34;http://www.ck12.org/student/&#34;&gt;ck12&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;k-12とは幼稚園から始まり高校を卒業するまでの13年間の教育機関のことを指します。ck-12ではSTEM (Science, Technology, Engineering, Mathematics) を主軸にコンテンツを提供しています。コンテンツには&lt;strong&gt;教科書的なテキスト&lt;/strong&gt;に加え&lt;strong&gt;ビデオ&lt;/strong&gt;や&lt;strong&gt;課題テスト&lt;/strong&gt;などがあります。試しに&amp;quot;Arithmetic&amp;quot;と&amp;quot;Physics&amp;quot;を観てみました。課題テストは4択か2択問題になっていますね。ゲーミフィケーション的な要素はなく淡々と進みます。ビデオは解説に役立ちそうな映像などに声をあてている感じでした。決して黒板に解説をするというスタイルではなさそうです。&#xA;全体を通してみた感じ、じっくり一人で勉強するのが好きな生徒が使いそうだなという印象です。テキストはボリュームもあって良好ですしビデオは視覚でみて分かりやすい解説をしているコンテンツがあるからです。学校の先生たちが生徒に予習をさせてくる教材として使わせるのもありだと思いました。&lt;/p&gt;</description>
     </item>
     <item>
       <title>写真 &#43; 音声アプリの Voicepic がサービス終了</title>
-      <link>https://iriya-ufo.net/blog/2013/12/14/quit-voicepic-startup/</link>
+      <link>http://localhost:1313/blog/2013/12/14/quit-voicepic-startup/</link>
       <pubDate>Sat, 14 Dec 2013 18:10:09 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/12/14/quit-voicepic-startup/</guid>
+      <guid>http://localhost:1313/blog/2013/12/14/quit-voicepic-startup/</guid>
       <description>&lt;p&gt;写真に音声がつけられるアプリ&lt;a href=&#34;http://voicepic.me/&#34; title=&#34;voicepic&#34; target=&#34;_blank&#34;&gt;『Voicepic』&lt;/a&gt;がサービスを終了することを決めました。理由はユーザー数の伸び率の低下ということらしいです。Mash Up Awardsなどで優勝しその他のイベントコンテストでも優秀な賞をもらっていたのにあっけなく終了してしまう現実を目の当たりにして、SNSのサービスを展開するのは難しいことなんだと改めて認識しました。&#xA;私の知り合いにもこれからBtoC向けのサービスを展開しようとしているところもありますし、どうやってユーザー獲得をしていくのか観察していきたいです。&lt;/p&gt;</description>
     </item>
     <item>
       <title>法人口座開設の条件が厳しい</title>
-      <link>https://iriya-ufo.net/blog/2013/08/05/hard-to-open-corporate-bank-account/</link>
+      <link>http://localhost:1313/blog/2013/08/05/hard-to-open-corporate-bank-account/</link>
       <pubDate>Mon, 05 Aug 2013 01:07:38 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/08/05/hard-to-open-corporate-bank-account/</guid>
+      <guid>http://localhost:1313/blog/2013/08/05/hard-to-open-corporate-bank-account/</guid>
       <description>&lt;p&gt;会社を設立してまずすることは口座を開設することではないでしょうか？&#xA;でもこれが結構難しいです。&#xA;昨今の違法行為を取り締まるために法人口座開設が非常に厳しくなっているようです。&#xA;事業としての実績でもあればすんなりと通るんでしょうが、スタートアップはそういうわけにいきません。&#xA;前途多難です。&lt;/p&gt;</description>
     </item>
     <item>
       <title>走れ！走れ！走れ！</title>
-      <link>https://iriya-ufo.net/blog/2013/07/09/run-run-run/</link>
+      <link>http://localhost:1313/blog/2013/07/09/run-run-run/</link>
       <pubDate>Tue, 09 Jul 2013 22:50:08 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/07/09/run-run-run/</guid>
-      <description>&lt;img src=&#34;https://iriya-ufo.net/images/2013/07/running.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;26になるまで、東京に来た事なんて片手で数えるほどだった。&lt;/p&gt;&#xA;&lt;p&gt;だけど、ここ2ヶ月ほどでもう8回くらい来てる。&lt;/p&gt;&#xA;&lt;p&gt;東京に来るたびに思うことがある。&lt;/p&gt;&#xA;&lt;p&gt;「立ち止まったら死んじゃう」って。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2013/07/09/run-run-run/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2013/07/running.jpg&#34; class=&#34;image&#34;&gt;&#xA;&lt;p&gt;26になるまで、東京に来た事なんて片手で数えるほどだった。&lt;/p&gt;&#xA;&lt;p&gt;だけど、ここ2ヶ月ほどでもう8回くらい来てる。&lt;/p&gt;&#xA;&lt;p&gt;東京に来るたびに思うことがある。&lt;/p&gt;&#xA;&lt;p&gt;「立ち止まったら死んじゃう」って。&lt;/p&gt;</description>
     </item>
     <item>
       <title>東京でスタートアップを始めます</title>
-      <link>https://iriya-ufo.net/blog/2013/06/16/start-startup-in-tokyo/</link>
+      <link>http://localhost:1313/blog/2013/06/16/start-startup-in-tokyo/</link>
       <pubDate>Sun, 16 Jun 2013 02:17:06 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/06/16/start-startup-in-tokyo/</guid>
+      <guid>http://localhost:1313/blog/2013/06/16/start-startup-in-tokyo/</guid>
       <description>&lt;p&gt;東京でスタートアップを始めることになりました。&#xA;スタートアップって何？と思う方もいるかと思います。&#xA;簡単に言うとすれば、それはベンチャー企業のことです。&#xA;もちろんベンチャー企業といっても正確な理解は得られません。&lt;/p&gt;</description>
     </item>
   </channel>

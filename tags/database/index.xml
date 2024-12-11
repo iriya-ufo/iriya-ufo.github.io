@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Database on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/database/</link>
+    <link>http://localhost:1313/tags/database/</link>
     <description>Recent content in Database on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 06 May 2019 19:31:59 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/database/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>「達人に学ぶ DB設計 徹底指南書」を読んだ</title>
-      <link>https://iriya-ufo.net/blog/2019/05/06/learn-rdb-design-from-mastery/</link>
+      <link>http://localhost:1313/blog/2019/05/06/learn-rdb-design-from-mastery/</link>
       <pubDate>Mon, 06 May 2019 19:31:59 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2019/05/06/learn-rdb-design-from-mastery/</guid>
+      <guid>http://localhost:1313/blog/2019/05/06/learn-rdb-design-from-mastery/</guid>
       <description>&lt;p&gt;データベース設計ってどうやるの？って所をちゃんと知りたかったので読んでみた。若干期待していたのと違ったがたくさん学びもあった。&#xA;自分がタイトルから想像したのは、例題やサンプルアプリケーションみたいなのを提示してそれらをどうモデリングするかっていう感じかなと勝手に思ったんだけど、どっちかっていうと当たり前のことをちゃんと考えて設計していきましょうね、っていう内容だった。&lt;/p&gt;</description>
     </item>
   </channel>

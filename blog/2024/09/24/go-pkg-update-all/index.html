@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Go でインストールしたパッケージのアップデート - iriya-ufo&#39;s blog</title>
@@ -25,10 +25,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.139.3 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2024/09/24/go-pkg-update-all/" />
+<link rel="canonical" href="http://localhost:1313/blog/2024/09/24/go-pkg-update-all/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,12 +40,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2024/09/24/go-pkg-update-all/">
+<meta property="og:url" content="http://localhost:1313/blog/2024/09/24/go-pkg-update-all/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Go でインストールしたパッケージのアップデート">
   <meta property="og:description" content="go get もしくは go install でインストールしたパッケージのアップデート方法
 1 2 $ go get -u &lt;pkg&gt; $ go install &lt;pkg&gt;@latest &lt;pkg&gt; の情報(パス)を知りたい場合、以下のようにする
-1 2 $ cd $GOPATH/bin $ go version -m &lt;pkg-name&gt; | head -n2 | tail -n1 | awk &#39;{print $2}&#39; 参考サイト go installしたものを一括で更新する方法 ">
+1 2 $ cd $GOPATH/bin $ go version -m &lt;pkg-name&gt; | head -n2 | tail -n1 | awk &#39;{print $2}&#39; 参考サイト go installしたものを一括で更新する方法">
   <meta property="og:locale" content="ja">
   <meta property="og:type" content="article">
     <meta property="article:section" content="post">
@@ -56,7 +56,7 @@
   <meta itemprop="name" content="Go でインストールしたパッケージのアップデート">
   <meta itemprop="description" content="go get もしくは go install でインストールしたパッケージのアップデート方法
 1 2 $ go get -u &lt;pkg&gt; $ go install &lt;pkg&gt;@latest &lt;pkg&gt; の情報(パス)を知りたい場合、以下のようにする
-1 2 $ cd $GOPATH/bin $ go version -m &lt;pkg-name&gt; | head -n2 | tail -n1 | awk &#39;{print $2}&#39; 参考サイト go installしたものを一括で更新する方法 ">
+1 2 $ cd $GOPATH/bin $ go version -m &lt;pkg-name&gt; | head -n2 | tail -n1 | awk &#39;{print $2}&#39; 参考サイト go installしたものを一括で更新する方法">
   <meta itemprop="datePublished" content="2024-09-24T12:24:24+09:00">
   <meta itemprop="dateModified" content="2024-09-24T12:24:24+09:00">
   <meta itemprop="wordCount" content="113">
@@ -65,7 +65,7 @@
   <meta name="twitter:title" content="Go でインストールしたパッケージのアップデート">
   <meta name="twitter:description" content="go get もしくは go install でインストールしたパッケージのアップデート方法
 1 2 $ go get -u &lt;pkg&gt; $ go install &lt;pkg&gt;@latest &lt;pkg&gt; の情報(パス)を知りたい場合、以下のようにする
-1 2 $ cd $GOPATH/bin $ go version -m &lt;pkg-name&gt; | head -n2 | tail -n1 | awk &#39;{print $2}&#39; 参考サイト go installしたものを一括で更新する方法 ">
+1 2 $ cd $GOPATH/bin $ go version -m &lt;pkg-name&gt; | head -n2 | tail -n1 | awk &#39;{print $2}&#39; 参考サイト go installしたものを一括で更新する方法">
 
 <!--[if lte IE 9]>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -194,7 +194,11 @@
           <a href="/tags/go/">go</a>
           </div>
       <nav class="post-nav">
-        
+        <a class="prev" href="/blog/2024/12/11/lazyvim-setup/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">LazyVim をはじめました</span>
+            <span class="prev-text nav-mobile">Prev</span>
+          </a>
         <a class="next" href="/blog/2024/09/22/shadcn-setup/">
             <span class="next-text nav-default">shadcn/ui をセットアップする</span>
             <span class="next-text nav-mobile">Next</span>

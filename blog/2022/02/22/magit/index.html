@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <title>Emacs で Magit を使う - iriya-ufo&#39;s blog</title>
@@ -25,10 +25,10 @@
 
 
 
-<meta name="generator" content="Hugo 0.134.3 with theme even" />
+<meta name="generator" content="Hugo 0.139.3 with theme even" />
 
 
-<link rel="canonical" href="https://iriya-ufo.net/blog/2022/02/22/magit/" />
+<link rel="canonical" href="http://localhost:1313/blog/2022/02/22/magit/" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -40,7 +40,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
 
 
-<meta property="og:url" content="https://iriya-ufo.net/blog/2022/02/22/magit/">
+<meta property="og:url" content="http://localhost:1313/blog/2022/02/22/magit/">
   <meta property="og:site_name" content="iriya-ufo&#39;s blog">
   <meta property="og:title" content="Emacs で Magit を使う">
   <meta property="og:description" content="Magit は今まで食わず嫌いで使ってこなかったけど、ようやく覚える気になったので備忘録として書き残します。
@@ -170,96 +170,96 @@
 <table>
   <thead>
       <tr>
-          <th style="text-align: left">やりたいこと</th>
-          <th style="text-align: left">Git の場合</th>
-          <th style="text-align: left">Magit の場合</th>
+          <th>やりたいこと</th>
+          <th>Git の場合</th>
+          <th>Magit の場合</th>
       </tr>
   </thead>
   <tbody>
       <tr>
-          <td style="text-align: left">stage に追加</td>
-          <td style="text-align: left">git add &lt;file&gt;</td>
-          <td style="text-align: left">ファイルの行で s</td>
+          <td>stage に追加</td>
+          <td>git add &lt;file&gt;</td>
+          <td>ファイルの行で s</td>
       </tr>
       <tr>
-          <td style="text-align: left">stage に追加(全て)</td>
-          <td style="text-align: left">git add &ndash;all</td>
-          <td style="text-align: left">Untracked files の行で s</td>
+          <td>stage に追加(全て)</td>
+          <td>git add &ndash;all</td>
+          <td>Untracked files の行で s</td>
       </tr>
       <tr>
-          <td style="text-align: left">unstage</td>
-          <td style="text-align: left">git restore &ndash;staged &lt;file&gt;</td>
-          <td style="text-align: left">ファイルの行で u</td>
+          <td>unstage</td>
+          <td>git restore &ndash;staged &lt;file&gt;</td>
+          <td>ファイルの行で u</td>
       </tr>
       <tr>
-          <td style="text-align: left">unstage(全て)</td>
-          <td style="text-align: left">git reset</td>
-          <td style="text-align: left">Staged changes の行で u</td>
+          <td>unstage(全て)</td>
+          <td>git reset</td>
+          <td>Staged changes の行で u</td>
       </tr>
       <tr>
-          <td style="text-align: left">commit</td>
-          <td style="text-align: left">git commit</td>
-          <td style="text-align: left">c を二回タイプ後、メッセージ入力して C-c C-c</td>
+          <td>commit</td>
+          <td>git commit</td>
+          <td>c を二回タイプ後、メッセージ入力して C-c C-c</td>
       </tr>
       <tr>
-          <td style="text-align: left">branch checkout</td>
-          <td style="text-align: left">git checkout &lt;branch&gt;</td>
-          <td style="text-align: left">b b 移動したいブランチで RET</td>
+          <td>branch checkout</td>
+          <td>git checkout &lt;branch&gt;</td>
+          <td>b b 移動したいブランチで RET</td>
       </tr>
       <tr>
-          <td style="text-align: left">branch の作成</td>
-          <td style="text-align: left">git checkout -b &lt;branch&gt;</td>
-          <td style="text-align: left">b c コピー元を選択後 RET ブランチ名入力 RET</td>
+          <td>branch の作成</td>
+          <td>git checkout -b &lt;branch&gt;</td>
+          <td>b c コピー元を選択後 RET ブランチ名入力 RET</td>
       </tr>
       <tr>
-          <td style="text-align: left">branch の削除</td>
-          <td style="text-align: left">git branch -d &lt;branch&gt;</td>
-          <td style="text-align: left">b k 削除したいブランチで RET</td>
+          <td>branch の削除</td>
+          <td>git branch -d &lt;branch&gt;</td>
+          <td>b k 削除したいブランチで RET</td>
       </tr>
       <tr>
-          <td style="text-align: left">stash</td>
-          <td style="text-align: left">git stash</td>
-          <td style="text-align: left">z z</td>
+          <td>stash</td>
+          <td>git stash</td>
+          <td>z z</td>
       </tr>
       <tr>
-          <td style="text-align: left">stash list</td>
-          <td style="text-align: left">git stash list</td>
-          <td style="text-align: left">z l</td>
+          <td>stash list</td>
+          <td>git stash list</td>
+          <td>z l</td>
       </tr>
       <tr>
-          <td style="text-align: left">stash pop</td>
-          <td style="text-align: left">git stash pop</td>
-          <td style="text-align: left">z p</td>
+          <td>stash pop</td>
+          <td>git stash pop</td>
+          <td>z p</td>
       </tr>
       <tr>
-          <td style="text-align: left">stash drop</td>
-          <td style="text-align: left">git stash drop</td>
-          <td style="text-align: left">z k</td>
+          <td>stash drop</td>
+          <td>git stash drop</td>
+          <td>z k</td>
       </tr>
       <tr>
-          <td style="text-align: left">diff on staging</td>
-          <td style="text-align: left">git diff &ndash;cached</td>
-          <td style="text-align: left">確認したいファイルの行で TAB</td>
+          <td>diff on staging</td>
+          <td>git diff &ndash;cached</td>
+          <td>確認したいファイルの行で TAB</td>
       </tr>
       <tr>
-          <td style="text-align: left">diff on modified</td>
-          <td style="text-align: left">git diff</td>
-          <td style="text-align: left">確認したいファイルの行で TAB</td>
+          <td>diff on modified</td>
+          <td>git diff</td>
+          <td>確認したいファイルの行で TAB</td>
       </tr>
       <tr>
-          <td style="text-align: left">log on current</td>
-          <td style="text-align: left">git log</td>
-          <td style="text-align: left">l l で表示 n,p で移動 q で終了</td>
+          <td>log on current</td>
+          <td>git log</td>
+          <td>l l で表示 n,p で移動 q で終了</td>
       </tr>
       <tr>
-          <td style="text-align: left">push</td>
-          <td style="text-align: left">git push</td>
-          <td style="text-align: left">P u</td>
+          <td>push</td>
+          <td>git push</td>
+          <td>P u</td>
       </tr>
       <tr>
-          <td style="text-align: left">pull</td>
-          <td style="text-align: left">git pull</td>
-          <td style="text-align: left">F u</td>
+          <td>pull</td>
+          <td>git pull</td>
+          <td>F u</td>
       </tr>
   </tbody>
 </table>
