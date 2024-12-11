@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cs1102 on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/cs1102/</link>
+    <link>http://localhost:1313/tags/cs1102/</link>
     <description>Recent content in Cs1102 on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Tue, 23 Jun 2020 08:51:57 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/cs1102/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/cs1102/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>University of the People Term5 が始まりました</title>
-      <link>https://iriya-ufo.net/blog/2020/06/23/starting-the-university-of-the-people-term5/</link>
+      <link>http://localhost:1313/blog/2020/06/23/starting-the-university-of-the-people-term5/</link>
       <pubDate>Tue, 23 Jun 2020 08:51:57 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2020/06/23/starting-the-university-of-the-people-term5/</guid>
+      <guid>http://localhost:1313/blog/2020/06/23/starting-the-university-of-the-people-term5/</guid>
       <description>&lt;p&gt;先々週 University of the People Term4 が終わりました。Term4 では &lt;code&gt;Programming Fundamentals&lt;/code&gt; と &lt;code&gt;Online Education Strategies&lt;/code&gt; の2コースを受講していました。&#xA;&lt;code&gt;Programming Fundamentals&lt;/code&gt; は Python を使って基本的な文法や考え方を身につけるといった内容でした。&lt;code&gt;Class&lt;/code&gt; の概念までは触れられなかったので、ほんとにプログラミング初めての人のための基礎って感じで、実務経験のある方なら問題なく進んでいけると思います。&lt;/p&gt;</description>
     </item>
   </channel>

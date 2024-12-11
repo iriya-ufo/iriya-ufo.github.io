@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Bitcoin on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/bitcoin/</link>
+    <link>http://localhost:1313/tags/bitcoin/</link>
     <description>Recent content in Bitcoin on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 07 Oct 2013 02:12:24 +0000</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/bitcoin/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/bitcoin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>お金の常識を変える通貨「Bitcoin」</title>
-      <link>https://iriya-ufo.net/blog/2013/10/07/bitcoin-impact/</link>
+      <link>http://localhost:1313/blog/2013/10/07/bitcoin-impact/</link>
       <pubDate>Mon, 07 Oct 2013 02:12:24 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/10/07/bitcoin-impact/</guid>
+      <guid>http://localhost:1313/blog/2013/10/07/bitcoin-impact/</guid>
       <description>&lt;p&gt;皆さん Bitcoin って何かご存知でしょうか？&#xA;これ、世界を変える可能性のあるすごい通貨なんです。&lt;/p&gt;&#xA;&lt;p&gt;僕のチームメンバーである Toby は Bitcoin にかなり詳しい人物で彼が色々と教えてくれました。&lt;/p&gt;</description>
     </item>
   </channel>

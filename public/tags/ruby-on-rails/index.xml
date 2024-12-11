@@ -2,59 +2,59 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ruby on Rails on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/ruby-on-rails/</link>
+    <link>http://localhost:1313/tags/ruby-on-rails/</link>
     <description>Recent content in Ruby on Rails on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Fri, 08 Apr 2016 00:52:01 +0000</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/ruby-on-rails/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>bower-rails 使ってみた</title>
-      <link>https://iriya-ufo.net/blog/2016/04/08/start-bower-rails/</link>
+      <link>http://localhost:1313/blog/2016/04/08/start-bower-rails/</link>
       <pubDate>Fri, 08 Apr 2016 00:52:01 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/04/08/start-bower-rails/</guid>
-      <description>&lt;p&gt;Rails 開発で js とか css とかマジだるい。管理とかだるい。なので bower-rails 使ってみた。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;bower は node package なので最初に Node.js とかインストールしておく。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2016/04/07/nodejs-on-mac/&#34;&gt;Mac に Node.js インストールした&lt;/a&gt;&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2016/04/08/start-bower-rails/</guid>
+      <description>&lt;p&gt;Rails 開発で js とか css とかマジだるい。管理とかだるい。なので bower-rails 使ってみた。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;bower は node package なので最初に Node.js とかインストールしておく。&lt;/p&gt;&#xA;&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/04/07/nodejs-on-mac/&#34;&gt;Mac に Node.js インストールした&lt;/a&gt;&lt;/p&gt;</description>
     </item>
     <item>
       <title>Windows 7 64bit に Rails の環境を構築</title>
-      <link>https://iriya-ufo.net/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</link>
+      <link>http://localhost:1313/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</link>
       <pubDate>Thu, 08 May 2014 23:39:00 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</guid>
+      <guid>http://localhost:1313/blog/2014/05/08/ruby-on-rails-on-windows-7-64bit/</guid>
       <description>&lt;p&gt;最初に言っておきますと Windows で Rails 開発することは全くオススメしません。Mac か Linux を使いましょう。それが分かった上で Windows でやるっていう人はとりあえずここを参考にしてもらえればと思います。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rails 製アプリの Shapado をインストールしようとしたらとんでもないことになった</title>
-      <link>https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/</link>
+      <link>http://localhost:1313/blog/2014/03/12/not-work-shapado-on-my-rails/</link>
       <pubDate>Wed, 12 Mar 2014 02:12:34 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2014/03/12/not-work-shapado-on-my-rails/</guid>
+      <guid>http://localhost:1313/blog/2014/03/12/not-work-shapado-on-my-rails/</guid>
       <description>&lt;p&gt;プログラミング上達のコツはソースを読むことだ、とよく言われます。最近 Ruby on Rails の勉強を始めたので学習のためにオープンソースな Rails アプリを読んでみようと思いました。Shapado というQ&amp;amp;Aアプリが面白そうだったので Mac にインストールして動かしてみました。これが時間を食いつぶすきっかけになるとは思ってもいなかった・・・&lt;/p&gt;</description>
     </item>
     <item>
       <title>複数の環境で Rails を開発する</title>
-      <link>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</link>
+      <link>http://localhost:1313/blog/2013/11/04/develop-rails-with-multi-env/</link>
       <pubDate>Mon, 04 Nov 2013 00:15:10 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/11/04/develop-rails-with-multi-env/</guid>
+      <guid>http://localhost:1313/blog/2013/11/04/develop-rails-with-multi-env/</guid>
       <description>&lt;p&gt;普段は MacOS 使って Rails いじってますが Ubuntu を使った時も同じように開発できたらなと思ったのでやり方を書きます。また開発環境は以下を想定しています。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;  &lt;li&gt;既存の Rails プロジェクトのコードは github で管理&lt;/li&gt;&#xA;  &lt;li&gt;Rails アプリは heroku で公開&lt;/li&gt;&#xA;  &lt;li&gt;これから述べる環境構築は Ubuntu プラットフォームの話&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;また Ubuntu に開発環境が一切入ってない状態の場合、たくさんインストールすべきものがあるのでここでは割愛します。あくまで私の環境だとこうやれば動いたということです。&#xA;&lt;h2 id=&#34;ローカル開発環境を整える&#34;&gt;ローカル開発環境を整える&lt;/h2&gt;&#xA;&lt;p&gt;まず既存のアプリを github からクローンします。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rails 4.0.0.rc1 から 4.0.0 にアップデートしたら嵌った</title>
-      <link>https://iriya-ufo.net/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</link>
+      <link>http://localhost:1313/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</link>
       <pubDate>Sun, 03 Nov 2013 04:24:00 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</guid>
+      <guid>http://localhost:1313/blog/2013/11/03/update-rails-4-0-0-rc1-to-rails-4-0-0/</guid>
       <description>&lt;p&gt;3系から4系のアップデートを参考にしたのだけれど、変にエラーが出て嵌ったので解決方法を書く。&lt;/p&gt;&#xA;&lt;h2 id=&#34;ruby-アップデート&#34;&gt;ruby アップデート&lt;/h2&gt;&#xA;&lt;p&gt;まず ruby を最新のバージョンにアップデートする。&#xA;ruby は rbenv で管理している。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Ruby on Rails 4 のアプリを Heroku で公開する</title>
-      <link>https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
+      <link>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</link>
       <pubDate>Tue, 28 May 2013 18:00:47 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
+      <guid>http://localhost:1313/blog/2013/05/28/ruby-on-rails-4-to-heroku/</guid>
       <description>&lt;p&gt;Rails 4 が出たということなので Heroku で公開するまでの手順を書いてみます。&#xA;環境構築は Mac OS X で行っています。&lt;/p&gt;&#xA;&lt;h2 id=&#34;事前準備&#34;&gt;事前準備&lt;/h2&gt;&#xA;&lt;p&gt;パッケージ管理に Homebrew を使っています。ちょうどいい機会です、アップデートしておきましょう。&#xA;brew でインストールしておくといいのは git, rbenv, zsh といった感じでしょうか。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Rails のアップデート</title>
-      <link>https://iriya-ufo.net/blog/2013/05/12/rails-update/</link>
+      <link>http://localhost:1313/blog/2013/05/12/rails-update/</link>
       <pubDate>Sun, 12 May 2013 04:22:10 +0000</pubDate>
-      <guid>https://iriya-ufo.net/blog/2013/05/12/rails-update/</guid>
+      <guid>http://localhost:1313/blog/2013/05/12/rails-update/</guid>
       <description>&lt;p&gt;Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。&lt;/p&gt;&#xA;&lt;h2 id=&#34;gem-のアップデート&#34;&gt;Gem のアップデート&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ sudo gem update --system&#xA;$ gem -v&#xA;1.8.24&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;rails-のアップデート&#34;&gt;Rails のアップデート&lt;/h2&gt;&#xA;&lt;pre&gt;&lt;code&gt;$ sudo gem update rails&#xA;$ rails -v&#xA;Rails 3.2.11&#xA;&lt;/code&gt;&lt;/pre&gt;&#xA;&lt;h2 id=&#34;古い-rails-をアンインストール&#34;&gt;古い Rails をアンインストール&lt;/h2&gt;&#xA;&lt;p&gt;古いバージョンの Rails を削除します。新しいバージョンの Rails で動作確認していないなら、念の為に残しておいたほうがよいでしょう。&lt;/p&gt;</description>
     </item>
   </channel>

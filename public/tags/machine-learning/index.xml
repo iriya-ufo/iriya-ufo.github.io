@@ -2,73 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Machine Learning on iriya-ufo&#39;s blog</title>
-    <link>https://iriya-ufo.net/tags/machine-learning/</link>
+    <link>http://localhost:1313/tags/machine-learning/</link>
     <description>Recent content in Machine Learning on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 15 Feb 2017 15:03:24 +0900</lastBuildDate>
-    <atom:link href="https://iriya-ufo.net/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/machine-learning/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Complete Chart of Neural Networks</title>
-      <link>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</link>
+      <link>http://localhost:1313/blog/2017/02/15/complete-chart-of-neural-networks/</link>
       <pubDate>Wed, 15 Feb 2017 15:03:24 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2017/02/15/complete-chart-of-neural-networks/</guid>
-      <description>&lt;img src=&#34;https://iriya-ufo.net/images/2017/02/complete_chart_of_neural_networks.jpg&#34; class=&#34;image&#34;&gt;</description>
+      <guid>http://localhost:1313/blog/2017/02/15/complete-chart-of-neural-networks/</guid>
+      <description>&lt;img src=&#34;http://localhost:1313/images/2017/02/complete_chart_of_neural_networks.jpg&#34; class=&#34;image&#34;&gt;</description>
     </item>
     <item>
       <title>Deep Learning Nanodegree Foundation Program を受講します</title>
-      <link>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</link>
+      <link>http://localhost:1313/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</link>
       <pubDate>Fri, 03 Feb 2017 12:52:03 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</guid>
+      <guid>http://localhost:1313/blog/2017/02/03/start-the-deep-learning-nanodegree-foundation-program/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;http://1onjea25cyhx3uvxgs4vu325.wpengine.netdna-cdn.com/wp-content/uploads/2017/01/blog-1.jpg&#34; alt=&#34;udacity-nanodegree&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Udacity というオンライン学習プラットフォームで人工知能のナノ学位コースが始まるよと発表されました。&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;http://blog.udacity.com/2017/01/siraj-raval-deep-learning-nanodegree-foundation-program.html&#34;&gt;Introducing Siraj Raval’s Deep Learning Nanodegree Foundation Program!&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;人工知能の勉強は独学で少しずつやってましたが、必要な知識が専門的で広範囲に及ぶため、なかなか難しいなと思っていたところなので丁度よいと思って受講始めました。&lt;/p&gt;</description>
     </item>
     <item>
       <title>IBM の Data Scientist Workbench がすごい</title>
-      <link>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</link>
+      <link>http://localhost:1313/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</link>
       <pubDate>Wed, 01 Feb 2017 01:31:59 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</guid>
+      <guid>http://localhost:1313/blog/2017/02/01/ibm-data-scientist-workbench-first-look/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;https://i.ytimg.com/vi/3oI9z0Wq5u4/maxresdefault.jpg&#34; alt=&#34;ibm-ds-workbench&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;機械学習をやってる人やデータサイエンスやってる人は Jupyter Notebooks を使ってる人が多いと思います。&#xA;環境構築はそれほど難しくないのですが、これが Web 上で簡単に使えておまけにチュートリアルとかついてたら最高ですよね。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker 版 Jupyter Notebooks でホストとデータを共有する</title>
-      <link>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</link>
+      <link>http://localhost:1313/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</link>
       <pubDate>Sun, 04 Dec 2016 14:17:17 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/&#34;&gt;前回 Anaconda 環境の Docker イメージ&lt;/a&gt;を作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うことにします。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2016/12/04/data-sharing-with-host-on-jupyter-notebooks/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/11/18/pyenv-and-anaconda-on-docker/&#34;&gt;前回 Anaconda 環境の Docker イメージ&lt;/a&gt;を作ったのですが、機械学習をやるには Jupyter Notebooks という統合開発環境の方がいろいろ便利だということなので、そちらをメインに使うことにします。&lt;/p&gt;</description>
     </item>
     <item>
       <title>TensorFlow を GPU で動かす</title>
-      <link>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</link>
+      <link>http://localhost:1313/blog/2016/11/19/tensorflow-running-by-gpu/</link>
       <pubDate>Sat, 19 Nov 2016 23:37:43 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/11/19/tensorflow-running-by-gpu/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/&#34;&gt;前回&lt;/a&gt;は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。&#xA;移植性の高い方法で構築したいので Docker を使います。&lt;/p&gt;&#xA;&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GPU (今回は GEFORCE GTX 1080) を積んだマシンがある&lt;/li&gt;&#xA;&lt;li&gt;Ubuntu 16.04 LTS がインストールされている&lt;/li&gt;&#xA;&lt;li&gt;Docker がインストールされている&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;構築環境&#34;&gt;構築環境&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/CUDA&#34;&gt;CUDA&lt;/a&gt; &amp;mdash; Nvidia が提供する GPU 向けの統合開発環境&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;cuDNN&lt;/a&gt; &amp;mdash; Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/NVIDIA/nvidia-docker&#34;&gt;NVIDIA Docker&lt;/a&gt; &amp;mdash; Nvidia が提供している、コンテナから GPU を操作できるようにするもの&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.tensorflow.org/&#34;&gt;TensorFlow&lt;/a&gt; &amp;mdash; Google が開発したオープンソースの機械学習ライブラリ&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;構築手順&#34;&gt;構築手順&lt;/h2&gt;&#xA;&lt;h3 id=&#34;cuda-インストール&#34;&gt;CUDA インストール&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nvidia&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toolkit&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h3 id=&#34;cudnn-インストール&#34;&gt;cuDNN インストール&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;https://developer.nvidia.com/cudnn&lt;/a&gt; からユーザー登録をしてライブラリをダウンロードする。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2016/11/19/tensorflow-running-by-gpu/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/&#34;&gt;前回&lt;/a&gt;は最低限 Ubuntu が起動するまでの設定だったので、これから GPU で TensorFlow を実行するまでの環境を作っていきます。&#xA;移植性の高い方法で構築したいので Docker を使います。&lt;/p&gt;&#xA;&lt;h2 id=&#34;前提&#34;&gt;前提&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;GPU (今回は GEFORCE GTX 1080) を積んだマシンがある&lt;/li&gt;&#xA;&lt;li&gt;Ubuntu 16.04 LTS がインストールされている&lt;/li&gt;&#xA;&lt;li&gt;Docker がインストールされている&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;構築環境&#34;&gt;構築環境&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://ja.wikipedia.org/wiki/CUDA&#34;&gt;CUDA&lt;/a&gt; &amp;mdash; Nvidia が提供する GPU 向けの統合開発環境&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;cuDNN&lt;/a&gt; &amp;mdash; Nvidia が作ったディープラーニング用のライブラリ (SDK) で GPU をフル活用できるようになっている&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/NVIDIA/nvidia-docker&#34;&gt;NVIDIA Docker&lt;/a&gt; &amp;mdash; Nvidia が提供している、コンテナから GPU を操作できるようにするもの&lt;/li&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://www.tensorflow.org/&#34;&gt;TensorFlow&lt;/a&gt; &amp;mdash; Google が開発したオープンソースの機械学習ライブラリ&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;構築手順&#34;&gt;構築手順&lt;/h2&gt;&#xA;&lt;h3 id=&#34;cuda-インストール&#34;&gt;CUDA インストール&lt;/h3&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;&#xA;&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1&#xA;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&#xA;&lt;td class=&#34;lntd&#34;&gt;&#xA;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-gdscript3&#34; data-lang=&#34;gdscript3&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;sudo&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;apt&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;get&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;install&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;nvidia&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;cuda&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;toolkit&lt;/span&gt;&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&#xA;&lt;/div&gt;&#xA;&lt;/div&gt;&lt;h3 id=&#34;cudnn-インストール&#34;&gt;cuDNN インストール&lt;/h3&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://developer.nvidia.com/cudnn&#34;&gt;https://developer.nvidia.com/cudnn&lt;/a&gt; からユーザー登録をしてライブラリをダウンロードする。&lt;/p&gt;</description>
     </item>
     <item>
       <title>機械学習と数学</title>
-      <link>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</link>
+      <link>http://localhost:1313/blog/2016/11/19/ml-and-math/</link>
       <pubDate>Sat, 19 Nov 2016 00:12:13 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/11/19/ml-and-math/</guid>
+      <guid>http://localhost:1313/blog/2016/11/19/ml-and-math/</guid>
       <description>&lt;p&gt;人工知能といえば機械学習、そして機械学習といえば数学。チュートリアルやらライブラリやらで、これだけ手軽になった機械学習といえども現段階ではちょっとまだ簡単に扱えるようにはなっていません。&#xA;その主たる原因は数学だと思います。専門的とはいえ理系大学一年程度の知識があればそこそこいけそうなので頑張りましょう。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Docker コンテナに anaconda 環境を構築</title>
-      <link>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</link>
+      <link>http://localhost:1313/blog/2016/11/18/pyenv-and-anaconda-on-docker/</link>
       <pubDate>Fri, 18 Nov 2016 12:17:31 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/11/18/pyenv-and-anaconda-on-docker/</guid>
+      <guid>http://localhost:1313/blog/2016/11/18/pyenv-and-anaconda-on-docker/</guid>
       <description>&lt;p&gt;機械学習の主流言語といえば Python ですよね。最近はインストール方法も変わってきており、より便利な方法があるようです。&lt;/p&gt;&#xA;&lt;p&gt;今回は Anaconda の環境を Docker で作って、さらに各種ライブラリを Anaconda の仮想として作成していくような予定でいます。&#xA;Docker にすると各OS毎に環境を作らないで済むのがいいですね。Anaconda 公式でも Docker はいいよって言ってます。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Deep Learning Machine に Ubuntu のインストール</title>
-      <link>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</link>
+      <link>http://localhost:1313/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</link>
       <pubDate>Thu, 10 Nov 2016 01:38:43 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/&#34;&gt;『Hardware Architecture for Machine Learning』&lt;/a&gt;で作ったマシンに Ubuntu 16.04 LTS をインストールしました。&lt;/p&gt;&#xA;&lt;p&gt;Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓いたのでその解決法を記載します。&lt;/p&gt;</description>
+      <guid>http://localhost:1313/blog/2016/11/10/install-ubuntu-to-deep-learning-machine/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;http://localhost:1313/blog/2016/11/09/hardware-architecture-for-machine-learning/&#34;&gt;『Hardware Architecture for Machine Learning』&lt;/a&gt;で作ったマシンに Ubuntu 16.04 LTS をインストールしました。&lt;/p&gt;&#xA;&lt;p&gt;Nvidia GTX-1080 を使っていたせいで、インストーラーが表示されず躓いたのでその解決法を記載します。&lt;/p&gt;</description>
     </item>
     <item>
       <title>hardware architecture for machine learning</title>
-      <link>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</link>
+      <link>http://localhost:1313/blog/2016/11/09/hardware-architecture-for-machine-learning/</link>
       <pubDate>Wed, 09 Nov 2016 14:58:31 +0900</pubDate>
-      <guid>https://iriya-ufo.net/blog/2016/11/09/hardware-architecture-for-machine-learning/</guid>
+      <guid>http://localhost:1313/blog/2016/11/09/hardware-architecture-for-machine-learning/</guid>
       <description>&lt;p&gt;機械学習をさせるための専用演算マシンを構築しました。&#xA;クラウドでいいじゃんとも思いますが、自分の手元に自由に使える演算サーバーがあるのはそれはそれで便利だと思います。&#xA;テンションあがりますしね。&lt;/p&gt;</description>
     </item>
   </channel>

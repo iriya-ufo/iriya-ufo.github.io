@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>LazyVim をはじめました - iriya-ufo&#39;s blog</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="" /><meta name="description" content="TechCommit AdventCalendar2024 9日目の記事です。
+最近 LazyVim を触り始めたのでそのセットアップ備忘録になります。 自分は今まで Emacs を長年触ってきましたが最近は動作のもっさり感とたまにクラッシュするのでどうしたものかなぁと思っていたところ、たまたま LazyVim の存在を知ったので入門してみました。 Vim は NeoVim で拡張できることは知ってましたが、セットアップが大変なイメージがあったのでこれまで躊躇してました。
+" /><meta name="keywords" content="Hugo, theme, even" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.139.3 with theme even" />
+
+
+<link rel="canonical" href="http://localhost:1313/blog/2024/12/11/lazyvim-setup/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+<link href="/dist/even.bd9dbb8a.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.css" integrity="sha256-7TyXnr2YU040zfSP+rEcz29ggW4j56/ujTPwjMzyqFY=" crossorigin="anonymous">
+
+
+<meta property="og:url" content="http://localhost:1313/blog/2024/12/11/lazyvim-setup/">
+  <meta property="og:site_name" content="iriya-ufo&#39;s blog">
+  <meta property="og:title" content="LazyVim をはじめました">
+  <meta property="og:description" content="TechCommit AdventCalendar2024 9日目の記事です。
+最近 LazyVim を触り始めたのでそのセットアップ備忘録になります。 自分は今まで Emacs を長年触ってきましたが最近は動作のもっさり感とたまにクラッシュするのでどうしたものかなぁと思っていたところ、たまたま LazyVim の存在を知ったので入門してみました。 Vim は NeoVim で拡張できることは知ってましたが、セットアップが大変なイメージがあったのでこれまで躊躇してました。">
+  <meta property="og:locale" content="ja">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="post">
+    <meta property="article:published_time" content="2024-12-11T22:26:23+09:00">
+    <meta property="article:modified_time" content="2024-12-11T22:26:23+09:00">
+    <meta property="article:tag" content="Vim">
+
+  <meta itemprop="name" content="LazyVim をはじめました">
+  <meta itemprop="description" content="TechCommit AdventCalendar2024 9日目の記事です。
+最近 LazyVim を触り始めたのでそのセットアップ備忘録になります。 自分は今まで Emacs を長年触ってきましたが最近は動作のもっさり感とたまにクラッシュするのでどうしたものかなぁと思っていたところ、たまたま LazyVim の存在を知ったので入門してみました。 Vim は NeoVim で拡張できることは知ってましたが、セットアップが大変なイメージがあったのでこれまで躊躇してました。">
+  <meta itemprop="datePublished" content="2024-12-11T22:26:23+09:00">
+  <meta itemprop="dateModified" content="2024-12-11T22:26:23+09:00">
+  <meta itemprop="wordCount" content="774">
+  <meta itemprop="keywords" content="Vim">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="LazyVim をはじめました">
+  <meta name="twitter:description" content="TechCommit AdventCalendar2024 9日目の記事です。
+最近 LazyVim を触り始めたのでそのセットアップ備忘録になります。 自分は今まで Emacs を長年触ってきましたが最近は動作のもっさり感とたまにクラッシュするのでどうしたものかなぁと思っていたところ、たまたま LazyVim の存在を知ったので入門してみました。 Vim は NeoVim で拡張できることは知ってましたが、セットアップが大変なイメージがあったのでこれまで躊躇してました。">
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">Home</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">Archives</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">Tags</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">Categories</li>
+      </a><a href="/about/">
+        <li class="mobile-menu-item">About</li>
+      </a>
+  </ul>
+</nav>
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">iriya-ufo&#39;s blog</a>
+</div>
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">Home</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">Archives</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">Tags</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">Categories</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/about/">About</a>
+      </li>
+  </ul>
+</nav>
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">LazyVim をはじめました</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2024-12-11 </span>
+        <div class="post-category">
+            <a href="/categories/programming/"> programming </a>
+            </div>
+        
+      </div>
+    </header>
+
+    
+    <div class="post-content">
+      <p><a href="https://adventar.org/calendars/10584">TechCommit AdventCalendar2024</a> 9日目の記事です。</p>
+<p>最近 LazyVim を触り始めたのでそのセットアップ備忘録になります。
+自分は今まで Emacs を長年触ってきましたが最近は動作のもっさり感とたまにクラッシュするのでどうしたものかなぁと思っていたところ、たまたま LazyVim の存在を知ったので入門してみました。
+Vim は NeoVim で拡張できることは知ってましたが、セットアップが大変なイメージがあったのでこれまで躊躇してました。</p>
+<h2 id="install">Install</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ brew install neovim
+</span></span><span class="line"><span class="cl">$ git clone https://github.com/LazyVim/starter ~/.config/nvim
+</span></span><span class="line"><span class="cl">$ rm -rf ~/.config/nvim/.git
+</span></span><span class="line"><span class="cl">$ nvim
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>~/.zshrc</code> に alias を追加</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="nb">alias</span> <span class="nv">nv</span><span class="o">=</span><span class="s1">&#39;nvim&#39;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>Nerd Font をインストール</p>
+<ul>
+<li>Nerd Font とは各種プログラミング用フォントにアイコンなどが加わったセット</li>
+<li>Nerd Font がないと LazyVim 起動時のアイコンなどが tofu になる</li>
+<li><a href="https://www.programmingfonts.org">このサイト</a>で比較できる</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ brew tap homebrew/cask-fonts <span class="c1"># M1 以上の Mac では必要なし</span>
+</span></span><span class="line"><span class="cl">$ brew install --cask font-Hack-nerd-font
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">$ fc-list <span class="c1"># インストール済みフォント一覧</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>ターミナルで Nerd Font を使用する設定を書く</p>
+<ul>
+<li><code>.alacritty</code> の設定ファイルに追記</li>
+<li><a href="https://github.com/iriya-ufo/dotfiles/commit/6727358dc41930f2ee2ed7398edeec1bc4b5aeb8">https://github.com/iriya-ufo/dotfiles/commit/6727358dc41930f2ee2ed7398edeec1bc4b5aeb8</a></li>
+</ul>
+<p>コンフィグを Git 管理する</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ mv ~/.config/nvim ~/.dotfiles/Mac/
+</span></span><span class="line"><span class="cl">$ ln -s ~/.dotfiles/Mac/nvim ~/.config
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>不必要な設定を消して config からやり直す方法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">$ rm -rf ~/.local/share/nvim
+</span></span><span class="line"><span class="cl">$ rm -rf ~/.local/state/nvim
+</span></span><span class="line"><span class="cl">$ rm -rf ~/.cache/nvim
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="設定の基本方針">設定の基本方針</h2>
+<p>基本は LazyVim が用意されているものを使用する</p>
+<ul>
+<li>LazyVim のプラグインを有効化するときは公式に習って <code>lua/config/lazy.lua</code> でインポートする</li>
+<li>そのデフォルト動作を上書きしたい場合に限って <code>plugins</code> ディレクトリにファイルを作成して設定する</li>
+<li>その他、用意されているプラグインではないものは直接 <code>plugins</code> ディレクトリにファイルを作って書く</li>
+</ul>
+<h2 id="tailwind有効化">Tailwind有効化</h2>
+<ul>
+<li>Tailwindを有効化したときに出たエラーの解決</li>
+<li><code>lua/config/lazy.lua</code> で tailwind を import したとき以下のエラーが出た</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">module &#39;lspconfig.server_configurations.tailwindcss&#39; not found:
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>エラーを解決しようと以下の作業を行った（以下では解決できない）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">nvim 起動
+</span></span><span class="line"><span class="cl">:Mason
+</span></span><span class="line"><span class="cl">/tailwind 検索
+</span></span><span class="line"><span class="cl">tailwindcss-language-server をインストールしようとしたがすでにインストールされていた
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">terminal からコマンド実行
+</span></span><span class="line"><span class="cl">$ npm install -g @tailwindcss/language-server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li><code>lua/plugins/tailwindcss.lua</code> ファイルを作成し以下の設定を入れることで解決した</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-lua" data-lang="lua"><span class="line"><span class="cl"><span class="kr">return</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="s2">&#34;neovim/nvim-lspconfig&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="n">opts</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">      <span class="n">servers</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tailwindcss</span> <span class="o">=</span> <span class="p">{},</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">      <span class="n">setup</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="n">tailwindcss</span> <span class="o">=</span> <span class="kr">function</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="n">opts</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">          <span class="kd">local</span> <span class="n">tw</span> <span class="o">=</span> <span class="n">require</span><span class="p">(</span><span class="s2">&#34;lspconfig.configs.tailwindcss&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">end</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">  <span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="cheat-sheet">Cheat Sheet</h2>
+<p><a href="https://www.lazyvim.org/keymaps">⌨️ Keymaps | LazyVim</a></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">Author</span>
+    <span class="item-content"></span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">LastMod</span>
+    <span class="item-content">
+        2024-12-11
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/vim/">vim</a>
+          </div>
+      <nav class="post-nav">
+        
+        <a class="next" href="/blog/2024/09/24/go-pkg-update-all/">
+            <span class="next-text nav-default">Go でインストールしたパッケージのアップデート</span>
+            <span class="next-text nav-mobile">Next</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'iriya-ufo-net';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="https://www.linkedin.com/in/naoto-inoue-a7b7171a1/" class="iconfont icon-linkedin" title="linkedin"></a>
+      <a href="https://github.com/iriya-ufo" class="iconfont icon-github" title="github"></a>
+  
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    Powered by <a class="hexo-link" href="https://gohugo.io">Hugo</a>
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    Theme - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2013 - 
+    2024
+    <span class="heart">
+      <i class="iconfont icon-heart"></i>
+    </span>
+    <span class="author"></span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.2.1/dist/jquery.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/slideout@1.0.1/dist/slideout.min.js" integrity="sha256-t+zJ/g8/KXIJMjSVQdnibt4dlaDxc9zXr/9oNPeWqdg=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.1.20/dist/jquery.fancybox.min.js" integrity="sha256-XVLffZaxoWfGUEbdzuLi7pwaUJv1cecsQJQqGLe7axY=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="/dist/even.de161082.min.js"></script>
+
+
+
+
+
+
+</body>
+</html>
