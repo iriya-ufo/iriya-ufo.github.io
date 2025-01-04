@@ -164,6 +164,9 @@ export default defineConfig({
 ```
 
 `tsconfig.json` に追記します。
+多くの設定で `baseUrl` が書かれていますが、昔のバージョン（4.0以前）の名残なので今は必要ありません。
+
+- [tsconfig.jsonの設定を見直そう！フロントエンド向け 2024夏](https://speakerdeck.com/uhyo/tsconfig-dot-jsonnoshe-ding-wojian-zhi-sou-hurontoendoxiang-ke-2024xia)
 
 ```json
 +  "compilerOptions": {
@@ -173,14 +176,26 @@ export default defineConfig({
 +  }
 ```
 
-このとき下記のようなエラーが出る場合は `$ npm i -D @types/node` とすることで解消されます。
+こちらも2024年9月現在 Vite でセットアップを行うと `./tsconfig.app.json` と `./tsconfig.node.json` を読み込むような設定になっています。
+`compilerOptions` で内容が重複してうまく動作しないので両方のファイルの先頭に `extends` を追加します。
+
+```json
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+  ...
+  }
+}
+```
+
+また下記のようなエラーが出る場合は `$ npm i -D @types/node` とすることで解消されます。
 
 - `Cannot find module 'path' or its corresponding type declarations.`
 - `Cannot find name '__dirname'.`
 
 ![path-error](/images/2022/02/path-error.png)
 
-ちなみに `vite.config.ts` と `tsconfig.json` で同じようなパスの設定を書いてますが、次のような理由があるためです。
+Tips として `vite.config.ts` と `tsconfig.json` で同じようなパスの設定を書いてますが、次のような理由があるためです。
 Vite では `tsconfig.json` にパスを書いても無視されてしまいます。
 Vite に認識してもらうために `vite.config.ts` にパスの設定を書きます。
 `tsconfig.json` でパスの設定をしている理由は VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。
