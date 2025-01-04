@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.139.3 with theme even" />
+<meta name="generator" content="Hugo 0.140.2 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2024/09/08/how-to-setup-react-ts-by-vite-2024/" />
@@ -57,7 +57,7 @@
 使用する技術スタック React TypeScript Vite pnpm Biome 目次 Node のインストール pnpm のインストール Vite で React x TypeScript を構築 Biome セットアップ VSCode 設定 ESLint 削除 絶対パスでインポート Node のインストール asdf を利用して Node をインストールします。">
   <meta itemprop="datePublished" content="2024-09-08T02:16:39+09:00">
   <meta itemprop="dateModified" content="2024-09-08T02:16:39+09:00">
-  <meta itemprop="wordCount" content="882">
+  <meta itemprop="wordCount" content="1061">
   <meta itemprop="keywords" content="React">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Vite で React の環境構築">
@@ -377,7 +377,11 @@ Biome を使うため削除します。</p>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><code>tsconfig.json</code> に追記します。</p>
+</div><p><code>tsconfig.json</code> に追記します。
+多くの設定で <code>baseUrl</code> が書かれていますが、昔のバージョン（4.0以前）の名残なので今は必要ありません。</p>
+<ul>
+<li><a href="https://speakerdeck.com/uhyo/tsconfig-dot-jsonnoshe-ding-wojian-zhi-sou-hurontoendoxiang-ke-2024xia">tsconfig.jsonの設定を見直そう！フロントエンド向け 2024夏</a></li>
+</ul>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -394,13 +398,33 @@ Biome を使うため削除します。</p>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>  <span class="p">}</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>このとき下記のようなエラーが出る場合は <code>$ npm i -D @types/node</code> とすることで解消されます。</p>
+</div><p>こちらも2024年9月現在 Vite でセットアップを行うと <code>./tsconfig.app.json</code> と <code>./tsconfig.node.json</code> を読み込むような設定になっています。
+<code>compilerOptions</code> で内容が重複してうまく動作しないので両方のファイルの先頭に <code>extends</code> を追加します。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="s2">&#34;./tsconfig.json&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&#34;compilerOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">  <span class="err">...</span>
+</span></span><span class="line"><span class="cl">  <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>また下記のようなエラーが出る場合は <code>$ npm i -D @types/node</code> とすることで解消されます。</p>
 <ul>
 <li><code>Cannot find module 'path' or its corresponding type declarations.</code></li>
 <li><code>Cannot find name '__dirname'.</code></li>
 </ul>
 <p><img src="/images/2022/02/path-error.png" alt="path-error"></p>
-<p>ちなみに <code>vite.config.ts</code> と <code>tsconfig.json</code> で同じようなパスの設定を書いてますが、次のような理由があるためです。
+<p>Tips として <code>vite.config.ts</code> と <code>tsconfig.json</code> で同じようなパスの設定を書いてますが、次のような理由があるためです。
 Vite では <code>tsconfig.json</code> にパスを書いても無視されてしまいます。
 Vite に認識してもらうために <code>vite.config.ts</code> にパスの設定を書きます。
 <code>tsconfig.json</code> でパスの設定をしている理由は VSCode などを使っているときにパスが読み込めるようにするためというエディター側に認識させる都合上書いています。
@@ -486,7 +510,7 @@ Vite に認識してもらうために <code>vite.config.ts</code> にパスの�
   <span class="copyright-year">
     &copy; 
     2013 - 
-    2024
+    2025
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
