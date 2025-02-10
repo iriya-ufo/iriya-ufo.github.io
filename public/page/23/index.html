@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.140.2 with theme even" />
+<meta name="generator" content="Hugo 0.143.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/" />
@@ -49,8 +49,8 @@
 
   <meta itemprop="name" content="iriya-ufo&#39;s blog">
   <meta itemprop="description" content="Naoto Inoue&#39;s Personal blog about everything.">
-  <meta itemprop="datePublished" content="2024-12-11T22:26:23+09:00">
-  <meta itemprop="dateModified" content="2024-12-11T22:26:23+09:00">
+  <meta itemprop="datePublished" content="2025-02-10T22:01:30+09:00">
+  <meta itemprop="dateModified" content="2025-02-10T22:01:30+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iriya-ufo&#39;s blog">
   <meta name="twitter:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -118,6 +118,39 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/blog/2013/05/12/rails-update/">Rails のアップデート</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2013-05-12 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>Ruby on Rails の 3.2.9 に脆弱性が発見されたため 3.2.11 にアップデートした際の方法を記す。</p>
+<h2 id="gem-のアップデート">Gem のアップデート</h2>
+<pre><code>$ sudo gem update --system
+$ gem -v
+1.8.24
+</code></pre>
+<h2 id="rails-のアップデート">Rails のアップデート</h2>
+<pre><code>$ sudo gem update rails
+$ rails -v
+Rails 3.2.11
+</code></pre>
+<h2 id="古い-rails-をアンインストール">古い Rails をアンインストール</h2>
+<p>古いバージョンの Rails を削除します。新しいバージョンの Rails で動作確認していないなら、念の為に残しておいたほうがよいでしょう。</p>
+    </div>
+    <div class="read-more">
+      <a href="/blog/2013/05/12/rails-update/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/blog/2013/05/10/how-to-keep-bg-job-after-ssh-quit/">SSH 接続が切れた後でもバックグラウンドジョブを継続させる方法</a></h1>
