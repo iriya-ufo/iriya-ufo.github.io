@@ -9,42 +9,63 @@
   </url>
   
   <url>
+    <loc>https://iriya-ufo.net/tags/asdf/</loc>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2025/02/10/asdf-to-mise/</loc>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://iriya-ufo.net/categories/</loc>
-    <lastmod>2024-12-11T22:26:23+09:00</lastmod>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/</loc>
-    <lastmod>2024-12-11T22:26:23+09:00</lastmod>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://iriya-ufo.net/blog/2024/12/11/lazyvim-setup/</loc>
-    <lastmod>2024-12-11T22:26:23+09:00</lastmod>
+    <loc>https://iriya-ufo.net/tags/mise/</loc>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/post/</loc>
-    <lastmod>2024-12-11T22:26:23+09:00</lastmod>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/categories/programming/</loc>
-    <lastmod>2024-12-11T22:26:23+09:00</lastmod>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://iriya-ufo.net/tags/</loc>
+    <lastmod>2025-02-10T22:01:30+09:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://iriya-ufo.net/blog/2024/12/11/lazyvim-setup/</loc>
     <lastmod>2024-12-11T22:26:23+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
@@ -158,13 +179,6 @@
   <url>
     <loc>https://iriya-ufo.net/categories/review/</loc>
     <lastmod>2022-04-30T23:28:51+09:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://iriya-ufo.net/tags/asdf/</loc>
-    <lastmod>2022-04-29T21:09:55+09:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>

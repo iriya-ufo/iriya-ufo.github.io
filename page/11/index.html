@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.140.2 with theme even" />
+<meta name="generator" content="Hugo 0.143.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/" />
@@ -49,8 +49,8 @@
 
   <meta itemprop="name" content="iriya-ufo&#39;s blog">
   <meta itemprop="description" content="Naoto Inoue&#39;s Personal blog about everything.">
-  <meta itemprop="datePublished" content="2024-12-11T22:26:23+09:00">
-  <meta itemprop="dateModified" content="2024-12-11T22:26:23+09:00">
+  <meta itemprop="datePublished" content="2025-02-10T22:01:30+09:00">
+  <meta itemprop="dateModified" content="2025-02-10T22:01:30+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iriya-ufo&#39;s blog">
   <meta name="twitter:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -118,6 +118,36 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/blog/2016/05/07/from-passenger-to-puma/">Passenger をやめて Puma にした</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2016-05-07 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <p>とあるプロジェクトで Nginx + Passenger という組合せで動かしていたのだが、リクエストの同期処理動作で具合が悪かったので Puma に切り替えた話。</p>
+<h2 id="環境など">環境など</h2>
+<ul>
+<li>Nginx や Passenger は設定済みで動作していた</li>
+<li>Capistrano でデプロイしている</li>
+<li>システム全体に rbenv で ruby をインストールしている</li>
+<li>デプロイユーザーが別にいる (今回の場合 <code>deployer</code>)</li>
+</ul>
+<h2 id="sudo-の許可">sudo の許可</h2>
+<p>deployer で puma の再起動ができるようにするため <code>sudo</code> 権限を与える。全コマンドの <code>sudo</code> は危険なので特定コマンドのみに制限する。</p>
+    </div>
+    <div class="read-more">
+      <a href="/blog/2016/05/07/from-passenger-to-puma/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/blog/2016/04/30/theme-template-for-octopress/">Octopress のテーマをカスタマイズする</a></h1>
@@ -332,28 +362,6 @@ Node.js で動き、プラグインなどは CoffeeScript で書く</p>
     </div>
     <div class="read-more">
       <a href="/blog/2016/03/04/hubot-on-slack/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/blog/2016/02/09/nephrotic-syndrome/">ネフローゼ再発したからなんか書く</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2016-02-09 </span>
-      <div class="post-category">
-          <a href="/categories/diary/"> diary </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>今回も原因はよく分かりませんが、再発してしまいました。</p>
-<p>前回記事が2014年07月20日なので一年と半年ぶりくらいでしょうか。一年半くらいで周期がめぐってくるんだろうか？笑</p>
-    </div>
-    <div class="read-more">
-      <a href="/blog/2016/02/09/nephrotic-syndrome/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>
