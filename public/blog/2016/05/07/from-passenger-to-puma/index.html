@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.1 with theme even" />
+<meta name="generator" content="Hugo 0.155.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2016/05/07/from-passenger-to-puma/" />
@@ -272,7 +272,7 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl"><span class="cp">#!/bin/bash
-</span></span></span><span class="line"><span class="cl"><span class="cp"></span><span class="c1">#</span>
+</span></span></span><span class="line"><span class="cl"><span class="c1">#</span>
 </span></span><span class="line"><span class="cl"><span class="c1"># puma-myproject</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># chkconfig: 2345 82 55</span>
@@ -449,13 +449,13 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">3c3
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="gd">&lt; worker_processes  auto;
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gs">---
-</span></span></span><span class="line"><span class="cl"><span class="gs"></span><span class="gi">&gt; worker_processes  1;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">17a18,20
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="gi">&gt;     passenger_root /usr/local/rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/passenger-5.0.23;
+</span></span></span><span class="line"><span class="cl"><span class="gd">&lt; worker_processes  auto;
+</span></span></span><span class="line"><span class="cl"><span class="gs">---
+</span></span></span><span class="line"><span class="cl"><span class="gi">&gt; worker_processes  1;
+</span></span></span><span class="line"><span class="cl"><span class="gu">17a18,20
+</span></span></span><span class="line"><span class="cl"><span class="gi">&gt;     passenger_root /usr/local/rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/passenger-5.0.23;
 </span></span></span><span class="line"><span class="cl"><span class="gi">&gt;     passenger_ruby /usr/local/rbenv/versions/2.2.2/bin/ruby;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span>&gt;
+</span></span></span><span class="line"><span class="cl">&gt;
 </span></span></code></pre></td></tr></table>
 </div>
 </div><div class="highlight"><div class="chroma">
@@ -486,12 +486,12 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-diff" data-lang="diff"><span class="line"><span class="cl"><span class="gu">1,4d0
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="gd">&lt; upstream app {
+</span></span></span><span class="line"><span class="cl"><span class="gd">&lt; upstream app {
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;     server unix:///your-app-path/current/tmp/sockets/puma.sock;
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt; }
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span>&lt;
+</span></span></span><span class="line"><span class="cl">&lt;
 </span></span><span class="line"><span class="cl"><span class="gu">20,27c16,17
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="gd">&lt;         gzip_static on;
+</span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         gzip_static on;
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         proxy_read_timeout 60;
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         proxy_connect_timeout 60;
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         proxy_redirect off;
@@ -499,13 +499,13 @@ deployer ALL=(ALL) NOPASSWD: /sbin/service puma restart
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         proxy_set_header Host $http_host;
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         proxy_set_header X-Forwarded-Proto $scheme;
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         proxy_set_header X-Real-IP $remote_addr;
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span><span class="gs">---
-</span></span></span><span class="line"><span class="cl"><span class="gs"></span><span class="gi">&gt;         passenger_enabled on;
+</span></span></span><span class="line"><span class="cl"><span class="gs">---
+</span></span></span><span class="line"><span class="cl"><span class="gi">&gt;         passenger_enabled on;
 </span></span></span><span class="line"><span class="cl"><span class="gi">&gt;         rails_env sandbox;
-</span></span></span><span class="line"><span class="cl"><span class="gi"></span><span class="gu">30,34d19
-</span></span></span><span class="line"><span class="cl"><span class="gu"></span><span class="gd">&lt;             break;
+</span></span></span><span class="line"><span class="cl"><span class="gu">30,34d19
+</span></span></span><span class="line"><span class="cl"><span class="gd">&lt;             break;
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;         }
-</span></span></span><span class="line"><span class="cl"><span class="gd"></span>&lt;
+</span></span></span><span class="line"><span class="cl">&lt;
 </span></span><span class="line"><span class="cl"><span class="gd">&lt;         if (!-f $request_filename) {
 </span></span></span><span class="line"><span class="cl"><span class="gd">&lt;             proxy_pass http://app;
 </span></span></span></code></pre></td></tr></table>
@@ -612,7 +612,7 @@ $ chkconfig puma on
   <span class="copyright-year">
     &copy; 
     2013 - 
-    2025
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

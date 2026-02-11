@@ -24,7 +24,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.1 with theme even" />
+<meta name="generator" content="Hugo 0.155.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2015/07/20/docker-on-mac/" />
@@ -288,8 +288,8 @@ $ vim ~/docker/rbenv-mysql/Dockerfile
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># mysql のインストール</span>
 </span></span><span class="line"><span class="cl">RUN <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password_again password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
-</span></span></span><span class="line"><span class="cl"><span class="se"></span>    apt-get -y install mysql-server
+</span></span></span><span class="line"><span class="cl">    <span class="nb">echo</span> <span class="s2">&#34;mysql-server mysql-server/root_password_again password root&#34;</span> <span class="p">|</span> debconf-set-selections <span class="o">&amp;&amp;</span> <span class="se">\
+</span></span></span><span class="line"><span class="cl">    apt-get -y install mysql-server
 </span></span><span class="line"><span class="cl">RUN apt-get clean
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># mysql の設定ファイル</span>
@@ -403,7 +403,7 @@ $ docker push iriya/rbenv-mysql
   <span class="copyright-year">
     &copy; 
     2013 - 
-    2025
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.1 with theme even" />
+<meta name="generator" content="Hugo 0.155.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2025/02/10/asdf-to-mise/" />
@@ -58,7 +58,7 @@
 1 /Users/iriya/.zshrc:source:126: no such file or directory: /usr/local/opt/asdf/libexec/asdf.sh 公式サイトで見てもインストール方法は変わっておらず brew のタイミングでなぜか libexec が消失していた感じです。 治し方が分からないので mise に移行することにしました。">
   <meta itemprop="datePublished" content="2025-02-10T22:01:30+09:00">
   <meta itemprop="dateModified" content="2025-02-10T22:01:30+09:00">
-  <meta itemprop="wordCount" content="436">
+  <meta itemprop="wordCount" content="485">
   <meta itemprop="keywords" content="Asdf,Mise">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="asdf から mise に移行する">
@@ -214,8 +214,17 @@
       </tr>
   </tbody>
 </table>
-<p>asdf と違い plugin のインストールがないので楽なのとインストールが速い</p>
-<h2 id="その他">その他</h2>
+<p>asdf と違い plugin のインストールがないので楽なのとインストールが速い。</p>
+<p>なお <code>mise install</code> 実行時に以下のようなエラーがでたときには <code>brew install gnupg</code> をして再度実行すればよい。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">mise WARN  gpg not found, skipping verification
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="その他">その他</h2>
 <p>起動時間に何か変化あるかなと思って計測してみました。</p>
 <h3 id="asdf-使用時">asdf 使用時</h3>
 <div class="highlight"><div class="chroma">
@@ -318,7 +327,7 @@
   <span class="copyright-year">
     &copy; 
     2013 - 
-    2025
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>

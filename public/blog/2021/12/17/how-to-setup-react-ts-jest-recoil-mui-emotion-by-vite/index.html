@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.1 with theme even" />
+<meta name="generator" content="Hugo 0.155.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2021/12/17/how-to-setup-react-ts-jest-recoil-mui-emotion-by-vite/" />
@@ -419,33 +419,33 @@
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// 適用する環境
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;env&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nt">&#34;env&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;es6&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;node&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;browser&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;commonjs&#34;</span><span class="p">:</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// パーサー
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;parser&#34;</span><span class="p">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="p">,</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nt">&#34;parser&#34;</span><span class="p">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// jsx を使います
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;parserOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nt">&#34;parserOptions&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;ecmaVersion&#34;</span><span class="p">:</span> <span class="mi">2018</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;ecmaFeatures&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;jsx&#34;</span><span class="p">:</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl">    <span class="p">},</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// import 文でモジュールを使用します
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;sourceType&#34;</span><span class="p">:</span> <span class="s2">&#34;module&#34;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nt">&#34;sourceType&#34;</span><span class="p">:</span> <span class="s2">&#34;module&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// React のバージョンは自動検出に
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;settings&#34;</span><span class="p">:</span> <span class="p">{</span>
+</span></span></span><span class="line"><span class="cl">  <span class="nt">&#34;settings&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="nt">&#34;react&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">      <span class="nt">&#34;version&#34;</span><span class="p">:</span> <span class="s2">&#34;detect&#34;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">}</span>
 </span></span><span class="line"><span class="cl">  <span class="p">},</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;plugins&#34;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">],</span>
 </span></span><span class="line"><span class="cl">  <span class="c1">// 基本的にルールは recommended に従う
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="c1">// prettier は配列の最後尾に書く
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="p">[</span>
+</span></span></span><span class="line"><span class="cl">  <span class="c1">// prettier は配列の最後尾に書く
+</span></span></span><span class="line"><span class="cl">  <span class="nt">&#34;extends&#34;</span><span class="p">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;eslint:recommended&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;plugin:@typescript-eslint/eslint-recommended&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
@@ -455,9 +455,9 @@
 </span></span><span class="line"><span class="cl">  <span class="p">],</span>
 </span></span><span class="line"><span class="cl">  <span class="nt">&#34;rules&#34;</span><span class="p">:</span> <span class="p">{</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// import React from &#39;react&#39; を書かなくてもいいようにする
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;react/react-in-jsx-scope&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span><span class="p">,</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nt">&#34;react/react-in-jsx-scope&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">    <span class="c1">// TypeScirpt なので prop-types は要らない
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nt">&#34;react/prop-types&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span>
+</span></span></span><span class="line"><span class="cl">    <span class="nt">&#34;react/prop-types&#34;</span><span class="p">:</span> <span class="s2">&#34;off&#34;</span>
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></td></tr></table>
@@ -770,7 +770,7 @@
 </span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;jest/globals&#34;</span><span class="err">:</span> <span class="kc">true</span>
 </span></span><span class="line"><span class="cl">   <span class="err">},</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">// パーサー
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;parser&#34;</span><span class="err">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="err">,</span>
+</span></span></span><span class="line"><span class="cl">   <span class="s2">&#34;parser&#34;</span><span class="err">:</span> <span class="s2">&#34;@typescript-eslint/parser&#34;</span><span class="err">,</span>
 </span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-23</span><span class="err">,</span><span class="mi">7</span> <span class="err">+</span><span class="mi">24</span><span class="err">,</span><span class="mi">7</span> <span class="err">@@</span>
 </span></span><span class="line"><span class="cl">       <span class="s2">&#34;version&#34;</span><span class="err">:</span> <span class="s2">&#34;detect&#34;</span>
 </span></span><span class="line"><span class="cl">     <span class="err">}</span>
@@ -778,8 +778,8 @@
 </span></span><span class="line"><span class="cl"><span class="err">-</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">]</span><span class="err">,</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>  <span class="s2">&#34;plugins&#34;</span><span class="err">:</span> <span class="p">[</span><span class="s2">&#34;react-hooks&#34;</span><span class="p">,</span> <span class="s2">&#34;react&#34;</span><span class="p">,</span> <span class="s2">&#34;@typescript-eslint&#34;</span><span class="p">,</span> <span class="s2">&#34;jest&#34;</span><span class="p">]</span><span class="err">,</span>
 </span></span><span class="line"><span class="cl">   <span class="c1">// 基本的にルールは recommended に従う
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="c1">// prettier は配列の最後尾に書く
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="s2">&#34;extends&#34;</span><span class="err">:</span> <span class="p">[</span>
+</span></span></span><span class="line"><span class="cl">   <span class="c1">// prettier は配列の最後尾に書く
+</span></span></span><span class="line"><span class="cl">   <span class="s2">&#34;extends&#34;</span><span class="err">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-32</span><span class="p">,</span><span class="mi">6</span> <span class="err">+</span><span class="mi">33</span><span class="p">,</span><span class="mi">7</span> <span class="err">@@</span>
 </span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:@typescript-eslint/recommended&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">     <span class="s2">&#34;plugin:react/recommended&#34;</span><span class="p">,</span>
@@ -963,12 +963,12 @@
 </span></span><span class="line"><span class="cl"><span class="err">+++</span> <span class="err">b/.eslintrc.json</span>
 </span></span><span class="line"><span class="cl"><span class="err">@@</span> <span class="mi">-40</span><span class="err">,</span><span class="mi">6</span> <span class="err">+</span><span class="mi">40</span><span class="err">,</span><span class="mi">14</span> <span class="err">@@</span>
 </span></span><span class="line"><span class="cl">     <span class="c1">// import React from &#39;react&#39; を書かなくてもいいようにする
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="s2">&#34;react/react-in-jsx-scope&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span><span class="err">,</span>
+</span></span></span><span class="line"><span class="cl">     <span class="s2">&#34;react/react-in-jsx-scope&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span><span class="err">,</span>
 </span></span><span class="line"><span class="cl">     <span class="c1">// TypeScirpt なので prop-types は要らない
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">-</span>    <span class="s2">&#34;react/prop-types&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span>
+</span></span></span><span class="line"><span class="cl"><span class="err">-</span>    <span class="s2">&#34;react/prop-types&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;react/prop-types&#34;</span><span class="err">:</span> <span class="s2">&#34;off&#34;</span><span class="err">,</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="c1">// react-hooks with recoil
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="err">+</span>    <span class="s2">&#34;react-hooks/rules-of-hooks&#34;</span><span class="err">:</span> <span class="s2">&#34;error&#34;</span><span class="err">,</span>
+</span></span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;react-hooks/rules-of-hooks&#34;</span><span class="err">:</span> <span class="s2">&#34;error&#34;</span><span class="err">,</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>    <span class="s2">&#34;react-hooks/exhaustive-deps&#34;</span><span class="err">:</span> <span class="p">[</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>      <span class="s2">&#34;warn&#34;</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl"><span class="err">+</span>      <span class="p">{</span>
@@ -1035,31 +1035,31 @@
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-docker" data-lang="docker"><span class="line"><span class="cl"><span class="c">#</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># STAGE 1</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Uses a Node LTS image to build</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> node:16-bullseye AS build</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c"># STAGE 1</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c"># Uses a Node LTS image to build</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">FROM</span><span class="w"> </span><span class="s">node:16-bullseye</span><span class="w"> </span><span class="k">AS</span><span class="w"> </span><span class="s">build</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">WORKDIR</span><span class="s"> /opt/app</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">WORKDIR</span><span class="w"> </span><span class="s">/opt/app</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> package.json package-lock.json ./<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm i -g npm@latest <span class="o">&amp;&amp;</span> npm ci --no-optional<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> tsconfig.json tsconfig.paths.json index.html vite.config.ts ./<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> src ./src<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">RUN</span> npm run build<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">COPY</span> package.json package-lock.json ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">RUN</span> npm i -g npm@latest <span class="o">&amp;&amp;</span> npm ci --no-optional<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">COPY</span> tsconfig.json tsconfig.paths.json index.html vite.config.ts ./<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">COPY</span> src ./src<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">RUN</span> npm run build<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># STAGE 2</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c"># Create final image</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="c">#</span><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">FROM</span><span class="s"> nginx:stable-alpine</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c"># STAGE 2</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c"># Create final image</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="c">#</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">FROM</span><span class="w"> </span><span class="s">nginx:stable-alpine</span><span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> docker/nginx/nginx.conf /etc/nginx/nginx.conf<span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">COPY</span> --from<span class="o">=</span>build /opt/app/dist /public<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">COPY</span> docker/nginx/nginx.conf /etc/nginx/nginx.conf<span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">COPY</span> --from<span class="o">=</span>build /opt/app/dist /public<span class="err">
 </span></span></span><span class="line"><span class="cl"><span class="err">
-</span></span></span><span class="line"><span class="cl"><span class="err"></span><span class="k">EXPOSE</span><span class="s"> 80</span><span class="err">
+</span></span></span><span class="line"><span class="cl"><span class="k">EXPOSE</span><span class="w"> </span><span class="s">80</span><span class="err">
 </span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><code>docker/nginx/nginx.conf</code> を作成します。</p>
@@ -1233,7 +1233,7 @@
   <span class="copyright-year">
     &copy; 
     2013 - 
-    2025
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
