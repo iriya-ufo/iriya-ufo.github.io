@@ -56,8 +56,12 @@ $ echo 'eval "$(mise activate zsh)"' >> "${ZDOTDIR-$HOME}/.zshrc"
 | mise use foo@x.x -g | 特定バージョンの foo をグローバルにインストールする |
 | mise list | 一覧表示 |
 
-asdf と違い plugin のインストールがないので楽なのとインストールが速い
+asdf と違い plugin のインストールがないので楽なのとインストールが速い。
 
+なお `mise install` 実行時に以下のようなエラーがでたときには `brew install gnupg` をして再度実行すればよい。
+```
+mise WARN  gpg not found, skipping verification
+```
 
 ## その他
 
