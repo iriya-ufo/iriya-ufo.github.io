@@ -25,7 +25,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.143.1 with theme even" />
+<meta name="generator" content="Hugo 0.155.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/blog/2019/12/12/mingo/" />
@@ -281,13 +281,13 @@ Go では <code>defer</code> を使用すると呼び出したスコープを抜
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
-</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>           <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
-</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>      <span class="err">#</span> <span class="kn">package</span> <span class="nx">main</span>
-</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">lib</span><span class="o">/</span>
-</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
-</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">todo</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">main</span><span class="p">.</span><span class="k">go</span><span class="w">           </span><span class="err">#</span><span class="w"> </span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">main_test</span><span class="p">.</span><span class="k">go</span><span class="w">      </span><span class="err">#</span><span class="w"> </span><span class="kn">package</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">lib</span><span class="o">/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">todo</span><span class="p">.</span><span class="k">go</span><span class="w">       </span><span class="err">#</span><span class="w"> </span><span class="kn">package</span><span class="w"> </span><span class="nx">todo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">pacakge</span><span class="w"> </span><span class="nx">todo</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><ul>
 <li>ライブラリをメインとする場合のディレクトリ構成</li>
@@ -303,14 +303,14 @@ Go では <code>defer</code> を使用すると呼び出したスコープを抜
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span>
-</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="p">.</span><span class="k">go</span>               <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
-</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span>          <span class="err">#</span> <span class="kn">package</span> <span class="nx">todo</span>
-</span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span> <span class="nx">cmd</span><span class="o">/</span>
-</span></span><span class="line"><span class="cl">    <span class="p">|</span><span class="o">-</span> <span class="nx">todo</span><span class="o">/</span>
-</span></span><span class="line"><span class="cl">        <span class="p">|</span><span class="o">-</span> <span class="nx">main</span><span class="p">.</span><span class="k">go</span>       <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
-</span></span><span class="line"><span class="cl">        <span class="p">|</span><span class="o">-</span> <span class="nx">main_test</span><span class="p">.</span><span class="k">go</span>  <span class="err">#</span> <span class="nx">pacakge</span> <span class="nx">main</span>
-</span></span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-go" data-lang="go"><span class="line"><span class="cl"><span class="err">$</span><span class="nx">GOPATH</span><span class="o">/</span><span class="nx">src</span><span class="o">/</span><span class="nx">github</span><span class="p">.</span><span class="nx">com</span><span class="o">/</span><span class="nx">tcnksm</span><span class="o">/</span><span class="nx">todo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">todo</span><span class="p">.</span><span class="k">go</span><span class="w">               </span><span class="err">#</span><span class="w"> </span><span class="kn">package</span><span class="w"> </span><span class="nx">todo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">todo_test</span><span class="p">.</span><span class="k">go</span><span class="w">          </span><span class="err">#</span><span class="w"> </span><span class="kn">package</span><span class="w"> </span><span class="nx">todo</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">cmd</span><span class="o">/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">todo</span><span class="o">/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">main</span><span class="p">.</span><span class="k">go</span><span class="w">       </span><span class="err">#</span><span class="w"> </span><span class="nx">pacakge</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">|</span><span class="o">-</span><span class="w"> </span><span class="nx">main_test</span><span class="p">.</span><span class="k">go</span><span class="w">  </span><span class="err">#</span><span class="w"> </span><span class="nx">pacakge</span><span class="w"> </span><span class="nx">main</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>サブコマンドを持ったCLIツール</strong></p>
 <p>本書内ではサードパッケージについて、いくつか紹介していた。</p>
@@ -404,7 +404,7 @@ Go では <code>defer</code> を使用すると呼び出したスコープを抜
   <span class="copyright-year">
     &copy; 
     2013 - 
-    2025
+    2026
     <span class="heart">
       <i class="iconfont icon-heart"></i>
     </span>
