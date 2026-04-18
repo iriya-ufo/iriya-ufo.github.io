@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.155.1 with theme even" />
+<meta name="generator" content="Hugo 0.160.1 with theme even" />
 
 
 <link rel="canonical" href="https://iriya-ufo.net/" />
@@ -49,8 +49,8 @@
 
   <meta itemprop="name" content="iriya-ufo&#39;s blog">
   <meta itemprop="description" content="Naoto Inoue&#39;s Personal blog about everything.">
-  <meta itemprop="datePublished" content="2025-02-10T22:01:30+09:00">
-  <meta itemprop="dateModified" content="2025-02-10T22:01:30+09:00">
+  <meta itemprop="datePublished" content="2026-04-17T22:14:07+09:00">
+  <meta itemprop="dateModified" content="2026-04-17T22:14:07+09:00">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="iriya-ufo&#39;s blog">
   <meta name="twitter:description" content="Naoto Inoue&#39;s Personal blog about everything.">
@@ -118,6 +118,71 @@
       <div class="content-wrapper">
         <div id="content" class="content">
           <section id="posts" class="posts">
+    <article class="post">
+  <header class="post-header">
+    <h1 class="post-title"><a class="post-link" href="/blog/2015/10/10/python-on-mac/">Mac に Python 環境構築</a></h1>
+    <div class="post-meta">
+      <span class="post-time"> 2015-10-10 </span>
+      <div class="post-category">
+          <a href="/categories/programming/"> programming </a>
+          </div>
+    </div>
+  </header>
+  
+  <div class="post-content">
+    <div class="post-summary">
+      <h2 id="2020年版mac-に-python-をインストールする方法パッケージの管理方法">【2020年版】Mac に Python をインストールする方法、パッケージの管理方法</h2>
+<h3 id="pyenv-のインストール">pyenv のインストール</h3>
+<p>brew で pyenv をインストールする。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ brew install pyenv
+</span></span><span class="line"><span class="cl">$ pyenv -v
+</span></span><span class="line"><span class="cl">pyenv 1.2.18
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>PATH を通す。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-gdscript3" data-lang="gdscript3"><span class="line"><span class="cl"><span class="n">echo</span> <span class="s1">&#39;export PYENV_ROOT=&#34;$HOME/.pyenv&#34;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">echo</span> <span class="s1">&#39;export PATH=&#34;$PYENV_ROOT/bin:$PATH&#34;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</span></span><span class="line"><span class="cl"><span class="n">echo</span> <span class="s1">&#39;eval &#34;$(pyenv init -)&#34;&#39;</span> <span class="o">&gt;&gt;</span> <span class="o">~/.</span><span class="n">zshrc</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="python-のインストール">Python のインストール</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">$ pyenv install --list # インストール可能なバージョンの表示
+</span></span><span class="line"><span class="cl">$ pyenv install 3.8.2  # Python のインストール
+</span></span><span class="line"><span class="cl">$ pyenv versions       # インストール済み一覧
+</span></span><span class="line"><span class="cl">$ pyenv global 3.8.2   # 標準で使う設定
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="pipenv-のインストール">pipenv のインストール</h3>
+<p>pipenv を使ってパッケージの管理を行う。</p>
+    </div>
+    <div class="read-more">
+      <a href="/blog/2015/10/10/python-on-mac/" class="read-more-link">Read more..</a>
+    </div>
+  </div>
+</article>
+
     <article class="post">
   <header class="post-header">
     <h1 class="post-title"><a class="post-link" href="/blog/2015/07/26/brain-science-of-buddha/">「お釈迦さまの脳科学」を読んでみた</a></h1>
@@ -318,27 +383,6 @@
     </div>
     <div class="read-more">
       <a href="/blog/2015/05/23/how-to-generate-idea/" class="read-more-link">Read more..</a>
-    </div>
-  </div>
-</article>
-
-    <article class="post">
-  <header class="post-header">
-    <h1 class="post-title"><a class="post-link" href="/blog/2015/05/22/great-function-of-tmux-sync-pane/">tmux の sync pane 機能に感動した</a></h1>
-    <div class="post-meta">
-      <span class="post-time"> 2015-05-22 </span>
-      <div class="post-category">
-          <a href="/categories/programming/"> programming </a>
-          </div>
-    </div>
-  </header>
-  
-  <div class="post-content">
-    <div class="post-summary">
-      <p>「ターミナルの仮想端末といえば screen」ってな感じで使ってたんですが、とあるレンタルサーバーで tmux 設定がデフォになってたんで重い腰をあげて tmux に移行してみました。そしたら思いのほか感動したという話しです。</p>
-    </div>
-    <div class="read-more">
-      <a href="/blog/2015/05/22/great-function-of-tmux-sync-pane/" class="read-more-link">Read more..</a>
     </div>
   </div>
 </article>

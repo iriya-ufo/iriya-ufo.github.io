@@ -6,7 +6,7 @@
     <description>Recent content on iriya-ufo&#39;s blog</description>
     <generator>Hugo</generator>
     <language>ja</language>
-    <lastBuildDate>Mon, 10 Feb 2025 22:01:30 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 17 Apr 2026 22:14:07 +0900</lastBuildDate>
     <atom:link href="https://iriya-ufo.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About</title>
@@ -14,6 +14,13 @@
       <pubDate>Thu, 20 Dec 2018 12:38:52 +0800</pubDate>
       <guid>https://iriya-ufo.net/about/</guid>
       <description>&lt;figure&gt;&lt;img src=&#34;https://iriya-ufo.net/images/tux-thinkpad.png&#34; width=&#34;80&#34;&gt;&#xA;&lt;/figure&gt;&#xA;&#xA;&lt;h2 id=&#34;about-me&#34;&gt;About Me&lt;/h2&gt;&#xA;&lt;p&gt;Infrastructure Engineer&lt;/p&gt;&#xA;&lt;h2 id=&#34;career&#34;&gt;Career&lt;/h2&gt;&#xA;&lt;p&gt;See @ &lt;a href=&#34;https://www.linkedin.com/in/naoto-inoue-a7b7171a1/&#34;&gt;LinkedIn&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;output&#34;&gt;Output&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://iriya-ufo.net/ml/&#34;&gt;機械学習とかの関連まとめ&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+    </item>
+    <item>
+      <title>「ビジネス・クリエーション!」を読んだ</title>
+      <link>https://iriya-ufo.net/blog/2026/04/17/24-steps-to-a-successful-startup/</link>
+      <pubDate>Fri, 17 Apr 2026 22:14:07 +0900</pubDate>
+      <guid>https://iriya-ufo.net/blog/2026/04/17/24-steps-to-a-successful-startup/</guid>
+      <description>&lt;h2 id=&#34;step1&#34;&gt;STEP1&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;市場を細分化して理解する&lt;/li&gt;&#xA;&lt;li&gt;エンドユーザー像を考えて絞り込む&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;市場の一次調査&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;潜在顧客と直接対話する&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;注意点&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;潜在顧客に答えを用意しない&lt;/li&gt;&#xA;&lt;li&gt;潜在顧客は我々の答えを持ってはいない&lt;/li&gt;&#xA;&lt;li&gt;会うのは話しを聞くためで、こちらの主張や売り込みをしない&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;一次調査項目&lt;/p&gt;</description>
     </item>
     <item>
       <title>asdf から mise に移行する</title>
